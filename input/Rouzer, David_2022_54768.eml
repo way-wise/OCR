@@ -1,0 +1,511 @@
+Received: from CO6PR09MB8438.namprd09.prod.outlook.com (2603:10b6:303:c8::14)
+ by PH0PR09MB7851.namprd09.prod.outlook.com with HTTPS; Wed, 17 Aug 2022
+ 18:54:51 +0000
+Received: from MWHPR09CA0001.namprd09.prod.outlook.com (2603:10b6:300:80::11)
+ by CO6PR09MB8438.namprd09.prod.outlook.com (2603:10b6:303:c8::14) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.5504.25; Wed, 17 Aug
+ 2022 18:54:51 +0000
+Received: from BL0GCC02FT007.eop-gcc02.prod.protection.outlook.com
+ (2a01:111:f400:7d05::200) by MWHPR09CA0001.outlook.office365.com
+ (2603:10b6:300:80::11) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.5525.11 via Frontend
+ Transport; Wed, 17 Aug 2022 18:54:50 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.151.74)
+ smtp.mailfrom=mail.house.gov; dkim=fail (body hash did not verify)
+ header.d=house.gov;dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.151.74 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.151.74;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.151.74) by
+ BL0GCC02FT007.mail.protection.outlook.com (10.97.10.173) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.5546.15 via Frontend Transport; Wed, 17 Aug 2022 18:54:50 +0000
+Received: from EXCH1915.US.House.gov (143.228.151.74) by EXCH1915.US.House.gov
+ (143.228.151.74) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1118.9; Wed, 17 Aug
+ 2022 14:54:49 -0400
+Received: from serg-bulk3-h.house.gov (143.228.145.68) by
+ EXCH1915.US.House.gov (143.228.151.74) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1118.9
+ via Frontend Transport; Wed, 17 Aug 2022 14:54:49 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=from : to : date :
+ subject : content-type : message-id : mime-version; s=august2019-msgb-hg;
+ bh=2aa59+OOpXGqjb9O02Lfi7ykunI+PC+Op/S9Y6h++GE=;
+ b=qpoHR16wrS2CBiLtj5odtpF5XJYgaUcHNMf8mQJkB8QbaycNN2p/aVzphBH1UbmetuO6
+ c19GUaegn5WSBGn0WkaGGkKJqV6LKHS4LNji4yXBVgBzRxpYmx3z4uNItYovA6AGiUAx
+ vRVCQGPipuEjUs43un3pjpfcZppYg+HZ+hRGBaihq1U3oxkkLD0S4skqrY2jWAw4Bafq
+ rB7Hvw+mHyYfcarQokXG81itEVHfFQAfaNYLBFo3+aoF10iRofgZads7DgiKZDBPSKpv
+ 2+U6IdxfQSowe007IKjVcwFxmkarF72g0AH/O4XvDJKMAhLrQoYM6p01DuVhaI1Z/7md dg== 
+Received: from firesideadmin02 (firesideadmin02.us.house.gov [143.228.113.54])
+	by serg-bulk3-h.house.gov (8.16.1.2/8.16.1.2) with ESMTP id 27HIslqr022857;
+	Wed, 17 Aug 2022 14:54:49 -0400
+Message-Id: <3hx73u7h5j-2@serg-bulk3-h.house.gov>
+envelope-from: RouzerNewsletter@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+X-House-Vendor-Seg: Fireside21-1
+MIME-Version: 1.0
+From: "Rep. David Rouzer" <RouzerNewsletter@mail.house.gov>
+To: erin.mcbride@mail.house.gov
+Date: 17 Aug 2022 14:54:49 -0400
+Subject: TEST FINAL NOTICE: Action Required
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:6.0.517,18.0.883
+ definitions=2022-08-17_13:2022-08-16,2022-08-17 signatures=0
+Return-Path: RouzerNewsletter@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1915.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 17 Aug 2022 18:54:50.5913
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ ca9e5c2b-7460-4e8d-f671-08da8081f6c9
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1915.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted:
+ BL0GCC02FT007.eop-gcc02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ BL0GCC02FT007.eop-gcc02.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: ca9e5c2b-7460-4e8d-f671-08da8081f6c9
+X-MS-TrafficTypeDiagnostic: CO6PR09MB8438:EE_
+X-MS-Exchange-Organization-SCL: -1
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:143.228.151.74;CTRY:US;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SKI;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:;DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 17 Aug 2022 18:54:50.5601
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: ca9e5c2b-7460-4e8d-f671-08da8081f6c9
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.151.74];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1915.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CO6PR09MB8438
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.2919692
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.5504.028
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506458)(944626604)(920097)(425001)(930097);
+X-Microsoft-Antispam-Message-Info:
+	m/8v3i6EMbdJrWzTbaNs38G26KGdLks0rbvlhskPsl9hn3LSBt3ZsepNOjIZySuswFrGjVeg1CKyCTpMZo71upJJDmH4vxcUed5CrtM9yb9bOYo4Mt3yNrWP6Jy1GOr2u8HJrLPw9KjNZe2ikXZ/jeJ+wnW4uTHGfA0E7RJ0uG4/1qc0SB5xIIX0gWDzsfGq2D1PHkjEOwQEDi/q+AOvPXKL+bdJLN7wY+ISA7dZTsC4YJlX0XI1qcWQapaTnqBidrOGDfmSBmSnGvU15crIEFk2N9cu+Ujd6hh/Cz4kq0ANMmeQ6XsRNpr3++G+vSJBsGyZH6QYtFujdy/Clh7avyPbRqBGyH+78qz+UF1U3HWPUryYCyE9kpsZGXLnh/ixhYUpAEe3RpVfokAMZe7QhtvBXXZUI8F3mjfbhIJibN5dhaSHqCnU4Atlt/hn/qqyIet874mBlhSDeaZHv8kjlpaufaPmsr58WMC01fH52uQFKKvdD/rygpuq/7k1KeF8/TKNrSRT5srUlLTDuJrqPu8ZU7XxhR9KhPC36CW5OLG2kwRI3N0oVC8uGfNa1+pIxeDL1C8C/zEGNxxj+2uTG6qpuJdAxAwENP3w1FqujaIJ/mtYYmTWEmhT55KU1qccKndUfagW+Qmdto/yAaeXXLFegeGtLOkhPdWZrt8lY4Ir5zAFj9rqHomsQDye15Vfz1I79yHncSNDO1NtoRp4TfjH/T28u34SUNzKbznUTEk=
+Content-type: multipart/alternative;
+	boundary="B_3743592920_2735171023"
+
+> This message is in MIME format. Since your mail reader does not understand
+this format, some or all of this message may not be legible.
+
+--B_3743592920_2735171023
+Content-type: text/plain;
+	charset="UTF-8"
+Content-transfer-encoding: 7bit
+
+FINAL NOTICE: Federal regulation will prohibit me from sending you important alerts from my office unless you opt-in right now.  If you would like to continue receiving updates from my office, please sign up HERE. 
+
+
+August 17, 2022
+FINAL NOTICE: Federal regulation will prohibit me from sending you important alerts from my office unless you opt-in right now.  If you would like to continue receiving updates from my office, please sign up HERE.
+ 
+FINAL NOTICE: Action Required
+ 
+Dear Mr. John Doe,
+Keeping in touch with my constituents is one of my top priorities in Congress. However, starting on September 9th, rules applying to every member of the House of Representatives prevent me from sending you Congressional updates for a 60-day time period unless you sign up to receive such emails.
+That's why, it's incredibly important you take one minute to sign up for my email newsletter today! 
+These newsletters are a great way to stay informed about policies and issues I am currently working on in Congress, and your response gives me a greater understanding of how I can best represent you.
+
+Sincerely, 
+  
+ 
+  
+         
+  
+Washington, DC Office
+2333 Rayburn HOB
+Washington, DC 20515
+Phone: (202) 225-2731
+Fax: (202) 225-5773
+Brunswick County Office
+310 Government Center Dr.
+Unit 1
+Bolivia, NC 28422
+Phone: (910) 253-6111
+Fax: (910) 253-6114
+Johnston County Office
+4001 US Hwy. 301 S.
+Suite 106
+Four Oaks, NC 27524
+Phone: (919) 938-3040
+Fax: (919) 938-3540
+New Hanover County Office
+201 N. Front Street
+Suite 502
+Wilmington, NC 28301
+Phone: (910) 395-0202
+Fax: (910) 395-0209
+  
+NOTE: Please DO NOT respond to this email as this inbox is unattended. To contact my office please click here
+
+  
+Unsubscribe |  View Online 
+  
+
+--B_3743592920_2735171023
+Content-type: text/html;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><title>R=
+epresentative David Rouzer</title><meta name=3D"viewport" content=3D"width=3Ddevic=
+e-width, initial-scale=3D1"><!--[if !mso]><!--><meta http-equiv=3D"X-UA-Compatib=
+le" content=3D"IE=3Dedge"><!--<![endif]--><style>body, table, td, a{-webkit-text=
+-size-adjust: 100%; -ms-text-size-adjust: 100%;} /* Prevent WebKit and Windo=
+ws mobile changing default text sizes */ img{-ms-interpolation-mode: bicubic=
+;} /* Allow smoother rendering of resized image in Internet Explorer *//* RE=
+SET STYLES */img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }table { border-collapse: collapse !important; }bod=
+y { height: 100% !important; margin: 0 !important; padding: 0 !important; wi=
+dth: 100% !important; }strong { font-weight: bold; } /* Editor reset *//* FI=
+RESIDE STYLES */.component img {max-width:600px;}.component table {mso-table=
+-rspace:10pt; border-collapse:collapse;}.component { padding: 0px !important=
+; }.press {padding-bottom: 0px;}</style><style>@media all and (max-width:650=
+px) {            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td,=
+ .image-2, .img-2 img, .image-2 tr, .image-2 td {max-width: 100% !important;=
+ width: 100% !important;}            .responsive-table {width:100% !importan=
+t;}            .responsive-table img {max-width:100% !important; height: aut=
+o !important;}            .press .component, .press td {text-align:center;} =
+           .component { margin-left: 20px; margin-right: 20px;}            .=
+component .responsive-table { margin-left: 0px !important; margin-right: 0px=
+ !important;}            .wide .video-thumb { width: 100% !important;height:=
+ auto !important; }             .wide.video-container { width: 100% !importa=
+nt; }         .component.full-width {margin-left: 0px; margin-right: 0px; } =
+  }</style><style type=3D"text/css">
+            /* CLIENT-SPECIFIC STYLES */
+            body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text =
+sizes */
+            table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Rem=
+ove spacing between tables in Outlook 2007 and up */
+            img{-ms-interpolation-mode: bicubic;} /* Allow smoother renderi=
+ng of resized image in Internet Explorer */
+            /* RESET STYLES */
+            img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: =
+0 !important; width: 100% !important; }
+            strong { font-weight: bold; } /* Editor reset */
+            /* FIRESIDE STYLES */
+            .component img {max-width:600px;}
+            .component table {mso-table-rspace:10pt; border-collapse:collap=
+se; font-family: Arial, Helvetica, sans-serif;}
+            .component td, td {font-family: Arial, Helvetica, sans-serif;}
+            .component { padding: 0px !important; }
+            .press {padding-bottom: 0px;}
+            .caption-1 td {font-family: Arial, Helvetica, sans-serif;}
+            /* Non-Outlook Styles */
+            body {background-color: #dddddd;}
+            /* Margin/NoMargin STYLES */
+            .component.full-width{ overflow: hidden; margin: 0px; }
+            /* HEADER STYLES */
+            .header-bar {width: 100%;}
+            .header-bar-margin {background-color:#ffffff;}
+            .header-bar h2 {margin: 0 !important; padding: 0 !important; co=
+lor: #17416A;text-align: left;font-size: 26px;font-weight: bold; }
+            .survey-content > table > tbody tr td { border-color: #08244a !=
+important; }
+            .survey-content input.survey-submit { font-family: Arial, Helve=
+tica, sans-serif !important; }
+        </style><!--[if (gte mso 9)|(IE)]>
+            <style>
+                body {background-color: #ffffff !important;}
+            </style>
+        <![endif]--><style id=3D"media-queries">=20
+            @media all and (max-width:650px) {
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max=
+-width: 100% !important; width: 100% !important;}
+            .responsive-table {width:100% !important;}
+            .responsive-table img {max-width:100% !important; height: auto =
+!important;}
+            .press .component, .press td, .split .component, .split .compon=
+ent td, .split td {text-align:center;}
+            .component { margin-left: 20px; margin-right: 20px;}
+            .component .responsive-table { margin-left: 0px !important; mar=
+gin-right: 0px !important;}
+            .wide .video-thumb { width: 100% !important;height: auto !impor=
+tant; }=20
+            .wide.video-container { width: 100% !important; }
+            }
+        </style><!--[if (gte mso 9)|(IE)]>
+                                            <style>=20
+                                        </style>
+                                        <![endif]--></head><body style=3D"-we=
+bkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;margin: 0px !importa=
+nt; padding: 0px !important;"><div id=3D"preview-text" style=3D"display: none; f=
+ont-size: 1px; color: #fefefe; line-height: 1px; font-family: Arial, Helveti=
+ca, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidde=
+n;">FINAL NOTICE: Federal regulation will prohibit me from sending you impor=
+tant alerts from my office unless you opt-in right now.&nbsp; If you would l=
+ike to continue receiving updates from my office, please sign up&nbsp;HERE. =
+</div><!--[if (gte mso 9)|(IE)]>
+    <table style=3D"background-color:#dddddd;" width=3D"100%" align=3D"center" ro=
+le=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0=
+" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><tr><td>
+    <![endif]--><table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adj=
+ust: 100%;font-family: Arial, Helvetica, sans-serif; background-color: #ffff=
+ff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=
+=3D"0" leftmargin=3D"0" topmargin=3D"0"><tbody><tr><td align=3D"center" valign=3D"top"=
+ style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-fami=
+ly: Arial, Helvetica, sans-serif; font-size: 16px;"><div class=3D"region" id=3D"=
+region-1"><div class=3D"component full-width" style=3D"padding: 0px !important;"=
+><div class=3D"image" style=3D"overflow: hidden;width:100%"><table class=3D"respon=
+sive-table" role=3D"presentation" align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rs=
+pace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;float: left; table-layout: fixed; margin-right: 0px; marg=
+in-left: 0px;" width=3D"650"><tbody><tr><td valign=3D"top" class=3D"image-td" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><div class=3D"=
+img-1 image-container" style=3D"overflow: hidden;"><a href=3D"https://lasturl.ho=
+use.gov" target=3D"_blank" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;"><img style=3D"max-width:600px;-ms-interpolation-mode: bicubic=
+;vertical-align: bottom; max-width: 650px;" alt=3D"Representative David Rouzer=
+" src=3D"https://rouzerforms.house.gov/uploadedphotos/highresolution/9b56c5a4-=
+9a7e-4a7c-9fa1-f97e0a5eda46.jpg"></a></div></td></tr></tbody></table></div><=
+/div></div></td></tr></tbody></table><table role=3D"presentation" width=3D"650" =
+class=3D"responsive-table" align=3D"center" style=3D"-webkit-text-size-adjust: 100=
+%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, sans-serif;  ba=
+ckground-color: #ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginh=
+eight=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><tbody><tr><td valign=
+=3D"middle" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;background-color: #ffffff; font-family: Arial, Helvetica, san=
+s-serif;  font-size: 16px; color: #000000; text-align: left; padding: 0 15pt=
+;"><table role=3D"presentation" align=3D"center" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, sans-serif=
+; background-color: #ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" mar=
+ginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><tbody><tr><td va=
+lign=3D"middle" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;background-color: #ffffff; font-family: Arial, Helvetica,=
+ sans-serif; font-size: 16px; color: #000000; text-align: center;"><br><br><=
+p style=3D"margin: 0;margin: 0;"><span class=3D"fs-merge-field" contenteditable=3D=
+"false"><span contenteditable=3D"false"><span class=3D"merge-field" contentedita=
+ble=3D"false" unselectable=3D"true">August 17, 2022</span><span class=3D"merge-fie=
+ld-evaluated" contenteditable=3D"false" unselectable=3D"true"></span></span></sp=
+an></p><br></td></tr></tbody></table></td></tr></tbody></table><table role=3D"=
+presentation" width=3D"650" align=3D"center" class=3D"responsive-table" style=3D"-we=
+bkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;background-color: #f=
+fffff; font-family: Arial, Helvetica, sans-serif;" border=3D"0" cellspacing=3D"0=
+" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D=
+"0"><tbody><tr><td class=3D"responsive-table" valign=3D"top" style=3D"-webkit-text=
+-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica=
+, sans-serif; font-size: 16px; color: #000000;"><div class=3D"region" id=3D"regi=
+on-2"><div class=3D"component " style=3D"padding: 0px !important;"><div class=3D"e=
+ditable" style=3D"overflow: hidden;width:100%"><table class=3D"responsive-table"=
+ role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-t=
+able-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse=
+:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-l=
+ayout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610"><tbody><tr=
+><td class=3D"table-w-bg-color" valign=3D"top" style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;"><div class=3D"cke_editable cke_editable_inl=
+ine cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><=
+div class=3D"component-template" style=3D"overflow: hidden;"><p style=3D"margin: 0=
+;margin: 0px; text-align: center;"><span style=3D"font-size:14px;"><span style=
+=3D"color:#d00900;"><strong style=3D"font-weight: bold;">FINAL NOTICE:</strong><=
+/span> Federal regulation will prohibit me from sending you important alerts=
+ from my office unless you opt-in right now.&nbsp; If you would like to cont=
+inue receiving updates from my office, please sign up&nbsp;<strong style=3D"fo=
+nt-weight: bold;"><a data-cke-saved-href=3D"https://rouzer.house.gov/forms/ema=
+ilsignup/" href=3D"https://rouzer.house.gov/forms/emailsignup/" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">HERE</a>.</strong></sp=
+an></p><p style=3D"margin: 0;margin: 0;"><br></p></div></div></td></tr></tbody=
+></table></div></div><div class=3D"component full-width" style=3D"padding: 0px !=
+important;"><div class=3D"header-bar" style=3D"overflow: hidden;"><table role=3D"p=
+resentation" align=3D"center" class=3D"responsive-table table-w-bg-color" style=3D=
+"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-co=
+llapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;f=
+ont-family: Arial, Helvetica, sans-serif; margin-right: 0px; margin-left: 0p=
+x;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D=
+"0" leftmargin=3D"0" topmargin=3D"0" width=3D"650"><tbody><tr height=3D"15" class=3D"s=
+pacerRow"><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;font-size: 0%; line-height: 15px">&nbsp;</td></tr><tr><td class=3D"respons=
+ive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%=
+;font-size:26px;color:#17416A;" valign=3D"top"><table role=3D"presentation" widt=
+h=3D"100%" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:=
+10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size=
+-adjust: 100%;min-width: 100%;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" m=
+arginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><tbody><tr><td =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;padding: 0=
+ 15pt; font-family: Arial, Helvetica, sans-serif;"><div class=3D"cke_editable =
+cke_editable_inline cke_contents_ltr cke_show_borders ICE-Tracking cke_focus=
+" style=3D"overflow: hidden;"><h2 style=3D"text-align: center;">FINAL NOTICE: Ac=
+tion Required</h2></div></td></tr></tbody></table></td></tr><tr height=3D"15" =
+class=3D"spacerRow"><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-a=
+djust: 100%;font-size: 0%; line-height: 15px">&nbsp;</td></tr></tbody></tabl=
+e></div></div><div class=3D"component " style=3D"padding: 0px !important;"><div =
+class=3D"editable" style=3D"overflow: hidden;width:100%"><table class=3D"responsiv=
+e-table" role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" styl=
+e=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-=
+collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%=
+;table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610"><t=
+body><tr><td class=3D"table-w-bg-color" valign=3D"top" style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;"><div class=3D"cke_editable cke_edit=
+able_inline cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hi=
+dden;"><div class=3D"component-template" style=3D"overflow: hidden;"><p style=3D"m=
+argin: 0;margin: 0;">Dear <span class=3D"fs-merge-field" contenteditable=3D"fals=
+e"><span contenteditable=3D"false"><span class=3D"merge-field" contenteditable=3D"=
+false" unselectable=3D"true">Mr. John Doe</span></span></span>,</p><p style=3D"m=
+argin: 0;margin: 0;"><br></p><p style=3D"margin: 0;margin: 0;">Keeping in touc=
+h with my constituents is one of my top priorities in Congress. However, sta=
+rting on <strong style=3D"font-weight: bold;">September 9th</strong>, rules ap=
+plying to every member of the House of Representatives prevent me from sendi=
+ng you Congressional updates for a 60-day time period unless you sign up to =
+receive such emails.</p><p style=3D"margin: 0;margin: 0;"><br></p><p style=3D"ma=
+rgin: 0;margin: 0;"><em><strong style=3D"font-weight: bold;">That's why, it's =
+incredibly important you take one minute to&nbsp;<a data-cke-saved-href=3D"htt=
+ps://rouzer.house.gov/forms/emailsignup/" href=3D"https://rouzer.house.gov/for=
+ms/emailsignup/" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust=
+: 100%;">sign up&nbsp;for my email newsletter</a> today!&nbsp;</strong></em>=
+</p><p style=3D"margin: 0;margin: 0;"><br>These newsletters are a great way to=
+ stay informed about policies and issues I am currently working on in Congre=
+ss, and your&nbsp;response&nbsp;gives&nbsp;me&nbsp;a greater understanding o=
+f how I can best represent you.</p></div></div></td></tr></tbody></table></d=
+iv></div></div></td></tr></tbody></table><table role=3D"presentation" width=3D"6=
+50" class=3D"responsive-table" align=3D"center" style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, sans-serif;=
+ background-color: #1C3455;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marg=
+inheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><tbody><tr><td val=
+ign=3D"middle" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;background-color: #ffffff; font-family: Arial, Helvetica, =
+sans-serif; font-size: 16px; color: #000000; text-align: left; padding: 0 15=
+pt;"><table role=3D"presentation" align=3D"left" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, sans-serif=
+; background-color: #ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" mar=
+ginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><tbody><tr><td va=
+lign=3D"middle" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;background-color: #ffffff; font-family: Arial, Helvetica,=
+ sans-serif; font-size: 16px; color: #000000; text-align: left;"><br><p styl=
+e=3D"margin: 0;margin: 0; padding: 0;">Sincerely,</p><a href=3D"https://rouzer.h=
+ouse.gov" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;=
+"><img alt=3D"David Rouzer Signature." src=3D"https://rouzerforms.house.gov/imag=
+es/email/sig.png" style=3D"-ms-interpolation-mode: bicubic;width: 200px; displ=
+ay: block;" width=3D"200"></a> </td></tr></tbody></table></td></tr><tr><td val=
+ign=3D"middle" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;height:60px; background-color: #ffffff;">&nbsp; </td></tr>=
+<tr><td align=3D"center" valign=3D"top" style=3D"-webkit-text-size-adjust: 100%; -=
+ms-text-size-adjust: 100%;background-color: #ffffff;"><a target=3D"_blank" hre=
+f=3D"https://rouzerforms.house.gov/forms/emailsignup/" style=3D"-webkit-text-siz=
+e-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"Representative David =
+Rouzer" width=3D"355" style=3D"-ms-interpolation-mode: bicubic;display: block; w=
+idth: 355px;" src=3D"https://rouzerforms.house.gov/images/email/signup-btn.png=
+"> </a></td></tr><tr><td valign=3D"middle" align=3D"center" style=3D"-webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%;height: 15px; background-color=
+: #ffffff;">&nbsp; </td></tr><tr><td valign=3D"middle" align=3D"center" style=3D"-=
+webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #08244a; ba=
+ckground-color: #ffffff;"><a target=3D"_blank" href=3D"https://urldefense.com/v3=
+/__https://www.facebook.com/RepRouzer__;!!Fr0YZsIsFWxTZsBm-qTAg68!x6yQ-5OEcW=
+Hq_aocIi-rqiUfJ5FFKl1y4NppI330XD4GzRmw0BU2x5p5q27vZvEaWVLN7d35$" style=3D"-web=
+kit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"facebook =
+icon" width=3D"48" src=3D"https://rouzerforms.house.gov/images/email/facebook.pn=
+g" style=3D"-ms-interpolation-mode: bicubic;border-width: 0px; border-style: s=
+olid; width: 48px;"></a> &nbsp;&nbsp;&nbsp;<a target=3D"_blank" href=3D"https://=
+urldefense.com/v3/__https://twitter.com/RepdavidRouzer__;!!Fr0YZsIsFWxTZsBm-=
+qTAg68!x6yQ-5OEcWHq_aocIi-rqiUfJ5FFKl1y4NppI330XD4GzRmw0BU2x5p5q27vZvEaWTvfL=
+Ei2$" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><i=
+mg alt=3D"twitter icon" width=3D"48" src=3D"https://rouzerforms.house.gov/images/e=
+mail/twitter.png" style=3D"-ms-interpolation-mode: bicubic;border-width: 0px; =
+border-style: solid; width: 48px;"></a> &nbsp;&nbsp;&nbsp;<a target=3D"_blank"=
+ href=3D"https://urldefense.com/v3/__https://www.instagram.com/repdavidrouzer/=
+__;!!Fr0YZsIsFWxTZsBm-qTAg68!x6yQ-5OEcWHq_aocIi-rqiUfJ5FFKl1y4NppI330XD4GzRm=
+w0BU2x5p5q27vZvEaWadgt1E_$" style=3D"-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;"><img alt=3D"instagram icon" width=3D"48" src=3D"https://rouzer=
+forms.house.gov/images/email/instagram.png" style=3D"-ms-interpolation-mode: b=
+icubic;border-width: 0px; border-style: solid; width: 48px;"></a> </td></tr>=
+<tr><td valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-adjust: 100%=
+; -ms-text-size-adjust: 100%;height:50px; background-color: #ffffff;">&nbsp;=
+ </td></tr><tr><td valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; background-color: #1=
+C3455; padding: 0 20px;"><table role=3D"presentation" width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"10" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-a=
+djust: 100%;text-align:center;"><tbody><tr><td valign=3D"middle" align=3D"center=
+" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;text-ali=
+gn:center;"><table role=3D"presentation" cellpadding=3D"0" class=3D"responsive-tab=
+le" align=3D"left" cellspacing=3D"0" width=3D"24.9%" style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;font-family: arial, helvetica, sans-ser=
+if; text-align:center; font-size: 10px; color: #ffffff; margin: 12px 0;mso-t=
+able-lspace: 0pt; mso-table-rspace: 0pt;"><tbody><tr><td style=3D"-webkit-text=
+-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica=
+, sans-serif;"><strong style=3D"font-weight: bold;font-family: Arial, Helvetic=
+a, sans-serif; text-transform: uppercase; font-size: 9px;">Washington, DC Of=
+fice</strong><br>2333 Rayburn HOB<br>Washington, DC 20515<br>Phone: (202) 22=
+5-2731<br>Fax: (202) 225-5773<br></td></tr></tbody></table><table role=3D"pres=
+entation" cellpadding=3D"0" class=3D"responsive-table" align=3D"left" cellspacing=3D=
+"0" width=3D"24.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjus=
+t: 100%;font-family: arial, helvetica, sans-serif; text-align:center; font-s=
+ize: 10px; color: #ffffff; margin: 12px 0;mso-table-lspace: 0pt; mso-table-r=
+space: 0pt;"><tbody><tr><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;font-family: Arial, Helvetica, sans-serif;"><strong style=3D=
+"font-weight: bold;font-family: Arial, Helvetica, sans-serif; text-transform=
+: uppercase; font-size: 9px;">Brunswick County Office</strong><br>310 Govern=
+ment Center Dr.<br>Unit 1<br>Bolivia, NC 28422<br>Phone: (910) 253-6111<br>F=
+ax: (910) 253-6114<br></td></tr></tbody></table><table role=3D"presentation" c=
+ellpadding=3D"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"=
+24.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fon=
+t-family: arial, helvetica, sans-serif; text-align:center; font-size: 10px; =
+color: #ffffff; margin: 12px 0;mso-table-lspace: 0pt; mso-table-rspace: 0pt;=
+"><tbody><tr><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust=
+: 100%;font-family: Arial, Helvetica, sans-serif;"><strong style=3D"font-weigh=
+t: bold;font-family: Arial, Helvetica, sans-serif; text-transform: uppercase=
+; font-size: 9px;">Johnston County Office</strong><br>4001 US Hwy. 301 S.<br=
+>Suite 106<br>Four Oaks, NC 27524<br>Phone: (919) 938-3040<br>Fax: (919) 938=
+-3540<br></td></tr></tbody></table><table role=3D"presentation" cellpadding=3D"0=
+" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"24.9%" style=3D=
+"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: ari=
+al, helvetica, sans-serif; text-align:center; font-size: 10px; color: #fffff=
+f; margin: 12px 0;mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tbody><tr>=
+<td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-f=
+amily: Arial, Helvetica, sans-serif;"><strong style=3D"font-weight: bold;font-=
+family: Arial, Helvetica, sans-serif; text-transform: uppercase; font-size: =
+9px;">New Hanover County Office</strong><br>201 N. Front Street<br>Suite 502=
+<br>Wilmington, NC 28301<br>Phone: (910) 395-0202<br>Fax: (910) 395-0209<br>=
+</td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td valign=
+=3D"middle" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;height:15px; background-color: #ffffff; font-size: 10px; line=
+-height: 10px;">&nbsp; </td></tr><tr><td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #000000=
+; background-color: #ffffff; font-family: Arial, Helvetica, sans-serif; font=
+-size: 11px; text-align: center;"><p style=3D"margin: 0;font-family: Arial, He=
+lvetica, sans-serif; font-size: 11px; margin: 0; font-weight: normal; paddin=
+g: 0 15pt;">NOTE: Please DO NOT respond to this email as this inbox is unatt=
+ended. To contact my office please <a href=3D"https://rouzerforms.house.gov/co=
+ntact" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;col=
+or: #000000; font-size: 11px;">click here</a></p></td></tr><tr><td valign=3D"m=
+iddle" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-a=
+djust: 100%;height:10px; background-color: #ffffff; font-size: 10px; line-he=
+ight: 10px;">&nbsp; </td></tr><tr><td valign=3D"middle" style=3D"-webkit-text-si=
+ze-adjust: 100%; -ms-text-size-adjust: 100%;background-color: #ffffff;"><tab=
+le role=3D"presentation" cellpadding=3D"0" cellspacing=3D"20" align=3D"center" width=
+=3D"90%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><=
+tbody><tr><td valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;color: #08244a; font-size: 11px; font-fam=
+ily: Arial, Helvetica, sans-serif;"><a target=3D"_blank" href=3D"https://rouzerf=
+orms.house.gov/forms/emailsignup/?delete=3Dtrue" style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;color: #000000; text-decoration:underli=
+ne; font-family: Arial, Helvetica, sans-serif; font-size: 11px;">Unsubscribe=
+</a>&nbsp;|&nbsp; <a target=3D"_blank" href=3D"https://rouzer.house.gov/news/ema=
+il/show.aspx?ID=3DAGMXAJOGKZQM4" style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;color: #000000; text-decoration:underline; font-family:=
+ Arial, Helvetica, sans-serif; font-size: 11px;">View Online</a> </td></tr><=
+/tbody></table></td></tr><tr><td valign=3D"middle" align=3D"center" style=3D"-webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:15px; backgroun=
+d-color: #ffffff; font-size: 10px; line-height: 10px;">&nbsp; </td></tr></tb=
+ody></table><!--[if (gte mso 9)|(IE)]>
+    </td></tr></table>
+    <![endif]--></body></html>
+
+--B_3743592920_2735171023--
+

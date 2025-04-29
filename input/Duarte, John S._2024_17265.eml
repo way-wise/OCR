@@ -1,0 +1,1754 @@
+Received: from BY5PR09MB5329.namprd09.prod.outlook.com (2603:10b6:a03:253::20)
+ by SA1PR09MB10139.namprd09.prod.outlook.com with HTTPS; Fri, 2 Aug 2024
+ 14:04:27 +0000
+Received: from CY5PR09CA0007.namprd09.prod.outlook.com (2603:10b6:930:1::8) by
+ BY5PR09MB5329.namprd09.prod.outlook.com (2603:10b6:a03:253::20) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7828.24; Fri, 2 Aug
+ 2024 14:04:25 +0000
+Received: from SA2PEPF00002253.namprd09.prod.outlook.com
+ (2603:10b6:930:1:cafe::6d) by CY5PR09CA0007.outlook.office365.com
+ (2603:10b6:930:1::8) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7828.24 via Frontend
+ Transport; Fri, 2 Aug 2024 14:04:24 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.51.120)
+ smtp.mailfrom=mail.house.gov; dkim=fail (body hash did not verify)
+ header.d=mail.house.gov;dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.51.120 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.51.120;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.51.120) by
+ SA2PEPF00002253.mail.protection.outlook.com (10.167.242.135) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7828.19 via Frontend Transport; Fri, 2 Aug 2024 14:04:24 +0000
+Received: from EXCH1924.US.House.gov (143.228.51.120) by EXCH1924.US.House.gov
+ (143.228.51.120) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1544.11; Fri, 2 Aug
+ 2024 10:04:21 -0400
+Received: from serg-bulk2-a.house.gov (143.228.42.36) by EXCH1924.US.House.gov
+ (143.228.51.120) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1544.11 via Frontend
+ Transport; Fri, 2 Aug 2024 10:04:21 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mail.house.gov; h=content-type :
+ date : from : message-id : mime-version : subject : to;
+ s=january2024-msgb-mhg; bh=3bc8ZYbWtdvYv1vJXbR4UaG1C9wCP7ZJTJoNE8fiUJo=;
+ b=mohVlS2u6M9X9t7jlx/k7XNZaLBaa+yF+Qj5Km2R7BYx2BMLRlXFlyCOBEFbZh78oDnl
+ qyHBmCyqW+JHCSRWqJpeFMOhzdgtMQxQf0xKgCbyrkx6tJ4nIJsdiTk4FsZNAXuf4qJY
+ 2agigUUjIHlcFEJ34Fq0j6+2zkthT1IOpNRgTUy44H4lQYAk4/PllWKgEXA1CmCxLGjl
+ yQfIj9WquF9d8xUN+fL1n5rYRKHY7G53TsoiRxrwb6EM+PD3ekrPff48oQ5beQGS9GT6
+ RjjuVVyldK1Um5gdtn1Tj0jM8jUoeNflCDVc9TYdmgL3UzlcRH1ncXs7qAv+cohSEJnr Xw== 
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=content-type : date :
+ from : message-id : mime-version : subject : to; s=august2019-msgb-hg;
+ bh=3bc8ZYbWtdvYv1vJXbR4UaG1C9wCP7ZJTJoNE8fiUJo=;
+ b=c7IcX/Le3njGG2e+sI5O+2dQI99p0JnAUrIpMlZ55+Dz4WFyvgfoSfP72cSEufrpKaM+
+ TOwW+zHsk1jOBfoInIV80PAxBdW0SPzJ2v6qYxldZ+4KCAEIJCqWaT2YqVWnVP3yKxVJ
+ 7H946IQCk/cPcd8wUkMBQv+2tGXrsSb7X0vd9F/SBbowe1ASoD/Diiuo4LYj8W7b1qif
+ pEuUcgpwn0gVGLNJnxOkkoHHIAYzLKCtrFXKIX/TJSlgv9DOME6Nuf03UdBTW9iWitgT
+ LqBWR/2NTNYRAZdWJFzmrI6SmQtLmxKNfwBOgub8Qf+suFqjndbK+O5et8jFwaobTPvI tg== 
+Received: from FIRESIDEADMIN04 (firesideadmin04.us.house.gov [143.228.58.69])
+	by serg-bulk2-a.house.gov (8.17.1.19/8.17.1.19) with ESMTP id 472E4LcR024686;
+	Fri, 2 Aug 2024 10:04:21 -0400
+Message-Id: <40rjejw70s-1@serg-bulk2-a.house.gov>
+envelope-from: Duarte.press@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+X-House-Vendor-Seg: Fireside21-1
+From: "Rep. John Duarte" <Duarte.press@mail.house.gov>
+To: Alexa.Manning@mail.house.gov
+Date: 2 Aug 2024 10:04:21 -0400
+Subject: TEST Update From Congressman Duarte
+Content-Type: multipart/alternative;
+ boundary=--boundary_261_28284b85-6b01-4ec9-b57f-f7969dd7e1b9
+X-Proofpoint-Virus-Version: vendor=baseguard
+ engine=ICAP:2.0.293,Aquarius:18.0.1039,Hydra:6.0.680,FMLib:17.12.28.16
+ definitions=2024-08-02_09,2024-08-02_01,2024-05-17_01
+Return-Path: Duarte.Press@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1924.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 02 Aug 2024 14:04:24.7954
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 7bf3a1f1-34e0-4b6a-84d4-08dcb2fc03f9
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1924.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted: SA2PEPF00002253.namprd09.prod.outlook.com
+X-CrossPremisesHeadersFiltered: SA2PEPF00002253.namprd09.prod.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ SA2PEPF00002253:EE_|BY5PR09MB5329:EE_|SA1PR09MB10139:EE_
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: 7bf3a1f1-34e0-4b6a-84d4-08dcb2fc03f9
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam:
+ BCL:0;ARA:13230040|366016|69100299015|4022899009|82310400026|41050700001;
+X-Forefront-Antispam-Report:
+ CIP:143.228.51.120;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:(13230040)(366016)(69100299015)(4022899009)(82310400026)(41050700001);DIR:INT;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 02 Aug 2024 14:04:24.6704
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 7bf3a1f1-34e0-4b6a-84d4-08dcb2fc03f9
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.51.120];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1924.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BY5PR09MB5329
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.3423567
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.7828.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(425001)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	dpVutIL/cknvkB9ZuucM4mC9Zt7or1Sxu+AQt6DulkBLptKabSY5B23b54DwFXe7bOC/oYWEkcu+tQ6zKz/3bJR02QXKvtuka/Fnb3+Kr7AMQ3/F1J2IOmQs8Th9YoqSeFhnzNuJwQ2VUUolbw35AWddwFvmmwDkOFoTQCL2Dl003MG5y5G1mf++4HHjVrY2lSIcaBXwS+Cophm0AWU0fmNQ/9ZSKhOh7higdXyXhLBXWeWypKE++09y/IJd72+ZGxjx9HTQYjjOozPLIsXSiLGxVbcJq/mKxk4uCrsv8A2SqiFDR1cO1A48SGvdsRExXNcir26mf5alCL9uDc4kUuIJNAm83wTucG98f9p/dCoTHw37Hk6LuWZJnEdpMgiGm5w9siWZ1SpQFmz8N6xvVOZ7yLvl0PVTuXAZEuFUpx2HVW8N6y0epOjRGsMXibm3AAhgr3QuEZZfgrKYQTIJBI1JAwOAHxmLCy9wTR1AfEaonul0S2o7opBlwKlNmkN06FrCNzFuMJ9GjRTUbYMpOekSkEx41CbcHfdsUSbuszAccS45b8hBF9rf4qi2s9QNpfvAIkTQWHugRZOvwLq2YxOLR1j8r7130/NFwP5mwvXfsTy3b1Vpbjhmac+hxpBEbS6PpzmwNuKFLnJkuwrCTciHtaXMVI7KeDvyLIQRb/ImzZIBv5B05bs+r6ErxRBBUC0QTq/6UGDUqBwaJOGfbkT7SPKXSMlXG1dyp8X5CBAU00l7KeKVfjA+T94OK9/8UHAeFFICkD6WVAiOk26AvPBec604kSpoVhmtcbANKYLuAfUVDIs8XOwOjK3tdF2CS+9YxNncNpEuvetcWOSGkRRQuLWwMvkAnlJsUNnoTscPfdhnDacYxkgBvFh2ArE2
+MIME-Version: 1.0
+
+----boundary_261_28284b85-6b01-4ec9-b57f-f7969dd7e1b9
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+
+
+Update From Congressman Duarte
+
+
+
+Dear John,
+I wanted to update you on what I've been up to this week.
+
+
+
+Panel Participation with American Pistachios
+
+
+I loved being a panelist at American Pistachios' first Pistachio Industry I=
+nsights Day.=20
+I=E2=80=99m committed to ensuring our Valley has enough water for our farms=
+, small towns, and families. When our farming grows, it lowers our grocery =
+prices and provides good-paying jobs. Thanks to American Pistachios for inc=
+luding me in this important event!
+
+Image:Photo , Caption: Congressman Duarte at theAmerican Pistachio Growers =
+panel in Visalia.
+
+
+
+Fighting Valley Fever: My Commitment to our Valley
+
+
+Valley Fever is similar to many of our other issues in our Valley=E2=80=94n=
+ational and statewide policies ignore it because it doesn=E2=80=99t affect =
+LA, San Diego, or San Francisco. But the problem is a serious health issue =
+for our Valley families. Raising awareness is crucial because prevention, e=
+arly recognition, and treatment save lives. August is Valley Fever Awarenes=
+s Month because this is peak Valley Fever season.=20
+I'mintroduceding the Valley Fever Awareness and Vaccine Development and Man=
+ufacturing Act to expedite and grant funding for a safe and effective vacci=
+ne. This law brings government agencies and experts together to create a Va=
+lley Fever vaccine. Stay tuned for more updates.
+
+
+Survey Question: How aware are you of Valley Fever and its symptoms?
+Survey Responses:
+1. Very Aware(https://duarte.house.gov/Forms/Form/QuickSurvey.aspx?email=3D=
+jd@fireside21.com&sid=3D57&fid=3D16842&aid=3D223&mid=3D224)=20
+2. Somewhat Aware(https://duarte.house.gov/Forms/Form/QuickSurvey.aspx?emai=
+l=3Djd@fireside21.com&sid=3D57&fid=3D16842&aid=3D224&mid=3D224)=20
+3. Neutral(https://duarte.house.gov/Forms/Form/QuickSurvey.aspx?email=3Djd@=
+fireside21.com&sid=3D57&fid=3D16842&aid=3D225&mid=3D224)=20
+4. Somewhat Unaware(https://duarte.house.gov/Forms/Form/QuickSurvey.aspx?em=
+ail=3Djd@fireside21.com&sid=3D57&fid=3D16842&aid=3D226&mid=3D224)=20
+5. Very Unaware(https://duarte.house.gov/Forms/Form/QuickSurvey.aspx?email=
+=3Djd@fireside21.com&sid=3D57&fid=3D16842&aid=3D227&mid=3D224)=20
+
+
+
+
+
+Supporting Our Valley Ranchers
+
+
+This week, I discussed the opportunities and challenges facing Valley ranch=
+ers with the Turlock Livestock Auction Yard and representatives from the Li=
+vestock Marketing Association. Our Valley=E2=80=99s ranchers provide afford=
+able food and good-paying jobs. Their hard work lowers grocery prices and m=
+akes lives better.=20
+Thank you to Max Olvera, Jake Parnell, and Forrest Mangan for inviting me t=
+o join!
+
+Image:Photo , Caption: Max Olvera andJake Parnell showing me around theLive=
+stock Auction Yard.
+
+
+
+Two Upcoming Town Halls
+
+
+
+Please join me in Newman for my town hall meeting on Wednesday, August 7th,=
+ and my Veterans Town Hall on Wednesday, August 14th, at the Madera Veteran=
+s of Foreign Wars Hall from 9:30 AM to noon. I'll discuss my veterans-focus=
+ed priorities, including efforts to streamline the claims process. I value =
+your input and would love to hear your ideas on how we can make our Valley =
+even better. Looking forward to seeing you there!
+
+
+Photo=20
+
+Photo=20
+
+
+It is my honor to be your voice in Washington. To learn more about my posit=
+ions on the issues, share your views with me, request assistance with resol=
+ving issues you may have with Federal agencies or programs, or to subscribe=
+ to my email list, please visit my website,https://urldefense.com/v3/__http=
+s://duarte.house.gov.(https:/*duarte.house.gov/)__;Lw!!Ckt11KVezJIME51BYf4a=
+6hrLATHilnk!DFuHlxG6uo0lGjC3U8dRH4KsCTkN0-zSpBKMlt_RzGpRc4Iojnq5BfFxig_EvoJ=
+EM1tLMQ8Xw9tGwC7gvxfDrzjgLav0ilJgP9aAsw$=20=20
+
+Sincerely,
+
+
+
+----boundary_261_28284b85-6b01-4ec9-b57f-f7969dd7e1b9
+Content-Location: https://duarte.house.gov/
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>Representative John Duarte</title>
+       =20
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1">
+        <!--[if !mso]><!-->
+        <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![e=
+ndif]-->
+        <style>body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default t=
+ext sizes */ img{-ms-interpolation-mode: bicubic;} /* Allow smoother render=
+ing of resized image in Internet Explorer *//* RESET STYLES */img { border:=
+ 0; height: auto; line-height: 100%; outline: none; text-decoration: none; =
+}table { border-collapse: collapse !important; }body { height: 100% !import=
+ant; margin: 0 !important; padding: 0 !important; width: 100% !important; }=
+strong { font-weight: bold; } /* Editor reset *//* FIRESIDE STYLES */.compo=
+nent img {max-width:600px;}.component table {mso-table-rspace:10pt; border-=
+collapse:collapse;}.component { padding: 0px !important; }.press {padding-b=
+ottom: 0px;}</style><style>@media all and (max-width:650px) {            .i=
+mage-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td, .image-2, .img-2 =
+img, .image-2 tr, .image-2 td {max-width: 100% !important; width: 100% !imp=
+ortant;}            .responsive-table {width:100% !important;}            .=
+responsive-table img {max-width:100% !important; height: auto !important;} =
+           .press .component, .press td {text-align:center;}            .co=
+mponent { margin-left: 20px; margin-right: 20px;}            .component .re=
+sponsive-table { margin-left: 0px !important; margin-right: 0px !important;=
+}            .wide .video-thumb { width: 100% !important;height: auto !impo=
+rtant; }             .wide.video-container { width: 100% !important; }     =
+    .component.full-width {margin-left: 0px; margin-right: 0px; }   }</styl=
+e><style type=3D"text/css">
+            /* CLIENT-SPECIFIC STYLES */
+            body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text=
+ sizes */
+            table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Rem=
+ove spacing between tables in Outlook 2007 and up */
+            img{-ms-interpolation-mode: bicubic;} /* Allow smoother renderi=
+ng of resized image in Internet Explorer */
+            /* RESET STYLES */
+            img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: =
+0 !important; width: 100% !important; }
+            strong { font-weight: bold; } /* Editor reset */
+            /* FIRESIDE STYLES */
+            .component img {max-width:600px;}
+            .component table {mso-table-rspace:10pt; border-collapse:collap=
+se; font-family: Arial, Helvetica, sans-serif;}
+            .component td, td {font-family: Arial, Helvetica, sans-serif;}
+            .component { padding: 0px !important; }
+            .press {padding-bottom: 0px;}
+            .caption-1 td {font-family: Arial, Helvetica, sans-serif;}
+            /* Margin/NoMargin STYLES */
+            .component.full-width{ overflow: hidden; margin: 0px; }
+            /* HEADER STYLES */
+            .header-bar {width: 100%;}
+            .header-bar-margin {background-color:#ffffff;}
+            .header-bar h2 {margin: 0 !important; padding: 0 !important; co=
+lor: #000000 !important;text-align: center;font-size: 24px !important;font-=
+weight: bold !important; }
+            .survey-content > table > tbody tr td { border-color: #892106 !=
+important; }
+            .survey-content input.survey-submit { font-family: Arial, Helve=
+tica, sans-serif !important; }
+        </style>       =20
+        <style id=3D"media-queries">=20
+            @media all and (max-width:650px) {
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max=
+-width: 100% !important; width: 100% !important;}
+            .responsive-table {width:100% !important;}
+            .responsive-table img {max-width:100% !important; height: auto =
+!important;}
+            .press .component, .press td, .split .component, .split .compon=
+ent td, .split td {text-align:center;}
+            .component { margin-left: 20px; margin-right: 20px;}
+            .component .responsive-table { margin-left: 0px !important; mar=
+gin-right: 0px !important;}
+            .wide .video-thumb { width: 100% !important;height: auto !impor=
+tant; }=20
+            .wide.video-container { width: 100% !important; }
+            }
+        </style>
+       =20
+    <!--[if (gte mso 9)|(IE)]>
+                                        <style>=20
+                                    </style>
+                                    <![endif]--></head>
+    <body style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%;margin: 0px !important; padding: 0px !important;">
+        <div id=3D"preview-text" style=3D"display: none; font-size: 1px; co=
+lor: #fefefe; line-height: 1px; font-family: Arial, Helvetica, sans-serif; =
+max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">Update From=
+ Congressman Duarte Dear John,I wanted to update you on what I've been up t=
+o this week. </div>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color: #=
+ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0=
+" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td valign=3D"middle" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;background-color: #ffffff;">
+                    <table role=3D"presentation" cellpadding=3D"10" cellspa=
+cing=3D"0" align=3D"center" width=3D"100%" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #000=
+000; font-size: 12px; font-family: Arial, Helvetica, sans-serif; text-align=
+: center;">
+                                <a href=3D"https://duarteforms.house.gov/fo=
+rms/emailsignup" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adj=
+ust: 100%;color: #000000; text-decoration: none; font-size: 12px;">Enews Si=
+gn Up</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href=3D"https://duarte.house.gov" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #000=
+000; text-decoration: none;font-size: 12px;">Visit My Website</a>&nbsp;&nbs=
+p;|&nbsp;&nbsp;<a href=3D"[link]" style=3D"-webkit-text-size-adjust: 100%; =
+-ms-text-size-adjust: 100%;color: #000000; text-decoration: none; font-size=
+: 12px;">View Online</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color:=
+ #ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D=
+"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td align=3D"center" valign=3D"top" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvet=
+ica, sans-serif; font-size: 16px;">
+                    <a target=3D"_blank" href=3D"https://duarte.house.gov" =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                    <img alt=3D"Representative John Duarte" width=3D"650" s=
+tyle=3D"-ms-interpolation-mode: bicubic;display: block; width: 650px;" src=
+=3D"https://duarte.house.gov/UploadedPhotos/TemplateImages/newsletter.png">
+                    </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;background-color: #ffffff; font-family: Arial, Helvetica, sa=
+ns-serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D=
+"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td class=3D"responsive-table" valign=3D"top" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Ari=
+al, Helvetica, sans-serif; font-size: 16px; color: #000000;">
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class=3D"region" id=3D"region-1"><div class=3D=
+"component full-width" style=3D"padding: 0px !important;"> <div class=3D"he=
+ader-bar" style=3D"overflow: hidden;">
+                                    <table role=3D"presentation" align=3D"c=
+enter" class=3D"responsive-table table-w-bg-color" style=3D"mso-table-lspac=
+e:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse=
+;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Ar=
+ial, Helvetica, sans-serif; margin-right: 0px; margin-left: 0px;" border=3D=
+"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0=
+" leftmargin=3D"0" topmargin=3D"0" width=3D"650">
+                                        <tbody>
+                                            <tr height=3D"0" class=3D"space=
+rRow">
+                                                <td style=3D"-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 0p=
+x">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td class=3D"responsive-tab=
+le" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fon=
+t-size:24px;color:#000000;" valign=3D"top">
+                                                <table role=3D"presentation=
+" width=3D"100%" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-ta=
+ble-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -=
+ms-text-size-adjust: 100%;min-width: 100%;" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" top=
+margin=3D"0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;padding: 0 15pt; f=
+ont-family: Arial, Helvetica, sans-serif;">
+                                                                <div class=
+=3D"cke_editable cke_editable_inline cke_contents_ltr cke_focus cke_show_bo=
+rders" style=3D"overflow: hidden;"><h2><span style=3D"font-family:Times New=
+ Roman,Times,serif;">Update From Congressman Duarte</span></h2></div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                </td>
+                                            </tr>
+                                            <tr height=3D"0" class=3D"space=
+rRow">
+                                                <td style=3D"-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 0p=
+x">&nbsp;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><d=
+iv class=3D"component-template" style=3D"overflow: hidden;"><p style=3D"mar=
+gin: 0;margin: 0;"><span style=3D"font-family:Times New Roman,Times,serif;"=
+>Dear <span class=3D"fs-merge-field" contenteditable=3D"false"><span conten=
+teditable=3D"false"><span class=3D"merge-field" contenteditable=3D"false" u=
+nselectable=3D"true">John</span></span></span>,</span></p><p style=3D"margi=
+n: 0;line-height:1.38; margin-top:19px; margin-bottom:19px"><font face=3D"T=
+imes New Roman, serif"><span style=3D"white-space-collapse: preserve;">I wa=
+nted to update you on what I've been up to this week.</span></font></p></di=
+v></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component full-width" style=3D"padding: 0px !important;"> <di=
+v class=3D"header-bar" style=3D"overflow: hidden;"> <table role=3D"presenta=
+tion" align=3D"center" class=3D"responsive-table table-w-bg-color" style=3D=
+"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-c=
+ollapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%=
+;font-family: Arial, Helvetica, sans-serif; margin-right: 0px; margin-left:=
+ 0px;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" =
+marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0" width=3D"650"> <tbody> <=
+tr height=3D"5" class=3D"spacerRow"> <td style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 5px;">&nbsp;<=
+/td> </tr> <tr> <td class=3D"responsive-table" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;font-size:24px;color:#000000;" vali=
+gn=3D"top"> <table role=3D"presentation" width=3D"100%" style=3D"mso-table-=
+lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:col=
+lapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;min-width:=
+ 100%;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0"=
+ marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"> <tbody> <tr> <td style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;padding: 0 1=
+5pt;font-family:Arial, Helvetica, sans-serif;"> <div class=3D"cke_editable =
+cke_editable_inline cke_contents_ltr cke_focus cke_show_borders" style=3D"o=
+verflow: hidden;"><h2><span style=3D"font-family:Times New Roman,Times,seri=
+f;">Panel Participation with American Pistachios</span></h2></div> </td> </=
+tr> </tbody> </table> </td> </tr> <tr height=3D"5" class=3D"spacerRow"> <td=
+ style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-s=
+ize: 0%; line-height: 5px;">&nbsp;</td> </tr> </tbody> </table> </div> </di=
+v>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;overflow:hidden; background-color:#ffffff"><p =
+style=3D"margin: 0;line-height:1.38; margin-top:16px; margin-bottom:16px"><=
+span style=3D"font-size:12pt; font-variant-ligatures:normal; font-variant-a=
+lternates:normal; font-variant-numeric:normal; font-variant-east-asian:norm=
+al; font-variant-position:normal; white-space:pre-wrap"><span style=3D"font=
+-family:&quot;Times New Roman&quot;, serif"><span style=3D"color:#000000"><=
+span style=3D"font-weight:400"><span style=3D"font-style:normal"><span styl=
+e=3D"text-decoration:none">I loved being a panelist at American Pistachios'=
+ first Pistachio Industry Insights Day. </span></span></span></span></span>=
+</span></p><p style=3D"margin: 0;line-height:1.38; margin-top:16px; margin-=
+bottom:16px"><span style=3D"font-family:Times New Roman,Times,serif;">I=E2=
+=80=99m committed to ensuring our Valley has enough water for our farms, sm=
+all towns, and families. When our farming grows, it lowers our grocery pric=
+es and provides good-paying jobs. Thanks to American Pistachios for includi=
+ng me in this important event!&nbsp;</span></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image-caption" style=3D"overflow: hidden;width:100%">=20
+            <table role=3D"presentation" class=3D"Bottom1 responsive-table"=
+ style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt;=
+ border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adj=
+ust: 100%;table-layout: fixed; margin-right: 20px; margin-left: 20px;" bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td valign=3D"top" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%;">
+                            <table role=3D"presentation" align=3D"left" bor=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt=
+; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-web=
+kit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; table-l=
+ayout: fixed;mso-table-lspace:0pt; mso-table-rspace:0pt;" width=3D"100%">
+                                <tbody>
+                                    <tr>
+                                        <td valign=3D"top" class=3D"image-t=
+d" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                            <div class=3D"img-1 image-conta=
+iner" style=3D"overflow: hidden;text-align:center"><img style=3D"max-width:=
+600px;-ms-interpolation-mode: bicubic;vertical-align: bottom; max-width: 55=
+0px;" alt=3D"Photo" src=3D"https://duarte.house.gov/UploadedPhotos/MediumRe=
+solution/2242e9cf-74e5-4d0c-bb97-1e4ee43edbf3.png"></div>
+                                        </td>
+                                    </tr>
+                                    <tr class=3D"spacerRow" height=3D"0">
+                                        <td style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 0px;">
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign=3D"top" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                            <div class=3D"cke_editable cke_=
+editable_inline cke_contents_ltr cke_focus cke_show_borders" style=3D"overf=
+low: hidden;"><p style=3D"margin: 0;text-align: center;"><font face=3D"Time=
+s New Roman, Times, serif">Congressman Duarte at the&nbsp;American Pistachi=
+o Growers panel in Visalia.&nbsp;</font></p></div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component full-width" style=3D"padding: 0px !important;"> <di=
+v class=3D"header-bar" style=3D"overflow: hidden;"> <table role=3D"presenta=
+tion" align=3D"center" class=3D"responsive-table table-w-bg-color" style=3D=
+"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-c=
+ollapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%=
+;font-family: Arial, Helvetica, sans-serif; margin-right: 0px; margin-left:=
+ 0px;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" =
+marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0" width=3D"650"> <tbody> <=
+tr height=3D"5" class=3D"spacerRow"> <td style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 5px;">&nbsp;<=
+/td> </tr> <tr> <td class=3D"responsive-table" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;font-size:24px;color:#000000;" vali=
+gn=3D"top"> <table role=3D"presentation" width=3D"100%" style=3D"mso-table-=
+lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:col=
+lapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;min-width:=
+ 100%;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0"=
+ marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"> <tbody> <tr> <td style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;padding: 0 1=
+5pt;font-family:Arial, Helvetica, sans-serif;"> <div class=3D"cke_editable =
+cke_editable_inline cke_contents_ltr cke_show_borders cke_focus" style=3D"o=
+verflow: hidden;"><h2><span style=3D"font-family:Times New Roman,Times,seri=
+f;">Fighting Valley Fever: My Commitment to our Valley</span></h2></div> </=
+td> </tr> </tbody> </table> </td> </tr> <tr height=3D"5" class=3D"spacerRow=
+"> <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;=
+font-size: 0%; line-height: 5px;">&nbsp;</td> </tr> </tbody> </table> </div=
+> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;overflow:hidden; background-color:#ffffff"><p =
+style=3D"margin: 0;line-height:1.38; margin-top:16px; margin-bottom:16px"><=
+span style=3D"font-family:Times New Roman,Times,serif;">Valley Fever is sim=
+ilar to many of our other issues in our Valley=E2=80=94national and statewi=
+de policies ignore it because it doesn=E2=80=99t affect LA, San Diego, or S=
+an Francisco. But the problem is a serious health issue for our Valley fami=
+lies. Raising awareness is crucial because prevention, early recognition, a=
+nd treatment save lives. August is Valley Fever Awareness Month because thi=
+s is peak Valley Fever season. </span></p><p style=3D"margin: 0;line-height=
+:1.38; margin-top:16px; margin-bottom:16px"><span style=3D"font-family:Time=
+s New Roman,Times,serif;">I'm&nbsp;introduceding the Valley Fever Awareness=
+ and Vaccine Development and Manufacturing Act to expedite and grant fundin=
+g for a safe and effective vaccine. This law brings government agencies and=
+ experts together to create a Valley Fever vaccine. Stay tuned for more upd=
+ates.&nbsp;</span></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"survey" style=3D"overflow: hidden;width:100%;">=20
+            <table align=3D"center" class=3D"responsive-table" role=3D"pres=
+entation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-tab=
+le-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:=
+collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-l=
+ayout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td valign=3D"top" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"survey-content" style=3D"overflow=
+: hidden;"><table role=3D"presentation" align=3D"center" class=3D"responsiv=
+e-table" cellspacing=3D"0" cellpadding=3D"0" style=3D"mso-table-lspace:0pt;=
+ mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%;margin: 0 auto; borde=
+r-collapse: separate !important;">
+          <tbody>
+              <tr>
+                  <td colspan=3D"3" valign=3D"middle" align=3D"center" heig=
+ht=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;height:5px;line-height: 5px; letter-spacing: 5px; font-size: 5px; border-=
+top: 5px solid #08244a; border-left: 5px solid #08244a; border-right: 5px s=
+olid #08244a;">
+                  &nbsp;
+                  </td>
+              </tr><tr>
+                <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;width: 10px; border-left: 5px solid #08244a;" width=3D"10">&nb=
+sp;</td>
+                <td valign=3D"top" style=3D"-webkit-text-size-adjust: 100%;=
+ -ms-text-size-adjust: 100%;">
+                    <p class=3D"survey-text" style=3D"margin: 0;text-align:=
+ center;font:24px Arial, Helvetica, sans-serif">How aware are you of Valley=
+ Fever and its symptoms?</p>
+                </td>
+                <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;width: 10px; border-right: 5px solid #08244a;" width=3D"10">&n=
+bsp;</td>
+            </tr>
+            <tr>
+                <td colspan=3D"3" valign=3D"middle" align=3D"center" height=
+=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;=
+height:5px;line-height: 5px; letter-spacing: 5px; font-size: 5px; border-le=
+ft: 5px solid #08244a; border-right: 5px solid #08244a;">
+                &nbsp;
+                </td>
+            </tr><tr>
+                  <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;width: 10px; border-left: 5px solid #08244a;" width=3D"10">&=
+nbsp;</td>
+                  <td valign=3D"top" style=3D"-webkit-text-size-adjust: 100=
+%; -ms-text-size-adjust: 100%;">
+                      <table role=3D"presentation" align=3D"center" width=
+=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"mso-tab=
+le-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:=
+collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-=
+collapse: separate !important;">
+                          <tbody>
+                              <tr>
+                                  <td style=3D"-webkit-text-size-adjust: 10=
+0%; -ms-text-size-adjust: 100%;">
+                                    <table role=3D"presentation" class=3D"r=
+esponsive-table" align=3D"center" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspac=
+e:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%;width: 100%; border-collapse: separate !important;">
+                                      <tbody><tr>
+                                        <td align=3D"center" class=3D"respo=
+nsive-survey response response-223" id=3D"223" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;width: 100%; line-height: 24px; bac=
+kground-color: rgb(0, 66, 170);" bgcolor=3D"#08244a">
+                                          <a href=3D"https://duarte.house.g=
+ov/Forms/Form/QuickSurvey.aspx?email=3Djd@fireside21.com&amp;sid=3D57&amp;f=
+id=3D16842&amp;aid=3D223&amp;mid=3D224" target=3D"_blank" style=3D"-webkit-=
+text-size-adjust: 100%; -ms-text-size-adjust: 100%;line-height: 24px; color=
+: rgb(255, 255, 255); text-decoration: none; padding: 12px 18px; display: b=
+lock; border-color: rgb(0, 66, 170);">Very Aware</a>
+                                        </td>
+                                      </tr>
+                                    </tbody></table>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </td>
+                  <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;width: 10px; border-right: 5px solid #08244a;" width=3D"10">=
+&nbsp;</td>
+              </tr>
+              <tr>
+                  <td colspan=3D"3" valign=3D"middle" align=3D"center" heig=
+ht=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;height:5px; line-height: 5px; letter-spacing: 5px; font-size: 5px; border=
+-left: 5px solid #08244a; border-right: 5px solid #08244a;">
+                  &nbsp;
+                  </td>
+              </tr><tr>
+                  <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;width: 10px; border-left: 5px solid #08244a;" width=3D"10">&=
+nbsp;</td>
+                  <td valign=3D"top" style=3D"-webkit-text-size-adjust: 100=
+%; -ms-text-size-adjust: 100%;">
+                      <table role=3D"presentation" align=3D"center" width=
+=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"mso-tab=
+le-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:=
+collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-=
+collapse: separate !important;">
+                          <tbody>
+                              <tr>
+                                  <td style=3D"-webkit-text-size-adjust: 10=
+0%; -ms-text-size-adjust: 100%;">
+                                    <table role=3D"presentation" class=3D"r=
+esponsive-table" align=3D"center" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspac=
+e:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%;width: 100%; border-collapse: separate !important;">
+                                      <tbody><tr>
+                                        <td align=3D"center" class=3D"respo=
+nsive-survey response response-224" id=3D"224" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;width: 100%; line-height: 24px; bac=
+kground-color: rgb(0, 66, 170);" bgcolor=3D"#08244a">
+                                          <a href=3D"https://duarte.house.g=
+ov/Forms/Form/QuickSurvey.aspx?email=3Djd@fireside21.com&amp;sid=3D57&amp;f=
+id=3D16842&amp;aid=3D224&amp;mid=3D224" target=3D"_blank" style=3D"-webkit-=
+text-size-adjust: 100%; -ms-text-size-adjust: 100%;line-height: 24px; color=
+: rgb(255, 255, 255); text-decoration: none; padding: 12px 18px; display: b=
+lock; border-color: rgb(0, 66, 170);">Somewhat Aware</a>
+                                        </td>
+                                      </tr>
+                                    </tbody></table>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </td>
+                  <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;width: 10px; border-right: 5px solid #08244a;" width=3D"10">=
+&nbsp;</td>
+              </tr>
+              <tr>
+                  <td colspan=3D"3" valign=3D"middle" align=3D"center" heig=
+ht=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;height:5px; line-height: 5px; letter-spacing: 5px; font-size: 5px; border=
+-left: 5px solid #08244a; border-right: 5px solid #08244a;">
+                  &nbsp;
+                  </td>
+              </tr><tr>
+                  <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;width: 10px; border-left: 5px solid #08244a;" width=3D"10">&=
+nbsp;</td>
+                  <td valign=3D"top" style=3D"-webkit-text-size-adjust: 100=
+%; -ms-text-size-adjust: 100%;">
+                      <table role=3D"presentation" align=3D"center" width=
+=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"mso-tab=
+le-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:=
+collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-=
+collapse: separate !important;">
+                          <tbody>
+                              <tr>
+                                  <td style=3D"-webkit-text-size-adjust: 10=
+0%; -ms-text-size-adjust: 100%;">
+                                    <table role=3D"presentation" class=3D"r=
+esponsive-table" align=3D"center" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspac=
+e:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%;width: 100%; border-collapse: separate !important;">
+                                      <tbody><tr>
+                                        <td align=3D"center" class=3D"respo=
+nsive-survey response response-225" id=3D"225" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;width: 100%; line-height: 24px; bac=
+kground-color: rgb(0, 66, 170);" bgcolor=3D"#08244a">
+                                          <a href=3D"https://duarte.house.g=
+ov/Forms/Form/QuickSurvey.aspx?email=3Djd@fireside21.com&amp;sid=3D57&amp;f=
+id=3D16842&amp;aid=3D225&amp;mid=3D224" target=3D"_blank" style=3D"-webkit-=
+text-size-adjust: 100%; -ms-text-size-adjust: 100%;line-height: 24px; color=
+: rgb(255, 255, 255); text-decoration: none; padding: 12px 18px; display: b=
+lock; border-color: rgb(0, 66, 170);">Neutral</a>
+                                        </td>
+                                      </tr>
+                                    </tbody></table>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </td>
+                  <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;width: 10px; border-right: 5px solid #08244a;" width=3D"10">=
+&nbsp;</td>
+              </tr>
+              <tr>
+                  <td colspan=3D"3" valign=3D"middle" align=3D"center" heig=
+ht=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;height:5px; line-height: 5px; letter-spacing: 5px; font-size: 5px; border=
+-left: 5px solid #08244a; border-right: 5px solid #08244a;">
+                  &nbsp;
+                  </td>
+              </tr><tr>
+                  <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;width: 10px; border-left: 5px solid #08244a;" width=3D"10">&=
+nbsp;</td>
+                  <td valign=3D"top" style=3D"-webkit-text-size-adjust: 100=
+%; -ms-text-size-adjust: 100%;">
+                      <table role=3D"presentation" align=3D"center" width=
+=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"mso-tab=
+le-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:=
+collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-=
+collapse: separate !important;">
+                          <tbody>
+                              <tr>
+                                  <td style=3D"-webkit-text-size-adjust: 10=
+0%; -ms-text-size-adjust: 100%;">
+                                    <table role=3D"presentation" class=3D"r=
+esponsive-table" align=3D"center" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspac=
+e:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%;width: 100%; border-collapse: separate !important;">
+                                      <tbody><tr>
+                                        <td align=3D"center" class=3D"respo=
+nsive-survey response response-226" id=3D"226" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;width: 100%; line-height: 24px; bac=
+kground-color: rgb(0, 66, 170);" bgcolor=3D"#08244a">
+                                          <a href=3D"https://duarte.house.g=
+ov/Forms/Form/QuickSurvey.aspx?email=3Djd@fireside21.com&amp;sid=3D57&amp;f=
+id=3D16842&amp;aid=3D226&amp;mid=3D224" target=3D"_blank" style=3D"-webkit-=
+text-size-adjust: 100%; -ms-text-size-adjust: 100%;line-height: 24px; color=
+: rgb(255, 255, 255); text-decoration: none; padding: 12px 18px; display: b=
+lock; border-color: rgb(0, 66, 170);">Somewhat Unaware</a>
+                                        </td>
+                                      </tr>
+                                    </tbody></table>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </td>
+                  <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;width: 10px; border-right: 5px solid #08244a;" width=3D"10">=
+&nbsp;</td>
+              </tr>
+              <tr>
+                  <td colspan=3D"3" valign=3D"middle" align=3D"center" heig=
+ht=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;height:5px; line-height: 5px; letter-spacing: 5px; font-size: 5px; border=
+-left: 5px solid #08244a; border-right: 5px solid #08244a;">
+                  &nbsp;
+                  </td>
+              </tr><tr>
+                  <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;width: 10px; border-left: 5px solid #08244a;" width=3D"10">&=
+nbsp;</td>
+                  <td valign=3D"top" style=3D"-webkit-text-size-adjust: 100=
+%; -ms-text-size-adjust: 100%;">
+                      <table role=3D"presentation" align=3D"center" width=
+=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"mso-tab=
+le-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:=
+collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-=
+collapse: separate !important;">
+                          <tbody>
+                              <tr>
+                                  <td style=3D"-webkit-text-size-adjust: 10=
+0%; -ms-text-size-adjust: 100%;">
+                                    <table role=3D"presentation" class=3D"r=
+esponsive-table" align=3D"center" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspac=
+e:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%;width: 100%; border-collapse: separate !important;">
+                                      <tbody><tr>
+                                        <td align=3D"center" class=3D"respo=
+nsive-survey response response-227" id=3D"227" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;width: 100%; line-height: 24px; bac=
+kground-color: rgb(0, 66, 170);" bgcolor=3D"#08244a">
+                                          <a href=3D"https://duarte.house.g=
+ov/Forms/Form/QuickSurvey.aspx?email=3Djd@fireside21.com&amp;sid=3D57&amp;f=
+id=3D16842&amp;aid=3D227&amp;mid=3D224" target=3D"_blank" style=3D"-webkit-=
+text-size-adjust: 100%; -ms-text-size-adjust: 100%;line-height: 24px; color=
+: rgb(255, 255, 255); text-decoration: none; padding: 12px 18px; display: b=
+lock; border-color: rgb(0, 66, 170);">Very Unaware</a>
+                                        </td>
+                                      </tr>
+                                    </tbody></table>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </td>
+                  <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;width: 10px; border-right: 5px solid #08244a;" width=3D"10">=
+&nbsp;</td>
+              </tr>
+              <tr>
+                  <td colspan=3D"3" valign=3D"middle" align=3D"center" heig=
+ht=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;height:5px; line-height: 5px; letter-spacing: 5px; font-size: 5px; border=
+-left: 5px solid #08244a; border-right: 5px solid #08244a;">
+                  &nbsp;
+                  </td>
+              </tr>
+          <tr>
+                  <td colspan=3D"3" valign=3D"middle" align=3D"center" heig=
+ht=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;height:5px;line-height: 5px; letter-spacing: 5px; font-size: 5px; border-=
+bottom: 5px solid #08244a; border-left: 5px solid #08244a; border-right: 5p=
+x solid #08244a;">
+                  &nbsp;
+                  </td>
+              </tr>
+              <tr><td colspan=3D"3" align=3D"center" style=3D"-webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%;">
+              <i class=3D"newsletter-optin">Submit survey to sign up for up=
+dates.*</i>
+          </td></tr>
+            </tbody>
+          </table></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;overflow:hidden; background-color:#ffffff"><p =
+style=3D"margin: 0;"><br></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component full-width" style=3D"padding: 0px !important;"> <di=
+v class=3D"header-bar" style=3D"overflow: hidden;"> <table role=3D"presenta=
+tion" align=3D"center" class=3D"responsive-table table-w-bg-color" style=3D=
+"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-c=
+ollapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%=
+;font-family: Arial, Helvetica, sans-serif; margin-right: 0px; margin-left:=
+ 0px;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" =
+marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0" width=3D"650"> <tbody> <=
+tr height=3D"5" class=3D"spacerRow"> <td style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 5px;">&nbsp;<=
+/td> </tr> <tr> <td class=3D"responsive-table" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;font-size:24px;color:#000000;" vali=
+gn=3D"top"> <table role=3D"presentation" width=3D"100%" style=3D"mso-table-=
+lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:col=
+lapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;min-width:=
+ 100%;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0"=
+ marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"> <tbody> <tr> <td style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;padding: 0 1=
+5pt;font-family:Arial, Helvetica, sans-serif;"> <div class=3D"cke_editable =
+cke_editable_inline cke_contents_ltr cke_focus cke_show_borders" style=3D"o=
+verflow: hidden;"><h2><span style=3D"font-family:Times New Roman,Times,seri=
+f;">Supporting Our Valley Ranchers</span></h2></div> </td> </tr> </tbody> <=
+/table> </td> </tr> <tr height=3D"5" class=3D"spacerRow"> <td style=3D"-web=
+kit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-=
+height: 5px;">&nbsp;</td> </tr> </tbody> </table> </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;overflow:hidden; background-color:#ffffff"><p =
+style=3D"margin: 0;line-height:1.38; margin-top:16px; margin-bottom:16px"><=
+span style=3D"font-family:Times New Roman,Times,serif;">This week, I discus=
+sed the opportunities and challenges facing Valley ranchers with the Turloc=
+k Livestock Auction Yard and representatives from the Livestock Marketing A=
+ssociation. Our Valley=E2=80=99s ranchers provide affordable food and good-=
+paying jobs. Their hard work lowers grocery prices and makes lives better. =
+</span></p><p style=3D"margin: 0;line-height:1.38; margin-top:16px; margin-=
+bottom:16px"><span style=3D"font-family:Times New Roman,Times,serif;">Thank=
+ you to Max Olvera, Jake Parnell, and Forrest Mangan for inviting me to joi=
+n!</span></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image-caption" style=3D"overflow: hidden;width:100%">=20
+            <table role=3D"presentation" class=3D"Bottom1 responsive-table"=
+ style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt;=
+ border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adj=
+ust: 100%;table-layout: fixed; margin-right: 20px; margin-left: 20px;" bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td valign=3D"top" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%;">
+                            <table role=3D"presentation" align=3D"left" bor=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt=
+; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-web=
+kit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; table-l=
+ayout: fixed;mso-table-lspace:0pt; mso-table-rspace:0pt;" width=3D"100%">
+                                <tbody>
+                                    <tr>
+                                        <td valign=3D"top" class=3D"image-t=
+d" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                            <div class=3D"img-1 image-conta=
+iner" style=3D"overflow: hidden;text-align:center"><img style=3D"max-width:=
+600px;-ms-interpolation-mode: bicubic;vertical-align: bottom; max-width: 55=
+0px;" alt=3D"Photo" src=3D"https://duarte.house.gov/UploadedPhotos/MediumRe=
+solution/55db179d-6a6b-47ff-be95-50d9bbb1a3e5.png"></div>
+                                        </td>
+                                    </tr>
+                                    <tr class=3D"spacerRow" height=3D"0">
+                                        <td style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 0px;">
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign=3D"top" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                            <div class=3D"cke_editable cke_=
+editable_inline cke_contents_ltr cke_focus cke_show_borders" style=3D"overf=
+low: hidden;"><p style=3D"margin: 0;text-align: center;"><span style=3D"fon=
+t-family:Times New Roman,Times,serif;">Max Olvera and&nbsp;Jake Parnell sho=
+wing me around the&nbsp;Livestock Auction Yard.</span></p></div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component full-width" style=3D"padding: 0px !important;"> <di=
+v class=3D"header-bar" style=3D"overflow: hidden;"> <table role=3D"presenta=
+tion" align=3D"center" class=3D"responsive-table table-w-bg-color" style=3D=
+"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-c=
+ollapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%=
+;font-family: Arial, Helvetica, sans-serif; margin-right: 0px; margin-left:=
+ 0px;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" =
+marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0" width=3D"650"> <tbody> <=
+tr height=3D"5" class=3D"spacerRow"> <td style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 5px;">&nbsp;<=
+/td> </tr> <tr> <td class=3D"responsive-table" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;font-size:24px;color:#000000;" vali=
+gn=3D"top"> <table role=3D"presentation" width=3D"100%" style=3D"mso-table-=
+lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:col=
+lapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;min-width:=
+ 100%;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0"=
+ marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"> <tbody> <tr> <td style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;padding: 0 1=
+5pt;font-family:Arial, Helvetica, sans-serif;"> <div class=3D"cke_editable =
+cke_editable_inline cke_contents_ltr cke_focus cke_show_borders" style=3D"o=
+verflow: hidden;"><h2><span style=3D"font-family:Times New Roman,Times,seri=
+f;">Two Upcoming Town Halls</span></h2></div> </td> </tr> </tbody> </table>=
+ </td> </tr> <tr height=3D"5" class=3D"spacerRow"> <td style=3D"-webkit-tex=
+t-size-adjust: 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height:=
+ 5px;">&nbsp;</td> </tr> </tbody> </table> </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;overflow:hidden; background-color:#ffffff"><p =
+style=3D"margin: 0;line-height:1.38"><span style=3D"font-family:Times New R=
+oman,Times,serif;">Please join me in Newman for my town hall meeting on Wed=
+nesday, August 7th, and my Veterans Town Hall on Wednesday, August 14th, at=
+ the Madera Veterans of Foreign Wars Hall from 9:30 AM to noon. I'll discus=
+s my veterans-focused priorities, including efforts to streamline the claim=
+s process. I value your input and would love to hear your ideas on how we c=
+an make our Valley even better. Looking forward to seeing you there!</span>=
+</p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 550px;" alt=3D"Photo" sr=
+c=3D"https://duarte.house.gov/UploadedPhotos/MediumResolution/3cedda12-bb57=
+-4e61-bbb7-e45a4d431f81.png"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 550px;" alt=3D"Photo" sr=
+c=3D"https://duarte.house.gov/UploadedPhotos/MediumResolution/5475586a-a711=
+-458e-9a29-8e45312a0248.png"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;overflow:hidden; background-color:#ffffff"><p =
+style=3D"margin: 0;"><span style=3D"font-family:Times New Roman,Times,serif=
+;">It is my honor to be your voice in Washington. To learn more about my po=
+sitions on the issues, share your views with me, request assistance with re=
+solving issues you may have with Federal agencies or programs, or to subscr=
+ibe to my email list, please visit my website,&nbsp;<a data-cke-saved-href=
+=3D"https://duarte.house.gov" href=3D"https://duarte.house.gov/" style=3D"-=
+webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">https://duarte.=
+house.gov.</a></span></p><p style=3D"margin: 0;"><br></p><p style=3D"margin=
+: 0;"><font face=3D"Times New Roman, Times, serif">Sincerely,&nbsp;</font><=
+/p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"signature" style=3D"overflow: hidden;width:100%">=20
+            <table role=3D"presentation" class=3D"responsive-table" align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-t=
+able-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collaps=
+e:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table=
+-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td valign=3D"top" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%;">
+                            <table align=3D"left" class=3D"signature-table"=
+ role=3D"presentation" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;=
+mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 1=
+00%; -ms-text-size-adjust: 100%;table-layout: fixed;">
+                                <tbody>
+                                    <tr>
+                                        <td style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;">
+                                            <table role=3D"presentation" al=
+ign=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-=
+table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collap=
+se:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;bord=
+er-collapse: separate !important;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td valign=3D"top" =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                                            <div class=3D"n=
+g-binding" style=3D"overflow: hidden;"></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td valign=3D"top" =
+class=3D"image-td" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-a=
+djust: 100%;">
+                                                            <div class=3D"i=
+mg-1 image-container" style=3D"overflow: hidden;text-align:left"><img style=
+=3D"max-width:600px;-ms-interpolation-mode: bicubic;vertical-align: bottom;=
+ max-width: 200px; width: 200px !important;" alt=3D"John Duarte Signature" =
+src=3D"https://duarte.house.gov/UploadedPhotos/TemplateImages/signature.png=
+"></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class=3D"spacerRow"=
+ height=3D"0">
+                                                        <td style=3D"-webki=
+t-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-size:0%;line-heig=
+ht: 0px;">
+                                                            &nbsp;
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td valign=3D"top" =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                                            <div class=3D"n=
+g-binding" style=3D"overflow: hidden;">John Duarte<br>Member of Congress</d=
+iv>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div></div>
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color: #=
+892106;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0=
+" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #892106;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; backgro=
+und-color: #892106; font-family: arial, helvetica, sans-serif; font-size: 2=
+4px; text-align: center;">
+                    <h2 style=3D"font-family: arial, helvetica, sans-serif;=
+ font-size: 24px; margin: 0; font-weight: normal;">Office Locations</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #892106;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; backgro=
+und-color: #892106; padding: 0 20px;">
+                    <table role=3D"presentation" width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"10" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;text-align:center;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;text-align:=
+center;">
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"49=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: arial, helvetica, sans-serif; text-align:center; font-size: 14px=
+; color: #ffffff; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0=
+pt;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, san=
+s-serif;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: Arial, Helvetica, sans-serif; text-transform: uppercase;">=
+Washington, DC Office</strong><br>
+                                            1535 Longworth HOB<br>
+Washington, DC  20515<br>
+Phone: (202) 225-1947<br>
+Office Hours: 9:00 am - 5:00 pm ET=20
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"49=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: arial, helvetica, sans-serif; text-align:center; font-size: 14px=
+; color: #ffffff; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0=
+pt;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, san=
+s-serif;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: Arial, Helvetica, sans-serif; text-transform: uppercase;">=
+California Office</strong><br>
+90 S. First Street<br>
+Turlock, CA 95380<br>
+Phone: (209) 226-6880<br>
+Office Hours: 9:00 am - 5:00 pm PST<br>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #892106;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <!-- <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"color: =
+#892106; background-color: #892106;">
+                    <a target=3D"_blank" href=3D"https://www.facebook.com/X=
+XXXXXX"><img alt=3D"facebook icon" width=3D"32" src=3D"https://duarteforms.=
+house.gov/images/email/facebook.png" style=3D"border-width: 0px; border-sty=
+le: solid; width: 32px;" /></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://twitter.com/=
+XXXXXXX"><img alt=3D"twitter icon" width=3D"32" src=3D"https://duarteforms.=
+house.gov/images/email/twitter.png" style=3D"border-width: 0px; border-styl=
+e: solid; width: 32px;" /></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://www.instagra=
+m.com/XXXXXX"><img alt=3D"instagram icon" width=3D"32" src=3D"https://duart=
+eforms.house.gov/images/email/instagram.png" style=3D"border-width: 0px; bo=
+rder-style: solid; width: 32px;" /></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://www.youtube.=
+com/channel/XXXXXX"><img alt=3D"youtube icon" width=3D"32" src=3D"https://d=
+uarteforms.house.gov/images/email/youtube.png" style=3D"border-width: 0px; =
+border-style: solid; width: 32px;" /></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"height:=
+30px; background-color: #892106;">
+                    &nbsp;
+                    </td>
+                </tr> -->
+                <tr>
+                    <td valign=3D"middle" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;background-color: #892106;">
+                    <table role=3D"presentation" cellpadding=3D"0" cellspac=
+ing=3D"20" align=3D"center" width=3D"90%" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #892=
+106; font-size: 15px; font-family: Arial, Helvetica, sans-serif;">
+                                <a target=3D"_blank" href=3D"https://duarte=
+forms.house.gov/forms/emailsignup/?delete=3Dtrue" style=3D"-webkit-text-siz=
+e-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; text-decoration:=
+none; font-family: Arial, Helvetica, sans-serif;">Unsubscribe</a>&nbsp;|&nb=
+sp;
+                                <a target=3D"_blank" href=3D"https://urldef=
+ense.com/v3/__https://www.facebook.com/sharer.php?u=3Dhttps:**Aduarte.house=
+.gov*news*email*show.aspx*ID=3DK3323NHZPATF6&amp;t=3D*subject*__;Ly8vLy8_W1=
+0!!Ckt11KVezJIME51BYf4a6hrLATHilnk!DFuHlxG6uo0lGjC3U8dRH4KsCTkN0-zSpBKMlt_R=
+zGpRc4Iojnq5BfFxig_EvoJEM1tLMQ8Xw9tGwC7gvxfDrzjgLav0ilIAR-y6DQ$" style=3D"-=
+webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; t=
+ext-decoration:none; font-family: Arial, Helvetica, sans-serif;">Share on F=
+acebook</a>&nbsp;|&nbsp;
+                                <a target=3D"_blank" href=3D"https://duarte=
+forms.house.gov/Components/Redirect/twitter.aspx?url=3Dhttps://duarte.house=
+.gov/news/email/show.aspx?ID=3DK3323NHZPATF6&amp;name=3D[subject]" style=3D=
+"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff;=
+ text-decoration:none; font-family: Arial, Helvetica, sans-serif;">Share on=
+ Twitter</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #892106;">
+                    &nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>=
+
+----boundary_261_28284b85-6b01-4ec9-b57f-f7969dd7e1b9--

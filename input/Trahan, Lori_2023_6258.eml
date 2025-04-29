@@ -1,0 +1,887 @@
+Received: from DS0PR09MB11329.namprd09.prod.outlook.com (2603:10b6:8:17c::12)
+ by SJ0PR09MB6544.namprd09.prod.outlook.com with HTTPS; Thu, 30 Mar 2023
+ 19:34:04 +0000
+Received: from BL0PR0901CA0030.namprd09.prod.outlook.com
+ (2603:10b6:208:1c0::40) by DS0PR09MB11329.namprd09.prod.outlook.com
+ (2603:10b6:8:17c::12) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6254.22; Thu, 30 Mar
+ 2023 19:34:04 +0000
+Received: from DM3GCC02FT004.eop-gcc02.prod.protection.outlook.com
+ (2a01:111:f400:7d04::204) by BL0PR0901CA0030.outlook.office365.com
+ (2603:10b6:208:1c0::40) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6178.44 via Frontend
+ Transport; Thu, 30 Mar 2023 19:34:04 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.51.120)
+ smtp.mailfrom=mail.house.gov; dkim=fail (body hash did not verify)
+ header.d=house.gov;dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.51.120 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.51.120;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.51.120) by
+ DM3GCC02FT004.mail.protection.outlook.com (10.97.8.158) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.6254.23 via Frontend Transport; Thu, 30 Mar 2023 19:34:03 +0000
+Received: from EXCH1925.US.House.gov (143.228.51.106) by EXCH1924.US.House.gov
+ (143.228.51.120) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1118.22; Thu, 30 Mar
+ 2023 15:34:02 -0400
+Received: from serg-bulk2-a.house.gov (143.228.42.36) by EXCH1925.US.House.gov
+ (143.228.51.106) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1118.25 via Frontend
+ Transport; Thu, 30 Mar 2023 15:34:02 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=from : to : date :
+ subject : content-type : message-id : mime-version; s=august2019-msgb-hg;
+ bh=9X/kEIF15gwxqld64nrU+NSeEiN0+3YPOf9m9kkDuEc=;
+ b=rghCBfb+iy83lRM9bIAwtbIP9vkcJVTIZGHK8f9PEhPIn80rUKPd39v3+rHuJzoHVA8U
+ usfJ7i0Iw9Kyqs41CCUfod90pjyCCaN4Tm18Zn1pdaI82bDvbDg/IKmoj+6F333/MmzJ
+ IKwH4OCYILqbxgPDc+CE34Xfq071xEdjFG/TMwaku2nEzbXcNfp0U0HIZm8WGLwjuoqW
+ Jq1hGpWvIOGRNKnDO0ckbFzZxX5PVco2NvqntkX2QQhSF2sjJrt06Rrw/mmacQbz2M2F
+ XtgHAK4qJ6A403xaBGPtY7mEFg32aSrUGV1mHlYb353GSYTelO4LnA8M2XN78gaBn08F HA== 
+Received: from firesideadmin02 (firesideadmin02.us.house.gov [143.228.113.54])
+	by serg-bulk2-a.house.gov (8.17.1.19/8.17.1.19) with ESMTP id 32UJY2Ix005696;
+	Thu, 30 Mar 2023 15:34:02 -0400
+Message-Id: <3phv3sbbk2-1@serg-bulk2-a.house.gov>
+envelope-from: Rep.LoriTrahan@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+X-House-Vendor-Seg: Fireside21-1
+From: "Congresswoman Lori Trahan" <Rep.LoriTrahan@mail.house.gov>
+To: Katie.Petersen@mail.house.gov
+Date: 30 Mar 2023 15:34:02 -0400
+Subject: TEST TELL ME: DO YOU SUPPORT AN ASSAULT WEAPONS BAN?
+Content-Type: multipart/alternative;
+ boundary=--boundary_1637_d0a4e755-6d44-4a90-9240-e4f7983c968f
+X-Proofpoint-Virus-Version: vendor=baseguard
+ engine=ICAP:2.0.254,Aquarius:18.0.942,Hydra:6.0.573,FMLib:17.11.170.22
+ definitions=2023-03-30_13,2023-03-30_03,2023-02-09_01
+Return-Path: Rep.LoriTrahan@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1924.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 30 Mar 2023 19:34:03.9695
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ d7f65a94-2ffa-47d3-b834-08db3155b874
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1925.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted:
+ DM3GCC02FT004.eop-gcc02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ DM3GCC02FT004.eop-gcc02.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ DM3GCC02FT004:EE_|DS0PR09MB11329:EE_|SJ0PR09MB6544:EE_
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: d7f65a94-2ffa-47d3-b834-08db3155b874
+X-MS-Exchange-Organization-SCL: -1
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:143.228.51.120;CTRY:US;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SKI;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:;DIR:INT;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 30 Mar 2023 19:34:03.8757
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: d7f65a94-2ffa-47d3-b834-08db3155b874
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.51.120];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1925.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DS0PR09MB11329
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.0226577
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.6254.022
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(425001)(930097);
+X-Microsoft-Antispam-Message-Info:
+	MpFnw1T51LUczK45lXwF+iNAN3/84A0xiAGYg+rekKdkIqRCVz+Wk7lBiBQemfbK/BTTRPFT/BHF3gRbNNOTQCz/8ovkBFKjRl6hSD+2AaWov47UgkKLrN2gS7F6J9C5uApkEF4lkC0pL77IUqC4kKrhINiJz6Tx1o5n/zwEpRj4SeVtJiyDJoA1vwP5SCMmuuu3lkNl0ghpmT3mBQtMZbFgAG3iZFW7B7geSWII4GILod8y9a6i/p/uvd/drlvloHkSK98v4UE5SYBk1bUgwtrJ/tgicOiAxM7MTYci4TlZ7+kCCESJnWGZMnieXJkR/aBx47Ann1xKbSb7IXuZiHX6jVkdx+OaKqs3JnkgsM6W/cQ4xtTDmtuAVBwPRHFuCSHqN825x0QHu+g2TtoYQVNiH96ur0/GCt7hWdoXpjpgdltF89qLseF8FhZvxX5FSeafVQU+cVCYEt22Ze2bFNCNOlviUuzrllMxGBvRtB2DzOB8T4ZGGs8L1Zs1cYrSVuT6WOzwlrXMs0fotLgHQEkxuawdoAGFE/q5HByS6oGhuXNvBHMWK8SqZrrxzkafDgwW8udYklZSi6njHomugKXmoHJHY2bLeqA9Tn5uyh0VqHgV+/TRTeSjbTEzRydpeEvOSBHvD14jgmykMiuu05qHZxErXByL/Nbz2UiwK3M=
+MIME-Version: 1.0
+
+----boundary_1637_d0a4e755-6d44-4a90-9240-e4f7983c968f
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+UmVwcmVzZW50YXRpdmUgTG9yaSBUcmFoYW4gIChodHRwczovL3RyYWhhbi5ob3VzZS5n
+b3YpCgpGcmllbmQsCk9uIE1vbmRheSwgdGhyZWUgbmluZS15ZWFyLW9sZCBjaGlsZHJl
+biBhbmQgdGhyZWUgYWR1bHRzIHdlcmUgbXVyZGVyZWQgYXQgVGhlIENvdmVuYW50IFNj
+aG9vbCBpbiBOYXNodmlsbGUsIFRlbm5lc3NlZS4gVGhlIHNob290ZXIg4oCTIGFybWVk
+IHdpdGggbm90IG9uZSwgYnV0IHR3byBhc3NhdWx0IHdlYXBvbnMg4oCTIGJyb2tlIGlu
+dG8gdGhlIHNjaG9vbCBhbmQgc3RvbGUgdGhlIGxpdmVzIG9mIGlubm9jZW50IHBlb3Bs
+ZSBzaW1wbHkgZ29pbmcgYWJvdXQgdGhlaXIgZGF5LgpBcyBhIHBhcmVudCwgSSBiZWxp
+ZXZlIHRoZSBpbmFjdGlvbiB3ZeKAmXJlIHNlZWluZyBmcm9tIENvbmdyZXNzIG9uIHNj
+aG9vbCBzaG9vdGluZ3MgaXMgc2hhbWVmdWwuIFdoZW4gSSBnZXQgaG9tZSBmcm9tIFdh
+c2hpbmd0b24gdGhpcyB3ZWVrLCBJ4oCZbGwgaGF2ZSB0byBsb29rIG15IGVpZ2h0LXll
+YXItb2xkIGRhdWdodGVyIGluIHRoZSBleWVzIOKAkyBqdXN0IGEgd2VlayBiZWZvcmUg
+aGVyIG5pbnRoIGJpcnRoZGF5IOKAkyBhbmQgdGVsbCBoZXIgdGhhdCB0aHJlZSBtb3Jl
+IGtpZHMgaGVyIGFnZSB3ZXJlIHNob3QgYW5kIGtpbGxlZCBpbiB0aGVpciBjbGFzc3Jv
+b20uCkkgZG9u4oCZdCB3YW50IHRvIGhhdmUgYW5vdGhlciBvbmUgb2YgdGhvc2UgY29u
+dmVyc2F0aW9ucyB3aXRoIG15IGdpcmxzLiBUaGF04oCZcyB3aHkgSeKAmXZlIGNvbnNp
+c3RlbnRseSBzdXBwb3J0ZWQgYSBiYW4gb24gYXNzYXVsdCB3ZWFwb25zIGFuZCBjb21t
+b25zZW5zZSBndW4gc2FmZXR5IGxlZ2lzbGF0aW9uLiBJIGZpcm1seSBiZWxpZXZlIHRo
+YXQgdGhlc2UgbGF3cyBhcmUgbmVjZXNzYXJ5IHRvIGVuZCB0aGUgZ3VuIHZpb2xlbmNl
+IGVwaWRlbWljIHRoYXQgaXMgcGxhZ3Vpbmcgb3VyIGtpZHMuCkJ1dCwgSSB3YW50IHRv
+IGhlYXIgZnJvbSB5b3XigKYKClN1cnZleSBRdWVzdGlvbjogRE8gWU9VIFNVUFBPUlQg
+QU4gQVNTQVVMVCBXRUFQT05TIEJBTj8gCgpTdXJ2ZXkgUmVzcG9uc2VzOgoxLiBZRVMo
+aHR0cHM6Ly90cmFoYW4uaG91c2UuZ292L0Zvcm1zL0Zvcm0vUXVpY2tTdXJ2ZXkuYXNw
+eD9lbWFpbD1qZEBmaXJlc2lkZTIxLmNvbSZzaWQ9NzgmZmlkPTE2OTEwJmFpZD0xODkm
+bWlkPTEwNDEpIAoyLiBOTyhodHRwczovL3RyYWhhbi5ob3VzZS5nb3YvRm9ybXMvRm9y
+bS9RdWlja1N1cnZleS5hc3B4P2VtYWlsPWpkQGZpcmVzaWRlMjEuY29tJnNpZD03OCZm
+aWQ9MTY5MTAmYWlkPTE5MCZtaWQ9MTA0MSkgCgoKU2luY2VyZWx5LAoK
+----boundary_1637_d0a4e755-6d44-4a90-9240-e4f7983c968f
+Content-Location: https://trahan.house.gov/
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>Representative Lori Trahan</title>
+       =20
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1">
+        <!--[if !mso]><!-->
+        <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![e=
+ndif]-->
+        <style>body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default t=
+ext sizes */ img{-ms-interpolation-mode: bicubic;} /* Allow smoother render=
+ing of resized image in Internet Explorer *//* RESET STYLES */img { border:=
+ 0; height: auto; line-height: 100%; outline: none; text-decoration: none; =
+}table { border-collapse: collapse !important; }body { height: 100% !import=
+ant; margin: 0 !important; padding: 0 !important; width: 100% !important; }=
+strong { font-weight: bold; } /* Editor reset *//* FIRESIDE STYLES */.compo=
+nent img {max-width:600px;}.component table {mso-table-rspace:10pt; border-=
+collapse:collapse;}.component { padding: 0px !important; }.press {padding-b=
+ottom: 0px;}</style><style>@media all and (max-width:650px) {            .i=
+mage-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td, .image-2, .img-2 =
+img, .image-2 tr, .image-2 td {max-width: 100% !important; width: 100% !imp=
+ortant;}            .responsive-table {width:100% !important;}            .=
+responsive-table img {max-width:100% !important; height: auto !important;} =
+           .press .component, .press td {text-align:center;}            .co=
+mponent { margin-left: 20px; margin-right: 20px;}            .component .re=
+sponsive-table { margin-left: 0px !important; margin-right: 0px !important;=
+}            .wide .video-thumb { width: 100% !important;height: auto !impo=
+rtant; }             .wide.video-container { width: 100% !important; }     =
+    .component.full-width {margin-left: 0px; margin-right: 0px; }   }</styl=
+e><style type=3D"text/css">
+            /* CLIENT-SPECIFIC STYLES */
+            body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text=
+ sizes */
+            table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Rem=
+ove spacing between tables in Outlook 2007 and up */
+            img{-ms-interpolation-mode: bicubic;} /* Allow smoother renderi=
+ng of resized image in Internet Explorer */
+            /* RESET STYLES */
+            img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: =
+0 !important; width: 100% !important; }
+            strong { font-weight: bold; } /* Editor reset */
+            /* FIRESIDE STYLES */
+            .component img {max-width:600px;}
+            .component table {mso-table-rspace:10pt; border-collapse:collap=
+se; font-family: Arial, Helvetica, sans-serif;}
+            .component td, td {font-family: Arial, Helvetica, sans-serif;}
+            .component { padding: 0px !important; }
+            .press {padding-bottom: 0px;}
+            .caption-1 td {font-family: Arial, Helvetica, sans-serif;}
+            /* Margin/NoMargin STYLES */
+            .component.full-width{ overflow: hidden; margin: 0px; }
+            /* HEADER STYLES */
+            .header-bar {width: 100%;}
+            .header-bar-margin {background-color:#ffffff;}
+            .header-bar h2 {margin: 0 !important; padding: 0 !important; co=
+lor: #000000 !important;text-align: center;font-size: 24px !important;font-=
+weight: bold !important; }
+            .survey-content > table > tbody tr td { border-color: #366092 !=
+important; }
+            .survey-content input.survey-submit { font-family: Arial, Helve=
+tica, sans-serif !important; }
+            /*.signature table td table td { text-align: center; }*/
+        </style>       =20
+        <style id=3D"media-queries">=20
+            @media all and (max-width:650px) {
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max=
+-width: 100% !important; width: 100% !important;}
+            .responsive-table {width:100% !important;}
+            .responsive-table img {max-width:100% !important; height: auto =
+!important;}
+            .press .component, .press td, .split .component, .split .compon=
+ent td, .split td {text-align:center;}
+            .component { margin-left: 20px; margin-right: 20px;}
+            .component .responsive-table { margin-left: 0px !important; mar=
+gin-right: 0px !important;}
+            .wide .video-thumb { width: 100% !important;height: auto !impor=
+tant; }=20
+            .wide.video-container { width: 100% !important; }
+            }
+        </style>
+       =20
+    <!--[if (gte mso 9)|(IE)]>
+                                            <style>=20
+                                        </style>
+                                        <![endif]--></head>
+    <body style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%;margin: 0px !important; padding: 0px !important;">
+        <div id=3D"preview-text" style=3D"display: none; font-size: 1px; co=
+lor: #fefefe; line-height: 1px; font-family: Arial, Helvetica, sans-serif; =
+max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">We must act=
+ to protect our kids.<span>&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbs=
+p;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbs=
+p;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbs=
+p;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbs=
+p;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp=
+;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp=
+;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp=
+;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp=
+;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C<wbr>=E2=80=8C</span></div>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color:=
+ #ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D=
+"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td align=3D"center" valign=3D"top" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvet=
+ica, sans-serif; font-size: 16px;">
+                        <div class=3D"region" id=3D"region-1"><div class=3D=
+"component full-width" style=3D"padding: 0px !important;"> <div class=3D"im=
+age" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 0px; margin-left: 0px;" width=3D"650">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;"><a href=3D"https://trahan.house.gov" target=3D"_blank" style=3D=
+"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img style=3D=
+"max-width:600px;-ms-interpolation-mode: bicubic;vertical-align: bottom; ma=
+x-width: 650px;" alt=3D"Representative Lori Trahan" src=3D"https://trahan.h=
+ouse.gov/uploadedphotos/highresolution/4c955453-cc20-458f-928b-78c097c3c9a9=
+.png"></a></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;background-color: #ffffff; font-family: Arial, Helvetica, sa=
+ns-serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D=
+"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td class=3D"responsive-table" valign=3D"top" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Ari=
+al, Helvetica, sans-serif; font-size: 16px; color: #000000;">
+                        <div class=3D"region" id=3D"region-2"><div class=3D=
+"component " style=3D"padding: 0px !important;"> <div class=3D"editable" st=
+yle=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><d=
+iv class=3D"component-template" style=3D"overflow: hidden;"><p style=3D"mar=
+gin: 0;line-height:1.2"><span style=3D"font-size:11pt; font-variant:normal;=
+ white-space:pre-wrap"><span style=3D"font-family:Arial"><span style=3D"col=
+or:#000000"><span style=3D"font-weight:400"><span style=3D"font-style:norma=
+l"><span style=3D"text-decoration:none">Friend,&nbsp;</span></span></span><=
+/span></span></span></p><br><p style=3D"margin: 0;line-height:1.2"><span st=
+yle=3D"font-size:11pt; font-variant:normal; white-space:pre-wrap"><span sty=
+le=3D"font-family:Arial"><span style=3D"color:#000000"><span style=3D"font-=
+weight:400"><span style=3D"font-style:normal"><span style=3D"text-decoratio=
+n:none">On Monday, three nine-year-old children and three adults were murde=
+red at The Covenant School in Nashville, Tennessee. The shooter =E2=80=93 a=
+rmed with not one, but two assault weapons =E2=80=93 broke into the school =
+and stole the lives of innocent people simply going about their day.</span>=
+</span></span></span></span></span></p><br><p style=3D"margin: 0;line-heigh=
+t:1.2"><span style=3D"font-size:11pt; font-variant:normal; white-space:pre-=
+wrap"><span style=3D"font-family:Arial"><span style=3D"color:#000000"><span=
+ style=3D"font-weight:400"><span style=3D"font-style:normal"><span style=3D=
+"text-decoration:none">As a parent, I believe the inaction we=E2=80=99re se=
+eing from Congress on school shootings is shameful. When I get home from Wa=
+shington this week, I=E2=80=99ll have to look my eight-year-old daughter in=
+ the eyes =E2=80=93 just a week before her ninth birthday =E2=80=93 and tel=
+l her that three more kids her age were shot and killed in their classroom.=
+</span></span></span></span></span></span></p><br><p style=3D"margin: 0;lin=
+e-height:1.2"><span style=3D"font-size:11pt; font-variant:normal; white-spa=
+ce:pre-wrap"><span style=3D"font-family:Arial"><span style=3D"color:#000000=
+"><span style=3D"font-weight:400"><span style=3D"font-style:normal"><span s=
+tyle=3D"text-decoration:none">I don=E2=80=99t want to have another one of t=
+hose conversations with my girls. That=E2=80=99s why I=E2=80=99ve consisten=
+tly supported a ban on assault weapons and commonsense gun safety legislati=
+on. I firmly believe that these laws are necessary to end the gun violence =
+epidemic that is plaguing our kids.&nbsp;&nbsp;</span></span></span></span>=
+</span></span></p><br><p style=3D"margin: 0;line-height:1.2"><span style=3D=
+"font-size:11pt; font-variant:normal; white-space:pre-wrap"><span style=3D"=
+font-family:Arial"><span style=3D"color:#000000"><span style=3D"font-weight=
+:400"><span style=3D"font-style:normal"><span style=3D"text-decoration:none=
+">But, I want to hear from you=E2=80=A6&nbsp;</span></span></span></span></=
+span></span><br></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"survey" style=3D"overflow: hidden;width:100%;">=20
+            <table align=3D"center" class=3D"responsive-table" role=3D"pres=
+entation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-tab=
+le-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:=
+collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-l=
+ayout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td valign=3D"top" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"survey-content" style=3D"overflow=
+: hidden;"><table role=3D"presentation" align=3D"center" class=3D"responsiv=
+e-table" cellspacing=3D"0" cellpadding=3D"0" style=3D"mso-table-lspace:0pt;=
+ mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%;margin: 0 auto; borde=
+r-collapse: separate !important;">
+          <tbody>
+              <tr>
+                  <td colspan=3D"3" valign=3D"middle" align=3D"center" heig=
+ht=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;height:5px;line-height: 5px; letter-spacing: 5px; font-size: 5px; border-=
+top: 5px solid #366092; border-left: 5px solid #366092; border-right: 5px s=
+olid #366092;">
+                  &nbsp;
+                  </td>
+              </tr><tr>
+                <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;width: 10px; border-left: 5px solid #366092;" width=3D"10">&nb=
+sp;</td>
+                <td valign=3D"top" style=3D"-webkit-text-size-adjust: 100%;=
+ -ms-text-size-adjust: 100%;">
+                    <p class=3D"survey-text" style=3D"margin: 0;text-align:=
+ center;font:32px Arial, Helvetica, sans-serif">DO YOU SUPPORT AN ASSAULT W=
+EAPONS BAN?=20
+</p>
+                </td>
+                <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;width: 10px; border-right: 5px solid #366092;" width=3D"10">&n=
+bsp;</td>
+            </tr>
+            <tr>
+                <td colspan=3D"3" valign=3D"middle" align=3D"center" height=
+=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;=
+height:5px;line-height: 5px; letter-spacing: 5px; font-size: 5px; border-le=
+ft: 5px solid #366092; border-right: 5px solid #366092;">
+                &nbsp;
+                </td>
+            </tr><tr>
+                  <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;width: 10px; border-left: 5px solid #366092;" width=3D"10">&=
+nbsp;</td>
+                  <td valign=3D"top" style=3D"-webkit-text-size-adjust: 100=
+%; -ms-text-size-adjust: 100%;">
+                      <table role=3D"presentation" align=3D"center" width=
+=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"mso-tab=
+le-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:=
+collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-=
+collapse: separate !important;">
+                          <tbody>
+                              <tr>
+                                  <td style=3D"-webkit-text-size-adjust: 10=
+0%; -ms-text-size-adjust: 100%;">
+                                    <table role=3D"presentation" class=3D"r=
+esponsive-table" align=3D"center" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspac=
+e:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%;width: 100%; border-collapse: separate !important;">
+                                      <tbody><tr>
+                                        <td align=3D"center" class=3D"respo=
+nsive-survey response response-189" id=3D"189" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;background-color: #366092; width: 1=
+00%; line-height: 24px;" bgcolor=3D"#366092">
+                                          <a href=3D"https://trahan.house.g=
+ov/Forms/Form/QuickSurvey.aspx?email=3Djd@fireside21.com&amp;sid=3D78&amp;f=
+id=3D16910&amp;aid=3D189&amp;mid=3D1041" target=3D"_blank" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;line-height: 24px; colo=
+r: rgb(255, 255, 255); text-decoration: none; padding: 12px 18px; border: 1=
+px solid rgb(54, 96, 146); display: block;">YES</a>
+                                        </td>
+                                      </tr>
+                                    </tbody></table>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </td>
+                  <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;width: 10px; border-right: 5px solid #366092;" width=3D"10">=
+&nbsp;</td>
+              </tr>
+              <tr>
+                  <td colspan=3D"3" valign=3D"middle" align=3D"center" heig=
+ht=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;height:5px; line-height: 5px; letter-spacing: 5px; font-size: 5px; border=
+-left: 5px solid #366092; border-right: 5px solid #366092;">
+                  &nbsp;
+                  </td>
+              </tr><tr>
+                  <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;width: 10px; border-left: 5px solid #366092;" width=3D"10">&=
+nbsp;</td>
+                  <td valign=3D"top" style=3D"-webkit-text-size-adjust: 100=
+%; -ms-text-size-adjust: 100%;">
+                      <table role=3D"presentation" align=3D"center" width=
+=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"mso-tab=
+le-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:=
+collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-=
+collapse: separate !important;">
+                          <tbody>
+                              <tr>
+                                  <td style=3D"-webkit-text-size-adjust: 10=
+0%; -ms-text-size-adjust: 100%;">
+                                    <table role=3D"presentation" class=3D"r=
+esponsive-table" align=3D"center" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspac=
+e:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%;width: 100%; border-collapse: separate !important;">
+                                      <tbody><tr>
+                                        <td align=3D"center" class=3D"respo=
+nsive-survey response response-190" id=3D"190" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;background-color: #366092; width: 1=
+00%; line-height: 24px;" bgcolor=3D"#366092">
+                                          <a href=3D"https://trahan.house.g=
+ov/Forms/Form/QuickSurvey.aspx?email=3Djd@fireside21.com&amp;sid=3D78&amp;f=
+id=3D16910&amp;aid=3D190&amp;mid=3D1041" target=3D"_blank" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;line-height: 24px; colo=
+r: rgb(255, 255, 255); text-decoration: none; padding: 12px 18px; border: 1=
+px solid rgb(54, 96, 146); display: block;">NO</a>
+                                        </td>
+                                      </tr>
+                                    </tbody></table>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </td>
+                  <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;width: 10px; border-right: 5px solid #366092;" width=3D"10">=
+&nbsp;</td>
+              </tr>
+              <tr>
+                  <td colspan=3D"3" valign=3D"middle" align=3D"center" heig=
+ht=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;height:5px; line-height: 5px; letter-spacing: 5px; font-size: 5px; border=
+-left: 5px solid #366092; border-right: 5px solid #366092;">
+                  &nbsp;
+                  </td>
+              </tr>
+          <tr>
+                  <td colspan=3D"3" valign=3D"middle" align=3D"center" heig=
+ht=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;height:5px;line-height: 5px; letter-spacing: 5px; font-size: 5px; border-=
+bottom: 5px solid #366092; border-left: 5px solid #366092; border-right: 5p=
+x solid #366092;">
+                  &nbsp;
+                  </td>
+              </tr>
+              <tr><td colspan=3D"3" align=3D"center" style=3D"-webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%;">
+              <i class=3D"newsletter-optin">Submit survey to sign up for up=
+dates.*</i>
+          </td></tr>
+            </tbody>
+          </table></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;text-align: center;"><p style=3D"margin: 0;text-align: =
+center;"><br></p><p style=3D"margin: 0;text-align: center;">Sincerely,</p><=
+/div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"signature" style=3D"overflow: hidden;width:100%">=20
+            <table role=3D"presentation" class=3D"responsive-table" align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-t=
+able-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collaps=
+e:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table=
+-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td valign=3D"top" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%;">
+                            <table align=3D"center" class=3D"signature-tabl=
+e" role=3D"presentation" style=3D"mso-table-lspace:0pt; mso-table-rspace:0p=
+t;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;table-layout: fixed;">
+                                <tbody>
+                                    <tr>
+                                        <td style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;">
+                                            <table role=3D"presentation" al=
+ign=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-=
+table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collap=
+se:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;bord=
+er-collapse: separate !important;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td valign=3D"top" =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                                            <div class=3D"n=
+g-binding" style=3D"overflow: hidden;"></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td valign=3D"top" =
+class=3D"image-td" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-a=
+djust: 100%;">
+                                                            <div class=3D"i=
+mg-1 image-container" style=3D"overflow: hidden;text-align:left"><img style=
+=3D"max-width:600px;-ms-interpolation-mode: bicubic;vertical-align: bottom;=
+ max-width: 100%; width: 200px !important;" src=3D"https://trahan.house.gov=
+/UploadedPhotos/HighResolution/20b6d892-901e-4240-9dbe-6cc47594da8c.png" al=
+t=3D"Lori Trahan" width=3D"200"></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class=3D"spacerRow"=
+ height=3D"0">
+                                                        <td style=3D"-webki=
+t-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-size:0%;line-heig=
+ht: 0px;">
+                                                            &nbsp;
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td valign=3D"top" =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                                            <div class=3D"n=
+g-binding" style=3D"overflow: hidden;"><p style=3D"margin: 0;text-align: ce=
+nter; margin: 0;">Lori Trahan<br>Member of Congress<br><a target=3D"_blank"=
+ href=3D"https://urldefense.com/v3/__https://www.facebook.com/reploritrahan=
+/__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!FzjHW4gHXeYQ4G6iIMOyc2J3pOM1cai8DG7Lb=
+0ABFWyrKp9pQS-78qV4Z5xd9p5u55ZPO4zO0ZZta-M4Y8XevrOhPT8wCk_5HvhkY0FD$" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=
+=3D"facebook icon" width=3D"32" src=3D"https://trahan.house.gov/images/emai=
+l/facebook-blue.png" style=3D"max-width:600px;-ms-interpolation-mode: bicub=
+ic;border-width: 0px; border-style: solid; width: 32px;"></a>&nbsp;<a targe=
+t=3D"_blank" href=3D"https://urldefense.com/v3/__https://twitter.com/replor=
+itrahan__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!FzjHW4gHXeYQ4G6iIMOyc2J3pOM1cai=
+8DG7Lb0ABFWyrKp9pQS-78qV4Z5xd9p5u55ZPO4zO0ZZta-M4Y8XevrOhPT8wCk_5Ho-b3770$"=
+ style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img=
+ alt=3D"twitter icon" width=3D"32" src=3D"https://trahan.house.gov/images/e=
+mail/twitter-blue.png" style=3D"max-width:600px;-ms-interpolation-mode: bic=
+ubic;border-width: 0px; border-style: solid; width: 32px;"></a>&nbsp;<a tar=
+get=3D"_blank" href=3D"https://urldefense.com/v3/__https://www.instagram.co=
+m/reploritrahan/__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!FzjHW4gHXeYQ4G6iIMOyc2=
+J3pOM1cai8DG7Lb0ABFWyrKp9pQS-78qV4Z5xd9p5u55ZPO4zO0ZZta-M4Y8XevrOhPT8wCk_5H=
+sRr4334$" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%;"><img alt=3D"instagram icon" width=3D"32" src=3D"https://trahan.house.g=
+ov/images/email/instagram-blue.png" style=3D"max-width:600px;-ms-interpolat=
+ion-mode: bicubic;border-width: 0px; border-style: solid; width: 32px;"></a=
+>&nbsp;<a target=3D"_blank" href=3D"https://urldefense.com/v3/__https://www=
+.youtube.com/channel/UCsRXg0BmoS4Rkjz-pqX1PmQ__;!!Ckt11KVezJIME51BYf4a6hrLA=
+THilnk!FzjHW4gHXeYQ4G6iIMOyc2J3pOM1cai8DG7Lb0ABFWyrKp9pQS-78qV4Z5xd9p5u55ZP=
+O4zO0ZZta-M4Y8XevrOhPT8wCk_5HmTBljT_$" style=3D"-webkit-text-size-adjust: 1=
+00%; -ms-text-size-adjust: 100%;"><img alt=3D"youtube icon" width=3D"32" sr=
+c=3D"https://trahan.house.gov/images/email/youtube-blue.png" style=3D"max-w=
+idth:600px;-ms-interpolation-mode: bicubic;border-width: 0px; border-style:=
+ solid; width: 32px;"></a></p></div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div></div>
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color: #=
+f5f5f5;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0=
+" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td align=3D"center" valign=3D"top" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvet=
+ica, sans-serif; font-size: 16px;">
+                        <img alt=3D"Office Locations" width=3D"650" style=
+=3D"-ms-interpolation-mode: bicubic;display: block; width: 650px;" src=3D"h=
+ttps://trahan.house.gov/images/email/footer19.jpg">
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #f5f5f5;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #08244a; backgro=
+und-color: #f5f5f5; padding: 0 20px;">
+                    <table role=3D"presentation" width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"10" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;text-align:center;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;text-align:=
+center;">
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"49=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: 'Times New Roman', times, serif; text-align:center; font-size: 1=
+4px; color: #08244a; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace=
+: 0pt;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: 'Times New Roman', ti=
+mes, serif;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: Arial, Helvetica, sans-serif;">WASHINGTON, DC OFFICE</stro=
+ng><br>
+                                            2439 Rayburn HOB<br>
+                                            Washington, DC 20515<br>
+                                            Phone: (202) 225-3411
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                             =20
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"49=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: 'Times New Roman', times, serif; text-align:center; font-size: 1=
+4px; color: #08244a; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace=
+: 0pt;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: 'Times New Roman', ti=
+mes, serif;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: Arial, Helvetica, sans-serif;">LOWELL OFFICE</strong><br>
+                                            126 John Street<br>
+                                            Lowell, MA 01852<br>
+                                            Phone: (978) 459-0101
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #f5f5f5;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #08244a; backgro=
+und-color: #f5f5f5;">
+                    <a target=3D"_blank" href=3D"https://urldefense.com/v3/=
+__https://www.facebook.com/reploritrahan/__;!!Ckt11KVezJIME51BYf4a6hrLATHil=
+nk!FzjHW4gHXeYQ4G6iIMOyc2J3pOM1cai8DG7Lb0ABFWyrKp9pQS-78qV4Z5xd9p5u55ZPO4zO=
+0ZZta-M4Y8XevrOhPT8wCk_5HvhkY0FD$" style=3D"-webkit-text-size-adjust: 100%;=
+ -ms-text-size-adjust: 100%;"><img alt=3D"facebook icon" width=3D"32" src=
+=3D"https://trahan.house.gov/images/email/facebook-blue.png" style=3D"-ms-i=
+nterpolation-mode: bicubic;border-width: 0px; border-style: solid; width: 3=
+2px;"></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://urldefense.c=
+om/v3/__https://twitter.com/reploritrahan__;!!Ckt11KVezJIME51BYf4a6hrLATHil=
+nk!FzjHW4gHXeYQ4G6iIMOyc2J3pOM1cai8DG7Lb0ABFWyrKp9pQS-78qV4Z5xd9p5u55ZPO4zO=
+0ZZta-M4Y8XevrOhPT8wCk_5Ho-b3770$" style=3D"-webkit-text-size-adjust: 100%;=
+ -ms-text-size-adjust: 100%;"><img alt=3D"twitter icon" width=3D"32" src=3D=
+"https://trahan.house.gov/images/email/twitter-blue.png" style=3D"-ms-inter=
+polation-mode: bicubic;border-width: 0px; border-style: solid; width: 32px;=
+"></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://urldefense.c=
+om/v3/__https://www.instagram.com/reploritrahan/__;!!Ckt11KVezJIME51BYf4a6h=
+rLATHilnk!FzjHW4gHXeYQ4G6iIMOyc2J3pOM1cai8DG7Lb0ABFWyrKp9pQS-78qV4Z5xd9p5u5=
+5ZPO4zO0ZZta-M4Y8XevrOhPT8wCk_5HsRr4334$" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"instagram icon" width=3D"3=
+2" src=3D"https://trahan.house.gov/images/email/instagram-blue.png" style=
+=3D"-ms-interpolation-mode: bicubic;border-width: 0px; border-style: solid;=
+ width: 32px;"></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://urldefense.c=
+om/v3/__https://www.youtube.com/channel/UCsRXg0BmoS4Rkjz-pqX1PmQ__;!!Ckt11K=
+VezJIME51BYf4a6hrLATHilnk!FzjHW4gHXeYQ4G6iIMOyc2J3pOM1cai8DG7Lb0ABFWyrKp9pQ=
+S-78qV4Z5xd9p5u55ZPO4zO0ZZta-M4Y8XevrOhPT8wCk_5HmTBljT_$" style=3D"-webkit-=
+text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"youtube ic=
+on" width=3D"32" src=3D"https://trahan.house.gov/images/email/youtube-blue.=
+png" style=3D"-ms-interpolation-mode: bicubic;border-width: 0px; border-sty=
+le: solid; width: 32px;"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #f5f5f5;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;background-color: #f5f5f5;">
+                    <table role=3D"presentation" cellpadding=3D"0" cellspac=
+ing=3D"20" align=3D"center" width=3D"90%" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #082=
+44a; font-size: 15px; font-family: Arial, Helvetica, sans-serif;">
+                                <a target=3D"_blank" href=3D"https://trahan=
+.house.gov/forms/emailsignup/?delete=3Dtrue" style=3D"-webkit-text-size-adj=
+ust: 100%; -ms-text-size-adjust: 100%;color: #08244a; text-decoration:none;=
+ font-family: Arial, Helvetica, sans-serif;">Unsubscribe</a>&nbsp;|&nbsp;
+                                <a target=3D"_blank" href=3D"https://urldef=
+ense.com/v3/__https://www.facebook.com/sharer.php?u=3Dhttps:**Atrahan.house=
+.gov*news*email*show.aspx*ID=3DEEUWBJUNMYYGEWHCIZ3ESWI6HI&amp;t=3D*subject*=
+__;Ly8vLy8_W10!!Ckt11KVezJIME51BYf4a6hrLATHilnk!FzjHW4gHXeYQ4G6iIMOyc2J3pOM=
+1cai8DG7Lb0ABFWyrKp9pQS-78qV4Z5xd9p5u55ZPO4zO0ZZta-M4Y8XevrOhPT8wCk_5HigDs1=
+7z$" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;co=
+lor: #08244a; text-decoration:none; font-family: Arial, Helvetica, sans-ser=
+if;">Share on Facebook</a>&nbsp;|&nbsp;
+                                <a target=3D"_blank" href=3D"https://trahan=
+.house.gov/Components/Redirect/twitter.aspx?url=3Dhttps://trahan.house.gov/=
+news/email/show.aspx?ID=3DEEUWBJUNMYYGEWHCIZ3ESWI6HI&amp;name=3D[subject]" =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: =
+#08244a; text-decoration:none; font-family: Arial, Helvetica, sans-serif;">=
+Share on Twitter</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #f5f5f5;">
+                    &nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>=
+
+----boundary_1637_d0a4e755-6d44-4a90-9240-e4f7983c968f--

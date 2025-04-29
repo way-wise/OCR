@@ -1,0 +1,522 @@
+Received: from DM8PR09MB6504.namprd09.prod.outlook.com (2603:10b6:5:2e0::20)
+ by BLAPR09MB6500.namprd09.prod.outlook.com with HTTPS; Wed, 2 Mar 2022
+ 17:50:48 +0000
+Received: from BN6PR09CA0068.namprd09.prod.outlook.com (2603:10b6:404:7a::30)
+ by DM8PR09MB6504.namprd09.prod.outlook.com (2603:10b6:5:2e0::20) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.5038.14; Wed, 2 Mar
+ 2022 17:50:48 +0000
+Received: from DM3GCC02FT023.eop-gcc02.prod.protection.outlook.com
+ (2a01:111:f400:7d04::202) by BN6PR09CA0068.outlook.office365.com
+ (2603:10b6:404:7a::30) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.5038.14 via Frontend
+ Transport; Wed, 2 Mar 2022 17:50:47 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.151.112)
+ smtp.mailfrom=mail.house.gov; dkim=fail (body hash did not verify)
+ header.d=house.gov;dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.151.112 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.151.112;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.151.112) by
+ DM3GCC02FT023.mail.protection.outlook.com (10.97.8.173) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.5038.14 via Frontend Transport; Wed, 2 Mar 2022 17:50:47 +0000
+Received: from EXCH1911.US.House.gov (143.228.151.110) by
+ EXCH1913.US.House.gov (143.228.151.112) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.2.986.15; Wed, 2 Mar 2022 12:50:45 -0500
+Received: from serg-bulk3-a.house.gov (143.228.42.95) by EXCH1911.US.House.gov
+ (143.228.151.110) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.986.15 via Frontend
+ Transport; Wed, 2 Mar 2022 12:50:45 -0500
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=message-id :
+ list-unsubscribe : from : to : date : subject : content-type :
+ mime-version; s=august2019-msgb-hg;
+ bh=nkjjMimkKedtX1ywJBVwY4a1P9ziizobb/w+bGbhMhc=;
+ b=kWOS+rwdTnc9oKVwY/LjSoNYjbhDkb0JNQdgRc74Iwh3QjQVnEM2qaUR1UczbbTX/G+n
+ fQKrMaIzZ/vIwkLU5I3KZUlTti0eEsVompKThVrpfwjVazYXYUuDHy4N804vih3laUeL
+ nPjLt8GnhQkwtzmsZTbT9zEzTyFQ9RoFUhS4HUFewzq2bzARm61yfdEcCZL6P1j8cv3l
+ FHF3cGFMysoUo/w41IDz/nSdSinT3BeeqskN0SSEiN18FM7JXVGUTA9zl/znXsY560S0
+ SKUpLJJ+Xr6OBH3+9ymjrDmWdpr2oRo7wmEwq8A4DLLwX1eCHHHpUO65IZIfMwm/4Frf Ww== 
+Received: from FIRESIDESERV03 (firesideserv03.us.house.gov [143.228.113.103])
+	by serg-bulk3-a.house.gov (8.16.1.2/8.16.1.2) with ESMTP id 222HoihM009977
+	for <Carter.Moelk@mail.house.gov>; Wed, 2 Mar 2022 12:50:44 -0500
+envelope-from: trey@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+Message-ID: <SMmXJgVI0cYJO7lfT5zxldFuitOBLNoAjp/+PL8XVcJw1Np9WGPl7LtB3OvUiyf2g92h4XvvKBhmE+ppeAxH4RyEMtyQrOWVQwekI7oKmyQphRMadDGQrvCYhEYbzMur0i95j7uYwVZDUR2CTXb5c/xI4nwd4Wi3Y/ZNhH+IH8ibLksmSJbXS9ldWrIJJxtl@fireside21.com>
+X-House-Vendor-Seg: unmanaged
+List-Unsubscribe: <https://hollingsworth.house.gov/forms/emailsignup/?Delete=true&MessageID=1520&Email=Carter.Moelk@mail.house.gov&Submit=true>
+Precedence: bulk
+MIME-Version: 1.0
+From: "Rep. Trey Hollingsworth" <trey@mail.house.gov>
+To: Carter.Moelk@mail.house.gov
+Date: 2 Mar 2022 12:50:45 -0500
+Subject: Poll: Cash Bail System
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:6.0.425,18.0.816
+ definitions=2022-03-02_05:2022-02-26,2022-03-02 signatures=0
+Return-Path: RepresentativeTrey.Hollingsworth@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1913.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 02 Mar 2022 17:50:47.4913
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 3b2afa90-964a-4e6a-6e51-08d9fc752eb9
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1911.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted:
+ DM3GCC02FT023.eop-gcc02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ DM3GCC02FT023.eop-gcc02.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: 3b2afa90-964a-4e6a-6e51-08d9fc752eb9
+X-MS-TrafficTypeDiagnostic: DM8PR09MB6504:EE_
+X-MS-Exchange-Organization-SCL: -1
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:143.228.151.112;CTRY:US;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SKI;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:;DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 02 Mar 2022 17:50:47.3975
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 3b2afa90-964a-4e6a-6e51-08d9fc752eb9
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.151.112];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1911.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM8PR09MB6504
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.4466846
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.5038.014
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506458)(944626604)(920097)(425001)(930097);
+X-Microsoft-Antispam-Message-Info:
+	3BZ5bbh5LKFd133SlX26gTviv6SYVFEVWKh2HUWPxZTaJbZnUut+ye5OVbqGWAZ8G+51nhtykd4fMW5Ev9PD3spj7d61CTRXGjQQhsfxukhcyZMrgBEy38vgqvL1ocpqcQb7XNxT5QEdseSQPMxgsL+MKBjgyVbLLyx0KBFokZrNHuZRcFIhxhsqi3fyRXWHm8lWNyhe4UYJhIAjm5iOPInObJ81wPSXE1wZOYOzaIYMfG5kWdiLDyFj+KTNYOHGHy1k06UleGRqE8OevHZLUQK1oULfeWLUOXE41xeqafI/UpqU09xPJfpjHtqBYgPe3JW8Ndaw7CD0ark37+NDMGs3X8iXBQFfVKMZJ8MT3qVdWwrSXUBhxs9gk+ghCNp7Nc0iKUwARJ6wNoiaI2ryU3UyI4Qv2/VSljhqhU+JqOpxHNYGSCpqTwo/vKjLoQIR8xl8wxZYBeUFNyvbFLw3ovvs9mx5kDM/hohXhfvGei0v/66fj2rLn3Q7VktDSLgFceu+4JPPj9mURnOR7FH7IVpyrYDfJ1VeqxxQiUTxIocNP4JUaNkzx4Z/ktWguxXVKW3MawlyTCDICiDjlA3G+HJaPIfoNyXOkEzauALXSSBu4tt/8pymZKPYd/j5e9AIeW4EfoKp8ikrAX2NUNF3sF7vv8r13EQJNN1dd5NFNXg=
+Content-type: multipart/alternative;
+	boundary="B_3729070890_1014016484"
+
+> This message is in MIME format. Since your mail reader does not understand
+this format, some or all of this message may not be legible.
+
+--B_3729070890_1014016484
+Content-type: text/plain;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+Dear Hoosiers, In both the federal and state court systems, individuals cha=
+rged with crimes are often offered bail, a set amount of money decided by a =
+judge that, if escrowed, allows the accused to remain outside of jail leadin=
+g up to trial. If bail cannot be paid, then alleged criminals are detained i=
+n jail until proceedings begin. Over the last few years, states across the c=
+ountry, including New Jersey, Kentucky, Nebraska, and more have proposed and=
+ enacted legislation reforming the cash bail system, and states such as Cali=
+fornia and New York have gone as far as eliminating their cash bail system. =
+Many Americans believe that the cash bail system needs to be reconstructed o=
+r eradicated altogether as part of larger criminal justice reform. Proponent=
+s argue that high cash bail amounts punish the poor and reward the well-off =
+with median bail amounts around $10,000 per felony. Cash bail financial burd=
+ens fall often on low-income women and people of color, who make up 69% of t=
+he pretrial population. Opponents of overhauling the cash bail system cite r=
+ecidivism rates in states with lax or nonexistent cash bail systems. For exa=
+mple, the New York Police Department reported that in 2019, 19.5% of all non=
+-bail eligible felony arrestees were re-arrested at least once after the ini=
+tial non-bail felony, and in =E2=80=9C2020, the eligible group was re-arrested 4,2=
+07 times (2.3 arrests per arrestee).=E2=80=9D Additionally, 34.5% of the 2020 re-a=
+rrests committed at least one of the seven major crimes (e.g., murder, burgl=
+ary, larceny, et cetera). Many Americans believe that the cash bail system i=
+s vital for protecting communities from criminal activity and keeping our fa=
+milies and loved ones safe. QUESTION OF THE WEEK: Are you in favor of elimin=
+ating the cash bail system? [_] Yes [_] No[_] I don=E2=80=99t know[_] Other=20
+Dear Hoosiers,
+In both the federal and state court systems, individuals charged with crime=
+s are often offered bail, a set amount of money decided by a judge that, if =
+escrowed, allows the accused to remain outside of jail leading up to trial. =
+If bail cannot be paid, then alleged criminals are detained in jail until pr=
+oceedings begin. Over the last few years, states across the country, includi=
+ng New Jersey, Kentucky, Nebraska, and more have proposed and enacted legisl=
+ation reforming the cash bail system, and states such as California and New =
+York have gone as far as eliminating their cash bail system.
+Many Americans believe that the cash bail system needs to be reconstructed =
+or eradicated altogether as part of larger criminal justice reform. Proponen=
+ts argue that high cash bail amounts punish the poor and reward the well-off=
+ with median bail amounts around $10,000 per felony. Cash bail financial bur=
+dens fall often on low-income women and people of color, who make up 69% of =
+the pretrial population.=20
+Opponents of overhauling the cash bail system cite recidivism rates in stat=
+es with lax or nonexistent cash bail systems. For example, the New York Poli=
+ce Department reported that in 2019, 19.5% of all non-bail eligible felony a=
+rrestees were re-arrested at least once after the initial non-bail felony, a=
+nd in =E2=80=9C2020, the eligible group was re-arrested 4,207 times (2.3 arrests p=
+er arrestee).=E2=80=9D Additionally, 34.5% of the 2020 re-arrests committed at lea=
+st one of the seven major crimes (e.g., murder, burglary, larceny, et cetera=
+). Many Americans believe that the cash bail system is vital for protecting =
+communities from criminal activity and keeping our families and loved ones s=
+afe.=20
+QUESTION OF THE WEEK: Are you in favor of eliminating the cash bail system?
+[_] Yes [_] No[_] I don=E2=80=99t know[_] Other
+      =20
+ =20
+Jeffersonville
+321 Quartermaster Court
+Jeffersonville, IN 47130
+Phone: 812.288.3999
+Franklin
+100 E Jefferson Street
+Franklin, IN 46131
+Phone: 317.851.8710
+Washington, D.C.
+1641 Longworth HOB
+Washington, DC 20515
+Phone: 202.225.5315
+ =20
+Unsubscribe=20
+ =20
+ =20
+NOTE: Please DO NOT respond to this email as this inbox is unattended. To c=
+ontact my office please click here
+
+ =20
+=20
+Click Here to view this email in your browser=20
+Click Here to be removed from this list 
+
+--B_3729070890_1014016484
+Content-type: text/html;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><title>P=
+oll: Cash Bail System</title><meta name=3D"viewport" content=3D"width=3Ddevice-wid=
+th, initial-scale=3D1"><!--[if !mso]><!--><meta http-equiv=3D"X-UA-Compatible" c=
+ontent=3D"IE=3Dedge"><!--<![endif]--><style>body, table, td, a{-webkit-text-size=
+-adjust: 100%; -ms-text-size-adjust: 100%;} /* Prevent WebKit and Windows mo=
+bile changing default text sizes */ img{-ms-interpolation-mode: bicubic;} /*=
+ Allow smoother rendering of resized image in Internet Explorer *//* RESET S=
+TYLES */img { border: 0; height: auto; line-height: 100%; outline: none; tex=
+t-decoration: none; }table { border-collapse: collapse !important; }body { h=
+eight: 100% !important; margin: 0 !important; padding: 0 !important; width: =
+100% !important; }strong { font-weight: bold; } /* Editor reset *//* FIRESID=
+E STYLES */.component img {max-width:600px;}.component table {mso-table-rspa=
+ce:10pt; border-collapse:collapse;}.component { padding: 0px !important; }.p=
+ress {padding-bottom: 0px;}</style><style>@media all and (max-width:650px) {=
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td, .ima=
+ge-2, .img-2 img, .image-2 tr, .image-2 td {max-width: 100% !important; widt=
+h: 100% !important;}            .responsive-table {width:100% !important;}  =
+          .responsive-table img {max-width:100% !important; height: auto !im=
+portant;}            .press .component, .press td {text-align:center;}      =
+      .component { margin-left: 20px; margin-right: 20px;}            .compo=
+nent .responsive-table { margin-left: 0px !important; margin-right: 0px !imp=
+ortant;}            .wide .video-thumb { width: 100% !important;height: auto=
+ !important; }             .wide.video-container { width: 100% !important; }=
+         .component.full-width {margin-left: 0px; margin-right: 0px; }   }</=
+style><style type=3D"text/css">
+            /* CLIENT-SPECIFIC STYLES */
+            body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text =
+sizes */
+            table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Rem=
+ove spacing between tables in Outlook 2007 and up */
+            img{-ms-interpolation-mode: bicubic;} /* Allow smoother renderi=
+ng of resized image in Internet Explorer */
+            /* RESET STYLES */
+            img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: =
+0 !important; width: 100% !important; }
+            strong { font-weight: bold; } /* Editor reset */
+            /* FIRESIDE STYLES */
+            .component img {max-width:600px;}
+            .component table {mso-table-rspace:10pt; border-collapse:collap=
+se; font-family: Arial, Helvetica, sans-serif;}
+            .component td, td {font-family: Arial, Helvetica, sans-serif;}
+            .component { padding: 0px !important; }
+            .press {padding-bottom: 0px;}
+            .caption-1 td {font-family: Arial, Helvetica, sans-serif;}
+            /* Margin/NoMargin STYLES */
+            .component.full-width{ overflow: hidden; margin: 0px; }
+            /* HEADER STYLES */
+            .header-bar {width: 100%;}
+            .header-bar-margin {background-color:#ffffff;}
+            .header-bar h2 {margin: 0 !important; padding: 0 !important; co=
+lor: #000000;text-align: center;font-size: 24px;font-weight: bold; }
+            .survey-content > table > tbody tr td { border-color: #2e4e7b !=
+important; }
+            .survey-content input.survey-submit { font-family: Arial, Helve=
+tica, sans-serif !important; }
+        </style><style id=3D"media-queries">=20
+            @media all and (max-width:650px) {
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max=
+-width: 100% !important; width: 100% !important;}
+            .responsive-table {width:100% !important;}
+            .responsive-table img {max-width:100% !important; height: auto =
+!important;}
+            .press .component, .press td, .split .component, .split .compon=
+ent td, .split td {text-align:center;}
+            .component { margin-left: 20px; margin-right: 20px;}
+            .component .responsive-table { margin-left: 0px !important; mar=
+gin-right: 0px !important;}
+            .wide .video-thumb { width: 100% !important;height: auto !impor=
+tant; }=20
+            .wide.video-container { width: 100% !important; }
+            }
+        </style><!--[if (gte mso 9)|(IE)]>
+                                            <style>=20
+                                        </style>
+                                        <![endif]--></head><body style=3D"-we=
+bkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;margin: 0px !importa=
+nt; padding: 0px !important;"><div id=3D"preview-text" style=3D"display: none; f=
+ont-size: 1px; color: #fefefe; line-height: 1px; font-family: Arial, Helveti=
+ca, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidde=
+n;">Dear Hoosiers, In both the federal and state court systems, individuals =
+charged with crimes are often offered bail, a set amount of money decided by=
+ a judge that, if escrowed, allows the accused to remain outside of jail lea=
+ding up to trial. If bail cannot be paid, then alleged criminals are detaine=
+d in jail until proceedings begin. Over the last few years, states across th=
+e country, including New Jersey, Kentucky, Nebraska, and more have proposed =
+and enacted legislation reforming the cash bail system, and states such as C=
+alifornia and New York have gone as far as eliminating their cash bail syste=
+m. Many Americans believe that the cash bail system needs to be reconstructe=
+d or eradicated altogether as part of larger criminal justice reform. Propon=
+ents argue that high cash bail amounts punish the poor and reward the well-o=
+ff with median bail amounts around $10,000 per felony. Cash bail financial b=
+urdens fall often on low-income women and people of color, who make up 69% o=
+f the pretrial population. Opponents of overhauling the cash bail system cit=
+e recidivism rates in states with lax or nonexistent cash bail systems. For =
+example, the New York Police Department reported that in 2019, 19.5% of all =
+non-bail eligible felony arrestees were re-arrested at least once after the =
+initial non-bail felony, and in =E2=80=9C2020, the eligible group was re-arrested =
+4,207 times (2.3 arrests per arrestee).=E2=80=9D Additionally, 34.5% of the 2020 r=
+e-arrests committed at least one of the seven major crimes (e.g., murder, bu=
+rglary, larceny, et cetera). Many Americans believe that the cash bail syste=
+m is vital for protecting communities from criminal activity and keeping our=
+ families and loved ones safe. QUESTION OF THE WEEK: Are you in favor of eli=
+minating the cash bail system? [_] Yes [_] No[_] I don=E2=80=99t know[_] Other </d=
+iv><table role=3D"presentation" width=3D"650" align=3D"center" class=3D"responsive-t=
+able" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font=
+-family: Arial, Helvetica, sans-serif; background-color: #ffffff;" border=3D"0=
+" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargi=
+n=3D"0" topmargin=3D"0"><tbody><tr><td align=3D"center" valign=3D"top" style=3D"-webki=
+t-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Hel=
+vetica, sans-serif; font-size: 16px;"><div class=3D"region" id=3D"region-1"><div=
+ class=3D"component full-width" style=3D"padding: 0px !important;"><div class=3D"i=
+mage" style=3D"overflow: hidden;width:100%"><table class=3D"responsive-table" ro=
+le=3D"presentation" align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; bor=
+der-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: =
+100%;float: left; table-layout: fixed; margin-right: 0px; margin-left: 0px;"=
+ width=3D"650"><tbody><tr><td valign=3D"top" class=3D"image-td" style=3D"-webkit-tex=
+t-size-adjust: 100%; -ms-text-size-adjust: 100%;"><div class=3D"img-1 image-co=
+ntainer" style=3D"overflow: hidden;"><a href=3D"https://hollingsworth.house.gov/=
+components/redirect/r.aspx?ID=3D4805-1494513" target=3D"_blank" style=3D"-webkit-t=
+ext-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img style=3D"max-width:60=
+0px;-ms-interpolation-mode: bicubic;vertical-align: bottom; max-width: 650px=
+;" alt=3D"Representative Trey Hollingsworth" src=3D"https://hollingsworth.house.=
+gov/uploadedphotos/highresolution/6a59fc1d-54ff-4c75-b9af-8f9b356cf98c.png">=
+</a></div></td></tr></tbody></table></div></div></div></td></tr></tbody></ta=
+ble><table role=3D"presentation" width=3D"650" align=3D"center" class=3D"responsive-=
+table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;bac=
+kground-color: #ffffff; font-family: Arial, Helvetica, sans-serif;" border=3D"=
+0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmarg=
+in=3D"0" topmargin=3D"0"><tbody><tr><td class=3D"responsive-table" valign=3D"top" st=
+yle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family:=
+ Arial, Helvetica, sans-serif; font-size: 16px; color: #000000;"><div class=3D=
+"region" id=3D"region-2"><div class=3D"component " style=3D"padding: 0px !importan=
+t;"><div class=3D"editable" style=3D"overflow: hidden;width:100%"><table class=3D"=
+responsive-table" role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt=
+; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adj=
+ust: 100%;table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=
+=3D"610"><tbody><tr><td class=3D"table-w-bg-color" valign=3D"top" style=3D"-webkit-t=
+ext-size-adjust: 100%; -ms-text-size-adjust: 100%;"><div class=3D"cke_editable=
+ cke_editable_inline cke_contents_ltr cke_show_borders cke_focus" style=3D"ove=
+rflow: hidden;"><div class=3D"component-template" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;"><span style=3D"font-size:12pt"><span style=3D"font-family:Ca=
+libri,sans-serif">Dear Hoosiers,</span></span></p><p style=3D"margin: 0;"><br>=
+</p><p style=3D"margin: 0;"><span style=3D"font-size:12pt"><span style=3D"font-fam=
+ily:Calibri,sans-serif">In both the federal and state court systems, individ=
+uals charged with crimes are often offered bail, a set amount of money decid=
+ed by a judge that, if escrowed, allows the accused to remain outside of jai=
+l leading up to trial. If bail cannot be paid, then alleged criminals are de=
+tained in jail until proceedings begin. Over the last few years, states acro=
+ss the country, including New Jersey, Kentucky, Nebraska, and more have prop=
+osed and enacted legislation reforming the cash bail system, and states such=
+ as California and New York have gone as far as eliminating their cash bail =
+system.</span></span></p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"=
+><span style=3D"font-size:12pt"><span style=3D"font-family:Calibri,sans-serif">M=
+any Americans believe that the cash bail system needs to be reconstructed or=
+ eradicated altogether as part of larger criminal justice reform. Proponents=
+ argue that high cash bail amounts punish the poor and reward the well-off w=
+ith median bail amounts around $10,000 per felony. Cash bail financial burde=
+ns fall often on low-income women and people of color, who make up <a data-c=
+ke-saved-href=3D"https://hollingsworth.house.gov/components/redirect/r.aspx?ID=
+=3D4806-1494513" href=3D"https://urldefense.com/v3/__https://www.themarshallproj=
+ect.org/2020/10/28/the-ins-and-outs-of-bail__;!!Ckt11KVezJIME51BYf4a6hrLATHi=
+lnk!UAUIUN9EwP_wfihdXyf_w4q3Xj7iqKrMtOmJyt8t8X0IJuyFdDxPjnlrNiNGF-gpaNhLc9g7=
+$" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color:#=
+0563c1; text-decoration:underline">69% of the pretrial population</a>. </spa=
+n></span></p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span style=
+=3D"font-size:12pt"><span style=3D"font-family:Calibri,sans-serif">Opponents of =
+overhauling the cash bail system cite recidivism rates in states with lax or=
+ nonexistent cash bail systems. For example, the New York Police Department =
+reported that in 2019, <a data-cke-saved-href=3D"https://hollingsworth.house.g=
+ov/components/redirect/r.aspx?ID=3D4807-1494513" href=3D"https://urldefense.com/=
+v3/__https://www1.nyc.gov/site/nypd/news/p0710a/bail-reform__;!!Ckt11KVezJIM=
+E51BYf4a6hrLATHilnk!UAUIUN9EwP_wfihdXyf_w4q3Xj7iqKrMtOmJyt8t8X0IJuyFdDxPjnlr=
+NiNGF-gpaGJyHEY1$" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adju=
+st: 100%;color:#0563c1; text-decoration:underline">19.5% of all non-bail eli=
+gible felony</a> arrestees were re-arrested at least once after the initial =
+non-bail felony, and in =E2=80=9C2020<span style=3D"color:black">, the eligible </sp=
+an><span style=3D"background:white"><span style=3D"color:black">group was re-arr=
+ested 4,207 times (2.3 arrests per arrestee).=E2=80=9D Additionally, 34.5% of the =
+2020 re-arrests committed at least one of the seven major crimes (e.g., murd=
+er, burglary, larceny, et cetera). Many Americans believe that the cash bail=
+ system is vital for protecting communities from criminal activity and keepi=
+ng our families and loved ones safe. </span></span></span></span></p><p styl=
+e=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><a data-cke-saved-href=3D"https:/=
+/hollingsworth.house.gov/components/redirect/r.aspx?ID=3D4808-1494513" target=3D=
+"_blank" href=3D"https://hollingsworth.house.gov/forms/form/?ID=3D163" style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><span style=3D"font=
+-size:12pt"><span style=3D"font-family:Calibri,sans-serif"><b><span style=3D"bac=
+kground:white"><span style=3D"color:black">QUESTION OF THE WEEK</span></span><=
+/b><span style=3D"background:white"><span style=3D"color:black">: Are you in fav=
+or of eliminating the cash bail system?</span></span></span></span></a></p><=
+p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span style=3D"font-size:12=
+pt"><span style=3D"font-family:Calibri,sans-serif"><span style=3D"background:whi=
+te"><span style=3D"color:black"><a data-cke-saved-href=3D"https://hollingsworth.=
+house.gov/components/redirect/r.aspx?ID=3D4809-1494513" target=3D"_blank" href=3D"=
+https://hollingsworth.house.gov/forms/form/?ID=3D163" style=3D"-webkit-text-size=
+-adjust: 100%; -ms-text-size-adjust: 100%;">[_]</a> Yes </span></span></span=
+></span></p><p style=3D"margin: 0;"><span style=3D"font-size:12pt"><span style=3D"=
+font-family:Calibri,sans-serif"><span style=3D"background:white"><span style=3D"=
+color:black"><a data-cke-saved-href=3D"https://hollingsworth.house.gov/compone=
+nts/redirect/r.aspx?ID=3D4810-1494513" target=3D"_blank" href=3D"https://hollingsw=
+orth.house.gov/forms/form/?ID=3D163" style=3D"-webkit-text-size-adjust: 100%; -m=
+s-text-size-adjust: 100%;">[_]</a> No</span></span></span></span></p><p styl=
+e=3D"margin: 0;"><span style=3D"font-size:12pt"><span style=3D"font-family:Calibri=
+,sans-serif"><span style=3D"background:white"><span style=3D"color:black"><a dat=
+a-cke-saved-href=3D"https://hollingsworth.house.gov/components/redirect/r.aspx=
+?ID=3D4811-1494513" target=3D"_blank" href=3D"https://hollingsworth.house.gov/form=
+s/form/?ID=3D163" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust:=
+ 100%;">[_]</a> I don=E2=80=99t know</span></span></span></span></p><p style=3D"marg=
+in: 0;"><span style=3D"font-size:12pt"><span style=3D"font-family:Calibri,sans-s=
+erif"><span style=3D"background:white"><span style=3D"color:black"><a data-cke-s=
+aved-href=3D"https://hollingsworth.house.gov/components/redirect/r.aspx?ID=3D481=
+2-1494513" target=3D"_blank" href=3D"https://hollingsworth.house.gov/forms/form/=
+?ID=3D163" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"=
+>[_]</a> Other</span></span></span></span></p></div></div></td></tr></tbody>=
+</table></div></div></div><table role=3D"presentation" class=3D"responsive-table=
+" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><tbody=
+><tr height=3D"20"><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-ad=
+just: 100%;"><span></span></td></tr></tbody></table></td></tr></tbody></tabl=
+e><table role=3D"presentation" width=3D"650" class=3D"responsive-table" align=3D"cen=
+ter" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-=
+family: Arial, Helvetica, sans-serif; background-color: #2e4e7b;" border=3D"0"=
+ cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=
+=3D"0" topmargin=3D"0"><tbody><tr><td valign=3D"middle" align=3D"center" style=3D"-web=
+kit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #2e4e7b; backg=
+round-color: #ffffff;"><a target=3D"_blank" href=3D"https://hollingsworth.house.=
+gov/components/redirect/r.aspx?ID=3D4813-1494513" style=3D"-webkit-text-size-adj=
+ust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"instagram icon" width=3D"40"=
+ src=3D"https://hollingsworth.house.gov/images/email/web.png" style=3D"-ms-inter=
+polation-mode: bicubic;border-width: 0px; border-style: solid; width: 40px;"=
+></a> &nbsp;<a target=3D"_blank" href=3D"https://hollingsworth.house.gov/compone=
+nts/redirect/r.aspx?ID=3D4814-1494513" style=3D"-webkit-text-size-adjust: 100%; =
+-ms-text-size-adjust: 100%;"><img alt=3D"facebook icon" width=3D"40" src=3D"https:=
+//hollingsworth.house.gov/images/email/fb.png" style=3D"-ms-interpolation-mode=
+: bicubic;border-width: 0px; border-style: solid; width: 40px;"></a> &nbsp;<=
+a target=3D"_blank" href=3D"https://hollingsworth.house.gov/components/redirect/=
+r.aspx?ID=3D4815-1494513" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size=
+-adjust: 100%;"><img alt=3D"twitter icon" width=3D"40" src=3D"https://hollingswort=
+h.house.gov/images/email/tw.png" style=3D"-ms-interpolation-mode: bicubic;bord=
+er-width: 0px; border-style: solid; width: 40px;"></a> &nbsp;<a target=3D"_bla=
+nk" href=3D"https://hollingsworth.house.gov/components/redirect/r.aspx?ID=3D4816=
+-1494513" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;=
+"><img alt=3D"youtube icon" width=3D"40" src=3D"https://hollingsworth.house.gov/im=
+ages/email/yt.png" style=3D"-ms-interpolation-mode: bicubic;border-width: 0px;=
+ border-style: solid; width: 40px;"></a> </td></tr><tr><td valign=3D"middle" a=
+lign=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;height:10px; background-color: #ffffff;">&nbsp; </td></tr><tr><td valign=
+=3D"middle" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;color: #ffffff; background-color: #2e4e7b; padding: 0 20px;">=
+<table role=3D"presentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"10" sty=
+le=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;text-align:ce=
+nter;"><tbody><tr><td valign=3D"middle" align=3D"center" style=3D"-webkit-text-siz=
+e-adjust: 100%; -ms-text-size-adjust: 100%;text-align:center;"><table role=3D"=
+presentation" cellpadding=3D"0" class=3D"responsive-table" align=3D"left" cellspac=
+ing=3D"0" width=3D"32.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-a=
+djust: 100%;font-family: arial, helvetica, sans-serif; text-align:center; fo=
+nt-size: 14px; color: #ffffff; margin: 10px 0;mso-table-lspace: 0pt; mso-tab=
+le-rspace: 0pt;"><tbody><tr><td style=3D"-webkit-text-size-adjust: 100%; -ms-t=
+ext-size-adjust: 100%;font-family: Arial, Helvetica, sans-serif;"><strong st=
+yle=3D"font-weight: bold;font-family: Arial, Helvetica, sans-serif; text-trans=
+form: uppercase;">Jeffersonville</strong><br>321 Quartermaster Court<br>Jeff=
+ersonville, IN 47130<br>Phone: 812.288.3999<br></td></tr></tbody></table><ta=
+ble role=3D"presentation" cellpadding=3D"0" class=3D"responsive-table" align=3D"left=
+" cellspacing=3D"0" width=3D"32.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-t=
+ext-size-adjust: 100%;font-family: arial, helvetica, sans-serif; text-align:=
+center; font-size: 14px; color: #ffffff; margin: 10px 0;mso-table-lspace: 0p=
+t; mso-table-rspace: 0pt;"><tbody><tr><td style=3D"-webkit-text-size-adjust: 1=
+00%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, sans-serif;">=
+<strong style=3D"font-weight: bold;font-family: Arial, Helvetica, sans-serif; =
+text-transform: uppercase;">Franklin</strong><br>100 E Jefferson Street<br>F=
+ranklin, IN 46131<br>Phone: 317.851.8710<br></td></tr></tbody></table><table=
+ role=3D"presentation" cellpadding=3D"0" class=3D"responsive-table" align=3D"left" c=
+ellspacing=3D"0" width=3D"32.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;font-family: arial, helvetica, sans-serif; text-align:cen=
+ter; font-size: 14px; color: #ffffff; margin: 10px 0;mso-table-lspace: 0pt; =
+mso-table-rspace: 0pt;"><tbody><tr><td style=3D"-webkit-text-size-adjust: 100%=
+; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, sans-serif;"><st=
+rong style=3D"font-weight: bold;font-family: Arial, Helvetica, sans-serif; tex=
+t-transform: uppercase;">Washington, D.C.</strong><br>1641 Longworth HOB<br>=
+Washington, DC 20515<br>Phone: 202.225.5315<br></td></tr></tbody></table></t=
+d></tr></tbody></table></td></tr><tr><td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:10px; b=
+ackground-color: #2e4e7b;">&nbsp; </td></tr><tr><td valign=3D"middle" style=3D"-=
+webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;background-color: =
+#2e4e7b;"><table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"20" align=3D=
+"center" width=3D"90%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-ad=
+just: 100%;"><tbody><tr><td valign=3D"middle" align=3D"center" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #2e4e7b; font-size: =
+15px; font-family: Arial, Helvetica, sans-serif;"><a target=3D"_blank" href=3D"h=
+ttps://hollingsworth.house.gov/components/redirect/r.aspx?ID=3D4817-1494513" s=
+tyle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #fff=
+fff; text-decoration:none; font-family: Arial, Helvetica, sans-serif; font-s=
+ize: 15px;">Unsubscribe</a> </td></tr></tbody></table></td></tr><tr><td vali=
+gn=3D"middle" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%;height:10px; background-color: #2e4e7b;">&nbsp; </td></tr><=
+tr><td valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-adjust: 100%;=
+ -ms-text-size-adjust: 100%;height:10px; background-color: #D4AF37; font-siz=
+e: 10px; line-height: 10px;">&nbsp; </td></tr><tr><td valign=3D"middle" align=3D=
+"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;c=
+olor: #ffffff; background-color: #D4AF37; font-family: Arial, Helvetica, san=
+s-serif; font-size: 12px; text-align: center;"><p style=3D"margin: 0;font-fami=
+ly: Arial, Helvetica, sans-serif; font-size: 12px; margin: 0; font-weight: n=
+ormal; padding: 0 15pt;">NOTE: Please DO NOT respond to this email as this i=
+nbox is unattended. To contact my office please <a href=3D"https://hollingswor=
+th.house.gov/components/redirect/r.aspx?ID=3D4818-1494513" style=3D"-webkit-text=
+-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; font-size: 12=
+px;">click here</a></p></td></tr><tr><td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:10px; b=
+ackground-color: #D4AF37; font-size: 10px; line-height: 10px;">&nbsp; </td><=
+/tr></tbody></table><table role=3D"presentation" width=3D"100%" align=3D"center" s=
+tyle=3D"font-family: Georgia, times, serif; background-color: #ffffff;" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftma=
+rgin=3D"0" topmargin=3D"0"><tbody><tr><td valign=3D"middle" align=3D"center" style=3D"=
+color: #000000; font-size: 16px; text-align: left;"><img src=3D"https://hollin=
+gsworth.house.gov/images/spacerx1520-1494513.open" width=3D"20" height=3D"1" sty=
+le=3D"height: 1px"> <br><a href=3D"https://hollingsworth.house.gov/news/email/sh=
+ow.aspx?ID=3DZSZJ7ORRMRFHNXP5KCDBT67XVI">Click Here</a> to view this email in =
+your browser <br><a href=3D"https://hollingsworth.house.gov/Forms/EmailSignup/=
+?Delete=3Dtrue&amp;MessageID=3D1520&amp;Email=3DCarter.Moelk@mail.house.gov">Click=
+ Here</a> to be removed from this list </td></tr></tbody></table></body></ht=
+ml>
+
+--B_3729070890_1014016484--
+

@@ -1,0 +1,590 @@
+Received: from SA1PR09MB9894.namprd09.prod.outlook.com (2603:10b6:806:28c::10)
+ by BLAPR09MB6737.namprd09.prod.outlook.com with HTTPS; Mon, 5 Jun 2023
+ 17:18:13 +0000
+Received: from BL0PR0901CA0002.namprd09.prod.outlook.com
+ (2603:10b6:208:1c0::12) by SA1PR09MB9894.namprd09.prod.outlook.com
+ (2603:10b6:806:28c::10) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6455.33; Mon, 5 Jun
+ 2023 17:18:12 +0000
+Received: from DM3GCC02FT039.eop-gcc02.prod.protection.outlook.com
+ (2a01:111:f400:7d04::202) by BL0PR0901CA0002.outlook.office365.com
+ (2603:10b6:208:1c0::12) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6455.32 via Frontend
+ Transport; Mon, 5 Jun 2023 17:18:12 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.51.115)
+ smtp.mailfrom=mail.house.gov; dkim=fail (body hash did not verify)
+ header.d=house.gov;dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.51.115 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.51.115;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.51.115) by
+ DM3GCC02FT039.mail.protection.outlook.com (10.97.8.203) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.6477.19 via Frontend Transport; Mon, 5 Jun 2023 17:18:12 +0000
+Received: from EXCH1921.US.House.gov (143.228.51.113) by EXCH1923.US.House.gov
+ (143.228.51.115) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1118.26; Mon, 5 Jun
+ 2023 13:18:11 -0400
+Received: from serg-bulk4-h.house.gov (143.228.145.100) by
+ EXCH1921.US.House.gov (143.228.51.113) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.2.1118.26 via Frontend Transport; Mon, 5 Jun 2023 13:18:11 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=from : to : date :
+ subject : content-type : message-id : mime-version; s=august2019-msgb-hg;
+ bh=wxVnsfct+W4pnz64cRT4AqiGVz4ab//PbSPV5ZzpzwY=;
+ b=ZVDyJ4NsucsUoY+FlqeLeBzLhqU8WQeBGdZFtgPQ1sjuKE1rl3CN96cpldhkX1w2GlSO
+ RfWMj9n6AT/fkBve6Rktf59InxsprbBryQKEVoKQhFpKzu84ztZgiCE48QycN+PPQx35
+ GLAeaI09rBgGDTced9butj4IGLx0fH+G4L4PwAS52uQvVE0Oq8W8t5Hs57sXWXoggSv6
+ 6Z2YpbtzxQuwau36zJg7o9aLBEiHMoOEkUNQorHUI287GubgFWyju5A6DpdJ9UuAsH6C
+ I7xPzgNhDq83YFmlN0jeg6zObHjNbtsU7lV5DxIN4dD5f4JVCMToCCJjAlwCkwaWzSh7 Qg== 
+Received: from firesideadmin02 (firesideadmin02.us.house.gov [143.228.113.54])
+	by serg-bulk4-h.house.gov (8.17.1.19/8.17.1.19) with ESMTP id 355HIB94004948;
+	Mon, 5 Jun 2023 13:18:11 -0400
+Message-Id: <3r00np3tea-1@serg-bulk4-h.house.gov>
+envelope-from: Rep.AOC@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+X-House-Vendor-Seg: Fireside21-1
+From: "Rep. Alexandria Ocasio-Cortez" <Rep.AOC@mail.house.gov>
+To: Daniel.Bonthius@mail.house.gov
+Date: 5 Jun 2023 13:18:11 -0400
+Subject: TEST Visit Our Flagship Office In Hunts Point!
+Content-Type: multipart/alternative;
+ boundary=--boundary_528_18164431-fb62-4732-a8c8-026129eee4db
+X-Proofpoint-Virus-Version: vendor=baseguard
+ engine=ICAP:2.0.254,Aquarius:18.0.957,Hydra:6.0.573,FMLib:17.11.176.26
+ definitions=2023-06-05_31,2023-06-02_02,2023-05-22_02
+Return-Path: Rep.AOC@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1923.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 05 Jun 2023 17:18:12.2598
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ cc24ac55-20b6-4480-c9c8-08db65e8d755
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1921.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted:
+ DM3GCC02FT039.eop-gcc02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ DM3GCC02FT039.eop-gcc02.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ DM3GCC02FT039:EE_|SA1PR09MB9894:EE_|BLAPR09MB6737:EE_
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: cc24ac55-20b6-4480-c9c8-08db65e8d755
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:143.228.51.115;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:;DIR:INT;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 05 Jun 2023 17:18:12.1817
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: cc24ac55-20b6-4480-c9c8-08db65e8d755
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.51.115];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1921.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SA1PR09MB9894
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.3689088
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.6455.026
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:1;jmr:0;auth:0;dest:C;OFR:CustomRules;ENG:(910001)(944506478)(944626604)(920097)(425001)(930097);
+X-Microsoft-Antispam-Message-Info:
+	+n5z8kr1Fn5Dy2plz9slgFMx5T4U3wtHYuytTA82u12ZnLYX0eXUu4/mrIXI1H0+P0zThoU9FqnHymcIm7Hh1LITI450rSxCZzBRqMD09HLaiv8gQoBMQH3CkBFrS9e+Nc1kBxU8aMNkcmf8gcPO5CpX6H812RQBqnkvfS7dqrpQbAj+EHzyowe1OQF2e75HUPdRRR4aI4uiabGp4OgmzOc/4W8ufUpIGaOuGr+e9YmPG6qAnUblH3VOltZlC26wal+vVKOmbHGiLBkgUFI1l26XY2f+fN+zOzcJqK2i9o3ay4IE88w0r+OdVeZ4crwcwCTrkiBKIDtS6nc2zXSaOawl9NpYzN0zMvHBTOuIrT09osaF5DLmB+KRwh9nF9qb1oHY68mkMdbBHR6MLPYLWtNXqJYzZS3OuUcOh8ZuURhOT6t+rP3hK4QCgWyU8HBw0K7a2G93rlCM0orDtz9UbuMjL8D4nbM6SYqsg2DYtrqFLK0cjjEZUa04UFfZNGqKjQpQwnhMWcK6o12YdkFxJwQ3/O6p55I+Pa3ACoFOv5WKaDBtpX9zPvdSs0FuchO9rSZNsGrfbvoGdrGIp/Gens5dmFF17k26vhsL66x5TwP0cwle0gx7w1yrHaDFXpj3McSECUN0R5ntH0+yOfbvfuNqLgnSRYvQOJTt1YrBXzlAhXul7NRO6IGCDXs37g8iqX/vmV9dyhVvUIWSDyBht4sTfjnFv6q5e2Bv+Ps9RVLKW/g1WvFKrNsB63vxSBkw6gqa4+1V1JQShrbkiea10cniWRIXfBFJvhGB7Ter0cOWp7nJuBkTtf7go6tZVbrImcXq4aikO0X1X9QnqKb6Vw==
+MIME-Version: 1.0
+
+----boundary_528_18164431-fb62-4732-a8c8-026129eee4db
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+ClZpc2l0IE91ciBGbGFnc2hpcE9mZmljZSBpbiBIdW50cyBQb2ludCEKCgoKV2UgaGF2
+ZSBvZmZpY2lhbGx5IG9wZW5lZCBvdXIgZmxhZ3NoaXAgb2ZmaWNlIGluIHRoZSBoaXN0
+b3JpY0Jhbmtub3RlIEJ1aWxkaW5nIGluIEh1bnRzIFBvaW50ISBXZSBhcmUgb3BlbiBm
+b3Igd2Fsay1pbnMgTW9uZGF5IHRocm91Z2ggVGh1cnNkYXkgZnJvbSA5YW0gdG8gNXBt
+LiBGaW5kIG91ciB1cGRhdGVkIG9mZmljZSBob3VycyBmb3IgYm90aCBvdXIgZmxhZ3No
+aXAgYW5kIENvLW9wIENpdHkgc2F0ZWxsaXRlIG9mZmljZXMgYmVsb3c6CgpIdW50cyBQ
+b2ludCBEaXN0cmljdCBPZmZpY2UKMTIzMSBMYWZheWV0dGUgQXZlClN1aXRlIEwtNjEw
+LCA0dGggRmxvb3IKQnJvbngsIE5ZIDEwNDc0CkhvdXJzOiBNb24tVGh1cnMgOWFtLTVw
+bQoKUHVibGljIHRyYW5zaXQgb3B0aW9ucyB0byBIdW50cyBQb2ludCBPZmZpY2U6ClRh
+a2UgdGhlIDYgVHJhaW4gdG8gTG9uZ3dvb2QgQXZlIG9yIEh1bnRzIFBvaW50IEF2ZS4g
+VGhlIG9mZmljZSB3aWxsIGJlIGEgOSBtaW51dGUgd2Fsay5UYWtlIHRoZSBCeDUgQnVz
+IHRvIDE2M3JkL1NvdXRoZXJuIEJsdmQuIFRoZSBvZmZpY2Ugd2lsbCBiZSBhIDkgbWlu
+dXRlIHdhbGsuVGFrZSB0aGUgQng2IFNCUyB0byBIdW50cyBQb2ludCBBdmUvQ29zdGVy
+IFN0LiBUaGUgb2ZmaWNlIHdpbGwgYmUgNCBtaW51dGUgd2Fsay5UYWtlIHRoZSA1IFRy
+YWluIHRvIFByb3NwZWN0IEF2ZS4gVGhlIG9mZmljZSB3aWxsIGJlIGEgMTUgbWludXRl
+IHdhbGsuCkNvLW9wIENpdHkgRGlzdHJpY3QgT2ZmaWNlCjE3NyBEcmVpc2VyIExvb3AK
+Um9vbSAzCkJyb254LCBOWSAxMDQ3NQpIb3VyczogTW9uLVR1ZXMgOWFtLTVwbQoKUHVi
+bGljIHRyYW5zaXQgb3B0aW9ucyB0byBDby1vcCBDaXR5IE9mZmljZToKVGFrZSB0aGUg
+NSBUcmFpbiB0byBHdW4gSGlsbCBSb2FkIGFuZCB0cmFuc2ZlciB0byB0aGUgQngzOCBh
+dCBFIEd1biBIaWxsIFJkL0Rld2l0dCBQbC4gVGFrZSB0aGUgQngzOCB0byBEcmVzaWVy
+IExvb3AvRGVicyBQbC5UYWtlIHRoZSA1IFRyYWluIHRvIEJheWNoZXN0ZXIgQXZlIGFu
+ZCB0cmFuc2ZlciB0byB0aGUgQngzMCBhdCBCb3N0b24gUmQvQmF5Y2hlc3RlciBBdmUu
+IFRha2UgdGhlIEJ4MzAgdG8gRHJlaXNlciBMb29wL0RlZm9lIFBsLlRha2UgdGhlIDYg
+VHJhaW4gdG8gUGVsaGFtIEJheSBQYXJrIGFuZCB0cmFuc2ZlciB0byB0aGUgQngyMyBh
+dCBCcnVja25lciBCbHZkL1dpbGtpbnNvbiBBdmUuIFRoZSB0YWtlIHRoZSBCeDIzIHRv
+IERyZWlzZXIgTG9vcC9EZWJzIFBsLgpBcyBhbHdheXMsIHdlIGNhbiBiZSByZWFjaGVk
+IGJ5IHBob25lIGF0IDcxOC02NjItNTk3MCBvciBvbmxpbmUgaGVyZShodHRwczovL29j
+YXNpby1jb3J0ZXouaG91c2UuZ292L2NvbnRhY3QpIC4gV2UgbG9vayBmb3J3YXJkIHRv
+IHNlcnZpbmcgeW91IQoK
+----boundary_528_18164431-fb62-4732-a8c8-026129eee4db
+Content-Location: https://ocasiocortezforms.house.gov/
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>Representative Alexandria Ocasio-Cortez</title>
+       =20
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1">
+        <!--[if !mso]><!-->
+        <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![e=
+ndif]-->
+        <style>body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default t=
+ext sizes */ img{-ms-interpolation-mode: bicubic;} /* Allow smoother render=
+ing of resized image in Internet Explorer *//* RESET STYLES */img { border:=
+ 0; height: auto; line-height: 100%; outline: none; text-decoration: none; =
+}table { border-collapse: collapse !important; }body { height: 100% !import=
+ant; margin: 0 !important; padding: 0 !important; width: 100% !important; }=
+strong { font-weight: bold; } /* Editor reset *//* FIRESIDE STYLES */.compo=
+nent img {max-width:600px;}.component table {mso-table-rspace:10pt; border-=
+collapse:collapse;}.component { padding: 0px !important; }.press {padding-b=
+ottom: 0px;}</style><style>@media all and (max-width:650px) {            .i=
+mage-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td, .image-2, .img-2 =
+img, .image-2 tr, .image-2 td {max-width: 100% !important; width: 100% !imp=
+ortant;}            .responsive-table {width:100% !important;}            .=
+responsive-table img {max-width:100% !important; height: auto !important;} =
+           .press .component, .press td {text-align:center;}            .co=
+mponent { margin-left: 20px; margin-right: 20px;}            .component .re=
+sponsive-table { margin-left: 0px !important; margin-right: 0px !important;=
+}            .wide .video-thumb { width: 100% !important;height: auto !impo=
+rtant; }             .wide.video-container { width: 100% !important; }     =
+    .component.full-width {margin-left: 0px; margin-right: 0px; }   }</styl=
+e><style type=3D"text/css">
+            /* CLIENT-SPECIFIC STYLES */
+            body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text=
+ sizes */
+            table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Rem=
+ove spacing between tables in Outlook 2007 and up */
+            img{-ms-interpolation-mode: bicubic;} /* Allow smoother renderi=
+ng of resized image in Internet Explorer */
+            /* RESET STYLES */
+            img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: =
+0 !important; width: 100% !important; }
+            strong { font-weight: bold; } /* Editor reset */
+            /* FIRESIDE STYLES */
+            .component img {max-width:600px;}
+            .component table {mso-table-rspace:10pt; border-collapse:collap=
+se; font-family: 'Georgia', times, serif;}
+            .component td, td {font-family: 'Georgia', times, serif;}
+            .component { padding: 0px !important; }
+            .press {padding-bottom: 0px;}
+            .caption-1 td {font-family: 'Georgia', times, serif;}
+            /* Margin/NoMargin STYLES */
+            .component.full-width{ overflow: hidden; margin: 0px; }
+            /* HEADER STYLES */
+            .header-bar {width: 100%;}
+            .header-bar-margin {background-color:#ffffff;}
+            .header-bar h2 {margin: 0 !important; padding: 0 !important; co=
+lor: #000080 !important;text-align: center;font-size: 30px !important;font-=
+weight: bold !important; }
+            .survey-content > table > tbody tr td { border-color: #18335b !=
+important; }
+            .survey-content input.survey-submit { font-family: 'Georgia', t=
+imes, serif !important; }
+        </style>      =20
+        <style id=3D"media-queries">=20
+            @media all and (max-width:650px) {
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max=
+-width: 100% !important; width: 100% !important;}
+            .responsive-table {width:100% !important;}
+            .responsive-table img {max-width:100% !important; height: auto =
+!important;}
+            .press .component, .press td, .split .component, .split .compon=
+ent td, .split td {text-align:center;}
+            .component { margin-left: 20px; margin-right: 20px;}
+            .component .responsive-table { margin-left: 0px !important; mar=
+gin-right: 0px !important;}
+            .wide .video-thumb { width: 100% !important;height: auto !impor=
+tant; }=20
+            .wide.video-container { width: 100% !important; }
+            }
+        </style>
+       =20
+    <!--[if (gte mso 9)|(IE)]>
+                                            <style>=20
+                                        </style>
+                                        <![endif]--></head>
+    <body style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%;margin: 0px !important; padding: 0px !important;">
+        <div id=3D"preview-text" style=3D"display: none; font-size: 1px; co=
+lor: #fefefe; line-height: 1px; font-family: 'Georgia', times, serif; max-h=
+eight: 0px; max-width: 0px; opacity: 0; overflow: hidden;">We have official=
+ly opened our flagship office in Hunts Point in the Bronx!<span>&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C</span></d=
+iv>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;font-family: 'Georgia', times, serif; background-color: #fff=
+fff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" m=
+arginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td align=3D"center" valign=3D"top" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: 'Georgia', ti=
+mes, serif; font-size: 16px;">
+                    <a target=3D"_blank" href=3D"https://ocasio-cortez.hous=
+e.gov" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;=
+">
+                    <img alt=3D"Representative Alexandria Ocasio-Cortez" wi=
+dth=3D"650" style=3D"-ms-interpolation-mode: bicubic;display: block; width:=
+ 650px;" src=3D"https://ocasiocortezforms.house.gov/uploadedphotos/highreso=
+lution/f4dffe58-d3d1-45e8-a6e7-5e3a5efc4cb3.jpg">
+                    </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;background-color: #ffffff; font-family: 'Georgia', times, se=
+rif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" m=
+arginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td class=3D"responsive-table" valign=3D"top" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: 'Ge=
+orgia', times, serif; font-size: 16px; color: #000000;">
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class=3D"region" id=3D"region-1"><div class=3D=
+"component full-width" style=3D"padding: 0px !important;"> <div class=3D"he=
+ader-bar" style=3D"overflow: hidden;">
+                                    <table role=3D"presentation" align=3D"c=
+enter" class=3D"responsive-table table-w-bg-color" style=3D"mso-table-lspac=
+e:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse=
+;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Ge=
+orgia, times, serif; margin-right: 0px; margin-left: 0px;" border=3D"0" cel=
+lspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftm=
+argin=3D"0" topmargin=3D"0" width=3D"650">
+                                        <tbody>
+                                            <tr height=3D"0" class=3D"space=
+rRow">
+                                                <td style=3D"-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 0p=
+x">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td class=3D"responsive-tab=
+le" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fon=
+t-size:30px;color:#000080;" valign=3D"top">
+                                                <table role=3D"presentation=
+" width=3D"100%" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-ta=
+ble-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -=
+ms-text-size-adjust: 100%;min-width: 100%;" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" top=
+margin=3D"0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;padding: 0 15pt; f=
+ont-family: 'Georgia', times, serif;">
+                                                                <div class=
+=3D"cke_editable cke_editable_inline cke_contents_ltr cke_show_borders cke_=
+focus" style=3D"overflow: hidden;"><h2 style=3D"text-align: center;"><span =
+style=3D"font-size:28px;">Visit Our Flagship&nbsp;Office in Hunts Point!</s=
+pan></h2></div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                </td>
+                                            </tr>
+                                            <tr height=3D"0" class=3D"space=
+rRow">
+                                                <td style=3D"-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 0p=
+x">&nbsp;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" bgcol=
+or=3D"#ffffff" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjus=
+t: 100%;background-color: rgb(255, 255, 255);">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><d=
+iv class=3D"component-template" style=3D"overflow: hidden;background-color:=
+ rgb(255, 255, 255); overflow: hidden;"><p style=3D"margin: 0;margin: 0;">W=
+e have officially opened our flagship office in the historic&nbsp;Banknote =
+Building in Hunts Point! We are open for walk-ins Monday through Thursday f=
+rom 9am to 5pm. Find our updated office hours for both our flagship and Co-=
+op City satellite offices below:</p><p style=3D"margin: 0;margin: 0;"><br><=
+/p><p style=3D"margin: 0;margin: 0px; text-align: center;"><span style=3D"c=
+olor:#800080;"><span style=3D"font-size:20px;"><strong style=3D"font-weight=
+: bold;">Hunts Point District Office</strong></span></span></p><p style=3D"=
+margin: 0;margin: 0px; text-align: center;"><span style=3D"font-size:20px;"=
+>1231 Lafayette Ave</span></p><p style=3D"margin: 0;margin: 0px; text-align=
+: center;"><span style=3D"font-size:20px;">Suite L-610, 4th Floor</span></p=
+><p style=3D"margin: 0;margin: 0px; text-align: center;"><span style=3D"fon=
+t-size:20px;">Bronx, NY 10474</span></p><p style=3D"margin: 0;margin: 0px; =
+text-align: center;"><strong style=3D"font-weight: bold;"><span style=3D"fo=
+nt-size:20px;">Hours: Mon-Thurs 9am-5pm</span></strong></p><p style=3D"marg=
+in: 0;margin: 0px; text-align: center;"><br></p><p style=3D"margin: 0;margi=
+n: 0px;">Public transit options to Hunts Point Office:</p><ul><li style=3D"=
+margin: 0px;">Take the 6 Train to Longwood Ave or Hunts Point Ave. The offi=
+ce will be a 9 minute walk.</li><li style=3D"margin: 0px;">Take the Bx5 Bus=
+ to 163rd/Southern Blvd. The office will be a 9 minute walk.</li><li style=
+=3D"margin: 0px;">Take the Bx6 SBS to Hunts Point Ave/Coster St. The office=
+ will be 4 minute walk.</li><li style=3D"margin: 0px;">Take the 5 Train to =
+Prospect Ave. The office will be a 15 minute walk.</li></ul><hr><p style=3D=
+"margin: 0;margin: 0px; text-align: center;"><br></p><p style=3D"margin: 0;=
+margin: 0px; text-align: center;"><span style=3D"color:#800080;"><span styl=
+e=3D"font-size:20px;"><strong style=3D"font-weight: bold;">Co-op City Distr=
+ict Office</strong></span></span></p><p style=3D"margin: 0;margin: 0px; tex=
+t-align: center;"><span style=3D"font-size:20px;">177 Dreiser Loop</span></=
+p><p style=3D"margin: 0;margin: 0px; text-align: center;"><span style=3D"fo=
+nt-size:20px;">Room 3</span></p><p style=3D"margin: 0;margin: 0px; text-ali=
+gn: center;"><span style=3D"font-size:20px;">Bronx, NY 10475</span></p><p s=
+tyle=3D"margin: 0;margin: 0px; text-align: center;"><strong style=3D"font-w=
+eight: bold;"><span style=3D"font-size:20px;">Hours: Mon-Tues 9am-5pm</span=
+></strong></p><p style=3D"margin: 0;margin: 0px; text-align: center;"><br><=
+/p><p style=3D"margin: 0;margin: 0px;">Public transit options to Co-op City=
+ Office:</p><ul><li style=3D"margin: 0px;">Take the 5 Train to Gun Hill Roa=
+d and transfer to the Bx38 at E Gun Hill Rd/Dewitt Pl. Take the Bx38 to Dre=
+sier Loop/Debs Pl.</li><li style=3D"margin: 0px;">Take the 5 Train to Baych=
+ester Ave and transfer to the Bx30 at Boston Rd/Baychester Ave. Take the Bx=
+30 to Dreiser Loop/Defoe Pl.</li><li style=3D"margin: 0px;">Take the 6 Trai=
+n to Pelham Bay Park and transfer to the Bx23 at Bruckner Blvd/Wilkinson Av=
+e. The take the Bx23 to Dreiser Loop/Debs Pl.</li></ul><p style=3D"margin: =
+0;margin: 0px;"><br></p><p style=3D"margin: 0;margin: 0px;">As always, <str=
+ong style=3D"font-weight: bold;">we can be reached by phone at 718-662-5970=
+ or <a data-cke-saved-href=3D"https://ocasio-cortez.house.gov/contact" href=
+=3D"https://ocasio-cortez.house.gov/contact" style=3D"-webkit-text-size-adj=
+ust: 100%; -ms-text-size-adjust: 100%;">online here</a></strong>. We look f=
+orward to serving you!</p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div></div>
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color: #=
+ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0=
+" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #08244a; backgro=
+und-color: #ffffff;">
+                    <a target=3D"_blank" href=3D"https://urldefense.com/v3/=
+__https://www.facebook.com/RepAOC__;!!Fr0YZsIsFWxTZsBm-qTAg68!kPcI-wMTl6ikA=
+zJBSBiRjc6EjcZxUBvSsN2PsaYblMVmGwI98nDGqNgO1kcDyQqAdbGDpOAOSX0bNpn0AT_7GzHS=
+9VGtcqf-$" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;"><img alt=3D"facebook icon" width=3D"32" src=3D"https://ocasiocortezfo=
+rms.house.gov/images/email/facebook.png" style=3D"-ms-interpolation-mode: b=
+icubic;border-width: 0px; border-style: solid; width: 32px;"></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://urldefense.c=
+om/v3/__https://twitter.com/RepAOC__;!!Fr0YZsIsFWxTZsBm-qTAg68!kPcI-wMTl6ik=
+AzJBSBiRjc6EjcZxUBvSsN2PsaYblMVmGwI98nDGqNgO1kcDyQqAdbGDpOAOSX0bNpn0AT_7GzH=
+S9fxT2_2o$" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: =
+100%;"><img alt=3D"twitter icon" width=3D"32" src=3D"https://ocasiocortezfo=
+rms.house.gov/images/email/twitter.png" style=3D"-ms-interpolation-mode: bi=
+cubic;border-width: 0px; border-style: solid; width: 32px;"></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://urldefense.c=
+om/v3/__https://www.instagram.com/RepAOC/__;!!Fr0YZsIsFWxTZsBm-qTAg68!kPcI-=
+wMTl6ikAzJBSBiRjc6EjcZxUBvSsN2PsaYblMVmGwI98nDGqNgO1kcDyQqAdbGDpOAOSX0bNpn0=
+AT_7GzHS9bTgXi9b$" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-a=
+djust: 100%;"><img alt=3D"instagram icon" width=3D"32" src=3D"https://ocasi=
+ocortezforms.house.gov/images/email/instagram.png" style=3D"-ms-interpolati=
+on-mode: bicubic;border-width: 0px; border-style: solid; width: 32px;"></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://urldefense.c=
+om/v3/__https://www.youtube.com/channel/UC6XBnYptBnproA__ydn-b0A__;!!Fr0YZs=
+IsFWxTZsBm-qTAg68!kPcI-wMTl6ikAzJBSBiRjc6EjcZxUBvSsN2PsaYblMVmGwI98nDGqNgO1=
+kcDyQqAdbGDpOAOSX0bNpn0AT_7GzHS9WOv-Kqj$" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"youtube icon" width=3D"32"=
+ src=3D"https://ocasiocortezforms.house.gov/images/email/youtube.png" style=
+=3D"-ms-interpolation-mode: bicubic;border-width: 0px; border-style: solid;=
+ width: 32px;"></a>
+                      &nbsp;<a target=3D"_blank" href=3D"https://urldefense=
+.com/v3/__https://www.tiktok.com/@aocinthehouse?lang=3Den__;!!Fr0YZsIsFWxTZ=
+sBm-qTAg68!kPcI-wMTl6ikAzJBSBiRjc6EjcZxUBvSsN2PsaYblMVmGwI98nDGqNgO1kcDyQqA=
+dbGDpOAOSX0bNpn0AT_7GzHS9Ut0PwXL$" style=3D"-webkit-text-size-adjust: 100%;=
+ -ms-text-size-adjust: 100%;"><img alt=3D"youtube icon" width=3D"32" src=3D=
+"https://ocasiocortezforms.house.gov/images/email/tiktok.png" style=3D"-ms-=
+interpolation-mode: bicubic;border-width: 0px; border-style: solid; width: =
+32px;"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:10px; background=
+-color: #ffffff;">
+                    &nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Arial, Helvetica, sans-serif;" border=3D"0" cells=
+pacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmar=
+gin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #18335b; font-si=
+ze: 12px;">
+                    <a href=3D"https://ocasiocortezforms.house.gov/forms/em=
+ailsignup/?Delete=3Dtrue" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;color: #18335b;">Unsubscribe</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>=
+
+----boundary_528_18164431-fb62-4732-a8c8-026129eee4db--

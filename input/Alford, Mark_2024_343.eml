@@ -1,0 +1,2249 @@
+Received: from PH0PR09MB10735.namprd09.prod.outlook.com
+ (2603:10b6:510:2ab::11) by PH8PR09MB10224.namprd09.prod.outlook.com with
+ HTTPS; Tue, 14 May 2024 14:49:24 +0000
+Received: from CYXPR09CA0006.namprd09.prod.outlook.com (2603:10b6:930:d4::17)
+ by PH0PR09MB10735.namprd09.prod.outlook.com (2603:10b6:510:2ab::11) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7587.25; Tue, 14 May
+ 2024 14:49:22 +0000
+Received: from DS1PEPF00017E0A.namprd09.prod.outlook.com
+ (2603:10b6:930:d4:cafe::b3) by CYXPR09CA0006.outlook.office365.com
+ (2603:10b6:930:d4::17) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7587.26 via Frontend
+ Transport; Tue, 14 May 2024 14:49:22 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.51.113)
+ smtp.mailfrom=mail.house.gov; dkim=fail (body hash did not verify)
+ header.d=mail.house.gov;dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.51.113 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.51.113;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.51.113) by
+ DS1PEPF00017E0A.mail.protection.outlook.com (10.167.18.167) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7587.21 via Frontend Transport; Tue, 14 May 2024 14:49:22 +0000
+Received: from EXCH1924.US.House.gov (143.228.51.120) by EXCH1921.US.House.gov
+ (143.228.51.113) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1544.9; Tue, 14 May
+ 2024 10:49:18 -0400
+Received: from serg-bulk4-a.house.gov (143.228.42.100) by
+ EXCH1924.US.House.gov (143.228.51.120) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1544.9
+ via Frontend Transport; Tue, 14 May 2024 10:49:18 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mail.house.gov; h=from : to : date
+ : subject : content-type : message-id : mime-version;
+ s=january2024-msgb-mhg; bh=M9NSWTqZReiqoau3HkDADbgMcMivpUQ8nyLXpOnecuk=;
+ b=G21bxwL2/mmuTUNuxbNneosmApkrTc+x+YRsFl1tFLBOKNDTMkpjMfzhGWmP9bYeiMWm
+ ba0slY+XtYS/QGeleumGEWMDF1RAI7gVCTqmeCwjO0SNNFCSKaEfaNBk3+5ItOHKT4v+
+ JJCX45Tuy0r7mOKNXRBf0GXGLePGfY7+ZTGG4UXL42Huc8ei3HJauugQZWh/8GJcyH3x
+ 6JIYgRw7++2V06dSfNwRwjOVOkSzGuvEDvSh2d+zl1Rc7l1mu0XiWUBSr9dXClGkKDqe
+ 2XS3MfDQBjJS1R8oWnJYpE7ilvjJp35QzhEwwJ87MS4insiGKYaKHbmgZSfiYbM+MNJd ZA== 
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=from : to : date :
+ subject : content-type : message-id : mime-version; s=august2019-msgb-hg;
+ bh=M9NSWTqZReiqoau3HkDADbgMcMivpUQ8nyLXpOnecuk=;
+ b=xOBt01c9lB/dMBnrxbapB8lVp1hGWsgzZXJ9Dfm2dnTLZ5Uq08bGRzngxvej1BpHcz+k
+ dwtTR/NMIbkopnoYPSx3zT3M5dOR3+xSqjeLYfA8hNpL0uZufYUfltHaSdRq/mEEW6uE
+ nmyfInpC18cKdk5lqx5Vhhjb9wL2Q11+znvYu3QPbBPJ+fAThYbHGed8rOb9hN/q92LN
+ AobWaVEQ8UB1KtyS9CuP71Fq7v2eMaS5HxGvwjRkXvfrNG5M9EEfaLvnrRoFQoJQ8g+t
+ rCK5d+3pP4ol8VOocfumlXKrS5orEwOXiBsy61D62d1Pp0LLmyseaB2ftjsLiEa6WbHR Mw== 
+Received: from FIRESIDEADMIN04 (firesideadmin04.us.house.gov [143.228.58.69])
+	by serg-bulk4-a.house.gov (8.17.1.19/8.17.1.19) with ESMTP id 44EEnHIK017186;
+	Tue, 14 May 2024 10:49:17 -0400
+Message-Id: <3y23tr1ft8-1@serg-bulk4-a.house.gov>
+envelope-from: Alford.newsletter@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+X-House-Vendor-Seg: Fireside21-1
+From: "Rep. Mark Alford" <Alford.newsletter@mail.house.gov>
+To: Austin.Higginbotham@mail.house.gov
+Date: 14 May 2024 10:49:17 -0400
+Subject: TEST Rep. Mark Alford Newsletter: May 6 - May 12
+Content-Type: multipart/alternative;
+ boundary=--boundary_408_246b188d-c501-4c66-8220-8117295c0e4a
+X-Proofpoint-Virus-Version: vendor=baseguard
+ engine=ICAP:2.0.293,Aquarius:18.0.1039,Hydra:6.0.650,FMLib:17.11.176.26
+ definitions=2024-05-14_08,2024-05-14_01,2023-05-22_02
+Return-Path: Alford.Newsletter@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1921.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 14 May 2024 14:49:22.4161
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 4897ffa1-7943-42a2-c3ac-08dc74250ad5
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1924.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted: DS1PEPF00017E0A.namprd09.prod.outlook.com
+X-CrossPremisesHeadersFiltered: DS1PEPF00017E0A.namprd09.prod.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ DS1PEPF00017E0A:EE_|PH0PR09MB10735:EE_|PH8PR09MB10224:EE_
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: 4897ffa1-7943-42a2-c3ac-08dc74250ad5
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;ARA:13230031|366007|82310400017|41050700001;
+X-Forefront-Antispam-Report:
+ CIP:143.228.51.113;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:(13230031)(366007)(82310400017)(41050700001);DIR:INT;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 14 May 2024 14:49:22.2911
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 4897ffa1-7943-42a2-c3ac-08dc74250ad5
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.51.113];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1924.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PH0PR09MB10735
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.3136551
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.7587.015
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(425001)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	2ymA43luL3y3hXyvwKGTe+jJXQPZrjivlPrORanZYzWPygLAPvS8dPoI/yQjL4oPoq+S9ibIVlD2DRH7WwlAcy4wVLs3pXFuoWGxiKc1lcOlRFE7fHz0t64qky91wrRnj8YAGvsS3SHHEB08wjaMP6X4YNQGtkqjdRfJnDZmIW7/HpdlOJreGqKQraS4Bi0mLKjxDlnJz+hu51Ap/PGwZU8F132oot0FMCvr1MZdVTj/+5cjJJVlTI3pFGMesHxwwFFJWv3brtB0yHfFfIYoTh4Ugc1hCtO9MPhmT41y5owoQqlAJJJEbmufcof2FIL9I6Ywd9naucon7ZdMZs1u63FtatbnOR/plL1h80b/5IrgWGGooscOqFokvpK1b3Io1iVXMpywHiiRwb0bOK1Eq8u/Bemfg/9V4vJF6GrHD2EUWok6Qy/e9T8r2Ei0OhC2Ay4Wcl3D/7kFcFG0EVB/G63nyD0T2d+xSeGwa3ioRAa0MF0viJPMfle5VWT09j5+em3jZG4qjgJ2MkvcSS5/nhjPQ3Om2Oqxl6pUDgdWJ0LH3epJwmu4BHjX7FFQcAwQIrgCSN1UUCQJGd/onnx0aPgBv4asLpz/liiLkB9NkFvU0HPmWoXD/9nhxyWr1AUabwpqwHDSJNfuoJ0hKrMLxJvxU8bw0tsjMmppRtsL/rtaHXLH3D64pYL+HQBWYQ0oEh1ElS+/eWS/shhKs4N+vTGMUPnEmH9KP0P/BpYHablyf+windnPDfhHkE/yuZSIKoxS4h71wQDCdOl4ryBKAAUo0jNvArlruOJyVfwnJJP2riq+lYeKeKVS+kvl65/bormLIzbdVmWZlk/ixiyi2RdykPU8LTVvCKMgTSdpH9XFzTuuMqmVvdxVkQ3D32iI
+MIME-Version: 1.0
+
+----boundary_408_246b188d-c501-4c66-8220-8117295c0e4a
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Representative Mark Alford  (https://alford.house.gov)
+
+Dear John Doe,
+
+Before you read any further, to keep up with what we are doing on a daily b=
+asis, please follow us on:
+Facebook: @RepMarkAlford(https://urldefense.com/v3/__https://www.facebook.c=
+om/RepMarkAlford/__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!HCY3eeiUkz3k_7-vIA946=
+eEEANe-9ET_Jt1SIaP84hYrzVvLwAue-hnZEqqml7Btn4-OSBMcKUXaIwBhlu3q91r-V53TGp7v=
+vdJ5QMZhAjxA0_o$ ) X: @RepMarkAlford(https://urldefense.com/v3/__https://tw=
+itter.com/RepMarkAlford__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!HCY3eeiUkz3k_7-=
+vIA946eEEANe-9ET_Jt1SIaP84hYrzVvLwAue-hnZEqqml7Btn4-OSBMcKUXaIwBhlu3q91r-V5=
+3TGp7vvdJ5QMZhkAPTBOM$ ) Instagram: @RepMarkAlford(https://urldefense.com/v=
+3/__https://www.instagram.com/repmarkalford/__;!!Ckt11KVezJIME51BYf4a6hrLAT=
+Hilnk!HCY3eeiUkz3k_7-vIA946eEEANe-9ET_Jt1SIaP84hYrzVvLwAue-hnZEqqml7Btn4-OS=
+BMcKUXaIwBhlu3q91r-V53TGp7vvdJ5QMZhsbpcQDU$ )=20
+
+Hey folks, my team and I are stayingbusyin the districtand in Washington.We=
+ wanted to let you know of all the things we are working on for Missouri's =
+Fourth Congressional District!
+
+
+h1=20
+
+My team and I had an incredible time at the Celebration of Modern Agricultu=
+re on the National Mall. It was a great opportunity to bring together polic=
+ymakers and consumers to learn more about the agriculture industry. The equ=
+ipment and technology solutions showcased today will solvethe challenges of=
+ tomorrow and will help our farmers and ranchers feed, clothe, and fuel the=
+ world.
+
+
+sd=20
+
+Last week, Congress celebrated National Small Business Week. I believe that=
+ when America' small businesses are strong, America is strong. I will conti=
+nue to advocate for the small businesses in MO-04 and for the polices that =
+keep our economy thriving and our community strong.
+
+Here are some of the things the House Small Business Committee is deliverin=
+g for Main Street:
+
+
+it7o=20
+
+My colleagues and I have recently returned from a congressional delegation =
+trip to Taiwan. We were on the ground, up close and personal to see the cou=
+ntry, its people, and its leaders.
+
+We met met with the President and Vice President-Elect and continued to str=
+engthen our relationship with a great ally.
+
+China's continued aggression in the Indo-Pacific is concerning; we must ado=
+pt a posture of deterrence to protect Taiwan.
+
+
+1=20
+
+We had a Small Business Committee Hearing this week titled =E2=80=9CStiflin=
+g Innovation: Examining the Impacts of Regulatory Burdens on Small Business=
+es in Healthcare"
+
+I spoke about how whenrural providers in Missouri's 4th district are hit wi=
+th high costs, they shut down which leaves patients stranded.Burdensome reg=
+ulations have an even more adverse effect on those in rural communities bec=
+ause patients have a small window of options if they close their doors.I wi=
+ll continue to fight for policies that help the rural providers and the rur=
+al communities that keep#MO04(https://urldefense.com/v3/__https://www.insta=
+gram.com/explore/tags/mo04/__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!HCY3eeiUkz3=
+k_7-vIA946eEEANe-9ET_Jt1SIaP84hYrzVvLwAue-hnZEqqml7Btn4-OSBMcKUXaIwBhlu3q91=
+r-V53TGp7vvdJ5QMZhCkEMNVE$ ) going. Watch here.(https://urldefense.com/v3/_=
+_https://x.com/HouseSmallBiz/status/1788233048166711550__;!!Ckt11KVezJIME51=
+BYf4a6hrLATHilnk!HCY3eeiUkz3k_7-vIA946eEEANe-9ET_Jt1SIaP84hYrzVvLwAue-hnZEq=
+qml7Btn4-OSBMcKUXaIwBhlu3q91r-V53TGp7vvdJ5QMZhGzKivmk$ )=20
+
+
+
+ohu=20
+
+My colleagues and I held a Small Business Committee hearing last week exami=
+ning FinCEN=E2=80=99s implementation of the Corporate Transparency Act.
+
+Small firms are least able to absorb compliance costs. Improvements must be=
+ made to the CTA. Main Street cannot continue to bear the brunt of this!
+
+Watch here.(https://urldefense.com/v3/__https://fb.watch/rWj5-5ctPv/__;!!Ck=
+t11KVezJIME51BYf4a6hrLATHilnk!HCY3eeiUkz3k_7-vIA946eEEANe-9ET_Jt1SIaP84hYrz=
+VvLwAue-hnZEqqml7Btn4-OSBMcKUXaIwBhlu3q91r-V53TGp7vvdJ5QMZhCWyf_P4$ )=20
+
+
+dgn=20
+
+My House Armed Service Committee colleagues and I are very concerned about =
+the cap placed on defense spending as we are trying to deter two adversarie=
+s.
+
+Hostile powers are on the march across the globe, during what I see as an i=
+nflection point in our history.
+
+This is why I asked Secretary Austin and General Brown what can the DOD do =
+to make changes and how can we, in Congress, help?
+
+Watch here.(https://urldefense.com/v3/__https://fb.watch/rWjqSsvK3U/__;!!Ck=
+t11KVezJIME51BYf4a6hrLATHilnk!HCY3eeiUkz3k_7-vIA946eEEANe-9ET_Jt1SIaP84hYrz=
+VvLwAue-hnZEqqml7Btn4-OSBMcKUXaIwBhlu3q91r-V53TGp7vvdJ5QMZhWNTzOTo$ )=20
+
+
+hsgf=20
+
+
+
+
+h2=20
+
+Two weeks ago, I traveled with a bipartisan Congressional delegation to Tai=
+wan. Accompanying me was our Republican House Conference Secretary, Lisa Mc=
+Clain, with whom I recapped our entire trip on an episode(https://urldefens=
+e.com/v3/__https://open.spotify.com/show/5JwRHnxdDiHWgxO2w5mKEC?si=3D631513=
+ab7fb048a6__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!HCY3eeiUkz3k_7-vIA946eEEANe-=
+9ET_Jt1SIaP84hYrzVvLwAue-hnZEqqml7Btn4-OSBMcKUXaIwBhlu3q91r-V53TGp7vvdJ5QMZ=
+hhDSS184$ )  of Mark Alford=E2=80=99s America.
+
+On the trip, we met with the leaders of the country, including the outgoing=
+ President Tsai and the incoming President Lai. We discussed the importance=
+ of the United States standing with Taiwan and strengthening our relationsh=
+ip. We got to see the people, we got to see the country, and that=E2=80=99s=
+ what these congressional delegations serve as: an opportunity to dive deep=
+er and be on the ground in the country. It was a truly great experience.
+
+But folks, here=E2=80=99s what I took away from that trip: We are at a crit=
+ical moment in American history. China=E2=80=99s continued aggression in th=
+e Indo-Pacific is deeply concerning for our national security, our economic=
+ security, and our food security. Taiwan is strategically and geopoliticall=
+y significant. The United States has a national interest in protecting Taiw=
+an. Taiwan controls 68%(https://urldefense.com/v3/__https://www.visualcapit=
+alist.com/advanced-semiconductor-market-share-2023-2027/*:*:text=3DTaiwan*2=
+0Still*20*231*20for*20Foreseeable,largest*20producer*20of*20advanced*20semi=
+conductors__;I34lJSUlJSUlJSU!!Ckt11KVezJIME51BYf4a6hrLATHilnk!HCY3eeiUkz3k_=
+7-vIA946eEEANe-9ET_Jt1SIaP84hYrzVvLwAue-hnZEqqml7Btn4-OSBMcKUXaIwBhlu3q91r-=
+V53TGp7vvdJ5QMZhohfKAr0$ .)  of the semiconductor market, 21% of global tra=
+de(https://urldefense.com/v3/__https://chinapower.csis.org/much-trade-trans=
+its-south-china-sea/__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!HCY3eeiUkz3k_7-vIA=
+946eEEANe-9ET_Jt1SIaP84hYrzVvLwAue-hnZEqqml7Btn4-OSBMcKUXaIwBhlu3q91r-V53TG=
+p7vvdJ5QMZhxPv4a_4$ )  flows through the South China Sea and the Straits of=
+ Taiwan, and they are uniquely positioned in the world. Whoever controls th=
+at area, I believe, will control vast amounts of economic trade and commerc=
+e.
+
+That=E2=80=99s the strategic importance of why Taiwan matters.
+
+Furthermore, the Taiwanese people are strong, independent, and free-minded.=
+ This continued aggression, directly against Taiwan and in the region, is c=
+oncerning for their safety and does not bode well for peace. And that=E2=80=
+=99s what I want at the end of the day: Congress doesn=E2=80=99t want war, =
+no one wants this aggression. I want peace. However, it is crucial that the=
+ United States continues to aid in the protection of Taiwan.
+
+
+header=20
+
+In The Media
+
+
+Fox Business
+
+I joined Fox Business to talk about my trip to Taiwan &my and my colleague'=
+scommitment to upholding the tenets of the Taiwan Relations Act.
+
+With a leader like Xi Jinping trying to push Taiwan around and cut it off f=
+rom the rest of the world, we believe that deterrence is the best way forwa=
+rd.
+
+Watch here(https://urldefense.com/v3/__https://fb.watch/rx6-IE5TW0/__;!!Ckt=
+11KVezJIME51BYf4a6hrLATHilnk!HCY3eeiUkz3k_7-vIA946eEEANe-9ET_Jt1SIaP84hYrzV=
+vLwAue-hnZEqqml7Btn4-OSBMcKUXaIwBhlu3q91r-V53TGp7vvdJ5QMZh8R1-2vg$ ) .(http=
+s://urldefense.com/v3/__https://fb.watch/rWiq1Mo_ql/__;!!Ckt11KVezJIME51BYf=
+4a6hrLATHilnk!HCY3eeiUkz3k_7-vIA946eEEANe-9ET_Jt1SIaP84hYrzVvLwAue-hnZEqqml=
+7Btn4-OSBMcKUXaIwBhlu3q91r-V53TGp7vvdJ5QMZh7FY1-N4$ )=20
+
+
+:LK=20
+
+Real America's Voice
+
+I spoke on Real America's Voice about how I can see our some of our elite A=
+mericanuniversities are suffering from weakening administrative leadership.
+
+I believe that we, in Congress, needto examine every resource and mechanism=
+ possible to rein in these institutions.
+
+Watch here.(https://urldefense.com/v3/__https://fb.watch/rXBAGIBTFv/__;!!Ck=
+t11KVezJIME51BYf4a6hrLATHilnk!HCY3eeiUkz3k_7-vIA946eEEANe-9ET_Jt1SIaP84hYrz=
+VvLwAue-hnZEqqml7Btn4-OSBMcKUXaIwBhlu3q91r-V53TGp7vvdJ5QMZhjeapQuo$ )=20
+
+
+g=20
+
+
+Honoring April Veteran of the Month on the House Floor
+
+Our April Veteran of the Month is Craig A. Alderman! Attaining a Bachelor o=
+f Science degree in Forestry and Wildlife Biology, with a minor in accounti=
+ng from the University of Massachusetts, he also enlisted in the Air Force =
+as an ROTC Cadet, becoming Commander of the ROTC unit.
+
+Upon graduation as a qualified B-52 Pilot,he was qualified to fly any multi=
+-engine jet, heavy as well as all the other civilian ratings. He was assign=
+ed to Wurstmith AFB, in MI, where he qualified on the B-52 G model as well.=
+ He now attained the rank of Captain.
+
+Craig has 2800 hours of flight time in the B-52. While at Wurtsmith, he fou=
+nded a civilian/military rescue service assisting lost or injured people us=
+ing the vast Huron-Manistee National Forest Trail System. He was selected b=
+y Michigan State University to teach multiple use Graduate Level Conservati=
+on Courses in Lansing.
+
+Craig received multiple medals and awards in the Air Force as a pilot but h=
+e is most proud of the initial silver wings he earned. He was selected for =
+promotion to Major.
+
+Watch here(https://urldefense.com/v3/__https://fb.watch/rx6-IE5TW0/__;!!Ckt=
+11KVezJIME51BYf4a6hrLATHilnk!HCY3eeiUkz3k_7-vIA946eEEANe-9ET_Jt1SIaP84hYrzV=
+vLwAue-hnZEqqml7Btn4-OSBMcKUXaIwBhlu3q91r-V53TGp7vvdJ5QMZh8R1-2vg$ ) .(http=
+s://urldefense.com/v3/__https://fb.watch/rXkkwq7hRu/__;!!Ckt11KVezJIME51BYf=
+4a6hrLATHilnk!HCY3eeiUkz3k_7-vIA946eEEANe-9ET_Jt1SIaP84hYrzVvLwAue-hnZEqqml=
+7Btn4-OSBMcKUXaIwBhlu3q91r-V53TGp7vvdJ5QMZhs_WbkLc$ )=20
+
+
+dsa=20
+
+Honoring April Small Business of the Month on the House Floor
+
+Our Small Business of the month for April is Kleinschmidt's Western Store i=
+n Higginsville, Missouri!
+
+Providing the Midwest with western apparel and accessories of the highest q=
+uality--this household name has been family owned and operated since 1969.
+
+Over 54 years ago, the founders Irvin and Katherine Kelinschmidt establishe=
+d a mission: supporting our local community while providing unparalleled in=
+ventory and exceptional customer service.
+
+Congratulations to Kleinschmidt's! Watch here.(https://urldefense.com/v3/__=
+https://youtu.be/rx8InclyL8o?si=3DMYsnNCRNrn8Q5twR__;!!Ckt11KVezJIME51BYf4a=
+6hrLATHilnk!HCY3eeiUkz3k_7-vIA946eEEANe-9ET_Jt1SIaP84hYrzVvLwAue-hnZEqqml7B=
+tn4-OSBMcKUXaIwBhlu3q91r-V53TGp7vvdJ5QMZhAGCLtJs$ )=20
+
+
+sgjf=20
+
+Honoring Important Dates
+
+
+8y=20
+
+
+
+
+District1=20
+Mondays with Mark
+
+We had a great timeat our Raymore Office for Mondays with Mark!
+
+It was great to be with you all before I headed back to Washington to keep =
+fighting for you. As always, this is a great opportunity to discuss everyth=
+ing going on in DC.
+
+Thank you to everyone who came out!!!
+
+
+afsd=20
+
+Congressional Academy Commemoration
+
+One of my favorite parts about of serving in Congress is the privilege to n=
+ominate and appoint our best and brightest students to the finest military =
+academies the world has ever known.
+
+These students undergo a rigorous application, testing, and screening proce=
+ss, which ultimately leads to their nomination and appointment. We are deep=
+ly grateful for their hard work, commitment to our country, and their futur=
+e service to our great nation.
+
+Please join me in congratulating this year's service academy appointees.
+
+2028 Academy Appointees:
+=E2=80=A2 =EF=BB=BF=EF=BB=BFDavid Butler, U.S. Air Force Academy
+=E2=80=A2 Elias Oerly, U.S. Air Force Academy
+=E2=80=A2 =EF=BB=BF=EF=BB=BFKase Overstreet, U.S. Military Academy
+=E2=80=A2Charles Goetz, U.S. Military Academy
+=E2=80=A2 Cody Leung, U.S. Naval Academy
+
+
+bjk=20
+
+Lower MO River Spinoff Meeting
+
+Our team attended the Lower MO River Spinoff meeting in Jefferson City at M=
+oDNR headquarters, along with a representative from Congressman Luetkemeyer=
+=E2=80=99s office.
+
+The meeting was put on by USACE to allow for open dialogue about the study =
+that=E2=80=99s been in process since the 2019 flood. They discussed all the=
+ possible alternative plans for the existing levee from creating an entirel=
+y new one all the way to doing nothing at all.=20
+
+This was a very well attended meeting by area residents as well as represen=
+tatives from interested commodity groups. The discussion had was in-depth a=
+nd helped clear up many of the questions those in attendance had. USACE pla=
+ns to continue to host more meetings like this as they continue to approach=
+ milestones in the flood study.
+
+
+AGDF=20
+
+United States Naturalization Ceremony for the Western District of Missouri
+
+It was great for our team to attendthe United States Naturalization Ceremon=
+y for the Western District of Missouri. The event was held at Marshfield Hi=
+gh School in conjunction with the Missouri Cherry Blossom festival, where 3=
+5 applicants from 21 different countries became official citizens of the Un=
+ited States! Representatives from Senator Schmitt & Hawley=E2=80=99s office=
+s as well as from Congressman Burlison=E2=80=99s office were also in attend=
+ance and shared words from their respective members of congress.=20
+
+Mary Jean Eisenhower, the granddaughter of Former President Dwight Eisenhow=
+er was a special guest speaker and Massee McKinley, great-great nephew to F=
+ormer President William McKinley and great-great grandson to Former Preside=
+nt Grover Cleveland sang America the Beautiful. Overall, it was a truly inc=
+redible event, and it was so exciting to get to be a small part of such an =
+amazing day.
+
+
+fjty=20
+
+
+
+
+
+
+
+
+HOW CAN MY TEAM HELP?
+
+
+
+If anyone you know needs assistance with any agency of the federal governme=
+nt, please contact my team in Raymore, Columbia, or Lebanon. Whether it's t=
+he IRS, Social Security,passports, veterans=E2=80=99 affairs, or anything e=
+lse related to the federal government, please give us a call at one of the =
+following numbers:
+Raymore: 816-441-6318Columbia: 573-540-6600Lebanon:417-532-5582Meanwhile, i=
+f you have questions about legislation going throughCongress, my office in =
+Washington, D.C. can take care of you. My teaminD.C. can be reached at 202-=
+225-2876.
+
+My number one jobin Congress is to help folks here in Missouri. Please do n=
+ot everhesitate to call my offices at the numbers listed above.
+
+I truly care about and will always be working for you.
+
+sig1=20
+
+----boundary_408_246b188d-c501-4c66-8220-8117295c0e4a
+Content-Location: https://alford.house.gov/
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>Representative Mark Alford</title>
+       =20
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1">
+        <!--[if !mso]><!-->
+        <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![e=
+ndif]-->
+        <style>body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default t=
+ext sizes */ img{-ms-interpolation-mode: bicubic;} /* Allow smoother render=
+ing of resized image in Internet Explorer *//* RESET STYLES */img { border:=
+ 0; height: auto; line-height: 100%; outline: none; text-decoration: none; =
+}table { border-collapse: collapse !important; }body { height: 100% !import=
+ant; margin: 0 !important; padding: 0 !important; width: 100% !important; }=
+strong { font-weight: bold; } /* Editor reset *//* FIRESIDE STYLES */.compo=
+nent img {max-width:600px;}.component table {mso-table-rspace:10pt; border-=
+collapse:collapse;}.component { padding: 0px !important; }.press {padding-b=
+ottom: 0px;}</style><style>@media all and (max-width:650px) {            .i=
+mage-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td, .image-2, .img-2 =
+img, .image-2 tr, .image-2 td {max-width: 100% !important; width: 100% !imp=
+ortant;}            .responsive-table {width:100% !important;}            .=
+responsive-table img {max-width:100% !important; height: auto !important;} =
+           .press .component, .press td {text-align:center;}            .co=
+mponent { margin-left: 20px; margin-right: 20px;}            .component .re=
+sponsive-table { margin-left: 0px !important; margin-right: 0px !important;=
+}            .wide .video-thumb { width: 100% !important;height: auto !impo=
+rtant; }             .wide.video-container { width: 100% !important; }     =
+    .component.full-width {margin-left: 0px; margin-right: 0px; }   }</styl=
+e><style type=3D"text/css">
+            /* CLIENT-SPECIFIC STYLES */
+            body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text=
+ sizes */
+            table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Rem=
+ove spacing between tables in Outlook 2007 and up */
+            img{-ms-interpolation-mode: bicubic;} /* Allow smoother renderi=
+ng of resized image in Internet Explorer */
+            /* RESET STYLES */
+            img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: =
+0 !important; width: 100% !important; }
+            strong { font-weight: bold; } /* Editor reset */
+            /* FIRESIDE STYLES */
+            .component img {max-width:600px;}
+            .component table {mso-table-rspace:10pt; border-collapse:collap=
+se; font-family: Arial, Helvetica, sans-serif;}
+            .component td, td {font-family: Arial, Helvetica, sans-serif;}
+            .component { padding: 0px !important; }
+            .press {padding-bottom: 0px;}
+            .caption-1 td {font-family: Arial, Helvetica, sans-serif;}
+            /* Margin/NoMargin STYLES */
+            .component.full-width{ overflow: hidden; margin: 0px; }
+            /* HEADER STYLES */
+            .header-bar {width: 100%;}
+            .header-bar-margin {background-color:#ffffff;}
+            .header-bar h2 {margin: 0 !important; padding: 0 !important; co=
+lor: #000000 !important;text-align: center;font-size: 24px !important;font-=
+weight: bold !important; }
+            .survey-content > table > tbody tr td { border-color: #16285A !=
+important; }
+            .survey-content input.survey-submit { font-family: Arial, Helve=
+tica, sans-serif !important; }
+        </style>       =20
+        <style id=3D"media-queries">=20
+            @media all and (max-width:650px) {
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max=
+-width: 100% !important; width: 100% !important;}
+            .responsive-table {width:100% !important;}
+            .responsive-table img {max-width:100% !important; height: auto =
+!important;}
+            .press .component, .press td, .split .component, .split .compon=
+ent td, .split td {text-align:center;}
+            .component { margin-left: 20px; margin-right: 20px;}
+            .component .responsive-table { margin-left: 0px !important; mar=
+gin-right: 0px !important;}
+            .wide .video-thumb { width: 100% !important;height: auto !impor=
+tant; }=20
+            .wide.video-container { width: 100% !important; }
+            }
+        </style>
+       =20
+    <!--[if (gte mso 9)|(IE)]>
+                                        <style>=20
+                                    </style>
+                                    <![endif]--></head>
+    <body style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%;margin: 0px !important; padding: 0px !important;">
+        <div id=3D"preview-text" style=3D"display: none; font-size: 1px; co=
+lor: #fefefe; line-height: 1px; font-family: Arial, Helvetica, sans-serif; =
+max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">Dear John D=
+oe,&nbsp; Before you read any further, to keep up with what we are doing on=
+ a daily basis, please follow us on:Facebook: @RepMarkAlfordX: @RepMarkAlfo=
+rdInstagram: @RepMarkAlford </div>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color:=
+ #ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D=
+"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td align=3D"center" valign=3D"top" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvet=
+ica, sans-serif; font-size: 16px;">
+                        <div class=3D"region" id=3D"region-1"><div class=3D=
+"component full-width" style=3D"padding: 0px !important;"> <div class=3D"im=
+age" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 0px; margin-left: 0px;" width=3D"650">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;"><a href=3D"https://alford.house.gov" target=3D"_blank" style=3D=
+"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img style=3D=
+"max-width:600px;-ms-interpolation-mode: bicubic;vertical-align: bottom; ma=
+x-width: 650px;" alt=3D"Representative Mark Alford" src=3D"https://alfordfo=
+rms.house.gov/uploadedphotos/highresolution/6698c486-5c82-4ce9-acde-e81cf8d=
+6af6a.jpg"></a></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;background-color: #ffffff; font-family: Arial, Helvetica, sa=
+ns-serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D=
+"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td class=3D"responsive-table" valign=3D"top" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Ari=
+al, Helvetica, sans-serif; font-size: 16px; color: #000000;">
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class=3D"region" id=3D"region-2"><div class=3D=
+"component " style=3D"padding: 0px !important;"> <div class=3D"editable" st=
+yle=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><d=
+iv class=3D"component-template" style=3D"overflow: hidden;"><p style=3D"mar=
+gin: 0;margin: 0;"><span style=3D"font-size:16px;"><span style=3D"font-fami=
+ly:Georgia,serif;"><span style=3D"font-variant: normal; white-space: pre-wr=
+ap;"><span style=3D"color:#000000"><span style=3D"font-weight:400"><span st=
+yle=3D"font-style:normal"><span style=3D"text-decoration:none">Dear <span c=
+lass=3D"fs-merge-field" contenteditable=3D"false"><span contenteditable=3D"=
+false"><span class=3D"merge-field" contenteditable=3D"false" unselectable=
+=3D"true">John</span></span></span> <span class=3D"fs-merge-field" contente=
+ditable=3D"false"><span contenteditable=3D"false"><span class=3D"merge-fiel=
+d" contenteditable=3D"false" unselectable=3D"true">Doe</span></span></span>=
+,&nbsp;</span></span></span></span></span></span></span></p><p style=3D"mar=
+gin: 0;margin: 0;"><br></p><p style=3D"margin: 0;margin: 0;"><span style=3D=
+"font-family:Georgia,serif;"><span style=3D"font-size:16px;">Before you rea=
+d any further, to keep up with what we are doing on a daily basis, please f=
+ollow us on:</span></span></p><ul><li style=3D"margin: 0px;"><span style=3D=
+"font-family:Georgia,serif;">Facebook: <a data-cke-saved-href=3D"https://ww=
+w.facebook.com/RepMarkAlford/" href=3D"https://urldefense.com/v3/__https://=
+www.facebook.com/RepMarkAlford/__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!HCY3eei=
+Ukz3k_7-vIA946eEEANe-9ET_Jt1SIaP84hYrzVvLwAue-hnZEqqml7Btn4-OSBMcKUXaIwBhlu=
+3q91r-V53TGp7vvdJ5QMZhAjxA0_o$" style=3D"-webkit-text-size-adjust: 100%; -m=
+s-text-size-adjust: 100%;">@RepMarkAlford</a></span></li><li style=3D"margi=
+n: 0px;"><span style=3D"font-family:Georgia,serif;" _ar_redact_=3D"true">X:=
+ <a data-cke-saved-href=3D"https://twitter.com/RepMarkAlford" href=3D"https=
+://urldefense.com/v3/__https://twitter.com/RepMarkAlford__;!!Ckt11KVezJIME5=
+1BYf4a6hrLATHilnk!HCY3eeiUkz3k_7-vIA946eEEANe-9ET_Jt1SIaP84hYrzVvLwAue-hnZE=
+qqml7Btn4-OSBMcKUXaIwBhlu3q91r-V53TGp7vvdJ5QMZhkAPTBOM$" style=3D"-webkit-t=
+ext-size-adjust: 100%; -ms-text-size-adjust: 100%;">@RepMarkAlford</a></spa=
+n></li><li style=3D"margin: 0px;"><span style=3D"font-family:Georgia,serif;=
+">Instagram: <a data-cke-saved-href=3D"https://www.instagram.com/repmarkalf=
+ord/" href=3D"https://urldefense.com/v3/__https://www.instagram.com/repmark=
+alford/__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!HCY3eeiUkz3k_7-vIA946eEEANe-9ET=
+_Jt1SIaP84hYrzVvLwAue-hnZEqqml7Btn4-OSBMcKUXaIwBhlu3q91r-V53TGp7vvdJ5QMZhsb=
+pcQDU$" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%=
+;">@RepMarkAlford</a></span></li></ul></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;overflow:hidden; background-color:#ffffff"><p =
+style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span style=3D"font-si=
+ze:16px"><span style=3D"font-family:Georgia,serif"><span style=3D"line-heig=
+ht:1.38">Hey folks, my team and I are staying&nbsp;busy&nbsp;in the distric=
+t&nbsp;and in Washington.&nbsp;We wanted to let you&nbsp; know of all the t=
+hings we are working on for Missouri's Fourth Congressional District!</span=
+></span></span></p><p style=3D"margin: 0;"><br></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 1463px;" alt=3D"h1" src=
+=3D"https://alford.house.gov/UploadedPhotos/HighResolution/5cdbe970-1d35-48=
+df-aa2a-3a83a439305d.png" width=3D"609.5"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span style=3D"font-f=
+amily:Georgia,serif;">My team and I had an incredible time at the Celebrati=
+on of Modern Agriculture on the National Mall. It was a great opportunity t=
+o bring together policymakers and consumers to learn more about the agricul=
+ture industry. The equipment and technology solutions showcased today will =
+solve&nbsp;the challenges of tomorrow and will help our farmers and rancher=
+s feed, clothe, and fuel the world.</span></p><p style=3D"margin: 0;"><br><=
+/p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 550px;" alt=3D"sd" src=
+=3D"https://alford.house.gov/UploadedPhotos/MediumResolution/ba782a8e-dff2-=
+4ada-a9ec-7637e13a6f27.png"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><font face=3D"Georgia=
+, serif">Last week, Congress celebrated National Small Business Week. I bel=
+ieve that when America' small businesses are strong, America is strong. I w=
+ill continue to advocate for the small businesses in MO-04 and for the poli=
+ces that keep our economy thriving and our community strong.&nbsp;</font></=
+p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><font face=3D"Geo=
+rgia, serif">Here are some of the things the House Small Business Committee=
+ is delivering for Main Street:</font></p><p style=3D"margin: 0;"><br></p><=
+/div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 100%;" alt=3D"it7o" src=
+=3D"https://alford.house.gov/UploadedPhotos/MediumResolution/f344121f-3be4-=
+4703-aba3-336a9bc2991a.png"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><font face=3D"Georgia=
+, serif">My colleagues and I have recently returned from a congressional de=
+legation trip to Taiwan. We were on the ground, up close and personal to se=
+e the country, its people, and its leaders.&nbsp;</font></p><p style=3D"mar=
+gin: 0;"><br></p><p style=3D"margin: 0;"><font face=3D"Georgia, serif">We m=
+et met with the President and Vice President-Elect and continued to strengt=
+hen our relationship with a great ally.</font></p><p style=3D"margin: 0;"><=
+br></p><p style=3D"margin: 0;"><font face=3D"Georgia, serif">China's contin=
+ued aggression in the Indo-Pacific is concerning; we must adopt a posture o=
+f deterrence to protect Taiwan.&nbsp;</font></p><p style=3D"margin: 0;"><br=
+></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 550px;" alt=3D"1" src=3D=
+"https://alford.house.gov/UploadedPhotos/MediumResolution/ddfa3edb-d1be-4bc=
+c-83b2-31dd0b696ae9.png"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;overflow:hidden; background-color:#ffffff"><p =
+style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span style=3D"font-fa=
+mily:Georgia,serif;">We had a Small Business Committee Hearing this week ti=
+tled =E2=80=9CStifling Innovation: Examining the Impacts of Regulatory Burd=
+ens on Small Businesses in Healthcare&quot;</span></p><p style=3D"margin: 0=
+;"><br></p><p style=3D"margin: 0;"><span style=3D"font-family:Georgia,serif=
+;">I spoke about how when&nbsp;rural providers in Missouri's 4th district a=
+re hit with high costs, they shut down which leaves patients stranded.<br><=
+br>Burdensome regulations have an even more adverse effect on those in rura=
+l communities because patients have a small window of options if they close=
+ their doors.<br><br>I will continue to fight for policies that help the ru=
+ral providers and the rural communities that keep&nbsp;<a data-cke-saved-hr=
+ef=3D"https://www.instagram.com/explore/tags/mo04/" href=3D"https://urldefe=
+nse.com/v3/__https://www.instagram.com/explore/tags/mo04/__;!!Ckt11KVezJIME=
+51BYf4a6hrLATHilnk!HCY3eeiUkz3k_7-vIA946eEEANe-9ET_Jt1SIaP84hYrzVvLwAue-hnZ=
+Eqqml7Btn4-OSBMcKUXaIwBhlu3q91r-V53TGp7vvdJ5QMZhCkEMNVE$" style=3D"-webkit-=
+text-size-adjust: 100%; -ms-text-size-adjust: 100%;">#MO04</a>&nbsp;going. =
+Watch <a data-cke-saved-href=3D"https://x.com/HouseSmallBiz/status/17882330=
+48166711550" href=3D"https://urldefense.com/v3/__https://x.com/HouseSmallBi=
+z/status/1788233048166711550__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!HCY3eeiUkz=
+3k_7-vIA946eEEANe-9ET_Jt1SIaP84hYrzVvLwAue-hnZEqqml7Btn4-OSBMcKUXaIwBhlu3q9=
+1r-V53TGp7vvdJ5QMZhGzKivmk$" style=3D"-webkit-text-size-adjust: 100%; -ms-t=
+ext-size-adjust: 100%;">here.&nbsp;</a></span></p><p style=3D"margin: 0;"><=
+br></p><p style=3D"margin: 0;"><br></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 550px;" alt=3D"ohu" src=
+=3D"https://alford.house.gov/UploadedPhotos/MediumResolution/3160be6e-5a9d-=
+48e0-b4c2-7e3e75818b56.png"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;overflow:hidden; background-color:#ffffff"><p =
+style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span style=3D"font-fa=
+mily:Georgia,serif;">My colleagues and I held a Small Business Committee he=
+aring last week examining FinCEN=E2=80=99s implementation of the Corporate =
+Transparency Act.</span></p><p style=3D"margin: 0;"><br></p><p style=3D"mar=
+gin: 0;"><span style=3D"font-family:Georgia,serif;">Small firms are least a=
+ble to absorb compliance costs. Improvements must be made to the CTA. Main =
+Street cannot continue to bear the brunt of this!</span></p><p style=3D"mar=
+gin: 0;"><br></p><p style=3D"margin: 0;"><span style=3D"font-family:Georgia=
+,serif;">Watch <a data-cke-saved-href=3D"https://fb.watch/rWj5-5ctPv/" href=
+=3D"https://urldefense.com/v3/__https://fb.watch/rWj5-5ctPv/__;!!Ckt11KVezJ=
+IME51BYf4a6hrLATHilnk!HCY3eeiUkz3k_7-vIA946eEEANe-9ET_Jt1SIaP84hYrzVvLwAue-=
+hnZEqqml7Btn4-OSBMcKUXaIwBhlu3q91r-V53TGp7vvdJ5QMZhCWyf_P4$" style=3D"-webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">here.</a></span></p=
+><p style=3D"margin: 0;"><font face=3D"Georgia, serif">&nbsp;</font></p></d=
+iv></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 550px;" alt=3D"dgn" src=
+=3D"https://alford.house.gov/UploadedPhotos/MediumResolution/8dba4cb8-81eb-=
+4c8e-9ccb-f40befb54553.png"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span style=3D"font-f=
+amily:Georgia,serif;">My House Armed Service Committee colleagues and I are=
+ very concerned about the cap placed on defense spending as we are trying t=
+o deter two adversaries.</span></p><p style=3D"margin: 0;"><br></p><p style=
+=3D"margin: 0;"><span style=3D"font-family:Georgia,serif;">Hostile powers a=
+re on the march across the globe, during what I see as an inflection point =
+in our history.</span></p><p style=3D"margin: 0;"><br></p><p style=3D"margi=
+n: 0;"><span style=3D"font-family:Georgia,serif;">This is why I asked Secre=
+tary Austin and General Brown what can the DOD do to make changes and how c=
+an we, in Congress, help?</span></p><p style=3D"margin: 0;"><br></p><p styl=
+e=3D"margin: 0;"><span style=3D"font-family:Georgia,serif;">Watch <a data-c=
+ke-saved-href=3D"https://fb.watch/rWjqSsvK3U/" href=3D"https://urldefense.c=
+om/v3/__https://fb.watch/rWjqSsvK3U/__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!HC=
+Y3eeiUkz3k_7-vIA946eEEANe-9ET_Jt1SIaP84hYrzVvLwAue-hnZEqqml7Btn4-OSBMcKUXaI=
+wBhlu3q91r-V53TGp7vvdJ5QMZhWNTzOTo$" style=3D"-webkit-text-size-adjust: 100=
+%; -ms-text-size-adjust: 100%;">here.</a>&nbsp;</span></p><p style=3D"margi=
+n: 0;"><br></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 550px;" alt=3D"hsgf" src=
+=3D"https://alford.house.gov/UploadedPhotos/MediumResolution/b60307bb-f5e1-=
+41f3-be07-4e9cc1109633.png"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;overflow:hidden; background-color:#ffffff"><p =
+style=3D"margin: 0;"><br></p></div><p style=3D"margin: 0;"><br></p><p style=
+=3D"margin: 0;"><br></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 1463px;" alt=3D"h2" src=
+=3D"https://alford.house.gov/UploadedPhotos/HighResolution/6384a286-ff04-4d=
+9f-8881-3c8e49c6ab53.png" width=3D"609.5"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;line-height:1.38"><br></p><p style=3D"margin: 0;line-he=
+ight:1.38"><span style=3D"font-size:16px;"><span style=3D"font-family:Georg=
+ia,serif;"><span style=3D"font-variant: normal; white-space: pre-wrap;"><sp=
+an style=3D"color:#000000"><span style=3D"font-weight:400"><span style=3D"f=
+ont-style:normal"><span style=3D"text-decoration:none">Two weeks ago, I tra=
+veled with a bipartisan Congressional delegation to Taiwan. Accompanying me=
+ was our Republican House Conference Secretary, Lisa McClain, with whom I r=
+ecapped our entire trip on an <a data-cke-saved-href=3D"https://open.spotif=
+y.com/show/5JwRHnxdDiHWgxO2w5mKEC?si=3D631513ab7fb048a6" href=3D"https://ur=
+ldefense.com/v3/__https://open.spotify.com/show/5JwRHnxdDiHWgxO2w5mKEC?si=
+=3D631513ab7fb048a6__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!HCY3eeiUkz3k_7-vIA9=
+46eEEANe-9ET_Jt1SIaP84hYrzVvLwAue-hnZEqqml7Btn4-OSBMcKUXaIwBhlu3q91r-V53TGp=
+7vvdJ5QMZhhDSS184$" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;">episode</a> of Mark Alford=E2=80=99s America.</span></span><=
+/span></span></span></span></span></p><p style=3D"margin: 0;"><br></p><p st=
+yle=3D"margin: 0;line-height:1.38"><span style=3D"font-size:16px;"><span st=
+yle=3D"font-family:Georgia,serif;"><span style=3D"font-variant: normal; whi=
+te-space: pre-wrap;"><span style=3D"color:#000000"><span style=3D"font-weig=
+ht:400"><span style=3D"font-style:normal"><span style=3D"text-decoration:no=
+ne">On the trip, we met with the leaders of the country, including the outg=
+oing President Tsai and the incoming President Lai. We discussed the import=
+ance of the United States standing with Taiwan and strengthening our relati=
+onship. We got to see the people, we got to see the country, and that=E2=80=
+=99s what these congressional delegations serve as: an opportunity to dive =
+deeper and be on the ground in the country. It was a truly great experience=
+.</span></span></span></span></span></span></span></p><p style=3D"margin: 0=
+;"><br></p><p style=3D"margin: 0;line-height:1.38"><span style=3D"font-size=
+:16px;"><span style=3D"font-family:Georgia,serif;"><span style=3D"font-vari=
+ant: normal; white-space: pre-wrap;"><span style=3D"color:#000000"><span st=
+yle=3D"font-weight:400"><span style=3D"font-style:normal"><span style=3D"te=
+xt-decoration:none">But folks, here=E2=80=99s what I took away from that tr=
+ip: We are at a critical moment in American history. China=E2=80=99s contin=
+ued aggression in the Indo-Pacific is deeply concerning for our national se=
+curity, our economic security, and our food security. Taiwan is strategical=
+ly and geopolitically significant. The United States has a national interes=
+t in protecting Taiwan. Taiwan <a data-cke-saved-href=3D"https://www.visual=
+capitalist.com/advanced-semiconductor-market-share-2023-2027/#:~:text=3DTai=
+wan%20Still%20%231%20for%20Foreseeable,largest%20producer%20of%20advanced%2=
+0semiconductors." href=3D"https://urldefense.com/v3/__https://www.visualcap=
+italist.com/advanced-semiconductor-market-share-2023-2027/*:*:text=3DTaiwan=
+*20Still*20*231*20for*20Foreseeable,largest*20producer*20of*20advanced*20se=
+miconductors.__;I34lJSUlJSUlJSU!!Ckt11KVezJIME51BYf4a6hrLATHilnk!HCY3eeiUkz=
+3k_7-vIA946eEEANe-9ET_Jt1SIaP84hYrzVvLwAue-hnZEqqml7Btn4-OSBMcKUXaIwBhlu3q9=
+1r-V53TGp7vvdJ5QMZhu7QCOUk$" style=3D"-webkit-text-size-adjust: 100%; -ms-t=
+ext-size-adjust: 100%;">controls 68%</a> of the semiconductor market, <a da=
+ta-cke-saved-href=3D"https://chinapower.csis.org/much-trade-transits-south-=
+china-sea/" href=3D"https://urldefense.com/v3/__https://chinapower.csis.org=
+/much-trade-transits-south-china-sea/__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!H=
+CY3eeiUkz3k_7-vIA946eEEANe-9ET_Jt1SIaP84hYrzVvLwAue-hnZEqqml7Btn4-OSBMcKUXa=
+IwBhlu3q91r-V53TGp7vvdJ5QMZhxPv4a_4$" style=3D"-webkit-text-size-adjust: 10=
+0%; -ms-text-size-adjust: 100%;">21% of global trade</a> flows through the =
+South China Sea and the Straits of Taiwan, and they are uniquely positioned=
+ in the world. Whoever controls that area, I believe, will control vast amo=
+unts of economic trade and commerce.</span></span></span></span></span></sp=
+an></span></p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;line-he=
+ight:1.38"><span style=3D"font-size:16px;"><span style=3D"font-family:Georg=
+ia,serif;"><span style=3D"font-variant: normal; white-space: pre-wrap;"><sp=
+an style=3D"color:#000000"><span style=3D"font-weight:400"><span style=3D"f=
+ont-style:normal"><span style=3D"text-decoration:none">That=E2=80=99s the s=
+trategic importance of why Taiwan matters.</span></span></span></span></spa=
+n></span></span></p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;l=
+ine-height:1.38"><span style=3D"font-size:16px;"><span style=3D"font-family=
+:Georgia,serif;"><span style=3D"font-variant: normal; white-space: pre-wrap=
+;"><span style=3D"color:#000000"><span style=3D"font-weight:400"><span styl=
+e=3D"font-style:normal"><span style=3D"text-decoration:none">Furthermore, t=
+he Taiwanese people are strong, independent, and free-minded. This continue=
+d aggression, directly against Taiwan and in the region, is concerning for =
+their safety and does not bode well for peace. And that=E2=80=99s what I wa=
+nt at the end of the day: Congress doesn=E2=80=99t want war, no one wants t=
+his aggression. I want peace. However, it is crucial that the United States=
+ continues to aid in the protection of Taiwan.</span></span></span></span><=
+/span></span></span></p><p style=3D"margin: 0;line-height:1.38"><br></p></d=
+iv>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 1625px;" alt=3D"header" =
+src=3D"https://alford.house.gov/UploadedPhotos/HighResolution/8df38839-8d43=
+-4b17-b827-b81e8ecf34f2.png" width=3D"609.5"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component full-width" style=3D"padding: 0px !important;"> <di=
+v class=3D"header-bar" style=3D"overflow: hidden;"> <table role=3D"presenta=
+tion" align=3D"center" class=3D"responsive-table table-w-bg-color" style=3D=
+"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-c=
+ollapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%=
+;font-family: Arial, Helvetica, sans-serif; margin-right: 0px; margin-left:=
+ 0px;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" =
+marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0" width=3D"650"> <tbody> <=
+tr height=3D"10" class=3D"spacerRow"> <td style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 10px;">&nbsp=
+;</td> </tr> <tr> <td class=3D"responsive-table" style=3D"-webkit-text-size=
+-adjust: 100%; -ms-text-size-adjust: 100%;font-size:24px;color:#000000;" va=
+lign=3D"top"> <table role=3D"presentation" width=3D"100%" style=3D"mso-tabl=
+e-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:c=
+ollapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;min-widt=
+h: 100%;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"=
+0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"> <tbody> <tr> <td sty=
+le=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;padding: 0=
+ 15pt;font-family:Arial, Helvetica, sans-serif;"> <div class=3D"cke_editabl=
+e cke_editable_inline cke_contents_ltr cke_show_borders cke_focus" style=3D=
+"overflow: hidden;"><h2 style=3D"text-align: center;"><span style=3D"font-f=
+amily:Georgia,serif;"><span style=3D"font-size:36px;">I</span>n <span style=
+=3D"font-size:36px;">T</span>he <span style=3D"font-size:36px;">M</span>edi=
+a</span></h2></div> </td> </tr> </tbody> </table> </td> </tr> <tr height=3D=
+"10" class=3D"spacerRow"> <td style=3D"-webkit-text-size-adjust: 100%; -ms-=
+text-size-adjust: 100%;font-size: 0%; line-height: 10px;">&nbsp;</td> </tr>=
+ </tbody> </table> </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;overflow:hidden; background-color:#ffffff"><p =
+style=3D"margin: 0;text-align:center"><font face=3D"Georgia, serif"><span s=
+tyle=3D"font-size:24px"><span style=3D"white-space-collapse:preserve">Fox B=
+usiness</span></span></font></p><p style=3D"margin: 0;text-align:center"><b=
+r></p><p style=3D"margin: 0;"><font face=3D"Georgia, serif">I joined Fox Bu=
+siness to talk about my trip to Taiwan &amp;&nbsp;my and my colleague's&nbs=
+p;commitment to upholding the tenets of the Taiwan Relations Act.</font></p=
+><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span style=3D"fon=
+t-family:Georgia,serif;">With a leader like Xi Jinping trying to push Taiwa=
+n around and cut it off from the rest of the world, we believe that deterre=
+nce is the best way forward.</span></p><p style=3D"margin: 0;"><br></p><p s=
+tyle=3D"margin: 0;"><span style=3D"font-size:16px;"><span style=3D"font-fam=
+ily:Georgia,serif;">Watch <a data-cke-saved-href=3D"https://fb.watch/rx6-IE=
+5TW0/" href=3D"https://urldefense.com/v3/__https://fb.watch/rx6-IE5TW0/__;!=
+!Ckt11KVezJIME51BYf4a6hrLATHilnk!HCY3eeiUkz3k_7-vIA946eEEANe-9ET_Jt1SIaP84h=
+YrzVvLwAue-hnZEqqml7Btn4-OSBMcKUXaIwBhlu3q91r-V53TGp7vvdJ5QMZh8R1-2vg$" sty=
+le=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">here</a>=
+<a data-cke-saved-href=3D"https://fb.watch/rWiq1Mo_ql/" href=3D"https://url=
+defense.com/v3/__https://fb.watch/rWiq1Mo_ql/__;!!Ckt11KVezJIME51BYf4a6hrLA=
+THilnk!HCY3eeiUkz3k_7-vIA946eEEANe-9ET_Jt1SIaP84hYrzVvLwAue-hnZEqqml7Btn4-O=
+SBMcKUXaIwBhlu3q91r-V53TGp7vvdJ5QMZh7FY1-N4$" style=3D"-webkit-text-size-ad=
+just: 100%; -ms-text-size-adjust: 100%;">.</a></span></span></p><p style=3D=
+"margin: 0;"><br></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 550px;" alt=3D":LK" src=
+=3D"https://alford.house.gov/UploadedPhotos/MediumResolution/99d17710-c9c1-=
+48e0-bae9-cfc622fdc835.png"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;overflow:hidden; background-color:#ffffff"><p =
+style=3D"margin: 0;text-align:center"><br></p><p style=3D"margin: 0;text-al=
+ign:center"><font face=3D"Georgia, serif"><span style=3D"font-size:24px"><s=
+pan style=3D"white-space-collapse:preserve">Real America's Voice</span></sp=
+an></font></p><p style=3D"margin: 0;text-align:center"><br></p><p style=3D"=
+margin: 0;"><span style=3D"font-size:16px;"><span style=3D"font-family:Geor=
+gia,serif;"><span style=3D"color:#000000"><span style=3D"font-style:normal"=
+><span style=3D"font-weight:400"><span style=3D"white-space:normal"><span s=
+tyle=3D"text-decoration:none">I spoke on Real America's Voice about how I c=
+an see our some of our elite American&nbsp;universities are suffering from =
+weakening administrative leadership.</span></span></span></span></span></sp=
+an></span></p><div style=3D"overflow: hidden;text-align:start"><p style=3D"=
+margin: 0;"><span style=3D"font-size:16px;"><span style=3D"font-family:Geor=
+gia,serif;"><span style=3D"color:#000000"><span style=3D"font-style:normal"=
+><span style=3D"font-weight:400"><span style=3D"white-space:normal"><span s=
+tyle=3D"text-decoration:none">&nbsp;</span></span></span></span></span></sp=
+an></span></p><p style=3D"margin: 0;"><span style=3D"font-size:16px;"><span=
+ style=3D"font-family:Georgia,serif;"><span style=3D"color:#000000"><span s=
+tyle=3D"font-style:normal"><span style=3D"font-weight:400"><span style=3D"w=
+hite-space:normal"><span style=3D"text-decoration:none">I believe that we, =
+in Congress, need&nbsp;to examine every resource and mechanism possible to =
+rein in these&nbsp; institutions.</span></span></span></span></span></span>=
+</span></p></div><div style=3D"overflow: hidden;text-align:start"><p style=
+=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span style=3D"font-size:16=
+px;"><span style=3D"font-family:Georgia,serif;"><span style=3D"color:#00000=
+0"><span style=3D"font-style:normal"><span style=3D"font-weight:400"><span =
+style=3D"white-space:normal"><span style=3D"text-decoration:none">Watch <a =
+data-cke-saved-href=3D"https://fb.watch/rXBAGIBTFv/" href=3D"https://urldef=
+ense.com/v3/__https://fb.watch/rXBAGIBTFv/__;!!Ckt11KVezJIME51BYf4a6hrLATHi=
+lnk!HCY3eeiUkz3k_7-vIA946eEEANe-9ET_Jt1SIaP84hYrzVvLwAue-hnZEqqml7Btn4-OSBM=
+cKUXaIwBhlu3q91r-V53TGp7vvdJ5QMZhjeapQuo$" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%;">here.</a></span></span></span></span>=
+</span></span></span></p><p style=3D"margin: 0;"><br></p></div></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 550px;" alt=3D"g" src=3D=
+"https://alford.house.gov/UploadedPhotos/MediumResolution/18a05180-de0a-45d=
+b-884d-233ec1cc4f85.png"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;overflow:hidden; background-color:#ffffff"><p =
+style=3D"margin: 0;text-align:center"><br></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;text-align:center"><font face=3D"Georgia, serif"><span =
+style=3D"font-size:24px"><span style=3D"white-space-collapse:preserve">Hono=
+ring April Veteran of the Month on the House Floor</span></span></font></p>=
+<p style=3D"margin: 0;text-align:center"><br></p><p style=3D"margin: 0;"><s=
+pan style=3D"font-family:Georgia,serif;">Our April Veteran of the Month is =
+Craig A. Alderman! Attaining a Bachelor of Science degree in Forestry and W=
+ildlife Biology, with a minor in accounting from the University of Massachu=
+setts, he also enlisted in the Air Force as an ROTC Cadet, becoming Command=
+er of the ROTC unit.</span></p><p style=3D"margin: 0;"><br></p><p style=3D"=
+margin: 0;"><span style=3D"font-family:Georgia,serif;">Upon graduation as a=
+ qualified B-52 Pilot,&nbsp;he was qualified to fly any multi-engine jet, h=
+eavy as well as all the other civilian ratings. He was assigned to Wurstmit=
+h AFB, in MI, where he qualified on the B-52 G model as well. He now attain=
+ed the rank of Captain.</span></p><p style=3D"margin: 0;"><br></p><p style=
+=3D"margin: 0;"><span style=3D"font-family:Georgia,serif;">Craig has 2800 h=
+ours of flight time in the B-52. While at Wurtsmith, he founded a civilian/=
+military rescue service assisting lost or injured people using the vast Hur=
+on-Manistee National Forest Trail System. He was selected by Michigan State=
+ University to teach multiple use Graduate Level Conservation Courses in La=
+nsing.</span></p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><s=
+pan style=3D"font-family:Georgia,serif;">Craig received multiple medals and=
+ awards in the Air Force as a pilot but he is most proud of the initial sil=
+ver wings he earned. He was selected for promotion to Major.</span></p><p s=
+tyle=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span style=3D"font-siz=
+e:16px"><span style=3D"font-family:Georgia,serif">Watch <a data-cke-saved-h=
+ref=3D"https://fb.watch/rx6-IE5TW0/" href=3D"https://urldefense.com/v3/__ht=
+tps://fb.watch/rx6-IE5TW0/__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!HCY3eeiUkz3k=
+_7-vIA946eEEANe-9ET_Jt1SIaP84hYrzVvLwAue-hnZEqqml7Btn4-OSBMcKUXaIwBhlu3q91r=
+-V53TGp7vvdJ5QMZh8R1-2vg$" style=3D"-webkit-text-size-adjust: 100%; -ms-tex=
+t-size-adjust: 100%;">here</a><a data-cke-saved-href=3D"https://fb.watch/rX=
+kkwq7hRu/" href=3D"https://urldefense.com/v3/__https://fb.watch/rXkkwq7hRu/=
+__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!HCY3eeiUkz3k_7-vIA946eEEANe-9ET_Jt1SIa=
+P84hYrzVvLwAue-hnZEqqml7Btn4-OSBMcKUXaIwBhlu3q91r-V53TGp7vvdJ5QMZhs_WbkLc$"=
+ style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">.</a=
+></span></span></p><p style=3D"margin: 0;"><br></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 550px;" alt=3D"dsa" src=
+=3D"https://alford.house.gov/UploadedPhotos/MediumResolution/17cad6d4-3092-=
+4c3b-8fde-d3d102c19639.png"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;overflow:hidden; background-color:#ffffff"><p =
+style=3D"margin: 0;text-align:center"><br></p><p style=3D"margin: 0;text-al=
+ign:center"><span style=3D"font-family:Georgia,serif;"><span style=3D"font-=
+size:24px"><span style=3D"white-space-collapse:preserve">Honoring April Sma=
+ll Business of the Month on the House Floor</span></span></span></p><p styl=
+e=3D"margin: 0;text-align:center"><br></p><p style=3D"margin: 0;"><span sty=
+le=3D"font-family:Georgia,serif;">Our Small Business of the month for April=
+ is Kleinschmidt's Western Store in Higginsville, Missouri!</span></p><p st=
+yle=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span style=3D"font-fami=
+ly:Georgia,serif;">Providing the Midwest with western apparel and accessori=
+es of the highest quality--this household name has been family owned and op=
+erated since 1969.</span></p><p style=3D"margin: 0;"><br></p><p style=3D"ma=
+rgin: 0;"><span style=3D"font-family:Georgia,serif;">Over 54 years ago, the=
+ founders Irvin and Katherine Kelinschmidt established a mission: supportin=
+g our local community while providing unparalleled inventory and exceptiona=
+l customer service.</span></p><p style=3D"margin: 0;"><br></p><p style=3D"m=
+argin: 0;"><span style=3D"font-family:Georgia,serif;">Congratulations to Kl=
+einschmidt's! Watch<a data-cke-saved-href=3D"https://youtu.be/rx8InclyL8o?s=
+i=3DMYsnNCRNrn8Q5twR" href=3D"https://urldefense.com/v3/__https://youtu.be/=
+rx8InclyL8o?si=3DMYsnNCRNrn8Q5twR__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!HCY3e=
+eiUkz3k_7-vIA946eEEANe-9ET_Jt1SIaP84hYrzVvLwAue-hnZEqqml7Btn4-OSBMcKUXaIwBh=
+lu3q91r-V53TGp7vvdJ5QMZhAGCLtJs$" style=3D"-webkit-text-size-adjust: 100%; =
+-ms-text-size-adjust: 100%;"> here.&nbsp;</a></span></p><p style=3D"margin:=
+ 0;"><br></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 550px;" alt=3D"sgjf" src=
+=3D"https://alford.house.gov/UploadedPhotos/MediumResolution/6f1b5622-17c0-=
+40f4-a3c0-e8316211e775.png"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;overflow:hidden; background-color:#ffffff"><p =
+style=3D"margin: 0;text-align:center"><br></p><p style=3D"margin: 0;text-al=
+ign:center"><span style=3D"font-family:Georgia,serif;"><span style=3D"font-=
+size:24px"><span style=3D"white-space-collapse:preserve">Honoring Important=
+ Dates</span></span></span></p><p style=3D"margin: 0;"><br></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 550px;" alt=3D"8y" src=
+=3D"https://alford.house.gov/UploadedPhotos/MediumResolution/9c2e9a85-316a-=
+40de-8114-a035461adcfe.png"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><br></p><p style=3D"m=
+argin: 0;"><br></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 1544px;" alt=3D"District=
+1" src=3D"https://alford.house.gov/UploadedPhotos/HighResolution/76ec358a-3=
+b62-4f8e-b365-edf9b97c4b52.png" width=3D"609.5"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;overflow:hidden; background-color:#ffffff"><p =
+style=3D"margin: 0;text-align: center;"><font face=3D"Georgia, serif"><span=
+ style=3D"font-size: 24px;">Mondays with Mark</span></font></p><p style=3D"=
+margin: 0;"><br></p><p style=3D"margin: 0;"><span style=3D"font-family:Geor=
+gia,serif;">We had a great time&nbsp;at our Raymore Office for Mondays with=
+ Mark!</span></p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><s=
+pan style=3D"font-family:Georgia,serif;">It was great to be with you all be=
+fore I headed back to Washington to keep fighting for you. As always, this =
+is a great opportunity to discuss everything going on in DC.</span></p><p s=
+tyle=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span style=3D"font-fam=
+ily:Georgia,serif;">Thank you to everyone who came out!!!</span></p><p styl=
+e=3D"margin: 0;"><br></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 550px;" alt=3D"afsd" src=
+=3D"https://alford.house.gov/UploadedPhotos/MediumResolution/28142e96-5233-=
+453c-b168-ab1f2d436e39.png"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;overflow:hidden; background-color:#ffffff"><p =
+style=3D"margin: 0;text-align: center;"><br></p><p style=3D"margin: 0;text-=
+align: center;"><span style=3D"font-family:Georgia,serif;"><span style=3D"f=
+ont-size:24px;">Congressional Academy Commemoration&nbsp;</span></span></p>=
+<p style=3D"margin: 0;text-align: center;"><br></p><p style=3D"margin: 0;">=
+<span style=3D"font-family:Georgia,serif;">One of my favorite parts about o=
+f serving in Congress is the privilege to nominate and appoint our best and=
+ brightest students to the finest military academies the world has ever kno=
+wn.</span></p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span=
+ style=3D"font-family:Georgia,serif;">These students undergo a rigorous app=
+lication, testing, and screening process, which ultimately leads to their n=
+omination and appointment. We are deeply grateful for their hard work, comm=
+itment to our country, and their future service to our great nation.</span>=
+</p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span style=3D"=
+font-family:Georgia,serif;">Please join me in congratulating this year's se=
+rvice academy appointees.</span></p><p style=3D"margin: 0;"><br></p><p styl=
+e=3D"margin: 0;"><span style=3D"font-family:Georgia,serif;">2028 Academy Ap=
+pointees:</span></p><p style=3D"margin: 0;"><span style=3D"font-family:Geor=
+gia,serif;">=E2=80=A2 =EF=BB=BF=EF=BB=BFDavid Butler, U.S. Air Force Academ=
+y</span></p><p style=3D"margin: 0;"><span style=3D"font-family:Georgia,seri=
+f;">=E2=80=A2 Elias Oerly, U.S. Air Force Academy</span></p><p style=3D"mar=
+gin: 0;"><span style=3D"font-family:Georgia,serif;">=E2=80=A2 =EF=BB=BF=EF=
+=BB=BFKase Overstreet, U.S. Military Academy</span></p><p style=3D"margin: =
+0;"><span style=3D"font-family:Georgia,serif;">=E2=80=A2Charles Goetz, U.S.=
+ Military Academy</span></p><p style=3D"margin: 0;"><span style=3D"font-fam=
+ily:Georgia,serif;">=E2=80=A2 Cody Leung, U.S. Naval Academy</span></p><p s=
+tyle=3D"margin: 0;"><br></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 100%;" alt=3D"bjk" src=
+=3D"https://alford.house.gov/UploadedPhotos/MediumResolution/9208a288-c262-=
+492c-b92a-4bfa2852b1a8.png"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;overflow:hidden; background-color:#ffffff"><p =
+style=3D"margin: 0;text-align: center;"><br></p><p style=3D"margin: 0;text-=
+align: center;"><font face=3D"Georgia, serif"><span style=3D"font-size: 24p=
+x;">Lower MO River Spinoff Meeting</span></font></p><p style=3D"margin: 0;"=
+><br></p><p style=3D"margin: 0;"><span style=3D"font-family:Georgia,serif;"=
+><span style=3D"font-size:16px;">Our team </span>attended the Lower MO Rive=
+r Spinoff meeting in Jefferson City at MoDNR headquarters, along with a rep=
+resentative from Congressman Luetkemeyer=E2=80=99s office.</span></p><p sty=
+le=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span style=3D"font-famil=
+y:Georgia,serif;">The meeting was put on by USACE to allow for open dialogu=
+e about the study that=E2=80=99s been in process since the 2019 flood. They=
+ discussed all the possible alternative plans for the existing levee from c=
+reating an entirely new one all the way to doing nothing at all. </span></p=
+><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span style=3D"fon=
+t-family:Georgia,serif;">This was a very well attended meeting by area resi=
+dents as well as representatives from interested commodity groups. The disc=
+ussion had was in-depth and helped clear up many of the questions those in =
+attendance had. USACE plans to continue to host more meetings like this as =
+they continue to approach milestones in the flood study.</span></p><p style=
+=3D"margin: 0;"><br></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 550px;" alt=3D"AGDF" src=
+=3D"https://alford.house.gov/UploadedPhotos/MediumResolution/d1d6fc9a-703c-=
+4614-a630-27fd5d90cec3.png"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;overflow:hidden; background-color:#ffffff"><p =
+style=3D"margin: 0;text-align: center;"><br></p><p style=3D"margin: 0;text-=
+align: center;"><font face=3D"Georgia, serif"><span style=3D"font-size: 24p=
+x;">United States Naturalization Ceremony for the Western District of Misso=
+uri</span></font></p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;=
+"><span style=3D"font-family:Georgia,serif;"><span style=3D"font-size:16px;=
+">It was great for our team to </span>attend&nbsp;the United States Natural=
+ization Ceremony for the Western District of Missouri. The event was held a=
+t Marshfield High School in conjunction with the Missouri Cherry Blossom fe=
+stival, where 35 applicants from 21 different countries became official cit=
+izens of the United States! Representatives from Senator Schmitt &amp; Hawl=
+ey=E2=80=99s offices as well as from Congressman Burlison=E2=80=99s office =
+were also in attendance and shared words from their respective members of c=
+ongress. </span></p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"=
+><span style=3D"font-family:Georgia,serif;">Mary Jean Eisenhower, the grand=
+daughter of Former President Dwight Eisenhower was a special guest speaker =
+and Massee McKinley, great-great nephew to Former President William McKinle=
+y and great-great grandson to Former President Grover Cleveland sang Americ=
+a the Beautiful. Overall, it was a truly incredible event, and it was so ex=
+citing to get to be a small part of such an amazing day.</span></p><p style=
+=3D"margin: 0;"><br></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 550px;" alt=3D"fjty" src=
+=3D"https://alford.house.gov/UploadedPhotos/MediumResolution/3841ca0d-e4b4-=
+4353-9b0a-dd15bb887bb8.png"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;overflow:hidden; background-color:#ffffff"><p =
+style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><br></p><p style=3D"ma=
+rgin: 0;"><br></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;overflow:hidden; background-color:#ffffff"><p =
+style=3D"margin: 0;text-align: center;"><br></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"0"=
+>
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 0px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component full-width" style=3D"padding: 0px !important;"> <di=
+v class=3D"header-bar" style=3D"overflow: hidden;"> <table role=3D"presenta=
+tion" align=3D"center" class=3D"responsive-table table-w-bg-color" style=3D=
+"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-c=
+ollapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%=
+;font-family: Arial, Helvetica, sans-serif; margin-right: 0px; margin-left:=
+ 0px;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" =
+marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0" width=3D"650"> <tbody> <=
+tr height=3D"10" class=3D"spacerRow"> <td style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 10px;">&nbsp=
+;</td> </tr> <tr> <td class=3D"responsive-table" style=3D"-webkit-text-size=
+-adjust: 100%; -ms-text-size-adjust: 100%;font-size:24px;color:#000000;" va=
+lign=3D"top"> <table role=3D"presentation" width=3D"100%" style=3D"mso-tabl=
+e-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:c=
+ollapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;min-widt=
+h: 100%;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"=
+0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"> <tbody> <tr> <td sty=
+le=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;padding: 0=
+ 15pt;font-family:Arial, Helvetica, sans-serif;"> <div class=3D"cke_editabl=
+e cke_editable_inline cke_contents_ltr cke_focus cke_show_borders" style=3D=
+"overflow: hidden;"><h2 style=3D"text-align: center;"><strong style=3D"font=
+-weight: bold;"><span style=3D"font-size:24px;"><span style=3D"font-family:=
+Georgia,serif;">HOW CAN MY TEAM HELP?</span></span></strong></h2></div> </t=
+d> </tr> </tbody> </table> </td> </tr> <tr height=3D"10" class=3D"spacerRow=
+"> <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;=
+font-size: 0%; line-height: 10px;">&nbsp;</td> </tr> </tbody> </table> </di=
+v> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span style=3D"font-f=
+amily:Georgia,serif;">If anyone you know needs assistance with any agency o=
+f the federal government, please contact my team in Raymore, Columbia, or L=
+ebanon. Whether it's the IRS, Social Security,&nbsp;passports, veterans=E2=
+=80=99 affairs, or anything else related to the federal government, please =
+give us a call at one of the following numbers:</span></p><ul><li><span sty=
+le=3D"font-family:Georgia,serif;">Raymore: 816-441-6318</span></li><li><spa=
+n style=3D"font-family:Georgia,serif;">Columbia: 573-540-6600</span></li><l=
+i><span style=3D"font-family:Georgia,serif;">Lebanon:&nbsp;417-532-5582</sp=
+an></li></ul><p style=3D"margin: 0;"><span style=3D"font-family:Georgia,ser=
+if;">Meanwhile, if you have questions about legislation going through&nbsp;=
+Congress, my office in Washington, D.C. can take care of you. My team&nbsp;=
+in&nbsp;D.C. can be reached at 202-225-2876.</span></p><p style=3D"margin: =
+0;"><br></p><p style=3D"margin: 0;"><span style=3D"font-family:Georgia,seri=
+f;">My number one job&nbsp;in Congress is to help folks here in Missouri. P=
+lease do not ever&nbsp;hesitate to call my offices at the numbers listed ab=
+ove.</span></p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><spa=
+n style=3D"font-family:Georgia,serif;">I truly care about and will always b=
+e working for you.</span></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 240px;" alt=3D"sig1" src=
+=3D"https://alfordforms.house.gov/UploadedPhotos/LowResolution/4b748c67-4ea=
+6-4736-8190-97881a3f498f.png"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div></div>
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color: #=
+16285A;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0=
+" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #16285A;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; backgro=
+und-color: #16285A; font-family: arial, helvetica, sans-serif; font-size: 2=
+4px; text-align: center;">
+                    <h2 style=3D"font-family: arial, helvetica, sans-serif;=
+ font-size: 24px; margin: 0; font-weight: normal;">Office Locations</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #16285A;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; backgro=
+und-color: #16285A; padding: 0 20px;">
+                    <table role=3D"presentation" width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"10" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;text-align:center;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;text-align:=
+center;">
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"49=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: arial, helvetica, sans-serif; text-align:center; font-size: 13px=
+; color: #ffffff; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0=
+pt;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, san=
+s-serif;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: Arial, Helvetica, sans-serif; text-transform: uppercase;">=
+Washington, DC Office</strong><br>
+                                            1516 Longworth HOB<br>
+                                            Washington, DC  20515<br>
+                                            Phone: (202) 225-2876<br>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"49=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: arial, helvetica, sans-serif; text-align:center; font-size: 13px=
+; color: #ffffff; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0=
+pt;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, san=
+s-serif;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: Arial, Helvetica, sans-serif; text-transform: uppercase;">=
+Lebanon District Office</strong><br>
+                                            500 E. Elm Street<br>
+                                            Lebanon, MO  65536<br>
+                                            Phone: (417) 532-5582
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; backgro=
+und-color: #16285A; padding: 0 20px;">
+                    <table role=3D"presentation" width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"10" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;text-align:center;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;text-align:=
+center;">
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"49=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: arial, helvetica, sans-serif; text-align:center; font-size: 13px=
+; color: #ffffff; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0=
+pt;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, san=
+s-serif;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: Arial, Helvetica, sans-serif; text-transform: uppercase;">=
+Raymore District Office</strong><br>
+                                            1272 West Foxwood Dr.<br>
+                                            Raymore, MO  64083<br>
+                                            Phone: (816) 441-6318<br>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"49=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: arial, helvetica, sans-serif; text-align:center; font-size: 13px=
+; color: #ffffff; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0=
+pt;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, san=
+s-serif;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: Arial, Helvetica, sans-serif; text-transform: uppercase;">=
+Columbia District Office</strong><br>
+                                            2401 Bernadette Drive<br>
+                                            Suite 117<br>
+                                            Columbia, MO  65203<br>
+                                            Phone: (573) 540-6600<br>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #16285A;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <!-- <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"color: =
+#16285A; background-color: #16285A;">
+                    <a target=3D"_blank" href=3D"https://www.facebook.com/X=
+XXXXXX"><img alt=3D"facebook icon" width=3D"32" src=3D"https://alfordforms.=
+house.gov/images/email/facebook.png" style=3D"border-width: 0px; border-sty=
+le: solid; width: 32px;" /></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://twitter.com/=
+XXXXXXX"><img alt=3D"twitter icon" width=3D"32" src=3D"https://alfordforms.=
+house.gov/images/email/twitter.png" style=3D"border-width: 0px; border-styl=
+e: solid; width: 32px;" /></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://www.instagra=
+m.com/XXXXXX"><img alt=3D"instagram icon" width=3D"32" src=3D"https://alfor=
+dforms.house.gov/images/email/instagram.png" style=3D"border-width: 0px; bo=
+rder-style: solid; width: 32px;" /></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://www.youtube.=
+com/channel/XXXXXX"><img alt=3D"youtube icon" width=3D"32" src=3D"https://a=
+lfordforms.house.gov/images/email/youtube.png" style=3D"border-width: 0px; =
+border-style: solid; width: 32px;" /></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"height:=
+30px; background-color: #16285A;">
+                    &nbsp;
+                    </td>
+                </tr> -->
+                <tr>
+                    <td valign=3D"middle" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;background-color: #16285A;">
+                    <table role=3D"presentation" cellpadding=3D"0" cellspac=
+ing=3D"20" align=3D"center" width=3D"90%" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #162=
+85A; font-size: 15px; font-family: Arial, Helvetica, sans-serif;">
+                                <a target=3D"_blank" href=3D"https://alford=
+forms.house.gov/forms/emailsignup/?delete=3Dtrue" style=3D"-webkit-text-siz=
+e-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; text-decoration:=
+none; font-family: Arial, Helvetica, sans-serif;">Unsubscribe</a>&nbsp;|&nb=
+sp;
+                                <a target=3D"_blank" href=3D"https://urldef=
+ense.com/v3/__https://www.facebook.com/sharer.php?u=3Dhttps:**Aalford.house=
+.gov*news*email*show.aspx*ID=3DTGDZR4JWJGJLC&amp;t=3D*subject*__;Ly8vLy8_W1=
+0!!Ckt11KVezJIME51BYf4a6hrLATHilnk!HCY3eeiUkz3k_7-vIA946eEEANe-9ET_Jt1SIaP8=
+4hYrzVvLwAue-hnZEqqml7Btn4-OSBMcKUXaIwBhlu3q91r-V53TGp7vvdJ5QMZhB1S5MwA$" s=
+tyle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #=
+ffffff; text-decoration:none; font-family: Arial, Helvetica, sans-serif;">S=
+hare on Facebook</a>&nbsp;|&nbsp;
+                                <a target=3D"_blank" href=3D"https://alford=
+forms.house.gov/Components/Redirect/twitter.aspx?url=3Dhttps://alford.house=
+.gov/news/email/show.aspx?ID=3DTGDZR4JWJGJLC&amp;name=3D[subject]" style=3D=
+"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff;=
+ text-decoration:none; font-family: Arial, Helvetica, sans-serif;">Share on=
+ Twitter</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #16285A;">
+                    &nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html> =
+
+----boundary_408_246b188d-c501-4c66-8220-8117295c0e4a--

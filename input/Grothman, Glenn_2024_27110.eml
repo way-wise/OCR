@@ -1,0 +1,703 @@
+Received: from DS0PR09MB11137.namprd09.prod.outlook.com (2603:10b6:8:173::17)
+ by PH0PR09MB10766.namprd09.prod.outlook.com with HTTPS; Tue, 27 Aug 2024
+ 14:14:39 +0000
+Received: from CYXPR09CA0007.namprd09.prod.outlook.com (2603:10b6:930:d4::25)
+ by DS0PR09MB11137.namprd09.prod.outlook.com (2603:10b6:8:173::17) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7897.26; Tue, 27 Aug
+ 2024 14:14:38 +0000
+Received: from DS4PEPF0000016F.namprd09.prod.outlook.com
+ (2603:10b6:930:d4:cafe::7f) by CYXPR09CA0007.outlook.office365.com
+ (2603:10b6:930:d4::25) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7897.26 via Frontend
+ Transport; Tue, 27 Aug 2024 14:14:38 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.51.106)
+ smtp.mailfrom=mail.house.gov; dkim=fail (body hash did not verify)
+ header.d=mail.house.gov;dkim=fail (body hash did not verify)
+ header.d=house.gov;dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.51.106 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.51.106;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.51.106) by
+ DS4PEPF0000016F.mail.protection.outlook.com (10.167.18.197) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7918.13 via Frontend Transport; Tue, 27 Aug 2024 14:14:37 +0000
+Received: from EXCH1921.US.House.gov (143.228.51.113) by EXCH1925.US.House.gov
+ (143.228.51.106) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1544.11; Tue, 27 Aug
+ 2024 10:14:36 -0400
+Received: from serg-bulk2-h.house.gov (143.228.145.36) by
+ EXCH1921.US.House.gov (143.228.51.113) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.2.1544.11 via Frontend Transport; Tue, 27 Aug 2024 10:14:35 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mail.house.gov; h=content-type :
+ date : from : message-id : mime-version : subject : to;
+ s=january2024-msgb-mhg; bh=iLhp4Rnl3lzlH+51Fe3M6yTq2uikY57MOQ0iYOp0GJw=;
+ b=g06yOWxFWm8S3EXXXQ/aBoP8ZT4LXkI71tfaWVgxG99rvImMAdQ28zgkS79/8g78/9bQ
+ 0R3lmg3M0Kmn/91ux7NexdTSTI13JG2DgPGgrwqBaiAAcBCbXwoc9y7XfP+GChQ0JKnM
+ SJDcTyVr7Aknf93Lt2NOz6ifQwtLlRdnEiNAbUu2Tdlvy68IJJjLyY15oo1sA4B+PYjd
+ gv/eVHHmW5461OZD8t1Us+hgcSOpn7aSoOkSGL1JabHPdRcXKkV1+h77TJoy+t59f9wp
+ ObHrz9Pw+roYCe2WqQ4U/mbhkyyyuPvM6wKFlHwP9BsCK1+PC9W7Iy88UDgrIDx0QFul hQ== 
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=content-type : date :
+ from : message-id : mime-version : subject : to; s=august2019-msgb-hg;
+ bh=iLhp4Rnl3lzlH+51Fe3M6yTq2uikY57MOQ0iYOp0GJw=;
+ b=WPUhj6TXA7VyOC8C3gx+D3432qLEoSYcbhlt4o96bLyeLop8WkjamvrXd4wsoj5Ksmof
+ hmjcUAyyFrJxByUqbvrH2dIqVbW4tTGAdYDZL7suQHDMfBpQCwa/krg76qOGQYqhoWJ1
+ g/qhRC7u9JXYMhiERztBWp6bvjaSD6FZ6MpHwV2UCHq5V0jqBLaOwmTuJiydjoajcCJD
+ fuJfUCReH/EzwM8uWdvXKJ7p1IpTTWKEIhsUcMK0eUL3rcqAiiuNq8HFh0i6FFm9zIvX
+ VZtgxielcGTeHGgxbXYaypFKPAw2z6uBV6Z9xnlV5YNhV7RyTwWcG4PTs72RqoT3G9+O WA== 
+Received: from FIRESIDEADMIN04 (firesideadmin04.us.house.gov [143.228.113.69])
+	by serg-bulk2-h.house.gov (8.18.1.2/8.18.1.2) with ESMTP id 47REEZ28020236;
+	Tue, 27 Aug 2024 10:14:35 -0400
+Message-Id: <417anrybry-1@serg-bulk2-h.house.gov>
+envelope-from: CongressmanGrothman@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+X-House-Vendor-Seg: Fireside21-1
+From: "Congressman Glenn Grothman" <CongressmanGrothman@mail.house.gov>
+To: Noelle.Young@mail.house.gov, Timothy.Svoboda@mail.house.gov
+Date: 27 Aug 2024 10:14:35 -0400
+Subject: TEST I Want Your Feedback - Energy Independence
+Content-Type: multipart/alternative;
+ boundary=--boundary_70_e1af3420-be83-4e7f-aadb-83005ab5a08f
+X-Proofpoint-Virus-Version: vendor=baseguard
+ engine=ICAP:2.0.293,Aquarius:18.0.1039,Hydra:6.0.680,FMLib:17.12.28.16
+ definitions=2024-08-27_08,2024-08-27_01,2024-05-17_01
+Return-Path: Congressman.Grothman@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1925.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 27 Aug 2024 14:14:38.0560
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 47628933-27bd-4eae-6744-08dcc6a295d5
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1921.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted: DS4PEPF0000016F.namprd09.prod.outlook.com
+X-CrossPremisesHeadersFiltered: DS4PEPF0000016F.namprd09.prod.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ DS4PEPF0000016F:EE_|DS0PR09MB11137:EE_|PH0PR09MB10766:EE_
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: 47628933-27bd-4eae-6744-08dcc6a295d5
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam:
+ BCL:0;ARA:13230040|366016|69100299015|4022899009|82310400026|41050700001;
+X-Forefront-Antispam-Report:
+ CIP:143.228.51.106;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:(13230040)(366016)(69100299015)(4022899009)(82310400026)(41050700001);DIR:INT;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 27 Aug 2024 14:14:37.9466
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 47628933-27bd-4eae-6744-08dcc6a295d5
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.51.106];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1921.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DS0PR09MB11137
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.6945656
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.7897.019
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(425001)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	6UWJTkCzxKwYAwLdN+cV4IPbJ3Ay9VREw8OakSKWG3Dw1qzUKEoDyYUnJDREYU6iwTkVxnrtsKmMsdowu9HPudUoJwp5LCvrprqawSe70Po+42BoC9yVRutiBVMP8g10s5Kaz6X4zjDEaKMxZA90mk6qlMvmc48UlmspHpNisxLb13yoxvpWJsdUlfiHxqbQZCoTi85gO3ICIstjwzH+qSbL+iHKGARDX8tLg678x6BTnXFRiwnKlehiEnEfcvL4ubk+evcE/61ofsYyFQH9tAXqtTVe0DqEEkZUel0swtNuY8CcY/EpDP+hHw1fbscXXNoQ/+p2D2i1AFcy4PWRBYP2n0ALhyTo7pvPeMuoDXjR3gOi6OrEU5P+t7EAhOpfh1DFfJAIwsicD+vwehLqB3WfPRjuwJweyds1DSQiZfFKwsYmFE4hcGMFPFSUAnsiV5vGd/ELqkVr+FHuHEOg43qWNvESJO35daV39oAQgq6cVSk3tL0VLv3FxxW2mh7aClrLO7Kd8tSm6Ni53MsdS+KVBt2yepywDhEFpgcdcZUvZT1ya5aj30PfJ8GBgtB6AmrFGX23h7h2QYoNV+BC0G0Ap62lCGAe3DGQeusoMNj+dkMYAYXoEl2P+Hy7bKkOjc8+PkB+kFcJDSK1nQaYItS302ISXNYCm1cRIWoMxfNg49oqgbZIIZWJpAkmncp4gcaxMPAGJZLvirnz/6yTzju5uf5pM0NKHcWwSx86zFq9+ACqPGJRqIb2uwFPkWHzsVnyav/1BXMBNxlAtPFckIFq8HAM+SRqv1JwK6KoX9fWhWivSxnRMkqgr/VpqcJMvg9nc61/231YjenbZte1Suj46i401ioOacTAhPe7JMjH74evs5t4I0/5j+xGcFAG
+MIME-Version: 1.0
+
+----boundary_70_e1af3420-be83-4e7f-aadb-83005ab5a08f
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+UmVwcmVzZW50YXRpdmUgR2xlbm4gR3JvdGhtYW4gIChodHRwczovL2dyb3RobWFuLmhv
+dXNlLmdvdikKCgpJIFdhbnQgWW91ciBGZWVkYmFjayAtIEVuZXJneSBJbmRlcGVuZGVu
+Y2UKCgoKU3VydmV5IFF1ZXN0aW9uOiBTaG91bGQgdGhlIFVuaXRlZCBTdGF0ZXMgcHJp
+b3JpdGl6ZSBlbmVyZ3kgaW5kZXBlbmRlbmNlIHRocm91Z2ggZG9tZXN0aWMgZW5lcmd5
+IHByb2R1Y3Rpb24/ClN1cnZleSBSZXNwb25zZXM6CjEuIFllcyhodHRwczovL2dyb3Ro
+bWFuLmhvdXNlLmdvdi9Gb3Jtcy9Gb3JtL1F1aWNrU3VydmV5LmFzcHg/ZW1haWw9amRA
+ZmlyZXNpZGUyMS5jb20mc2lkPTEzMCZmaWQ9MTcxNTkmYWlkPTc1NiZtaWQ9MTYwOCkg
+CjIuIE5vKGh0dHBzOi8vZ3JvdGhtYW4uaG91c2UuZ292L0Zvcm1zL0Zvcm0vUXVpY2tT
+dXJ2ZXkuYXNweD9lbWFpbD1qZEBmaXJlc2lkZTIxLmNvbSZzaWQ9MTMwJmZpZD0xNzE1
+OSZhaWQ9NzU3Jm1pZD0xNjA4KSAKCg==
+----boundary_70_e1af3420-be83-4e7f-aadb-83005ab5a08f
+Content-Location: https://grothman.house.gov/
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>Representative Glenn Grothman</title>
+       =20
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1">
+        <!--[if !mso]><!-->
+        <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![e=
+ndif]-->
+        <style>body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default t=
+ext sizes */ img{-ms-interpolation-mode: bicubic;} /* Allow smoother render=
+ing of resized image in Internet Explorer *//* RESET STYLES */img { border:=
+ 0; height: auto; line-height: 100%; outline: none; text-decoration: none; =
+}table { border-collapse: collapse !important; }body { height: 100% !import=
+ant; margin: 0 !important; padding: 0 !important; width: 100% !important; }=
+strong { font-weight: bold; } /* Editor reset *//* FIRESIDE STYLES */.compo=
+nent img {max-width:600px;}.component table {mso-table-rspace:10pt; border-=
+collapse:collapse;}.component { padding: 0px !important; }.press {padding-b=
+ottom: 0px;}</style><style>@media all and (max-width:650px) {            .i=
+mage-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td, .image-2, .img-2 =
+img, .image-2 tr, .image-2 td {max-width: 100% !important; width: 100% !imp=
+ortant;}            .responsive-table {width:100% !important;}            .=
+responsive-table img {max-width:100% !important; height: auto !important;} =
+           .press .component, .press td {text-align:center;}            .co=
+mponent { margin-left: 20px; margin-right: 20px;}            .component .re=
+sponsive-table { margin-left: 0px !important; margin-right: 0px !important;=
+}            .wide .video-thumb { width: 100% !important;height: auto !impo=
+rtant; }             .wide.video-container { width: 100% !important; }     =
+    .component.full-width {margin-left: 0px; margin-right: 0px; }   }</styl=
+e><style type=3D"text/css">
+            /* CLIENT-SPECIFIC STYLES */
+            body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text=
+ sizes */
+            table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Rem=
+ove spacing between tables in Outlook 2007 and up */
+            img{-ms-interpolation-mode: bicubic;} /* Allow smoother renderi=
+ng of resized image in Internet Explorer */
+            /* RESET STYLES */
+            img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: =
+0 !important; width: 100% !important; }
+            strong, .survey-text { font-weight: bold; } /* Editor reset */
+            /* FIRESIDE STYLES */
+            .component img {max-width:600px;}
+            .component table {mso-table-rspace:10pt; border-collapse:collap=
+se; font-family: Arial, Helvetica, sans-serif;}
+            .component td {font-family: Arial, Helvetica, sans-serif;}
+            .component { padding: 0px !important; }
+            .press {padding-bottom: 0px;}
+            .caption-1 td {font-family: Arial, Helvetica, sans-serif;}
+            /* Non-Outlook Styles */
+            body {background-color: #fafafa;}
+            /* Margin/NoMargin STYLES */
+            .component.full-width{ overflow: hidden; margin: 0px; }
+            /* HEADER STYLES */
+            .header-bar {width: 100%;}
+            .header-bar-margin {background-color:#ffffff;}
+            .header-bar h2 {margin: 0 !important; padding: 0 !important; co=
+lor: #0865c1 !important;text-align: left;font-size: 25px !important;font-we=
+ight: bold !important; }
+            .survey-content > table > tbody tr td { border-color: #08244a !=
+important; }
+            .survey-content input.survey-submit { font-family: Arial, Helve=
+tica, sans-serif !important; }
+            .survey-text { font-size: 24px; font-weight: bold !important; }
+        </style>
+        <!--[if (gte mso 9)|(IE)]>
+            <style>
+                body {background-color: #ffffff !important;}
+            </style>
+        <![endif]-->        =20
+        <style id=3D"media-queries">=20
+            @media all and (max-width:650px) {
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max=
+-width: 100% !important; width: 100% !important;}
+            .responsive-table {width:100% !important;}
+            .responsive-table img {max-width:100% !important; height: auto =
+!important;}
+            .press .component, .press td, .split .component, .split .compon=
+ent td, .split td {text-align:center;}
+            .component { margin-left: 20px; margin-right: 20px;}
+            .component .responsive-table { margin-left: 0px !important; mar=
+gin-right: 0px !important;}
+            .wide .video-thumb { width: 100% !important;height: auto !impor=
+tant; }=20
+            .wide.video-container { width: 100% !important; }
+            }
+        </style>
+       =20
+    <!--[if (gte mso 9)|(IE)]>
+                                        <style>=20
+                                    </style>
+                                    <![endif]--></head>
+    <body style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%;margin: 0px !important; padding: 0px !important;">
+        <div id=3D"preview-text" style=3D"display: none; font-size: 1px; co=
+lor: #fefefe; line-height: 1px; font-family: Arial, Helvetica, sans-serif; =
+max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">I Want Your=
+ Feedback - Energy Independence<span>&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C</span></div>
+    <!--[if (gte mso 9)|(IE)]>
+    <table style=3D"background-color:#fafafa;" width=3D"100%" align=3D"cent=
+er" role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><tr><=
+td>
+    <![endif]-->
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color:=
+ #ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D=
+"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td align=3D"center" valign=3D"top" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvet=
+ica, sans-serif; font-size: 16px;">
+                        <div class=3D"region" id=3D"region-1"><div class=3D=
+"component full-width" style=3D"padding: 0px !important;"> <div class=3D"im=
+age" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 0px; margin-left: 0px;" width=3D"650">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;"><a href=3D"https://grothman.house.gov" target=3D"_blank" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img style=
+=3D"max-width:600px;-ms-interpolation-mode: bicubic;vertical-align: bottom;=
+ max-width: 650px;" alt=3D"Representative Glenn Grothman" src=3D"https://gr=
+othman.house.gov/uploadedphotos/highresolution/25fa0695-e070-4660-841b-07ab=
+03c97693.jpg"></a></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;background-color: #ffffff; font-family: Arial, Helvetica, sa=
+ns-serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D=
+"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td class=3D"responsive-table" valign=3D"top" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Ari=
+al, Helvetica, sans-serif; font-size: 16px; color: #000000;">
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class=3D"region" id=3D"region-2"><div class=3D=
+"component full-width" style=3D"padding: 0px !important;"> <div class=3D"he=
+ader-bar" style=3D"overflow: hidden;"> <table role=3D"presentation" align=
+=3D"center" class=3D"responsive-table table-w-bg-color" style=3D"mso-table-=
+lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:col=
+lapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-famil=
+y: &quot;Palatino Linotype&quot;, &quot;Book Antiqua&quot;, Palatino, serif=
+; margin-right: 0px; margin-left: 0px;" border=3D"0" cellspacing=3D"0" cell=
+padding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmarg=
+in=3D"0" width=3D"650"> <tbody> <tr height=3D"5" class=3D"spacerRow"> <td s=
+tyle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-siz=
+e: 0%; line-height: 5px;">&nbsp;</td> </tr> <tr> <td class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-size:25px;color:#0865c1;" valign=3D"top"> <table role=3D"presentation" w=
+idth=3D"100%" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table=
+-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-=
+text-size-adjust: 100%;min-width: 100%;" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmar=
+gin=3D"0"> <tbody> <tr> <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;padding: 0 15pt;font-family:&quot;Palatino Linotype&qu=
+ot;, &quot;Book Antiqua&quot;, Palatino, serif;"> <div class=3D"cke_editabl=
+e cke_editable_inline cke_contents_ltr cke_show_borders cke_focus" style=3D=
+"overflow: hidden;"><h2 style=3D"text-align: left;">I Want Your Feedback - =
+Energy Independence</h2></div> </td> </tr> </tbody> </table> </td> </tr> <t=
+r height=3D"5" class=3D"spacerRow"> <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 5px;">&nbsp;</=
+td> </tr> </tbody> </table> </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"survey" style=3D"overflow: hidden;width:100%;">=20
+            <table align=3D"center" class=3D"responsive-table" role=3D"pres=
+entation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-tab=
+le-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:=
+collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-l=
+ayout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td valign=3D"top" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"survey-content" style=3D"overflow=
+: hidden;"><table role=3D"presentation" align=3D"center" class=3D"responsiv=
+e-table" cellspacing=3D"0" cellpadding=3D"0" style=3D"mso-table-lspace:0pt;=
+ mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%;margin: 0 auto; borde=
+r-collapse: separate !important;">
+          <tbody>
+              <tr>
+                  <td colspan=3D"3" valign=3D"middle" align=3D"center" heig=
+ht=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;height:5px;line-height: 5px; letter-spacing: 5px; font-size: 5px; border-=
+top: 5px solid #08244a; border-left: 5px solid #08244a; border-right: 5px s=
+olid #08244a;">
+                  &nbsp;
+                  </td>
+              </tr><tr>
+                <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;width: 10px; border-left: 5px solid #08244a;" width=3D"10">&nb=
+sp;</td>
+                <td valign=3D"top" style=3D"-webkit-text-size-adjust: 100%;=
+ -ms-text-size-adjust: 100%;">
+                    <p class=3D"survey-text" style=3D"margin: 0;text-align:=
+ center;font:24px Arial, Helvetica, sans-serif">Should the United States pr=
+ioritize energy independence through domestic energy production?</p>
+                </td>
+                <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;width: 10px; border-right: 5px solid #08244a;" width=3D"10">&n=
+bsp;</td>
+            </tr>
+            <tr>
+                <td colspan=3D"3" valign=3D"middle" align=3D"center" height=
+=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;=
+height:5px;line-height: 5px; letter-spacing: 5px; font-size: 5px; border-le=
+ft: 5px solid #08244a; border-right: 5px solid #08244a;">
+                &nbsp;
+                </td>
+            </tr><tr>
+                  <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;width: 10px; border-left: 5px solid #08244a;" width=3D"10">&=
+nbsp;</td>
+                  <td valign=3D"top" style=3D"-webkit-text-size-adjust: 100=
+%; -ms-text-size-adjust: 100%;">
+                      <table role=3D"presentation" align=3D"center" width=
+=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"mso-tab=
+le-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:=
+collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-=
+collapse: separate !important;">
+                          <tbody>
+                              <tr>
+                                  <td style=3D"-webkit-text-size-adjust: 10=
+0%; -ms-text-size-adjust: 100%;">
+                                    <table role=3D"presentation" class=3D"r=
+esponsive-table" align=3D"center" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspac=
+e:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%;width: 100%; border-collapse: separate !important;">
+                                      <tbody><tr>
+                                        <td align=3D"center" class=3D"respo=
+nsive-survey response response-756" id=3D"756" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;background-color: #08244a; width: 1=
+00%; line-height: 24px;" bgcolor=3D"#08244a">
+                                          <a href=3D"https://grothman.house=
+.gov/Forms/Form/QuickSurvey.aspx?email=3Djd@fireside21.com&amp;sid=3D130&am=
+p;fid=3D17159&amp;aid=3D756&amp;mid=3D1608" target=3D"_blank" style=3D"-web=
+kit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;line-height: 24px; c=
+olor: #fff; text-decoration: none; padding: 12px 18px; border: 1px solid #0=
+8244a; display: block;">Yes</a>
+                                        </td>
+                                      </tr>
+                                    </tbody></table>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </td>
+                  <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;width: 10px; border-right: 5px solid #08244a;" width=3D"10">=
+&nbsp;</td>
+              </tr>
+              <tr>
+                  <td colspan=3D"3" valign=3D"middle" align=3D"center" heig=
+ht=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;height:5px; line-height: 5px; letter-spacing: 5px; font-size: 5px; border=
+-left: 5px solid #08244a; border-right: 5px solid #08244a;">
+                  &nbsp;
+                  </td>
+              </tr><tr>
+                  <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;width: 10px; border-left: 5px solid #08244a;" width=3D"10">&=
+nbsp;</td>
+                  <td valign=3D"top" style=3D"-webkit-text-size-adjust: 100=
+%; -ms-text-size-adjust: 100%;">
+                      <table role=3D"presentation" align=3D"center" width=
+=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"mso-tab=
+le-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:=
+collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-=
+collapse: separate !important;">
+                          <tbody>
+                              <tr>
+                                  <td style=3D"-webkit-text-size-adjust: 10=
+0%; -ms-text-size-adjust: 100%;">
+                                    <table role=3D"presentation" class=3D"r=
+esponsive-table" align=3D"center" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspac=
+e:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%;width: 100%; border-collapse: separate !important;">
+                                      <tbody><tr>
+                                        <td align=3D"center" class=3D"respo=
+nsive-survey response response-757" id=3D"757" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;background-color: #08244a; width: 1=
+00%; line-height: 24px;" bgcolor=3D"#08244a">
+                                          <a href=3D"https://grothman.house=
+.gov/Forms/Form/QuickSurvey.aspx?email=3Djd@fireside21.com&amp;sid=3D130&am=
+p;fid=3D17159&amp;aid=3D757&amp;mid=3D1608" target=3D"_blank" style=3D"-web=
+kit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;line-height: 24px; c=
+olor: #fff; text-decoration: none; padding: 12px 18px; border: 1px solid #0=
+8244a; display: block;">No</a>
+                                        </td>
+                                      </tr>
+                                    </tbody></table>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </td>
+                  <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;width: 10px; border-right: 5px solid #08244a;" width=3D"10">=
+&nbsp;</td>
+              </tr>
+              <tr>
+                  <td colspan=3D"3" valign=3D"middle" align=3D"center" heig=
+ht=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;height:5px; line-height: 5px; letter-spacing: 5px; font-size: 5px; border=
+-left: 5px solid #08244a; border-right: 5px solid #08244a;">
+                  &nbsp;
+                  </td>
+              </tr>
+          <tr>
+                  <td colspan=3D"3" valign=3D"middle" align=3D"center" heig=
+ht=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;height:5px;line-height: 5px; letter-spacing: 5px; font-size: 5px; border-=
+bottom: 5px solid #08244a; border-left: 5px solid #08244a; border-right: 5p=
+x solid #08244a;">
+                  &nbsp;
+                  </td>
+              </tr>
+              <tr><td colspan=3D"3" align=3D"center" style=3D"-webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%;">
+              <i class=3D"newsletter-optin">Submit survey to sign up for up=
+dates on my work in Congress.*</i>
+          </td></tr>
+            </tbody>
+          </table></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div></div>
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;background-color: #e3e4e6; font-family: Arial, Helvetica, sa=
+ns-serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"10" marginheight=
+=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td class=3D"split" align=3D"center" valign=3D"middle" =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-=
+top: 2px solid #b5bbbd; border-bottom: 2px solid #b5bbbd;">
+                    <table align=3D"left" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" width=3D"49.9%" class=3D"responsive-table" role=3D"presenta=
+tion" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"=
+>
+                        <tbody>
+                            <tr>
+                                <td align=3D"center" valign=3D"middle" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                <table border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" width=3D"100%" role=3D"presentation" style=3D"-webkit-text-siz=
+e-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                    <tbody>
+                                        <tr>
+                                            <td align=3D"left" style=3D"-we=
+bkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial,=
+ helvetica, sans-serif; font-size: 11px; color: #b5bbbd; height: 36px;">
+                                            <a href=3D"https://grothman.hou=
+se.gov/" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;color: #b5bbbd; text-decoration: none; font-size: 11px;">WEBSITE</a> |
+                                            <a href=3D"https://grothman.hou=
+se.gov/forms/emailsignup/?Delete=3Dtrue" style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;color: #b5bbbd; text-decoration: none;  f=
+ont-size: 11px;">UNSUBSCRIBE</a> |
+                                            <a href=3D"https://grothman.hou=
+se.gov/contact" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adju=
+st: 100%;color: #b5bbbd; text-decoration: none; font-size: 11px;">CONTACT</=
+a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table align=3D"left" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" width=3D"49.9%" class=3D"responsive-table" role=3D"presenta=
+tion" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"=
+>
+                        <tbody>
+                            <tr>
+                                <td align=3D"center" valign=3D"middle" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                <table border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" width=3D"100%" role=3D"presentation" style=3D"-webkit-text-siz=
+e-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                    <tbody>
+                                        <tr>
+                                            <td align=3D"right" style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial=
+, helvetica, sans-serif; font-size: 16px; color: #000000;">
+                                            <a target=3D"_blank" href=3D"ht=
+tps://urldefense.com/v3/__https://www.facebook.com/RepGrothman__;!!Fr0YZsIs=
+FWxTZsBm-qTAg68!mThFx-MSDxj76bt6amJoENtoYOTCDMFV_8a_A2WFnPXTzy7uf3uQfQdcxwT=
+n-Xxlqo8C1cCuoz0wWGLzuCHIRZ5Hfn9Fl8RMcI9toDcQ0W8$" style=3D"-webkit-text-si=
+ze-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"facebook icon" wi=
+dth=3D"32" src=3D"https://grothman.house.gov/images/facebook.png" style=3D"=
+-ms-interpolation-mode: bicubic;border-width: 0px; border-style: solid; wid=
+th: 32px;"></a>
+                                            &nbsp;<a target=3D"_blank" href=
+=3D"https://urldefense.com/v3/__https://twitter.com/RepGrothman__;!!Fr0YZsI=
+sFWxTZsBm-qTAg68!mThFx-MSDxj76bt6amJoENtoYOTCDMFV_8a_A2WFnPXTzy7uf3uQfQdcxw=
+Tn-Xxlqo8C1cCuoz0wWGLzuCHIRZ5Hfn9Fl8RMcI9t0nd9tiA$" style=3D"-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"twitter icon" wi=
+dth=3D"32" src=3D"https://grothman.house.gov/images/twitter.png" style=3D"-=
+ms-interpolation-mode: bicubic;border-width: 0px; border-style: solid; widt=
+h: 32px;"></a>
+                                            &nbsp;<a target=3D"_blank" href=
+=3D"https://urldefense.com/v3/__https://www.youtube.com/c/repglenngrothman/=
+__;!!Fr0YZsIsFWxTZsBm-qTAg68!mThFx-MSDxj76bt6amJoENtoYOTCDMFV_8a_A2WFnPXTzy=
+7uf3uQfQdcxwTn-Xxlqo8C1cCuoz0wWGLzuCHIRZ5Hfn9Fl8RMcI9tykjt7aE$" style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"yout=
+ube icon" width=3D"32" src=3D"https://grothman.house.gov/images/youtube.png=
+" style=3D"-ms-interpolation-mode: bicubic;border-width: 0px; border-style:=
+ solid; width: 32px;"></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    <!--[if (gte mso 9)|(IE)]>
+    </td></tr></table>
+    <![endif]-->
+    </body>
+</html>=
+
+----boundary_70_e1af3420-be83-4e7f-aadb-83005ab5a08f--

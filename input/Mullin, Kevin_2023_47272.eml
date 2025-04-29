@@ -1,0 +1,642 @@
+Received: from BY5PR09MB5682.namprd09.prod.outlook.com (2603:10b6:a03:249::10)
+ by MW4PR09MB10220.namprd09.prod.outlook.com with HTTPS; Thu, 22 Jun 2023
+ 18:58:31 +0000
+Received: from BL0PR0901CA0029.namprd09.prod.outlook.com
+ (2603:10b6:208:1c0::39) by BY5PR09MB5682.namprd09.prod.outlook.com
+ (2603:10b6:a03:249::10) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6521.24; Thu, 22 Jun
+ 2023 18:58:31 +0000
+Received: from DM3GCC02FT034.eop-gcc02.prod.protection.outlook.com
+ (2a01:111:f400:7d04::201) by BL0PR0901CA0029.outlook.office365.com
+ (2603:10b6:208:1c0::39) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6521.24 via Frontend
+ Transport; Thu, 22 Jun 2023 18:58:30 +0000
+Authentication-Results: spf=softfail (sender IP is 143.228.151.112)
+ smtp.mailfrom=bounce.mail8.housecommunications.gov; dkim=pass (signature was
+ verified) header.d=mail8.housecommunications.gov;dmarc=pass action=none
+ header.from=mail8.housecommunications.gov;
+Received-SPF: SoftFail (protection.outlook.com: domain of transitioning
+ bounce.mail8.housecommunications.gov discourages use of 143.228.151.112 as
+ permitted sender)
+Received: from owa.house.gov (143.228.151.112) by
+ DM3GCC02FT034.mail.protection.outlook.com (10.97.8.200) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.6521.26 via Frontend Transport; Thu, 22 Jun 2023 18:58:30 +0000
+Received: from EXCH1914.US.House.gov (143.228.151.104) by
+ EXCH1913.US.House.gov (143.228.151.112) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.2.1118.26; Thu, 22 Jun 2023 14:58:27 -0400
+Received: from serg-hub3-h.house.gov (143.228.181.79) by EXCH1914.US.House.gov
+ (143.228.151.104) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1118.26 via Frontend
+ Transport; Thu, 22 Jun 2023 14:58:27 -0400
+Authentication-Results-Original: house.gov;	spf=pass
+ smtp.mailfrom=msprvs1=19537jcvflu9W=bounces-308938-742@bounce.mail8.housecommunications.gov;
+	dkim=pass header.s=scph1121 header.d=mail8.housecommunications.gov;
+	dmarc=pass header.from=mail8.housecommunications.gov
+Received: from mta-70-120-219.sparkpostmail.com (mta-70-120-219.sparkpostmail.com [156.70.120.219])
+	by serg-hub3-h.house.gov (8.17.1.19/8.17.1.19) with ESMTPS id 35MIwNwt020526
+	(version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128 verify=OK)
+	for <luisa.gunn@mail.house.gov>; Thu, 22 Jun 2023 14:58:24 -0400
+X-MSFBL: mvJqMqr8DDRTrBykeRbCfkBbUQriODn9cLAlZBUWBNM=|eyJzdWJhY2NvdW50X2l
+	kIjoiNzQyIiwiY3VzdG9tZXJfaWQiOiIzMDg5MzgiLCJ0ZW5hbnRfaWQiOiJzcGM
+	iLCJyIjoibHVpc2EuZ3VubkBtYWlsLmhvdXNlLmdvdiIsIm1lc3NhZ2VfaWQiOiI
+	2NDkxY2Y5OTk0NjRkN2QzYjQ1YyJ9
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=mail8.housecommunications.gov; s=scph1121; t=1687460303;
+	i=@mail8.housecommunications.gov;
+	bh=DVB2Kkfr8etJO+GOMxn3kl8fz6Sv1ZsZJ+zM4SMt4iE=;
+	h=Content-Type:To:Message-ID:Date:From:Subject:List-Unsubscribe:
+	 From:To:Cc:Subject;
+	b=KxKVSnRKUTQuWkNe8iSaYlAfAIbqK8jokee2ispYtVecQYdTOLbYbb+Dc7bnKrLid
+	 GMR5z6XXtGTOo9mYeijE3HcpTEemZn7U7i84xHDcbZ3IUK6OePLPRW+SeJpiacsax3
+	 /QJvMP5FTcyNHDhDj538WhKYu/HwM0f78OUiLyMA=
+To: "Luisa Gunn" <luisa.gunn@mail.house.gov>
+Message-ID: <4B.C5.01603.FC994946@hw.mta1vrest.cc.prd.sparkpost>
+Date: Thu, 22 Jun 2023 18:58:23 +0000
+MIME-Version: 1.0
+Reply-To: <repkevinmullin+newsletter@mail8.housecommunications.gov>
+From: "Office of Rep. Mullin" <repkevinmullin@mail8.housecommunications.gov>
+Subject: Climate resilience is urgent, we can be prepared
+Feedback-ID: bulk_43592:repkevinmullin:Indigov
+List-Unsubscribe: <mailto:unsubscribe@unsub.spmta.com?subject=unsubscribe:-OVcOI2VgyGUyJaBe-oqx7L4_pZitTs1mvCXz_h562Y~|eyAicmNwdF90byI6ICJsdWlzYS5ndW5uQG1haWwuaG91c2UuZ292IiwgInRlbmFudF9pZCI6ICJzcGMiLCAiY3VzdG9tZXJfaWQiOiAiMzA4OTM4IiwgInN1YmFjY291bnRfaWQiOiAiNzQyIiwgIm1lc3NhZ2VfaWQiOiAiNjQ5MWNmOTk5NDY0ZDdkM2I0NWMiIH0~>
+List-Id: <spc.308938.742.sparkpostmail.com>
+X-Proofpoint-GUID: ABJ4CynJqrxp0gZcH3_TJGm97rtgaRHF
+X-Proofpoint-ORIG-GUID: ABJ4CynJqrxp0gZcH3_TJGm97rtgaRHF
+X-Proofpoint-HIR-SPF: spf_passed
+X-Proofpoint-Virus-Version: vendor=baseguard
+ engine=ICAP:2.0.254,Aquarius:18.0.957,Hydra:6.0.591,FMLib:17.11.176.26
+ definitions=2023-06-22_14,2023-06-22_02,2023-05-22_02
+X-Proofpoint-HIR-DMARC: Pass
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 malwarescore=0 adultscore=0 bulkscore=0
+ phishscore=0 mlxlogscore=703 spamscore=0 mlxscore=0 suspectscore=0
+ classifier=spam adjust=0 reason=mlx scancount=1 engine=8.12.0-2305260000
+ definitions=main-2306220162
+Return-Path:
+ msprvs1=19537jcvflu9W=bounces-308938-742@bounce.mail8.housecommunications.gov
+X-OrganizationHeadersPreserved: EXCH1913.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 22 Jun 2023 18:58:30.5831
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ c1c04d79-3d49-485d-c9bd-08db7352ab8e
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1914.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted:
+ DM3GCC02FT034.eop-gcc02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ DM3GCC02FT034.eop-gcc02.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ DM3GCC02FT034:EE_|BY5PR09MB5682:EE_|MW4PR09MB10220:EE_
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: c1c04d79-3d49-485d-c9bd-08db7352ab8e
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:143.228.151.112;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:;DIR:INT;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 22 Jun 2023 18:58:30.5206
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: c1c04d79-3d49-485d-c9bd-08db7352ab8e
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.151.112];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1914.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BY5PR09MB5682
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.3107896
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.6521.024
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(425001)(930097);
+X-Microsoft-Antispam-Message-Info:
+	e+uVWiwbgvsnW5jxiT/lb+ZV848NNdRCBk3EjZxnMVyabqU65KksywaIWssOO6eqoFOhsb341p92dlTUh5KAtAToH3X4KxeshS3T6OOMCLAnR/DQZea7/yZ0+k5jCE3P3a5bIh0c5tnNGuGadZVkt/8HQ5Z0ilvw6pLLQr11HNQGq/TzqO/eCxncnE2IrJCakG7wJQICf4RjIbZJV3beUIuyqoCRlDixxxOiLjDWI0/BmuaK5tFFJGqyDr5HRogWg0EB5j2EWVn05E9IaqWWMqACijtar91cNF0fUbYfaKY73tVWMb93xOZGpYYE5DZI8C0nqEM7X+urCFYLG5pspjOKuWA3PVj1SEJPIgI/g8t2W+RwQ/afCRmdvc+JxVT66qq1+YPEfbcermVqOvyFOolgC3p4LyQJQAZoupNADHrPpB4EURFMg0NlmXpAx27/csUi6MP82fttQQ4BOeN+dpRs4o+vkpg8SR+z6RLGiszSELXAJ+do0xn0b9i66vRil/c5grFnuNWn4tv1YDuVemxfto+x4m4yRnq7fDtD/7UpIRHOQ31PMuBw/EWRfQKQMkCnYIUuztWpSmAai5RjJFWwmxEn87qnK7qXRl3oUsy9fkdCHtRbZVO+6jYVhmhHN4xt2B2ZZhah/jFOVi7teGQ3TzxaHWVU82aRORzgndorDTMa9eztJRNmcIxx7lbgwweb/f9dW5khq92OD3IUgc/VYozhxLVIhBENsw3nYK7XjxjEfZJTD8O620uy1zpLJ1ZaT8K09jrTyQDuXAi+8w==
+Content-type: multipart/alternative;
+	boundary="B_3770290787_2830900347"
+
+> This message is in MIME format. Since your mail reader does not understand
+this format, some or all of this message may not be legible.
+
+--B_3770290787_2830900347
+Content-type: text/plain;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+=20
+Dear Luisa, In the face of worsening climate change, I believe Congress nee=
+ds to help the most vulnerable in our communities build climate resilience.=20
+That=E2=80=99s why I recently introduced legislation to help low-income homeowner=
+s weatherize their property to be more resilient to climate-driven natural d=
+isasters.=20
+You can read more about my bill here.=20
+Do you want to hear about the next legislation I introduce?=20
+Subscribe to my newsletter for updates=20
+Sign up for my newsletter to stay up to date on the latest news from Washin=
+gton and the work I'm doing on behalf of California's 15th congressional dis=
+trict.
+Sign Up=20
+Sincerely,
+=20
+Rep. Kevin MullinMember of Congress
+ =20
+Contact Me
+Washington DC Office
+1404 Longworth House Office Building
+Washington, DC 20515
+Phone: (202) 225-3531
+San Mateo District Office
+1528 S. El Camino Real
+Suite 307
+San Mateo, CA 94402
+Phone: (650) 342-0300
+=20
+=20
+=20
+=20
+
+
+Unsubscribe from future messages.=20
+
+ 
+
+--B_3770290787_2830900347
+Content-type: text/html;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www=
+.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3.or=
+g/1999/xhtml" xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-m=
+icrosoft-com:office:office"><head><!--[if gte mso 9]>
+<xml>
+  <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+  </o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><meta na=
+me=3D"viewport" content=3D"width=3Ddevice-width,initial-scale=3D1"><meta name=3D"x-app=
+le-disable-message-reformatting"><!--[if !mso]><!--><meta http-equiv=3D"X-UA-C=
+ompatible" content=3D"IE=3Dedge"><!--<![endif]--><title></title><style type=3D"tex=
+t/css">@media only screen and (min-width:660px){.u-row{width:640px!important=
+}.u-row .u-col{vertical-align:top}.u-row .u-col-50{width:320px!important}.u-=
+row .u-col-100{width:640px!important}}@media (max-width:660px){.u-row-contai=
+ner{max-width:100%!important;padding-left:0!important;padding-right:0!import=
+ant}.u-row .u-col{min-width:320px!important;max-width:100%!important;display=
+:block!important}.u-row{width:100%!important}.u-col{width:100%!important}.u-=
+col>div{margin:0 auto}}body{margin:0;padding:0}table,td,tr{vertical-align:to=
+p;border-collapse:collapse}p{margin:0}.ie-container table,.mso-container tab=
+le{table-layout:fixed}*{line-height:inherit}a[x-apple-data-detectors=3Dtrue]{c=
+olor:inherit!important;text-decoration:none!important}table,td{color:#000}#u=
+_body a{color:#00e;text-decoration:underline}@media (max-width:480px){#u_con=
+tent_text_19 .v-font-size{font-size:15px!important}#u_content_text_19 a{colo=
+r:#00e!important;text-decoration:underline!important}#u_content_text_19 a:ho=
+ver{color:#00e!important;background-color:underline!important}}</style><!--[=
+if !mso]><!--><link href=3D"https://fonts.googleapis.com/css2?family=3DRoboto:it=
+al,wght@0,400;0,700;1,400;1,700" rel=3D"stylesheet" type=3D"text/css"><!--<![end=
+if]--></head><body class=3D"clean-body u_body" style=3D"margin:0;padding:0;-webk=
+it-text-size-adjust:100%;background-color:#fff;color:#000"><div style=3D"color=
+:transparent;visibility:hidden;opacity:0;font-size:0px;border:0;max-height:1=
+px;width:1px;margin:0px;padding:0px;border-width:0px!important;display:none!=
+important;line-height:0px!important;"><img border=3D"0" width=3D"1" height=3D"1" s=
+rc=3D"http://engagement.mail8.housecommunications.gov/q/jmCV9NfzBRJ0hxiMtt82Eg=
+~~/AAS2ygA~/RgRmdx7PPVcDc3BjQgpkkc-ZlGTX07RcUhlsdWlzYS5ndW5uQG1haWwuaG91c2Uu=
+Z292WAQAAALm" alt=3D""></div><!--[if IE]><div class=3D"ie-container"><![endif]--=
+><!--[if mso]><div class=3D"mso-container"><![endif]--><table id=3D"u_body" styl=
+e=3D"border-collapse:collapse;table-layout:fixed;border-spacing:0;mso-table-ls=
+pace:0;mso-table-rspace:0;vertical-align:top;min-width:320px;Margin:0 auto;b=
+ackground-color:#fff;width:100%" cellpadding=3D"0" cellspacing=3D"0"><tbody><tr =
+style=3D"vertical-align:top"><td style=3D"word-break:break-word;border-collapse:=
+collapse!important;vertical-align:top"><!--[if (mso)|(IE)]><table width=3D"100=
+%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td align=3D"center" style=3D"=
+background-color: #FFF;"><![endif]--><div class=3D"u-row-container" style=3D"pad=
+ding:0;background-color:transparent"><div class=3D"u-row" style=3D"Margin:0 auto=
+;min-width:320px;max-width:640px;overflow-wrap:break-word;word-wrap:break-wo=
+rd;word-break:break-word;background-color:transparent"><div style=3D"border-co=
+llapse:collapse;display:table;width:100%;height:100%;background-color:transp=
+arent"><!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0"><tr><td style=3D"padding: 0px;background-color: transparent;" al=
+ign=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:=
+640px;"><tr style=3D"background-color: transparent;"><![endif]--><!--[if (mso)=
+|(IE)]><td align=3D"center" width=3D"640" style=3D"width: 640px;padding: 0px;borde=
+r-top: 0px solid transparent;border-left: 0px solid transparent;border-right=
+: 0px solid transparent;border-bottom: 0px solid transparent;" valign=3D"top">=
+<![endif]--><div class=3D"u-col u-col-100" style=3D"max-width:320px;min-width:64=
+0px;display:table-cell;vertical-align:top"><div style=3D"height:100%;width:100=
+%!important"><!--[if (!mso)&(!IE)]><!--><div style=3D"box-sizing:border-box;he=
+ight:100%;padding:0;border-top:0 solid transparent;border-left:0 solid trans=
+parent;border-right:0 solid transparent;border-bottom:0 solid transparent"><=
+!--<![endif]--><table style=3D"font-family:Roboto" role=3D"presentation" cellpad=
+ding=3D"0" cellspacing=3D"0" width=3D"100%" border=3D"0"><tbody><tr><td style=3D"overf=
+low-wrap:break-word;word-break:break-word;padding:4px;font-family:Roboto" al=
+ign=3D"left"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><t=
+body><tr><td style=3D"padding-right:0;padding-left:0" align=3D"center"><img alig=
+n=3D"center" border=3D"0" src=3D"https://assets.unlayer.com/projects/27642/1684791=
+244802-Press%20release%20banner_FINAL%20bg%20remove.png" alt=3D"Rep. Kevin Mul=
+lin newsletter banner image" title=3D"Rep. Kevin Mullin newsletter banner imag=
+e" style=3D"outline:0;text-decoration:none;-ms-interpolation-mode:bicubic;clea=
+r:both;display:inline-block!important;border:none;height:auto;float:none;wid=
+th:100%;max-width:632px" width=3D"632"> </td></tr></tbody></table></td></tr></=
+tbody></table><!--[if (!mso)&(!IE)]><!--></div><!--<![endif]--></div></div><=
+!--[if (mso)|(IE)]></td><![endif]--><!--[if (mso)|(IE)]></tr></table></td></=
+tr></table><![endif]--></div></div></div><div class=3D"u-row-container" style=3D=
+"padding:0;background-color:transparent"><div class=3D"u-row" style=3D"Margin:0 =
+auto;min-width:320px;max-width:640px;overflow-wrap:break-word;word-wrap:brea=
+k-word;word-break:break-word;background-color:transparent"><div style=3D"borde=
+r-collapse:collapse;display:table;width:100%;height:100%;background-color:tr=
+ansparent"><!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cellspaci=
+ng=3D"0" border=3D"0"><tr><td style=3D"padding: 0px;background-color: transparent;=
+" align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"wi=
+dth:640px;"><tr style=3D"background-color: transparent;"><![endif]--><!--[if (=
+mso)|(IE)]><td align=3D"center" width=3D"640" style=3D"background-color: #ffffff;w=
+idth: 640px;padding: 0px;border-top: 0px solid transparent;border-left: 0px =
+solid transparent;border-right: 0px solid transparent;border-bottom: 0px sol=
+id transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-ra=
+dius: 0px;" valign=3D"top"><![endif]--><div class=3D"u-col u-col-100" style=3D"max=
+-width:320px;min-width:640px;display:table-cell;vertical-align:top"><div sty=
+le=3D"background-color:#fff;height:100%;width:100%!important;border-radius:0;-=
+webkit-border-radius:0;-moz-border-radius:0"><!--[if (!mso)&(!IE)]><!--><div=
+ style=3D"box-sizing:border-box;height:100%;padding:0;border-top:0 solid trans=
+parent;border-left:0 solid transparent;border-right:0 solid transparent;bord=
+er-bottom:0 solid transparent;border-radius:0;-webkit-border-radius:0;-moz-b=
+order-radius:0"><!--<![endif]--><table style=3D"font-family:Roboto" role=3D"pres=
+entation" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" border=3D"0"><tbody><tr=
+><td style=3D"overflow-wrap:break-word;word-break:break-word;padding:7px 7px 1=
+7px 6px;font-family:Roboto" align=3D"left"><div class=3D"v-font-size" style=3D"fon=
+t-size:14px;line-height:140%;text-align:left;word-wrap:break-word"><p style=3D=
+"font-size:14px;line-height:140%"><span style=3D"font-size:16px;line-height:22=
+.4px;font-family:inherit">Dear Luisa,</span></p><p style=3D"font-size:14px;lin=
+e-height:140%">&nbsp;</p><p style=3D"font-size:14px;line-height:140%"><span st=
+yle=3D"font-family:inherit;line-height:22.4px;font-size:16px">In the face of w=
+orsening climate change, I believe Congress needs to help the most vulnerabl=
+e in our communities build climate resilience.&nbsp;</span></p><p style=3D"fon=
+t-size:14px;line-height:140%"><br><span style=3D"font-family:inherit;line-heig=
+ht:22.4px;font-size:16px">That=E2=80=99s why I recently introduced legislation to =
+help low-income homeowners weatherize their property to be more resilient to=
+ climate-driven natural disasters.&nbsp;</span></p><p style=3D"font-size:14px;=
+line-height:140%"><br><span style=3D"font-family:inherit;line-height:22.4px;fo=
+nt-size:16px">You can read more about my bill <a rel=3D"noopener" href=3D"http:/=
+/engagement.mail8.housecommunications.gov/f/a/RAKlfu3GwXfY6Uazee9s-w~~/AAS2y=
+gA~/RgRmdx7PP0R-aHR0cHM6Ly9rZXZpbm11bGxpbi5ob3VzZS5nb3YvbWVkaWEvcHJlc3MtcmVs=
+ZWFzZXMvcmVwLW11bGxpbi1sZWFkcy1tb3JlLWRvemVuLWxhd21ha2Vycy1pbnRyb2R1Y2UtbGVn=
+aXNsYXRpb24taGVscC1sb3ctaW5jb21lVwNzcGNCCmSRz5mUZNfTtFxSGWx1aXNhLmd1bm5AbWFp=
+bC5ob3VzZS5nb3ZYBAAAAuY~" target=3D"_blank">here</a>.&nbsp;</span></p></div></=
+td></tr></tbody></table><!--[if (!mso)&(!IE)]><!--></div><!--<![endif]--></d=
+iv></div><!--[if (mso)|(IE)]></td><![endif]--><!--[if (mso)|(IE)]></tr></tab=
+le></td></tr></table><![endif]--></div></div></div><div class=3D"u-row-contain=
+er" style=3D"padding:0;background-color:transparent"><div class=3D"u-row" style=3D=
+"Margin:0 auto;min-width:320px;max-width:640px;overflow-wrap:break-word;word=
+-wrap:break-word;word-break:break-word;background-color:#fff"><div style=3D"bo=
+rder-collapse:collapse;display:table;width:100%;height:100%;background-color=
+:transparent"><!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cellsp=
+acing=3D"0" border=3D"0"><tr><td style=3D"padding: 0px;background-color: transpare=
+nt;" align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D=
+"width:640px;"><tr style=3D"background-color: #ffffff;"><![endif]--><!--[if (m=
+so)|(IE)]><td align=3D"center" width=3D"640" style=3D"width: 640px;padding: 0px;bo=
+rder-top: 0px solid transparent;border-left: 0px solid transparent;border-ri=
+ght: 0px solid transparent;border-bottom: 0px solid transparent;" valign=3D"to=
+p"><![endif]--><div class=3D"u-col u-col-100" style=3D"max-width:320px;min-width=
+:640px;display:table-cell;vertical-align:top"><div style=3D"height:100%;width:=
+100%!important"><!--[if (!mso)&(!IE)]><!--><div style=3D"box-sizing:border-box=
+;height:100%;padding:0;border-top:0 solid transparent;border-left:0 solid tr=
+ansparent;border-right:0 solid transparent;border-bottom:0 solid transparent=
+"><!--<![endif]--><table style=3D"font-family:Roboto" role=3D"presentation" cell=
+padding=3D"0" cellspacing=3D"0" width=3D"100%" border=3D"0"><tbody><tr><td style=3D"ov=
+erflow-wrap:break-word;word-break:break-word;padding:16px 16px 8px;font-fami=
+ly:Roboto" align=3D"left"><h1 class=3D"v-font-size" style=3D"margin:0;line-height:=
+140%;text-align:center;word-wrap:break-word;font-family:inherit;font-size:22=
+px;font-weight:400"><strong>Do you want to hear about the next legislation I=
+ introduce? <br>Subscribe to my newsletter for updates&nbsp;</strong></h1></=
+td></tr></tbody></table><table style=3D"font-family:Roboto" role=3D"presentation=
+" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" border=3D"0"><tbody><tr><td sty=
+le=3D"overflow-wrap:break-word;word-break:break-word;padding:8px 16px 16px;fon=
+t-family:Roboto" align=3D"left"><div class=3D"v-font-size" style=3D"font-size:14px=
+;line-height:140%;text-align:left;word-wrap:break-word"><p style=3D"font-size:=
+14px;line-height:140%;text-align:center"><span style=3D"font-family:inherit;li=
+ne-height:22.4px;font-size:16px">Sign up for my newsletter to stay up to dat=
+e on the latest news from Washington and the work I'm doing on behalf of Cal=
+ifornia's 15th congressional district.</span></p></div></td></tr></tbody></t=
+able><table style=3D"font-family:Roboto" role=3D"presentation" cellpadding=3D"0" c=
+ellspacing=3D"0" width=3D"100%" border=3D"0"><tbody><tr><td style=3D"overflow-wrap:b=
+reak-word;word-break:break-word;padding:8px 16px 17px;font-family:Roboto" al=
+ign=3D"left"><!--[if mso]><style>.v-button {background: transparent !important=
+;}</style><![endif]--><div align=3D"center"><!--[if mso]><v:roundrect xmlns:v=3D=
+"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:wo=
+rd" href=3D"https://kevinmullin.house.gov/contact/newsletter-subscribe" style=3D=
+"height:65px; v-text-anchor:middle; width:164px;" arcsize=3D"6%"  stroke=3D"f" f=
+illcolor=3D"#141b70"><w:anchorlock/><center style=3D"color:#FFFFFF;font-family:R=
+oboto;"><![endif]--><a href=3D"http://engagement.mail8.housecommunications.gov=
+/f/a/BDOhJT1q8oeGBz42x-wfJw~~/AAS2ygA~/RgRmdx7PP0Q6aHR0cHM6Ly9rZXZpbm11bGxpb=
+i5ob3VzZS5nb3YvY29udGFjdC9uZXdzbGV0dGVyLXN1YnNjcmliZVcDc3BjQgpkkc-ZlGTX07RcU=
+hlsdWlzYS5ndW5uQG1haWwuaG91c2UuZ292WAQAAALm" target=3D"_blank" class=3D"v-button=
+ v-font-size" style=3D"box-sizing:border-box;display:inline-block;font-family:=
+Roboto;text-decoration:none;-webkit-text-size-adjust:none;text-align:center;=
+color:#fff;background-color:#141b70;border-radius:4px;-webkit-border-radius:=
+4px;-moz-border-radius:4px;width:auto;max-width:100%;overflow-wrap:break-wor=
+d;word-break:break-word;word-wrap:break-word;mso-border-alt:none;font-family=
+:inherit;font-size:34px"><span style=3D"display:block;padding:12px 24px;line-h=
+eight:120%"><span style=3D"line-height:40.8px">Sign Up</span></span> </a><!--[=
+if mso]></center></v:roundrect><![endif]--></div></td></tr></tbody></table><=
+!--[if (!mso)&(!IE)]><!--></div><!--<![endif]--></div></div><!--[if (mso)|(I=
+E)]></td><![endif]--><!--[if (mso)|(IE)]></tr></table></td></tr></table><![e=
+ndif]--></div></div></div><div class=3D"u-row-container" style=3D"padding:0;back=
+ground-color:transparent"><div class=3D"u-row" style=3D"Margin:0 auto;min-width:=
+320px;max-width:640px;overflow-wrap:break-word;word-wrap:break-word;word-bre=
+ak:break-word;background-color:transparent"><div style=3D"border-collapse:coll=
+apse;display:table;width:100%;height:100%;background-color:transparent"><!--=
+[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0"><tr><td style=3D"padding: 0px;background-color: transparent;" align=3D"center=
+"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:640px;"><tr=
+ style=3D"background-color: transparent;"><![endif]--><!--[if (mso)|(IE)]><td =
+align=3D"center" width=3D"640" style=3D"width: 640px;padding: 0px;border-top: 0px =
+solid transparent;border-left: 0px solid transparent;border-right: 0px solid=
+ transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit=
+-border-radius: 0px; -moz-border-radius: 0px;" valign=3D"top"><![endif]--><div=
+ class=3D"u-col u-col-100" style=3D"max-width:320px;min-width:640px;display:tabl=
+e-cell;vertical-align:top"><div style=3D"height:100%;width:100%!important;bord=
+er-radius:0;-webkit-border-radius:0;-moz-border-radius:0"><!--[if (!mso)&(!I=
+E)]><!--><div style=3D"box-sizing:border-box;height:100%;padding:0;border-top:=
+0 solid transparent;border-left:0 solid transparent;border-right:0 solid tra=
+nsparent;border-bottom:0 solid transparent;border-radius:0;-webkit-border-ra=
+dius:0;-moz-border-radius:0"><!--<![endif]--><table style=3D"font-family:Robot=
+o" role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" border=3D"=
+0"><tbody><tr><td style=3D"overflow-wrap:break-word;word-break:break-word;padd=
+ing:11px 10px 0;font-family:Roboto" align=3D"left"><div class=3D"v-font-size" st=
+yle=3D"font-size:14px;line-height:140%;text-align:left;word-wrap:break-word"><=
+p style=3D"font-size:14px;line-height:140%;text-align:center"><span style=3D"fon=
+t-family:inherit;line-height:19.6px">Sincerely,</span></p></div></td></tr></=
+tbody></table><!--[if (!mso)&(!IE)]><!--></div><!--<![endif]--></div></div><=
+!--[if (mso)|(IE)]></td><![endif]--><!--[if (mso)|(IE)]></tr></table></td></=
+tr></table><![endif]--></div></div></div><div class=3D"u-row-container" style=3D=
+"padding:0;background-color:transparent"><div class=3D"u-row" style=3D"Margin:0 =
+auto;min-width:320px;max-width:640px;overflow-wrap:break-word;word-wrap:brea=
+k-word;word-break:break-word;background-color:transparent"><div style=3D"borde=
+r-collapse:collapse;display:table;width:100%;height:100%;background-color:tr=
+ansparent"><!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cellspaci=
+ng=3D"0" border=3D"0"><tr><td style=3D"padding: 0px;background-color: transparent;=
+" align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"wi=
+dth:640px;"><tr style=3D"background-color: transparent;"><![endif]--><!--[if (=
+mso)|(IE)]><td align=3D"center" width=3D"640" style=3D"width: 640px;padding: 0px;b=
+order-top: 0px solid transparent;border-left: 0px solid transparent;border-r=
+ight: 0px solid transparent;border-bottom: 0px solid transparent;border-radi=
+us: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;" valign=3D"top"><=
+![endif]--><div class=3D"u-col u-col-100" style=3D"max-width:320px;min-width:640=
+px;display:table-cell;vertical-align:top"><div style=3D"height:100%;width:100%=
+!important;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0"><!-=
+-[if (!mso)&(!IE)]><!--><div style=3D"box-sizing:border-box;height:100%;paddin=
+g:0;border-top:0 solid transparent;border-left:0 solid transparent;border-ri=
+ght:0 solid transparent;border-bottom:0 solid transparent;border-radius:0;-w=
+ebkit-border-radius:0;-moz-border-radius:0"><!--<![endif]--><table style=3D"fo=
+nt-family:Roboto" role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" border=3D"0"><tbody><tr><td style=3D"overflow-wrap:break-word;word-break:=
+break-word;padding:10px;font-family:Roboto" align=3D"left"><table width=3D"100%"=
+ cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tbody><tr><td style=3D"padding-ri=
+ght:0;padding-left:0" align=3D"center"><img align=3D"center" border=3D"0" src=3D"htt=
+ps://assets.unlayer.com/projects/85458/1672030488852-kevin%20mullin%20sig.pn=
+g" alt=3D"Rep. Kevin Mullin signature image" title=3D"Rep. Kevin Mullin signatur=
+e image" style=3D"outline:0;text-decoration:none;-ms-interpolation-mode:bicubi=
+c;clear:both;display:inline-block!important;border:none;height:auto;float:no=
+ne;width:32%;max-width:198.4px" width=3D"198.4"> </td></tr></tbody></table></t=
+d></tr></tbody></table><!--[if (!mso)&(!IE)]><!--></div><!--<![endif]--></di=
+v></div><!--[if (mso)|(IE)]></td><![endif]--><!--[if (mso)|(IE)]></tr></tabl=
+e></td></tr></table><![endif]--></div></div></div><div class=3D"u-row-containe=
+r" style=3D"padding:0;background-color:transparent"><div class=3D"u-row" style=3D"=
+Margin:0 auto;min-width:320px;max-width:640px;overflow-wrap:break-word;word-=
+wrap:break-word;word-break:break-word;background-color:transparent"><div sty=
+le=3D"border-collapse:collapse;display:table;width:100%;height:100%;background=
+-color:transparent"><!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding: 0px;background-color: tra=
+nsparent;" align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"width:640px;"><tr style=3D"background-color: transparent;"><![endif]-->=
+<!--[if (mso)|(IE)]><td align=3D"center" width=3D"640" style=3D"width: 640px;paddi=
+ng: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent=
+;border-right: 0px solid transparent;border-bottom: 0px solid transparent;bo=
+rder-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;" valig=
+n=3D"top"><![endif]--><div class=3D"u-col u-col-100" style=3D"max-width:320px;min-=
+width:640px;display:table-cell;vertical-align:top"><div style=3D"height:100%;w=
+idth:100%!important;border-radius:0;-webkit-border-radius:0;-moz-border-radi=
+us:0"><!--[if (!mso)&(!IE)]><!--><div style=3D"box-sizing:border-box;height:10=
+0%;padding:0;border-top:0 solid transparent;border-left:0 solid transparent;=
+border-right:0 solid transparent;border-bottom:0 solid transparent;border-ra=
+dius:0;-webkit-border-radius:0;-moz-border-radius:0"><!--<![endif]--><table =
+style=3D"font-family:Roboto" role=3D"presentation" cellpadding=3D"0" cellspacing=3D"=
+0" width=3D"100%" border=3D"0"><tbody><tr><td style=3D"overflow-wrap:break-word;wo=
+rd-break:break-word;padding:0 10px 10px;font-family:Roboto" align=3D"left"><di=
+v class=3D"v-font-size" style=3D"font-size:14px;line-height:140%;text-align:cent=
+er;word-wrap:break-word"><p style=3D"font-size:14px;line-height:140%">Rep. Kev=
+in Mullin</p><p style=3D"font-size:14px;line-height:140%">Member of Congress</=
+p></div></td></tr></tbody></table><!--[if (!mso)&(!IE)]><!--></div><!--<![en=
+dif]--></div></div><!--[if (mso)|(IE)]></td><![endif]--><!--[if (mso)|(IE)]>=
+</tr></table></td></tr></table><![endif]--></div></div></div><div class=3D"u-r=
+ow-container" style=3D"padding:0;background-color:transparent"><div class=3D"u-r=
+ow" style=3D"Margin:0 auto;min-width:320px;max-width:640px;overflow-wrap:break=
+-word;word-wrap:break-word;word-break:break-word;background-color:transparen=
+t"><div style=3D"border-collapse:collapse;display:table;width:100%;height:100%=
+;background-color:transparent"><!--[if (mso)|(IE)]><table width=3D"100%" cellp=
+adding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding: 0px;background=
+-color: transparent;" align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" =
+border=3D"0" style=3D"width:640px;"><tr style=3D"background-color: transparent;"><=
+![endif]--><!--[if (mso)|(IE)]><td align=3D"center" width=3D"640" style=3D"width: =
+640px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid =
+transparent;border-right: 0px solid transparent;border-bottom: 0px solid tra=
+nsparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: =
+0px;" valign=3D"top"><![endif]--><div class=3D"u-col u-col-100" style=3D"max-width=
+:320px;min-width:640px;display:table-cell;vertical-align:top"><div style=3D"he=
+ight:100%;width:100%!important;border-radius:0;-webkit-border-radius:0;-moz-=
+border-radius:0"><!--[if (!mso)&(!IE)]><!--><div style=3D"box-sizing:border-bo=
+x;height:100%;padding:0;border-top:0 solid transparent;border-left:0 solid t=
+ransparent;border-right:0 solid transparent;border-bottom:0 solid transparen=
+t;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0"><!--<![endif=
+]--><table style=3D"font-family:Roboto" role=3D"presentation" cellpadding=3D"0" ce=
+llspacing=3D"0" width=3D"100%" border=3D"0"><tbody><tr><td style=3D"overflow-wrap:br=
+eak-word;word-break:break-word;padding:10px;font-family:Roboto" align=3D"left"=
+><table height=3D"0px" align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" width=3D"100%" style=3D"border-collapse:collapse;table-layout:fixed;border-sp=
+acing:0;mso-table-lspace:0;mso-table-rspace:0;vertical-align:top;border-top:=
+1px solid #bbb;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"><tbo=
+dy><tr style=3D"vertical-align:top"><td style=3D"word-break:break-word;border-co=
+llapse:collapse!important;vertical-align:top;font-size:0;line-height:0;mso-l=
+ine-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1=
+00%"><span>&nbsp;</span> </td></tr></tbody></table></td></tr></tbody></table=
+><table id=3D"u_content_text_19" style=3D"font-family:Roboto" role=3D"presentation=
+" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" border=3D"0"><tbody><tr><td sty=
+le=3D"overflow-wrap:break-word;word-break:break-word;padding:1px 10px 0;font-f=
+amily:Roboto" align=3D"left"><div class=3D"v-font-size" style=3D"font-size:14px;co=
+lor:#fff;line-height:140%;text-align:center;word-wrap:break-word"><p style=3D"=
+font-size:14px;line-height:140%;text-align:center"><span style=3D"font-size:20=
+px;line-height:28px"><a rel=3D"noopener" href=3D"http://engagement.mail8.houseco=
+mmunications.gov/f/a/DVzdhaN-RuSC8aqVPRAhZg~~/AAS2ygA~/RgRmdx7PP0RCaHR0cHM6L=
+y9rZXZpbm11bGxpbi5ob3VzZS5nb3YvYWRkcmVzc19hdXRoZW50aWNhdGlvbj9mb3JtPS9jb250Y=
+WN0VwNzcGNCCmSRz5mUZNfTtFxSGWx1aXNhLmd1bm5AbWFpbC5ob3VzZS5nb3ZYBAAAAuY~" tar=
+get=3D"_blank"><span style=3D"line-height:19.6px"><strong>Contact Me</strong></s=
+pan></a></span></p></div></td></tr></tbody></table><!--[if (!mso)&(!IE)]><!-=
+-></div><!--<![endif]--></div></div><!--[if (mso)|(IE)]></td><![endif]--><!-=
+-[if (mso)|(IE)]></tr></table></td></tr></table><![endif]--></div></div></di=
+v><div class=3D"u-row-container" style=3D"padding:0;background-color:transparent=
+"><div class=3D"u-row" style=3D"Margin:0 auto;min-width:320px;max-width:640px;ov=
+erflow-wrap:break-word;word-wrap:break-word;word-break:break-word;background=
+-color:transparent"><div style=3D"border-collapse:collapse;display:table;width=
+:100%;height:100%;background-color:transparent"><!--[if (mso)|(IE)]><table w=
+idth=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"paddin=
+g: 0px;background-color: transparent;" align=3D"center"><table cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0" style=3D"width:640px;"><tr style=3D"background-color=
+: transparent;"><![endif]--><!--[if (mso)|(IE)]><td align=3D"center" width=3D"32=
+0" style=3D"width: 320px;padding: 0px;border-top: 0px solid transparent;border=
+-left: 0px solid transparent;border-right: 0px solid transparent;border-bott=
+om: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -mo=
+z-border-radius: 0px;" valign=3D"top"><![endif]--><div class=3D"u-col u-col-50" =
+style=3D"max-width:320px;min-width:320px;display:table-cell;vertical-align:top=
+"><div style=3D"height:100%;width:100%!important;border-radius:0;-webkit-borde=
+r-radius:0;-moz-border-radius:0"><!--[if (!mso)&(!IE)]><!--><div style=3D"box-=
+sizing:border-box;height:100%;padding:0;border-top:0 solid transparent;borde=
+r-left:0 solid transparent;border-right:0 solid transparent;border-bottom:0 =
+solid transparent;border-radius:0;-webkit-border-radius:0;-moz-border-radius=
+:0"><!--<![endif]--><table style=3D"font-family:Roboto" role=3D"presentation" ce=
+llpadding=3D"0" cellspacing=3D"0" width=3D"100%" border=3D"0"><tbody><tr><td style=3D"=
+overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:Robo=
+to" align=3D"left"><div class=3D"v-font-size" style=3D"font-size:14px;line-height:=
+140%;text-align:left;word-wrap:break-word"><p style=3D"font-size:14px;line-hei=
+ght:140%;text-align:center"><strong>Washington DC Office</strong><br>1404 Lo=
+ngworth House Office Building<br>Washington, DC 20515<br>Phone: (202) 225-35=
+31</p></div></td></tr></tbody></table><!--[if (!mso)&(!IE)]><!--></div><!--<=
+![endif]--></div></div><!--[if (mso)|(IE)]></td><![endif]--><!--[if (mso)|(I=
+E)]><td align=3D"center" width=3D"320" style=3D"width: 320px;padding: 0px;border-t=
+op: 0px solid transparent;border-left: 0px solid transparent;border-right: 0=
+px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px=
+;-webkit-border-radius: 0px; -moz-border-radius: 0px;" valign=3D"top"><![endif=
+]--><div class=3D"u-col u-col-50" style=3D"max-width:320px;min-width:320px;displ=
+ay:table-cell;vertical-align:top"><div style=3D"height:100%;width:100%!importa=
+nt;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0"><!--[if (!m=
+so)&(!IE)]><!--><div style=3D"box-sizing:border-box;height:100%;padding:0;bord=
+er-top:0 solid transparent;border-left:0 solid transparent;border-right:0 so=
+lid transparent;border-bottom:0 solid transparent;border-radius:0;-webkit-bo=
+rder-radius:0;-moz-border-radius:0"><!--<![endif]--><table style=3D"font-famil=
+y:Roboto" role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" b=
+order=3D"0"><tbody><tr><td style=3D"overflow-wrap:break-word;word-break:break-wo=
+rd;padding:10px;font-family:Roboto" align=3D"left"><div class=3D"v-font-size" st=
+yle=3D"font-size:14px;line-height:140%;text-align:left;word-wrap:break-word"><=
+p style=3D"font-size:14px;line-height:140%;text-align:center"><strong>San Mate=
+o District Office</strong><br>1528 S. El Camino Real<br>Suite 307<br>San Mat=
+eo, CA 94402<br>Phone: (650) 342-0300</p></div></td></tr></tbody></table><!-=
+-[if (!mso)&(!IE)]><!--></div><!--<![endif]--></div></div><!--[if (mso)|(IE)=
+]></td><![endif]--><!--[if (mso)|(IE)]></tr></table></td></tr></table><![end=
+if]--></div></div></div><div class=3D"u-row-container" style=3D"padding:0;backgr=
+ound-color:transparent"><div class=3D"u-row" style=3D"Margin:0 auto;min-width:32=
+0px;max-width:640px;overflow-wrap:break-word;word-wrap:break-word;word-break=
+:break-word;background-color:transparent"><div style=3D"border-collapse:collap=
+se;display:table;width:100%;height:100%;background-color:transparent"><!--[i=
+f (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"=
+><tr><td style=3D"padding: 0px;background-color: transparent;" align=3D"center">=
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:640px;"><tr s=
+tyle=3D"background-color: transparent;"><![endif]--><!--[if (mso)|(IE)]><td al=
+ign=3D"center" width=3D"640" style=3D"width: 640px;padding: 0px;border-top: 0px so=
+lid transparent;border-left: 0px solid transparent;border-right: 0px solid t=
+ransparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-b=
+order-radius: 0px; -moz-border-radius: 0px;" valign=3D"top"><![endif]--><div c=
+lass=3D"u-col u-col-100" style=3D"max-width:320px;min-width:640px;display:table-=
+cell;vertical-align:top"><div style=3D"height:100%;width:100%!important;border=
+-radius:0;-webkit-border-radius:0;-moz-border-radius:0"><!--[if (!mso)&(!IE)=
+]><!--><div style=3D"box-sizing:border-box;height:100%;padding:0;border-top:0 =
+solid transparent;border-left:0 solid transparent;border-right:0 solid trans=
+parent;border-bottom:0 solid transparent;border-radius:0;-webkit-border-radi=
+us:0;-moz-border-radius:0"><!--<![endif]--><table style=3D"font-family:Roboto"=
+ role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" border=3D"0"=
+><tbody><tr><td style=3D"overflow-wrap:break-word;word-break:break-word;paddin=
+g:12px;font-family:Roboto" align=3D"left"><div align=3D"center"><div style=3D"disp=
+lay:table;max-width:195px"><!--[if (mso)|(IE)]><table width=3D"195" cellpaddin=
+g=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"border-collapse:collapse;" a=
+lign=3D"center"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"=
+ style=3D"border-collapse:collapse; mso-table-lspace: 0pt;mso-table-rspace: 0p=
+t; width:195px;"><tr><![endif]--><!--[if (mso)|(IE)]><td width=3D"32" style=3D"w=
+idth:32px; padding-right: 17px;" valign=3D"top"><![endif]--><table align=3D"left=
+" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"32" height=3D"32" style=3D"w=
+idth:32px!important;height:32px!important;display:inline-block;border-collap=
+se:collapse;table-layout:fixed;border-spacing:0;mso-table-lspace:0;mso-table=
+-rspace:0;vertical-align:top;margin-right:17px"><tbody><tr style=3D"vertical-a=
+lign:top"><td align=3D"left" valign=3D"middle" style=3D"word-break:break-word;bord=
+er-collapse:collapse!important;vertical-align:top"><a href=3D"http://engagemen=
+t.mail8.housecommunications.gov/f/a/C8-FZ3JiqSrzl4m5u7x04w~~/AAS2ygA~/RgRmdx=
+7PP0QvaHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL0NvbmdyZXNzbWFuS2V2aW5NdWxsaW5XA3NwY0=
+IKZJHPmZRk19O0XFIZbHVpc2EuZ3VubkBtYWlsLmhvdXNlLmdvdlgEAAAC5g~~" title=3D"Faceb=
+ook" target=3D"_blank"><img src=3D"https://cdn.tools.unlayer.com/social/icons/sq=
+uared/facebook.png" alt=3D"Facebook" title=3D"Facebook" width=3D"32" style=3D"outlin=
+e:0;text-decoration:none;-ms-interpolation-mode:bicubic;clear:both;display:b=
+lock!important;border:none;height:auto;float:none;max-width:32px!important">=
+ </a></td></tr></tbody></table><!--[if (mso)|(IE)]></td><![endif]--><!--[if =
+(mso)|(IE)]><td width=3D"32" style=3D"width:32px; padding-right: 17px;" valign=3D"=
+top"><![endif]--><table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0" width=3D"32" height=3D"32" style=3D"width:32px!important;height:32px!important=
+;display:inline-block;border-collapse:collapse;table-layout:fixed;border-spa=
+cing:0;mso-table-lspace:0;mso-table-rspace:0;vertical-align:top;margin-right=
+:17px"><tbody><tr style=3D"vertical-align:top"><td align=3D"left" valign=3D"middle=
+" style=3D"word-break:break-word;border-collapse:collapse!important;vertical-a=
+lign:top"><a href=3D"http://engagement.mail8.housecommunications.gov/f/a/iMH2E=
+pdLOSkGY8vrBPEnnQ~~/AAS2ygA~/RgRmdx7PP0QiaHR0cHM6Ly90d2l0dGVyLmNvbS9SZXBLZXZ=
+pbk11bGxpblcDc3BjQgpkkc-ZlGTX07RcUhlsdWlzYS5ndW5uQG1haWwuaG91c2UuZ292WAQAAAL=
+m" title=3D"Twitter" target=3D"_blank"><img src=3D"https://cdn.tools.unlayer.com/s=
+ocial/icons/squared/twitter.png" alt=3D"Twitter" title=3D"Twitter" width=3D"32" st=
+yle=3D"outline:0;text-decoration:none;-ms-interpolation-mode:bicubic;clear:bot=
+h;display:block!important;border:none;height:auto;float:none;max-width:32px!=
+important"> </a></td></tr></tbody></table><!--[if (mso)|(IE)]></td><![endif]=
+--><!--[if (mso)|(IE)]><td width=3D"32" style=3D"width:32px; padding-right: 17px=
+;" valign=3D"top"><![endif]--><table align=3D"left" border=3D"0" cellspacing=3D"0" c=
+ellpadding=3D"0" width=3D"32" height=3D"32" style=3D"width:32px!important;height:32p=
+x!important;display:inline-block;border-collapse:collapse;table-layout:fixed=
+;border-spacing:0;mso-table-lspace:0;mso-table-rspace:0;vertical-align:top;m=
+argin-right:17px"><tbody><tr style=3D"vertical-align:top"><td align=3D"left" val=
+ign=3D"middle" style=3D"word-break:break-word;border-collapse:collapse!important=
+;vertical-align:top"><a href=3D"http://engagement.mail8.housecommunications.go=
+v/f/a/rK0tSHWXl5OqXf2XWyrLMw~~/AAS2ygA~/RgRmdx7PP0QpaHR0cHM6Ly93d3cuaW5zdGFn=
+cmFtLmNvbS9yZXBrZXZpbm11bGxpbi9XA3NwY0IKZJHPmZRk19O0XFIZbHVpc2EuZ3VubkBtYWls=
+LmhvdXNlLmdvdlgEAAAC5g~~" title=3D"Instagram" target=3D"_blank"><img src=3D"https:=
+//cdn.tools.unlayer.com/social/icons/squared/instagram.png" alt=3D"Instagram" =
+title=3D"Instagram" width=3D"32" style=3D"outline:0;text-decoration:none;-ms-inter=
+polation-mode:bicubic;clear:both;display:block!important;border:none;height:=
+auto;float:none;max-width:32px!important"> </a></td></tr></tbody></table><!-=
+-[if (mso)|(IE)]></td><![endif]--><!--[if (mso)|(IE)]><td width=3D"32" style=3D"=
+width:32px; padding-right: 0px;" valign=3D"top"><![endif]--><table align=3D"left=
+" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"32" height=3D"32" style=3D"w=
+idth:32px!important;height:32px!important;display:inline-block;border-collap=
+se:collapse;table-layout:fixed;border-spacing:0;mso-table-lspace:0;mso-table=
+-rspace:0;vertical-align:top;margin-right:0"><tbody><tr style=3D"vertical-alig=
+n:top"><td align=3D"left" valign=3D"middle" style=3D"word-break:break-word;border-=
+collapse:collapse!important;vertical-align:top"><a href=3D"http://engagement.m=
+ail8.housecommunications.gov/f/a/3FnpTSboRC1WT1-AaZBOdQ~~/AAS2ygA~/RgRmdx7PP=
+0Q4aHR0cHM6Ly93d3cueW91dHViZS5jb20vY2hhbm5lbC9VQ0FlbnVYalVaYWdaeUQ0SFFMN18yW=
+kFXA3NwY0IKZJHPmZRk19O0XFIZbHVpc2EuZ3VubkBtYWlsLmhvdXNlLmdvdlgEAAAC5g~~" tit=
+le=3D"YouTube" target=3D"_blank"><img src=3D"https://cdn.tools.unlayer.com/social/=
+icons/squared/youtube.png" alt=3D"YouTube" title=3D"YouTube" width=3D"32" style=3D"o=
+utline:0;text-decoration:none;-ms-interpolation-mode:bicubic;clear:both;disp=
+lay:block!important;border:none;height:auto;float:none;max-width:32px!import=
+ant"> </a></td></tr></tbody></table><!--[if (mso)|(IE)]></td><![endif]--><!-=
+-[if (mso)|(IE)]></tr></table></td></tr></table><![endif]--></div></div></td=
+></tr></tbody></table><!--[if (!mso)&(!IE)]><!--></div><!--<![endif]--></div=
+></div><!--[if (mso)|(IE)]></td><![endif]--><!--[if (mso)|(IE)]></tr></table=
+></td></tr></table><![endif]--></div></div></div><!--[if (mso)|(IE)]></td></=
+tr></table><![endif]--></td></tr></tbody></table><!--[if mso]></div><![endif=
+]--><!--[if IE]></div><![endif]--><div style=3D"
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, Roboto,
+          Oxygen-Sans, Ubuntu, Cantarell, Arial, sans-serif;
+        background-color: #f8f8f8;
+        padding: 32px;
+      "><br><p style=3D"margin: 0; font-size: 12px; line-height: 16px; letter=
+-spacing: 0.02em; color: #626262 !important; text-align: center;"><a href=3D"h=
+ttp://engagement.mail8.housecommunications.gov/f/a/VbR1INyhGADBZpZVZ_xcUA~~/=
+AAS2ygA~/RgRmdx7PP0T2aHR0cHM6Ly9tYWlsLmdvdm1haWx1bnN1YnNjcmliZS5jb20vbWFpbGV=
+ycy9zdWJzY3JpcHRpb25zP2p3dD1leUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjk=
+uZXlKNmFXUWlPaUl4TWpFMk5UUTVNekEzTVRjMU55SXNJbWxrSWpvaU5ETTFPVElpTENKemRXSWl=
+PaUp5WlhCclpYWnBibTExYkd4cGJpSXNJbWxoZENJNk1UWTROelEyTURNd00zMC5PQXBPajZ1cFV=
+nU3M0M3ZpV2JRNGdmTW5UamptN2NkcHQ2NC1veG1rT3FFVwNzcGNCCmSRz5mUZNfTtFxSGWx1aXN=
+hLmd1bm5AbWFpbC5ob3VzZS5nb3ZYBAAAAuY~">Unsubscribe from future messages.</a>=
+ </p><br></div><img border=3D"0" width=3D"1" height=3D"1" alt=3D"" src=3D"http://engag=
+ement.mail8.housecommunications.gov/q/FSXSoAdHvx8CTex9eZoClA~~/AAS2ygA~/RgRm=
+dx7PPlcDc3BjQgpkkc-ZlGTX07RcUhlsdWlzYS5ndW5uQG1haWwuaG91c2UuZ292WAQAAALm"> <=
+/body></html>
+
+--B_3770290787_2830900347--
+

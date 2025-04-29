@@ -1,0 +1,958 @@
+Received: from DS0PR09MB11538.namprd09.prod.outlook.com (2603:10b6:8:179::21)
+ by SA0PR09MB6635.namprd09.prod.outlook.com with HTTPS; Wed, 26 Jul 2023
+ 16:33:44 +0000
+Received: from BL0PR0901CA0020.namprd09.prod.outlook.com
+ (2603:10b6:208:1c0::30) by DS0PR09MB11538.namprd09.prod.outlook.com
+ (2603:10b6:8:179::21) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6631.29; Wed, 26 Jul
+ 2023 16:33:43 +0000
+Received: from BL0GCC02FT041.eop-gcc02.prod.protection.outlook.com
+ (2a01:111:f400:7d05::207) by BL0PR0901CA0020.outlook.office365.com
+ (2603:10b6:208:1c0::30) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6631.29 via Frontend
+ Transport; Wed, 26 Jul 2023 16:33:43 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.151.110)
+ smtp.mailfrom=mail.house.gov; dkim=fail (body hash did not verify)
+ header.d=house.gov;dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.151.110 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.151.110;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.151.110) by
+ BL0GCC02FT041.mail.protection.outlook.com (10.97.10.194) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.6631.29 via Frontend Transport; Wed, 26 Jul 2023 16:33:43 +0000
+Received: from EXCH1915.US.House.gov (143.228.151.74) by EXCH1911.US.House.gov
+ (143.228.151.110) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1258.16; Wed, 26 Jul
+ 2023 12:33:36 -0400
+Received: from serg-bulk1-h.house.gov (143.228.145.31) by
+ EXCH1915.US.House.gov (143.228.151.74) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.2.1258.16 via Frontend Transport; Wed, 26 Jul 2023 12:33:36 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=message-id :
+ list-unsubscribe : from : to : date : subject : content-type :
+ mime-version; s=august2019-msgb-hg;
+ bh=vx4w+ufErWuscGlvh7wblvPgSzAzS9KJsjYylJ5M9OQ=;
+ b=0qmfaOcvZk7dj3E2T3uT48czlCb21slrmSJWioBivEifaBX2XhhvudpX9W68UhH9458T
+ 9/p8r1BsRwOSAi/nFtmffBklqtjqKPdgvtasM/X2AkivR1eQUU5Ey14mReT5qJNLZCoJ
+ lM57Lg5LzkwK4rtF3n0QcizthqQ+75ug1mdfXS8Mt3Njz1V3IRHcB+yq8njrs16A2A7e
+ rpaNZkpIqUITFIwm737lbhTvLP7FDGwB4ivVKh6VkiMcoJJaRPNiFETIAZG7GapkiLhQ
+ kZRgaYkBS+1VUGX+BAK/e+ptvPbFHgeQe9rVI2iX5kO/ooh08/EHCWYdH5DGYgO8MQdb ag== 
+Received: from FIRESIDESERV05 (firesideserv05.us.house.gov [143.228.113.88])
+	by serg-bulk1-h.house.gov (8.17.1.19/8.17.1.19) with ESMTP id 36QGXZmD001614
+	for <hunter.spence@mail.house.gov>; Wed, 26 Jul 2023 12:33:35 -0400
+envelope-from: Congressman.EarlBlumenauer@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+Message-ID: <cAWz51f8eJ5pAYYAhvnH3xEcSTDTZguq8XpCKSilByicCiwogvVinJjKV8AzD3e+Zdm1VvjqEJrIRYOPDT33T3oVjydGXLamlvjgOg3i3m4tgN5LNtapeaT3kj1fq7CFhF7mjakE5Ry3HE1I2emfhDbgC7CibolIHfj7W0lH4Jrdc+hUat0VBPmUrgAhVJWH@fireside21.com>
+X-House-Vendor-Seg: unmanaged
+List-Unsubscribe: <https://blumenauerforms.house.gov/forms/emailsignup/?Delete=true&MessageID=2307&Email=hunter.spence@mail.house.gov&Submit=true>
+Precedence: bulk
+From: "Blumenauer, Earl" <Congressman.EarlBlumenauer@mail.house.gov>
+To: hunter.spence@mail.house.gov
+Date: 26 Jul 2023 12:33:35 -0400
+Subject: Veterans: Secure your PACT Act Benefits Before Aug 9
+Content-Type: multipart/alternative;
+ boundary=--boundary_3839185_c93916ea-1ff4-4841-a6e3-fb07de034e59
+X-Proofpoint-Virus-Version: vendor=baseguard
+ engine=ICAP:2.0.254,Aquarius:18.0.957,Hydra:6.0.591,FMLib:17.11.176.26
+ definitions=2023-07-26_07,2023-07-26_01,2023-05-22_02
+Return-Path: Congressman.EarlBlumenauer@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1911.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 26 Jul 2023 16:33:43.6965
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 68b53905-9901-4495-96fa-08db8df613d0
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1915.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted:
+ BL0GCC02FT041.eop-gcc02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ BL0GCC02FT041.eop-gcc02.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ BL0GCC02FT041:EE_|DS0PR09MB11538:EE_|SA0PR09MB6635:EE_
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: 68b53905-9901-4495-96fa-08db8df613d0
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:143.228.151.110;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:;DIR:INT;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 26 Jul 2023 16:33:43.6809
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 68b53905-9901-4495-96fa-08db8df613d0
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.151.110];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1915.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DS0PR09MB11538
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.0877613
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.6609.030
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:1;jmr:0;auth:0;dest:C;OFR:CustomRules;ENG:(910001)(944506478)(944626604)(920097)(425001)(930097);
+X-Microsoft-Antispam-Message-Info:
+	uL/xho2M0v2sh/EyfxtQiK5VCktVdk4gFqKtiHE9ZY8XV4lJpdtKRRekKs/vWLrI6Az4T0wd6ASkbySJvj9GR3XdzevBuuOke+B41le3GTkB8y6q2At4DcliJPv3xUGRxX45h20yQkvKg02lt0zgzAejUoM+s7ySnpWy9e23NxlsqIoabkReEkN/25h6RqOiTgpJpHA37fUJ6mO3XQ32ayophuQZeACf5cxXnBXi4lRD+XT8NsUdyFemekbbHMxdRwSLiAfETCoU/dLjSs/tbvxDvsA8arFbUsU5UolGI4it3z5Ouvf55fHuZEtRhGZaGsp/ad3x84uHRBdj37Rg/3kAhYIp3AHEhUDZ9BYmhrPIyAWxfNIsIKlUlMLgmbbgRaRFXZ97AvMY6q1EnfuSPfKOsK75sOJD8wpy2PzlpNJiEAFjTAfhl5KR60EH7nyuqd0mzx7tWffXpZKVHP81Ot+MMDBtZzbUGGuMrPfAJS7CtjgdMNiC3U9JS0oVY+4G9TtwlMSXc2zbwFEkcsEImGpdCEvRwMPHDCkR+0vJXhLZ5GD2USua29hO1N7Yey4MvorXmZEEqrund7BseB1bpVDYWVwgGyF2WDI3w16nHMkFatdWuzRi2A+40CpaL/JnRRpmVskYrDJ6es20SM5yiIexiXVozm5MT8Xv0z7omSczfkvauma4bpWfaH0oyiFd1/rOlALizOvLCVc5xS/hX2igHS6sWxpLa7a8Pkv0yOLin7jdZVC5mDWrex6gIXKfVKRhqJsIip+cg+TGdtBv748+Cz8kF4L7agf77BLGSFedPTdnGImzJ5W/Hq5MMb18YQDKMaWtzYJtwD4WLtom/g==
+MIME-Version: 1.0
+
+----boundary_3839185_c93916ea-1ff4-4841-a6e3-fb07de034e59
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+DQpVbnN1YnNjcmliZTogaHR0cHM6Ly9ibHVtZW5hdWVyZm9ybXMuaG91c2UuZ292L0Zv
+cm1zL0VtYWlsU2lnbnVwLz9EZWxldGU9dHJ1ZSZNZXNzYWdlSUQ9MjMwNyZFbWFpbD1o
+dW50ZXIuc3BlbmNlQG1haWwuaG91c2UuZ292
+----boundary_3839185_c93916ea-1ff4-4841-a6e3-fb07de034e59
+Content-Location: https://blumenauerforms.house.gov/
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>Veterans: Secure your PACT Act Benefits Before Aug 9</title>
+       =20
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1">
+        <!--[if !mso]><!-->
+        <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![e=
+ndif]-->
+        <style>body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default t=
+ext sizes */ img{-ms-interpolation-mode: bicubic;} /* Allow smoother render=
+ing of resized image in Internet Explorer *//* RESET STYLES */img { border:=
+ 0; height: auto; line-height: 100%; outline: none; text-decoration: none; =
+}table { border-collapse: collapse !important; }body { height: 100% !import=
+ant; margin: 0 !important; padding: 0 !important; width: 100% !important; }=
+strong { font-weight: bold; } /* Editor reset *//* FIRESIDE STYLES */.compo=
+nent img {max-width:600px;}.component table {mso-table-rspace:10pt; border-=
+collapse:collapse;}.component { padding: 0px !important; }.press {padding-b=
+ottom: 0px;}</style><style>@media all and (max-width:650px) {            .i=
+mage-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td, .image-2, .img-2 =
+img, .image-2 tr, .image-2 td {max-width: 100% !important; width: 100% !imp=
+ortant;}            .responsive-table {width:100% !important;}            .=
+responsive-table img {max-width:100% !important; height: auto !important;} =
+           .press .component, .press td {text-align:center;}            .co=
+mponent { margin-left: 20px; margin-right: 20px;}            .component .re=
+sponsive-table { margin-left: 0px !important; margin-right: 0px !important;=
+}            .wide .video-thumb { width: 100% !important;height: auto !impo=
+rtant; }             .wide.video-container { width: 100% !important; }     =
+    .component.full-width {margin-left: 0px; margin-right: 0px; }   }</styl=
+e><style type=3D"text/css">
+            /* CLIENT-SPECIFIC STYLES */
+            body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text=
+ sizes */
+            table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Rem=
+ove spacing between tables in Outlook 2007 and up */
+            img{-ms-interpolation-mode: bicubic;} /* Allow smoother renderi=
+ng of resized image in Internet Explorer */
+            /* RESET STYLES */
+            img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: =
+0 !important; width: 100% !important; }
+            strong { font-weight: bold; } /* Editor reset */
+            /* FIRESIDE STYLES */
+            .component img {max-width:600px;}
+            .component table {mso-table-rspace:10pt; border-collapse:collap=
+se; font-family: Arial, Helvetica, sans-serif;}
+            .component td, td {font-family: Arial, Helvetica, sans-serif;}
+            .component { padding: 0px !important; }
+            .press {padding-bottom: 0px;}
+            .caption-1 td {font-family: Arial, Helvetica, sans-serif;}
+            /* Margin/NoMargin STYLES */
+            .component.full-width{ overflow: hidden; margin: 0px; }
+            /* HEADER STYLES */
+            .header-bar {width: 100%;}
+            .header-bar-margin {background-color:#ffffff;}
+            .header-bar h2 {margin: 0 !important; padding: 0 !important; co=
+lor: #000000;text-align: center;font-size: 24px;font-weight: bold; }
+            .survey-content > table > tbody tr td { border-color: #59753e !=
+important; }
+            .survey-content input.survey-submit { font-family: Arial, Helve=
+tica, sans-serif !important; }
+        </style>    =20
+        <style id=3D"media-queries">=20
+            @media all and (max-width:650px) {
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max=
+-width: 100% !important; width: 100% !important;}
+            .responsive-table {width:100% !important;}
+            .responsive-table img {max-width:100% !important; height: auto =
+!important;}
+            .press .component, .press td, .split .component, .split .compon=
+ent td, .split td {text-align:center;}
+            .component { margin-left: 20px; margin-right: 20px;}
+            .component .responsive-table { margin-left: 0px !important; mar=
+gin-right: 0px !important;}
+            .wide .video-thumb { width: 100% !important;height: auto !impor=
+tant; }=20
+            .wide.video-container { width: 100% !important; }
+            }
+        </style>
+       =20
+    <!--[if (gte mso 9)|(IE)]>
+                                            <style>=20
+                                        </style>
+                                        <![endif]--></head>
+    <body style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%;margin: 0px !important; padding: 0px !important;">
+        <div id=3D"preview-text" style=3D"display: none; font-size: 1px; co=
+lor: #fefefe; line-height: 1px; font-family: Arial, Helvetica, sans-serif; =
+max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">Dear Friend=
+,&nbsp;&nbsp;&nbsp;Last August, Congress enacted the largest expansion of v=
+eterans=E2=80=99 benefits in 30 years. I was proud to vote for the PACT Act=
+, which guarantees health care for veterans exposed to burn pits, Agent Ora=
+nge, and other toxic substances. The legislation also expanded eligibility =
+for post-9/11 combat veterans to enroll in VA health care. In all, the PACT=
+ Act expanded benefits for nearly 3.5 million veterans.&nbsp;&nbsp;&nbsp;Ye=
+t only half a million veterans have applied for benefits so far=E2=80=94and=
+ two important deadlines are fast-approaching:&nbsp;&nbsp;Veterans and thei=
+r survivors must submit PACT-Act related claims or their intent to file by =
+August 9, 2023, to access 12-month retroactive compensation.&nbsp;Post-9/11=
+ combat veterans discharged more than ten years ago must enroll in VA healt=
+h care on or before September 30, 2023, to take advantage of the open enrol=
+lment.&nbsp;&nbsp;For too long, the federal government has neglected its ob=
+ligation to serve and support our veterans. The PACT Act was a critically o=
+verdue step to change that.&nbsp;&nbsp;&nbsp;Don=E2=80=99t wait. If you or =
+someone you know is eligible for benefits, apply today. Visit=E2=80=AFthe=
+=E2=80=AF<a href=3D"https://urldefense.com/v3/__http://VA.Gov/PACT__;!!Fr0Y=
+ZsIsFWxTZsBm-qTAg68!mVc5p8Z3PT3Kcvh7QlshksAtQZl7ZQCrhwmUScZeEaIdCz8D1rXJzmB=
+qWJ5dGVwzEuSeY7xAC2AJQplqfo82i7KsyiLXVaBjOuQ49aSk3GI$">VA.Gov/PACT</a>, cal=
+l 1-800-698-2411 or contact my office for more information and support in a=
+ccessing VA benefits and health care.&nbsp;&nbsp; </div>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;background-color: #ffffff; font-family: Arial, Helvetica, sa=
+ns-serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"20" marginheight=
+=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td class=3D"split" align=3D"center" valign=3D"top" sty=
+le=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                    <table align=3D"left" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" width=3D"49.9%" class=3D"responsive-table" role=3D"presenta=
+tion" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"=
+>
+                        <tbody>
+                            <tr>
+                                <td align=3D"center" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                <table border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" width=3D"100%" role=3D"presentation" style=3D"-webkit-text-siz=
+e-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                    <tbody>
+                                        <tr>
+                                            <td align=3D"left" style=3D"-we=
+bkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial,=
+ helvetica, sans-serif; font-size: 12px; color: #222222;">
+                                            <strong style=3D"font-weight: b=
+old;">Update | July 26, 2023</strong>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table align=3D"left" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" width=3D"49.9%" class=3D"responsive-table" role=3D"presenta=
+tion" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"=
+>
+                        <tbody>
+                            <tr>
+                                <td align=3D"center" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                <table border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" width=3D"100%" role=3D"presentation" style=3D"-webkit-text-siz=
+e-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                    <tbody>
+                                        <tr>
+                                            <td align=3D"right" style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial=
+, helvetica, sans-serif; font-size: 12px; color: #222222;">
+                                            <a target=3D"_blank" style=3D"-=
+webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-size: 12px; =
+color: #222222; text-decoration: none;" href=3D"https://blumenauerforms.hou=
+se.gov/news/email/show.aspx?ID=3DDBOTTC6VDNQ54A3V4Y3WGJAMX4"><span style=3D=
+"text-decoration: underline;">Click here</span> if you have trouble viewing=
+ this email</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color:=
+ #ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D=
+"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td align=3D"center" valign=3D"top" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvet=
+ica, sans-serif; font-size: 16px; border-left: 1px solid #cccccc; border-ri=
+ght: 1px solid #cccccc; border-top: 1px solid #cccccc;">
+                    <a target=3D"_blank" href=3D"https://blumenauerforms.ho=
+use.gov/components/redirect/r.aspx?ID=3D3548-1475382" style=3D"-webkit-text=
+-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                    <img alt=3D"Representative Earl Blumenauer" width=3D"64=
+8" style=3D"-ms-interpolation-mode: bicubic;display: block; width: 648px;" =
+src=3D"https://blumenauerforms.house.gov/images/email/header.jpg">
+                    </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color: #=
+59753e;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0=
+" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; font-si=
+ze: 20px; font-family: Arial, Helvetica, sans-serif; text-align: center; ba=
+ckground-color: #59753e; text-transform: uppercase; border-left: 1px solid =
+#cccccc; border-right: 1px solid #cccccc; height: 20px; line-height: 20px;"=
+>
+                        &nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;background-color: #ffffff; font-family: Arial, Helvetica, sa=
+ns-serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D=
+"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td class=3D"responsive-table" valign=3D"top" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Ari=
+al, Helvetica, sans-serif; font-size: 16px; color: #000000; border-left: 1p=
+x solid #cccccc; border-right: 1px solid #cccccc;">
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class=3D"region" id=3D"region-1"><div class=3D=
+"component " style=3D"padding: 0px !important;"> <div class=3D"editable" st=
+yle=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"608">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><d=
+iv class=3D"component-template" style=3D"overflow: hidden;"><p class=3D"par=
+agraph" style=3D"margin: 0;text-align:start"><span style=3D"font-family:Ari=
+al,Helvetica,sans-serif;"><span style=3D"font-size:11pt"><span style=3D"fon=
+t-style:normal"><span style=3D"font-weight:400"><span style=3D"text-decorat=
+ion:none"><span style=3D"vertical-align:baseline"><span style=3D"-webkit-us=
+er-drag:none"><span style=3D"overflow-wrap:break-word"><span style=3D"white=
+-space:pre-wrap"><span style=3D"font-kerning:none"><span style=3D"font-size=
+:12pt"><span style=3D"line-height:1.2">Dear Friend,&nbsp;</span></span>&nbs=
+p;</span></span></span></span></span></span></span></span></span></span></p=
+><p class=3D"paragraph" style=3D"margin: 0;text-align:start"><span style=3D=
+"font-family:Arial,Helvetica,sans-serif;"><span style=3D"font-size:11pt"><s=
+pan style=3D"font-style:normal"><span style=3D"font-weight:400"><span style=
+=3D"text-decoration:none"><span style=3D"vertical-align:baseline"><span sty=
+le=3D"-webkit-user-drag:none"><span style=3D"overflow-wrap:break-word"><spa=
+n style=3D"white-space:pre-wrap"><span style=3D"font-kerning:none">&nbsp;</=
+span></span></span></span></span></span></span></span></span></span></p><p =
+class=3D"paragraph" style=3D"margin: 0;text-align:start"><span style=3D"fon=
+t-family:Arial,Helvetica,sans-serif;"><span style=3D"font-size:11pt"><span =
+style=3D"font-style:normal"><span style=3D"font-weight:400"><span style=3D"=
+text-decoration:none"><span style=3D"vertical-align:baseline"><span style=
+=3D"-webkit-user-drag:none"><span style=3D"overflow-wrap:break-word"><span =
+style=3D"white-space:pre-wrap"><span style=3D"font-kerning:none"><span styl=
+e=3D"font-size:12pt"><span style=3D"line-height:1.2">Last August, Congress =
+enacted the largest expansion of veterans=E2=80=99 benefits in 30 years. I =
+was proud to vote for the PACT Act, which guarantees health care for vetera=
+ns exposed to burn pits, Agent Orange, and other toxic substances. The legi=
+slation also expanded eligibility for post-9/11 combat veterans to enroll i=
+n VA health care. In all, the PACT Act expanded benefits for nearly 3.5 mil=
+lion veterans.&nbsp;</span></span>&nbsp;</span></span></span></span></span>=
+</span></span></span></span></span></p><p class=3D"paragraph" style=3D"marg=
+in: 0;text-align:start"><span style=3D"font-family:Arial,Helvetica,sans-ser=
+if;"><span style=3D"font-size:11pt"><span style=3D"font-style:normal"><span=
+ style=3D"font-weight:400"><span style=3D"text-decoration:none"><span style=
+=3D"vertical-align:baseline"><span style=3D"-webkit-user-drag:none"><span s=
+tyle=3D"overflow-wrap:break-word"><span style=3D"white-space:pre-wrap"><spa=
+n style=3D"font-kerning:none">&nbsp;</span></span></span></span></span></sp=
+an></span></span></span></span></p><p class=3D"paragraph" style=3D"margin: =
+0;text-align:start"><span style=3D"font-family:Arial,Helvetica,sans-serif;"=
+><span style=3D"font-size:11pt"><span style=3D"font-style:normal"><span sty=
+le=3D"font-weight:400"><span style=3D"text-decoration:none"><span style=3D"=
+vertical-align:baseline"><span style=3D"-webkit-user-drag:none"><span style=
+=3D"overflow-wrap:break-word"><span style=3D"white-space:pre-wrap"><span st=
+yle=3D"font-kerning:none"><b><span style=3D"font-size:12pt"><span style=3D"=
+line-height:1.2">Yet only half a million veterans have applied for benefits=
+ so far=E2=80=94and two important deadlines are fast-approaching:&nbsp;</sp=
+an></span></b>&nbsp;</span></span></span></span></span></span></span></span=
+></span></span></p><ul><li class=3D"paragraph" style=3D"text-align:start"><=
+span style=3D"font-family:Arial,Helvetica,sans-serif;"><span style=3D"font-=
+size:11pt"><span style=3D"font-style:normal"><span style=3D"font-weight:400=
+"><span style=3D"text-decoration:none"><span style=3D"vertical-align:baseli=
+ne"><span style=3D"-webkit-user-drag:none"><span style=3D"overflow-wrap:bre=
+ak-word"><span style=3D"white-space:pre-wrap"><span style=3D"font-kerning:n=
+one"><span style=3D"font-size:12pt"><span style=3D"line-height:1.2">Veteran=
+s and their survivors must submit PACT-Act related claims or their intent t=
+o file by <b>August 9, 2023,</b> to access 12-month retroactive compensatio=
+n.&nbsp;</span></span></span></span></span></span></span></span></span></sp=
+an></span></span></li><li class=3D"paragraph" style=3D"text-align:start"><s=
+pan style=3D"font-family:Arial,Helvetica,sans-serif;"><span style=3D"font-s=
+ize:11pt"><span style=3D"font-style:normal"><span style=3D"font-weight:400"=
+><span style=3D"text-decoration:none"><span style=3D"vertical-align:baselin=
+e"><span style=3D"-webkit-user-drag:none"><span style=3D"overflow-wrap:brea=
+k-word"><span style=3D"white-space:pre-wrap"><span style=3D"font-kerning:no=
+ne"><span style=3D"font-size:12pt"><span style=3D"line-height:1.2">Post-9/1=
+1 combat veterans discharged more than ten years ago must enroll in VA heal=
+th care on or before <b>September 30, 2023,</b> to take advantage of the op=
+en enrollment.</span></span>&nbsp;</span></span></span></span></span></span=
+></span></span></span></span></li></ul><p class=3D"paragraph" style=3D"marg=
+in: 0;text-align:start"><span style=3D"font-family:Arial,Helvetica,sans-ser=
+if;"><span style=3D"font-size:11pt"><span style=3D"font-style:normal"><span=
+ style=3D"font-weight:400"><span style=3D"text-decoration:none"><span style=
+=3D"vertical-align:baseline"><span style=3D"-webkit-user-drag:none"><span s=
+tyle=3D"overflow-wrap:break-word"><span style=3D"white-space:pre-wrap"><spa=
+n style=3D"font-kerning:none">&nbsp;</span></span></span></span></span></sp=
+an></span></span></span></span></p><p class=3D"paragraph" style=3D"margin: =
+0;text-align:start"><span style=3D"font-family:Arial,Helvetica,sans-serif;"=
+><span style=3D"font-size:11pt"><span style=3D"font-style:normal"><span sty=
+le=3D"font-weight:400"><span style=3D"text-decoration:none"><span style=3D"=
+vertical-align:baseline"><span style=3D"-webkit-user-drag:none"><span style=
+=3D"overflow-wrap:break-word"><span style=3D"white-space:pre-wrap"><span st=
+yle=3D"font-kerning:none"><span style=3D"font-size:12pt"><span style=3D"lin=
+e-height:1.2">For too long, the federal government has neglected its obliga=
+tion to serve and support our veterans. The PACT Act was a critically overd=
+ue step to change that.&nbsp;</span></span>&nbsp;</span></span></span></spa=
+n></span></span></span></span></span></span></p><p class=3D"paragraph" styl=
+e=3D"margin: 0;text-align:start"><span style=3D"font-family:Arial,Helvetica=
+,sans-serif;"><span style=3D"font-size:11pt"><span style=3D"font-style:norm=
+al"><span style=3D"font-weight:400"><span style=3D"text-decoration:none"><s=
+pan style=3D"vertical-align:baseline"><span style=3D"-webkit-user-drag:none=
+"><span style=3D"overflow-wrap:break-word"><span style=3D"white-space:pre-w=
+rap"><span style=3D"font-kerning:none">&nbsp;</span></span></span></span></=
+span></span></span></span></span></span></p><p class=3D"paragraph" style=3D=
+"margin: 0;text-align:start"><span style=3D"font-family:Arial,Helvetica,san=
+s-serif;"><span style=3D"font-size:11pt"><span style=3D"font-style:normal">=
+<span style=3D"font-weight:400"><span style=3D"text-decoration:none"><span =
+style=3D"vertical-align:baseline"><span style=3D"-webkit-user-drag:none"><s=
+pan style=3D"overflow-wrap:break-word"><span style=3D"white-space:pre-wrap"=
+><span style=3D"font-kerning:none"><span style=3D"font-size:12pt"><span sty=
+le=3D"line-height:1.2">Don=E2=80=99t wait. If you or someone you know is el=
+igible for benefits, apply today. Visit=E2=80=AFthe=E2=80=AF</span></span><=
+span style=3D"font-size:9pt"><span style=3D"line-height:1.2"><a data-cke-sa=
+ved-href=3D"https://blumenauerforms.house.gov/components/redirect/r.aspx?ID=
+=3D3549-1475382" href=3D"https://urldefense.com/v3/__https://www.va.gov/res=
+ources/the-pact-act-and-your-va-benefits/__;!!Fr0YZsIsFWxTZsBm-qTAg68!mVc5p=
+8Z3PT3Kcvh7QlshksAtQZl7ZQCrhwmUScZeEaIdCz8D1rXJzmBqWJ5dGVwzEuSeY7xAC2AJQplq=
+fo82i7KsyiLXVaBjOuQ42fvTqDo$" target=3D"_blank" title=3D"https://www.va.gov=
+/resources/the-pact-act-and-your-va-benefits/" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;color:#0078d7; text-decoration:unde=
+rline"><span style=3D"font-size:12pt"><span style=3D"line-height:1.2">VA.Go=
+v/PACT</span></span></a></span></span><span style=3D"font-size:12pt"><span =
+style=3D"line-height:1.2">, call 1-800-698-2411 or </span></span><span styl=
+e=3D"font-size:12pt"><span style=3D"line-height:1.2">contact my office for =
+more information and support in accessing VA benefits and health care.&nbsp=
+;</span></span>&nbsp;</span></span></span></span></span></span></span></spa=
+n></span></span></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"signature" style=3D"overflow: hidden;width:100%">=20
+            <table role=3D"presentation" class=3D"responsive-table" align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-t=
+able-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collaps=
+e:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table=
+-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"608">
+                <tbody>
+                    <tr>
+                        <td valign=3D"top" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%;">
+                            <table align=3D"left" class=3D"signature-table"=
+ role=3D"presentation" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;=
+mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 1=
+00%; -ms-text-size-adjust: 100%;table-layout: fixed;">
+                                <tbody>
+                                    <tr>
+                                        <td style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;">
+                                            <table role=3D"presentation" al=
+ign=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-=
+table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collap=
+se:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;bord=
+er-collapse: separate !important;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td valign=3D"top" =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                                            <div class=3D"n=
+g-binding" style=3D"overflow: hidden;">Courage,</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td valign=3D"top" =
+class=3D"image-td" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-a=
+djust: 100%;">
+                                                            <div class=3D"i=
+mg-1 image-container" style=3D"overflow: hidden;text-align:left"><img style=
+=3D"max-width:600px;-ms-interpolation-mode: bicubic;vertical-align: bottom;=
+ max-width: 100%; width: 220px !important;" src=3D"https://blumenauerforms.=
+house.gov/images/email/sig.png" alt=3D"Earl Blumenauer Signature" width=3D"=
+220"></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class=3D"spacerRow"=
+ height=3D"0">
+                                                        <td style=3D"-webki=
+t-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-size:0%;line-heig=
+ht: 0px;">
+                                                            &nbsp;
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td valign=3D"top" =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                                            <div class=3D"n=
+g-binding" style=3D"overflow: hidden;">Earl Blumenauer<br>Member of Congres=
+s</div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"608">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"608">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders" style=3D"overflow: hidden;"><div class=
+=3D"component-template" style=3D"overflow: hidden;"><table role=3D"presenta=
+tion" class=3D"responsive-table cke_show_border" cellpadding=3D"10" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;"><tbody><tr><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size=
+-adjust: 100%;border: 10px solid #59753e; text-align:center;"><p style=3D"m=
+argin: 0;margin: 0; text-align: center;">For updates on my work, be sure to=
+ like and follow my official <a data-cke-saved-href=3D"https://blumenauerfo=
+rms.house.gov/components/redirect/r.aspx?ID=3D3550-1475382" href=3D"https:/=
+/urldefense.com/v3/__https://www.facebook.com/congressmanblumenauer__;!!Fr0=
+YZsIsFWxTZsBm-qTAg68!mVc5p8Z3PT3Kcvh7QlshksAtQZl7ZQCrhwmUScZeEaIdCz8D1rXJzm=
+BqWJ5dGVwzEuSeY7xAC2AJQplqfo82i7KsyiLXVaBjOuQ4f5gA5_w$" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;font-size:16px">Facebook</=
+a> and <a data-cke-saved-href=3D"https://blumenauerforms.house.gov/componen=
+ts/redirect/r.aspx?ID=3D3551-1475382" href=3D"https://urldefense.com/v3/__h=
+ttps://www.instagram.com/congressmanearlblumenauer/__;!!Fr0YZsIsFWxTZsBm-qT=
+Ag68!mVc5p8Z3PT3Kcvh7QlshksAtQZl7ZQCrhwmUScZeEaIdCz8D1rXJzmBqWJ5dGVwzEuSeY7=
+xAC2AJQplqfo82i7KsyiLXVaBjOuQ4FvU4Ijo$" style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:16px">Instagram</a>, @congressma=
+nearlblumenauer.</p></td></tr></tbody></table></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div></div>
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color: #=
+ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0=
+" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td align=3D"center" valign=3D"top" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvet=
+ica, sans-serif; font-size: 16px; border-left: 1px solid #cccccc; border-ri=
+ght: 1px solid #cccccc; text-align: center; background-color: #ffffff; padd=
+ing: 0 15pt;">
+                        <em>If you are interested in contacting me about th=
+is issue, please click <a style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;font-size: 16px;" href=3D"https://blumenauerforms.house.=
+gov/components/redirect/r.aspx?ID=3D3552-1475382">here</a>. Also, you can s=
+ign up for my email updates <a style=3D"-webkit-text-size-adjust: 100%; -ms=
+-text-size-adjust: 100%;font-size: 16px;" href=3D"https://blumenauerforms.h=
+ouse.gov/components/redirect/r.aspx?ID=3D3553-1475382">here</a>.</em>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #ffffff; border-left: 1px solid #cccccc; border-right: 1px solid #c=
+ccccc;">
+                    &nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;background-color: #666666; font-family: Arial, Helvetica, sa=
+ns-serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"20" marginheight=
+=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td class=3D"split" align=3D"center" valign=3D"top" sty=
+le=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-lef=
+t: 1px solid #cccccc; border-right: 1px solid #cccccc;">
+                    <table align=3D"left" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" width=3D"49.9%" class=3D"responsive-table" role=3D"presenta=
+tion" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"=
+>
+                        <tbody>
+                            <tr>
+                                <td align=3D"center" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                <table border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" width=3D"100%" role=3D"presentation" style=3D"-webkit-text-siz=
+e-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                    <tbody>
+                                        <tr>
+                                            <td align=3D"left" style=3D"-we=
+bkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial,=
+ helvetica, sans-serif; font-size: 12px; color: #ffffff;">
+                                            <h2 style=3D"font-family: arial=
+, helvetica, sans-serif; font-size: 24px; margin: 0; font-weight: normal;">=
+Office Locations</h2>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table align=3D"left" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" width=3D"49.9%" class=3D"responsive-table" role=3D"presenta=
+tion" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"=
+>
+                        <tbody>
+                            <tr>
+                                <td align=3D"center" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                <table border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" width=3D"100%" role=3D"presentation" style=3D"-webkit-text-siz=
+e-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                    <tbody>
+                                        <tr>
+                                            <td align=3D"right" style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial=
+, helvetica, sans-serif; font-size: 12px; color: #ffffff;">
+                                            <a href=3D"https://blumenauerfo=
+rms.house.gov/components/redirect/r.aspx?ID=3D3554-1475382" style=3D"-webki=
+t-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"Newslett=
+er Signup" src=3D"https://blumenauerforms.house.gov/images/email/newsletter=
+.png" style=3D"-ms-interpolation-mode: bicubic;width: 175px; border-width: =
+0px; border-style: solid;" width=3D"175"></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color: #=
+ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0=
+" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; backgro=
+und-color: #666666; padding: 0 20px; border-left: 1px solid #cccccc; border=
+-right: 1px solid #cccccc;">
+                    <table role=3D"presentation" width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"10" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;text-align:left;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;text-align:=
+left;">
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"32=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: arial, helvetica, sans-serif; text-align:left; font-size: 14px; =
+color: #ffffff; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0pt=
+;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, san=
+s-serif;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: Arial, Helvetica, sans-serif;">Washington, DC Office</stro=
+ng><br>
+                                            1111 Longworth House Office Bui=
+lding<br>
+                                            Washington, DC 20515<br>
+                                            Phone: (202) 225-4811<br>
+                                            Fax: (202) 225-8941
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"32=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: arial, helvetica, sans-serif; text-align:left; font-size: 14px; =
+color: #ffffff; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0pt=
+;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, san=
+s-serif;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: Arial, Helvetica, sans-serif;">Portland Office</strong><br=
+>
+                                            911 N.E. 11th Ave<br>
+                                            Suite 200<br>
+                                            Portland, OR 97232<br>
+                                            Phone: (503) 231-2300<br>
+                                            Fax: (503) 230-5413
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"32=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: arial, helvetica, sans-serif; text-align:center; font-size: 14px=
+; color: #ffffff; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0=
+pt;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, san=
+s-serif;">
+                                            &nbsp;
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:20px; background=
+-color: #666666; border-left: 1px solid #cccccc; border-right: 1px solid #c=
+ccccc;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:10px; background=
+-color: #ffffff; border-left: 1px solid #cccccc; border-right: 1px solid #c=
+ccccc;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;background-color: #ffffff; border-left: =
+1px solid #cccccc; border-right: 1px solid #cccccc;">
+                    <table role=3D"presentation" cellpadding=3D"0" cellspac=
+ing=3D"20" align=3D"center" width=3D"90%" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #5d5=
+d5d; font-size: 10px; font-family: Arial, Helvetica, sans-serif;">
+                                <a target=3D"_blank" href=3D"https://blumen=
+auerforms.house.gov/components/redirect/r.aspx?ID=3D3555-1475382" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #5d5d5d; =
+text-decoration:none; font-family: Arial, Helvetica, sans-serif; font-size:=
+ 10px; text-transform: uppercase;">Update Subscription Options</a>&nbsp;|&n=
+bsp;
+                                <a target=3D"_blank" href=3D"https://urldef=
+ense.com/v3/__https://www.facebook.com/sharer.php?u=3Dhttps:**Ablumenauerfo=
+rms.house.gov*news*email*show.aspx*ID=3DDBOTTC6VDNQ54A3V4Y3WGJAMX4&amp;t=3D=
+Veterans*3a*Secure*your*PACT*Act*Benefits*Before*Aug*9__;Ly8vLy8_JSsrKysrKy=
+sr!!Fr0YZsIsFWxTZsBm-qTAg68!mVc5p8Z3PT3Kcvh7QlshksAtQZl7ZQCrhwmUScZeEaIdCz8=
+D1rXJzmBqWJ5dGVwzEuSeY7xAC2AJQplqfo82i7KsyiLXVaBjOuQ4XUuXq90$" style=3D"-we=
+bkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #5d5d5d; tex=
+t-decoration:none; font-family: Arial, Helvetica, sans-serif; font-size: 10=
+px; text-transform: uppercase;">Privacy Policy</a>&nbsp;|&nbsp;
+                                <a target=3D"_blank" href=3D"https://blumen=
+auerforms.house.gov/Components/Redirect/twitter.aspx?url=3Dhttps://blumenau=
+erforms.house.gov/news/email/show.aspx?ID=3DDBOTTC6VDNQ54A3V4Y3WGJAMX4&amp;=
+name=3DVeterans%3a+Secure+your+PACT+Act+Benefits+Before+Aug+9" style=3D"-we=
+bkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #5d5d5d; tex=
+t-decoration:none; font-family: Arial, Helvetica, sans-serif; font-size: 10=
+px; text-transform: uppercase;">Contact Us</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:10px; background=
+-color: #ffffff; border-left: 1px solid #cccccc; border-right: 1px solid #c=
+ccccc; border-bottom: 1px solid #cccccc;">
+                    &nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    <table role=3D"presentation" width=3D"100%" align=3D"center" style=3D"f=
+ont-family: Georgia, times, serif; background-color: #ffffff;" border=3D"0"=
+ cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" l=
+eftmargin=3D"0" topmargin=3D"0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td valign=3D"m=
+iddle" align=3D"center" style=3D"color: #000000; font-size: 16px; text-alig=
+n: left;">=20
+                                                                <img src=3D=
+"https://blumenauerforms.house.gov/images/spacerx2307-1475382.open" width=
+=3D"20" height=3D"1" style=3D"height: 1px">
+                                                                <br>
+<a href=3D"https://blumenauerforms.house.gov/news/email/show.aspx?ID=3DDBOT=
+TC6VDNQ54A3V4Y3WGJAMX4">Click Here</a> to view this email in your browser <=
+br>
+<a href=3D"https://blumenauerforms.house.gov/Forms/EmailSignup/?Delete=3Dtr=
+ue&amp;MessageID=3D2307&amp;Email=3Dhunter.spence@mail.house.gov">Click Her=
+e</a> to be removed from this list
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table></body>
+</html><br><a href=3D"https://blumenauerforms.house.gov/news/email/show.asp=
+x?ID=3DDBOTTC6VDNQ54A3V4Y3WGJAMX4">View in your browser</a>=
+
+----boundary_3839185_c93916ea-1ff4-4841-a6e3-fb07de034e59--

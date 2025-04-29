@@ -1,0 +1,558 @@
+Received: from SJ0PR09MB6653.namprd09.prod.outlook.com (2603:10b6:a03:267::19)
+ by BLAPR09MB6500.namprd09.prod.outlook.com with HTTPS; Wed, 7 Jul 2021
+ 19:26:15 +0000
+Received: from BL0PR0901CA0019.namprd09.prod.outlook.com
+ (2603:10b6:208:1c0::29) by SJ0PR09MB6653.namprd09.prod.outlook.com
+ (2603:10b6:a03:267::19) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.4308.20; Wed, 7 Jul
+ 2021 19:26:14 +0000
+Received: from DM3GCC02FT005.eop-gcc02.prod.protection.outlook.com
+ (2a01:111:f400:7d04::205) by BL0PR0901CA0019.outlook.office365.com
+ (2603:10b6:208:1c0::29) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.4308.20 via Frontend
+ Transport; Wed, 7 Jul 2021 19:26:14 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.151.69)
+ smtp.mailfrom=mail.house.gov; ushouse.mail.onmicrosoft.com; dkim=fail (body
+ hash did not verify) header.d=house.gov;ushouse.mail.onmicrosoft.com;
+ dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.151.69 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.151.69;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.151.69) by
+ DM3GCC02FT005.mail.protection.outlook.com (10.97.8.206) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.4308.20 via Frontend Transport; Wed, 7 Jul 2021 19:26:13 +0000
+Received: from HRM102.US.House.gov (143.228.151.70) by HRM101.US.House.gov
+ (143.228.151.69) with Microsoft SMTP Server (TLS) id 15.0.1497.18; Wed, 7 Jul
+ 2021 15:26:12 -0400
+Received: from serg-bulk1-h.house.gov (143.228.145.31) by HRM102.US.House.gov
+ (143.228.151.70) with Microsoft SMTP Server id 15.0.1497.18 via Frontend
+ Transport; Wed, 7 Jul 2021 15:26:13 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=message-id :
+ list-unsubscribe : mime-version : from : to : date : subject :
+ content-type; s=august2019-msgb-hg;
+ bh=t/2egdCBBOLoOym/v+G69HiZrUXNvim+I/N9ZRcqCKQ=;
+ b=0DrBU+nehidk4g1DHRjRA+3sNjABrXO3TI08gko9O5Fv+mvifHlxZltP+8bC5ea/Ui9C
+ SoQeEmB9AFDLyc51B4ax2mOLY1w/s1PHDQtusSfvkTRgQJNjxCPIeDLZxp8wEjMFDDad
+ /JoWP5ogLSdfXe0LgvzY3PQMmX+W3N+te+WItOOmoPMKZhRQm0H++O8V3QJIGZSggbAI
+ kKs8wVYi1puY7S8xlCztvxvl/R1IsaUEuadqr+mZNpQ5XyOt2qFiKIFZW9TO0ht2WXut
+ kPXPc+xZiSi8FpvG+bl4Hx3aJzT2urXjOMnrCLU+Z5I8Fq+ARXHjPYFVFXIRE2nKo+Mh hA== 
+Received: from FIRESIDESERV03 (firesideserv03.us.house.gov [143.228.58.103])
+	by serg-bulk1-h.house.gov (8.16.0.27/8.16.0.27) with ESMTP id 167JQCHm013442
+	for <Carter.Moelk@mail.house.gov>; Wed, 7 Jul 2021 15:26:12 -0400
+envelope-from: trey@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+Message-ID: <SMmXJgVI0cbboKKB0S2ZHWgy1c0R/hRY5AhrH5i37V4u8DPC/3PT4vwqcOR7qyl8PJ33LxT0hgjxwJcPrOi3Ggi+yfEngz8PPPVrogDQA3+Maf54yz1s+MfQJplHGaxYGF3udmILQ/zAFBB9+ffvIV/gebfszqpRAyUk64to4r5QbLN0MhKvhTRA/DGAA45x@fireside21.com>
+X-House-Vendor-Seg: unmanaged
+List-Unsubscribe: <https://hollingsworth.house.gov/forms/emailsignup/?Delete=true&MessageID=1477&Email=Carter.Moelk@mail.house.gov&Submit=true>
+Precedence: bulk
+MIME-Version: 1.0
+From: "Rep. Trey Hollingsworth" <trey@mail.house.gov>
+To: Carter.Moelk@mail.house.gov
+Date: 7 Jul 2021 15:26:12 -0400
+Subject: Poll: Media Sensationalism
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:6.0.391,18.0.790
+ definitions=2021-07-07_09:2021-07-06,2021-07-07 signatures=0
+Return-Path: RepresentativeTrey.Hollingsworth@mail.house.gov
+X-OrganizationHeadersPreserved: HRM101.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 07 Jul 2021 19:26:13.8028
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 187f3c63-95ce-4fdf-b904-08d9417d158e
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: HRM102.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted:
+ DM3GCC02FT005.eop-gcc02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ DM3GCC02FT005.eop-gcc02.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: 187f3c63-95ce-4fdf-b904-08d9417d158e
+X-MS-TrafficTypeDiagnostic: SJ0PR09MB6653:
+X-MS-Exchange-Organization-SCL: -1
+X-MS-Oob-TLC-OOBClassifiers: OLM:9508;
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:143.228.151.69;CTRY:US;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SKI;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:;DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 07 Jul 2021 19:26:13.6638
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 187f3c63-95ce-4fdf-b904-08d9417d158e
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.151.69];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: HRM102.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SJ0PR09MB6653
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.8443222
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.4308.021
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(750129)(520011016)(706158)(944506458)(944626604);
+X-Microsoft-Antispam-Message-Info:
+	1UwA+tFytAxbnaqIORFQHU8Bq0M7ksQtIm6Sbm17DWiFF3tEEwZ9wr2LGGq3g/luxdzw/EM39/Rt39k6JbUnYgvCA575zykokzscn2UX1PcnegLuE0hQojoy8F/l5JAs3ymdretpjBNznHSJAtwx/E+pWyXvIB6GID1c3P7oTKMTIxO63TT4BQO4OSVWXxnm0N5ym61TnZLtrNxklkU/8Nuy9I0OnHO/8415C6Gbqo7PMmTjFQW+U1E09EjGY7nDb2mAGnkUfGjAuZyFEsgBvW7MztMn/wgaHkqOaY+GgkML71nqHPVbt1ExJpxhBvMTQK4mUsEgtcg8GOHbZa0aFPM1tVzsiGv2PRdXI2CV9x7baHBwujmr9EOD7xntydAD98HswvTo4p7D9UnsJnKSHDOS2h7/qOkpvWGlLMgX648vGUrzRffhpLtSNzuhqDKZccBcCvXd8FLRyfMYtk9KTg4nu2ASgHidHRidBeIj8JlJCEaXv998Ifn7claZsGW3Ne/OsaEpfWhjeOi4Oc+W1YUl1s7OJrtIamBWMmCrTX5AFeSjou1FBTO7cc09RVrrDZvcUqNctBqnitCpnqWvGkZc4vfseGCAPUDrFWfF73GKzKUI7hVlp8clYFZ+Xds3UazGJfErWFJIqfCmqws07/mhvly/Gz7RbwmT3iSjbLY=
+Content-type: multipart/alternative;
+	boundary="B_3708516394_479057609"
+
+> This message is in MIME format. Since your mail reader does not understand
+this format, some or all of this message may not be legible.
+
+--B_3708516394_479057609
+Content-type: text/plain;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+Hoosiers,Over the last few years, competition for viewership among news org=
+anizations has gotten more fierce due to the 24-hour news cycle, increased a=
+ccess to online information, and ever-expanding social media platforms. To g=
+ain followers, improve site views, and increase click-through-rates, media p=
+latforms have employed various methods, including sensationalism, to attract=
+ people to their news coverage.While sensationalism does not necessarily equ=
+ate to falsehoods, recently, we=E2=80=99ve seen a growing outrage from Americans t=
+hat outlets are spewing =E2=80=9Cfake news=E2=80=9D and failing to deliver truthful, unb=
+iased reporting. As sensationalism becomes a more popular move to attract vi=
+ewers, it begs the question, at what point does =E2=80=9Cclick-bait=E2=80=9D become libe=
+l? Recently, the Supreme Court of the United States rejected a case challeng=
+ing libel protections for journalists and media, but Justices Clarence Thoma=
+s and Neil Gorsuch disagreed with the dismissal, arguing that libel protecti=
+ons should be reevaluated for a modern media age.Justice Gorsuch argued, "La=
+rge numbers of newspapers and periodicals have failed," he wrote. "Network n=
+ews has lost most of its viewers. With their fall has come the rise of 24-ho=
+ur cable news and online media platforms that =E2=80=98monetize anything that garn=
+ers clicks;=E2=80=9D=E2=80=A6 =E2=80=9CWhat started in 1964 with a decision to tolerate the oc=
+casional falsehood to ensure robust reporting by a comparative handful of pr=
+int and broadcast outlets," he wrote, "has evolved into an ironclad subsidy =
+for the publication of falsehoods by means and on a scale previously unimagi=
+nable." Justice Gorsuch and others believe that libel laws need to be reeval=
+uated to ensure that reliable information is being broadcasted to the masses=
+.However, many also believe that libel laws go hand-in-hand with First Amend=
+ment protections. For decades, libel laws have protected journalists=E2=80=99 and =
+reporters=E2=80=99 First Amendment rights as members of the press to report on eve=
+nts relevant to public concern. Protecting the rights of free speech and fre=
+e press are integral to our society, and opponents of revising libel laws ar=
+gue any actions that potentially weaken the press=E2=80=99 ability to report witho=
+ut consequence should not be taken lightly. QUESTION OF THE WEEK: Do you thi=
+nk we should lower the bar for bringing libel suits against the media as sen=
+sationalism increases?[_] Yes, we should lower the bar for bringing libel su=
+its against the media, so outlets are held accountable for sensationalism th=
+ey print[_] No, we should maintain current libel standards [_] I don=E2=80=99t kno=
+w[_] Other=20
+Hoosiers,
+Over the last few years, competition for viewership among news organization=
+s has gotten more fierce due to the 24-hour news cycle, increased access to =
+online information, and ever-expanding social media platforms. To gain follo=
+wers, improve site views, and increase click-through-rates, media platforms =
+have employed various methods, including sensationalism, to attract people t=
+o their news coverage.
+While sensationalism does not necessarily equate to falsehoods, recently, w=
+e=E2=80=99ve seen a growing outrage from Americans that outlets are spewing =E2=80=9Cfak=
+e news=E2=80=9D and failing to deliver truthful, unbiased reporting. As sensationa=
+lism becomes a more popular move to attract viewers, it begs the question, a=
+t what point does =E2=80=9Cclick-bait=E2=80=9D become libel?=20
+Recently, the Supreme Court of the United States rejected a case challengin=
+g libel protections for journalists and media, but Justices Clarence Thomas =
+and Neil Gorsuch disagreed with the dismissal, arguing that libel protection=
+s should be reevaluated for a modern media age.
+Justice Gorsuch argued, "Large numbers of newspapers and periodicals have f=
+ailed," he wrote. "Network news has lost most of its viewers. With their fal=
+l has come the rise of 24-hour cable news and online media platforms that =E2=80=
+=98monetize anything that garners clicks;=E2=80=9D=E2=80=A6 =E2=80=9CWhat started in 1964 with a=
+ decision to tolerate the occasional falsehood to ensure robust reporting by=
+ a comparative handful of print and broadcast outlets," he wrote, "has evolv=
+ed into an ironclad subsidy for the publication of falsehoods by means and o=
+n a scale previously unimaginable." Justice Gorsuch and others believe that =
+libel laws need to be reevaluated to ensure that reliable information is bei=
+ng broadcasted to the masses.
+However, many also believe that libel laws go hand-in-hand with First Amend=
+ment protections. For decades, libel laws have protected journalists=E2=80=99 and =
+reporters=E2=80=99 First Amendment rights as members of the press to report on eve=
+nts relevant to public concern. Protecting the rights of free speech and fre=
+e press are integral to our society, and opponents of revising libel laws ar=
+gue any actions that potentially weaken the press=E2=80=99 ability to report witho=
+ut consequence should not be taken lightly.=20
+QUESTION OF THE WEEK: Do you think we should lower the bar for bringing lib=
+el suits against the media as sensationalism increases?
+[_] Yes, we should lower the bar for bringing libel suits against the media=
+, so outlets are held accountable for sensationalism they print[_] No, we sh=
+ould maintain current libel standards [_] I don=E2=80=99t know[_] Other
+      =20
+ =20
+Jeffersonville
+321 Quartermaster Court
+Jeffersonville, IN 47130
+Phone: 812.288.3999
+Franklin
+100 E Jefferson Street
+Franklin, IN 46131
+Phone: 317.851.8710
+Washington, D.C.
+1641 Longworth HOB
+Washington, DC 20515
+Phone: 202.225.5315
+ =20
+Unsubscribe=20
+ =20
+ =20
+NOTE: Please DO NOT respond to this email as this inbox is unattended. To c=
+ontact my office please click here
+
+ =20
+=20
+Click Here to view this email in your browser=20
+Click Here to be removed from this list 
+
+--B_3708516394_479057609
+Content-type: text/html;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><title>P=
+oll: Media Sensationalism</title><meta name=3D"viewport" content=3D"width=3Ddevice=
+-width, initial-scale=3D1"><!--[if !mso]><!--><meta http-equiv=3D"X-UA-Compatibl=
+e" content=3D"IE=3Dedge"><!--<![endif]--><style>body, table, td, a{-webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%;} /* Prevent WebKit and Window=
+s mobile changing default text sizes */ img{-ms-interpolation-mode: bicubic;=
+} /* Allow smoother rendering of resized image in Internet Explorer *//* RES=
+ET STYLES */img { border: 0; height: auto; line-height: 100%; outline: none;=
+ text-decoration: none; }table { border-collapse: collapse !important; }body=
+ { height: 100% !important; margin: 0 !important; padding: 0 !important; wid=
+th: 100% !important; }strong { font-weight: bold; } /* Editor reset *//* FIR=
+ESIDE STYLES */.component img {max-width:600px;}.component table {mso-table-=
+rspace:10pt; border-collapse:collapse;}.component { padding: 0px !important;=
+ }.press {padding-bottom: 0px;}</style><style>@media all and (max-width:650p=
+x) {            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td, =
+.image-2, .img-2 img, .image-2 tr, .image-2 td {max-width: 100% !important; =
+width: 100% !important;}            .responsive-table {width:100% !important=
+;}            .responsive-table img {max-width:100% !important; height: auto=
+ !important;}            .press .component, .press td {text-align:center;}  =
+          .component { margin-left: 20px; margin-right: 20px;}            .c=
+omponent .responsive-table { margin-left: 0px !important; margin-right: 0px =
+!important;}            .wide .video-thumb { width: 100% !important;height: =
+auto !important; }             .wide.video-container { width: 100% !importan=
+t; }         .component.full-width {margin-left: 0px; margin-right: 0px; }  =
+ }</style><style type=3D"text/css">
+            /* CLIENT-SPECIFIC STYLES */
+            body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text =
+sizes */
+            table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Rem=
+ove spacing between tables in Outlook 2007 and up */
+            img{-ms-interpolation-mode: bicubic;} /* Allow smoother renderi=
+ng of resized image in Internet Explorer */
+            /* RESET STYLES */
+            img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: =
+0 !important; width: 100% !important; }
+            strong { font-weight: bold; } /* Editor reset */
+            /* FIRESIDE STYLES */
+            .component img {max-width:600px;}
+            .component table {mso-table-rspace:10pt; border-collapse:collap=
+se; font-family: Arial, Helvetica, sans-serif;}
+            .component td, td {font-family: Arial, Helvetica, sans-serif;}
+            .component { padding: 0px !important; }
+            .press {padding-bottom: 0px;}
+            .caption-1 td {font-family: Arial, Helvetica, sans-serif;}
+            /* Margin/NoMargin STYLES */
+            .component.full-width{ overflow: hidden; margin: 0px; }
+            /* HEADER STYLES */
+            .header-bar {width: 100%;}
+            .header-bar-margin {background-color:#ffffff;}
+            .header-bar h2 {margin: 0 !important; padding: 0 !important; co=
+lor: #000000;text-align: center;font-size: 24px;font-weight: bold; }
+            .survey-content > table > tbody tr td { border-color: #2e4e7b !=
+important; }
+            .survey-content input.survey-submit { font-family: Arial, Helve=
+tica, sans-serif !important; }
+        </style><style id=3D"media-queries"> 
+            @media all and (max-width:650px) {
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max=
+-width: 100% !important; width: 100% !important;}
+            .responsive-table {width:100% !important;}
+            .responsive-table img {max-width:100% !important; height: auto =
+!important;}
+            .press .component, .press td, .split .component, .split .compon=
+ent td, .split td {text-align:center;}
+            .component { margin-left: 20px; margin-right: 20px;}
+            .component .responsive-table { margin-left: 0px !important; mar=
+gin-right: 0px !important;}
+            .wide .video-thumb { width: 100% !important;height: auto !impor=
+tant; } 
+            .wide.video-container { width: 100% !important; }
+            }
+        </style><!--[if (gte mso 9)|(IE)]>
+                                            <style>=20
+                                        </style>
+                                        <![endif]--></head><body style=3D"-we=
+bkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;margin: 0px !importa=
+nt; padding: 0px !important;"><div id=3D"preview-text" style=3D"display: none; f=
+ont-size: 1px; color: #fefefe; line-height: 1px; font-family: Arial, Helveti=
+ca, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidde=
+n;">Hoosiers,Over the last few years, competition for viewership among news =
+organizations has gotten more fierce due to the 24-hour news cycle, increase=
+d access to online information, and ever-expanding social media platforms. T=
+o gain followers, improve site views, and increase click-through-rates, medi=
+a platforms have employed various methods, including sensationalism, to attr=
+act people to their news coverage.While sensationalism does not necessarily =
+equate to falsehoods, recently, we=E2=80=99ve seen a growing outrage from American=
+s that outlets are spewing =E2=80=9Cfake news=E2=80=9D and failing to deliver truthful, =
+unbiased reporting. As sensationalism becomes a more popular move to attract=
+ viewers, it begs the question, at what point does =E2=80=9Cclick-bait=E2=80=9D become l=
+ibel? Recently, the Supreme Court of the United States rejected a case chall=
+enging libel protections for journalists and media, but Justices Clarence Th=
+omas and Neil Gorsuch disagreed with the dismissal, arguing that libel prote=
+ctions should be reevaluated for a modern media age.Justice Gorsuch argued, =
+&quot;Large numbers of newspapers and periodicals have failed,&quot; he wrot=
+e. &quot;Network news has lost most of its viewers. With their fall has come=
+ the rise of 24-hour cable news and online media platforms that =E2=80=98monetize =
+anything that garners clicks;=E2=80=9D=E2=80=A6 =E2=80=9CWhat started in 1964 with a decision =
+to tolerate the occasional falsehood to ensure robust reporting by a compara=
+tive handful of print and broadcast outlets,&quot; he wrote, &quot;has evolv=
+ed into an ironclad subsidy for the publication of falsehoods by means and o=
+n a scale previously unimaginable.&quot; Justice Gorsuch and others believe =
+that libel laws need to be reevaluated to ensure that reliable information i=
+s being broadcasted to the masses.However, many also believe that libel laws=
+ go hand-in-hand with First Amendment protections. For decades, libel laws h=
+ave protected journalists=E2=80=99 and reporters=E2=80=99 First Amendment rights as memb=
+ers of the press to report on events relevant to public concern. Protecting =
+the rights of free speech and free press are integral to our society, and op=
+ponents of revising libel laws argue any actions that potentially weaken the=
+ press=E2=80=99 ability to report without consequence should not be taken lightly.=
+ QUESTION OF THE WEEK: Do you think we should lower the bar for bringing lib=
+el suits against the media as sensationalism increases?[_] Yes, we should lo=
+wer the bar for bringing libel suits against the media, so outlets are held =
+accountable for sensationalism they print[_] No, we should maintain current =
+libel standards [_] I don=E2=80=99t know[_] Other </div><table role=3D"presentation"=
+ width=3D"650" align=3D"center" class=3D"responsive-table" style=3D"-webkit-text-siz=
+e-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, sa=
+ns-serif; background-color: #ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><tbody><t=
+r><td align=3D"center" valign=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms=
+-text-size-adjust: 100%;font-family: Arial, Helvetica, sans-serif; font-size=
+: 16px;"><div class=3D"region" id=3D"region-1"><div class=3D"component full-width"=
+ style=3D"padding: 0px !important;"><div class=3D"image" style=3D"overflow: hidden=
+;width:100%"><table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; =
+mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; table-layou=
+t: fixed; margin-right: 0px; margin-left: 0px;" width=3D"650"><tbody><tr><td v=
+align=3D"top" class=3D"image-td" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;"><div class=3D"img-1 image-container" style=3D"overflow: hid=
+den;"><a href=3D"https://hollingsworth.house.gov/components/redirect/r.aspx?ID=
+=3D4261-1494513" target=3D"_blank" style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;"><img style=3D"max-width:600px;-ms-interpolation-mode: b=
+icubic;vertical-align: bottom; max-width: 650px;" alt=3D"Representative Trey H=
+ollingsworth" src=3D"https://hollingsworth.house.gov/uploadedphotos/highresolu=
+tion/6a59fc1d-54ff-4c75-b9af-8f9b356cf98c.png"></a></div></td></tr></tbody><=
+/table></div></div></div></td></tr></tbody></table><table role=3D"presentation=
+" width=3D"650" align=3D"center" class=3D"responsive-table" style=3D"-webkit-text-si=
+ze-adjust: 100%; -ms-text-size-adjust: 100%;background-color: #ffffff; font-=
+family: Arial, Helvetica, sans-serif;" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><tbody><=
+tr><td class=3D"responsive-table" valign=3D"top" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, sans-serif=
+; font-size: 16px; color: #000000;"><div class=3D"region" id=3D"region-2"><div c=
+lass=3D"component " style=3D"padding: 0px !important;"><div class=3D"editable" sty=
+le=3D"overflow: hidden;width:100%"><table class=3D"responsive-table" role=3D"prese=
+ntation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:=
+0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed=
+; margin-right: 20px; margin-left: 20px;" width=3D"610"><tbody><tr><td class=3D"=
+table-w-bg-color" valign=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;"><div class=3D"cke_editable cke_editable_inline cke_cont=
+ents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><div class=3D"c=
+omponent-template" style=3D"overflow: hidden;"><p style=3D"margin: 0;"><span sty=
+le=3D"font-size:12pt"><span style=3D"font-family:Calibri,sans-serif"><span style=
+=3D"color:black">Hoosiers,</span></span></span></p><p style=3D"margin: 0;"><br><=
+/p><p style=3D"margin: 0;"><span style=3D"font-size:12pt"><span style=3D"font-fami=
+ly:Calibri,sans-serif"><span style=3D"color:black">Over the last few years, co=
+mpetition for viewership among news organizations has gotten more fierce due=
+ to the 24-hour news cycle, increased access to online information, and ever=
+-expanding social media platforms. To gain followers, improve site views, an=
+d increase click-through-rates, media platforms have employed various method=
+s, including sensationalism, to attract people to their news coverage.</span=
+></span></span></p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span=
+ style=3D"font-size:12pt"><span style=3D"font-family:Calibri,sans-serif"><span s=
+tyle=3D"color:black">While sensationalism does not necessarily equate to false=
+hoods, recently, we=E2=80=99ve seen a growing outrage from Americans that outlets =
+are spewing =E2=80=9Cfake news=E2=80=9D and failing to deliver truthful, unbiased report=
+ing. As sensationalism becomes a more popular move to attract viewers, it be=
+gs the question, at what point does =E2=80=9Cclick-bait=E2=80=9D become libel? </span></=
+span></span></p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span st=
+yle=3D"font-size:12pt"><span style=3D"font-family:Calibri,sans-serif"><span styl=
+e=3D"color:black">Recently, the Supreme Court of the United States rejected a =
+case challenging libel protections for journalists and media, but Justices C=
+larence Thomas and Neil Gorsuch disagreed with the dismissal, arguing that l=
+ibel protections should be reevaluated for a modern media age.</span></span>=
+</span></p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span style=3D"=
+font-size:12pt"><span style=3D"font-family:Calibri,sans-serif"><span style=3D"co=
+lor:black">Justice Gorsuch <a data-cke-saved-href=3D"https://hollingsworth.hou=
+se.gov/components/redirect/r.aspx?ID=3D4262-1494513" href=3D"https://www.supreme=
+court.gov/opinions/20pdf/20-1063_986b.pdf" style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;color:#0563c1; text-decoration:underline">a=
+rgued</a>, &quot;Large numbers of newspapers and periodicals have failed,&qu=
+ot; he wrote. &quot;Network news has lost most of its viewers. With their fa=
+ll has come the rise of 24-hour cable news and online media platforms that =E2=
+=80=98monetize anything that garners clicks;=E2=80=9D=E2=80=A6 =E2=80=9C</span><span style=3D"backgr=
+ound:white"><span style=3D"color:black">What started in 1964 with a decision t=
+o tolerate the occasional falsehood to ensure robust reporting by a comparat=
+ive handful of print and broadcast outlets,&quot; he wrote, &quot;has evolve=
+d into an ironclad subsidy for the publication of falsehoods by means and on=
+ a scale previously unimaginable.&quot; Justice Gorsuch and others believe t=
+hat libel laws need to be reevaluated to ensure that reliable information is=
+ being broadcasted to the masses.</span></span></span></span></p><p style=3D"m=
+argin: 0;"><br></p><p style=3D"margin: 0;"><span style=3D"font-size:12pt"><span =
+style=3D"font-family:Calibri,sans-serif">However, many also believe that libel=
+ laws go hand-in-hand with First Amendment protections. For decades, libel l=
+aws have protected journalists=E2=80=99 and reporters=E2=80=99 First Amendment rights as=
+ members of the press to report on events relevant to public concern. Protec=
+ting the rights of free speech and free press are integral to our society, a=
+nd opponents of revising libel laws argue any actions that potentially weake=
+n the press=E2=80=99 ability to report without consequence should not be taken lig=
+htly. </span></span></p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;">=
+<a data-cke-saved-href=3D"https://hollingsworth.house.gov/components/redirect/=
+r.aspx?ID=3D4263-1494513" target=3D"_blank" href=3D"https://hollingsworth.house.go=
+v/forms/form/?ID=3D130" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-a=
+djust: 100%;"><span style=3D"font-size:12pt"><span style=3D"font-family:Calibri,=
+sans-serif"><b>QUESTION OF THE WEEK:</b> Do you think we should lower the ba=
+r for bringing libel suits against the media as sensationalism increases?</s=
+pan></span></a></p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span=
+ style=3D"font-size:12pt"><span style=3D"font-family:Calibri,sans-serif"><a data=
+-cke-saved-href=3D"https://hollingsworth.house.gov/components/redirect/r.aspx?=
+ID=3D4264-1494513" target=3D"_blank" href=3D"https://hollingsworth.house.gov/forms=
+/form/?ID=3D130" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: =
+100%;">[_]</a> Yes, we should lower<span style=3D"color:black"> the bar for br=
+inging libel suits</span> against the media, so outlets are held accountable=
+ for sensationalism they print</span></span></p><p style=3D"margin: 0;"><span =
+style=3D"font-size:12pt"><span style=3D"font-family:Calibri,sans-serif"><a data-=
+cke-saved-href=3D"https://hollingsworth.house.gov/components/redirect/r.aspx?I=
+D=3D4265-1494513" target=3D"_blank" href=3D"https://hollingsworth.house.gov/forms/=
+form/?ID=3D130" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;">[_]</a> No, we should maintain current libel standards </span></span><=
+/p><p style=3D"margin: 0;"><span style=3D"font-size:12pt"><span style=3D"font-fami=
+ly:Calibri,sans-serif"><a data-cke-saved-href=3D"https://hollingsworth.house.g=
+ov/components/redirect/r.aspx?ID=3D4266-1494513" target=3D"_blank" href=3D"https:/=
+/hollingsworth.house.gov/forms/form/?ID=3D130" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;">[_]</a> I don=E2=80=99t know</span></span></p=
+><p style=3D"margin: 0;"><span style=3D"font-size:12pt"><span style=3D"font-family=
+:Calibri,sans-serif"><a data-cke-saved-href=3D"https://hollingsworth.house.gov=
+/components/redirect/r.aspx?ID=3D4267-1494513" target=3D"_blank" href=3D"https://h=
+ollingsworth.house.gov/forms/form/?ID=3D130" style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">[_]</a> Other</span></span></p></div></di=
+v></td></tr></tbody></table></div></div></div><table role=3D"presentation" cla=
+ss=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-a=
+djust: 100%;"><tbody><tr height=3D"20"><td style=3D"-webkit-text-size-adjust: 10=
+0%; -ms-text-size-adjust: 100%;"><span></span></td></tr></tbody></table></td=
+></tr></tbody></table><table role=3D"presentation" width=3D"650" class=3D"responsi=
+ve-table" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color: =
+#2e4e7b;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" margin=
+width=3D"0" leftmargin=3D"0" topmargin=3D"0"><tbody><tr><td valign=3D"middle" align=3D=
+"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;c=
+olor: #2e4e7b; background-color: #ffffff;"><a target=3D"_blank" href=3D"https://=
+hollingsworth.house.gov/components/redirect/r.aspx?ID=3D4268-1494513" style=3D"-=
+webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"instag=
+ram icon" width=3D"40" src=3D"https://hollingsworth.house.gov/images/email/web.p=
+ng" style=3D"-ms-interpolation-mode: bicubic;border-width: 0px; border-style: =
+solid; width: 40px;"></a> &nbsp;<a target=3D"_blank" href=3D"https://hollingswor=
+th.house.gov/components/redirect/r.aspx?ID=3D4269-1494513" style=3D"-webkit-text=
+-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"facebook icon" wi=
+dth=3D"40" src=3D"https://hollingsworth.house.gov/images/email/fb.png" style=3D"-m=
+s-interpolation-mode: bicubic;border-width: 0px; border-style: solid; width:=
+ 40px;"></a> &nbsp;<a target=3D"_blank" href=3D"https://hollingsworth.house.gov/=
+components/redirect/r.aspx?ID=3D4270-1494513" style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;"><img alt=3D"twitter icon" width=3D"40" src=3D"=
+https://hollingsworth.house.gov/images/email/tw.png" style=3D"-ms-interpolatio=
+n-mode: bicubic;border-width: 0px; border-style: solid; width: 40px;"></a> &=
+nbsp;<a target=3D"_blank" href=3D"https://hollingsworth.house.gov/components/red=
+irect/r.aspx?ID=3D4271-1494513" style=3D"-webkit-text-size-adjust: 100%; -ms-tex=
+t-size-adjust: 100%;"><img alt=3D"youtube icon" width=3D"40" src=3D"https://hollin=
+gsworth.house.gov/images/email/yt.png" style=3D"-ms-interpolation-mode: bicubi=
+c;border-width: 0px; border-style: solid; width: 40px;"></a> </td></tr><tr><=
+td valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms=
+-text-size-adjust: 100%;height:10px; background-color: #ffffff;">&nbsp; </td=
+></tr><tr><td valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;color: #ffffff; background-color: #2e4e7b=
+; padding: 0 20px;"><table role=3D"presentation" width=3D"100%" cellpadding=3D"0" =
+cellspacing=3D"10" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust=
+: 100%;text-align:center;"><tbody><tr><td valign=3D"middle" align=3D"center" sty=
+le=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;text-align:ce=
+nter;"><table role=3D"presentation" cellpadding=3D"0" class=3D"responsive-table" a=
+lign=3D"left" cellspacing=3D"0" width=3D"32.9%" style=3D"-webkit-text-size-adjust: 1=
+00%; -ms-text-size-adjust: 100%;font-family: arial, helvetica, sans-serif; t=
+ext-align:center; font-size: 14px; color: #ffffff; margin: 10px 0;mso-table-=
+lspace: 0pt; mso-table-rspace: 0pt;"><tbody><tr><td style=3D"-webkit-text-size=
+-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, san=
+s-serif;"><strong style=3D"font-weight: bold;font-family: Arial, Helvetica, sa=
+ns-serif; text-transform: uppercase;">Jeffersonville</strong><br>321 Quarter=
+master Court<br>Jeffersonville, IN 47130<br>Phone: 812.288.3999<br></td></tr=
+></tbody></table><table role=3D"presentation" cellpadding=3D"0" class=3D"responsiv=
+e-table" align=3D"left" cellspacing=3D"0" width=3D"32.9%" style=3D"-webkit-text-size=
+-adjust: 100%; -ms-text-size-adjust: 100%;font-family: arial, helvetica, san=
+s-serif; text-align:center; font-size: 14px; color: #ffffff; margin: 10px 0;=
+mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tbody><tr><td style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helv=
+etica, sans-serif;"><strong style=3D"font-weight: bold;font-family: Arial, Hel=
+vetica, sans-serif; text-transform: uppercase;">Franklin</strong><br>100 E J=
+efferson Street<br>Franklin, IN 46131<br>Phone: 317.851.8710<br></td></tr></=
+tbody></table><table role=3D"presentation" cellpadding=3D"0" class=3D"responsive-t=
+able" align=3D"left" cellspacing=3D"0" width=3D"32.9%" style=3D"-webkit-text-size-ad=
+just: 100%; -ms-text-size-adjust: 100%;font-family: arial, helvetica, sans-s=
+erif; text-align:center; font-size: 14px; color: #ffffff; margin: 10px 0;mso=
+-table-lspace: 0pt; mso-table-rspace: 0pt;"><tbody><tr><td style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helveti=
+ca, sans-serif;"><strong style=3D"font-weight: bold;font-family: Arial, Helvet=
+ica, sans-serif; text-transform: uppercase;">Washington, D.C.</strong><br>16=
+41 Longworth HOB<br>Washington, DC 20515<br>Phone: 202.225.5315<br></td></tr=
+></tbody></table></td></tr></tbody></table></td></tr><tr><td valign=3D"middle"=
+ align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust:=
+ 100%;height:10px; background-color: #2e4e7b;">&nbsp; </td></tr><tr><td vali=
+gn=3D"middle" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;background-color: #2e4e7b;"><table role=3D"presentation" cellpadding=3D"0" cel=
+lspacing=3D"20" align=3D"center" width=3D"90%" style=3D"-webkit-text-size-adjust: 10=
+0%; -ms-text-size-adjust: 100%;"><tbody><tr><td valign=3D"middle" align=3D"cente=
+r" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: =
+#2e4e7b; font-size: 15px; font-family: Arial, Helvetica, sans-serif;"><a tar=
+get=3D"_blank" href=3D"https://hollingsworth.house.gov/components/redirect/r.asp=
+x?ID=3D4272-1494513" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adju=
+st: 100%;color: #ffffff; text-decoration:none; font-family: Arial, Helvetica=
+, sans-serif; font-size: 15px;">Unsubscribe</a> </td></tr></tbody></table></=
+td></tr><tr><td valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;height:10px; background-color: #2e4e7b;=
+">&nbsp; </td></tr><tr><td valign=3D"middle" align=3D"center" style=3D"-webkit-tex=
+t-size-adjust: 100%; -ms-text-size-adjust: 100%;height:10px; background-colo=
+r: #D4AF37; font-size: 10px; line-height: 10px;">&nbsp; </td></tr><tr><td va=
+lign=3D"middle" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;color: #ffffff; background-color: #D4AF37; font-family: A=
+rial, Helvetica, sans-serif; font-size: 12px; text-align: center;"><p style=3D=
+"margin: 0;font-family: Arial, Helvetica, sans-serif; font-size: 12px; margi=
+n: 0; font-weight: normal; padding: 0 15pt;">NOTE: Please DO NOT respond to =
+this email as this inbox is unattended. To contact my office please <a href=3D=
+"https://hollingsworth.house.gov/components/redirect/r.aspx?ID=3D4273-1494513"=
+ style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #f=
+fffff; font-size: 12px;">click here</a></p></td></tr><tr><td valign=3D"middle"=
+ align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust:=
+ 100%;height:10px; background-color: #D4AF37; font-size: 10px; line-height: =
+10px;">&nbsp; </td></tr></tbody></table><table role=3D"presentation" width=3D"10=
+0%" align=3D"center" style=3D"font-family: Georgia, times, serif; background-col=
+or: #ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" ma=
+rginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><tbody><tr><td valign=3D"middle" al=
+ign=3D"center" style=3D"color: #000000; font-size: 16px; text-align: left;"><img=
+ src=3D"https://hollingsworth.house.gov/images/spacerx1477-1494513.open" width=
+=3D"20" height=3D"1" style=3D"height: 1px"> <br><a href=3D"https://hollingsworth.hou=
+se.gov/news/email/show.aspx?ID=3D6VO2JMCWKYE5BR2SXM3DAGWC4M">Click Here</a> to=
+ view this email in your browser <br><a href=3D"https://hollingsworth.house.go=
+v/Forms/EmailSignup/?Delete=3Dtrue&amp;MessageID=3D1477&amp;Email=3DCarter.Moelk@m=
+ail.house.gov">Click Here</a> to be removed from this list </td></tr></tbody=
+></table></body></html>
+
+--B_3708516394_479057609--
+

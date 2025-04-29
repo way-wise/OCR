@@ -1,0 +1,785 @@
+Received: from PH0PR09MB8684.namprd09.prod.outlook.com (2603:10b6:510:6d::10)
+ by MN2PR09MB5531.namprd09.prod.outlook.com with HTTPS; Tue, 19 Jan 2021
+ 18:18:30 +0000
+Received: from DM6PR09CA0036.namprd09.prod.outlook.com (2603:10b6:5:160::49)
+ by PH0PR09MB8684.namprd09.prod.outlook.com (2603:10b6:510:6d::10) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.3742.6; Tue, 19 Jan
+ 2021 18:18:30 +0000
+Received: from DM3GCC02FT001.eop-gcc02.prod.protection.outlook.com
+ (2a01:111:f400:7d04::206) by DM6PR09CA0036.outlook.office365.com
+ (2603:10b6:5:160::49) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.3763.9 via Frontend
+ Transport; Tue, 19 Jan 2021 18:18:29 +0000
+Authentication-Results: spf=fail (sender IP is 143.231.249.134)
+ smtp.mailfrom=mail.house.gov; ushouse.mail.onmicrosoft.com; dkim=fail (body
+ hash did not verify) header.d=house.gov;ushouse.mail.onmicrosoft.com;
+ dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.231.249.134 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.231.249.134;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.231.249.134) by
+ DM3GCC02FT001.mail.protection.outlook.com (10.97.8.112) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.3763.12 via Frontend Transport; Tue, 19 Jan 2021 18:18:29 +0000
+Received: from EXGW201.US.House.gov (143.228.51.89) by EXGW204.US.House.gov
+ (143.228.51.92) with Microsoft SMTP Server (TLS) id 15.0.1497.2; Tue, 19 Jan
+ 2021 13:18:28 -0500
+Received: from serg-bulk4-h.house.gov (143.228.145.126) by
+ EXGW201.US.House.gov (143.228.51.89) with Microsoft SMTP Server id
+ 15.0.1497.2 via Frontend Transport; Tue, 19 Jan 2021 13:18:29 -0500
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=message-id :
+ list-unsubscribe : mime-version : from : to : date : subject :
+ content-type; s=august2019-msgb-hg;
+ bh=aODreLctvWY74vewrDmSZQKQk+Oo6UAhveLRZXyUtIA=;
+ b=jWMrVNoWNMCuW+vHdv4jTBg/VoA1CkW7pI2WEgC7g8cObt0bc7Ke1fbwwQx6eXQJ7z38
+ P4MKEAGSuVw3bgxROZ0ZAq8Gcz/Elp1jj/PgDNy/nlzcJxZseEoe4B/JH50pbq/GJuMC
+ wRwl6u3iU3+j3xWN0SrhkXYiK2F2C/ywrbKo5vpkRTFxq63IjZFjdkzQNqtlTgzojL3E
+ CnFYMvjiHEWIPJ21tEeXxGy/x4aN1HMJgd1nbD0diG2I19i05jT5799aWADd1q1IMpyK
+ wwD1TGg921tmlKP9dUV1tKAgHd3sODLUbxXOFzACP7rrqG8dehhzyrYhPhqUWPsTWeRU yA== 
+Received: from FIRESIDESERV06 (firesideserv06.us.house.gov [143.228.58.67])
+	by serg-bulk4-h.house.gov (8.16.0.27/8.16.0.27) with ESMTP id 10JIIS2r004521
+	for <Jackie.Burns@mail.house.gov>; Tue, 19 Jan 2021 13:18:29 -0500
+envelope-from: noreply@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+Message-ID: <a8CGRziSVB9WPSd7hZyA+FO0E1gJSFp5cCq760ArBwvYwItxW/CagbfCMWsb9Mc6Tiv5jVopOI03ZZTQERmJaSI7bn6/Es2CFGo4BloRAkhF4BcJbMGcI7iGy66taaqpGmA451nb5cH4/PsAxC8xNiKVTSy8rwje/oZbXZqnpe5qNoKPEFyBL4pfuvcUMELb@fireside21.com>
+X-House-Vendor-Seg: unmanaged
+List-Unsubscribe: <https://sherrillforms.house.gov/forms/emailsignup/?Delete=true&MessageID=345&Email=Jackie.Burns@mail.house.gov&Submit=true>
+Precedence: bulk
+MIME-Version: 1.0
+From: "Rep. Mikie Sherrill" <noreply@mail.house.gov>
+To: Jackie.Burns@mail.house.gov
+Date: 19 Jan 2021 13:18:29 -0500
+Subject: PPP Loans, Economic Impact Payments, and Vaccine Information
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:6.0.343,18.0.737
+ definitions=2021-01-19_07:2021-01-18,2021-01-19 signatures=0
+Return-Path: NoReply@mail.house.gov
+X-OrganizationHeadersPreserved: EXGW204.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 19 Jan 2021 18:18:29.7742
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 25e055bd-957a-4d12-6e13-08d8bca69f65
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXGW201.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted:
+ DM3GCC02FT001.eop-gcc02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ DM3GCC02FT001.eop-gcc02.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: 25e055bd-957a-4d12-6e13-08d8bca69f65
+X-MS-TrafficTypeDiagnostic: PH0PR09MB8684:
+X-MS-Exchange-Organization-SCL: -1
+X-MS-Oob-TLC-OOBClassifiers: OLM:5797;
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:143.231.249.134;CTRY:US;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SKI;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:;DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 19 Jan 2021 18:18:29.6233
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 25e055bd-957a-4d12-6e13-08d8bca69f65
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.231.249.134];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXGW201.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PH0PR09MB8684
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.2965371
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.3763.014
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(750128)(520011016)(706158)(944506458)(944626604);
+X-Microsoft-Antispam-Message-Info:
+	SOHs6DVBlFFJewVyd2ZeMa4KLMLkREFwO28IhCKsyfyDwnAhHTHa5z8iF23OC5l3hGK7utkbOwZWotbBysX1fCQy9i+d+Ii4dAEQOfdi8NrDZjJDIkAnhTUYFbw6BbOK9ff47uC2xZYwnOES7vVq2BmLtctt/d6dPFVugr9bM2ozj+kg0a0uqb5tS6xrZpiwjPK7c1izpXugaBxMZ4hLNaIoZsdBOWNSQRy6Y+l6F6hvYlFMfV7WkoF22+3bCGDCQ0OOl7OwYuKLSfrAKKghbXMCsHkZWR6O0031zmaBVGeQhuTrMiom3mYhSSrFJWZUxtfFO7PNP9BT0+lhVv2Yt1tGkb8uFPN+10I/6XLEEMfVb7A7OLFGgyOTuzUkPcJjO1PYlZZdTG1zguHJctni63sWgBmwEnbFK+WsUZN2iiy+7gIbho68Bl3i8LY+NDd/2cUiG/LLwnhn/zHO2wlTrjULRW2/Aw6qlwEhWaFg3wA=
+Content-type: multipart/alternative;
+	boundary="B_3694076056_1068700895"
+
+> This message is in MIME format. Since your mail reader does not understand
+this format, some or all of this message may not be legible.
+
+--B_3694076056_1068700895
+Content-type: text/plain;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+=20
+Dear Friends,We=E2=80=99ve been through a lot as a nation in these early days of =
+2021. I would like to thank you for the support and kind words I have receiv=
+ed since the insurrection on our Capitol. I am working hard to hold those wh=
+o incited, enabled, and participated accountable for their actions.Despite t=
+he challenges and awful events in Washington, we must continue to focus on t=
+he COVID relief our country desperately needs. I=E2=80=99ve heard many questions a=
+nd concerns regarding the COVID-19 vaccine distribution in New Jersey, the n=
+ext round of PPP loans, EIDL and EIP stimulus checks. You can find details o=
+n federal programs and vaccine distribution below.I=E2=80=99ll continue to send up=
+dates in newsletters and on my social media pages as more information is ava=
+ilable. And finally, I would like to congratulate the local elected official=
+s who were recently sworn in throughout the district. A bright spot for me d=
+uring this difficult past year has been seeing how local officials have part=
+nered together to support our residents. I look forward to working with all =
+of you and supporting the work you undertake on behalf of your towns and you=
+r constituents.  Best wishes and I hope that you and your loved ones stay sa=
+fe and healthy,
+Mikie Sherrill
+
+
+=20
+SMALL BUSINESS: PAYCHECK PROTECTION PROGRAM
+Meeting with small business owners across the district during COVID, it is =
+clear that the Paycheck Protection Program (PPP) established by the CARES Ac=
+t last March has been a lifeline during this crisis. In fact, $530 million i=
+n PPP loans under $150,000 came to NJ-11 in 2020.=20
+
+But it was also extremely clear that small businesses needed more relief. I=
+ was proud to vote for the Economic Aid to Hard-Hit Small Businesses, Nonpro=
+fits, and Venues Act (Economic Aid Act) as part of the Coronavirus Response =
+and Relief Supplemental Appropriations Act of 2021 that passed in December. =
+This legislation reopened the PPP through March 31, 2021, with $284.45 billi=
+on in funding.
+
+The PPP is reopening in stages. On Friday, January 15 it opened to lenders =
+with less than $1 billion in assets. And it opens to ALL lenders on Tuesday,=
+ January 19. Similar to the first round of the PPP, small businesses and non=
+profits should apply for the loans through a private lender. Large banks, co=
+mmunity banks, and FinTech lenders are all taking applications.=20
+
+First Draw and Second Draw loans are available for eligible small businesse=
+s and nonprofits.=20
+You may be eligible for a First Draw loan if you did not receive a PPP loan=
+ prior to August 8, 2020.=20
+
+You may be eligible for a Second Draw loan if you already received and spen=
+t your First Draw, have 300 employees or less, and can demonstrate a 25% los=
+s in revenue between comparable quarters in 2019 and 2020.
+
+Other highlights of the legislation with respect to PPP include a simplifie=
+d 1-page loan forgiveness certification for those who received a loan of $15=
+0,000 or less and expanded use of PPP funds to include new expenses like PPE=
+ and some operational expenses. With respect to the tax treatment of PPP Loa=
+ns, this provision clarified that gross income does not include any amount t=
+hat would otherwise arise from the forgiveness of a PPP loan.
+
+For more information and updates you can visit SBA.gov/PPP or Treasury.gov/=
+CARES, or go to the resources below:
+
+Click here for more information from the SBA on the reopening of the PPP pr=
+ogram.
+
+Click here for the SBA=E2=80=99s Topline Overview of the First Draw PPP Loans.
+
+Click here for the SBA=E2=80=99s Topline Overview of the Second Draw PPP Loans.
+
+Click here to find the SBA Guidance on Accessing Capital for Minority, Unde=
+rserved, Veteran, and Women-Owned Business.
+
+Click here for the SBA=E2=80=99s recently released Interim Final Rule on PPP whic=
+h consolidates prior rules as well as including new rules resulting from the=
+ most recent legislation.=20
+
+Click here for details from the House Committee on Small Business on the Ec=
+onomic Aid Act or here for a section by section summary of the legislation.=20
+
+Please also reach out to my office at any time for additional assistance.
+ =20
+  =20
+
+SMALL BUSINESS: ECONOMIC INJURY DISASTER LOANS=20
+
+Economic Injury Disaster Loans (EIDL) have been another key part of the sma=
+ll business relief throughout COVID, with an excess of $600 million in loans=
+ coming to NJ-11 in 2020. The SBA has announced that as a result of the COVI=
+D relief legislation signed at the end of December it was extending the appl=
+ication deadline for the EIDL program to December 31, 2021.
+
+The Economic Aid Act also made clarifications about the treatment of EIDL A=
+dvance Amounts with respect to the deduction from loan forgiveness (includin=
+g retroactively) and exclusion from gross income for tax purposes.=20
+
+The EIDL Advance program is currently closed but was provided with an addit=
+ional $20 billion through this legislation targeted to certain businesses. W=
+e will keep you updated when we have more information on reopening and eligi=
+bility requirements. =20
+
+Click here for more information on the SBA=E2=80=99s announcement of the extended=
+ EIDL deadline.
+
+Click here to learn more from the SBA=E2=80=99s EIDL page.
+
+Click here for details from the House Committee on Small Business on the de=
+duction and taxation clarifications for EIDL Advance Amounts in the Economic=
+ Aid Act or here for a section by section summary of the legislation.
+
+=20
+
+ ECONOMIC IMPACT PAYMENTS
+
+The December COVID-19 relief package we passed also included Economic Impac=
+t Payments (EIPs) of $600 for eligible individuals and $1,200 for eligible m=
+arried couples. You can determine your eligibility and payment status on the=
+ IRS website by clicking here. These payments are being distributed by the D=
+epartment of the Treasury throughout the month of January.
+
+According to a briefing my team received this week from the House Ways and =
+Means Committee, 147 million EIPs have already been distributed or are sched=
+uled to be distributed. The vast majority of payments have been made electro=
+nically through direct deposit payments (when the IRS has your bank account =
+information). Payments are also being made by paper checks and debit cards c=
+alled EIP Cards.=20
+
+For those of you who are EIP Card recipients, I want to make you aware that=
+:
+
+EIP Cards will be mailed in a plain white envelope which prominently displa=
+ys the U.S. Treasury seal and =E2=80=9CEconomic Impact Payment Card=E2=80=9D in the retu=
+rn address. The envelope also states that it contains =E2=80=9Cimportant informati=
+on about their Economic Impact Payment.=E2=80=9D (See photo below.)  Source: U.S. =
+Treasury Department
+
+If you have accidentally thrown away an EIP Card, you can call customer ser=
+vice at 1-800-240-8100 to report it and request a free replacement.=20
+
+If you do not receive your payment electronically or in the mail, the IRS h=
+as advised that you must claim it on your 2020 tax return as a Recovery Reba=
+te Credit. Additional resources on EIPs can be found below:
+
+Click here for the IRS Press Release on the second round of EIP Payments;
+
+Click here to go to the IRS=E2=80=99s general EIP page.=20
+
+Click here for answers to FAQs on the second EIP payments
+
+Click here to check your first or second payment status on the Get My Payme=
+nt tool.=20
+
+Click here for the IRS Press Release on EIP Prepaid Debit Cards
+
+Click here for a link to a Consumer Financial Protection Bureau video on EI=
+P Prepaid Debit Cards.=20
+
+=20
+
+CORONAVIRUS VACCINES=20
+
+While the coronavirus relief funding described above is critical to our com=
+munity surviving this pandemic, we all know that a successful vaccine progra=
+m is the key to getting to the other side of this crisis. This vaccination e=
+ffort requires incredible collaboration between all levels of government, as=
+ well as our healthcare providers as I saw firsthand as I visited three vacc=
+ination sites around NJ-11 over the past few weeks. Morristown Medical for t=
+he first day of vaccines for our frontline healthcare workers in December, a=
+t the Morris County Regional Vaccination Center in Rockaway as it opened for=
+ vaccinations of first responders, and the Essex County site in West Orange =
+last week.=20
+
+
+Top, L to R: Rep. Sherrill went to Morristown Medical Center on December 15=
+ as they vaccinated some of the first frontline healthcare workers; Rep. She=
+rrill visited the Kmart vaccination site in West Orange on January 11, with =
+Essex County Executive Joe DiVincenzo and Sheriff Armando B. Fontoura.=20
+Bottom: Rep. Sherrill visited the Rockaway mega site opening with Governor =
+Murphy on January 8.
+As you may know, New Jersey is administering vaccines to residents in phase=
+s. Currently (as of 1/16/21), only those in Phases 1A and 1B are eligible fo=
+r vaccines in New Jersey. You can find more detail on who is included in the=
+se phases at the New Jersey state website here. State and County portals whe=
+re you can register for the vaccine are listed below, which will notify you =
+when you are eligible for an appointment.=20
+
+This process will require patience as the number of appointments for vaccin=
+ations can be limited by factors like the number of vaccine doses received e=
+ach week by the state of New Jersey and the number of frontline workers avai=
+lable to administer shots. My team and I have been in touch with officials a=
+t Operation Warpspeed to understand what is being done to optimize the numbe=
+r of doses coming to New Jersey. And I was pleased to see that President-ele=
+ct Biden=E2=80=99s relief plan proposed last week would provide essential funding =
+for our country=E2=80=99s vaccination campaign.=20
+
+Registration portals and other resources from the state of New Jersey and t=
+he counties about vaccines can be found below. You should also monitor infor=
+mation from your healthcare provider as appropriate to determine their capac=
+ity for vaccine appointments and sign up processes. =20
+
+
+State of New Jersey Vaccine Resources
+
+State registration portal: You can pre-register for the vaccine here to det=
+ermine which vaccination phase you are in and to receive a notification when=
+ you are eligible for a vaccine. We suggest you pre-register as soon as poss=
+ible. If you were already pre-registered and are now eligible for the vaccin=
+e, you should receive an email soon alerting you to make an appointment for =
+your first dose at a site near you. =20
+
+Vaccine locations: List of statewide vaccine locations for eligible recipie=
+nts here. Please keep in mind that appointments may be limited at some of th=
+ese locations, and you should only show up when you have an appointment.=20
+
+Information on insurance coverage and vaccines for the uninsured: More info=
+rmation on the lack of cost-sharing for COVID vaccines, and the availability=
+ to all regardless of insurance status.
+
+COVID Vaccine Efficacy and Safety: Information on how vaccines work, vaccin=
+e trials, and vaccine safety, as well as on this NJ COVID-19 Vaccine Fact Sh=
+eet.
+
+
+Federal Resources
+
+Department of Veterans Affairs: Information on vaccines for veterans.
+
+Centers for Disease Control and Prevention: Find information for COVID-19 v=
+accination administration, storage and handling, reporting, and patient educ=
+ation for each specific vaccine.
+
+
+County Resources
+
+ESSEX COUNTY:
+
+To find out more about the vaccination sites in Essex County and to make an=
+ appointment, visit: https://www.essexcovid.org/ or call 973-877-8456. Vacci=
+nation sites are open Mondays to Saturdays. Residents from each town can ONL=
+Y go to the site that is designated for them and need to make an appointment=
+ first.=20
+
+PASSAIC COUNTY:=20
+To find out more about COVID-19 vaccine distribution in Passaic County as w=
+ell as upcoming dates and locations visit the Passaic County website.
+
+Eligible Passaic County patients must pre-register at passaiccountynj.org/C=
+OVIDVax to make an appointment.=20
+
+MORRIS COUNTY:
+
+Morris County is home to one of the six state vaccine mega sites located at=
+ Rockaway Townsquare. For the most up to date information on vaccinations at=
+ this site please go to https://health.morriscountynj.gov/vaccination/. =20
+
+Please do not show up to this site without an appointment. To register for =
+a vaccination appointment at the Morris County Regional COVID-19 Vaccination=
+ Center, go to https://bit.ly/3onkSkC.=20
+
+SUSSEX COUNTY:
+
+For information on the Sussex County vaccination site and to make an appoin=
+tment when they are available please visit: https://www.sussex.nj.us/cn/webp=
+age.cfm?tpid=3D17480
+
+=20
+
+  =20
+
+=20
+
+I'm incredibly honored to serve the 11th District and will continue to work=
+ hard on the issues that will move New Jersey, and this country, forward.
+=20
+WASHINGTON, DC OFFICE
+1208 Longworth HOB
+Washington, DC 20515
+Phone: (202) 225-5034
+PARSIPPANY OFFICE
+8 Wood Hollow Road, Suite 203
+Parsippany, NJ 07054
+Phone: (973) 526-5668
+ =20
+SIGN UP FOR OUR NEWSLETTER
+Click here to stay up to date on the latest news from NJ and DC=20
+ =20
+Unsubscribe |  Share on Facebook |  Share on Twitter=20
+
+
+
+Click Here to view this email in your browser=20
+Click Here to be removed from this list
+
+--B_3694076056_1068700895
+Content-type: text/html;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><title>P=
+PP Loans, Economic Impact Payments, and Vaccine Information</title></head><b=
+ody><style type=3D"text/css">
+            .contentholder img {max-width:600px;}
+            a {color: #08244a;}
+            @media all and (max-width:650px) {
+            .content, .contentholder, .header, .headerholder {width:100% !i=
+mportant;}
+            img, .contentholder img {max-width:100% !important; height: aut=
+o !important;}
+            }
+        </style><table width=3D"650" align=3D"center" class=3D"headerholder" styl=
+e=3D"font-family: arial, helvetica, sans-serif; background-color: #ffffff;" bo=
+rder=3D"0" cellspacing=3D"0" cellpadding=3D"0" topmargin=3D"0" leftmargin=3D"0" margin=
+width=3D"0" marginheight=3D"0"><tbody><tr><td align=3D"middle" valign=3D"top"><div><=
+table cellpadding=3D"5"><tbody><tr><td><img alt=3D"" src=3D"https://sherrillforms.=
+house.gov/UploadedPhotos/MediumResolution/1298b97b-fd71-4d0c-96a4-b109e7fc93=
+67.jpg"></td></tr></tbody></table></div><div>&nbsp;</div></td></tr></tbody><=
+/table><table width=3D"650" align=3D"center" class=3D"contentholder" style=3D"font-f=
+amily: arial, helvetica, sans-serif; top: 291.68px; width: 638px; height: 40=
+2.395px;" border=3D"0" cellspacing=3D"0" cellpadding=3D"20" topmargin=3D"0" leftmarg=
+in=3D"0" marginwidth=3D"0" marginheight=3D"0"><tbody><tr><td class=3D"contentholder"=
+ valign=3D"top" style=3D"background-color: #ffffff; text-align: left;"><p dir=3D"l=
+tr"><span style=3D"font-size: 20px;">Dear Friends,</span></p><p dir=3D"ltr"><spa=
+n style=3D"font-size: 20px;">We=E2=80=99ve been through a lot as a nation in these e=
+arly days of 2021. I would like to thank you for the support and kind words =
+I have received since the insurrection on our Capitol. I am working hard to =
+hold those who incited, enabled, and participated accountable for their acti=
+ons.</span></p><p dir=3D"ltr"><span style=3D"font-size: 20px;">Despite the chall=
+enges and awful events in Washington, we must continue to focus on the COVID=
+ relief our country desperately needs. I=E2=80=99ve heard many questions and conce=
+rns regarding the COVID-19 vaccine distribution in New Jersey, the next roun=
+d of PPP loans, EIDL and EIP stimulus checks. You can find details on federa=
+l programs and vaccine distribution below.</span></p><p dir=3D"ltr"><span styl=
+e=3D"font-size: 20px;">I=E2=80=99ll continue to send updates in newsletters and on m=
+y social media pages as more information is available.&nbsp;</span></p><p di=
+r=3D"ltr"><span style=3D"font-size: 20px;">And finally, I would like to congratu=
+late the local elected officials who were recently sworn in throughout the d=
+istrict. A bright spot for me during this difficult past year has been seein=
+g how local officials have partnered together to support our residents. I lo=
+ok forward to working with all of you and supporting the work you undertake =
+on behalf of your towns and your constituents.&nbsp;&nbsp;</span></p><p dir=3D=
+"ltr"><span style=3D"font-size: 20px;">Best wishes and I hope that you and you=
+r loved ones stay safe and healthy,</span></p><div><div><table cellpadding=3D"=
+5"><tbody><tr><td><img alt=3D"" src=3D"https://sherrillforms.house.gov/UploadedP=
+hotos/LowResolution/e627275f-2dba-4eb5-a5fd-1b8ea1a50087.jpg"></td></tr></tb=
+ody></table></div><span style=3D"font-size: 20px;">Mikie Sherrill<br></span><d=
+iv><br><br>&nbsp;<br><table style=3D"width: 624.688px; height: 26px;"><tbody><=
+tr><td style=3D"text-align: center;"><span style=3D"font-size: 22px;"><strong>SM=
+ALL BUSINESS: PAYCHECK PROTECTION PROGRAM</strong></span></td></tr></tbody><=
+/table><br><span style=3D"font-size: 18px;">Meeting with small business owners=
+ across the district during COVID, it is clear that the Paycheck Protection =
+Program (PPP) established by the CARES Act last March has been a lifeline du=
+ring this crisis. In fact, $530 million in PPP loans under $150,000 came to =
+NJ-11 in 2020.&nbsp;<br><br>But it was also extremely clear that small busin=
+esses needed more relief. I was proud to vote for the Economic Aid to Hard-H=
+it Small Businesses, Nonprofits, and Venues Act (Economic Aid Act) as part o=
+f the Coronavirus Response and Relief Supplemental Appropriations Act of 202=
+1 that passed in December.&nbsp;<strong>This legislation reopened the PPP th=
+rough March 31, 2021, with $284.45 billion in funding.</strong><br><br>The P=
+PP is reopening in stages. On&nbsp;<strong>Friday, January 15</strong>&nbsp;=
+it opened to lenders with less than $1 billion in assets. And it opens to AL=
+L lenders on&nbsp;<strong>Tuesday, January 19</strong>. Similar to the first=
+ round of the PPP, small businesses and nonprofits should apply for the loan=
+s through a private lender. Large banks, community banks, and FinTech lender=
+s are all taking applications.&nbsp;<br><br>First Draw and Second Draw loans=
+ are available for eligible small businesses and nonprofits.&nbsp;</span></d=
+iv><ul><li dir=3D"ltr" aria-level=3D"1"><p dir=3D"ltr" role=3D"presentation"><span s=
+tyle=3D"font-size: 18px;">You may be eligible for a&nbsp;<strong>First Draw lo=
+an</strong>&nbsp;if you did not receive a PPP loan prior to August 8, 2020.&=
+nbsp;</span></p></li><li dir=3D"ltr" aria-level=3D"1"><p dir=3D"ltr" role=3D"present=
+ation"><span style=3D"font-size: 18px;">You may be eligible for a&nbsp;<strong=
+>Second Draw loan</strong>&nbsp;if you already received and spent your First=
+ Draw, have 300 employees or less, and can demonstrate a 25% loss in revenue=
+ between comparable quarters in 2019 and 2020.</span></p></li></ul><p dir=3D"l=
+tr"><span style=3D"font-size: 18px;">Other highlights of the legislation with =
+respect to PPP include a simplified 1-page loan forgiveness certification fo=
+r those who received a loan of $150,000 or less and expanded use of PPP fund=
+s to include new expenses like PPE and some operational expenses. With respe=
+ct to the tax treatment of PPP Loans, this provision clarified that gross in=
+come does not include any amount that would otherwise arise from the forgive=
+ness of a PPP loan.</span></p><p dir=3D"ltr"><span style=3D"font-size: 18px;">Fo=
+r more information and updates you can visit&nbsp;<a href=3D"https://sherrillf=
+orms.house.gov/components/redirect/r.aspx?ID=3D678-506486">SBA.gov/PPP</a>&nbs=
+p;or&nbsp;<a href=3D"https://sherrillforms.house.gov/components/redirect/r.asp=
+x?ID=3D679-506486">Treasury.gov/CARES</a>, or go to the resources below:</span=
+></p><ul><li dir=3D"ltr" aria-level=3D"1"><p dir=3D"ltr" role=3D"presentation"><span=
+ style=3D"font-size: 18px;">Click&nbsp;<a href=3D"https://sherrillforms.house.go=
+v/components/redirect/r.aspx?ID=3D680-506486">here</a>&nbsp;for more informati=
+on from the SBA on the reopening of the PPP program.</span></p></li><li dir=3D=
+"ltr" aria-level=3D"1"><p dir=3D"ltr" role=3D"presentation"><span style=3D"font-size=
+: 18px;">Click&nbsp;<a href=3D"https://sherrillforms.house.gov/components/redi=
+rect/r.aspx?ID=3D681-506486">here</a>&nbsp;for the SBA=E2=80=99s Topline Overview of=
+ the First Draw PPP Loans.</span></p></li><li dir=3D"ltr" aria-level=3D"1"><p di=
+r=3D"ltr" role=3D"presentation"><span style=3D"font-size: 18px;">Click&nbsp;<a hre=
+f=3D"https://sherrillforms.house.gov/components/redirect/r.aspx?ID=3D682-506486"=
+>here</a>&nbsp;for the SBA=E2=80=99s Topline Overview of the Second Draw PPP Loans=
+.</span></p></li></ul><ul><li dir=3D"ltr" aria-level=3D"1"><p dir=3D"ltr" role=3D"pr=
+esentation"><span style=3D"font-size: 18px;">Click&nbsp;<a href=3D"https://sherr=
+illforms.house.gov/components/redirect/r.aspx?ID=3D683-506486">here</a>&nbsp;t=
+o find the SBA Guidance on Accessing Capital for Minority, Underserved, Vete=
+ran, and Women-Owned Business.</span></p></li><li dir=3D"ltr" aria-level=3D"1"><=
+p dir=3D"ltr" role=3D"presentation"><span style=3D"font-size: 18px;">Click&nbsp;<a=
+ href=3D"https://sherrillforms.house.gov/components/redirect/r.aspx?ID=3D684-506=
+486">here</a>&nbsp;for the SBA=E2=80=99s recently released Interim Final Rule on P=
+PP which consolidates prior rules as well as including new rules resulting f=
+rom the most recent legislation.&nbsp;</span></p></li><li dir=3D"ltr" aria-lev=
+el=3D"1"><p dir=3D"ltr" role=3D"presentation"><span style=3D"font-size: 18px;">Click=
+&nbsp;<a href=3D"https://sherrillforms.house.gov/components/redirect/r.aspx?ID=
+=3D685-506486">here</a>&nbsp;for details from the House Committee on Small Bus=
+iness on the Economic Aid Act or&nbsp;<a href=3D"https://sherrillforms.house.g=
+ov/components/redirect/r.aspx?ID=3D686-506486">here</a>&nbsp;for a section by =
+section summary of the legislation.&nbsp;</span></p></li></ul><p dir=3D"ltr"><=
+span style=3D"font-size: 18px;">Please also reach out to my office at any time=
+ for additional assistance.</span><br>&nbsp;&nbsp;<br>&nbsp; &nbsp;</p><tabl=
+e style=3D"width: 631.23px; height: 35px;"><tbody><tr><td style=3D"text-align: c=
+enter;"><span style=3D"font-size: 22px;"><strong>SMALL BUSINESS: ECONOMIC INJU=
+RY DISASTER LOANS</strong></span> </td></tr></tbody></table><p dir=3D"ltr"><sp=
+an style=3D"font-size: 18px;">Economic Injury Disaster Loans (EIDL) have been =
+another key part of the small business relief throughout COVID, with an exce=
+ss of $600 million in loans coming to NJ-11 in 2020. The SBA has announced t=
+hat as a result of the COVID relief legislation signed at the end of Decembe=
+r it was&nbsp;<strong>extending the application deadline for the EIDL progra=
+m to December 31, 2021.</strong></span></p><p dir=3D"ltr"><span style=3D"font-si=
+ze: 18px;">The Economic Aid Act also made clarifications about the treatment=
+ of EIDL Advance Amounts with respect to the deduction from loan forgiveness=
+ (including retroactively) and exclusion from gross income for tax purposes.=
+&nbsp;</span></p><p dir=3D"ltr"><span style=3D"font-size: 18px;">The EIDL Advanc=
+e program is currently closed but was provided with an additional $20 billio=
+n through this legislation targeted to certain businesses. We will keep you =
+updated when we have more information on reopening and eligibility requireme=
+nts.&nbsp;&nbsp;</span></p><ul><li dir=3D"ltr" aria-level=3D"1"><p dir=3D"ltr" rol=
+e=3D"presentation"><span style=3D"font-size: 18px;">Click&nbsp;<a href=3D"https://=
+sherrillforms.house.gov/components/redirect/r.aspx?ID=3D687-506486">here</a>&n=
+bsp;for more information on the SBA=E2=80=99s announcement of the extended EIDL de=
+adline.</span></p></li><li dir=3D"ltr" aria-level=3D"1"><p dir=3D"ltr" role=3D"prese=
+ntation"><span style=3D"font-size: 18px;">Click&nbsp;<a href=3D"https://sherrill=
+forms.house.gov/components/redirect/r.aspx?ID=3D688-506486">here</a>&nbsp;to l=
+earn more from the SBA=E2=80=99s EIDL page.</span></p></li><li dir=3D"ltr" aria-leve=
+l=3D"1"><p dir=3D"ltr" role=3D"presentation"><span style=3D"font-size: 18px;">Click&=
+nbsp;<a href=3D"https://sherrillforms.house.gov/components/redirect/r.aspx?ID=3D=
+689-506486">here</a>&nbsp;for details from the House Committee on Small Busi=
+ness on the deduction and taxation clarifications for EIDL Advance Amounts i=
+n the Economic Aid Act or&nbsp;<a href=3D"https://sherrillforms.house.gov/comp=
+onents/redirect/r.aspx?ID=3D690-506486">here</a>&nbsp;for a section by section=
+ summary of the legislation.</span></p></li></ul><p dir=3D"ltr">&nbsp;</p><tab=
+le style=3D"width: 624.34px; height: 26px;"><tbody><tr><td style=3D"text-align: =
+center;">&nbsp;<span style=3D"font-size: 22px;"><strong>ECONOMIC IMPACT PAYMEN=
+TS</strong></span></td></tr></tbody></table><p dir=3D"ltr"><span style=3D"font-s=
+ize: 18px;">The December COVID-19 relief package we passed also included Eco=
+nomic Impact Payments (EIPs) of $600 for eligible individuals and $1,200 for=
+ eligible married couples. You can determine your eligibility and payment st=
+atus on the IRS website by clicking&nbsp;<a href=3D"https://sherrillforms.hous=
+e.gov/components/redirect/r.aspx?ID=3D691-506486">here</a>. These payments are=
+ being distributed by the Department of the Treasury throughout the month of=
+ January.</span></p><p dir=3D"ltr"><span style=3D"font-size: 18px;">According to=
+ a briefing my team received this week from the House Ways and Means Committ=
+ee, 147 million EIPs have already been distributed or are scheduled to be di=
+stributed.&nbsp;<strong>The vast majority of payments have been made electro=
+nically through direct deposit payments (when the IRS has your bank account =
+information).</strong>&nbsp;Payments are also being made by paper checks and=
+ debit cards called EIP Cards.&nbsp;</span></p><p dir=3D"ltr"><span style=3D"fon=
+t-size: 18px;">For those of you who are EIP Card recipients, I want to make =
+you aware that:</span></p><ul><li dir=3D"ltr" aria-level=3D"1"><p dir=3D"ltr" role=
+=3D"presentation"><span style=3D"font-size: 18px;">EIP Cards will be mailed in a=
+ plain white envelope which prominently displays the U.S. Treasury seal and =
+=E2=80=9CEconomic Impact Payment Card=E2=80=9D in the return address. The envelope also =
+states that it contains =E2=80=9Cimportant information about their Economic Impact=
+ Payment.=E2=80=9D&nbsp;<em>(See photo below.)&nbsp; Source: U.S. Treasury Departm=
+ent</em></span></p></li><li dir=3D"ltr" aria-level=3D"1"><p dir=3D"ltr" role=3D"pres=
+entation"><span style=3D"font-size: 18px;">If you have accidentally thrown awa=
+y an EIP Card, you can call customer service at 1-800-240-8100 to report it =
+and request a free replacement.&nbsp;</span></p></li></ul><div><table cellpa=
+dding=3D"5" style=3D"width: 628.219px; height: 248.445px;"><tbody><tr><td style=3D=
+"text-align: center;"><img alt=3D"" src=3D"https://sherrillforms.house.gov/Uploa=
+dedPhotos/MediumResolution/bfe213e9-1206-4f73-bdde-48b5639ec77e.png"></td></=
+tr></tbody></table></div><div><table cellpadding=3D"5" style=3D"width: 628.441px=
+; height: 187px;"><tbody><tr><td style=3D"text-align: center;"><img alt=3D"" src=
+=3D"https://sherrillforms.house.gov/UploadedPhotos/MediumResolution/7e9a9375-d=
+6de-4acf-b601-89108b188e0b.png"></td></tr></tbody></table></div><p dir=3D"ltr"=
+><span style=3D"font-size: 18px;">If you do not receive your payment electroni=
+cally or in the mail, the IRS has advised that you must claim it on your 202=
+0 tax return as a&nbsp;<a href=3D"https://sherrillforms.house.gov/components/r=
+edirect/r.aspx?ID=3D692-506486">Recovery Rebate Credit</a>. Additional resourc=
+es on EIPs can be found below:</span></p><ul><li dir=3D"ltr" aria-level=3D"1"><p=
+ dir=3D"ltr" role=3D"presentation"><span style=3D"font-size: 18px;">Click&nbsp;<a =
+href=3D"https://sherrillforms.house.gov/components/redirect/r.aspx?ID=3D693-5064=
+86">here</a>&nbsp;for the IRS Press Release on the second round of EIP Payme=
+nts;</span></p></li><li dir=3D"ltr" aria-level=3D"1"><p dir=3D"ltr" role=3D"presenta=
+tion"><span style=3D"font-size: 18px;">Click&nbsp;<a href=3D"https://sherrillfor=
+ms.house.gov/components/redirect/r.aspx?ID=3D694-506486">here</a>&nbsp;to go t=
+o the IRS=E2=80=99s general EIP page.&nbsp;</span></p></li><li dir=3D"ltr" aria-leve=
+l=3D"1"><p dir=3D"ltr" role=3D"presentation"><span style=3D"font-size: 18px;">Click&=
+nbsp;<a href=3D"https://sherrillforms.house.gov/components/redirect/r.aspx?ID=3D=
+695-506486">here</a>&nbsp;for answers to FAQs on the second EIP payments</sp=
+an></p></li><li dir=3D"ltr" aria-level=3D"1"><p dir=3D"ltr" role=3D"presentation"><s=
+pan style=3D"font-size: 18px;">Click&nbsp;<a href=3D"https://sherrillforms.house=
+.gov/components/redirect/r.aspx?ID=3D696-506486">here</a>&nbsp;to check your f=
+irst or second payment status on the Get My Payment tool.&nbsp;</span></p></=
+li><li dir=3D"ltr" aria-level=3D"1"><p dir=3D"ltr" role=3D"presentation"><span style=
+=3D"font-size: 18px;">Click&nbsp;<a href=3D"https://sherrillforms.house.gov/comp=
+onents/redirect/r.aspx?ID=3D697-506486">here</a>&nbsp;for the IRS Press Releas=
+e on EIP Prepaid Debit Cards</span></p></li><li dir=3D"ltr" aria-level=3D"1"><p =
+dir=3D"ltr" role=3D"presentation"><span style=3D"font-size: 18px;">Click&nbsp;<a h=
+ref=3D"https://sherrillforms.house.gov/components/redirect/r.aspx?ID=3D698-50648=
+6">here</a>&nbsp;for a link to a Consumer Financial Protection Bureau video =
+on EIP Prepaid Debit Cards.&nbsp;</span></p></li></ul><p dir=3D"ltr" aria-leve=
+l=3D"1">&nbsp;</p><table style=3D"width: 620.867px; height: 26px;"><tbody><tr><t=
+d style=3D"text-align: center;"><strong><span style=3D"font-size: 22px;">CORONAV=
+IRUS VACCINES</span></strong> </td></tr></tbody></table><p dir=3D"ltr"></p><p =
+dir=3D"ltr" aria-level=3D"1"><span style=3D"font-size: 18px;">While the coronaviru=
+s relief funding described above is critical to our community surviving this=
+ pandemic, we all know that a successful vaccine program is the key to getti=
+ng to the other side of this crisis. This vaccination effort requires incred=
+ible collaboration between all levels of government, as well as our healthca=
+re providers as I saw firsthand as I visited three vaccination sites around =
+NJ-11 over the past few weeks. Morristown Medical for the first day of vacci=
+nes for our frontline healthcare workers in December, at the Morris County R=
+egional Vaccination Center in Rockaway as it opened for vaccinations of firs=
+t responders, and the Essex County site in West Orange last week.&nbsp;</spa=
+n></p><p></p><div><table cellpadding=3D"5" style=3D"width: 627.809px; height: 43=
+2px;"><tbody><tr><td style=3D"text-align: center;"><img alt=3D"" src=3D"https://sh=
+errillforms.house.gov/UploadedPhotos/MediumResolution/c0ce17af-c86d-49a7-868=
+f-ab163a80522f.png"><br><em><span style=3D"font-size: 12px;">Top, L to R: Rep.=
+ Sherrill went to Morristown Medical Center on December 15 as they vaccinate=
+d some of the first frontline healthcare workers;&nbsp;Rep. Sherrill visited=
+ the Kmart vaccination site in West Orange on January 11, with Essex County =
+Executive Joe DiVincenzo and Sheriff Armando B. Fontoura.&nbsp;<br>Bottom: R=
+ep. Sherrill visited the Rockaway mega site opening with Governor Murphy on =
+January 8.</span></em></td></tr></tbody></table></div><p dir=3D"ltr"><span sty=
+le=3D"font-size: 18px;">As you may know, New Jersey is administering vaccines =
+to residents in phases. Currently (as of 1/16/21), only those in Phases 1A a=
+nd 1B are eligible for vaccines in New Jersey. You can find more detail on w=
+ho is included in these phases at the New Jersey state website&nbsp;<a href=3D=
+"https://sherrillforms.house.gov/components/redirect/r.aspx?ID=3D699-506486">h=
+ere</a>. State and County portals where you can register for the vaccine are=
+ listed below, which will notify you when you are eligible for an appointmen=
+t.&nbsp;<br><br>This process will require patience as the number of appointm=
+ents for vaccinations can be limited by factors like the number of vaccine d=
+oses received each week by the state of New Jersey and the number of frontli=
+ne workers available to administer shots. My team and I have been in touch w=
+ith officials at Operation Warpspeed to understand what is being done to opt=
+imize the number of doses coming to New Jersey. And I was pleased to see tha=
+t President-elect Biden=E2=80=99s relief plan proposed last week would provide ess=
+ential funding for our country=E2=80=99s vaccination campaign.&nbsp;<br><br>Regist=
+ration portals and other resources from the state of New Jersey and the coun=
+ties about vaccines can be found below. You should also monitor information =
+from your healthcare provider as appropriate to determine their capacity for=
+ vaccine appointments and sign up processes.&nbsp;&nbsp;<br><br></span></p><=
+p dir=3D"ltr"><span style=3D"font-size: 20px;"><strong><span style=3D"text-decorat=
+ion: underline;">State of New Jersey Vaccine Resources</span></strong></span=
+></p><p dir=3D"ltr"><span style=3D"font-size: 18px;"><a href=3D"https://sherrillfo=
+rms.house.gov/components/redirect/r.aspx?ID=3D700-506486"><strong>State regist=
+ration portal</strong></a>: You can pre-register for the vaccine here to det=
+ermine which vaccination phase you are in and to receive a notification when=
+ you are eligible for a vaccine.&nbsp;<strong>We suggest you pre-register as=
+ soon as possible.</strong>&nbsp;If you were already pre-registered and are =
+now eligible for the vaccine, you should receive an email soon alerting you =
+to make an appointment for your first dose at a site near you.&nbsp;&nbsp;<b=
+r><br><a href=3D"https://sherrillforms.house.gov/components/redirect/r.aspx?ID=
+=3D701-506486"><strong>Vaccine locations</strong></a>: List of statewide vacci=
+ne locations for eligible recipients here. Please keep in mind that appointm=
+ents may be limited at some of these locations, and you should only show up =
+when you have an appointment.&nbsp;<br><br><a href=3D"https://sherrillforms.ho=
+use.gov/components/redirect/r.aspx?ID=3D702-506486"><strong>Information on ins=
+urance coverage and vaccines for the uninsured</strong></a>: More informatio=
+n on the lack of cost-sharing for COVID vaccines, and the availability to al=
+l regardless of insurance status.<br></span></p><p dir=3D"ltr"><span style=3D"fo=
+nt-size: 18px;"><a href=3D"https://sherrillforms.house.gov/components/redirect=
+/r.aspx?ID=3D703-506486"><strong>COVID Vaccine Efficacy and Safety</strong></a=
+>: Information on how vaccines work, vaccine trials, and vaccine safety, as =
+well as on this&nbsp;<a href=3D"https://sherrillforms.house.gov/components/red=
+irect/r.aspx?ID=3D704-506486">NJ COVID-19 Vaccine Fact Sheet</a>.<br><br></spa=
+n></p><p dir=3D"ltr"><span style=3D"font-size: 20px;"><strong><span style=3D"text-=
+decoration: underline;">Federal Resources</span></strong></span></p><p dir=3D"=
+ltr"><span style=3D"font-size: 18px;"><a href=3D"https://sherrillforms.house.gov=
+/components/redirect/r.aspx?ID=3D705-506486"><strong>Department of Veterans Af=
+fairs</strong></a>: Information on vaccines for veterans.</span></p><p dir=3D"=
+ltr"><span style=3D"font-size: 18px;"><a href=3D"https://sherrillforms.house.gov=
+/components/redirect/r.aspx?ID=3D706-506486"><strong>Centers for Disease Contr=
+ol and Prevention</strong></a>: Find information for COVID-19 vaccination ad=
+ministration, storage and handling, reporting, and patient education for eac=
+h specific vaccine.</span></p><div><p dir=3D"ltr"><span style=3D"font-size: 20px=
+;"><strong><br><span style=3D"text-decoration: underline;">County Resources</s=
+pan></strong></span></p><p dir=3D"ltr"><span style=3D"font-size: 18px;"><strong>=
+ESSEX COUNTY</strong>:</span></p><p dir=3D"ltr"><span style=3D"font-size: 18px;"=
+>To find out more about the vaccination sites in Essex County and to make an=
+ appointment, visit:&nbsp;<a href=3D"https://sherrillforms.house.gov/component=
+s/redirect/r.aspx?ID=3D707-506486">https://www.essexcovid.org/</a>&nbsp;or cal=
+l 973-877-8456. Vaccination sites are open Mondays to Saturdays. Residents f=
+rom each town can ONLY go to the site that is designated for them and need t=
+o make an appointment first.&nbsp;</span></p><p dir=3D"ltr"><span style=3D"font-=
+size: 18px;"><strong>PASSAIC COUNTY</strong>:&nbsp;</span></p><span style=3D"f=
+ont-size: 18px;">To find out more about COVID-19 vaccine distribution in Pas=
+saic County as well as upcoming dates and locations <a href=3D"https://sherril=
+lforms.house.gov/components/redirect/r.aspx?ID=3D708-506486">visit the Passaic=
+ County website</a>.<br></span><p dir=3D"ltr"><span style=3D"font-size: 18px;">E=
+ligible Passaic County patients must pre-register at&nbsp;<a href=3D"https://s=
+herrillforms.house.gov/components/redirect/r.aspx?ID=3D709-506486">passaiccoun=
+tynj.org/COVIDVax&nbsp;</a>to make an appointment.&nbsp;</span></p><p dir=3D"l=
+tr"><span style=3D"font-size: 18px;"><strong>MORRIS COUNTY</strong>:</span></p=
+><p dir=3D"ltr"><span style=3D"font-size: 18px;">Morris County is home to one of=
+ the six state vaccine mega sites located at Rockaway Townsquare. For the mo=
+st up to date information on vaccinations at this site please go to&nbsp;<a =
+href=3D"https://sherrillforms.house.gov/components/redirect/r.aspx?ID=3D710-5064=
+86">https://health.morriscountynj.gov/vaccination/</a>.&nbsp;&nbsp;</span></=
+p><p dir=3D"ltr"><span style=3D"font-size: 18px;">Please do not show up to this =
+site without an appointment. To register for a vaccination appointment at th=
+e Morris County Regional COVID-19 Vaccination Center, go to&nbsp;<a href=3D"ht=
+tps://sherrillforms.house.gov/components/redirect/r.aspx?ID=3D711-506486">http=
+s://bit.ly/3onkSkC</a>.&nbsp;</span></p><p dir=3D"ltr"><span style=3D"font-size:=
+ 18px;"><strong>SUSSEX COUNTY</strong>:</span></p><p dir=3D"ltr"><span style=3D"=
+font-size: 18px;">For information on the Sussex County vaccination site and =
+to make an appointment when they are available please visit:&nbsp;<a href=3D"h=
+ttps://sherrillforms.house.gov/components/redirect/r.aspx?ID=3D712-506486">htt=
+ps://www.sussex.nj.us/cn/webpage.cfm?tpid=3D17480</a></span></p><br></div><div=
+>&nbsp;</div><p dir=3D"ltr"><span style=3D"font-size: 20px;"><br>&nbsp; &nbsp;</=
+span></p></div><p dir=3D"ltr">&nbsp;</p></td></tr><tr><td class=3D"contentholder=
+" valign=3D"top" style=3D"background-color: #ffffff; text-align: center;"><em><s=
+trong>I'm incredibly honored to serve the 11th District and will continue to=
+ work hard on the issues that will move New Jersey, and this country, forwar=
+d.</strong></em><br></td></tr></tbody></table><table width=3D"650" align=3D"cent=
+er" class=3D"headerholder" style=3D"font-family: arial, helvetica, sans-serif; b=
+ackground-color: #f5f5f5;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" topmar=
+gin=3D"0" leftmargin=3D"0" marginwidth=3D"0" marginheight=3D"0"><tbody><tr><td valig=
+n=3D"top" style=3D"width: 650px;"><img alt=3D"" width=3D"650" src=3D"https://sherrillf=
+orms.house.gov/images/email/footer19.jpg"> </td></tr><tr><td align=3D"center" =
+valign=3D"middle" style=3D"color: #08244a; background-color: #f5f5f5;"><table wi=
+dth=3D"100%" style=3D"text-align:center;" cellspacing=3D"10" cellpadding=3D"0"><tbod=
+y><tr><td align=3D"center" valign=3D"middle" style=3D"text-align:center;"><table c=
+ellpadding=3D"0" class=3D"content" align=3D"left" cellspacing=3D"0" width=3D"49.9%" st=
+yle=3D"font-family: times, 'times new roman', serif; text-align:center; color:=
+#08244a; font-size: 14px; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rs=
+pace: 0pt;"><tbody><tr><td><strong style=3D"font-family: arial, helvetica, san=
+s-serif;">WASHINGTON, DC OFFICE</strong><br>1208 Longworth HOB<br>Washington=
+, DC 20515<br>Phone: (202) 225-5034<br></td></tr></tbody></table><table cell=
+padding=3D"0" class=3D"content" align=3D"left" cellspacing=3D"0" width=3D"49.9%" style=
+=3D"font-family: times, 'times new roman', serif; text-align:center; color:#08=
+244a; font-size: 14px; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspac=
+e: 0pt;"><tbody><tr><td><strong style=3D"font-family: arial, helvetica, sans-s=
+erif;">PARSIPPANY OFFICE</strong><br>8 Wood Hollow Road, Suite 203<br>Parsip=
+pany, NJ 07054<br>Phone: (973) 526-5668<br></td></tr></tbody></table></td></=
+tr></tbody></table></td></tr><tr><td valign=3D"middle" align=3D"center" style=3D"h=
+eight:30px; background-color: #f5f5f5;">&nbsp; </td></tr><tr><td valign=3D"mid=
+dle" align=3D"center" style=3D"color: #08244a; background-color: #f5f5f5; font-f=
+amily: times, 'times new roman', serif;"><strong style=3D"font-family: arial, =
+helvetica, sans-serif;">SIGN UP FOR OUR NEWSLETTER</strong><br><a style=3D"col=
+or: #08244a; text-decoration: none;" href=3D"https://sherrillforms.house.gov/c=
+omponents/redirect/r.aspx?ID=3D713-506486">Click here to stay up to date on th=
+e latest news from NJ and DC</a> </td></tr><tr><td valign=3D"middle" align=3D"ce=
+nter" style=3D"height:30px; background-color: #f5f5f5;">&nbsp; </td></tr><tr><=
+td valign=3D"middle" style=3D"background-color: #f5f5f5;"><table width=3D"90%" ali=
+gn=3D"center" cellspacing=3D"20" cellpadding=3D"0"><tbody><tr><td align=3D"center" v=
+align=3D"middle" style=3D"color: #08244a;"><a style=3D"color: #08244a; text-decora=
+tion:none;" href=3D"https://sherrillforms.house.gov/components/redirect/r.aspx=
+?ID=3D714-506486"><span style=3D"font-family: arial;">Unsubscribe</span></a>&nbs=
+p;|&nbsp; <a style=3D"color: #08244a; text-decoration:none;" href=3D"http://www.=
+facebook.com/sharer.php?u=3Dhttps://sherrillforms.house.gov/news/email/show.as=
+px?ID=3DPWBTHA5VM3CAQ&amp;t=3DPPP+Loans%2c+Economic+Impact+Payments%2c+and+Vacci=
+ne+Information"><span style=3D"font-family: arial;">Share on Facebook</span></=
+a>&nbsp;|&nbsp; <a style=3D"color: #08244a; text-decoration:none;" href=3D"https=
+://sherrillforms.house.gov/Components/Redirect/twitter.aspx?url=3Dhttps://sher=
+rillforms.house.gov/news/email/show.aspx?ID=3DPWBTHA5VM3CAQ&amp;name=3DPPP+Loans=
+%2c+Economic+Impact+Payments%2c+and+Vaccine+Information"><span style=3D"font-f=
+amily: arial;">Share on Twitter</span></a> </td></tr></tbody></table></td></=
+tr></tbody></table><br><br><br><table role=3D"presentation" width=3D"100%" align=
+=3D"center" style=3D"font-family: Georgia, times, serif; background-color: #ffff=
+ff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=
+=3D"0" leftmargin=3D"0" topmargin=3D"0"><tbody><tr><td valign=3D"middle" align=3D"cent=
+er" style=3D"color: #000000; font-size: 16px; text-align: left;"><img src=3D"htt=
+ps://sherrillforms.house.gov/images/spacerx345-506486.open" width=3D"20" heigh=
+t=3D"1" style=3D"height: 1px"><br><a href=3D"https://sherrillforms.house.gov/news/=
+email/show.aspx?ID=3DPWBTHA5VM3CAQ">Click Here</a> to view this email in your =
+browser <br><a href=3D"https://sherrillforms.house.gov/Forms/EmailSignup/?Dele=
+te=3Dtrue&amp;MessageID=3D345&amp;Email=3DJackie.Burns@mail.house.gov">Click Here<=
+/a> to be removed from this list</td></tr></tbody></table></body></html>
+
+--B_3694076056_1068700895--
+

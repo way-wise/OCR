@@ -1,0 +1,938 @@
+Received: from MN2PR09MB5035.namprd09.prod.outlook.com (2603:10b6:208:211::8)
+ by BY5PR09MB5027.namprd09.prod.outlook.com with HTTPS; Tue, 4 Jan 2022
+ 00:02:32 +0000
+Received: from CY4PR09CA0079.namprd09.prod.outlook.com (2603:10b6:903:c7::17)
+ by MN2PR09MB5035.namprd09.prod.outlook.com (2603:10b6:208:211::8) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.4844.14; Tue, 4 Jan
+ 2022 00:02:32 +0000
+Received: from BL0GCC02FT002.eop-gcc02.prod.protection.outlook.com
+ (2a01:111:f400:7d05::208) by CY4PR09CA0079.outlook.office365.com
+ (2603:10b6:903:c7::17) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.4844.13 via Frontend
+ Transport; Tue, 4 Jan 2022 00:02:31 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.51.115)
+ smtp.mailfrom=mail.house.gov; dkim=fail (body hash did not verify)
+ header.d=house.gov;dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.51.115 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.51.115;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.51.115) by
+ BL0GCC02FT002.mail.protection.outlook.com (10.97.10.142) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.4844.14 via Frontend Transport; Tue, 4 Jan 2022 00:02:31 +0000
+Received: from EXCH1922.US.House.gov (143.228.51.114) by EXCH1923.US.House.gov
+ (143.228.51.115) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.986.14; Mon, 3 Jan 2022
+ 19:02:29 -0500
+Received: from serg-bulk1-a.house.gov (143.228.42.31) by EXCH1922.US.House.gov
+ (143.228.51.114) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.986.14 via Frontend
+ Transport; Mon, 3 Jan 2022 19:02:29 -0500
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=message-id :
+ list-unsubscribe : mime-version : from : to : date : subject :
+ content-type; s=august2019-msgb-hg;
+ bh=pBjhvUZ//Lf8JyHu6xMlTw90miKVsQgxI5MaIqXlDvs=;
+ b=e9EHgeneFwo7QY9tDoxbQLvmA3fAeNy05pfh+8DYOTM6zDYoj99IEIEcefRXkT5sWTz+
+ 6f4R6zyejZfVPjhe7oe18f7tFysq1ov7myMT6xZ4spND0iohwlW/+VtSOnju3zcB9zVF
+ cGMTqgRaNkxF2oHCuL4203sBQ1nPL8wy7X8ZlMlJ0YSLf7FPwbl41F/LUT4dxt6BkafX
+ w8VIFhqJSoX8Ugyh2V0bnoARFCQW1BWZc1XqTqVWBkWHkcfU2u6n+rgt5NakfcXM/jah
+ yRsh+PubZiS46eTIDx9H1UuaZLDJhm6KwWEDbbHEiit3FZ3PYuus7Y+uD5YB8pjHtZvh lA== 
+Received: from FIRESIDESERV06 (firesideserv06.us.house.gov [143.228.58.67])
+	by serg-bulk1-a.house.gov (8.16.1.2/8.16.1.2) with ESMTP id 20402S0A007077
+	for <Ashley.Haines@mail.house.gov>; Mon, 3 Jan 2022 19:02:29 -0500
+envelope-from: Congressman.Wittman@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+Message-ID: <pGJrDDkfxko2kSArtvMIBRdEkSJSm2g0d2wTXUMXwxSz35Ocq4DoF29UHW+0pcWpPwoJIDN+Uf56liYrpQDr/dD5602f4Z2kK4vnNiK2O0ExNIA7gXvhxMAPs65eE5e8YiMV/ejv3IWauqBy2xhBDjL9AquU3hxUbGdNlViEvjAvKcDBOqAsLm3+USnlFR8F@fireside21.com>
+X-House-Vendor-Seg: unmanaged
+List-Unsubscribe: <https://wittman.house.gov/forms/emailsignup/?Delete=true&MessageID=4113&Email=Ashley.Haines@mail.house.gov&Submit=true>
+Precedence: bulk
+MIME-Version: 1.0
+From: "Rob Wittman" <Congressman.Wittman@mail.house.gov>
+To: Ashley.Haines@mail.house.gov
+Date: 3 Jan 2022 19:02:28 -0500
+Subject: POLL: What Should Congress Prioritize in 2022?
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:6.0.425,18.0.790
+ definitions=2022-01-03_09:2022-01-01,2022-01-03 signatures=0
+Return-Path: Congressman.Wittman@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1923.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 04 Jan 2022 00:02:31.4451
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ eae665ea-0a6e-4db5-335e-08d9cf1580f5
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1922.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted:
+ BL0GCC02FT002.eop-gcc02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ BL0GCC02FT002.eop-gcc02.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: eae665ea-0a6e-4db5-335e-08d9cf1580f5
+X-MS-TrafficTypeDiagnostic: MN2PR09MB5035:EE_
+X-MS-Exchange-Organization-SCL: -1
+X-MS-Oob-TLC-OOBClassifiers: OLM:10000;
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:143.228.51.115;CTRY:US;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SKI;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:;DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 04 Jan 2022 00:02:31.4139
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: eae665ea-0a6e-4db5-335e-08d9cf1580f5
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.51.115];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1922.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: MN2PR09MB5035
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.2770551
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.4844.016
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506458)(944626604)(920097)(425001)(930097);
+X-Microsoft-Antispam-Message-Info:
+	ifeNi4YG4AycGbOmZC5tI6c/I0y2rohcz8vEzO1I9zcYmA5jbBb9Mux3KwVFtoe18KvO5ra+Ok2A0gX+Jxuf8mzyC/xNfLqadA/uo0Y1G1pGoPXgDOEq4yq70A+ybH5hSgcZJmI3MX8SBWudi2wrXTQmw4fG5KuCrr88r0qmJYHA6n97Fj0V4AQGyPlo9iiAL7rC14wHjcV4kKw8bhLJtqp0Dh00aZcFTp1fFlhUkyF4EUUYvH4hkV9d3nbsg8d7s3BJtJROwwIOyEE6pT4U6MTHotv+s+x8dmuLydalUgdp+fYt9fdgarsXkbSNRUx1HMYDwH/miZAGoKvezZSm3q+GHxX9goYGGIAx2UQE/dt+6df7NiXt1COGHp/VIFZhNLNQ1VSzqQbV055V/7wx/yFiGUY+MojaKluY75krzXutcQJm3xn3GSxw6Qe6vX7w3HIN4KRDIxCTXr2DGbsd9ohqxTDYn38nHkv9Sput9bLjtb0MAXThf36guEIHfeOmRZCJN2GZy2m/4yfP/vha0TQpbZcPhaO6R9E6pC+o9XXGUbfYYOx26SgPNtm4ydWe8Pk/aC1uCeKhNoO1wzY4si6IAAInRZHSeFS7P8jkGXnrVxUG+L3o010J/5sFnK7tMbgkwzfeFGXTZeKcDKROJkLfJrUeIrixgjASITVh/o8=
+Content-type: multipart/alternative;
+	boundary="B_3724131665_1772336242"
+
+> This message is in MIME format. Since your mail reader does not understand
+this format, some or all of this message may not be legible.
+
+--B_3724131665_1772336242
+Content-type: text/plain;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+Friend, Without question, my number one priority is representing the folks =
+of the First Congressional District. As we enter into a new year, I want to =
+take the time to hear what you think the federal government should work on i=
+n 2022. Through meetings in Washington and throughout the District, phone ca=
+lls, and other interactions with my constituents, I always make sure to use =
+the thoughts, ideas, and concerns of those I represent when making decisions=
+ in Washington. As we move into the second session of the 117th Congress, I =
+remain dedicated to working tirelessly for you in Washington, and I am looki=
+ng forward to getting you the results you deserve.I want to hear what you be=
+lieve should be Congress=E2=80=99 top priorities in 2022. Click here or below to f=
+ill out this survey:=20
+Friend,=20
+Without question, my number one priority is representing the folks of the F=
+irst Congressional District. As we enter into a new year, I want to take the=
+ time to hear what you think the federal government should work on in 2022. =
+Through meetings in Washington and throughout the District, phone calls, and=
+ other interactions with my constituents, I always make sure to use the thou=
+ghts, ideas, and concerns of those I represent when making decisions in Wash=
+ington.=20
+As we move into the second session of the 117th Congress, I remain dedicate=
+d to working tirelessly for you in Washington, and I am looking forward to g=
+etting you the results you deserve.
+I want to hear what you believe should be Congress=E2=80=99 top priorities in 202=
+2. Click here or below to fill out this survey:
+ =20
+ =20
+Strengthening Immigration Reform [ ] Top Priority [ ] Neutral [ ] Low Prior=
+ity
+Reining in Wasteful Government Spending[ ] Top Priority[ ] Neutral[ ] Low P=
+riority=20
+Holding Members of Congress Accountable[ ] Top Priority[ ] Neutral[ ] Low P=
+riority=20
+Lowering Crime in Your Community [ ] Top Priority[ ] Neutral[ ] Low Priorit=
+y=20
+Ensuring a Strong Military and National Defense [ ] Top Priority[ ] Neutral=
+[ ] Low Priority=20
+Responsibly Advocating for our Natural Resources and the Environment[ ] Top=
+ Priority[ ] Neutral[ ] Low Priority=20
+Addressing the Inflation Crisis[ ] Top Priority[ ] Neutral[ ] Low Priority
+ =20
+Thank you for sharing your thoughts with me.=20
+Sincerely,Rob
+=20
+=20
+      =20
+ =20
+Home  |   About Rob  |   Newsroom  |   Services  |   Priorities=20
+ =20
+HANOVER OFFICE
+6501 Mechanicsville Tpke.
+Suite 102
+Mechanicsville, VA 23111
+Phone: (804) 730-6595=20
+Fax: (804) 730-6597=20
+STAFFORD OFFICE
+95 Dunn Drive
+Suite 201
+Stafford, Virginia 22556
+Phone: (540) 659-2734=20
+Fax: (540) 659-2737=20
+TAPPAHANNOCK OFFICE
+508 Church Lane
+P.O. Box 3106
+Tappahannock, VA 22560
+Phone: (804) 443-0668=20
+Fax: (804) 443-0671=20
+WASHINGTON, DC OFFICE
+2055 Rayburn HOB
+Washington, DC 20515
+Phone: (202) 225-4261=20
+Fax: (202) 225-4382=20
+ =20
+Unsubscribe |  Share on Facebook |  Share on Twitter=20
+
+*Please do not reply to this email, as that mailbox is unattended. To bette=
+r serve the constituents of the First District I have established a contact =
+form on my website. Please click here if you would like to send additional c=
+orrespondence.
+ =20
+=20
+Click Here to view this email in your browser=20
+Click Here to be removed from this list 
+
+--B_3724131665_1772336242
+Content-type: text/html;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><title>P=
+OLL: What Should Congress Prioritize in 2022?</title><meta name=3D"viewport" c=
+ontent=3D"width=3Ddevice-width, initial-scale=3D1"><!--[if !mso]><!--><meta http-e=
+quiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![endif]--><style>body, table,=
+ td, a{-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;} /* Preve=
+nt WebKit and Windows mobile changing default text sizes */ img{-ms-interpol=
+ation-mode: bicubic;} /* Allow smoother rendering of resized image in Intern=
+et Explorer *//* RESET STYLES */img { border: 0; height: auto; line-height: =
+100%; outline: none; text-decoration: none; }table { border-collapse: collap=
+se !important; }body { height: 100% !important; margin: 0 !important; paddin=
+g: 0 !important; width: 100% !important; }strong { font-weight: bold; } /* E=
+ditor reset *//* FIRESIDE STYLES */.component img {max-width:600px;}.compone=
+nt table {mso-table-rspace:10pt; border-collapse:collapse;}.component { padd=
+ing: 0px !important; }.press {padding-bottom: 0px;}</style><style>@media all=
+ and (max-width:650px) {            .image-1, .caption-1, .img-1 img, .image=
+-1 tr, .image-1 td, .image-2, .img-2 img, .image-2 tr, .image-2 td {max-widt=
+h: 100% !important; width: 100% !important;}            .responsive-table {w=
+idth:100% !important;}            .responsive-table img {max-width:100% !imp=
+ortant; height: auto !important;}            .press .component, .press td {t=
+ext-align:center;}            .component { margin-left: 20px; margin-right: =
+20px;}            .component .responsive-table { margin-left: 0px !important=
+; margin-right: 0px !important;}            .wide .video-thumb { width: 100%=
+ !important;height: auto !important; }             .wide.video-container { w=
+idth: 100% !important; }         .component.full-width {margin-left: 0px; ma=
+rgin-right: 0px; }   }</style><style type=3D"text/css">
+            /* CLIENT-SPECIFIC STYLES */
+            body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text =
+sizes */
+            table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Rem=
+ove spacing between tables in Outlook 2007 and up */
+            img{-ms-interpolation-mode: bicubic;} /* Allow smoother renderi=
+ng of resized image in Internet Explorer */
+            /* RESET STYLES */
+            img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: =
+0 !important; width: 100% !important; }
+            strong { font-weight: bold; } /* Editor reset */
+            /* FIRESIDE STYLES */
+            .component img {max-width:600px;}
+            .component table {mso-table-rspace:10pt; border-collapse:collap=
+se; font-family: 'Calibri', Helvetica, Arial, sans-serif;}
+            .component td, td {font-family: 'Calibri', Helvetica, Arial, sa=
+ns-serif;}
+            .component { padding: 0px !important; }
+            .press {padding-bottom: 0px;}
+            .caption-1 td {font-family: 'Calibri', Helvetica, Arial, sans-s=
+erif;}
+            /* Margin/NoMargin STYLES */
+            .component.full-width{ overflow: hidden; margin: 0px; }
+            /* HEADER STYLES */
+            .header-bar {width: 100%;}
+            .header-bar-margin {background-color:#ffffff;}
+            .header-bar h2 {margin: 0 !important; padding: 0 !important; co=
+lor: #10233C !important;text-align: center;font-size: 24px !important;font-w=
+eight: bold !important; }
+            .survey-content > table > tbody tr td { border-color: #10233C !=
+important; }
+            .survey-content input.survey-submit { font-family: 'Calibri', H=
+elvetica, Arial, sans-serif !important; }
+        </style><style id=3D"media-queries"> 
+            @media all and (max-width:650px) {
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max=
+-width: 100% !important; width: 100% !important;}
+            .responsive-table, .responsive-table2 {width:100% !important;}
+            .responsive-table img {max-width:100% !important; height: auto =
+!important;}
+            .press .component, .press td, .split .component, .split .compon=
+ent td, .split td {text-align:center;}
+            .component { margin-left: 20px; margin-right: 20px;}
+            .component .responsive-table { margin-left: 0px !important; mar=
+gin-right: 0px !important;}
+            .wide .video-thumb { width: 100% !important;height: auto !impor=
+tant; } 
+            .wide.video-container { width: 100% !important; }
+            }
+        </style><!--[if (gte mso 9)|(IE)]>
+                                            <style>=20
+                                        </style>
+                                        <![endif]--></head><body style=3D"-we=
+bkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;margin: 0px !importa=
+nt; padding: 0px !important;"><div id=3D"preview-text" style=3D"display: none; f=
+ont-size: 1px; color: #fefefe; line-height: 1px; font-family: 'Calibri', Hel=
+vetica, Arial, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; over=
+flow: hidden;">Friend,&nbsp;Without question, my number one priority is repr=
+esenting the folks of the First Congressional District. As we enter into a n=
+ew year, I want to take the time to hear what you think the federal governme=
+nt should work on in 2022. Through meetings in Washington and throughout the=
+ District, phone calls, and other interactions with my constituents, I alway=
+s make sure to use the thoughts, ideas, and concerns of those I represent wh=
+en making decisions in Washington.&nbsp;As we move into the second session o=
+f the 117th Congress, I remain dedicated to working tirelessly for you in Wa=
+shington, and I am looking forward to getting you the results you deserve.I =
+want to hear what you believe should be Congress=E2=80=99 top priorities in 2022. =
+Click here or below to fill out this survey: </div><table role=3D"presentation=
+" width=3D"650" align=3D"center" class=3D"responsive-table" style=3D"-webkit-text-si=
+ze-adjust: 100%; -ms-text-size-adjust: 100%;font-family: 'Calibri', Helvetic=
+a, Arial, sans-serif; background-color: #ffffff;border-bottom: 2px solid #ee=
+ca63;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwid=
+th=3D"0" leftmargin=3D"0" topmargin=3D"0"><tbody><tr><td align=3D"center" valign=3D"to=
+p" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-fa=
+mily: 'Calibri', Helvetica, Arial, sans-serif; font-size: 16px; "><div class=
+=3D"region" id=3D"region-1"><div class=3D"component full-width" style=3D"padding: 0p=
+x !important;"><div class=3D"image" style=3D"overflow: hidden;width:100%"><table=
+ class=3D"responsive-table" role=3D"presentation" align=3D"center" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0p=
+t;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;float: left; table-layout: fixed; margin-ri=
+ght: 0px; margin-left: 0px;" width=3D"650"><tbody><tr><td valign=3D"top" class=3D"=
+image-td" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;=
+"><div class=3D"img-1 image-container" style=3D"overflow: hidden;"><a href=3D"http=
+s://wittman.house.gov/components/redirect/r.aspx?ID=3D38052-73010720" target=3D"=
+_blank" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">=
+<img style=3D"max-width:600px;-ms-interpolation-mode: bicubic;vertical-align: =
+bottom; max-width: 650px;" alt=3D"Representative Rob Wittman" src=3D"https://wit=
+tman.house.gov/uploadedphotos/highresolution/22f8b6a1-6fbb-4cbb-8303-39a831b=
+0f6dc.png"></a></div></td></tr></tbody></table></div></div></div></td></tr><=
+/tbody></table><table role=3D"presentation" width=3D"650" align=3D"center" class=3D"=
+responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjus=
+t: 100%;background-color: #ffffff; font-family: 'Calibri', Helvetica, Arial,=
+ sans-serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" ma=
+rginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><tbody><tr><td class=3D"responsive-=
+table" valign=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adj=
+ust: 100%;font-family: 'Calibri', Helvetica, Arial, sans-serif; font-size: 1=
+6px; color: #000000;"><table role=3D"presentation" class=3D"responsive-table" st=
+yle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><tbody><tr=
+ height=3D"20"><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust=
+: 100%;"><span></span></td></tr></tbody></table><div class=3D"region" id=3D"regi=
+on-2"><div class=3D"component " style=3D"padding: 0px !important;"><div class=3D"e=
+ditable" style=3D"overflow: hidden;width:100%"><table class=3D"responsive-table"=
+ role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-t=
+able-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse=
+:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-l=
+ayout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610"><tbody><tr=
+><td class=3D"table-w-bg-color" valign=3D"top" style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;"><div class=3D"cke_editable cke_editable_inl=
+ine cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><=
+p style=3D"margin: 0;line-height:1.2; background-color:#ffffff"><span style=3D"f=
+ont-size:11pt; font-variant-ligatures:normal; font-variant-east-asian:normal=
+; font-variant-position:normal; white-space:pre-wrap"><span style=3D"font-fami=
+ly:Calibri, sans-serif"><span style=3D"color:#202020"><span style=3D"background-=
+color:#ffffff"><span style=3D"font-weight:400"><span style=3D"font-style:normal"=
+><span style=3D"text-decoration:none">Friend,&nbsp;</span></span></span></span=
+></span></span></span></p><p style=3D"margin: 0;line-height:1.2; background-co=
+lor:#ffffff"><br></p><p style=3D"margin: 0;line-height:1.2; background-color:#=
+ffffff"><span style=3D"font-size:11pt; font-variant-ligatures:normal; font-var=
+iant-east-asian:normal; font-variant-position:normal; white-space:pre-wrap">=
+<span style=3D"font-family:Calibri, sans-serif"><span style=3D"color:#202020"><s=
+pan style=3D"background-color:#ffffff"><span style=3D"font-weight:400"><span sty=
+le=3D"font-style:normal"><span style=3D"text-decoration:none">Without question, =
+my number one priority is representing the folks of the First Congressional =
+District. As we enter into a new year, I want to take the time to hear what =
+you think the federal government should work on in 2022. Through meetings in=
+ Washington and throughout the District, phone calls, and other interactions=
+ with my constituents, I always make sure to use the thoughts, ideas, and co=
+ncerns of those I represent when making decisions in Washington.&nbsp;</span=
+></span></span></span></span></span></span></p><p style=3D"margin: 0;line-heig=
+ht:1.2; background-color:#ffffff"><br></p><p style=3D"margin: 0;line-height:1.=
+2; background-color:#ffffff"><span style=3D"font-size:11pt; font-variant-ligat=
+ures:normal; font-variant-east-asian:normal; font-variant-position:normal; w=
+hite-space:pre-wrap"><span style=3D"font-family:Calibri, sans-serif"><span sty=
+le=3D"color:#202020"><span style=3D"background-color:#ffffff"><span style=3D"font-=
+weight:400"><span style=3D"font-style:normal"><span style=3D"text-decoration:non=
+e">As we move into the second session of the 117th Congress, I remain dedica=
+ted to working tirelessly for you in Washington, and I am looking forward to=
+ getting you the results you deserve.</span></span></span></span></span></sp=
+an></span></p><p style=3D"margin: 0;margin: 0;"><br style=3D"font-style:normal; =
+font-weight:normal; text-align:start; white-space:normal; text-decoration:no=
+ne; color:#000000"><span style=3D"font-size:11pt; font-variant-ligatures:norma=
+l; font-variant-east-asian:normal; font-variant-position:normal; white-space=
+:pre-wrap"><span style=3D"font-family:Calibri, sans-serif"><span style=3D"color:=
+#202020"><span style=3D"background-color:#ffffff"><span style=3D"font-weight:700=
+"><span style=3D"font-style:normal"><span style=3D"text-decoration:none">I want =
+to hear what you believe should be Congress=E2=80=99 top priorities in 2022. Click=
+ </span></span></span></span></span><a data-cke-saved-href=3D"https://wittman.=
+house.gov/components/redirect/r.aspx?ID=3D38053-73010720" href=3D"https://wittma=
+n.house.gov/forms/form/?ID=3D257" style=3D"-webkit-text-size-adjust: 100%; -ms-t=
+ext-size-adjust: 100%;"><span style=3D"background-color:#ffffff"><span style=3D"=
+font-weight:700"><span style=3D"font-style:normal"><span style=3D"text-decoratio=
+n:none">here</span></span></span></span></a><span style=3D"color:#202020"><spa=
+n style=3D"background-color:#ffffff"><span style=3D"font-weight:700"><span style=
+=3D"font-style:normal"><span style=3D"text-decoration:none"> or below to fill ou=
+t this survey:</span></span></span></span></span></span></span></p></div></t=
+d></tr></tbody></table></div></div><div class=3D"component " style=3D"padding: 0=
+px !important;"><div class=3D"spacing" style=3D"overflow: hidden;width:100%"><ta=
+ble role=3D"presentation" class=3D"responsive-table" style=3D"mso-table-lspace:0pt=
+; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-spacing: 0px; m=
+argin-right: 20px; margin-left: 20px;" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" width=3D""><tbody><tr><td style=3D"-webkit-text-size-adjust: 100%; -ms-tex=
+t-size-adjust: 100%;min-width: 100%;"><table role=3D"presentation" style=3D"mso-=
+table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collaps=
+e:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border=
+-spacing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"><tbo=
+dy><tr class=3D"spacerRow" height=3D"16"><td style=3D"-webkit-text-size-adjust: 10=
+0%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">&nbsp; </td>=
+</tr></tbody></table></td></tr></tbody></table></div></div><div class=3D"compo=
+nent " style=3D"padding: 0px !important;"><div class=3D"image" style=3D"overflow: =
+hidden;width:100%"><table class=3D"responsive-table" role=3D"presentation" align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace=
+:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-=
+webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; table=
+-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610"><tbody><=
+tr><td valign=3D"top" class=3D"image-td" style=3D"-webkit-text-size-adjust: 100%; =
+-ms-text-size-adjust: 100%;"><div class=3D"img-1 image-container" style=3D"overf=
+low: hidden;text-align:center"><a href=3D"https://wittman.house.gov/components=
+/redirect/r.aspx?ID=3D38054-73010720" target=3D"_blank" style=3D"-webkit-text-size=
+-adjust: 100%; -ms-text-size-adjust: 100%;"><img style=3D"max-width:600px;-ms-=
+interpolation-mode: bicubic;vertical-align: bottom; max-width: 240px;" alt=3D"=
+survey button" src=3D"https://wittman.house.gov/UploadedPhotos/LowResolution/f=
+98b1c12-7ef5-48be-b772-d9d166249a7f.png"></a></div></td></tr></tbody></table=
+></div></div><div class=3D"component " style=3D"padding: 0px !important;"><div c=
+lass=3D"spacing" style=3D"overflow: hidden;width:100%"><table role=3D"presentation=
+" class=3D"responsive-table" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt=
+;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 1=
+00%; -ms-text-size-adjust: 100%;border-spacing: 0px; margin-right: 20px; mar=
+gin-left: 20px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D""><tbody>=
+<tr><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;mi=
+n-width: 100%;"><table role=3D"presentation" style=3D"mso-table-lspace:0pt; mso-=
+table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-tex=
+t-size-adjust: 100%; -ms-text-size-adjust: 100%;border-spacing: 0px;" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"><tbody><tr class=3D"spacerRo=
+w" height=3D"16"><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adju=
+st: 100%;font-size:0%;line-height: 16px;">&nbsp; </td></tr></tbody></table><=
+/td></tr></tbody></table></div></div><div class=3D"component " style=3D"padding:=
+ 0px !important;"><div class=3D"editable" style=3D"overflow: hidden;width:100%">=
+<table class=3D"responsive-table" role=3D"presentation" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-tab=
+le-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms=
+-text-size-adjust: 100%;table-layout: fixed; margin-right: 20px; margin-left=
+: 20px;" width=3D"610"><tbody><tr><td class=3D"table-w-bg-color" valign=3D"top" st=
+yle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><div class=
+=3D"cke_editable cke_editable_inline cke_contents_ltr cke_focus cke_show_borde=
+rs" style=3D"overflow: hidden;"><div style=3D"overflow: hidden;overflow:hidden; =
+background-color:#ffffff"><p style=3D"margin: 0;line-height:1.2; background-co=
+lor:#ffffff"><a data-cke-saved-href=3D"https://wittman.house.gov/components/re=
+direct/r.aspx?ID=3D38055-73010720" href=3D"https://wittman.house.gov/forms/form/=
+?ID=3D257" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"=
+><span style=3D"font-size:11pt; font-variant-ligatures:normal; font-variant-ea=
+st-asian:normal; font-variant-position:normal; white-space:pre-wrap"><span s=
+tyle=3D"font-family:Calibri, sans-serif"><span style=3D"color:#202020"><span sty=
+le=3D"background-color:#ffffff"><span style=3D"font-weight:700"><span style=3D"fon=
+t-style:normal"><span style=3D"text-decoration:none">Strengthening Immigration=
+ Reform&nbsp;</span></span></span></span></span></span></span></a></p><p sty=
+le=3D"margin: 0;line-height:1.2; background-color:#ffffff"><a data-cke-saved-h=
+ref=3D"https://wittman.house.gov/components/redirect/r.aspx?ID=3D38056-73010720"=
+ href=3D"https://wittman.house.gov/forms/form/?ID=3D257" style=3D"-webkit-text-siz=
+e-adjust: 100%; -ms-text-size-adjust: 100%;"><span style=3D"font-size:11pt; fo=
+nt-variant-ligatures:normal; font-variant-east-asian:normal; font-variant-po=
+sition:normal; white-space:pre-wrap"><span style=3D"font-family:Calibri, sans-=
+serif"><span style=3D"color:#202020"><span style=3D"background-color:#ffffff"><s=
+pan style=3D"font-weight:400"><span style=3D"font-style:normal"><span style=3D"tex=
+t-decoration:none">[ ] Top Priority&nbsp;</span></span></span></span></span>=
+</span></span></a></p><p style=3D"margin: 0;line-height:1.2; background-color:=
+#ffffff"><a data-cke-saved-href=3D"https://wittman.house.gov/components/redire=
+ct/r.aspx?ID=3D38057-73010720" href=3D"https://wittman.house.gov/forms/form/?ID=3D=
+257" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><sp=
+an style=3D"font-size:11pt; font-variant-ligatures:normal; font-variant-east-a=
+sian:normal; font-variant-position:normal; white-space:pre-wrap"><span style=
+=3D"font-family:Calibri, sans-serif"><span style=3D"color:#202020"><span style=3D"=
+background-color:#ffffff"><span style=3D"font-weight:400"><span style=3D"font-st=
+yle:normal"><span style=3D"text-decoration:none">[ ] Neutral&nbsp;</span></spa=
+n></span></span></span></span></span></a></p><p style=3D"margin: 0;line-height=
+:1.2; background-color:#ffffff"><a data-cke-saved-href=3D"https://wittman.hous=
+e.gov/components/redirect/r.aspx?ID=3D38058-73010720" href=3D"https://wittman.ho=
+use.gov/forms/form/?ID=3D257" style=3D"-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;"><span style=3D"font-size:11pt; font-variant-ligatures:norm=
+al; font-variant-east-asian:normal; font-variant-position:normal; white-spac=
+e:pre-wrap"><span style=3D"font-family:Calibri, sans-serif"><span style=3D"color=
+:#202020"><span style=3D"background-color:#ffffff"><span style=3D"font-weight:40=
+0"><span style=3D"font-style:normal"><span style=3D"text-decoration:none">[ ] Lo=
+w Priority</span></span></span></span></span></span></span></a></p><p style=3D=
+"margin: 0;line-height:1.2; background-color:#ffffff"><br></p><p style=3D"marg=
+in: 0;line-height:1.2; background-color:#ffffff"><a data-cke-saved-href=3D"htt=
+ps://wittman.house.gov/components/redirect/r.aspx?ID=3D38059-73010720" href=3D"h=
+ttps://wittman.house.gov/forms/form/?ID=3D257" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;"><span style=3D"font-size:11pt; font-varia=
+nt-ligatures:normal; font-variant-east-asian:normal; font-variant-position:n=
+ormal; white-space:pre-wrap"><span style=3D"font-family:Calibri, sans-serif"><=
+span style=3D"color:#202020"><span style=3D"background-color:#ffffff"><span styl=
+e=3D"font-weight:700"><span style=3D"font-style:normal"><span style=3D"text-decora=
+tion:none">Reining in Wasteful Government Spending</span></span></span></spa=
+n></span></span></span></a></p><p style=3D"margin: 0;line-height:1.2; backgrou=
+nd-color:#ffffff"><a data-cke-saved-href=3D"https://wittman.house.gov/componen=
+ts/redirect/r.aspx?ID=3D38060-73010720" href=3D"https://wittman.house.gov/forms/=
+form/?ID=3D257" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;"><span style=3D"font-size:11pt; font-variant-ligatures:normal; font-varia=
+nt-east-asian:normal; font-variant-position:normal; white-space:pre-wrap"><s=
+pan style=3D"font-family:Calibri, sans-serif"><span style=3D"color:#202020"><spa=
+n style=3D"background-color:#ffffff"><span style=3D"font-weight:400"><span style=
+=3D"font-style:normal"><span style=3D"text-decoration:none">[ ] Top Priority</sp=
+an></span></span></span></span></span></span></a></p><p style=3D"margin: 0;lin=
+e-height:1.2; background-color:#ffffff"><a data-cke-saved-href=3D"https://witt=
+man.house.gov/components/redirect/r.aspx?ID=3D38061-73010720" href=3D"https://wi=
+ttman.house.gov/forms/form/?ID=3D257" style=3D"-webkit-text-size-adjust: 100%; -=
+ms-text-size-adjust: 100%;"><span style=3D"font-size:11pt; font-variant-ligatu=
+res:normal; font-variant-east-asian:normal; font-variant-position:normal; wh=
+ite-space:pre-wrap"><span style=3D"font-family:Calibri, sans-serif"><span styl=
+e=3D"color:#202020"><span style=3D"background-color:#ffffff"><span style=3D"font-w=
+eight:400"><span style=3D"font-style:normal"><span style=3D"text-decoration:none=
+">[ ] Neutral</span></span></span></span></span></span></span></a></p><p sty=
+le=3D"margin: 0;line-height:1.2; background-color:#ffffff"><a data-cke-saved-h=
+ref=3D"https://wittman.house.gov/components/redirect/r.aspx?ID=3D38062-73010720"=
+ href=3D"https://wittman.house.gov/forms/form/?ID=3D257" style=3D"-webkit-text-siz=
+e-adjust: 100%; -ms-text-size-adjust: 100%;"><span style=3D"font-size:11pt; fo=
+nt-variant-ligatures:normal; font-variant-east-asian:normal; font-variant-po=
+sition:normal; white-space:pre-wrap"><span style=3D"font-family:Calibri, sans-=
+serif"><span style=3D"color:#202020"><span style=3D"background-color:#ffffff"><s=
+pan style=3D"font-weight:400"><span style=3D"font-style:normal"><span style=3D"tex=
+t-decoration:none">[ ] Low Priority&nbsp;</span></span></span></span></span>=
+</span></span></a></p><p style=3D"margin: 0;line-height:1.2; background-color:=
+#ffffff"><br></p><p style=3D"margin: 0;line-height:1.2; background-color:#ffff=
+ff"><a data-cke-saved-href=3D"https://wittman.house.gov/components/redirect/r.=
+aspx?ID=3D38063-73010720" href=3D"https://wittman.house.gov/forms/form/?ID=3D257" =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><span st=
+yle=3D"font-size:11pt; font-variant-ligatures:normal; font-variant-east-asian:=
+normal; font-variant-position:normal; white-space:pre-wrap"><span style=3D"fon=
+t-family:Calibri, sans-serif"><span style=3D"color:#202020"><span style=3D"backg=
+round-color:#ffffff"><span style=3D"font-weight:700"><span style=3D"font-style:n=
+ormal"><span style=3D"text-decoration:none">Holding Members of Congress Accoun=
+table</span></span></span></span></span></span></span></a></p><p style=3D"marg=
+in: 0;line-height:1.2; background-color:#ffffff"><a data-cke-saved-href=3D"htt=
+ps://wittman.house.gov/components/redirect/r.aspx?ID=3D38064-73010720" href=3D"h=
+ttps://wittman.house.gov/forms/form/?ID=3D257" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;"><span style=3D"font-size:11pt; font-varia=
+nt-ligatures:normal; font-variant-east-asian:normal; font-variant-position:n=
+ormal; white-space:pre-wrap"><span style=3D"font-family:Calibri, sans-serif"><=
+span style=3D"color:#202020"><span style=3D"background-color:#ffffff"><span styl=
+e=3D"font-weight:400"><span style=3D"font-style:normal"><span style=3D"text-decora=
+tion:none">[ ] Top Priority</span></span></span></span></span></span></span>=
+</a></p><p style=3D"margin: 0;line-height:1.2; background-color:#ffffff"><a da=
+ta-cke-saved-href=3D"https://wittman.house.gov/components/redirect/r.aspx?ID=3D3=
+8065-73010720" href=3D"https://wittman.house.gov/forms/form/?ID=3D257" style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><span style=3D"font=
+-size:11pt; font-variant-ligatures:normal; font-variant-east-asian:normal; f=
+ont-variant-position:normal; white-space:pre-wrap"><span style=3D"font-family:=
+Calibri, sans-serif"><span style=3D"color:#202020"><span style=3D"background-col=
+or:#ffffff"><span style=3D"font-weight:400"><span style=3D"font-style:normal"><s=
+pan style=3D"text-decoration:none">[ ] Neutral</span></span></span></span></sp=
+an></span></span></a></p><p style=3D"margin: 0;line-height:1.2; background-col=
+or:#ffffff"><a data-cke-saved-href=3D"https://wittman.house.gov/components/red=
+irect/r.aspx?ID=3D38066-73010720" href=3D"https://wittman.house.gov/forms/form/?=
+ID=3D257" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">=
+<span style=3D"font-size:11pt; font-variant-ligatures:normal; font-variant-eas=
+t-asian:normal; font-variant-position:normal; white-space:pre-wrap"><span st=
+yle=3D"font-family:Calibri, sans-serif"><span style=3D"color:#202020"><span styl=
+e=3D"background-color:#ffffff"><span style=3D"font-weight:400"><span style=3D"font=
+-style:normal"><span style=3D"text-decoration:none">[ ] Low Priority&nbsp;</sp=
+an></span></span></span></span></span></span></a></p><p style=3D"margin: 0;lin=
+e-height:1.2; background-color:#ffffff"><br></p><p style=3D"margin: 0;line-hei=
+ght:1.2; background-color:#ffffff"><a data-cke-saved-href=3D"https://wittman.h=
+ouse.gov/components/redirect/r.aspx?ID=3D38067-73010720" href=3D"https://wittman=
+.house.gov/forms/form/?ID=3D257" style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;"><span style=3D"font-size:11pt; font-variant-ligatures:n=
+ormal; font-variant-east-asian:normal; font-variant-position:normal; white-s=
+pace:pre-wrap"><span style=3D"font-family:Calibri, sans-serif"><span style=3D"co=
+lor:#202020"><span style=3D"background-color:#ffffff"><span style=3D"font-weight=
+:700"><span style=3D"font-style:normal"><span style=3D"text-decoration:none">Low=
+ering Crime in Your Community&nbsp;</span></span></span></span></span></span=
+></span></a></p><p style=3D"margin: 0;line-height:1.2; background-color:#fffff=
+f"><a data-cke-saved-href=3D"https://wittman.house.gov/components/redirect/r.a=
+spx?ID=3D38068-73010720" href=3D"https://wittman.house.gov/forms/form/?ID=3D257" s=
+tyle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><span sty=
+le=3D"font-size:11pt; font-variant-ligatures:normal; font-variant-east-asian:n=
+ormal; font-variant-position:normal; white-space:pre-wrap"><span style=3D"font=
+-family:Calibri, sans-serif"><span style=3D"color:#202020"><span style=3D"backgr=
+ound-color:#ffffff"><span style=3D"font-weight:400"><span style=3D"font-style:no=
+rmal"><span style=3D"text-decoration:none">[ ] Top Priority</span></span></spa=
+n></span></span></span></span></a></p><p style=3D"margin: 0;line-height:1.2; b=
+ackground-color:#ffffff"><a data-cke-saved-href=3D"https://wittman.house.gov/c=
+omponents/redirect/r.aspx?ID=3D38069-73010720" href=3D"https://wittman.house.gov=
+/forms/form/?ID=3D257" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-ad=
+just: 100%;"><span style=3D"font-size:11pt; font-variant-ligatures:normal; fon=
+t-variant-east-asian:normal; font-variant-position:normal; white-space:pre-w=
+rap"><span style=3D"font-family:Calibri, sans-serif"><span style=3D"color:#20202=
+0"><span style=3D"background-color:#ffffff"><span style=3D"font-weight:400"><spa=
+n style=3D"font-style:normal"><span style=3D"text-decoration:none">[ ] Neutral</=
+span></span></span></span></span></span></span></a></p><p style=3D"margin: 0;l=
+ine-height:1.2; background-color:#ffffff"><a data-cke-saved-href=3D"https://wi=
+ttman.house.gov/components/redirect/r.aspx?ID=3D38070-73010720" href=3D"https://=
+wittman.house.gov/forms/form/?ID=3D257" style=3D"-webkit-text-size-adjust: 100%;=
+ -ms-text-size-adjust: 100%;"><span style=3D"font-size:11pt; font-variant-liga=
+tures:normal; font-variant-east-asian:normal; font-variant-position:normal; =
+white-space:pre-wrap"><span style=3D"font-family:Calibri, sans-serif"><span st=
+yle=3D"color:#202020"><span style=3D"background-color:#ffffff"><span style=3D"font=
+-weight:400"><span style=3D"font-style:normal"><span style=3D"text-decoration:no=
+ne">[ ] Low Priority&nbsp;</span></span></span></span></span></span></span><=
+/a></p><p style=3D"margin: 0;line-height:1.2; background-color:#ffffff"><br></=
+p><p style=3D"margin: 0;line-height:1.2; background-color:#ffffff"><a data-cke=
+-saved-href=3D"https://wittman.house.gov/components/redirect/r.aspx?ID=3D38071-7=
+3010720" href=3D"https://wittman.house.gov/forms/form/?ID=3D257" style=3D"-webkit-=
+text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><span style=3D"font-size:=
+11pt; font-variant-ligatures:normal; font-variant-east-asian:normal; font-va=
+riant-position:normal; white-space:pre-wrap"><span style=3D"font-family:Calibr=
+i, sans-serif"><span style=3D"color:#202020"><span style=3D"background-color:#ff=
+ffff"><span style=3D"font-weight:700"><span style=3D"font-style:normal"><span st=
+yle=3D"text-decoration:none">Ensuring a Strong Military and National Defense&n=
+bsp;</span></span></span></span></span></span></span></a></p><p style=3D"margi=
+n: 0;line-height:1.2; background-color:#ffffff"><a data-cke-saved-href=3D"http=
+s://wittman.house.gov/components/redirect/r.aspx?ID=3D38072-73010720" href=3D"ht=
+tps://wittman.house.gov/forms/form/?ID=3D257" style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;"><span style=3D"font-size:11pt; font-varian=
+t-ligatures:normal; font-variant-east-asian:normal; font-variant-position:no=
+rmal; white-space:pre-wrap"><span style=3D"font-family:Calibri, sans-serif"><s=
+pan style=3D"color:#202020"><span style=3D"background-color:#ffffff"><span style=
+=3D"font-weight:400"><span style=3D"font-style:normal"><span style=3D"text-decorat=
+ion:none">[ ] Top Priority</span></span></span></span></span></span></span><=
+/a></p><p style=3D"margin: 0;line-height:1.2; background-color:#ffffff"><a dat=
+a-cke-saved-href=3D"https://wittman.house.gov/components/redirect/r.aspx?ID=3D38=
+073-73010720" href=3D"https://wittman.house.gov/forms/form/?ID=3D257" style=3D"-we=
+bkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><span style=3D"font-=
+size:11pt; font-variant-ligatures:normal; font-variant-east-asian:normal; fo=
+nt-variant-position:normal; white-space:pre-wrap"><span style=3D"font-family:C=
+alibri, sans-serif"><span style=3D"color:#202020"><span style=3D"background-colo=
+r:#ffffff"><span style=3D"font-weight:400"><span style=3D"font-style:normal"><sp=
+an style=3D"text-decoration:none">[ ] Neutral</span></span></span></span></spa=
+n></span></span></a></p><p style=3D"margin: 0;line-height:1.2; background-colo=
+r:#ffffff"><a data-cke-saved-href=3D"https://wittman.house.gov/components/redi=
+rect/r.aspx?ID=3D38074-73010720" href=3D"https://wittman.house.gov/forms/form/?I=
+D=3D257" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><=
+span style=3D"font-size:11pt; font-variant-ligatures:normal; font-variant-east=
+-asian:normal; font-variant-position:normal; white-space:pre-wrap"><span sty=
+le=3D"font-family:Calibri, sans-serif"><span style=3D"color:#202020"><span style=
+=3D"background-color:#ffffff"><span style=3D"font-weight:400"><span style=3D"font-=
+style:normal"><span style=3D"text-decoration:none">[ ] Low Priority&nbsp;</spa=
+n></span></span></span></span></span></span></a></p><p style=3D"margin: 0;line=
+-height:1.2; background-color:#ffffff"><br></p><p style=3D"margin: 0;line-heig=
+ht:1.2; background-color:#ffffff"><a data-cke-saved-href=3D"https://wittman.ho=
+use.gov/components/redirect/r.aspx?ID=3D38075-73010720" href=3D"https://wittman.=
+house.gov/forms/form/?ID=3D257" style=3D"-webkit-text-size-adjust: 100%; -ms-tex=
+t-size-adjust: 100%;"><span style=3D"font-size:11pt; font-variant-ligatures:no=
+rmal; font-variant-east-asian:normal; font-variant-position:normal; white-sp=
+ace:pre-wrap"><span style=3D"font-family:Calibri, sans-serif"><span style=3D"col=
+or:#202020"><span style=3D"background-color:#ffffff"><span style=3D"font-weight:=
+700"><span style=3D"font-style:normal"><span style=3D"text-decoration:none">Resp=
+onsibly Advocating for our Natural Resources and the Environment</span></spa=
+n></span></span></span></span></span></a></p><p style=3D"margin: 0;line-height=
+:1.2; background-color:#ffffff"><a data-cke-saved-href=3D"https://wittman.hous=
+e.gov/components/redirect/r.aspx?ID=3D38076-73010720" href=3D"https://wittman.ho=
+use.gov/forms/form/?ID=3D257" style=3D"-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;"><span style=3D"font-size:11pt; font-variant-ligatures:norm=
+al; font-variant-east-asian:normal; font-variant-position:normal; white-spac=
+e:pre-wrap"><span style=3D"font-family:Calibri, sans-serif"><span style=3D"color=
+:#202020"><span style=3D"background-color:#ffffff"><span style=3D"font-weight:40=
+0"><span style=3D"font-style:normal"><span style=3D"text-decoration:none">[ ] To=
+p Priority</span></span></span></span></span></span></span></a></p><p style=3D=
+"margin: 0;line-height:1.2; background-color:#ffffff"><a data-cke-saved-href=
+=3D"https://wittman.house.gov/components/redirect/r.aspx?ID=3D38077-73010720" hr=
+ef=3D"https://wittman.house.gov/forms/form/?ID=3D257" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;"><span style=3D"font-size:11pt; font-=
+variant-ligatures:normal; font-variant-east-asian:normal; font-variant-posit=
+ion:normal; white-space:pre-wrap"><span style=3D"font-family:Calibri, sans-ser=
+if"><span style=3D"color:#202020"><span style=3D"background-color:#ffffff"><span=
+ style=3D"font-weight:400"><span style=3D"font-style:normal"><span style=3D"text-d=
+ecoration:none">[ ] Neutral</span></span></span></span></span></span></span>=
+</a></p><p style=3D"margin: 0;line-height:1.2; background-color:#ffffff"><a da=
+ta-cke-saved-href=3D"https://wittman.house.gov/components/redirect/r.aspx?ID=3D3=
+8078-73010720" href=3D"https://wittman.house.gov/forms/form/?ID=3D257" style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><span style=3D"font=
+-size:11pt; font-variant-ligatures:normal; font-variant-east-asian:normal; f=
+ont-variant-position:normal; white-space:pre-wrap"><span style=3D"font-family:=
+Calibri, sans-serif"><span style=3D"color:#202020"><span style=3D"background-col=
+or:#ffffff"><span style=3D"font-weight:400"><span style=3D"font-style:normal"><s=
+pan style=3D"text-decoration:none">[ ] Low Priority&nbsp;</span></span></span>=
+</span></span></span></span></a></p><p style=3D"margin: 0;line-height:1.2; bac=
+kground-color:#ffffff"><br></p><p style=3D"margin: 0;line-height:1.2; backgrou=
+nd-color:#ffffff"><a data-cke-saved-href=3D"https://wittman.house.gov/componen=
+ts/redirect/r.aspx?ID=3D38079-73010720" href=3D"https://wittman.house.gov/forms/=
+form/?ID=3D257" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;"><span style=3D"font-size:11pt; font-variant-ligatures:normal; font-varia=
+nt-east-asian:normal; font-variant-position:normal; white-space:pre-wrap"><s=
+pan style=3D"font-family:Calibri, sans-serif"><span style=3D"color:#202020"><spa=
+n style=3D"background-color:#ffffff"><span style=3D"font-weight:700"><span style=
+=3D"font-style:normal"><span style=3D"text-decoration:none">Addressing the Infla=
+tion Crisis</span></span></span></span></span></span></span></a></p><p style=
+=3D"margin: 0;line-height:1.2; background-color:#ffffff"><a data-cke-saved-hre=
+f=3D"https://wittman.house.gov/components/redirect/r.aspx?ID=3D38080-73010720" h=
+ref=3D"https://wittman.house.gov/forms/form/?ID=3D257" style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;"><span style=3D"font-size:11pt; font=
+-variant-ligatures:normal; font-variant-east-asian:normal; font-variant-posi=
+tion:normal; white-space:pre-wrap"><span style=3D"font-family:Calibri, sans-se=
+rif"><span style=3D"color:#202020"><span style=3D"background-color:#ffffff"><spa=
+n style=3D"font-weight:400"><span style=3D"font-style:normal"><span style=3D"text-=
+decoration:none">[ ] Top Priority</span></span></span></span></span></span><=
+/span></a></p><p style=3D"margin: 0;line-height:1.2; background-color:#ffffff"=
+><a data-cke-saved-href=3D"https://wittman.house.gov/components/redirect/r.asp=
+x?ID=3D38081-73010720" href=3D"https://wittman.house.gov/forms/form/?ID=3D257" sty=
+le=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><span style=
+=3D"font-size:11pt; font-variant-ligatures:normal; font-variant-east-asian:nor=
+mal; font-variant-position:normal; white-space:pre-wrap"><span style=3D"font-f=
+amily:Calibri, sans-serif"><span style=3D"color:#202020"><span style=3D"backgrou=
+nd-color:#ffffff"><span style=3D"font-weight:400"><span style=3D"font-style:norm=
+al"><span style=3D"text-decoration:none">[ ] Neutral</span></span></span></spa=
+n></span></span></span></a></p><p style=3D"margin: 0;line-height:1.2; backgrou=
+nd-color:#ffffff"><a data-cke-saved-href=3D"https://wittman.house.gov/componen=
+ts/redirect/r.aspx?ID=3D38082-73010720" href=3D"https://wittman.house.gov/forms/=
+form/?ID=3D257" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;"><span style=3D"font-size:11pt; font-variant-ligatures:normal; font-varia=
+nt-east-asian:normal; font-variant-position:normal; white-space:pre-wrap"><s=
+pan style=3D"font-family:Calibri, sans-serif"><span style=3D"color:#202020"><spa=
+n style=3D"background-color:#ffffff"><span style=3D"font-weight:400"><span style=
+=3D"font-style:normal"><span style=3D"text-decoration:none">[ ] Low Priority</sp=
+an></span></span></span></span></span></span></a></p></div></div></td></tr><=
+/tbody></table></div></div><div class=3D"component " style=3D"padding: 0px !impo=
+rtant;"><div class=3D"spacing" style=3D"overflow: hidden;width:100%"><table role=
+=3D"presentation" class=3D"responsive-table" style=3D"mso-table-lspace:0pt; mso-ta=
+ble-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%;border-spacing: 0px; margin-ri=
+ght: 20px; margin-left: 20px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D""><tbody><tr><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-a=
+djust: 100%;min-width: 100%;"><table role=3D"presentation" style=3D"mso-table-ls=
+pace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-spacing=
+: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"><tbody><tr c=
+lass=3D"spacerRow" height=3D"16"><td style=3D"-webkit-text-size-adjust: 100%; -ms-=
+text-size-adjust: 100%;font-size:0%;line-height: 16px;">&nbsp; </td></tr></t=
+body></table></td></tr></tbody></table></div></div><div class=3D"component " s=
+tyle=3D"padding: 0px !important;"><div class=3D"editable" style=3D"overflow: hidde=
+n;width:100%"><table class=3D"responsive-table" role=3D"presentation" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspa=
+ce:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-size-adj=
+ust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; margin-right: 20p=
+x; margin-left: 20px;" width=3D"610"><tbody><tr><td class=3D"table-w-bg-color" v=
+align=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;"><div class=3D"cke_editable cke_editable_inline cke_contents_ltr cke_focus =
+cke_show_borders" style=3D"overflow: hidden;"><div style=3D"overflow: hidden;ove=
+rflow:hidden; background-color:#ffffff"><p style=3D"margin: 0;line-height:1.2;=
+ background-color:#ffffff"><span style=3D"font-size:11pt; font-variant-ligatur=
+es:normal; font-variant-east-asian:normal; font-variant-position:normal; whi=
+te-space:pre-wrap"><span style=3D"font-family:Calibri, sans-serif"><span style=
+=3D"color:#202020"><span style=3D"background-color:#ffffff"><span style=3D"font-we=
+ight:400"><span style=3D"font-style:normal"><span style=3D"text-decoration:none"=
+>Thank you for sharing your thoughts with me.&nbsp;</span></span></span></sp=
+an></span></span></span></p><p style=3D"margin: 0;line-height:1.2; background-=
+color:#ffffff"><br></p><p style=3D"margin: 0;line-height:1.2; background-color=
+:#ffffff"><span style=3D"font-size:11pt; font-variant-ligatures:normal; font-v=
+ariant-east-asian:normal; font-variant-position:normal; white-space:pre-wrap=
+"><span style=3D"font-family:Calibri, sans-serif"><span style=3D"color:#202020">=
+<span style=3D"background-color:#ffffff"><span style=3D"font-weight:400"><span s=
+tyle=3D"font-style:normal"><span style=3D"text-decoration:none">Sincerely,</span=
+></span></span></span></span></span></span></p><p style=3D"margin: 0;line-heig=
+ht:1.2; background-color:#ffffff"><span style=3D"font-size:11pt; font-variant-=
+ligatures:normal; font-variant-east-asian:normal; font-variant-position:norm=
+al; white-space:pre-wrap"><span style=3D"font-family:Calibri, sans-serif"><spa=
+n style=3D"color:#202020"><span style=3D"background-color:#ffffff"><span style=3D"=
+font-weight:400"><span style=3D"font-style:normal"><span style=3D"text-decoratio=
+n:none">Rob</span></span></span></span></span></span></span></p></div></div>=
+</td></tr></tbody></table></div></div></div><table role=3D"presentation" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adj=
+ust: 100%;"><tbody><tr height=3D"20"><td style=3D"-webkit-text-size-adjust: 100%=
+; -ms-text-size-adjust: 100%;"><span></span></td></tr></tbody></table></td><=
+/tr></tbody></table><table role=3D"presentation" width=3D"650" class=3D"responsive=
+-table" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: 'Calibri', Helvetica, Arial, sans-serif; backgroun=
+d-color: #ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"10" marginheight=3D=
+"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><tbody><tr><td valign=3D"midd=
+le" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adju=
+st: 100%;color: #333333; background-color: #f5f5f5; padding: 0 20px;"><table=
+ role=3D"presentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"10" style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;text-align:center;"=
+><tbody><tr><td valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;text-align:center;"><table role=3D"presen=
+tation" cellpadding=3D"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0=
+" width=3D"32.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust:=
+ 100%;font-family: arial, helvetica, sans-serif; text-align:center; font-siz=
+e: 14px; color: #333333; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rsp=
+ace: 0pt; height: 100px;"><tbody><tr><td align=3D"center" valign=3D"middle" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: '=
+Calibri', Helvetica, Arial, sans-serif; font-size: 16px;"><img alt=3D"Rob Witt=
+man Headshot" width=3D"120" style=3D"-ms-interpolation-mode: bicubic;display: bl=
+ock; width: 120px;" src=3D"https://wittman.house.gov/images/email/wittman-head=
+-2021.png"> </td></tr></tbody></table><table role=3D"presentation" cellpadding=
+=3D"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"32.9%" sty=
+le=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: =
+arial, helvetica, sans-serif; text-align:center; font-size: 14px; color: #33=
+3333; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0pt; height: 1=
+00px;"><tbody><tr><td align=3D"center" valign=3D"middle" style=3D"-webkit-text-siz=
+e-adjust: 100%; -ms-text-size-adjust: 100%;font-family: 'Calibri', Helvetica=
+, Arial, sans-serif; font-size: 16px; color: #000000; "><a href=3D"https://wit=
+tman.house.gov/components/redirect/r.aspx?ID=3D38083-73010720" style=3D"-webkit-=
+text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"Subscribe to =
+E-Newsletter" width=3D"208" style=3D"-ms-interpolation-mode: bicubic;width: 208p=
+x;" src=3D"https://wittman.house.gov/images/email/enews21.png"></a> </td></tr>=
+</tbody></table><table role=3D"presentation" cellpadding=3D"0" class=3D"responsive=
+-table" align=3D"right" cellspacing=3D"0" width=3D"32.9%" style=3D"-webkit-text-size=
+-adjust: 100%; -ms-text-size-adjust: 100%;font-family: arial, helvetica, san=
+s-serif; text-align:center; font-size: 14px; color: #333333; margin: 10px 0;=
+mso-table-lspace: 0pt; mso-table-rspace: 0pt; height: 100px;"><tbody><tr><td=
+ align=3D"center" valign=3D"middle" style=3D"-webkit-text-size-adjust: 100%; -ms-t=
+ext-size-adjust: 100%;font-family: Arial, Helvetica, sans-serif;"><a target=3D=
+"_blank" href=3D"https://wittman.house.gov/components/redirect/r.aspx?ID=3D38084=
+-73010720" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%=
+;"><img alt=3D"facebook icon" width=3D"35" src=3D"https://wittman.house.gov/images=
+/email/fb21.png" style=3D"-ms-interpolation-mode: bicubic;border-width: 0px; b=
+order-style: solid; width: 32px;"></a> &nbsp;<a target=3D"_blank" href=3D"https:=
+//wittman.house.gov/components/redirect/r.aspx?ID=3D38085-73010720" style=3D"-we=
+bkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"twitter =
+icon" width=3D"35" src=3D"https://wittman.house.gov/images/email/tw21.png" style=
+=3D"-ms-interpolation-mode: bicubic;border-width: 0px; border-style: solid; wi=
+dth: 32px;"></a> &nbsp;<a target=3D"_blank" href=3D"https://wittman.house.gov/co=
+mponents/redirect/r.aspx?ID=3D38086-73010720" style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;"><img alt=3D"instagram icon" width=3D"35" src=
+=3D"https://wittman.house.gov/images/email/insta21.png" style=3D"-ms-interpolati=
+on-mode: bicubic;border-width: 0px; border-style: solid; width: 32px;"></a> =
+&nbsp;<a target=3D"_blank" href=3D"https://wittman.house.gov/components/redirect=
+/r.aspx?ID=3D38087-73010720" style=3D"-webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%;"><img alt=3D"Email Me" width=3D"35" src=3D"https://wittman.house=
+.gov/images/email/email21.png" style=3D"-ms-interpolation-mode: bicubic;border=
+-width: 0px; border-style: solid; width: 32px;"></a> </td></tr></tbody></tab=
+le></td></tr></tbody></table></td></tr></tbody></table><table role=3D"presenta=
+tion" width=3D"650" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-=
+text-size-adjust: 100%;background-color: #10233C; border-bottom: 8px solid #=
+eeca63;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginw=
+idth=3D"0" leftmargin=3D"0" topmargin=3D"0"><tbody><tr><td style=3D"-webkit-text-siz=
+e-adjust: 100%; -ms-text-size-adjust: 100%;"><table role=3D"presentation" widt=
+h=3D"650" class=3D"responsive-table" align=3D"center" style=3D"-webkit-text-size-adj=
+ust: 100%; -ms-text-size-adjust: 100%;font-family: 'Calibri', Helvetica, Ari=
+al, sans-serif; background-color: #10233C;" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><tb=
+ody><tr><td valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;height:30px; background-color: #10233C;">&n=
+bsp; </td></tr><tr><td valign=3D"middle" align=3D"center" style=3D"-webkit-text-si=
+ze-adjust: 100%; -ms-text-size-adjust: 100%;background-color: #10233C; color=
+: #eeca63; font-size: 14px; font-weight: bold;"><a href=3D"https://wittman.hou=
+se.gov/components/redirect/r.aspx?ID=3D38088-73010720" style=3D"-webkit-text-siz=
+e-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; text-decoration: =
+none; font-size: 14px; text-transform: uppercase;">Home</a>&nbsp;&nbsp;|&nbs=
+p;&nbsp; <a href=3D"https://wittman.house.gov/components/redirect/r.aspx?ID=3D38=
+089-73010720" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;color: #ffffff; text-decoration: none; font-size: 14px; text-transform: =
+uppercase;">About Rob</a>&nbsp;&nbsp;|&nbsp;&nbsp; <a href=3D"https://wittman.=
+house.gov/components/redirect/r.aspx?ID=3D38090-73010720" style=3D"-webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; text-decoratio=
+n: none; font-size: 14px; text-transform: uppercase;">Newsroom</a>&nbsp;&nbs=
+p;|&nbsp;&nbsp; <a href=3D"https://wittman.house.gov/components/redirect/r.asp=
+x?ID=3D38091-73010720" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-ad=
+just: 100%;color: #ffffff; text-decoration: none; font-size: 14px; text-tran=
+sform: uppercase;">Services</a>&nbsp;&nbsp;|&nbsp;&nbsp; <a href=3D"https://wi=
+ttman.house.gov/components/redirect/r.aspx?ID=3D38092-73010720" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; text-dec=
+oration: none; font-size: 14px; text-transform: uppercase;">Priorities</a> <=
+/td></tr><tr><td valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-adj=
+ust: 100%; -ms-text-size-adjust: 100%;height:30px; background-color: #10233C=
+;">&nbsp; </td></tr><tr><td valign=3D"middle" align=3D"center" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; background-=
+color: #10233C; padding: 0 20px;"><table role=3D"presentation" width=3D"100%" ce=
+llpadding=3D"0" cellspacing=3D"10" style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;text-align:center;"><tbody><tr><td valign=3D"middle" alig=
+n=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%=
+;text-align:center;"><table role=3D"presentation" cellpadding=3D"0" class=3D"respo=
+nsive-table" align=3D"left" cellspacing=3D"0" width=3D"24.9%" style=3D"-webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: 'Calibri', Helvet=
+ica, Arial, sans-serif; text-align:center; font-size: 13px; color: #ffffff; =
+margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tbody><tr><td=
+ style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-fami=
+ly: 'Calibri', Helvetica, Arial, sans-serif;"><strong style=3D"font-weight: bo=
+ld;font-family: 'Calibri', Helvetica, Arial, sans-serif; color: #eeca63;">HA=
+NOVER OFFICE</strong><br>6501 Mechanicsville Tpke.<br>Suite 102<br>Mechanics=
+ville, VA 23111<br>Phone: (804) 730-6595 <br>Fax: (804) 730-6597 </td></tr><=
+/tbody></table><table role=3D"presentation" cellpadding=3D"0" class=3D"responsive-=
+table" align=3D"left" cellspacing=3D"0" width=3D"24.9%" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;font-family: 'Calibri', Helvetica, A=
+rial, sans-serif; text-align:center; font-size: 13px; color: #ffffff; margin=
+: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tbody><tr><td style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: 'C=
+alibri', Helvetica, Arial, sans-serif;"><strong style=3D"font-weight: bold;fon=
+t-family: 'Calibri', Helvetica, Arial, sans-serif; color: #eeca63;">STAFFORD=
+ OFFICE</strong><br>95 Dunn Drive<br>Suite 201<br>Stafford, Virginia 22556<b=
+r>Phone: (540) 659-2734 <br>Fax: (540) 659-2737 </td></tr></tbody></table><t=
+able role=3D"presentation" cellpadding=3D"0" class=3D"responsive-table" align=3D"lef=
+t" cellspacing=3D"0" width=3D"24.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-=
+text-size-adjust: 100%;font-family: 'Calibri', Helvetica, Arial, sans-serif;=
+ text-align:center; font-size: 13px; color: #ffffff; margin: 10px 0;mso-tabl=
+e-lspace: 0pt; mso-table-rspace: 0pt;"><tbody><tr><td style=3D"-webkit-text-si=
+ze-adjust: 100%; -ms-text-size-adjust: 100%;font-family: 'Calibri', Helvetic=
+a, Arial, sans-serif;"><strong style=3D"font-weight: bold;font-family: 'Calibr=
+i', Helvetica, Arial, sans-serif; color: #eeca63;">TAPPAHANNOCK OFFICE</stro=
+ng><br>508 Church Lane<br>P.O. Box 3106<br>Tappahannock, VA 22560<br>Phone: =
+(804) 443-0668 <br>Fax: (804) 443-0671 </td></tr></tbody></table><table role=
+=3D"presentation" cellpadding=3D"0" class=3D"responsive-table" align=3D"left" cellsp=
+acing=3D"0" width=3D"24.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size=
+-adjust: 100%;font-family: 'Calibri', Helvetica, Arial, sans-serif; text-ali=
+gn:center; font-size: 13px; color: #ffffff; margin: 10px 0;mso-table-lspace:=
+ 0pt; mso-table-rspace: 0pt;"><tbody><tr><td style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;font-family: 'Calibri', Helvetica, Arial,=
+ sans-serif;"><strong style=3D"font-weight: bold;font-family: 'Calibri', Helve=
+tica, Arial, sans-serif; color: #eeca63;">WASHINGTON, DC OFFICE</strong><br>=
+2055 Rayburn HOB<br>Washington, DC 20515<br>Phone: (202) 225-4261 <br>Fax: (=
+202) 225-4382 </td></tr></tbody></table></td></tr></tbody></table></td></tr>=
+<tr><td valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-adjust: 100%=
+; -ms-text-size-adjust: 100%;height:30px; background-color: #10233C;">&nbsp;=
+ </td></tr><tr><td valign=3D"middle" style=3D"-webkit-text-size-adjust: 100%; -m=
+s-text-size-adjust: 100%;background-color: #10233C;"><table role=3D"presentati=
+on" cellpadding=3D"0" cellspacing=3D"20" align=3D"center" width=3D"90%" style=3D"-webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><tbody><tr><td valig=
+n=3D"middle" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-si=
+ze-adjust: 100%;color: #eeca63; font-size: 13px; font-family: 'Calibri', Hel=
+vetica, Arial, sans-serif;"><a target=3D"_blank" href=3D"https://wittman.house.g=
+ov/components/redirect/r.aspx?ID=3D38093-73010720" style=3D"-webkit-text-size-ad=
+just: 100%; -ms-text-size-adjust: 100%;color: #ffffff; text-decoration:none;=
+ font-family: 'Calibri', Helvetica, Arial, sans-serif;">Unsubscribe</a>&nbsp=
+;|&nbsp; <a target=3D"_blank" href=3D"https://www.facebook.com/sharer.php?u=3Dhttp=
+s://wittman.house.gov/news/email/show.aspx?ID=3DHJGHRU42K5O5YF5GFJR2SBKPDM&amp=
+;t=3DPOLL%3a+What+Should+Congress+Prioritize+in+2022%3f" style=3D"-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; text-decoration=
+:none; font-family: 'Calibri', Helvetica, Arial, sans-serif;">Share on Faceb=
+ook</a>&nbsp;|&nbsp; <a target=3D"_blank" href=3D"https://wittman.house.gov/Comp=
+onents/Redirect/twitter.aspx?url=3Dhttps://wittman.house.gov/news/email/show.a=
+spx?ID=3DHJGHRU42K5O5YF5GFJR2SBKPDM&amp;name=3DPOLL%3a+What+Should+Congress+Prio=
+ritize+in+2022%3f" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adju=
+st: 100%;color: #ffffff; text-decoration:none; font-family: 'Calibri', Helve=
+tica, Arial, sans-serif;">Share on Twitter</a> <br><br><p style=3D"margin: 0;m=
+argin: 0; padding: 0; font-family: Georgia, times, serif; color: #ffffff;">*=
+Please do not reply to this email, as that mailbox is unattended. To better =
+serve the constituents of the First District I have established a contact fo=
+rm on my website. Please click <a style=3D"-webkit-text-size-adjust: 100%; -ms=
+-text-size-adjust: 100%;color: #EECA63; font-size: 13px;" href=3D"https://witt=
+man.house.gov/components/redirect/r.aspx?ID=3D38094-73010720"><strong style=3D"f=
+ont-weight: bold;">here</strong></a> if you would like to send additional co=
+rrespondence.</p></td></tr></tbody></table></td></tr><tr><td valign=3D"middle"=
+ align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust:=
+ 100%;height:30px; background-color: #10233C;">&nbsp; </td></tr></tbody></ta=
+ble></td></tr></tbody></table><table role=3D"presentation" width=3D"100%" align=3D=
+"center" style=3D"font-family: Georgia, times, serif; background-color: #fffff=
+f;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D=
+"0" leftmargin=3D"0" topmargin=3D"0"><tbody><tr><td valign=3D"middle" align=3D"cente=
+r" style=3D"color: #000000; font-size: 16px; text-align: left;"><img src=3D"http=
+s://wittman.house.gov/images/spacerx4113-73010720.open" width=3D"20" height=3D"1=
+" style=3D"height: 1px"> <br><a href=3D"https://wittman.house.gov/news/email/sho=
+w.aspx?ID=3DHJGHRU42K5O5YF5GFJR2SBKPDM">Click Here</a> to view this email in y=
+our browser <br><a href=3D"https://wittman.house.gov/Forms/EmailSignup/?Delete=
+=3Dtrue&amp;MessageID=3D4113&amp;Email=3DAshley.Haines@mail.house.gov">Click Here<=
+/a> to be removed from this list </td></tr></tbody></table></body></html>
+
+--B_3724131665_1772336242--
+

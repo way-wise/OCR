@@ -1,0 +1,981 @@
+Received: from SA1PR09MB10891.namprd09.prod.outlook.com (2603:10b6:806:367::7)
+ by MW4PR09MB10058.namprd09.prod.outlook.com with HTTPS; Fri, 10 May 2024
+ 15:49:16 +0000
+Received: from DM6PR09CA0006.namprd09.prod.outlook.com (2603:10b6:5:160::19)
+ by SA1PR09MB10891.namprd09.prod.outlook.com (2603:10b6:806:367::7) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7544.49; Fri, 10 May
+ 2024 15:49:14 +0000
+Received: from DS4PEPF00000171.namprd09.prod.outlook.com
+ (2603:10b6:5:160:cafe::25) by DM6PR09CA0006.outlook.office365.com
+ (2603:10b6:5:160::19) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7544.51 via Frontend
+ Transport; Fri, 10 May 2024 15:49:14 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.51.114)
+ smtp.mailfrom=mail.house.gov; dkim=fail (body hash did not verify)
+ header.d=mail.house.gov;dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.51.114 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.51.114;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.51.114) by
+ DS4PEPF00000171.mail.protection.outlook.com (10.167.18.198) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7544.18 via Frontend Transport; Fri, 10 May 2024 15:49:14 +0000
+Received: from EXCH1925.US.House.gov (143.228.51.106) by EXCH1922.US.House.gov
+ (143.228.51.114) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1544.9; Fri, 10 May
+ 2024 11:49:10 -0400
+Received: from serg-bulk3-h.house.gov (143.228.145.68) by
+ EXCH1925.US.House.gov (143.228.51.106) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1544.9
+ via Frontend Transport; Fri, 10 May 2024 11:49:10 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mail.house.gov; h=from : to : date
+ : subject : content-type : message-id : mime-version;
+ s=january2024-msgb-mhg; bh=IpvmjupgnUIw3WlfQbXwW5KjtRsU2m+2HIj1BqEs+F0=;
+ b=cT11uiZGM5eKF/qWcB+4yKZncJEic6kzdl0SxkHxdmT8WmqleFGUApeSYPo93fp4LGJH
+ vgLW6BUhg/OCOCMPxSieyPBcjhIPigiYiHKmCois91hKhYCt89dr4AiBgfya9YWLvNd2
+ tDKYCnUf5IdpK8olXhkRnxabMXws1lJdJ4NVbhVGk+S9GQsjr+eR2pS/TiAhHOCJ2+u+
+ NIww0P3eoLRy/kG5QPybYN2rDMx3l6uOrBTUX/eKBy9rb/kJ3ieDp/JnvW/4qRnCnNbd
+ pYwSlm8Bp8RUuS6dcDf42+S4ckIwvH6CsFWjNA5mAs+/kHDFSousiH3pFegRwUI6Qham ew== 
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=from : to : date :
+ subject : content-type : message-id : mime-version; s=august2019-msgb-hg;
+ bh=IpvmjupgnUIw3WlfQbXwW5KjtRsU2m+2HIj1BqEs+F0=;
+ b=fzC/heHSW/sW7WjoXFm3JHaes7iLOc06krbl2d12zNRF9XZJd7gB97v4RPMkPpvHCTYQ
+ M9H3E5YY+thALE9FHQgBr1VdejMptDE3greuQhopzbKbYinHRrGokZIpuGUCNz7j6MA6
+ cya65CV5lpMQj7JEs916Am3BtHHot/0ZIRtrbAKD5o0QefGNnpMyqYPrCchZGOb6KCgL
+ 1DIm++gwMBVqajxq45mcG2vKtARtPqS1Y13//ScfG1uzFohUXUW+xYQmsusOOLP5+GSQ
+ xxfO40Ch7lj/kVigb/fYcpVpyt+Ldp5h3FqZiOYMwn+oEECXldFaH9skhw/C2KsbzGWx eQ== 
+Received: from FIRESIDEADMIN04 (firesideadmin04.us.house.gov [143.228.58.69])
+	by serg-bulk3-h.house.gov (8.17.1.19/8.17.1.19) with ESMTP id 44AFnA6O030386;
+	Fri, 10 May 2024 11:49:10 -0400
+Message-Id: <3y16p5nsfn-1@serg-bulk3-h.house.gov>
+envelope-from: repelijahcrane@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+X-House-Vendor-Seg: Fireside21-1
+From: "Rep. Eli Crane" <repelijahcrane@mail.house.gov>
+To: Zach.Kahler@mail.house.gov
+Date: 10 May 2024 11:49:10 -0400
+Subject: TEST WATCH LIVE: Rep. Eli Crane Joins Chairman Jim Jordan at the
+ Border in AZ for Field Hearing
+Content-Type: multipart/alternative;
+ boundary=--boundary_898_5986b6fa-f97a-425a-a6f4-20a719ad8c78
+X-Proofpoint-Virus-Version: vendor=baseguard
+ engine=ICAP:2.0.293,Aquarius:18.0.1039,Hydra:6.0.650,FMLib:17.11.176.26
+ definitions=2024-05-10_11,2024-05-10_02,2023-05-22_02
+Return-Path: Rep.EliCrane@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1922.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 10 May 2024 15:49:14.4327
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 83adc994-1adc-4a9e-ffb1-08dc7108be30
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1925.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted: DS4PEPF00000171.namprd09.prod.outlook.com
+X-CrossPremisesHeadersFiltered: DS4PEPF00000171.namprd09.prod.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ DS4PEPF00000171:EE_|SA1PR09MB10891:EE_|MW4PR09MB10058:EE_
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: 83adc994-1adc-4a9e-ffb1-08dc7108be30
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;ARA:13230031|366007|82310400017|41050700001;
+X-Forefront-Antispam-Report:
+ CIP:143.228.51.114;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:(13230031)(366007)(82310400017)(41050700001);DIR:INT;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 10 May 2024 15:49:14.3545
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 83adc994-1adc-4a9e-ffb1-08dc7108be30
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.51.114];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1925.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SA1PR09MB10891
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.7399140
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.7544.013
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(425001)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	xGBBqp/GvhTp6WOYsxYiklgHVa0ImO0OGMwJKN7DhwdisshTTsFZGjJBlw6xkK5daBEyuaEmN+pvM3jii9hI260QjOwS1BvMUAawpICugoJyj7ipk/wpoJfaCoxn++LTqe6DgCr8fup73mmTYUYbcYyqK9Wjol9g+iwvvgm4NLIj6e58rp9RcddimFp+njg3JauUXyRA48n2z7xD89upEytI6cxhIO+AjuFt+7mezZ3Dd8IWNWMUiAJRCpcHmlF1kPok01BbtKuCbJZZuaKUB/JgdlLK0FIJcBbA1j5/1R9XOkonJ1700gWdPvWT9atKkCRTzTqr6alIGTT7l3lIj3v6rHF0mmh6GGLXqiGWBhI7IncChGiTDENoI6iM7ZtcX2WUG3yU6hEuwXNcc7aWzPWAmFn3z5fpTU745Tv9ByJ/bsLGoa4UMjJO3d8o9TSxB31kK/3spIZhmS0wWXt0m+0qUR6zj2WBVTYJz7gcyP4q8cjalJD4tEVRLKIUKi15LiSYC2KGFvdOWFoE6NdXLqSl4DLR2HE6aoOaFUuNCu+APnbGpsd2UdW23rD/b5vfxqU54mDNDf9aeMRLt4+5pubU++axBwhIxBVDDl5WiMUFAMDE4ELfIvQeeiD/j6BAF3PO/1rQ661oR6+RuQ9qMMcCQi7clROoMe00f3IdqATJBkzGHJ9m4voqbutM8JpWq/gChcwoDUscX9zbAcNhVoFmzzWYoFaf22SG16yjzY9FTRtc3C7r1OaePaQQlUME05owW6GhLRw3F5Un2OlA1oHpUKcPh6VNwzdKco/ueqC37fq8286KiQApCyhZNBk/eI4Zn0TLhLIC7nP0JkwiiFvdsbM+sELi0wq01nPNDZU34Khr8LHoP+kilznv7EDP
+MIME-Version: 1.0
+
+----boundary_898_5986b6fa-f97a-425a-a6f4-20a719ad8c78
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Representative Elijah Crane  (https://crane.house.gov)
+
+
+WATCH LIVE: Rep. Eli Crane Joins Chairman Jim Jordan at the Border in AZ fo=
+r Field Hearing
+
+
+Judiciary Committee hearing will examine the effects of the current southwe=
+st border crisis on Arizona's residents and communities
+
+
+Today, at 10am MST, Rep. Eli Crane (R-AZ) will join HouseJudiciary Committe=
+e Chairman Jim Jordan (R-OH) and members of the committee in Sahuarita, Ari=
+zona for a field hearing.
+
+The hearing, "The Biden Border Crisis: Arizona Perspectives," will examinet=
+he effects of the current southwest border crisis on Arizona's residents an=
+d communities.
+
+Click below to watch
+
+Video: https://urldefense.com/v3/__https://www.youtube.com/watch?v=3Dk8wgXS=
+6ddNI__;!!Fr0YZsIsFWxTZsBm-qTAg68!jksBbW-HSh-0vKb4wCmJeTN4VvMBM0uiU87bkkbto=
+gcuQw7WofysA6M1UTuC20DuJoDNRoN9GWKLcdS9J-3lNnValJ11DZBod9EMrcE$=20
+WITNESSES:
+Chris Clem, Retired Chief Border Patrol AgentJim Chilton,Rancher inArivaca,=
+ ArizonaJacob Kartchner,Retired Cochise County sheriff's deputy;5th generat=
+ion Arizona rancherJill Fagan Alexander, Mother of fentanyl poisoning victi=
+m###
+
+Border Trip Photos 3=20
+Border Trip Photos 2=20
+
+----boundary_898_5986b6fa-f97a-425a-a6f4-20a719ad8c78
+Content-Location: https://craneforms.house.gov/
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>Representative Elijah Crane</title>
+       =20
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1">
+        <!--[if !mso]><!-->
+        <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![e=
+ndif]-->
+        <style>body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default t=
+ext sizes */ img{-ms-interpolation-mode: bicubic;} /* Allow smoother render=
+ing of resized image in Internet Explorer *//* RESET STYLES */img { border:=
+ 0; height: auto; line-height: 100%; outline: none; text-decoration: none; =
+}table { border-collapse: collapse !important; }body { height: 100% !import=
+ant; margin: 0 !important; padding: 0 !important; width: 100% !important; }=
+strong { font-weight: bold; } /* Editor reset *//* FIRESIDE STYLES */.compo=
+nent img {max-width:600px;}.component table {mso-table-rspace:10pt; border-=
+collapse:collapse;}.component { padding: 0px !important; }.press {padding-b=
+ottom: 0px;}</style><style>@media all and (max-width:650px) {            .i=
+mage-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td, .image-2, .img-2 =
+img, .image-2 tr, .image-2 td {max-width: 100% !important; width: 100% !imp=
+ortant;}            .responsive-table {width:100% !important;}            .=
+responsive-table img {max-width:100% !important; height: auto !important;} =
+           .press .component, .press td {text-align:center;}            .co=
+mponent { margin-left: 20px; margin-right: 20px;}            .component .re=
+sponsive-table { margin-left: 0px !important; margin-right: 0px !important;=
+}            .wide .video-thumb { width: 100% !important;height: auto !impo=
+rtant; }             .wide.video-container { width: 100% !important; }     =
+    .component.full-width {margin-left: 0px; margin-right: 0px; }   }</styl=
+e><style type=3D"text/css">
+            /* CLIENT-SPECIFIC STYLES */
+            body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text=
+ sizes */
+            table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Rem=
+ove spacing between tables in Outlook 2007 and up */
+            img{-ms-interpolation-mode: bicubic;} /* Allow smoother renderi=
+ng of resized image in Internet Explorer */
+            /* RESET STYLES */
+            img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: =
+0 !important; width: 100% !important; }
+            strong { font-weight: bold; } /* Editor reset */
+            /* FIRESIDE STYLES */
+            .component img {max-width:600px;}
+            .component table {mso-table-rspace:10pt; border-collapse:collap=
+se; font-family: Arial, Helvetica, sans-serif;}
+            .component td, td {font-family: Arial, Helvetica, sans-serif;}
+            .component { padding: 0px !important; }
+            .press {padding-bottom: 0px;}
+            .caption-1 td {font-family: Arial, Helvetica, sans-serif;}
+            /* Margin/NoMargin STYLES */
+            .component.full-width{ overflow: hidden; margin: 0px; }
+            /* HEADER STYLES */
+            .header-bar {width: 100%;}
+            .header-bar-margin {background-color:#ffffff;}
+            .header-bar h2 {margin: 0 !important; padding: 0 !important; co=
+lor: #000000 !important;text-align: center;font-size: 24px !important;font-=
+weight: bold !important; }
+            .survey-content > table > tbody tr td { border-color: #0B3077 !=
+important; }
+            .survey-content input.survey-submit { font-family: Arial, Helve=
+tica, sans-serif !important; }
+        </style>       =20
+        <style id=3D"media-queries">=20
+            @media all and (max-width:650px) {
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max=
+-width: 100% !important; width: 100% !important;}
+            .responsive-table {width:100% !important;}
+            .responsive-table img {max-width:100% !important; height: auto =
+!important;}
+            .press .component, .press td, .split .component, .split .compon=
+ent td, .split td {text-align:center;}
+            .component { margin-left: 20px; margin-right: 20px;}
+            .component .responsive-table { margin-left: 0px !important; mar=
+gin-right: 0px !important;}
+            .wide .video-thumb { width: 100% !important;height: auto !impor=
+tant; }=20
+            .wide.video-container { width: 100% !important; }
+            .press-padding {display: none !important;}
+           =20
+                                                                    .scale1=
+280x720 .video-thumb-padding {height: calc(((720 * (100vw - 50px)) / 1280) =
+/ 2 - 40px);}
+                                                                    }</styl=
+e>
+       =20
+    <!--[if (gte mso 9)|(IE)]>
+                                        <style>=20
+                                    </style>
+                                    <![endif]--></head>
+    <body style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%;margin: 0px !important; padding: 0px !important;">
+        <div id=3D"preview-text" style=3D"display: none; font-size: 1px; co=
+lor: #fefefe; line-height: 1px; font-family: Arial, Helvetica, sans-serif; =
+max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">For Immedia=
+te Release For Immediate Release For Immediate Release For Immediate Releas=
+e For Immediate Release </div>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color:=
+ #ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D=
+"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td align=3D"center" valign=3D"top" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvet=
+ica, sans-serif; font-size: 16px;">
+                        <div class=3D"region" id=3D"region-1"><div class=3D=
+"component full-width" style=3D"padding: 0px !important;"> <div class=3D"im=
+age" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 0px; margin-left: 0px;" width=3D"650">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;"><a href=3D"https://crane.house.gov" target=3D"_blank" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img style=3D"=
+max-width:600px;-ms-interpolation-mode: bicubic;vertical-align: bottom; max=
+-width: 650px;" alt=3D"Representative Elijah Crane" src=3D"https://cranefor=
+ms.house.gov/UploadedPhotos/TemplateImages/press-release.png"></a></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;background-color: #ffffff; font-family: Arial, Helvetica, sa=
+ns-serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D=
+"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td class=3D"responsive-table" valign=3D"top" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Ari=
+al, Helvetica, sans-serif; font-size: 16px; color: #000000;">
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class=3D"region" id=3D"region-2"><div class=3D=
+"component " style=3D"padding: 0px !important;"> <div class=3D"press-header=
+" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody class=3D"press-container">
+                    <tr>
+                        <td class=3D"press" align=3D"center" valign=3D"top"=
+ style=3D"padding-bottom: 0px;-webkit-text-size-adjust: 100%; -ms-text-size=
+-adjust: 100%;">
+                            <table align=3D"left" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" width=3D"49.9%" class=3D"responsive-table" role=3D=
+"presentation" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-tabl=
+e-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms=
+-text-size-adjust: 100%;">
+                                <tbody>
+                                    <tr>
+                                        <td class=3D"left-column" align=3D"=
+center" valign=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms-text-si=
+ze-adjust: 100%;">
+                                            <table class=3D"left-table" bor=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" role=3D"presen=
+tation" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspac=
+e:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%;">
+                                                <tbody>
+                                                <tr>
+                        <td class=3D"Row1Left cell" align=3D"left" valign=
+=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;">
+                            <div cell-class=3D"Row1Left" class=3D"cke_edita=
+ble cke_editable_inline cke_contents_ltr cke_show_borders" style=3D"overflo=
+w: hidden;"><div cell-class=3D"Row1Left" class=3D"cke_editable cke_editable=
+_inline cke_contents_ltr cke_show_borders" style=3D"overflow: hidden;"><div=
+ cell-class=3D"Row1Left" class=3D"cke_editable cke_editable_inline cke_cont=
+ents_ltr cke_show_borders" style=3D"overflow: hidden;"><div cell-class=3D"R=
+ow1Left" class=3D"cke_editable cke_editable_inline cke_contents_ltr cke_sho=
+w_borders" style=3D"overflow: hidden;"><div cell-class=3D"Row1Left" class=
+=3D"cke_editable cke_editable_inline cke_contents_ltr cke_show_borders" sty=
+le=3D"overflow: hidden;"><div cell-class=3D"Row1Left" class=3D"cke_editable=
+ cke_editable_inline cke_contents_ltr cke_show_borders" style=3D"overflow: =
+hidden;"><p style=3D"margin: 0;"><strong style=3D"font-weight: bold;font-fa=
+mily: Arial, helvetica, sans-serif; font-size: 16px; color: #000000;">For I=
+mmediate Release</strong></p></div></div></div></div></div></div>
+                        </td>
+                    </tr><tr>
+                        <td class=3D"Row2Left cell" align=3D"left" valign=
+=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;">
+                            <div cell-class=3D"Row2Left" class=3D"cke_edita=
+ble cke_editable_inline cke_contents_ltr cke_show_borders" style=3D"overflo=
+w: hidden;"><div cell-class=3D"Row2Left" class=3D"cke_editable cke_editable=
+_inline cke_contents_ltr cke_show_borders" style=3D"overflow: hidden;"><div=
+ cell-class=3D"Row2Left" class=3D"cke_editable cke_editable_inline cke_cont=
+ents_ltr cke_show_borders" style=3D"overflow: hidden;"><div cell-class=3D"R=
+ow2Left" class=3D"cke_editable cke_editable_inline cke_contents_ltr cke_sho=
+w_borders" style=3D"overflow: hidden;"><div cell-class=3D"Row2Left" class=
+=3D"cke_editable cke_editable_inline cke_contents_ltr cke_show_borders" sty=
+le=3D"overflow: hidden;"><div cell-class=3D"Row2Left" class=3D"cke_editable=
+ cke_editable_inline cke_contents_ltr cke_show_borders" style=3D"overflow: =
+hidden;"><p style=3D"margin: 0;"><span class=3D"press-padding">&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=3D"font-family: Arial, hel=
+vetica, sans-serif; font-size: 16px; color: #000000;"><span class=3D"fs-mer=
+ge-field" contenteditable=3D"false"><span contenteditable=3D"false"><span c=
+lass=3D"merge-field" contenteditable=3D"false" unselectable=3D"true">May 10=
+, 2024</span></span></span> </span></p></div></div></div></div></div></div>
+                        </td>
+                    </tr></tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table align=3D"left" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" width=3D"49.9%" class=3D"responsive-table" role=3D=
+"presentation" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-tabl=
+e-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms=
+-text-size-adjust: 100%;">
+                                <tbody>
+                                    <tr>
+                                        <td class=3D"right-column" align=3D=
+"center" valign=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%;">
+                                            <table class=3D"right-table" bo=
+rder=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" role=3D"prese=
+ntation" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspa=
+ce:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;">
+                                                <tbody>
+
+                                                <tr>
+                        <td class=3D"Row1Right cell" align=3D"right" valign=
+=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;">
+                            <div cell-class=3D"Row1Right" class=3D"cke_edit=
+able cke_editable_inline cke_contents_ltr cke_show_borders" style=3D"overfl=
+ow: hidden;"><div cell-class=3D"Row1Right" class=3D"cke_editable cke_editab=
+le_inline cke_contents_ltr cke_show_borders" style=3D"overflow: hidden;"><d=
+iv cell-class=3D"Row1Right" class=3D"cke_editable cke_editable_inline cke_c=
+ontents_ltr cke_show_borders" style=3D"overflow: hidden;"><div cell-class=
+=3D"Row1Right" class=3D"cke_editable cke_editable_inline cke_contents_ltr c=
+ke_show_borders" style=3D"overflow: hidden;"><div cell-class=3D"Row1Right" =
+class=3D"cke_editable cke_editable_inline cke_contents_ltr cke_show_borders=
+" style=3D"overflow: hidden;"><div cell-class=3D"Row1Right" class=3D"cke_ed=
+itable cke_editable_inline cke_contents_ltr cke_show_borders" style=3D"over=
+flow: hidden;"><p style=3D"margin: 0;"><span style=3D"font-family: Arial, h=
+elvetica, sans-serif; font-size: 16px; color: #000000;">Contact: <a style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-size: 1=
+6px; color:#000000; text-decoration: underline; font-family: Arial, helveti=
+ca, sans-serif;" data-cke-saved-href=3D"mailto:zach.kahler@mail.house.gov?s=
+ubject=3DPress Release" href=3D"mailto:zach.kahler@mail.house.gov?subject=
+=3DPress Release">Zach Kahler</a> </span></p></div></div></div></div></div>=
+</div>
+                        </td>
+                    </tr><tr>
+                        <td class=3D"Row2Right cell" align=3D"right" valign=
+=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;">
+                            <div cell-class=3D"Row2Right" class=3D"cke_edit=
+able cke_editable_inline cke_contents_ltr cke_show_borders" style=3D"overfl=
+ow: hidden;"><div cell-class=3D"Row2Right" class=3D"cke_editable cke_editab=
+le_inline cke_contents_ltr cke_show_borders" style=3D"overflow: hidden;"><d=
+iv cell-class=3D"Row2Right" class=3D"cke_editable cke_editable_inline cke_c=
+ontents_ltr cke_show_borders" style=3D"overflow: hidden;"><div cell-class=
+=3D"Row2Right" class=3D"cke_editable cke_editable_inline cke_contents_ltr c=
+ke_show_borders" style=3D"overflow: hidden;"><div cell-class=3D"Row2Right" =
+class=3D"cke_editable cke_editable_inline cke_contents_ltr cke_show_borders=
+" style=3D"overflow: hidden;"><div cell-class=3D"Row2Right" class=3D"cke_ed=
+itable cke_editable_inline cke_contents_ltr cke_show_borders" style=3D"over=
+flow: hidden;"><p style=3D"margin: 0;"><br></p></div></div></div></div></di=
+v></div>
+                        </td>
+                    </tr></tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component" style=3D"padding: 0px !important;"><div class=3D"c=
+omponent-template editable" style=3D"overflow: hidden;">=20
+                                <div class=3D"component-template spacing" s=
+tyle=3D"overflow: hidden;">
+                                    <p style=3D"margin: 0;height:16px;">
+                                </div>
+                            </div></div>
+<div class=3D"component full-width" style=3D"padding: 0px !important;"> <di=
+v class=3D"header-bar" style=3D"overflow: hidden;">
+                                    <table role=3D"presentation" align=3D"c=
+enter" class=3D"responsive-table table-w-bg-color" style=3D"mso-table-lspac=
+e:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse=
+;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Ar=
+ial, Helvetica, sans-serif; margin-right: 0px; margin-left: 0px;" border=3D=
+"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0=
+" leftmargin=3D"0" topmargin=3D"0" width=3D"650">
+                                        <tbody>
+                                            <tr height=3D"0" class=3D"space=
+rRow">
+                                                <td style=3D"-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 0p=
+x">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td class=3D"responsive-tab=
+le" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fon=
+t-size:24px;color:#000000;" valign=3D"top">
+                                                <table role=3D"presentation=
+" width=3D"100%" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-ta=
+ble-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -=
+ms-text-size-adjust: 100%;min-width: 100%;" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" top=
+margin=3D"0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;padding: 0 15pt; f=
+ont-family: Arial, Helvetica, sans-serif;">
+                                                                <div class=
+=3D"cke_editable cke_editable_inline cke_contents_ltr cke_show_borders cke_=
+focus" style=3D"overflow: hidden;"><h2 style=3D"text-align: center;"><span =
+style=3D"font-family:Tahoma,Geneva,sans-serif;"><span style=3D"font-size:24=
+px;">WATCH LIVE: Rep. Eli Crane Joins Chairman Jim Jordan at the Border in =
+AZ for Field Hearing</span></span></h2></div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                </td>
+                                            </tr>
+                                            <tr height=3D"0" class=3D"space=
+rRow">
+                                                <td style=3D"-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 0p=
+x">&nbsp;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;overflow:hidden; background-color:#ffffff"><p =
+style=3D"margin: 0;text-align: center;"><span style=3D"font-size:18px;"><sp=
+an style=3D"font-family:Tahoma,Geneva,sans-serif;"><em>Judiciary Committee =
+hearing will examine the effects of the current southwest border crisis on =
+Arizona's residents and communities</em></span></span></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><d=
+iv class=3D"component-template" style=3D"overflow: hidden;"><p style=3D"mar=
+gin: 0;margin: 0;"><span style=3D"font-size:14px;"><span style=3D"font-fami=
+ly:Tahoma,Geneva,sans-serif;">Today, at 10am MST, <strong style=3D"font-wei=
+ght: bold;">Rep. Eli Crane (R-AZ)</strong> will join <strong style=3D"font-=
+weight: bold;">House&nbsp;Judiciary Committee Chairman Jim Jordan (R-OH)</s=
+trong> and members of the committee in Sahuarita, Arizona for a field heari=
+ng.</span></span></p><p style=3D"margin: 0;margin: 0;"><br></p><p style=3D"=
+margin: 0;margin: 0;"><span style=3D"font-size:14px;"><span style=3D"font-f=
+amily:Tahoma,Geneva,sans-serif;">The hearing, &quot;The Biden Border Crisis=
+: Arizona Perspectives,&quot; will examine&nbsp;the effects of the current =
+southwest border crisis on Arizona's residents and communities.</span></spa=
+n></p><p style=3D"margin: 0;margin: 0;"><br></p><p style=3D"margin: 0;margi=
+n: 0px; text-align: center;"><strong style=3D"font-weight: bold;"><span sty=
+le=3D"font-size:14px;"><span style=3D"font-family:Tahoma,Geneva,sans-serif;=
+">Click below to watch</span></span></strong></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"video" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout:=
+ fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+        <tbody>
+            <tr>
+                <td valign=3D"top" style=3D"-webkit-text-size-adjust: 100%;=
+ -ms-text-size-adjust: 100%;">
+                  <table class=3D"video-container wide scale1280x720" align=
+=3D"center" role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspac=
+e:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%;table-layout: fixed; width: 610px;">
+                      <tbody>
+                          <tr>
+                            <td class=3D"video-thumb" background=3D"https:/=
+/i.ytimg.com/vi/k8wgXS6ddNI/maxresdefault.jpg" bgcolor=3D"#606170" valign=
+=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: =
+100%;text-align: center; background-size: 100% auto; background-repeat: no-=
+repeat; width: 610px; height: 343.125px;">
+                                <v:rect class=3D"mso-video-thumb-cont video=
+-link" xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"true" stroke=3D"fa=
+lse" style=3D"width: 610px; height: 343.125px;" target=3D"_" href=3D"https:=
+//urldefense.com/v3/__https://www.youtube.com/watch?v=3Dk8wgXS6ddNI__;!!Fr0=
+YZsIsFWxTZsBm-qTAg68!jksBbW-HSh-0vKb4wCmJeTN4VvMBM0uiU87bkkbtogcuQw7WofysA6=
+M1UTuC20DuJoDNRoN9GWKLcdS9J-3lNnValJ11DZBod9EMrcE$">
+                                  <v:fill class=3D"mso-video-thumb" size=3D=
+"100%,100%" type=3D"tile" src=3D"https://i.ytimg.com/vi/k8wgXS6ddNI/maxresd=
+efault.jpg" color=3D"#606170"></v:fill>
+                                  <v:textbox inset=3D"0,0,0,0">
+                                <a class=3D"video-link" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;text-decoration:none;" hre=
+f=3D"https://urldefense.com/v3/__https://www.youtube.com/watch?v=3Dk8wgXS6d=
+dNI__;!!Fr0YZsIsFWxTZsBm-qTAg68!jksBbW-HSh-0vKb4wCmJeTN4VvMBM0uiU87bkkbtogc=
+uQw7WofysA6M1UTuC20DuJoDNRoN9GWKLcdS9J-3lNnValJ11DZBod9EMrcE$" target=3D"_"=
+>
+                                <div style=3D"overflow: hidden;">
+                                <table class=3D"video-spacing" role=3D"pres=
+entation" align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt;=
+ border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adj=
+ust: 100%;">
+                                  <tbody>
+                                    <tr>
+                                      <td class=3D"video-thumb-padding" hei=
+ght=3D"131.5625" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adj=
+ust: 100%;">&nbsp;</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <table role=3D"presentation" class=3D"yt-ic=
+on-cont" align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" valign=3D"middle" style=3D"mso-table-lspace:0pt; mso-table-rsp=
+ace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;width: 100%;" width=3D"610">
+                                  <tbody>
+                                    <tr height=3D"80">
+                                      <td align=3D"center" valign=3D"top" s=
+tyle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-siz=
+e: 0%;"><img class=3D"play-button" alt=3D"play button" style=3D"max-width:6=
+00px;-ms-interpolation-mode: bicubic;height:80px; width:80px;" width=3D"80"=
+ height=3D"80" ng-src=3D"https://craneforms.house.gov/img/play-outline.png"=
+ src=3D"https://craneforms.house.gov/img/play-outline.png"></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <table class=3D"video-spacing" role=3D"pres=
+entation" align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt;=
+ border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adj=
+ust: 100%;">
+                                  <tbody>
+                                    <tr>
+                                      <td class=3D"video-thumb-padding" hei=
+ght=3D"131.5625" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adj=
+ust: 100%;">&nbsp;</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                </div>
+                                </a>
+                                  </v:textbox>
+                                </v:rect>
+                              </td>
+                          </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+            </tbody>
+      </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;"><strong style=3D"font-weight: bold;"><span style=3D"f=
+ont-size:14px;"><span style=3D"font-family:Tahoma,Geneva,sans-serif;">WITNE=
+SSES:&nbsp;</span></span></strong></p><ul><li><span style=3D"font-size:14px=
+;"><span style=3D"font-family:Tahoma,Geneva,sans-serif;">Chris Clem, Retire=
+d Chief Border Patrol Agent&nbsp;&nbsp;</span></span></li><li><span style=
+=3D"font-size:14px;"><span style=3D"font-family:Tahoma,Geneva,sans-serif;">=
+Jim Chilton,&nbsp;Rancher in&nbsp;Arivaca, Arizona&nbsp;&nbsp;</span></span=
+></li><li><span style=3D"font-size:14px;"><span style=3D"font-family:Tahoma=
+,Geneva,sans-serif;">Jacob Kartchner,&nbsp;Retired Cochise County sheriff's=
+ deputy;&nbsp;5th generation Arizona rancher</span></span></li><li><span st=
+yle=3D"font-size:14px;"><span style=3D"font-family:Tahoma,Geneva,sans-serif=
+;">Jill Fagan Alexander, Mother of fentanyl poisoning victim&nbsp;</span></=
+span></li></ul><p style=3D"margin: 0;text-align: center;"><font face=3D"Tah=
+oma, Geneva, sans-serif"><span style=3D"font-size: 14px;">###</span></font>=
+</p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image-group" style=3D"overflow: hidden;width:100%">=20
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;table-layout: fixed; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td valign=3D"top" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%;">
+                            <table role=3D"presentation" class=3D"image-tab=
+le image-1" width=3D"49.9%" align=3D"left" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-ta=
+ble-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -=
+ms-text-size-adjust: 100%;float: left; table-layout: fixed;mso-table-lspace=
+:0pt; mso-table-rspace:0pt;">
+                                <tbody>
+                                    <tr>
+                                        <td valign=3D"top" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                            <div class=3D"img-1 image-conta=
+iner" style=3D"overflow: hidden;text-align:center"><img style=3D"max-width:=
+600px;-ms-interpolation-mode: bicubic;vertical-align: bottom; max-width: 55=
+0px;" alt=3D"Border Trip Photos 3" src=3D"https://craneforms.house.gov/Uplo=
+adedPhotos/MediumResolution/df321205-8dab-46a9-8842-d64656c0449d.png" width=
+=3D"303.5"></div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table role=3D"presentation" class=3D"image-tab=
+le image-2" width=3D"49.9%" style=3D"mso-table-lspace:0pt; mso-table-rspace=
+:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;float: right; table-layout: fixed; mso=
+-table-lspace:0pt; mso-table-rspace:0pt;" align=3D"right" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0">
+                                <tbody>
+                                    <tr>
+                                        <td valign=3D"top" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                            <div class=3D"img-2 image-conta=
+iner" style=3D"overflow: hidden;text-align:center"><img style=3D"max-width:=
+600px;-ms-interpolation-mode: bicubic;vertical-align: bottom; max-width: 55=
+0px;" alt=3D"Border Trip Photos 2" src=3D"https://craneforms.house.gov/Uplo=
+adedPhotos/MediumResolution/9beee8ad-5146-486f-8fdb-fab3f2efa6f7.png" width=
+=3D"303.5"></div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>=20
+            </table>
+        </div> </div></div>
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color: e=
+83e36;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0"=
+ marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #e83e36;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; backgro=
+und-color: #e83e36; padding: 0 20px;">
+                    <table role=3D"presentation" width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"10" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;text-align:center;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;text-align:=
+center;">
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"49=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: arial, helvetica, sans-serif; text-align:center; font-size: 14px=
+; font-weight:bold; color: #ffffff; margin: 10px 0;mso-table-lspace: 0pt; m=
+so-table-rspace: 0pt;text-transform:uppercase;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, san=
+s-serif; font-wieght:bold;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: Arial, Helvetica, sans-serif; text-transform: uppercase;fo=
+nt-size:18px">Washington, DC Office</strong><br>
+                                            <span style=3D"color:#000000">1=
+229 Longworth HOB<br>
+                                            Washington, DC  20515<br>
+                                            (202) 225-3361</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"right" cellspacing=3D"0" width=3D"4=
+9.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;f=
+ont-family: arial, helvetica, sans-serif; text-align:center; font-size: 14p=
+x; text-transform:uppercase; font-weight:bold; color: #ffffff; margin: 10px=
+ 0;mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, san=
+s-serif; font-wieght:bold;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: Arial, Helvetica, sans-serif; text-transform: uppercase;fo=
+nt-size:18px">Prescott Office</strong><br>
+                                            <span style=3D"color:#000000">1=
+22 N. Cortez Street<br>
+                                            Suite 211<br>
+                                            Prescott, AZ 86301<br>
+                                            (928) 286-5338</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #e83e36;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #000000; backgro=
+und-color: #e83e36;">
+                    <a target=3D"_blank" href=3D"https://urldefense.com/v3/=
+__https://www.facebook.com/profile.php?id=3D100088851021670__;!!Fr0YZsIsFWx=
+TZsBm-qTAg68!jksBbW-HSh-0vKb4wCmJeTN4VvMBM0uiU87bkkbtogcuQw7WofysA6M1UTuC20=
+DuJoDNRoN9GWKLcdS9J-3lNnValJ11DZBo0tuIkBc$" style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"facebook icon" width=3D"=
+32" src=3D"https://craneforms.house.gov/images/email/facebook.png" style=3D=
+"-ms-interpolation-mode: bicubic;border-width: 0px; border-style: solid; wi=
+dth: 32px;"></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://urldefense.c=
+om/v3/__https://twitter.com/RepEliCrane__;!!Fr0YZsIsFWxTZsBm-qTAg68!jksBbW-=
+HSh-0vKb4wCmJeTN4VvMBM0uiU87bkkbtogcuQw7WofysA6M1UTuC20DuJoDNRoN9GWKLcdS9J-=
+3lNnValJ11DZBoJMvGDq0$" style=3D"-webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%;"><img alt=3D"twitter icon" width=3D"32" src=3D"https://cr=
+aneforms.house.gov/images/email/twitter.png" style=3D"-ms-interpolation-mod=
+e: bicubic;border-width: 0px; border-style: solid; width: 32px;"></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://urldefense.c=
+om/v3/__https://www.instagram.com/rep.elicrane/__;!!Fr0YZsIsFWxTZsBm-qTAg68=
+!jksBbW-HSh-0vKb4wCmJeTN4VvMBM0uiU87bkkbtogcuQw7WofysA6M1UTuC20DuJoDNRoN9GW=
+KLcdS9J-3lNnValJ11DZBoLd947HQ$" style=3D"-webkit-text-size-adjust: 100%; -m=
+s-text-size-adjust: 100%;"><img alt=3D"instagram icon" width=3D"32" src=3D"=
+https://craneforms.house.gov/images/email/instagram.png" style=3D"-ms-inter=
+polation-mode: bicubic;border-width: 0px; border-style: solid; width: 32px;=
+"></a><!--
+                    &nbsp;<a target=3D"_blank" href=3D"https://www.youtube.=
+com/channel/XXXXXX"><img alt=3D"youtube icon" width=3D"32" src=3D"https://c=
+raneforms.house.gov/images/email/youtube.png" style=3D"border-width: 0px; b=
+order-style: solid; width: 32px;" /></a>-->
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #e83e36;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #000000;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;background-color: #000000;">
+                    <table role=3D"presentation" cellpadding=3D"0" cellspac=
+ing=3D"20" align=3D"center" width=3D"90%" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #fff=
+fff; font-size: 14px; font-family: Arial, Helvetica, sans-serif; font-weigh=
+t:bold;text-transform:uppercase;">
+                                <a href=3D"[link]" style=3D"-webkit-text-si=
+ze-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; text-decoration=
+: none; font-size: 14px;">View Online</a>&nbsp;|&nbsp;
+                                <a target=3D"_blank" href=3D"https://cranef=
+orms.house.gov/forms/emailsignup/?delete=3Dtrue" style=3D"-webkit-text-size=
+-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; text-decoration:n=
+one; font-family: Arial, Helvetica, sans-serif;">Unsubscribe</a>&nbsp;|&nbs=
+p;
+                                <a target=3D"_blank" href=3D"https://urldef=
+ense.com/v3/__https://www.facebook.com/sharer.php?u=3Dhttps:**Acraneforms.h=
+ouse.gov*news*email*show.aspx*ID=3DQ3ULTJDSRLJKU&amp;t=3D*subject*__;Ly8vLy=
+8_W10!!Fr0YZsIsFWxTZsBm-qTAg68!jksBbW-HSh-0vKb4wCmJeTN4VvMBM0uiU87bkkbtogcu=
+Qw7WofysA6M1UTuC20DuJoDNRoN9GWKLcdS9J-3lNnValJ11DZBokUfGgAs$" style=3D"-web=
+kit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; text=
+-decoration:none; font-family: Arial, Helvetica, sans-serif;">Share on Face=
+book</a>&nbsp;|&nbsp;
+                                <a target=3D"_blank" href=3D"https://cranef=
+orms.house.gov/Components/Redirect/twitter.aspx?url=3Dhttps://craneforms.ho=
+use.gov/news/email/show.aspx?ID=3DQ3ULTJDSRLJKU&amp;name=3D[subject]" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffff=
+ff; text-decoration:none; font-family: Arial, Helvetica, sans-serif;">Share=
+ on Twitter</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #000000;">
+                    &nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>=
+
+----boundary_898_5986b6fa-f97a-425a-a6f4-20a719ad8c78--

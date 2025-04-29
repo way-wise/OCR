@@ -1,0 +1,752 @@
+Received: from PH0PR09MB11086.namprd09.prod.outlook.com
+ (2603:10b6:510:2c3::17) by MW4PR09MB8931.namprd09.prod.outlook.com with
+ HTTPS; Thu, 9 Nov 2023 19:33:26 +0000
+Received: from CYXPR09CA0023.namprd09.prod.outlook.com (2603:10b6:930:d4::29)
+ by PH0PR09MB11086.namprd09.prod.outlook.com (2603:10b6:510:2c3::17) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6977.18; Thu, 9 Nov
+ 2023 19:33:25 +0000
+Received: from DM3GCC02FT022.eop-gcc02.prod.protection.outlook.com
+ (2a01:111:f400:7d04::205) by CYXPR09CA0023.outlook.office365.com
+ (2603:10b6:930:d4::29) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6977.19 via Frontend
+ Transport; Thu, 9 Nov 2023 19:33:25 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.151.74)
+ smtp.mailfrom=mail.house.gov; dkim=fail (body hash did not verify)
+ header.d=house.gov;dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.151.74 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.151.74;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.151.74) by
+ DM3GCC02FT022.mail.protection.outlook.com (10.97.8.107) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.6977.21 via Frontend Transport; Thu, 9 Nov 2023 19:33:24 +0000
+Received: from EXCH1912.US.House.gov (143.228.151.111) by
+ EXCH1915.US.House.gov (143.228.151.74) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.2.1258.27; Thu, 9 Nov 2023 14:33:23 -0500
+Received: from serg-bulk3-a.house.gov (143.228.42.95) by EXCH1912.US.House.gov
+ (143.228.151.111) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1258.27 via Frontend
+ Transport; Thu, 9 Nov 2023 14:33:23 -0500
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=message-id :
+ list-unsubscribe : from : to : date : subject : content-type :
+ mime-version; s=august2019-msgb-hg;
+ bh=07Yz/gpY29/Bb2Mz+LOT2uQz+lD7gpGl/aEszR5XdsM=;
+ b=ObWwc6dDOgxIOGBgRTxEs22/WkRAH0WhHBdIkS4gAKJMF4ZetYck7js7lma0LkEktKJu
+ FwoJ0kboXl/tEBdPGjNkNh7F1Zi+zmu4Q6c3gW9IV7NgEk6qn2AFeyTV4gm0sKD4nahI
+ j1CxmclHkGpDY/iWawGWxLo2Zu9WTqp0qBvLslkYYVm0QA8u1fQhqvbqDBC9GK+Dppkl
+ EEWej7CpjjveeMh905g/aFyKHzTNwGsstxsVjzervNb/8quWOUzDQtyrgD4pAf4zrIqZ
+ 8hmzupEW41mvfUGPYNnkrx0XmxV0W5AzavE5JDjPZFG8Iu+Or2qMOuKZd8cHR+PwboWn qw== 
+Received: from FIRESIDESERV05 (firesideserv05.us.house.gov [143.228.58.88])
+	by serg-bulk3-a.house.gov (8.17.1.19/8.17.1.19) with ESMTP id 3A9JXNUM006377
+	for <Andy.Eichar@mail.house.gov>; Thu, 9 Nov 2023 14:33:23 -0500
+envelope-from: Congressman.Jeffries@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+Message-ID: <vPCI4EStweVf6zt1Vlxc38VKwhM+BsAe+SOzfFZKOpyaX1Vbbw5kbEc1Orl2hJMBS/wES4Z+Sc40PmBQzzZI0H+eb2yp9rM1cgecQttrSjhRllWed2/cG3ojzv55iuH7nt/2XHMAG1EplVnIjzsRt4yqkR44Byphdud+tR93cepyE9/BLXT2KxTX/0tgnXAL@fireside21.com>
+X-House-Vendor-Seg: unmanaged
+List-Unsubscribe: <https://jeffriesforms.house.gov/forms/emailsignup/?Delete=true&MessageID=191012&Email=Andy.Eichar@mail.house.gov&Submit=true>
+Precedence: bulk
+From: "Congressman Hakeem Jeffries" <Congressman.Jeffries@mail.house.gov>
+To: Andy.Eichar@mail.house.gov
+Date: 9 Nov 2023 14:33:23 -0500
+Subject: VIDEO: LEADER JEFFRIES FLOOR SPEECH ON EXTREME MAGA REPUBLICAN
+ EFFORTS TO CRIMINALIZE ABORTION
+Content-Type: multipart/alternative;
+ boundary=--boundary_10790773_51cce4b6-03d7-4a19-837d-9f87086ce855
+X-Proofpoint-Virus-Version: vendor=baseguard
+ engine=ICAP:2.0.272,Aquarius:18.0.987,Hydra:6.0.619,FMLib:17.11.176.26
+ definitions=2023-11-09_14,2023-11-09_01,2023-05-22_02
+Return-Path: Congressman.Jeffries@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1915.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 09 Nov 2023 19:33:25.0317
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ a5362b42-2926-4097-491a-08dbe15abdc7
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1912.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted:
+ DM3GCC02FT022.eop-gcc02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ DM3GCC02FT022.eop-gcc02.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ DM3GCC02FT022:EE_|PH0PR09MB11086:EE_|MW4PR09MB8931:EE_
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: a5362b42-2926-4097-491a-08dbe15abdc7
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:143.228.151.74;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:;DIR:INT;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 09 Nov 2023 19:33:24.9536
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: a5362b42-2926-4097-491a-08dbe15abdc7
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.151.74];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1912.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PH0PR09MB11086
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.2423111
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.6954.029
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(425001)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	h4aPqn6d+Im0xqauaDQzb07EQGkChMoWmB05JsJitWQ1ieLgvuHSHotDItZMOORmynXoqATh8NGC/BeWu79je1ofe1HNKvsZJZ7PcM3CiLoaELHyHMD/EC99WmAcKGB0Q+a7Ef4IQAtGhdE5khgEduptH8whIg+em8dtTBiHNl8sFNInfD1uKga2pkgQabRezWywr7VlGFcalMsJNmhenjxE80ADHmmDRH3u//Oo2XaU6BTfxcVQxIcwBbPyUDhSAiMlVOTBZCdhlkD1Engkhb8oe8/qx0MoDU+8a/IbLDD0OvkrKSCiJEOVOKuebcr2P56EbyajWfzZBANdwOxFImSjTyKkPOAQnJ0+lwES+cOvSFWhA+4s+EQITDf7eQeLExsVjKZu7CAbfbLL9pC7vzNav95XhHoX5FsqOP6mj7QL+vKBQVEBOZOl4LmDbazsJ2tX4YWsLAP36wtswkTrv09+mSYn+O5dsMnPyzFaWNEbHD6SqYCr5z6/OXhejNlD2HcTgHSOdo4j3e+XvThw9glL9JFD5PrvjNupXTxXaDdPOdK+kJt8Rv1ipnet7cPc4hwoWuOOREuD4t6hV8SvEKvXJgoNIzCIC1h+9iy6the2dahq4bDsRHOCZsu2mQz4C+B670d0ZbxfcdRKZPHUzKxRyvPfR/Jq44C2YC7hAngFNcIofvSGCF6N++/1fyHinTP07hYMVKIKkqOsLkOoK1ko8tkeEqF819VuvLgBP1xVDQk9SJ3Rn5PGrBGs/bEtH5AA9iQwf7ksL6PnScSdEA==
+MIME-Version: 1.0
+
+----boundary_10790773_51cce4b6-03d7-4a19-837d-9f87086ce855
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+DQpVbnN1YnNjcmliZTogaHR0cHM6Ly9qZWZmcmllc2Zvcm1zLmhvdXNlLmdvdi9Gb3Jt
+cy9FbWFpbFNpZ251cC8/RGVsZXRlPXRydWUmTWVzc2FnZUlEPTE5MTAxMiZFbWFpbD1B
+bmR5LkVpY2hhckBtYWlsLmhvdXNlLmdvdg==
+----boundary_10790773_51cce4b6-03d7-4a19-837d-9f87086ce855
+Content-Location: https://jeffriesforms.house.gov/
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>VIDEO: LEADER JEFFRIES FLOOR SPEECH ON EXTREME MAGA REPUBLICAN EFFORTS=
+ TO CRIMINALIZE ABORTION</title>
+       =20
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1">
+        <!--[if !mso]><!-->
+        <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![e=
+ndif]-->
+        <style>body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default t=
+ext sizes */ img{-ms-interpolation-mode: bicubic;} /* Allow smoother render=
+ing of resized image in Internet Explorer *//* RESET STYLES */img { border:=
+ 0; height: auto; line-height: 100%; outline: none; text-decoration: none; =
+}table { border-collapse: collapse !important; }body { height: 100% !import=
+ant; margin: 0 !important; padding: 0 !important; width: 100% !important; }=
+strong { font-weight: bold; } /* Editor reset *//* FIRESIDE STYLES */.compo=
+nent img {max-width:600px;}.component table {mso-table-rspace:10pt; border-=
+collapse:collapse;}.component { padding: 0px !important; }.press {padding-b=
+ottom: 0px;}</style><style>@media all and (max-width:650px) {            .i=
+mage-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td, .image-2, .img-2 =
+img, .image-2 tr, .image-2 td {max-width: 100% !important; width: 100% !imp=
+ortant;}            .responsive-table {width:100% !important;}            .=
+responsive-table img {max-width:100% !important; height: auto !important;} =
+           .press .component, .press td {text-align:center;}            .co=
+mponent { margin-left: 20px; margin-right: 20px;}            .component .re=
+sponsive-table { margin-left: 0px !important; margin-right: 0px !important;=
+}            .wide .video-thumb { width: 100% !important;height: auto !impo=
+rtant; }             .wide.video-container { width: 100% !important; }     =
+    .component.full-width {margin-left: 0px; margin-right: 0px; }   }</styl=
+e><style type=3D"text/css">
+            /* CLIENT-SPECIFIC STYLES */
+            body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text=
+ sizes */
+            table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Rem=
+ove spacing between tables in Outlook 2007 and up */
+            img{-ms-interpolation-mode: bicubic;} /* Allow smoother renderi=
+ng of resized image in Internet Explorer */
+            /* RESET STYLES */
+            img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: =
+0 !important; width: 100% !important; }
+            strong { font-weight: bold; } /* Editor reset */
+            /* FIRESIDE STYLES */
+            .component img {max-width:600px;}
+            .component table {mso-table-rspace:10pt; border-collapse:collap=
+se; font-family: Verdana, Arial, sans-serif;}
+            .component td, td {font-family: Verdana, Arial, sans-serif;}
+            .component { padding: 0px !important; }
+            .press {padding-bottom: 0px;}
+            .caption-1 td {font-family: Verdana, Arial, sans-serif;}
+            /* Margin/NoMargin STYLES */
+            .component.full-width{ overflow: hidden; margin: 0px; }
+            /* HEADER STYLES */
+            .header-bar {width: 100%;}
+            .header-bar-margin {background-color:#ffffff;}
+            .header-bar h2 {margin: 0 !important; padding: 0 !important; co=
+lor: #6089aa !important;text-align: center;font-size: 32px !important;font-=
+weight: bold !important; }
+            .survey-content > table > tbody tr td { border-color: #6089aa !=
+important; }
+            .survey-content input.survey-submit { font-family: Verdana, Ari=
+al, sans-serif !important; }
+        </style>      =20
+        <style id=3D"media-queries">=20
+            @media all and (max-width:650px) {
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max=
+-width: 100% !important; width: 100% !important;}
+            .responsive-table {width:100% !important;}
+            .responsive-table img {max-width:100% !important; height: auto =
+!important;}
+            .press .component, .press td, .split .component, .split .compon=
+ent td, .split td {text-align:center;}
+            .component { margin-left: 20px; margin-right: 20px;}
+            .component .responsive-table { margin-left: 0px !important; mar=
+gin-right: 0px !important;}
+            .wide .video-thumb { width: 100% !important;height: auto !impor=
+tant; }=20
+            .wide.video-container { width: 100% !important; }
+            }
+        </style>
+       =20
+    <!--[if (gte mso 9)|(IE)]>
+                                        <style>=20
+                                    </style>
+                                    <![endif]--></head>
+    <body style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%;margin: 0px !important; padding: 0px !important;">
+        <div id=3D"preview-text" style=3D"display: none; font-size: 1px; co=
+lor: #fefefe; line-height: 1px; font-family: Verdana, Arial, sans-serif; ma=
+x-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">This week, De=
+mocratic Leader Hakeem Jeffries spoke on the House Floor about extreme MAGA=
+<span>&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=
+=80=8C</span></div>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;font-family: Verdana, Arial, sans-serif; background-color: #=
+ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0=
+" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td align=3D"center" valign=3D"top" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Verdana, Aria=
+l, sans-serif; font-size: 16px;">
+                    <a target=3D"_blank" href=3D"https://jeffriesforms.hous=
+e.gov/components/redirect/r.aspx?ID=3D463919-72252626" style=3D"-webkit-tex=
+t-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                    <img alt=3D"Representative Hakeem Jeffries" width=3D"17=
+5" style=3D"-ms-interpolation-mode: bicubic;display: block; width: 175px;" =
+src=3D"https://jeffriesforms.house.gov/images/newsletter/logo-hj.png">
+                    </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Verdana, Arial, sans-serif; background-color: #60=
+89aa; border-collapse: separate !important; border-radius: 10px;" border=3D=
+"0" cellspacing=3D"0" cellpadding=3D"5" marginheight=3D"0" marginwidth=3D"0=
+" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #2e2f30; font-si=
+ze: 11px; font-family: Verdana, Arial, sans-serif; text-align: center; back=
+ground-color: #6089aa; text-transform: uppercase; border-radius: 10px;">
+                        <a href=3D"https://jeffriesforms.house.gov/componen=
+ts/redirect/r.aspx?ID=3D463920-72252626" style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;color: #2e2f30; text-decoration: none; fo=
+nt-weight: bold; font-family: Verdana, Arial, sans-serif; font-size: 11px;"=
+>ABOUT</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href=3D"https://jeffriesforms.house.gov/componen=
+ts/redirect/r.aspx?ID=3D463921-72252626" style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;color: #2e2f30; text-decoration: none; fo=
+nt-weight: bold; font-family: Verdana, Arial, sans-serif; font-size: 11px;"=
+>CONTACT</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href=3D"https://jeffriesforms.house.gov/componen=
+ts/redirect/r.aspx?ID=3D463922-72252626" style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;color: #2e2f30; text-decoration: none; fo=
+nt-weight: bold; font-family: Verdana, Arial, sans-serif; font-size: 11px;"=
+>SERVING YOU</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href=3D"https://jeffriesforms.house.gov/componen=
+ts/redirect/r.aspx?ID=3D463923-72252626" style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;color: #2e2f30; text-decoration: none; fo=
+nt-weight: bold; font-family: Verdana, Arial, sans-serif; font-size: 11px;"=
+>MEDIA CENTER</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href=3D"https://jeffriesforms.house.gov/componen=
+ts/redirect/r.aspx?ID=3D463924-72252626" style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;color: #2e2f30; text-decoration: none; fo=
+nt-weight: bold; font-family: Verdana, Arial, sans-serif; font-size: 11px;"=
+>LEGISLATION</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href=3D"https://jeffriesforms.house.gov/componen=
+ts/redirect/r.aspx?ID=3D463925-72252626" style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;color: #2e2f30; text-decoration: none; fo=
+nt-weight: bold; font-family: Verdana, Arial, sans-serif; font-size: 11px;"=
+>ISSUES</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href=3D"https://jeffriesforms.house.gov/componen=
+ts/redirect/r.aspx?ID=3D463926-72252626" style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;color: #2e2f30; text-decoration: none; fo=
+nt-weight: bold; font-family: Verdana, Arial, sans-serif; font-size: 11px;"=
+>RESOURCES</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;background-color: #ffffff; font-family: Verdana, Arial, sans=
+-serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0=
+" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td class=3D"responsive-table" valign=3D"top" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Ver=
+dana, Arial, sans-serif; font-size: 18px; color: #262626;">
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class=3D"region" id=3D"region-1"><div class=3D=
+"component " style=3D"padding: 0px !important;"> <div class=3D"editable" st=
+yle=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ align=3D"center" style=3D"margin: 0;text-align:center"><span style=3D"font=
+-family:Verdana,Geneva,sans-serif;"><span style=3D"font-size:28px;"><span s=
+tyle=3D"color:#6089aa;"><span style=3D"font-style:normal"><span style=3D"fo=
+nt-weight:400"><span style=3D"white-space:normal"><span style=3D"background=
+-color:#ffffff"><span style=3D"text-decoration:none"><strong style=3D"font-=
+weight: bold;"><span style=3D"line-height:1.2">VIDEO: LEADER JEFFRIES FLOOR=
+ SPEECH ON EXTREME MAGA REPUBLICAN EFFORTS TO CRIMINALIZE ABORTION</span></=
+strong></span></span></span></span></span></span></span></span></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;overflow:hidden; background-color:#ffffff"><p =
+style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span style=3D"font-fa=
+mily:Verdana,Geneva,sans-serif;">Washington, D.C. =E2=80=93 This week, Demo=
+cratic Leader Hakeem Jeffries spoke on the House Floor about extreme MAGA R=
+epublican attempts to criminalize abortion nationwide and to impose their d=
+eeply unpopular extreme right-wing agenda on the American people.&nbsp;</sp=
+an></p><p style=3D"margin: 0;"><br></p><div contenteditable=3D"false" class=
+=3D"cke_widget_wrapper cke_widget_block cke_widget_image cke_image_nocaptio=
+n" style=3D"overflow: hidden;"><p data-cke-widget-keep-attr=3D"0" data-widg=
+et=3D"image" class=3D"cke_widget_element" data-cke-widget-data=3D"%7B%22has=
+Caption%22%3Afalse%2C%22src%22%3A%22https%3A%2F%2Fjeffriesforms.house.gov%2=
+FUploadedPhotos%2FMediumResolution%2Fa755a0ec-3bcd-4859-942b-ec7f31177ee5.p=
+ng%22%2C%22alt%22%3A%22Leader%20Jeffries%20stands%20at%20the%20Rostrum%20de=
+livering%20remarks%22%2C%22width%22%3A%22610%22%2C%22height%22%3A%22339%22%=
+2C%22style%22%3A%22%22%2C%22lock%22%3Atrue%2C%22align%22%3A%22center%22%2C%=
+22classes%22%3Anull%2C%22widthPerc%22%3A%221%22%7D" style=3D"margin: 0;text=
+-align: center;"><span class=3D"cke_image_resizer_wrapper"><img alt=3D"Lead=
+er Jeffries stands at the Rostrum delivering remarks" src=3D"https://jeffri=
+esforms.house.gov/UploadedPhotos/MediumResolution/a755a0ec-3bcd-4859-942b-e=
+c7f31177ee5.png" data-cke-widget-upcasted=3D"1" width=3D"610" height=3D"339=
+" style=3D"max-width:600px;-ms-interpolation-mode: bicubic;"></span></p></d=
+iv><p style=3D"margin: 0;text-align: center;"><a data-cke-saved-href=3D"htt=
+ps://jeffriesforms.house.gov/components/redirect/r.aspx?ID=3D463927-7225262=
+6" href=3D"https://urldefense.com/v3/__https://www.youtube.com/watch?v=3D-2=
+TopeQyb8s__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!CnsbHqRtHau-0faYDTyYDpCZzvDVn=
+kU6hD0ja14YRbodCGt-PoQN-K-_JHIJ2Yo2QsOjupijJbwT5VKFQ2YgcJKd-jmh2tuRPGFWeMIg=
+MQ$" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">=
+<em><strong style=3D"font-weight: bold;">WATCH HERE</strong></em></a></p><p=
+ style=3D"margin: 0;text-align: center;"><br></p><p style=3D"margin: 0;">&q=
+uot;I want to thank my distinguished colleague from the great state of Wisc=
+onsin for yielding time to me on this amendment and on the underlying bill.=
+ The question was just asked, &quot;Why do we have a White House Gender Pol=
+icy Council?&quot; It's a pretty simple answer to that question: because he=
+re in America there are two contrasting visions as it relates to reproducti=
+ve freedom.&nbsp;<strong style=3D"font-weight: bold;">Democrats believe in =
+a woman's freedom to make her own reproductive health care decisions. Extre=
+me MAGA Republicans have a very different view.</strong>&nbsp;Extreme MAGA =
+Republicans want to criminalize abortion care. Extreme MAGA Republicans wan=
+t to impose a nationwide ban. Extreme MAGA Republicans want us to live in a=
+ society where women have government-mandated pregnancies. That's the dicho=
+tomy that we confront right now. Reproductive freedom is at issue all acros=
+s America. And you're either on the right side of that issue or you're on t=
+he wrong side. And we believe that&nbsp;<strong style=3D"font-weight: bold;=
+">my Republican colleagues continue to march us toward a nationwide abortio=
+n ban.</strong>&nbsp;<br><br>Just look at the underlying legislation, which=
+ by its very definition, restricts hundreds of thousands of people here in =
+the District of Columbia, as it relates to reproductive freedom. Why is it =
+in this bill? It's because there is a real policy difference.<strong style=
+=3D"font-weight: bold;">&nbsp;House Democrats support a woman's freedom to =
+make her own reproductive health care decisions. Period, full stop. A choic=
+e that should be between a woman, her doctor, her faith, her family, not a =
+bunch of extreme politicians.</strong>&nbsp;But that's the vision that's be=
+ing offered to us by our friends on the other side. That's the reason why t=
+he White House has taken the step forward to make sure that they're protect=
+ing women all across America from efforts to try to criminalize abortion ca=
+re.<br><br>And I wonder, what lesson has been learned from the events of ju=
+st this week? What lesson was learned in Ohio? What lesson was learned in V=
+irginia? What lesson was learned in Kentucky, the deepest of red states? Wh=
+y does this continue to happen? Jam an extreme right-wing ideology down the=
+ throats of the women of America. That is what we're against. That is why w=
+e oppose this amendment. That is one of the reasons why we oppose this unde=
+rlying bill.<br><br>Now, from the very beginning of this Congress,&nbsp;<st=
+rong style=3D"font-weight: bold;">House Democrats have made clear we want t=
+o find common ground with our Republican colleagues on any issue, whenever =
+and wherever possible, if it relates to making life better for everyday Ame=
+ricans.</strong>&nbsp;House Democrats are all about putting people over pol=
+itics, fighting for things like lower costs, growing the middle class, safe=
+r communities, things that will make a difference, solve problems in the li=
+ves of everyday Americans. And part of the challenge that we face is that&n=
+bsp;<strong style=3D"font-weight: bold;">the extreme MAGA Republican agenda=
+ continues to be focused on the wrong things</strong>. Extreme MAGA Republi=
+can agenda, focused on defaulting on America's debt, shutting down the gove=
+rnment, crashing the economy, criminalizing reproductive freedom, cutting S=
+ocial Security and Medicare, impeaching President Biden and doing nothing t=
+o deal with affordability issues or improving the quality of life of everyd=
+ay Americans. That's a shame. And so, yes,&nbsp;<strong style=3D"font-weigh=
+t: bold;">we're going to continue to oppose Republican efforts to criminali=
+ze abortion care now</strong>, tomorrow, next month, next year and forever =
+until this effort to take away reproductive freedom is buried in the ground=
+, never to rise again.&quot;</p><p style=3D"margin: 0;"><br></p></div></div=
+>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Verdana, Arial, sans-serif; background-color: #ff=
+ffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" =
+marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:10px; background=
+-color: #ffffff; font-size: 10px; line-height: 10px;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;background-color: #ffff=
+ff; padding: 0 15pt; color: #262626;">
+                    <p style=3D"margin: 0;text-align: center; font-size: 14=
+px; color: #262626;"><em>U.S. Representative Hakeem&nbsp;Jeffries&nbsp;(NY-=
+08) is the Democratic Leader. He proudly represents parts of Brooklyn in th=
+e United States Congress.</em></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:10px; background=
+-color: #ffffff; font-size: 10px; line-height: 10px;">
+                    &nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Verdana, Arial, sans-serif; background-color: #60=
+89aa; border-collapse: separate !important; border-radius: 10px;" border=3D=
+"0" cellspacing=3D"0" cellpadding=3D"10" marginheight=3D"0" marginwidth=3D"=
+0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; backgro=
+und-color: #6089aa; text-align: center; border-radius: 10px;">
+                        <h2 style=3D"font-family: Verdana, Arial, sans-seri=
+f; font-size: 18px; margin-top: 0; font-weight: normal; text-transform: upp=
+ercase; color: #0e253a;">Follow Me</h2>
+                    <a target=3D"_blank" href=3D"https://jeffriesforms.hous=
+e.gov/components/redirect/r.aspx?ID=3D463928-72252626" style=3D"-webkit-tex=
+t-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"Website icon"=
+ width=3D"48" src=3D"https://jeffriesforms.house.gov/images/newsletter/webs=
+ite.png" style=3D"-ms-interpolation-mode: bicubic;border-width: 0px; border=
+-style: solid; width: 48px;"></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://jeffriesform=
+s.house.gov/components/redirect/r.aspx?ID=3D463929-72252626" style=3D"-webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"faceboo=
+k icon" width=3D"48" src=3D"https://jeffriesforms.house.gov/images/newslett=
+er/facebook-rd.png" style=3D"-ms-interpolation-mode: bicubic;border-width: =
+0px; border-style: solid; width: 48px;"></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://jeffriesform=
+s.house.gov/components/redirect/r.aspx?ID=3D463930-72252626" style=3D"-webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"twitter=
+ icon" width=3D"48" src=3D"https://jeffriesforms.house.gov/images/newslette=
+r/twitter-rd.png" style=3D"-ms-interpolation-mode: bicubic;border-width: 0p=
+x; border-style: solid; width: 48px;"></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://jeffriesform=
+s.house.gov/components/redirect/r.aspx?ID=3D463931-72252626" style=3D"-webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"instagr=
+am icon" width=3D"48" src=3D"https://jeffriesforms.house.gov/images/newslet=
+ter/instagram-rd.png" style=3D"-ms-interpolation-mode: bicubic;border-width=
+: 0px; border-style: solid; width: 48px;"></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://jeffriesform=
+s.house.gov/components/redirect/r.aspx?ID=3D463932-72252626" style=3D"-webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"youtube=
+ icon" width=3D"48" src=3D"https://jeffriesforms.house.gov/images/newslette=
+r/youtube-rd.png" style=3D"-ms-interpolation-mode: bicubic;border-width: 0p=
+x; border-style: solid; width: 48px;"></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Verdana, Arial, sans-serif; background-color: #ff=
+ffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" =
+marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #262626; backgro=
+und-color: #ffffff; padding: 0 20px;">
+                    <table role=3D"presentation" width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"10" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;text-align:center;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;text-align:=
+center;">
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"32=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: Verdana, Arial, sans-serif; text-align:center; font-size: 12px; =
+color: #262626; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0pt=
+;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Verdana, Arial, sans-=
+serif; font-weight: bold;">
+                                            2433 Rayburn House Office Build=
+ing<br>
+                                Washington, DC 20515<br>
+                                202-225-5936
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"32=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: Verdana, Arial, sans-serif; text-align:center; font-size: 12px; =
+color: #262626; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0pt=
+;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Verdana, Arial, sans-=
+serif; font-weight: bold;">
+                                            445 Neptune Ave<br>
+                                Community Room 2C<br>
+                                Brooklyn, NY 11224<br>
+                                718-373-0033
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"32=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: Verdana, Arial, sans-serif; text-align:center; font-size: 12px; =
+color: #262626; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0pt=
+;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Verdana, Arial, sans-=
+serif; font-weight: bold;">
+                                            55 Hanson Pl., Ste. 603<br>
+                                Brooklyn, NY 11217<br>
+                                718-237-2211
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:10px; background=
+-color: #ffffff; font-size: 10px; line-height: 10px;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;background-color: #ffff=
+ff; font-size: 12px; font-family: Verdana, Arial, sans-serif; text-align: c=
+enter; color: #262626;">
+                    <em><strong style=3D"font-weight: bold;">
+                                Know someone who lives in the 8th District =
+and would be interested in receiving this email? Share it!</strong></em>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:20px; background=
+-color: #ffffff; font-size: 20px; line-height: 20px;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;background-color: #ffffff;">
+                    <table role=3D"presentation" cellpadding=3D"0" cellspac=
+ing=3D"20" align=3D"center" width=3D"90%" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #262=
+626; font-size: 12px; font-family: Verdana, Arial, sans-serif; font-weight:=
+ bold;">
+                                <a target=3D"_blank" href=3D"https://jeffri=
+esforms.house.gov/components/redirect/r.aspx?ID=3D463933-72252626" style=3D=
+"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-size: 12px=
+; font-family: Verdana, Arial, sans-serif;">Unsubscribe</a>&nbsp;&nbsp;|&nb=
+sp;&nbsp;
+                                <a target=3D"_blank" href=3D"https://jeffri=
+esforms.house.gov/components/redirect/r.aspx?ID=3D463934-72252626" style=3D=
+"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-size: 12px=
+; font-family: Verdana, Arial, sans-serif;">Privacy Policy</a>&nbsp;&nbsp;|=
+&nbsp;&nbsp;
+                                <a target=3D"_blank" href=3D"https://jeffri=
+esforms.house.gov/news/email/show.aspx?ID=3DJYFGL5X43Y4DK5AWNSSZPSZC3Q" sty=
+le=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-size:=
+ 12px; font-family: Verdana, Arial, sans-serif;">View this Email in Your Br=
+owser</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:10px; background=
+-color: #ffffff; font-size: 10px; line-height: 10px;">
+                    &nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    <table role=3D"presentation" width=3D"100%" align=3D"center" style=3D"f=
+ont-family: Georgia, times, serif; background-color: #ffffff;" border=3D"0"=
+ cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" l=
+eftmargin=3D"0" topmargin=3D"0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td valign=3D"m=
+iddle" align=3D"center" style=3D"color: #000000; font-size: 16px; text-alig=
+n: left;">=20
+                                                                <img src=3D=
+"https://jeffriesforms.house.gov/images/spacerx191012-72252626.open" width=
+=3D"20" height=3D"1" style=3D"height: 1px">
+                                                                <br>
+<a href=3D"https://jeffriesforms.house.gov/news/email/show.aspx?ID=3DJYFGL5=
+X43Y4DK5AWNSSZPSZC3Q">Click Here</a> to view this email in your browser <br=
+>
+<a href=3D"https://jeffriesforms.house.gov/Forms/EmailSignup/?Delete=3Dtrue=
+&amp;MessageID=3D191012&amp;Email=3DAndy.Eichar@mail.house.gov">Click Here<=
+/a> to be removed from this list
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table></body>
+</html>=
+
+----boundary_10790773_51cce4b6-03d7-4a19-837d-9f87086ce855--

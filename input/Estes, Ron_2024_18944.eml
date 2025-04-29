@@ -1,0 +1,1008 @@
+Received: from SA1PR09MB9385.namprd09.prod.outlook.com (2603:10b6:806:289::16)
+ by BY3PR09MB7297.namprd09.prod.outlook.com with HTTPS; Mon, 4 Mar 2024
+ 20:14:59 +0000
+Received: from CYXPR09CA0016.namprd09.prod.outlook.com (2603:10b6:930:d4::20)
+ by SA1PR09MB9385.namprd09.prod.outlook.com (2603:10b6:806:289::16) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7339.39; Mon, 4 Mar
+ 2024 20:14:58 +0000
+Received: from DS4PEPF00000170.namprd09.prod.outlook.com
+ (2603:10b6:930:d4:cafe::f5) by CYXPR09CA0016.outlook.office365.com
+ (2603:10b6:930:d4::20) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7339.39 via Frontend
+ Transport; Mon, 4 Mar 2024 20:14:58 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.51.115)
+ smtp.mailfrom=mail.house.gov; dkim=fail (body hash did not verify)
+ header.d=mail.house.gov;dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.51.115 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.51.115;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.51.115) by
+ DS4PEPF00000170.mail.protection.outlook.com (10.167.18.196) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7362.11 via Frontend Transport; Mon, 4 Mar 2024 20:14:58 +0000
+Received: from EXCH1924.US.House.gov (143.228.51.120) by EXCH1923.US.House.gov
+ (143.228.51.115) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1544.4; Mon, 4 Mar 2024
+ 15:14:54 -0500
+Received: from serg-bulk1-a.house.gov (143.228.42.4) by EXCH1924.US.House.gov
+ (143.228.51.120) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1544.4 via Frontend
+ Transport; Mon, 4 Mar 2024 15:14:54 -0500
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mail.house.gov; h=from : to : date
+ : subject : content-type : message-id : mime-version;
+ s=january2024-msgb-mhg; bh=x4HzzaptM6XtP4rr+3Qw6d5d89S+uXihPBlRuWCLe84=;
+ b=ICR2RikF6On/jHrHTNMwfFa2bj7RlZwWGxZm0Zlk4RVRbKEbCyS2pmH5JN2kL2gt8a6i
+ CYS4GSOqbGXOjfIJkVMj0yJi05glgGSX9BCIdb4Q8Q/QS94dC5Ux/ivXjlapMhoeT2a4
+ jV4swwZe7juE9LTVS7KGFk8hcSuM+HswyI4F0sETCsh4Tr6kkLINmqcTcj2owPnbSvgJ
+ ZoChRTQIQHaY0s1Y27E4zlYkCqdd31ymUhFy2ZQo/payfuvV7+D1LLGd4KEA7zIuLkvD
+ 2fAVIROXCrSSSM9yvAq+gw+53MApW64wrkDEKvgnD/n323mvr+HH6MSIhzIzqd9oe2A9 oQ== 
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=from : to : date :
+ subject : content-type : message-id : mime-version; s=august2019-msgb-hg;
+ bh=x4HzzaptM6XtP4rr+3Qw6d5d89S+uXihPBlRuWCLe84=;
+ b=e2ZOv0C9dBWBh0UdNUSMAHTLoI9W/XOAhPzKxyqsywRbPiXncVb4fNlFoRA+MC35/f0o
+ XbxKrTmoblKkWy5rtO856Tnz0ufB9U8YdtPSLutX1M4Pu7gxnvNPodeUB9V3g8z3g4rx
+ 5BMca0mmd3Z0FT1tSt2VR4OWJj0snreJ78sYtK6VB8BVM24hUJL4UUOetXrBG/ej8ShR
+ OSqIvy/oxO+rEwTcDnljLoz37CfpWk4LlXsRKYFS0cbHibJyQxjq/6ZexGt2RC/IlVsT
+ cBTfWCZUqGCCv4nWOXqimPfkYeYK5csgc34odKBH8d2qK0DNa6cGMapXCP/Av1wEzZb9 kA== 
+Received: from FIRESIDEADMIN04 (firesideadmin04.us.house.gov [143.228.58.69])
+	by serg-bulk1-a.house.gov (8.17.1.19/8.17.1.19) with ESMTP id 424KEskd007118;
+	Mon, 4 Mar 2024 15:14:54 -0500
+Message-Id: <3wm04usvs6-1@serg-bulk1-a.house.gov>
+envelope-from: ron.estes@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+X-House-Vendor-Seg: Fireside21-1
+From: "Congressman Ron Estes" <ron.estes@mail.house.gov>
+To: Roman.Rodriguez@mail.house.gov
+Date: 4 Mar 2024 15:14:54 -0500
+Subject: TEST Southern border numbers break another record
+Content-Type: multipart/alternative;
+ boundary=--boundary_446_cd8b2ad8-a6c7-4964-88d8-3328ba548f43
+X-Proofpoint-Virus-Version: vendor=baseguard
+ engine=ICAP:2.0.272,Aquarius:18.0.1011,Hydra:6.0.619,FMLib:17.11.176.26
+ definitions=2024-03-04_16,2024-03-04_01,2023-05-22_02
+Return-Path: KS04RE.Newsletter@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1923.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 04 Mar 2024 20:14:58.5324
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ cc60ed51-f762-4da9-4b92-08dc3c87c3f0
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1924.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted: DS4PEPF00000170.namprd09.prod.outlook.com
+X-CrossPremisesHeadersFiltered: DS4PEPF00000170.namprd09.prod.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ DS4PEPF00000170:EE_|SA1PR09MB9385:EE_|BY3PR09MB7297:EE_
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: cc60ed51-f762-4da9-4b92-08dc3c87c3f0
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:143.228.51.115;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:;DIR:INT;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 04 Mar 2024 20:14:58.4230
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: cc60ed51-f762-4da9-4b92-08dc3c87c3f0
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.51.115];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1924.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SA1PR09MB9385
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.3326129
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.7339.034
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(425001)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	DwfYVJL5W5JsZNK57eagtYm8NTGmoW6iWbqmpkm/LwZNaHSWFdt67oxXXqn4i0eYlH1jJ5irhsn0aJHE9fLzxCkPmfYPiJEQLxQ2nrtM7M56ehJmXEJ8md6PL13FqHE89mWDissZzcLfKsJ+HGcUfbk0wDky0j1jGSsC9ps/XTfBH2vvoqsSBz1Pk0age3RCnecjlIEL52zsH/wTE9kwWFWTWPrKEEdB2ImHKAb20TAaYooyeI1w6eQXpEpN7tshAQZiFvA/pr7HxsdgyvXl7XY/e2/xFnga6bEAxi67R051wdBcZ4oYuGcqYtgDR8UKfoL+2ck5KcPkEwXyZADrWQdkMnKo/dKOAYfGI43HGHcSiRC/4lxY5Qw4umutEaZgiP7gokwJMXkxGzz3YOMtPWP2Ce5WIUZAANuBh224GrDQRq3X+SIyCwtSaQgkpSuCy5WoM9cbu6lhJQ15TD+nmTBdyvQROKrFL9YiUoM/oRkb3JFDGumP+diiIyMwj/aXv5NOacj37dQ8gETZdRecMcrlC6aDSbmkl09oyPD0N+0P2duqwh6NI0s5wRoh5T4YlLNDfS/CeGI0ZOrRDtZoHrtpM1Z2+ikIbd4xXhJsJyyMTPsULXJ50h65lbV31ClJgvLtwyjx+fqFZ0Klx+sZayLTh2nCMuUOPavWMiOi1bttEBJMBij0kMK+TXOxzAwm+s4xuaCY0IxPTTaK9auxfycrfsX9hRTrj9quqLltqePtgHYo8S0O5+a5QDFKn0jfkmTVd4lMQeYhAs1pwR8AUHT5KYY75YLdPJJ8JmPwuNE/qnYJRJXodCwonM1v+XWs
+MIME-Version: 1.0
+
+----boundary_446_cd8b2ad8-a6c7-4964-88d8-3328ba548f43
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+A weekly update from Congressman Ron https://urldefense.com/v3/__http://Est=
+es.Click__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!DJX3z57raSRl64f23wrvHSqq7xnaFS=
+cEBKkaJZjMJL3TKO-zm1Vs12Tl1vvK-3NgohQ_wk-4268n9Hf7AtXImhgKmIujl9-hiDtF$  he=
+re(https://estes.house.gov/news/email/show.aspx?ID=3DT6PRPH3RSQPYSLITJD522Z=
+SGDI)  if you have trouble viewing this email.
+
+
+
+Southern border numbers break another record
+
+
+
+Dear Friend,
+
+January=E2=80=99s border numbers just came in and they broke records =E2=80=
+=93 again.
+
+In the first month of the calendar year, we had the highest January border =
+encounters ever on record. And those numbers are a 154%(https://homeland.ho=
+use.gov/wp-content/uploads/2024/02/Jan-2024-Startling-Stats.pdf)  increase =
+from when Biden took office. In fact, there have been 7.2 million(https://h=
+omeland.house.gov/wp-content/uploads/2024/02/Jan-2024-Startling-Stats.pdf) =
+ encounters at the southern border over Biden=E2=80=99s presidency. That=E2=
+=80=99s more than double the population of Kansas.
+
+But let=E2=80=99s be clear =E2=80=93 the migrant crisis is eclipsing the re=
+al story behind the numbers. Border crossings consist of people from all ov=
+er the world, not just Mexico and Central America. Since Oct. 1, 2023 =E2=
+=80=93 the start of the fiscal year =E2=80=93 18,755(https://homeland.house=
+.gov/wp-content/uploads/2024/02/Jan-2024-Startling-Stats.pdf)  Chinese nati=
+onals have been encountered at the southern border. And in that same time, =
+6,778(https://homeland.house.gov/wp-content/uploads/2024/02/Jan-2024-Startl=
+ing-Stats.pdf)  pounds of fentanyl has been seized, which is enough to kill=
+ more than a billion people.
+
+In February, the House impeached Homeland Security Secretary Alejandro Mayo=
+rkas =E2=80=93 a first step in bringing accountability for the reckless Bid=
+en administration policies that have resulted in record-breaking surges at =
+our southern border. The next step is for the Senate to bring up the House-=
+passed H.R. 2, which is the toughest border security legislation in decades=
+. It passed the House nearly 300 days ago.
+
+I recently published an op-ed discussing our border and the need for tough =
+action to end the crisis. You can read it here.(https://urldefense.com/v3/_=
+_https://www.tricountytribune.news/tough-action-needed-to-end-biden-mayorka=
+s-border-crisis/__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!DJX3z57raSRl64f23wrvHS=
+qq7xnaFScEBKkaJZjMJL3TKO-zm1Vs12Tl1vvK-3NgohQ_wk-4268n9Hf7AtXImhgKmIujl0vUI=
+lTr$ )  You can also sign up for my weekly e-newsletter(https://estes.house=
+.gov/forms/emailsignup/)  for more information and analysis about legislati=
+on in Congress and what's happening right here in Kansas.
+
+Sincerely,
+(https://estes.house.gov/forms/emailsignup/)=20
+Member of Congress
+image widget
+
+READ MY OP-ED ON BORDER SECURITY(https://urldefense.com/v3/__https://www.tr=
+icountytribune.news/tough-action-needed-to-end-biden-mayorkas-border-crisis=
+/__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!DJX3z57raSRl64f23wrvHSqq7xnaFScEBKkaJ=
+ZjMJL3TKO-zm1Vs12Tl1vvK-3NgohQ_wk-4268n9Hf7AtXImhgKmIujl0vUIlTr$ )=20
+
+
+SIGN UP FOR MY WEEKLY E-NEWSLETTER(https://estes.house.gov/forms/emailsignu=
+p/)=20
+
+
+----boundary_446_cd8b2ad8-a6c7-4964-88d8-3328ba548f43
+Content-Location: https://estes.house.gov/
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>Representative Ron Estes</title>
+       =20
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1">
+        <!--[if !mso]><!-->
+        <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![e=
+ndif]-->
+        <style>body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default t=
+ext sizes */ img{-ms-interpolation-mode: bicubic;} /* Allow smoother render=
+ing of resized image in Internet Explorer *//* RESET STYLES */img { border:=
+ 0; height: auto; line-height: 100%; outline: none; text-decoration: none; =
+}table { border-collapse: collapse !important; }body { height: 100% !import=
+ant; margin: 0 !important; padding: 0 !important; width: 100% !important; }=
+strong { font-weight: bold; } /* Editor reset *//* FIRESIDE STYLES */.compo=
+nent img {max-width:600px;}.component table {mso-table-rspace:10pt; border-=
+collapse:collapse;}.component { padding: 0px !important; }.press {padding-b=
+ottom: 0px;}</style><style>@media all and (max-width:650px) {            .i=
+mage-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td, .image-2, .img-2 =
+img, .image-2 tr, .image-2 td {max-width: 100% !important; width: 100% !imp=
+ortant;}            .responsive-table {width:100% !important;}            .=
+responsive-table img {max-width:100% !important; height: auto !important;} =
+           .press .component, .press td {text-align:center;}            .co=
+mponent { margin-left: 20px; margin-right: 20px;}            .component .re=
+sponsive-table { margin-left: 0px !important; margin-right: 0px !important;=
+}            .wide .video-thumb { width: 100% !important;height: auto !impo=
+rtant; }             .wide.video-container { width: 100% !important; }     =
+    .component.full-width {margin-left: 0px; margin-right: 0px; }   }</styl=
+e><style type=3D"text/css">
+            /* CLIENT-SPECIFIC STYLES */
+            body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text=
+ sizes */
+            table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Rem=
+ove spacing between tables in Outlook 2007 and up */
+            img{-ms-interpolation-mode: bicubic;} /* Allow smoother renderi=
+ng of resized image in Internet Explorer */
+            /* RESET STYLES */
+            img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: =
+0 !important; width: 100% !important; }
+            strong { font-weight: bold; } /* Editor reset */
+            /* FIRESIDE STYLES */
+            .component img {max-width:600px;}
+            .component table {mso-table-rspace:10pt; border-collapse:collap=
+se; font-family: Arial, Helvetica, sans-serif;}
+            .component td {font-family: Arial, Helvetica, sans-serif;}
+            .component { padding: 0px !important; }
+            .press {padding-bottom: 0px;}
+            .caption-1 td {font-family: Arial, Helvetica, sans-serif;}
+            /* Margin/NoMargin STYLES */
+            .component.full-width{ overflow: hidden; margin: 0px; }
+            /* HEADER STYLES */
+            .header-bar {width: 100%;}
+            .header-bar-margin {background-color:#ffffff;}
+            .header-bar h2 {margin: 0 !important; padding: 0 !important; co=
+lor: #08244a !important;text-align: center;font-size: 30px !important;font-=
+weight: bold !important; }
+            .survey-content > table > tbody tr td { border-color: #08244a !=
+important; }
+            .survey-content input.survey-submit { font-family: Arial, Helve=
+tica, sans-serif !important; }
+        </style>      =20
+        <style id=3D"media-queries">=20
+            @media all and (max-width:650px) {
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max=
+-width: 100% !important; width: 100% !important;}
+            .responsive-table {width:100% !important;}
+            .responsive-table img {max-width:100% !important; height: auto =
+!important;}
+            .press .component, .press td, .split .component, .split .compon=
+ent td, .split td {text-align:center;}
+            .component { margin-left: 20px; margin-right: 20px;}
+            .component .responsive-table { margin-left: 0px !important; mar=
+gin-right: 0px !important;}
+            .wide .video-thumb { width: 100% !important;height: auto !impor=
+tant; }=20
+            .wide.video-container { width: 100% !important; }
+            }
+        </style>
+       =20
+    <!--[if (gte mso 9)|(IE)]>
+                                        <style>=20
+                                    .button-padding-12-18 { padding: 12px 1=
+8px;}=20
+.button-padding-12-18 { padding: 12px 18px;}=20
+</style>
+                                    <![endif]--></head>
+    <body style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%;margin: 0px !important; padding: 0px !important;">
+        <div id=3D"preview-text" style=3D"display: none; font-size: 1px; co=
+lor: #fefefe; line-height: 1px; font-family: Arial, Helvetica, sans-serif; =
+max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">January=E2=
+=80=99s border numbers just came in and they broke records =E2=80=93 again.=
+  In the first ...<span>&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C<wbr>=E2=80=8C</span></div>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color: #=
+ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0=
+" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td valign=3D"middle" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;background-color: #ffffff;">
+                    <table role=3D"presentation" cellpadding=3D"10" cellspa=
+cing=3D"0" align=3D"center" width=3D"100%" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"right" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #0824=
+4a; font-size: 12px; font-family: Arial, Helvetica, sans-serif; text-align:=
+ right;">
+                                    <div class=3D"region" id=3D"region-1"><=
+div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D"=
+editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"590">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders" style=3D"overflow: hidden;"><div class=
+=3D"component-template" style=3D"overflow: hidden;"><p style=3D"margin: 0;c=
+olor: #08244a; margin: 0;">A weekly update from Congressman Ron Estes.&nbsp=
+;<a data-cke-saved-href=3D"https://estes.house.gov/news/email/show.aspx?ID=
+=3DT6PRPH3RSQPYSLITJD522ZSGDI" href=3D"https://estes.house.gov/news/email/s=
+how.aspx?ID=3DT6PRPH3RSQPYSLITJD522ZSGDI" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;color: #08244a; font-size: 12px;">Click =
+here</a> if you have trouble viewing this email.</p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color:=
+ #08244a;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D=
+"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td align=3D"center" valign=3D"bottom" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Hel=
+vetica, sans-serif; font-size: 16px; width: 59.9%;">
+                    <a target=3D"_blank" href=3D"https://estes.house.gov" s=
+tyle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                    <img alt=3D"Representative Ron Estes" width=3D"400" sty=
+le=3D"-ms-interpolation-mode: bicubic;display: block; width: 400px;" src=3D=
+"https://estes.house.gov/uploadedphotos/highresolution/f503e08f-06e3-48d5-9=
+8f7-6059db88ed6a.png">
+                    </a>
+                    </td>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;text-align: center; fon=
+t-size: 12px; width: 40%; color: #ffffff;">
+                    <a href=3D"https://estes.house.gov/constituent-services=
+" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color=
+:#ffffff;text-decoration:none;font-weight:bold; font-size: 12px;">SERVICES<=
+/a> | <a href=3D"https://estes.house.gov/voterecord/" style=3D"-webkit-text=
+-size-adjust: 100%; -ms-text-size-adjust: 100%;color:#ffffff;text-decoratio=
+n:none;font-weight:bold; font-size: 12px;">LEGISLATION</a> | <a href=3D"htt=
+ps://estes.house.gov/contact" style=3D"-webkit-text-size-adjust: 100%; -ms-=
+text-size-adjust: 100%;color:#ffffff;text-decoration:none;font-weight:bold;=
+ font-size: 12px;">CONTACT</a><br>
+                    <br>
+                    <a href=3D"https://estes.house.gov" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;color:#ffffff;text-decorat=
+ion:none;font-size:10px;line-height:18px;">ESTES.HOUSE.GOV</a><br>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;background-color: #f5f5f5; font-family: Arial, Helvetica, sa=
+ns-serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D=
+"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td class=3D"responsive-table" valign=3D"top" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Ari=
+al, Helvetica, sans-serif; font-size: 16px; color: #000000;">
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class=3D"region" id=3D"region-2"><div class=3D=
+"component full-width" style=3D"padding: 0px !important;"> <div class=3D"he=
+ader-bar" style=3D"overflow: hidden;">
+                                    <table role=3D"presentation" align=3D"c=
+enter" class=3D"responsive-table table-w-bg-color" style=3D"mso-table-lspac=
+e:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse=
+;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Ar=
+ial, Helvetica, sans-serif; margin-right: 0px; margin-left: 0px;" border=3D=
+"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0=
+" leftmargin=3D"0" topmargin=3D"0" width=3D"650">
+                                        <tbody>
+                                            <tr height=3D"0" class=3D"space=
+rRow">
+                                                <td style=3D"-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 0p=
+x">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td class=3D"responsive-tab=
+le" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fon=
+t-size:30px;color:#08244a;" valign=3D"top">
+                                                <table role=3D"presentation=
+" width=3D"100%" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-ta=
+ble-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -=
+ms-text-size-adjust: 100%;min-width: 100%;" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" top=
+margin=3D"0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;padding: 0 15pt; f=
+ont-family: Arial, Helvetica, sans-serif; text-transform: uppercase;">
+                                                                <div class=
+=3D"cke_editable cke_editable_inline cke_contents_ltr cke_show_borders cke_=
+focus" style=3D"overflow: hidden;"><h2 style=3D"text-align: center;">Southe=
+rn border numbers break another record</h2></div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                </td>
+                                            </tr>
+                                            <tr height=3D"0" class=3D"space=
+rRow">
+                                                <td style=3D"-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 0p=
+x">&nbsp;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;"><p style=3D"margin: 0;">Dear Friend,</p><p s=
+tyle=3D"margin: 0;"><br></p><p style=3D"margin: 0;">January=E2=80=99s borde=
+r numbers just came in and they broke records =E2=80=93 again.</p><p style=
+=3D"margin: 0;"><br></p><p style=3D"margin: 0;">In the first month of the c=
+alendar year, we had the highest January border encounters ever on record. =
+And those numbers are a <a data-cke-saved-href=3D"https://homeland.house.go=
+v/wp-content/uploads/2024/02/Jan-2024-Startling-Stats.pdf" href=3D"https://=
+homeland.house.gov/wp-content/uploads/2024/02/Jan-2024-Startling-Stats.pdf"=
+ style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">154%=
+</a> increase from when Biden took office. In fact, there have been <a data=
+-cke-saved-href=3D"https://homeland.house.gov/wp-content/uploads/2024/02/Ja=
+n-2024-Startling-Stats.pdf" href=3D"https://homeland.house.gov/wp-content/u=
+ploads/2024/02/Jan-2024-Startling-Stats.pdf" style=3D"-webkit-text-size-adj=
+ust: 100%; -ms-text-size-adjust: 100%;">7.2 million</a> encounters at the s=
+outhern border over Biden=E2=80=99s presidency. That=E2=80=99s more than do=
+uble the population of Kansas.</p><p style=3D"margin: 0;"><br></p><p style=
+=3D"margin: 0;">But let=E2=80=99s be clear =E2=80=93 the migrant crisis is =
+eclipsing the real story behind the numbers. Border crossings consist of pe=
+ople from all over the world, not just Mexico and Central America. Since Oc=
+t. 1, 2023 =E2=80=93 the start of the fiscal year =E2=80=93 <a data-cke-sav=
+ed-href=3D"https://homeland.house.gov/wp-content/uploads/2024/02/Jan-2024-S=
+tartling-Stats.pdf" href=3D"https://homeland.house.gov/wp-content/uploads/2=
+024/02/Jan-2024-Startling-Stats.pdf" style=3D"-webkit-text-size-adjust: 100=
+%; -ms-text-size-adjust: 100%;">18,755</a> Chinese nationals have been enco=
+untered at the southern border. And in that same time, <a data-cke-saved-hr=
+ef=3D"https://homeland.house.gov/wp-content/uploads/2024/02/Jan-2024-Startl=
+ing-Stats.pdf" href=3D"https://homeland.house.gov/wp-content/uploads/2024/0=
+2/Jan-2024-Startling-Stats.pdf" style=3D"-webkit-text-size-adjust: 100%; -m=
+s-text-size-adjust: 100%;">6,778</a> pounds of fentanyl has been seized, wh=
+ich is enough to kill more than a billion people.</p><p style=3D"margin: 0;=
+"><br></p><p style=3D"margin: 0;">In February, the House impeached Homeland=
+ Security Secretary Alejandro Mayorkas =E2=80=93 a first step in bringing a=
+ccountability for the reckless Biden administration policies that have resu=
+lted in record-breaking surges at our southern border. The next step is for=
+ the Senate to bring up the House-passed H.R. 2, which is the toughest bord=
+er security legislation in decades. It passed the House nearly 300 days ago=
+.</p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;">I recently pub=
+lished an op-ed discussing our border and the need for tough action to end =
+the crisis. <a data-cke-saved-href=3D"https://www.tricountytribune.news/tou=
+gh-action-needed-to-end-biden-mayorkas-border-crisis/" href=3D"https://urld=
+efense.com/v3/__https://www.tricountytribune.news/tough-action-needed-to-en=
+d-biden-mayorkas-border-crisis/__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!DJX3z57=
+raSRl64f23wrvHSqq7xnaFScEBKkaJZjMJL3TKO-zm1Vs12Tl1vvK-3NgohQ_wk-4268n9Hf7At=
+XImhgKmIujl0vUIlTr$" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size=
+-adjust: 100%;">You can read it here.</a> You can also <a data-cke-saved-hr=
+ef=3D"https://estes.house.gov/forms/emailsignup/" href=3D"https://estes.hou=
+se.gov/forms/emailsignup/" style=3D"-webkit-text-size-adjust: 100%; -ms-tex=
+t-size-adjust: 100%;">sign up for my weekly e-newsletter</a> for more infor=
+mation and analysis about legislation in Congress and what's happening righ=
+t here in Kansas.</p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;=
+">Sincerely,</p><p style=3D"margin: 0;"><span tabindex=3D"-1" contenteditab=
+le=3D"false" data-cke-widget-wrapper=3D"1" data-cke-filter=3D"off" class=3D=
+"cke_widget_wrapper cke_widget_inline cke_widget_image cke_image_nocaption"=
+ data-cke-display-name=3D"image" data-cke-widget-id=3D"0" role=3D"region" a=
+ria-label=3D" image widget"><a href=3D"https://estes.house.gov/forms/emails=
+ignup/" data-cke-saved-href=3D"https://estes.house.gov/forms/emailsignup/" =
+data-cke-widget-keep-attr=3D"0" data-widget=3D"image" class=3D"cke_widget_e=
+lement" data-cke-widget-data=3D"%7B%22hasCaption%22%3Afalse%2C%22src%22%3A%=
+22https%3A%2F%2Festes.house.gov%2FUploadedPhotos%2FHighResolution%2F8dd2db2=
+f-06d7-45db-a32e-693b858d6051.png%22%2C%22alt%22%3A%22%22%2C%22width%22%3A%=
+22201%22%2C%22height%22%3A%2261%22%2C%22style%22%3A%22%22%2C%22lock%22%3Atr=
+ue%2C%22align%22%3A%22none%22%2C%22link%22%3A%7B%22linkText%22%3A%22%22%2C%=
+22type%22%3A%22url%22%2C%22email%22%3A%7B%22address%22%3A%22%22%2C%22subjec=
+t%22%3A%22%22%2C%22body%22%3A%22%22%7D%2C%22tel%22%3A%22%22%2C%22url%22%3A%=
+7B%22protocol%22%3A%22https%3A%2F%2F%22%2C%22url%22%3A%22estes.house.gov%2F=
+forms%2Femailsignup%2F%22%7D%2C%22anchor%22%3A%7B%22name%22%3A%22%22%2C%22i=
+d%22%3A%22%22%7D%2C%22target%22%3A%7B%22type%22%3A%22notSet%22%2C%22name%22=
+%3A%22notSet%22%2C%22resizable%22%3A%22%22%2C%22status%22%3A%22%22%2C%22loc=
+ation%22%3A%22%22%2C%22toolbar%22%3A%22%22%2C%22menubar%22%3A%22%22%2C%22fu=
+llscreen%22%3A%22%22%2C%22scrollbars%22%3A%22%22%2C%22dependent%22%3A%22%22=
+%2C%22width%22%3A%22%22%2C%22left%22%3A%22%22%2C%22height%22%3A%22%22%2C%22=
+top%22%3A%22%22%7D%2C%22advanced%22%3A%7B%22advId%22%3A%22%22%2C%22advLangD=
+ir%22%3A%22%22%2C%22advAccessKey%22%3A%22%22%2C%22advName%22%3A%22%22%2C%22=
+advLangCode%22%3A%22%22%2C%22advTabIndex%22%3A%22%22%2C%22advTitle%22%3A%22=
+%22%2C%22advContentType%22%3A%22%22%2C%22advCSSClasses%22%3A%22%22%2C%22adv=
+Charset%22%3A%22%22%2C%22advRel%22%3A%22%22%2C%22advStyles%22%3A%22%22%7D%7=
+D%2C%22classes%22%3Anull%2C%22widthPerc%22%3A%220.33%22%7D" style=3D"-webki=
+t-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"" src=3D=
+"https://estes.house.gov/UploadedPhotos/HighResolution/8dd2db2f-06d7-45db-a=
+32e-693b858d6051.png" width=3D"201" height=3D"61" style=3D"max-width:600px;=
+-ms-interpolation-mode: bicubic;"></a></span></p><p style=3D"margin: 0;">Me=
+mber of Congress</p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"button" style=3D"overflow: hidden;overflow: hidden;width:100%;">
+            <table class=3D"responsive-table" align=3D"center" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-tab=
+le-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:=
+collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-l=
+ayout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td valign=3D"top" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%;">
+                            <table align=3D"center" class=3D"button-table" =
+role=3D"presentation" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;m=
+so-table-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 10=
+0%; -ms-text-size-adjust: 100%;table-layout: fixed;">
+                                <tbody>
+                                    <tr>
+                                        <td style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;">
+                                            <table align=3D"center" class=
+=3D"responsive-table" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-t=
+able-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; =
+-ms-text-size-adjust: 100%;border-collapse: separate !important;table-layou=
+t: fixed;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class=3D"button=
+-padding-12-18" align=3D"center" bgcolor=3D"#c80000" style=3D"-webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%;border-radius: 3px; line-heig=
+ht: 16px; background-color: rgb(200, 0, 0);">
+                                                            <a class=3D"cli=
+ckable" href=3D"https://urldefense.com/v3/__https://www.tricountytribune.ne=
+ws/tough-action-needed-to-end-biden-mayorkas-border-crisis/__;!!Ckt11KVezJI=
+ME51BYf4a6hrLATHilnk!DJX3z57raSRl64f23wrvHSqq7xnaFScEBKkaJZjMJL3TKO-zm1Vs12=
+Tl1vvK-3NgohQ_wk-4268n9Hf7AtXImhgKmIujl0vUIlTr$" style=3D"-webkit-text-size=
+-adjust: 100%; -ms-text-size-adjust: 100%;text-size-adjust: 100%; text-deco=
+ration: none; padding: 12px 18px; display: block; line-height: 16px; border=
+-color: rgb(200, 0, 0);" target=3D"_blank"><strong style=3D"font-weight: bo=
+ld;"><span style=3D"color:#ffffff;">READ MY OP-ED ON BORDER SECURITY</span>=
+</strong></a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component full-width" style=3D"padding: 0px !important;"> <di=
+v class=3D"button" style=3D"overflow: hidden;overflow: hidden;width:100%;">
+            <table class=3D"responsive-table" align=3D"center" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-tab=
+le-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:=
+collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-l=
+ayout: fixed; margin-right: 0px; margin-left: 0px;" width=3D"650">
+                <tbody>
+                    <tr>
+                        <td valign=3D"top" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%;">
+                            <table align=3D"center" class=3D"button-table" =
+role=3D"presentation" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;m=
+so-table-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 10=
+0%; -ms-text-size-adjust: 100%;table-layout: fixed;">
+                                <tbody>
+                                    <tr>
+                                        <td style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;">
+                                            <table align=3D"center" class=
+=3D"responsive-table" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-t=
+able-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; =
+-ms-text-size-adjust: 100%;border-collapse: separate !important;table-layou=
+t: fixed;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class=3D"button=
+-padding-12-18" align=3D"center" bgcolor=3D"#c80000" style=3D"-webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%;border-radius: 3px; line-heig=
+ht: 16px; background-color: rgb(200, 0, 0);">
+                                                            <a class=3D"cli=
+ckable" href=3D"https://estes.house.gov/forms/emailsignup/" style=3D"-webki=
+t-text-size-adjust: 100%; -ms-text-size-adjust: 100%;text-size-adjust: 100%=
+; text-decoration: none; padding: 12px 18px; display: block; line-height: 1=
+6px; border-color: rgb(200, 0, 0);" target=3D"_blank"><span style=3D"color:=
+#ffffff;"><strong style=3D"font-weight: bold;">SIGN UP FOR MY WEEKLY E-NEWS=
+LETTER</strong></span></a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div></div>
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color: #=
+ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0=
+" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #08244a;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; backgro=
+und-color: #08244a; font-family: arial, helvetica, sans-serif; font-size: 3=
+0px; text-align: center;">
+                    <h2 style=3D"font-family: arial, helvetica, sans-serif;=
+ font-size: 30px; margin: 0; font-weight: normal; text-transform: uppercase=
+;">Constituent <strong style=3D"font-weight: bold;">Services</strong></h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #08244a;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; backgro=
+und-color: #08244a; text-align: center; font-size: 16px;">
+                    <a href=3D"https://estes.house.gov/forms/emailsignup" s=
+tyle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img a=
+lt=3D"E-News Sign Up" width=3D"141" src=3D"https://estes.house.gov/images/e=
+mail/btn01-n.jpg" style=3D"-ms-interpolation-mode: bicubic;border-width: 0p=
+x; border-style: solid; width: 141px;"></a>
+                                <a href=3D"https://estes.house.gov/forms/ca=
+sework/" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;"><img alt=3D"Help with a Federal Agency" width=3D"140" src=3D"https://es=
+tes.house.gov/images/email/btn02-n.jpg" style=3D"-ms-interpolation-mode: bi=
+cubic;border-width: 0px; border-style: solid; width: 140px;"></a>
+                                <a href=3D"https://estes.house.gov/forms/to=
+urrequest/" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: =
+100%;"><img alt=3D"Visiting Washington, DC" width=3D"140" src=3D"https://es=
+tes.house.gov/images/email/btn04-n.jpg" style=3D"-ms-interpolation-mode: bi=
+cubic;border-width: 0px; border-style: solid; width: 140px;"></a>
+                                <br>
+                                <br>
+                                <a href=3D"https://flagorder.house.gov/Flag=
+Order.aspx?ssdd=3DKS04" style=3D"-webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%;"><img alt=3D"Flag Requests" width=3D"140" src=3D"https://=
+estes.house.gov/images/email/btn03-n.jpg" style=3D"-ms-interpolation-mode: =
+bicubic;border-width: 0px; border-style: solid; width: 140px;"></a>
+                                <a href=3D"https://estes.house.gov/contact/=
+" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><im=
+g alt=3D"Send Me An Email" width=3D"141" src=3D"https://estes.house.gov/ima=
+ges/email/btn05-n.jpg" style=3D"-ms-interpolation-mode: bicubic;border-widt=
+h: 0px; border-style: solid; width: 141px;"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #08244a;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #ffffff;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #08244a; backgro=
+und-color: #ffffff; font-family: arial, helvetica, sans-serif; font-size: 3=
+0px; text-align: center;">
+                    <h2 style=3D"font-family: arial, helvetica, sans-serif;=
+ font-size: 30px; margin: 0; font-weight: normal; text-transform: uppercase=
+;">Office <strong style=3D"font-weight: bold;">Locations</strong></h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:10px; background=
+-color: #ffffff;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #08244a; backgro=
+und-color: #ffffff; padding: 0 20px;">
+                    <table role=3D"presentation" width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"10" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;text-align:center;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;text-align:=
+center;">
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"49=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: arial, helvetica, sans-serif; text-align:center; font-size: 13px=
+; color: #08244a; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0=
+pt;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, san=
+s-serif;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: Arial, Helvetica, sans-serif;">Washington, DC Office</stro=
+ng><br>
+                                            2234 Rayburn HOB<br>
+                    Washington, DC 20515<br>
+                    Phone: (202) 225-6216
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"49=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: arial, helvetica, sans-serif; text-align:center; font-size: 13px=
+; color: #08244a; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0=
+pt;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, san=
+s-serif;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: Arial, Helvetica, sans-serif;">Wichita Office</strong><br>
+                                            7701 E. Kellogg, Ste. 510<br>
+                    Wichita, KS 67207<br>
+                    Phone: (316) 262-8992
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:10px; background=
+-color: #ffffff;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;background-color: #ffffff;">
+                    <table role=3D"presentation" cellpadding=3D"0" cellspac=
+ing=3D"20" align=3D"center" width=3D"90%" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #082=
+44a; font-size: 12px; font-family: Arial, Helvetica, sans-serif;">
+                                <a target=3D"_blank" href=3D"https://estes.=
+house.gov/forms/emailsignup/?delete=3Dtrue" style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;color: #08244a; text-transform: upperc=
+ase; text-decoration:none; font-family: Arial, Helvetica, sans-serif; font-=
+size: 12px;">Unsubscribe</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #ffffff;">
+                    &nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>=
+
+----boundary_446_cd8b2ad8-a6c7-4964-88d8-3328ba548f43--

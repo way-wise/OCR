@@ -1,0 +1,840 @@
+Received: from DS0PR09MB10611.namprd09.prod.outlook.com (2603:10b6:8:16a::16)
+ by BY5PR09MB5300.namprd09.prod.outlook.com with HTTPS; Tue, 2 Jan 2024
+ 13:56:28 +0000
+Received: from CYXPR09CA0001.namprd09.prod.outlook.com (2603:10b6:930:d4::9)
+ by DS0PR09MB10611.namprd09.prod.outlook.com (2603:10b6:8:16a::16) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7159.13; Tue, 2 Jan
+ 2024 13:56:27 +0000
+Received: from BL02EPF0001B419.namprd09.prod.outlook.com
+ (2a01:111:f403:f900::1) by CYXPR09CA0001.outlook.office365.com
+ (2603:10b6:930:d4::9) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7135.25 via Frontend
+ Transport; Tue, 2 Jan 2024 13:56:27 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.151.74)
+ smtp.mailfrom=mail.house.gov; dkim=fail (body hash did not verify)
+ header.d=house.gov;dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.151.74 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.151.74;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.151.74) by
+ BL02EPF0001B419.mail.protection.outlook.com (10.167.242.198) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7159.9 via Frontend Transport; Tue, 2 Jan 2024 13:56:27 +0000
+Received: from EXCH1911.US.House.gov (143.228.151.110) by
+ EXCH1915.US.House.gov (143.228.151.74) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.2.1258.28; Tue, 2 Jan 2024 08:56:26 -0500
+Received: from serg-bulk1-h.house.gov (143.228.145.31) by
+ EXCH1911.US.House.gov (143.228.151.110) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.2.1258.28 via Frontend Transport; Tue, 2 Jan 2024 08:56:26 -0500
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=from : to : date :
+ subject : content-type : message-id : mime-version; s=august2019-msgb-hg;
+ bh=MNwSx6UR33YrhT3YbMmJ2hazhPW7JkNCAGKtgwa7TXE=;
+ b=GPZElLNyXFXs7pCs1BaB3/G3H3AJzbXMp+y1LozFFReE++pRsfihgG5vol14SmhPr0bM
+ reclFG6l0K/uhJm3UwBz6lkv9q6azvWkuRftuladVDSwrGZKV7GfD3OwUvHqJGUYHSMe
+ ywGbadU1KSZKiDjet4k8PUE0VczjrWZ2BzWx4BCThQpOEdwQkGCJ6+qpjWwzp4LjJasb
+ I4XT1M46h0hgSiDi1rJpBNyQZ8CicxuPrukfpV6+kUlES6mHN3ignMEfz8FG1v62hnM1
+ Cv08oT+ntr7aaghdJDn0/e9EXJXhANjaaVRpslsdZFi8Qew08Vfbr8wxeoarC3ZReiS/ eQ== 
+Received: from FIRESIDEADMIN04 (firesideadmin04.us.house.gov [143.228.58.69])
+	by serg-bulk1-h.house.gov (8.17.1.19/8.17.1.19) with ESMTP id 402DuQki008687;
+	Tue, 2 Jan 2024 08:56:26 -0500
+Message-Id: <3vaf7und4u-1@serg-bulk1-h.house.gov>
+envelope-from: boblatta@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+From: "Congressman Bob Latta" <boblatta@mail.house.gov>
+To: Craig.Wheeler@mail.house.gov
+Date: 2 Jan 2024 08:56:26 -0500
+Subject: TEST I'd like to hear from you: which issues are important to you?
+Content-Type: multipart/alternative;
+ boundary=--boundary_9_1d19b6e5-9614-42c0-828e-a762380a650c
+X-Proofpoint-Virus-Version: vendor=baseguard
+ engine=ICAP:2.0.272,Aquarius:18.0.997,Hydra:6.0.619,FMLib:17.11.176.26
+ definitions=2024-01-02_04,2024-01-02_01,2023-05-22_02
+Return-Path: boblatta@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1915.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 02 Jan 2024 13:56:27.0446
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 083aa767-16bd-40e8-c5ca-08dc0b9a9d39
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1911.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted: BL02EPF0001B419.namprd09.prod.outlook.com
+X-CrossPremisesHeadersFiltered: BL02EPF0001B419.namprd09.prod.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ BL02EPF0001B419:EE_|DS0PR09MB10611:EE_|BY5PR09MB5300:EE_
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: 083aa767-16bd-40e8-c5ca-08dc0b9a9d39
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:143.228.151.74;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:;DIR:INT;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 02 Jan 2024 13:56:27.0289
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 083aa767-16bd-40e8-c5ca-08dc0b9a9d39
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.151.74];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1911.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DS0PR09MB10611
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.3702458
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.7159.005
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:1;jmr:0;auth:0;dest:C;OFR:CustomRules;ENG:(910001)(944506478)(944626604)(920097)(425001)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	wxOG4nCIaQLWrxKUoFCnYGDKnhGqBhBHUEytr9z1GqqWEX0iMIbfwDB/ZLGgfO3CWeJpDEyPY2BMtwY4uVNRVVi0nEaUUkyz6zPtw8tvmpAvnEit3bpo5iZ5SYXtFYiZw+hSw1Ivzxe9yZdsy2vTxwR3erSSg2+DvFkUVWOScSBb/Bf0Y3tpxcBgV20cPBKD7lNO9XawZL0WOKIaQF/FPpTvfPCPAkR/4Eo/mV+dke5qHVYEWDBhHsHrDZspRklcH8cWTJESCvl+Y6WYYTI8k7GWfraYq7oW9ccwV2w0dU+TVyrpNwJNsbHEreAg0uGmh851Sp8qJ41lod59CftFQnqLp4B8Z8wANCNzUja0jd/rNpIuXTcsdjgDLhqT80yH8Wa95Cjyoj6Kd8nJJMXYJGjJxI84uiWizjlV17u+/1HVzdzBsJ2hm1JKfP/pWG1J0uZcF8SvmYqWGe1f/c4IlKP/UjdpKGWH3VhzgmvoK7rxzTG5FXcxhIhWgNqJMJwrtnIsdId1P0lKhGHILhqWm0Hr/ZGqGsRE/ddnkghw4kXD4RWSs2uqH4YuYAZXEOMWQyz7pU/8wwObjIkWHiYaCU0LA7DeSBCisDfABw0ACXVTFjA8IwcEUzxSY9k31KKhaioc88JR9WtsbV201rCkuU2Cyyv5TGbZTJp9lHFAvcMsCGw4ANSqVdOsCdGvuCbVjGfXe53ceLpmcW6hDI9BEIxxND3ihJSAVp8zq1XzhJcVgleKPoAjn7fdalQsVEA+7XmCoTHnGhln4i5N21L8DM1tpoTNyREJXUw3cz0UF60sb+dUHTUuyjLjW/l+4KO6gaRVxt74ectfbUX0Xoc5fg==
+MIME-Version: 1.0
+
+----boundary_9_1d19b6e5-9614-42c0-828e-a762380a650c
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Dear friend,
+
+As we begin 2024, I'd like to hear what issues are important to you and wha=
+t you believe the United States Congress should focus on throughout the yea=
+r.Please take a moment to complete the below survey.
+
+CLICK HERE(https://latta.house.gov/forms/form/?ID=3D3100) , or below, to co=
+mplete the survey.
+
+
+Issue Survey Jan 2024  (https://latta.house.gov/forms/form/?ID=3D3100)
+
+If you have any comments, questions, or ideas for me and my team, please cl=
+ick here(http://latta.house.gov/contact)  to send a message.
+
+
+It's an honor to serve you in Congress. For timely updates on my work on be=
+half of Ohio's Fifth District, follow me on Facebook(https://urldefense.com=
+/v3/__https://www.facebook.com/boblatta__;!!Fr0YZsIsFWxTZsBm-qTAg68!nX5qouG=
+7PxAP1N_zQODcFTqz-hQfLbe8n6vY_CHzGHQwnfj7P3aItuJYc4dBsU_lVZFFQWUvoRV9t2NG5V=
+yZI7dFdseaoL-T$ ) , Twitter(https://urldefense.com/v3/__https://twitter.com=
+/boblatta__;!!Fr0YZsIsFWxTZsBm-qTAg68!nX5qouG7PxAP1N_zQODcFTqz-hQfLbe8n6vY_=
+CHzGHQwnfj7P3aItuJYc4dBsU_lVZFFQWUvoRV9t2NG5VyZI7dFdpOOKwy3$  ) , and Insta=
+gram(https://urldefense.com/v3/__https://www.instagram.com/boblatta/__;!!Fr=
+0YZsIsFWxTZsBm-qTAg68!nX5qouG7PxAP1N_zQODcFTqz-hQfLbe8n6vY_CHzGHQwnfj7P3aIt=
+uJYc4dBsU_lVZFFQWUvoRV9t2NG5VyZI7dFdk3p1mtO$ ) . As always, if you have any=
+ comments, questions, or ideas for me and my team, please do not hesitate t=
+o call, write, or click here( http://latta.house.gov/contact)  to send a di=
+rect message.
+
+
+----boundary_9_1d19b6e5-9614-42c0-828e-a762380a650c
+Content-Location: https://latta.house.gov/
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>Representative Bob Latta</title>
+       =20
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1">
+        <!--[if !mso]><!-->
+        <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![e=
+ndif]-->
+        <style>body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default t=
+ext sizes */ img{-ms-interpolation-mode: bicubic;} /* Allow smoother render=
+ing of resized image in Internet Explorer *//* RESET STYLES */img { border:=
+ 0; height: auto; line-height: 100%; outline: none; text-decoration: none; =
+}table { border-collapse: collapse !important; }body { height: 100% !import=
+ant; margin: 0 !important; padding: 0 !important; width: 100% !important; }=
+strong { font-weight: bold; } /* Editor reset *//* FIRESIDE STYLES */.compo=
+nent img {max-width:600px;}.component table {mso-table-rspace:10pt; border-=
+collapse:collapse;}.component { padding: 0px !important; }.press {padding-b=
+ottom: 0px;}</style><style>@media all and (max-width:650px) {            .i=
+mage-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td, .image-2, .img-2 =
+img, .image-2 tr, .image-2 td {max-width: 100% !important; width: 100% !imp=
+ortant;}            .responsive-table {width:100% !important;}            .=
+responsive-table img {max-width:100% !important; height: auto !important;} =
+           .press .component, .press td {text-align:center;}            .co=
+mponent { margin-left: 20px; margin-right: 20px;}            .component .re=
+sponsive-table { margin-left: 0px !important; margin-right: 0px !important;=
+}            .wide .video-thumb { width: 100% !important;height: auto !impo=
+rtant; }             .wide.video-container { width: 100% !important; }     =
+    .component.full-width {margin-left: 0px; margin-right: 0px; }   }</styl=
+e><style type=3D"text/css">
+            /* CLIENT-SPECIFIC STYLES */
+            body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text=
+ sizes */
+            table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Rem=
+ove spacing between tables in Outlook 2007 and up */
+            img{-ms-interpolation-mode: bicubic;} /* Allow smoother renderi=
+ng of resized image in Internet Explorer */
+            /* RESET STYLES */
+            img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: =
+0 !important; width: 100% !important; }
+            strong { font-weight: bold; } /* Editor reset */
+            /* FIRESIDE STYLES */
+            .component img {max-width:600px;}
+            .component table {mso-table-rspace:10pt; border-collapse:collap=
+se; font-family: Georgia, times, serif;}
+            .component td, td {font-family: Georgia, times, serif;}
+            .component { padding: 0px !important; }
+            .press {padding-bottom: 0px;}
+            .caption-1 td {font-family: Georgia, times, serif;}
+            /* Margin/NoMargin STYLES */
+            .component.full-width{ overflow: hidden; margin: 0px; }
+            /* HEADER STYLES */
+            .header-bar {width: 100%;}
+            .header-bar-margin {background-color:#ffffff;}
+            .header-bar h2 {margin: 0 !important; padding: 0 !important; co=
+lor: #000000;text-align: center;font-size: 16px;font-weight: bold; }
+            .survey-content > table > tbody tr td { border-color: #173042 !=
+important; }
+            .survey-content input.survey-submit { font-family: Georgia, tim=
+es, serif !important; }
+        </style> =20
+        <style id=3D"media-queries">=20
+            @media all and (max-width:650px) {
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max=
+-width: 100% !important; width: 100% !important;}
+            .responsive-table {width:100% !important;}
+            .responsive-table img {max-width:100% !important; height: auto =
+!important;}
+            .press .component, .press td, .split .component, .split .compon=
+ent td, .split td {text-align:center;}
+            .component { margin-left: 20px; margin-right: 20px;}
+            .component .responsive-table { margin-left: 0px !important; mar=
+gin-right: 0px !important;}
+            .wide .video-thumb { width: 100% !important;height: auto !impor=
+tant; }=20
+            .wide.video-container { width: 100% !important; }
+            }
+        </style>
+       =20
+    <!--[if (gte mso 9)|(IE)]>
+                                        <style>=20
+                                    </style>
+                                    <![endif]--></head>
+    <body style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%;margin: 0px !important; padding: 0px !important;">
+        <div id=3D"preview-text" style=3D"display: none; font-size: 1px; co=
+lor: #fefefe; line-height: 1px; font-family: Georgia, times, serif; max-hei=
+ght: 0px; max-width: 0px; opacity: 0; overflow: hidden;">As we begin 2024, =
+I'd like to hear what issues are important to you and what you believe<span=
+>&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=
+=8C</span></div>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;font-family: Georgia, times, serif; background-color: #fffff=
+f;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" mar=
+ginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td align=3D"center" valign=3D"top" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Georgia, time=
+s, serif; font-size: 16px; border-left: 1px solid #1b325f; border-right: 1p=
+x solid #1b325f;">
+                    <a target=3D"_blank" href=3D"https://latta.house.gov" s=
+tyle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                    <img alt=3D"Representative Bob Latta" width=3D"648" sty=
+le=3D"-ms-interpolation-mode: bicubic;display: block; width: 648px;" src=3D=
+"https://latta.house.gov/images/latta-banner4.jpg">
+                    </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Georgia, times, serif; background-color: #1b325f;=
+" border=3D"0" cellspacing=3D"0" cellpadding=3D"15" marginheight=3D"0" marg=
+inwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; font-si=
+ze: 16px; font-family: Georgia, times, serif; text-align: center; backgroun=
+d-color: #1b325f; border-left: 1px solid #1b325f; border-right: 1px solid #=
+1b325f;">
+                        <a href=3D"https://latta.house.gov" style=3D"-webki=
+t-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; text-d=
+ecoration: none; font-size: 16px; font-family: Georgia, times, serif;">Home=
+</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href=3D"https://latta.house.gov/constituentservi=
+ces" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;co=
+lor: #ffffff; text-decoration: none; font-size: 16px; font-family: Georgia,=
+ times, serif;">Serving You</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href=3D"https://latta.house.gov/contact" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffff=
+ff; text-decoration: none; font-size: 16px; font-family: Georgia, times, se=
+rif;">Contact</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href=3D"https://latta.house.gov/district" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffff=
+ff; text-decoration: none; font-size: 16px; font-family: Georgia, times, se=
+rif;">District</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href=3D"https://latta.house.gov/voterecord" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #fff=
+fff; text-decoration: none; font-size: 16px; font-family: Georgia, times, s=
+erif;">Legislation</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href=3D"https://latta.house.gov/news" style=3D"-=
+webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; t=
+ext-decoration: none; font-size: 16px; font-family: Georgia, times, serif;"=
+>Newsroom</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href=3D"https://latta.house.gov/biography" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffff=
+ff; text-decoration: none; font-size: 16px; font-family: Georgia, times, se=
+rif;">About Bob</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;background-color: #ffffff; font-family: Georgia, times, seri=
+f;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" mar=
+ginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td class=3D"responsive-table" valign=3D"top" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Geo=
+rgia, times, serif; font-size: 16px; color: #000000; border-left: 1px solid=
+ #1b325f; border-right: 1px solid #1b325f;">
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class=3D"region" id=3D"region-1"><div class=3D=
+"component " style=3D"padding: 0px !important;"> <div class=3D"editable" st=
+yle=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"608">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><d=
+iv class=3D"component-template" style=3D"overflow: hidden;"><p style=3D"mar=
+gin: 0;margin: 0;">Dear friend,&nbsp;</p><p style=3D"margin: 0;margin: 0;">=
+<br></p><p style=3D"margin: 0;margin: 0;"><span style=3D"color: initial;">A=
+s we begin 2024, I'd like to hear what issues are important to you and what=
+ you believe the United States Congress should focus on throughout the year=
+.&nbsp;</span>&nbsp;Please take a moment to complete the below survey.&nbsp=
+;</p><p style=3D"margin: 0;margin: 0;"><br></p><p style=3D"margin: 0;margin=
+: 0;"><a data-cke-saved-href=3D"https://latta.house.gov/forms/form/?ID=3D31=
+00" target=3D"_blank" href=3D"https://latta.house.gov/forms/form/?ID=3D3100=
+" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><sp=
+an style=3D"background-color:#ffff99;">CLICK HERE</span></a>, or below, to =
+complete the survey.&nbsp;</p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"608">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"608">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><a href=3D"https://latta.house.gov/forms/form/=
+?ID=3D3100" target=3D"_blank" style=3D"-webkit-text-size-adjust: 100%; -ms-=
+text-size-adjust: 100%;"><img style=3D"max-width:600px;-ms-interpolation-mo=
+de: bicubic;vertical-align: bottom; max-width: 1080px;" alt=3D"Issue Survey=
+ Jan 2024" src=3D"https://latta.house.gov/UploadedPhotos/HighResolution/75e=
+9f839-365e-423e-8386-08cf2e977652.png" width=3D"607.5"></a></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"608">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;overflow:hidden; background-color:#ffffff"><p =
+style=3D"margin: 0;">If you have any comments, questions, or ideas for me a=
+nd my team, please <a data-cke-saved-href=3D"http://latta.house.gov/contact=
+" target=3D"_blank" href=3D"http://latta.house.gov/contact" style=3D"-webki=
+t-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">click here</a> to se=
+nd a message.&nbsp;</p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"608">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders" style=3D"overflow: hidden;"><div class=
+=3D"component-template" style=3D"overflow: hidden;"><p style=3D"margin: 0;m=
+argin: 0;">It's an honor to serve you in Congress. For timely updates on my=
+ work on behalf of Ohio's Fifth District, follow me on <a data-cke-saved-hr=
+ef=3D"https://www.facebook.com/boblatta" href=3D"https://urldefense.com/v3/=
+__https://www.facebook.com/boblatta__;!!Fr0YZsIsFWxTZsBm-qTAg68!nX5qouG7PxA=
+P1N_zQODcFTqz-hQfLbe8n6vY_CHzGHQwnfj7P3aItuJYc4dBsU_lVZFFQWUvoRV9t2NG5VyZI7=
+dFdseaoL-T$" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust:=
+ 100%;">Facebook</a>, <a data-cke-saved-href=3D"https://twitter.com/boblatt=
+a " href=3D"https://urldefense.com/v3/__https://twitter.com/boblatta__;!!Fr=
+0YZsIsFWxTZsBm-qTAg68!nX5qouG7PxAP1N_zQODcFTqz-hQfLbe8n6vY_CHzGHQwnfj7P3aIt=
+uJYc4dBsU_lVZFFQWUvoRV9t2NG5VyZI7dFdpOOKwy3$" style=3D"-webkit-text-size-ad=
+just: 100%; -ms-text-size-adjust: 100%;">Twitter</a>, and <a data-cke-saved=
+-href=3D"https://www.instagram.com/boblatta/" href=3D"https://urldefense.co=
+m/v3/__https://www.instagram.com/boblatta/__;!!Fr0YZsIsFWxTZsBm-qTAg68!nX5q=
+ouG7PxAP1N_zQODcFTqz-hQfLbe8n6vY_CHzGHQwnfj7P3aItuJYc4dBsU_lVZFFQWUvoRV9t2N=
+G5VyZI7dFdk3p1mtO$" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;">Instagram</a>. As always, if you have any comments, question=
+s, or ideas for me and my team, please do not hesitate to call, write, or <=
+strong style=3D"font-weight: bold;"><a data-cke-saved-href=3D" http://latta=
+.house.gov/contact" href=3D" http://latta.house.gov/contact" style=3D"-webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">click here</a></str=
+ong> to send a direct message.</p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div></div>
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: 'Times New Roman', times, serif; background-color=
+: #ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=
+=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td valign=3D"middle" align=3D"left" style=3D"-webkit-t=
+ext-size-adjust: 100%; -ms-text-size-adjust: 100%;background-color: #ffffff=
+; font-family: Georgia, times, serif;; font-size: 16px; color: #000000; tex=
+t-align: left; border-left: 1px solid #000000; border-right: 1px solid #000=
+000; padding: 0 15pt;">
+                        <table role=3D"presentation" align=3D"left" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family:=
+ Georgia, times, serif;; background-color: #ffffff;" border=3D"0" cellspaci=
+ng=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=
+=3D"0" topmargin=3D"0"> =20
+                            <tbody>
+                                <tr>
+                                    <td valign=3D"middle" align=3D"left" st=
+yle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;backgroun=
+d-color: #ffffff; font-family: Georgia, times, serif;; font-size: 16px; col=
+or: #000000; text-align: left;">
+                                        <p style=3D"margin: 0;margin: 0; pa=
+dding: 0;">Sincerely,</p>
+                                        <img alt=3D"Bob Latta Signature." s=
+rc=3D"https://latta.house.gov/UploadedPhotos/HighResolution/6b8e4663-b829-4=
+466-bb2e-661dd31321fc.png" style=3D"-ms-interpolation-mode: bicubic;width: =
+200px; display: block;" width=3D"200">
+                                        <p style=3D"margin: 0;margin: 0; pa=
+dding: 0;">Bob Latta</p>
+                                        <p style=3D"margin: 0;margin: 0; pa=
+dding: 0;"><em>Member of Congress</em></p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Georgia, times, serif; background-color: #ffffff;=
+" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" margi=
+nwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #173042; backgro=
+und-color: #ffffff; border-left: 1px solid #1b325f; border-right: 1px solid=
+ #1b325f;">
+                    <a target=3D"_blank" href=3D"https://urldefense.com/v3/=
+__https://www.facebook.com/boblatta__;!!Fr0YZsIsFWxTZsBm-qTAg68!nX5qouG7PxA=
+P1N_zQODcFTqz-hQfLbe8n6vY_CHzGHQwnfj7P3aItuJYc4dBsU_lVZFFQWUvoRV9t2NG5VyZI7=
+dFdseaoL-T$" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust:=
+ 100%;"><img alt=3D"facebook icon" width=3D"32" src=3D"https://latta.house.=
+gov/images/facebook.png" style=3D"-ms-interpolation-mode: bicubic;border-wi=
+dth: 0px; border-style: solid; width: 32px;"></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://urldefense.c=
+om/v3/__https://twitter.com/boblatta__;!!Fr0YZsIsFWxTZsBm-qTAg68!nX5qouG7Px=
+AP1N_zQODcFTqz-hQfLbe8n6vY_CHzGHQwnfj7P3aItuJYc4dBsU_lVZFFQWUvoRV9t2NG5VyZI=
+7dFdpOOKwy3$" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust=
+: 100%;"><img alt=3D"twitter icon" width=3D"32" src=3D"https://latta.house.=
+gov/images/twitter.png" style=3D"-ms-interpolation-mode: bicubic;border-wid=
+th: 0px; border-style: solid; width: 32px;"></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://urldefense.c=
+om/v3/__https://www.youtube.com/channel/CongressmanBobLatta__;!!Fr0YZsIsFWx=
+TZsBm-qTAg68!nX5qouG7PxAP1N_zQODcFTqz-hQfLbe8n6vY_CHzGHQwnfj7P3aItuJYc4dBsU=
+_lVZFFQWUvoRV9t2NG5VyZI7dFdgPL50rG$" style=3D"-webkit-text-size-adjust: 100=
+%; -ms-text-size-adjust: 100%;"><img alt=3D"youtube icon" width=3D"32" src=
+=3D"https://latta.house.gov/images/youtube.png" style=3D"-ms-interpolation-=
+mode: bicubic;border-width: 0px; border-style: solid; width: 32px;"></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://urldefense.c=
+om/v3/__https://www.instagram.com/boblatta__;!!Fr0YZsIsFWxTZsBm-qTAg68!nX5q=
+ouG7PxAP1N_zQODcFTqz-hQfLbe8n6vY_CHzGHQwnfj7P3aItuJYc4dBsU_lVZFFQWUvoRV9t2N=
+G5VyZI7dFdo6fJqYv$" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;"><img alt=3D"instagram icon" width=3D"32" src=3D"https://latt=
+a.house.gov/images/instagram.png" style=3D"-ms-interpolation-mode: bicubic;=
+border-width: 0px; border-style: solid; width: 32px;"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:10px; background=
+-color: #ffffff; border-left: 1px solid #1b325f; border-right: 1px solid #1=
+b325f;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #f3f3f3; backgro=
+und-color: #1b325f; padding: 0 20px; border-left: 1px solid #1b325f; border=
+-right: 1px solid #1b325f; border-bottom: 1px solid #1b325f;">
+                    <table role=3D"presentation" width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"10" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;text-align:center;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;text-align:=
+center;">
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"24=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: Georgia, times, serif; text-align:center; font-size: 11px; color=
+: #f3f3f3; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Georgia, times, serif=
+;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: Georgia, times, serif; text-transform: uppercase;">Washing=
+ton, DC Office</strong><br>
+                                            2467 Rayburn HOB<br>
+                                            Washington, DC 20515<br>
+                                            T (202) 225-6405
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"24=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: Georgia, times, serif; text-align:center; font-size: 11px; color=
+: #f3f3f3; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Georgia, times, serif=
+;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: Georgia, times, serif; text-transform: uppercase;">Bowling=
+ Green Office</strong><br>
+                                            1045 North Main St, Ste 6<br>
+                                            Bowling Green, OH 43402<br>
+                                            T (419) 354-8700
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"24=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: Georgia, times, serif; text-align:center; font-size: 11px; color=
+: #f3f3f3; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Georgia, times, serif=
+;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: Georgia, times, serif; text-transform: uppercase;">Findlay=
+ Office</strong><br>
+                                            318 Dorney Plaza, Rm 302<br>
+                                            Findlay, OH 45840<br>
+                                            T (419) 422-7791
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"24=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: Georgia, times, serif; text-align:center; font-size: 11px; color=
+: #f3f3f3; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Georgia, times, serif=
+;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: Georgia, times, serif; text-transform: uppercase;">Elyria =
+Office</strong><br>
+                                            226 Middle Ave, 5th Floor<br>El=
+yria, OH 44035<br>T (440) 406-5010
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #ffffff;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;background-color: #ffffff;">
+                    <table role=3D"presentation" cellpadding=3D"0" cellspac=
+ing=3D"20" align=3D"center" width=3D"90%" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #1b3=
+25f; font-size: 14px; font-family: Georgia, times, serif;">
+                                <a target=3D"_blank" href=3D"https://latta.=
+house.gov/" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: =
+100%;color: #1b325f; font-family: Georgia, times, serif; font-size: 13px;">=
+Website</a>&nbsp;|&nbsp;
+                                <a target=3D"_blank" href=3D"https://latta.=
+house.gov/forms/emailsignup/?delete=3Dtrue" style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;color: #1b325f; font-family: Georgia, =
+times, serif; font-size: 14px;">Unsubscribe</a>&nbsp;|&nbsp;
+                                <a target=3D"_blank" href=3D"https://latta.=
+house.gov/contact" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-a=
+djust: 100%;color: #1b325f; font-family: Georgia, times, serif; font-size: =
+14px;">Contact</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #ffffff;">
+                    &nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>=
+
+----boundary_9_1d19b6e5-9614-42c0-828e-a762380a650c--

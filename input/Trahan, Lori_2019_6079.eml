@@ -1,0 +1,600 @@
+Received: from BL0PR0901MB2306.namprd09.prod.outlook.com
+ (2603:10b6:208:134::18) by BL0PR0901MB3713.namprd09.prod.outlook.com with
+ HTTPS via MN2PR16CA0005.NAMPRD16.PROD.OUTLOOK.COM; Mon, 28 Oct 2019 22:11:42
+ +0000
+Received: from DM6PR09CA0005.namprd09.prod.outlook.com (2603:10b6:5:160::18)
+ by BL0PR0901MB2306.namprd09.prod.outlook.com (2603:10b6:207:1e::16) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2387.22; Mon, 28 Oct
+ 2019 22:11:42 +0000
+Received: from DM3GCC02FT012.eop-gcc02.prod.protection.outlook.com
+ (2a01:111:f400:7d04::202) by DM6PR09CA0005.outlook.office365.com
+ (2603:10b6:5:160::18) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2387.20 via Frontend
+ Transport; Mon, 28 Oct 2019 22:11:42 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.129.7)
+ smtp.mailfrom=mail.house.gov; ushouse.mail.onmicrosoft.com; dkim=fail (body
+ hash did not verify) header.d=mail.house.gov;ushouse.mail.onmicrosoft.com;
+ dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.129.7 as permitted sender) receiver=protection.outlook.com;
+ client-ip=143.228.129.7; helo=owa.house.gov;
+Received: from owa.house.gov (143.228.129.7) by
+ DM3GCC02FT012.mail.protection.outlook.com (10.97.8.114) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.2387.20 via Frontend Transport; Mon, 28 Oct 2019 22:11:42 +0000
+Received: from HRM104.US.House.gov (143.228.151.72) by EXGW102.US.House.gov
+ (143.228.151.85) with Microsoft SMTP Server (TLS) id 15.0.1473.3; Mon, 28 Oct
+ 2019 18:11:41 -0400
+Received: from HRM121.US.House.gov (143.228.151.75) by HRM104.US.House.gov
+ (143.228.151.72) with Microsoft SMTP Server (TLS) id 15.0.1473.3; Mon, 28 Oct
+ 2019 18:11:41 -0400
+Received: from s-bulk1-p.house.gov (143.228.181.87) by HRM121.US.House.gov
+ (143.228.151.75) with Microsoft SMTP Server id 15.0.1473.3 via Frontend
+ Transport; Mon, 28 Oct 2019 18:11:40 -0400
+Received: from s-bulk1-f.house.gov (s-bulk1-f.house.gov [143.228.181.89])
+	by s-bulk1-p.house.gov  with ESMTP id x9SMBeY5019875
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits) verified FAIL)
+	for <David.todisco@mail.house.gov>; Mon, 28 Oct 2019 18:11:40 -0400
+X-DKIM: OpenDKIM Filter v2.4.3 s-bulk1-p.house.gov x9SMBeY5019875
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mail.house.gov;
+	s=November2012-msg-mhg; t=1572300701;
+	bh=CZylHERYTG4ijBY8ti6chOJ1ygVIcBVTasAp3iH/jeU=;
+	h=MIME-Version:From:To:Date:Subject:Content-Type:Message-ID;
+	b=oT3/QP9W2C/OhWMjfTMZGpp2DVk+s0RztJzNrwKHMG3/tYcTPk9dlyZjtWgt+6xO9
+	 LprIjr1tO0FG9FixuIr4vyxMwAdlWJMEfKfGq9vcU2aKdS9VGosVnkDzzt8m+ADFuX
+	 q640nfNbEJhIxZkvFXqPFGXHFDVfRLNQLpvoIIvQ=
+Received: from firesideadmin02.US.House.gov (firesideadmin02.us.house.gov [143.228.113.54])
+	by s-bulk1-f.house.gov  with ESMTP id x9SMBekO018727
+	for <David.todisco@mail.house.gov>; Mon, 28 Oct 2019 18:11:40 -0400
+X-DKIM: OpenDKIM Filter v2.4.3 s-bulk1-f.house.gov x9SMBekO018727
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mail.house.gov;
+	s=November2012-msg-mhg; t=1572300700;
+	bh=CZylHERYTG4ijBY8ti6chOJ1ygVIcBVTasAp3iH/jeU=;
+	h=MIME-Version:From:To:Date:Subject:Content-Type:Message-ID;
+	b=OBlkRdomW91HEIu8RCmDu49M7zQxGdKz77C8CRWBLGUb1cFcL7zXKWmleGWjrxUgE
+	 ZuoVQAaSciUHuT4nn4Qm8vmumZcTHTaD6Wa5QCvkLzgnrkqWJgpKIAxwduT9ghzcBk
+	 LkHy9WgeK2ev8Aanv7r8eEu9ks706Vf+MiZQPd84=
+Received: from firesideadmin02 ([127.0.0.1]) by firesideadmin02.US.House.gov with Microsoft SMTPSVC(8.5.9600.16384);
+	 Mon, 28 Oct 2019 18:11:40 -0400
+envelope-from: Rep.LoriTrahan@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+X-House-Vendor-Seg: unmanaged
+MIME-Version: 1.0
+From: "Congresswoman Lori Trahan" <Rep.LoriTrahan@mail.house.gov>
+To: David.todisco@mail.house.gov
+Date: 28 Oct 2019 18:11:40 -0400
+Subject: TEST Fighting For Seniors
+Message-ID: <FIRESIDEADMIN02x6lQ00001806@firesideadmin02.US.House.gov>
+X-OriginalArrivalTime: 28 Oct 2019 22:11:40.0206 (UTC) FILETIME=[AC6724E0:01D58DDC]
+Return-Path: Rep.LoriTrahan@mail.house.gov
+X-OrganizationHeadersPreserved: EXGW102.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 28 Oct 2019 22:11:42.1647
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 42717be1-779a-4b66-07ed-08d75bf3d009
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: HRM121.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted:
+ DM3GCC02FT012.eop-gcc02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ DM3GCC02FT012.eop-gcc02.prod.protection.outlook.com
+X-Forefront-Antispam-Report:
+ CIP:143.228.129.7;IPV:NLI;CTRY:US;EFV:NLI;SFV:SKI;SFS:;DIR:INB;SFP:;SCL:-1;SRVR:BL0PR0901MB2306;H:owa.house.gov;FPR:;SPF:None;LANG:en;
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 42717be1-779a-4b66-07ed-08d75bf3d009
+X-MS-TrafficTypeDiagnostic: BL0PR0901MB2306:
+X-MS-Exchange-PUrlCount: 11
+X-MS-Exchange-Organization-SCL: -1
+X-MS-Oob-TLC-OOBClassifiers: OLM:4303;
+X-Microsoft-Antispam: BCL:0;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 28 Oct 2019 22:11:42.0496
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 42717be1-779a-4b66-07ed-08d75bf3d009
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.129.7];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BL0PR0901MB2306
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:00.8651478
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2387.009
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(750127)(520011016)(706158)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	dT7QdU4JTwMWF8dRGd/sPEySyStmnV6AmxcT6zGwBzVRS3p1yBDbr7MQnX2eDnnAm+qUtiYMmV1X7GvhYLwqlzizgoN8Ys9O6Z32OYen41mhqONQJz6HNemSSfjn0qO21uaXg5eokAssbkae28iSU3vUNEwY6KL6ECZFZAqQP22opjc0iwhw4mDQ7SkOrqueNbT6FQcnrItobH0UtcJ2TMeIQ9pVfL19+/zXwArabuE7f6vlxKm/Luo0Ky/Mpt3JAufPpZhrvNU8eRen9ocKoeWoJAoAVwQ1m8WmbX/FY0XvCCgAVX4jmUfbacaw8IMwI1s2AMQV7EJ88VtyuVakuFs1N+1f5nt/j1DZYDqactbElxSoS2MT0XLYdTCaV5u7a+oVU5+7Ue8EhVJGvWl4sHX594Si59nDjqNt899DvzA6xkxwwQtcdAlPuS3f2BoWvkSMIV4KTSCqBmOe+ZIuLgcpZ9OvAn2CfJV7ZhfEq+LSJqn3dUbg9T9PyQSuI3Fs
+Content-type: multipart/alternative;
+	boundary="B_3655196832_1486624222"
+
+> This message is in MIME format. Since your mail reader does not understand
+this format, some or all of this message may not be legible.
+
+--B_3655196832_1486624222
+Content-type: text/plain;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+
+
+ Representative Trahan is joined in Acton, Massachusetts with seniors to di=
+scuss legislation before  congress related to Social Security and Medicare.=20
+
+
+Friend --
+
+I care about our Seniors. One of my top priorities in Congress is advocatin=
+g on behalf of important issues that impact our senior citizens.  =20
+
+=20
+
+Growing up, my dad was a union ironworker my mom worked multiple part-time =
+jobs to help raise my three sisters and me. I know first-hand the importance=
+ of fighting to protect federal programs that put the interests of  working =
+families ahead of tax cuts for the wealthy.
+
+That's why I am fighting to protect Social Security, expand Medicare, defen=
+d protections for people with preexisting conditions, lower prescription dru=
+g prices, and ensure that Americans can retire with both their dignity and t=
+heir pensions intact.=20
+
+In the service of those goals, I=E2=80=99ve been proud to be working on some of t=
+he following pieces of legislation in Washington:=20
+
+The Older Americans Act (OAA)
+Originally passed in 1965, funding for the Older Americans Act (OAA) has no=
+t kept pace with the growth of the American population over the age of 60. I=
+n 2010, OAA funding was $42.95 per senior in today=E2=80=99s dollars. Today, it is=
+ just $27.25 per senior. I  am committed to increasing funding for critical =
+services and care to aging Americans and will be supporting this bill when i=
+t comes up for a vote.=20
+
+Lower Drug Costs Now Act of 2019=20
+Currently, prescription drug companies often charge Americans three, four, =
+or even ten times more for their prescriptions than what they charge for the=
+ same drugs in other countries. The Lower Drug Costs Now Act would level the=
+ playing field for American patients  and taxpayers by giving all Americans =
+access to lower drug prices negotiated by the federal government. =20
+
+=20
+
+The SECURE Act of 2019
+
+The SECURE Act of 2019 is a major piece of bipartisan legislation that will=
+ benefit seniors throughout the country if signed into law. This bill would =
+expand and preserve retirement savings, provide administrative  improvements=
+ to the IRS and related agencies, as well as improve revenue provisions for =
+retirement.
+
+=20
+
+The Social Security 2100 Act
+
+The Social Security 2100 Act will strengthen the Social Security program by=
+ giving beneficiaries a boost in their monthly benefits, while assuring the =
+program is stable and sufficient for current and future generations.=20
+
+=20
+
+Social Security Fairness Act
+
+The Social Security Fairness Act would repeal the Government Pension Offset=
+ and the Windfall Elimination Provision, provision which is short-changing b=
+eneficiaries. We must ensure fairness when it comes to government  employees=
+ like teachers, firefighters, and police officers accessing the benefits the=
+y=E2=80=99ve earned.=20
+
+=20
+
+Disability Integration Act
+
+This legislation prohibits the government from denying community-based serv=
+ices to individuals with disabilities that require long-term service. This b=
+ill requires government entities and insurance providers to provide  communi=
+ty-based services to individuals with such disabilities. These regulations a=
+lso require the government to ensure affordable, accessible, and integrated =
+housing that is not disability-accessible, providing seniors a better qualit=
+y of life.
+
+The Strengthening Health Care and Lower Prescription Drug Costs Act
+
+I was proud to support this legislation, which also passed in the House of =
+Representatives. This bill takes major steps toward making prescription drug=
+s more affordable. It targets generic drug =E2=80=9Cparking,=E2=80=9D ensuring  that gen=
+eric drugs get to the market faster than they have in the past. It also bans=
+ brand-name drug manufacturers from making agreements to delay generic produ=
+cts from entering the market.
+
+
+ARE YOU CONCERNED ABOUT SOCIAL SECURITY?
+
+JOIN US: On November 4th at Haverhill Citizen's Center, 10 Welcome St, Have=
+rhill, MA 01830 at 11am with myself and Congressman John Larson (D-CT) for o=
+ur Social Security Town Hall.
+
+I've traveled across the district to visit senior centers, host town halls,=
+ and meet folks in their own communities. I am fighting to make our governme=
+nt work better by focusing on the issues that matter. Please do not hesitate=
+ to contact me with questions  and comments, or if there's a problem you nee=
+d our help solving. =20
+
+=20
+
+With care,
+
+
+
+Lori Trahan
+
+Member of Congress
+
+=20
+
+Want to learn more about my work for our Seniors?
+
+Sign up here to  get occasional updates from my office.
+
+
+WASHINGTON, DC OFFICE
+1616 Longworth HOB
+Washington, DC 20515
+Phone: (202) 225-3411
+LAWRENCE OFFICE
+15 Union Street
+4th Floor
+Lawrence, MA 01840
+Phone: (978) 258-1138=20
+LOWELL OFFICE
+126 John Street
+Lowell, MA 01852
+Phone: (978) 459-0101
+ =20
+   =20
+ =20
+Unsubscribe | Share on Facebook |  Share on Twitter=20
+
+
+
+Click Here to view this email in your browser=20
+Click Here to be removed from this list 
+
+--B_3655196832_1486624222
+Content-type: text/html;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+<title>Fighting For Seniors</title>
+</head>
+<body>
+<style type=3D"text/css">
+            .contentholder img {max-width:600px;}
+            @media all and (max-width:650px) {
+            .content, .contentholder, .header, .headerholder {width:100% !i=
+mportant;}
+            img, .contentholder img {max-width:100% !important; height: aut=
+o !important;}
+            }
+        </style><br>
+<table width=3D"650" align=3D"center" class=3D"headerholder" style=3D"font-family: =
+arial, helvetica, sans-serif; background-color: #ffffff;" border=3D"0" cellspa=
+cing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" top=
+margin=3D"0">
+<tbody>
+<tr>
+<td align=3D"middle" valign=3D"top"><a href=3D"https://trahan.house.gov"><img alt=
+=3D"" width=3D"650" class=3D"seal" style=3D"border: 1px solid #fff;" src=3D"https://tr=
+ahan.house.gov/images/email/banner-lt.jpg"></a>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"650" align=3D"center" class=3D"contentholder" style=3D"font-family:=
+ arial, helvetica, sans-serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"20" =
+marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+<tbody>
+<tr>
+<td class=3D"contentholder" valign=3D"top" style=3D"background-color: #ffffff; te=
+xt-align: left;">
+<p style=3D"margin: 0in 0in 0.0001pt; text-align: center;"><span style=3D"font-=
+family: Arial;"><br>
+</span></p>
+<div>
+<table cellpadding=3D"5" align=3D"center">
+<tbody>
+<tr>
+<td><img alt=3D"" src=3D"https://trahan.house.gov/UploadedPhotos/MediumResoluti=
+on/20ac1a1a-8336-4b8d-adb2-9fd1289a9a84.png" width=3D"550" height=3D"275" style=3D=
+"vertical-align: middle;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<span style=3D"font-family: Arial;"></span>
+<p style=3D"margin: 0in 0in 0.0001pt; font-family: Calibri, sans-serif; text-=
+align: center;">
+&nbsp;<span style=3D"text-align: left; font-family: arial, helvetica, sans-se=
+rif;"></span><span style=3D"text-align: left; font-family: arial, helvetica, s=
+ans-serif;">Representative Trahan is joined in Acton, Massachusetts with sen=
+iors to discuss legislation before
+ congress related to Social Security and Medicare.&nbsp;</span></p>
+<span style=3D"font-family: Arial;"><br>
+</span>
+<p style=3D"margin: 0in 0in 0.0001pt;"><span>Friend --<br>
+<br>
+</span><span>I care about our Seniors. One of my top priorities in Congress=
+ is advocating on behalf of important issues that impact our senior citizens=
+. &nbsp;&nbsp;</span></p>
+<p style=3D"margin: 0in 0in 0.0001pt;"><span>&nbsp;</span></p>
+<p style=3D"margin: 0in 0in 12pt;"><span>Growing up, my dad was&nbsp;a union =
+ironworker my mom worked multiple part-time jobs to help raise my three sist=
+ers and me.&nbsp;I know first-hand the importance of fighting to protect fed=
+eral programs that put the interests of
+ working families ahead of tax cuts for the wealthy.<br>
+<br>
+That's why I am fighting to protect Social&nbsp;Security, expand Medicare, =
+defend protections for people with preexisting conditions, lower prescriptio=
+n&nbsp;</span><span>drug prices, and ensure that Americans can retire with b=
+oth their dignity and their pensions intact.&nbsp;</span></p>
+<p style=3D"margin: 0in 0in 0.0001pt;"><span>In the service of those goals, I=
+=E2=80=99ve been proud to be working on some of the following pieces of legislatio=
+n in Washington:&nbsp;<br>
+<br>
+<b><span style=3D"background-color: yellow;">The Older Americans Act (OAA)</s=
+pan></b><br>
+</span><span>Originally passed in 1965, funding for the Older Americans Act=
+ (OAA) has not kept pace with the growth of the American population over the=
+ age of 60. In 2010, OAA funding was $42.95 per senior in today=E2=80=99s dollars.=
+ Today, it is just $27.25 per senior.&nbsp;I
+ am committed to increasing funding for&nbsp;critical services and care to =
+aging Americans&nbsp;and&nbsp;will be supporting this bill when it comes up =
+for a vote.&nbsp;</span><span><br>
+<br>
+<b><span style=3D"background-color: yellow;">Lower Drug Costs Now&nbsp;Act of=
+ 2019</span></b>&nbsp;<br>
+Currently, prescription drug companies often charge Americans three, four, =
+or even ten times more for their prescriptions than what they charge for the=
+ same drugs in other countries. The Lower Drug Costs Now Act would level the=
+ playing field for American patients
+ and taxpayers by giving all Americans access to lower drug prices negotiat=
+ed by the federal government. &nbsp;</span></p>
+<p style=3D"margin: 0in 0in 0.0001pt;"><span>&nbsp;</span></p>
+<p style=3D"margin: 0in 0in 0.0001pt;"><b><span style=3D"background-color: yell=
+ow;">The SECURE Act of 2019</span></b></p>
+<p style=3D"margin: 0in 0in 0.0001pt;"><span>The SECURE Act of 2019 is a majo=
+r piece of bipartisan legislation that will benefit seniors throughout the c=
+ountry if signed into law. This bill would expand and preserve retirement sa=
+vings, provide administrative
+ improvements to the IRS and related agencies, as well as improve revenue p=
+rovisions for retirement.</span></p>
+<p style=3D"margin: 0in 0in 0.0001pt;"><span>&nbsp;</span></p>
+<p style=3D"margin: 0in 0in 0.0001pt;"><b><span style=3D"background-color: yell=
+ow;">The Social Security 2100 Act</span></b></p>
+<p style=3D"margin: 0in 0in 0.0001pt;"><span>The Social Security 2100 Act wil=
+l strengthen the Social Security program by giving beneficiaries a boost in =
+their monthly benefits, while assuring the program is stable and sufficient =
+for current and future generations.&nbsp;</span></p>
+<p style=3D"margin: 0in 0in 0.0001pt;"><b><span>&nbsp;</span></b></p>
+<p style=3D"margin: 0in 0in 0.0001pt;"><b><span style=3D"background-color: yell=
+ow;">Social Security Fairness Act</span></b></p>
+<p style=3D"margin: 0in 0in 0.0001pt;"><span>The Social Security Fairness Act=
+ would repeal the Government Pension Offset and the Windfall Elimination Pro=
+vision, provision which is short-changing beneficiaries. We must ensure fair=
+ness when it comes to government
+ employees like teachers, firefighters, and police officers accessing the b=
+enefits they=E2=80=99ve earned.&nbsp;</span></p>
+<p style=3D"margin: 0in 0in 0.0001pt;"><span>&nbsp;</span></p>
+<p style=3D"margin: 0in 0in 0.0001pt;"><b><span style=3D"background-color: yell=
+ow;">Disability Integration Act</span></b></p>
+<p style=3D"margin: 0in 0in 0.0001pt;"><span>This legislation prohibits the g=
+overnment from denying community-based services to individuals with disabili=
+ties that require long-term service. This bill requires government entities =
+and insurance providers to provide
+ community-based services to individuals with such disabilities. These regu=
+lations also require the government to ensure affordable, accessible, and in=
+tegrated housing that is not disability-accessible, providing seniors a bett=
+er quality of life.<br>
+</span></p>
+<p style=3D"margin: 0in 0in 0.0001pt;"><b><i><span style=3D"background-color: y=
+ellow;">The Strengthening Health Care and Lower Prescription Drug Costs Act<=
+/span></i></b></p>
+<p style=3D"margin: 0in 0in 0.0001pt;"><span>I was proud to support this legi=
+slation, which also passed in the House of Representatives. This bill takes =
+major steps toward making prescription drugs more affordable.&nbsp;It&nbsp;t=
+argets generic drug =E2=80=9Cparking,=E2=80=9D ensuring
+ that generic drugs get to the market faster than they have in the past. It=
+ also bans brand-name drug manufacturers from making agreements to delay gen=
+eric products from entering the market.</span></p>
+<p style=3D"margin: 0in 0in 0.0001pt;"><span><br>
+<b>ARE YOU CONCERNED ABOUT SOCIAL SECURITY?</b><br>
+<br>
+<b>JOIN US:&nbsp;On November 4th at Haverhill Citizen's Center, 10 Welcome =
+St, Haverhill, MA 01830 at 11am with myself and Congressman John Larson (D-C=
+T) for our Social Security Town Hall.</b><br>
+<br>
+I've traveled across the district to visit senior centers, host town halls,=
+ and meet folks in their own communities. I am fighting to make our governme=
+nt work better by focusing on the issues that matter. Please do not hesitate=
+ to contact me with questions
+ and comments, or if there's a problem you need our help solving. &nbsp;</s=
+pan></p>
+<p style=3D"margin: 0in 0in 0.0001pt;"><span>&nbsp;</span></p>
+<p style=3D"margin: 0in 0in 12pt;"><span>With care,</span></p>
+<p style=3D"margin: 0in 0in 0.0001pt; font-family: Arial, sans-serif;"><span =
+style=3D"font-family: Arial;"><span><br>
+</span></span></p>
+<div>
+<div>
+<table cellpadding=3D"5">
+<tbody>
+<tr>
+<td><img alt=3D"" src=3D"https://trahan.house.gov/UploadedPhotos/LowResolution/=
+e1d7f160-8c3f-4e97-a152-168b4ebde49f.png"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p style=3D"margin: 0in 0in 0.0001pt; font-family: Arial, sans-serif;"><span =
+style=3D"font-family: Arial;"><span><br>
+<span>Lori Trahan</span></span></span></p>
+<p style=3D"margin: 0in 0in 0.0001pt;"><span style=3D"font-family: Arial;">Memb=
+er of Congress</span></p>
+<p style=3D"margin: 0in 0in 0.0001pt;"><span style=3D"font-family: Arial;">&nbs=
+p;</span></p>
+<p style=3D"margin: 0in 0in 0.0001pt; text-align: center;"><span style=3D"font-=
+family: Arial;">Want to learn more about my work for our Seniors?</span></p>
+<p style=3D"margin: 0in 0in 0.0001pt; text-align: center;"><span style=3D"font-=
+family: Arial;"><span style=3D"color: purple;"><a href=3D"https://trahan.house.g=
+ov/forms/form/?ID=3D15" style=3D"color: purple;">Sign up here</a>&nbsp;</span></=
+span><span style=3D"font-family: Arial;">to
+ get occasional updates from my office.</span></p>
+<br>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"650" class=3D"headerholder" align=3D"center" style=3D"font-family: =
+arial, helvetica, sans-serif; background-color: #f5f5f5;" border=3D"0" cellspa=
+cing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" top=
+margin=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"width: 650px;"><img alt=3D"" src=3D"https://trahan.hous=
+e.gov/images/email/footer19.jpg" width=3D"650">
+</td>
+</tr>
+<tr>
+<td valign=3D"middle" align=3D"center" style=3D"color: #08244a; background-color:=
+ #f5f5f5;">
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"10" style=3D"text-align:cent=
+er;">
+<tbody>
+<tr>
+<td valign=3D"middle" align=3D"center" style=3D"text-align:center;">
+<table cellpadding=3D"0" class=3D"content" align=3D"left" cellspacing=3D"0" width=3D"=
+32.9%" style=3D"font-family: times, 'times new roman', serif; text-align:cente=
+r; color:#08244a; font-size: 14px; margin: 10px 0;mso-table-lspace: 0pt; mso=
+-table-rspace: 0pt;">
+<tbody>
+<tr>
+<td><strong style=3D"font-family: arial, helvetica, sans-serif;">WASHINGTON, =
+DC OFFICE</strong><br>
+1616 Longworth HOB<br>
+Washington, DC 20515<br>
+Phone: (202) 225-3411<br>
+</td>
+</tr>
+</tbody>
+</table>
+<table cellpadding=3D"0" class=3D"content" align=3D"left" cellspacing=3D"0" width=3D"=
+32.9%" style=3D"font-family: times, 'times new roman', serif; text-align:cente=
+r; color:#08244a; font-size: 14px; margin: 10px 0;mso-table-lspace: 0pt; mso=
+-table-rspace: 0pt;">
+<tbody>
+<tr>
+<td><strong style=3D"font-family: arial, helvetica, sans-serif;">LAWRENCE OFF=
+ICE</strong><br>
+15 Union Street<br>
+4th Floor<br>
+Lawrence, MA 01840<br>
+Phone: (978) 258-1138 <br>
+</td>
+</tr>
+</tbody>
+</table>
+<table cellpadding=3D"0" class=3D"content" align=3D"left" cellspacing=3D"0" width=3D"=
+32.9%" style=3D"font-family: times, 'times new roman', serif; text-align:cente=
+r; color:#08244a; font-size: 14px; margin: 10px 0;mso-table-lspace: 0pt; mso=
+-table-rspace: 0pt;">
+<tbody>
+<tr>
+<td><strong style=3D"font-family: arial, helvetica, sans-serif;">LOWELL OFFIC=
+E</strong><br>
+126 John Street<br>
+Lowell, MA 01852<br>
+Phone: (978) 459-0101<br>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td valign=3D"middle" align=3D"center" style=3D"height:30px; background-color: #f=
+5f5f5;">
+&nbsp; </td>
+</tr>
+<tr>
+<td valign=3D"middle" align=3D"center" style=3D"color: #08244a; background-color:=
+ #f5f5f5;">
+<a href=3D"https://www.facebook.com/reploritrahan/"><img alt=3D"" width=3D"32" sr=
+c=3D"https://trahan.house.gov/images/email/facebook.png" style=3D"border-width: =
+0px; border-style: solid;"></a> &nbsp;<a href=3D"https://twitter.com/reploritr=
+ahan"><img alt=3D"" width=3D"32" src=3D"https://trahan.house.gov/images/email/twit=
+ter.png" style=3D"border-width: 0px; border-style: solid;"></a>
+ &nbsp;<a href=3D"https://www.instagram.com/reploritrahan/"><img alt=3D"" width=
+=3D"32" src=3D"https://trahan.house.gov/images/email/instagram.png" style=3D"borde=
+r-width: 0px; border-style: solid;"></a><!--&nbsp;<a href=3D"https://www.youtu=
+be.com/channel/XXXXXX"><img alt=3D"" width=3D"32" src=3D"https://trahan.house.gov/=
+images/email/youtube.png" style=3D"border-width: 0px; border-style: solid;" />=
+</a>-->
+</td>
+</tr>
+<tr>
+<td valign=3D"middle" align=3D"center" style=3D"height:30px; background-color: #f=
+5f5f5;">
+&nbsp; </td>
+</tr>
+<tr>
+<td valign=3D"middle" style=3D"background-color: #f5f5f5;">
+<table cellpadding=3D"0" cellspacing=3D"20" align=3D"center" width=3D"90%">
+<tbody>
+<tr>
+<td valign=3D"middle" align=3D"center" style=3D"color: #08244a; font-size: 15px;"=
+><a href=3D"https://trahan.house.gov/forms/emailsignup/?delete=3Dtrue" style=3D"co=
+lor: #08244a; text-decoration:none;"><span style=3D"font-family: arial;">Unsub=
+scribe</span></a>&nbsp;|&nbsp;
+<a href=3D"http://www.facebook.com/sharer.php?u=3Dhttps://trahan.house.gov/news=
+/email/show.aspx?ID=3DBUGLB2AY2HIPK&amp;t=3DFighting&#43;For&#43;Seniors" style=3D=
+"color: #08244a; text-decoration:none;">
+<span style=3D"font-family: arial;">Share on Facebook</span></a>&nbsp;|&nbsp;=
+ <a href=3D"https://trahan.house.gov/Components/Redirect/twitter.aspx?url=3Dhttp=
+s://trahan.house.gov/news/email/show.aspx?ID=3DBUGLB2AY2HIPK&amp;name=3DFighting=
+&#43;For&#43;Seniors" style=3D"color: #08244a; text-decoration:none;">
+<span style=3D"font-family: arial;">Share on Twitter</span></a> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<br>
+<br>
+<a href=3D"https://trahan.house.gov/news/email/show.aspx?ID=3DBUGLB2AY2HIPK">Cl=
+ick Here</a> to view this email in your browser
+<br>
+<a href=3D"https://trahan.house.gov/Forms/EmailSignup/?Delete=3Dtrue&amp;Messag=
+eID=3D278&amp;Email=3DDavid.todisco@mail.house.gov">Click Here</a> to be removed=
+ from this list
+</body>
+</html>
+
+
+--B_3655196832_1486624222--
+

@@ -1,0 +1,542 @@
+Received: from MN2PR09MB5561.namprd09.prod.outlook.com (2603:10b6:804:2::46)
+ by SN6PR09MB3054.namprd09.prod.outlook.com with HTTPS via
+ SN2PR01CA0036.PROD.EXCHANGELABS.COM; Thu, 12 Mar 2020 23:36:16 +0000
+Received: from MWHPR09CA0031.namprd09.prod.outlook.com (2603:10b6:300:6d::17)
+ by MN2PR09MB5561.namprd09.prod.outlook.com (2603:10b6:208:216::13) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2793.16; Thu, 12 Mar
+ 2020 23:36:15 +0000
+Received: from DM3GCC02FT011.eop-gcc02.prod.protection.outlook.com
+ (2a01:111:f400:7d04::209) by MWHPR09CA0031.outlook.office365.com
+ (2603:10b6:300:6d::17) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2814.14 via Frontend
+ Transport; Thu, 12 Mar 2020 23:36:15 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.129.7)
+ smtp.mailfrom=mail.house.gov; ushouse.mail.onmicrosoft.com; dkim=fail (body
+ hash did not verify) header.d=mail.house.gov;ushouse.mail.onmicrosoft.com;
+ dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.129.7 as permitted sender) receiver=protection.outlook.com;
+ client-ip=143.228.129.7; helo=owa.house.gov;
+Received: from owa.house.gov (143.228.129.7) by
+ DM3GCC02FT011.mail.protection.outlook.com (10.97.8.210) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.2814.13 via Frontend Transport; Thu, 12 Mar 2020 23:36:15 +0000
+Received: from OWA1301.US.House.gov (143.228.151.84) by EXGW102.US.House.gov
+ (143.228.151.85) with Microsoft SMTP Server (TLS) id 15.0.1497.2; Thu, 12 Mar
+ 2020 19:36:07 -0400
+Received: from HRM121.US.House.gov (143.228.151.75) by OWA1301.US.House.gov
+ (143.228.151.84) with Microsoft SMTP Server (TLS) id 15.0.1497.2; Thu, 12 Mar
+ 2020 19:36:07 -0400
+Received: from s-bulk1-p.house.gov (143.228.181.87) by HRM121.US.House.gov
+ (143.228.151.75) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
+ Transport; Thu, 12 Mar 2020 19:36:06 -0400
+Received: from FIRESIDESERV04 (firesideserv04.us.house.gov [143.228.113.104])
+	by s-bulk1-p.house.gov  with ESMTP id 02CNa64p022065
+	for <Anna.Vetter@mail.house.gov>; Thu, 12 Mar 2020 19:36:06 -0400
+X-DKIM: OpenDKIM Filter v2.4.3 s-bulk1-p.house.gov 02CNa64p022065
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mail.house.gov;
+	s=November2012-msg-mhg; t=1584056167;
+	bh=m2l5cKVokeLPWD8qqc2Zl9cAJh0pkplIOp1jXzyUY/4=;
+	h=Message-ID:List-Unsubscribe:MIME-Version:From:To:Date:Subject:
+	 Content-Type;
+	b=RDJAwbOOk7kTWmFWKGGOZGeeQX6tyXnT/Ef9gPCoTvSRFwyRgrT2th4T3MNYzpnj7
+	 YtyzNRNf/MK8vpDxKn4cnP9FwVKW55Dy6ueZlQW5ASHMyobfhdwR+S79W77RH7YX5a
+	 hPFsAMVQIvEPZWK1wgO/Fqppk/3iMjeqIZ3DPP38=
+envelope-from: RepVanTaylor@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+Message-ID: <N01ZdWFp7JF+K5BiN2zeIVxdwGEjYfM6cYT5HLOdHvSYvZ0DCpKS055AJ7svKcIwqJAb23LXwaiMctzNK0a2C1BlBUF3inUKPGmhWF/2ErNPvB4yb19F1HiSRMG9J9O4jB6PznoXQg2ojHBYKAWFfLSIxqzfBXh2rZgbSp/V/Ys=@fireside21.com>
+X-House-Vendor-Seg: unmanaged
+List-Unsubscribe: <https://vantaylor.house.gov/forms/emailsignup/?Delete=true&MessageID=2042&Email=Anna.Vetter@mail.house.gov&Submit=true>
+Precedence: bulk
+MIME-Version: 1.0
+From: "Congressman Van Taylor" <RepVanTaylor@mail.house.gov>
+To: Anna.Vetter@mail.house.gov
+Date: 12 Mar 2020 19:36:06 -0400
+Subject: Coronavirus Update
+Return-Path: RepVanTaylor@mail.house.gov
+X-OrganizationHeadersPreserved: EXGW102.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 12 Mar 2020 23:36:15.1836
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 12a60778-ee6a-4946-46a9-08d7c6de27f8
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: HRM121.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted:
+ DM3GCC02FT011.eop-gcc02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ DM3GCC02FT011.eop-gcc02.prod.protection.outlook.com
+X-Forefront-Antispam-Report:
+ CIP:143.228.129.7;IPV:;CTRY:US;EFV:NLI;SFV:SKI;SFS:;DIR:INB;SFP:;SCL:-1;SRVR:MN2PR09MB5561;H:owa.house.gov;FPR:;SPF:None;LANG:en;
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 12a60778-ee6a-4946-46a9-08d7c6de27f8
+X-MS-TrafficTypeDiagnostic: MN2PR09MB5561:
+X-MS-Exchange-Organization-SCL: -1
+X-MS-Oob-TLC-OOBClassifiers: OLM:10000;
+X-Microsoft-Antispam: BCL:0;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 12 Mar 2020 23:36:15.0766
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 12a60778-ee6a-4946-46a9-08d7c6de27f8
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.129.7];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: MN2PR09MB5561
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.3324621
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2793.013
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(750127)(520011016)(706158)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	C8kuVLi8Hrh5P/oKeeLWDuZTnq/TwVk+N66b1iQMyQnb0GQBUzFXnaACetVX16O7wlspd2X3h24mezIf+EVUaAdZmyGTG8uoxqBW0E0OPA6G5NpCb8xmYVRZDnbtmuuzpAB0fxh1Vg/HA/QaK1iXtjR4dRCPUU3/FuEgdf040OJ6wqeZ6loWNtF55F5wVJCSyo5HT+uvpSo1bk86xAvm8rPxDis1KlW2W5ODIJWU3IAF6SIuV9NSFWs+0Vv+8EWnt/InMHDNwC+/cFh7zabJ6tb4uS75OTylU0FAE5PFy0HZiud22dv1bzvJY3QoJbdWLoRGdbxxSQG/K4OuoSGGJKY5p3TFe0C9ElOgtWBpCuKp7CnmaR79b2GaQLK5Wa/umvqZBuYi90ifXEy+gISxr4Ho9YNxgz71nsudJfawGfeTpL8UQ4Je2SXESH+yWDpbC7uhw7W14RsuWTyfNVnNpxhB61cNCiSJObkQ3XYh6LlPRpq8pJZyg/IcQBgUmBhW
+Content-type: multipart/alternative;
+	boundary="B_3666938457_689279165"
+
+> This message is in MIME format. Since your mail reader does not understand
+this format, some or all of this message may not be legible.
+
+--B_3666938457_689279165
+Content-type: text/plain;
+	charset="UTF-8"
+Content-transfer-encoding: 7bit
+
+Congressman Van Taylor 
+Home  | About  |  Services  |  Issues  |  Newsroom  |  Contact 
+Thursday, March 12, 2020 
+Coronavirus Update
+Travel, Health, and Employment Guidance 
+As your Representative, I am fully committed to combatting coronavirus (COVID-19) and am actively engaged with local, state, and federal health officials.
+
+Last night, President Trump addressed the nation and outlined additional plans to combat coronavirus. As this is a rapidly evolving situation, I wanted to reach out with additional resources for those impacted by this virus. You can also find frequent updates on my website. 
+Below is additional information about resources available to those negatively impacted by the coronavirus. Should you  have any questions or concerns, please contact my office.
+
+Travel Assistance
+On Wednesday, March 11, 2020, President Trump announced new travel restrictions for non-U.S. citizens who have visited the 26-nation Schengen Area within the last 14 days. These new travel restrictions will go into effect at midnight tomorrow, Friday, March 13, 2020. While American citizens are exempt from the travel restrictions, there may be some difficulty in finding commercial airline availability.
+
+Travelers are urged to enroll in the Smart Traveler Enrollment Program to receive alerts and make it easier to locate you in an emergency. In an emergency, please contact the nearest U.S. Embassy or Consulate or call the following numbers: 1(888) 407-4747 (toll-free in the United States and  Canada) or 1 (202) 501-4444 from other countries or jurisdictions.
+
+Those currently traveling abroad or those with planned trips should review CDC Travel Health Notices and international travel guidance issued by the Department of State. All Department of State updates on coronavirus can be found online.
+
+Should you need assistance navigating international travel policy, or have questions about domestic travel, please contact my office at (972) 202-4150.
+
+Assistance for Workers
+Following the President's address, the U.S. Department of Labor announced new guidance outlining flexibilities that states have in administering their unemployment insurance (UI) programs to assist Americans affected by the COVID-19 outbreak. More information  on guidance from the Department of Labor can be found here.
+
+Support for Businesses
+The White House has instructed the Small Business Administration (SBA) to exercise available authority to provide loans to businesses affected by the coronavirus. These loans will help overcome disruptions caused by the coronavirus. More information about SBA  programs, such as the Economic Injury Disaster Loan Program, can be found here.
+
+Small businesses are encouraged to do their part to keep their employees, customers, and themselves healthy. Visit the CDC's Guide for Businesses and Employers to learn more about planning, preparing, and responding to coronavirus.
+
+Washington Tours
+To aid ongoing efforts to combat coronavirus and in consultation with the Office of the Attending Physician, the Sergeant of Arms has closed the United States Capitol to all tours until April 1, 2020. As a result, our office is unable to provide previously  scheduled tours at this time. Should you have any additional questions, please contact my office via email or phone at (202) 225-4201.
+
+Prevention and Signs
+While reports indicate treatments to treat COVID-19, the illness caused by the virus, should be available soon, there is currently no vaccine for coronavirus and the best way to prevent illness is to avoid being exposed to the virus. While  the CDC reports that the immediate risk to average, healthy Americans remains low, it's important for communities and families to take the necessary steps, like washing your hands and staying home if you're sick, to avoid spreading the virus. More information can be found at CDC.gov. If you think you may have coronavirus, contact your healthcare provider for guidance.
+
+Please subscribe to continue receiving official updates on coronavirus from my office.
+
+It is a privilege to serve you in the United States House of Representatives. I will continue to closely monitor this situation and update you on any changes as we work together to keep Americans safe and healthy.
+
+Semper Fidelis,
+
+Van Taylor
+Member of Congress 
+WASHINGTON, DC OFFICE
+1404 Longworth HOB
+Washington, DC 20515
+Phone: (202) 225-4201 COLLIN COUNTY OFFICE
+5600 Tennyson Pkwy, #275
+Plano, TX 75024
+Phone: (972) 202-4150 
+NOTE: DO NOT respond to this email as this inbox is unattended. To contact my office please click here. 
+Unsubscribe | View Online 
+Click Here to view this email in your browser 
+Click Here to be removed from this list 
+
+--B_3666938457_689279165
+Content-type: text/html;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+<title>Coronavirus Update</title>
+</head>
+<body>
+<title>Congressman Van Taylor</title>
+<style type=3D"text/css">
+            img {max-width:620px;}
+            @media all and (max-width:620px) {
+            .content, .contentholder, .header, .headerholder {width:100% !i=
+mportant;}
+            img {max-width:100% !important; height:auto !important;}
+            }
+        </style>
+<table width=3D"620" align=3D"center" class=3D"contentholder" style=3D"font-family:=
+ helvetica, arial, sans-serif; color: #292929; background-color:#ffffff; bor=
+der:1px solid #ccc;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" topmargin=3D"0=
+" leftmargin=3D"0" marginwidth=3D"0" marginheight=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"text-align:center; width: 620px;">
+<table width=3D"100%" align=3D"center" class=3D"content" style=3D"font-family: aria=
+l, helvetica, sans-serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"20">
+<tbody>
+<tr>
+<td valign=3D"middle" align=3D"center" style=3D"padding: 20px 55px 20px 0;"><a hr=
+ef=3D"https://vantaylor.house.gov/components/redirect/r.aspx?ID=3D2300-414834"><=
+img alt=3D"" width=3D"400" style=3D"width: 400px;" class=3D"header" src=3D"https://van=
+taylorforms.house.gov/images/email/van-taylor.jpg"></a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"text-align:center; width: 620px;">
+<table width=3D"100%" align=3D"center" class=3D"content" style=3D"font-family: aria=
+l, helvetica, sans-serif; background: #08244a; padding: 5px 0;" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"5">
+<tbody>
+<tr>
+<td align=3D"center" style=3D"font-size: 14px; color: #ffffff;"><a href=3D"https:=
+//vantaylor.house.gov/components/redirect/r.aspx?ID=3D2301-414834" style=3D"text=
+-decoration:none; font-weight:bold; color: #ffffff;">Home</a> &nbsp;|&nbsp;
+<a href=3D"https://vantaylor.house.gov/components/redirect/r.aspx?ID=3D2302-414=
+834" style=3D"text-decoration:none; font-weight:bold; color: #ffffff;">
+About</a> &nbsp;|&nbsp; <a href=3D"https://vantaylor.house.gov/components/red=
+irect/r.aspx?ID=3D2303-414834" style=3D"text-decoration:none; font-weight:bold; =
+color: #ffffff;">
+Services</a> &nbsp;|&nbsp; <a href=3D"https://vantaylor.house.gov/components/=
+redirect/r.aspx?ID=3D2304-414834" style=3D"text-decoration:none; font-weight:bol=
+d; color: #ffffff;">
+Issues</a> &nbsp;|&nbsp; <a href=3D"https://vantaylor.house.gov/components/re=
+direct/r.aspx?ID=3D2305-414834" style=3D"text-decoration:none; font-weight:bold;=
+ color: #ffffff;">
+Newsroom</a> &nbsp;|&nbsp; <a href=3D"https://vantaylor.house.gov/components/=
+redirect/r.aspx?ID=3D2306-414834" style=3D"text-decoration:none; font-weight:bol=
+d; color: #ffffff;">
+Contact</a> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td class=3D"contentholder" valign=3D"top" style=3D"background-color: #ffffff;">
+<table align=3D"center" class=3D"content" style=3D"font-family: helvetica, arial,=
+ sans-serif; color: #000000; font-size: 15px; width: 615px; height: 708.156p=
+x;" border=3D"0" cellspacing=3D"0" cellpadding=3D"20" topmargin=3D"0" leftmargin=3D"0"=
+ marginwidth=3D"0" marginheight=3D"0">
+<tbody>
+<tr>
+<td class=3D"content" valign=3D"top" style=3D"font-family: helvetica, arial, sans=
+-serif; color: #292929; font-size: 15px; text-align: left;">
+<table width=3D"100%" align=3D"center" class=3D"content" style=3D"font-family: aria=
+l, helvetica, sans-serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" style=3D"font-size: 14px; font-weight: normal; color: #000=
+000; text-align: left;">
+<span style=3D"font-family: 'Times New Roman';">Thursday, March 12, 2020</spa=
+n></td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"text-align:center; color: #08244a; font-size: 24p=
+x; font-weight: bold;">
+<span style=3D"font-size: 14px; font-family: 'Times New Roman';"><span style=3D=
+"font-size: 22px;">Coronavirus Update</span><br>
+<span style=3D"font-weight: normal; font-style: italic; font-size: 16px; colo=
+r: #000000;">Travel, Health, and Employment Guidance</span></span></td>
+</tr>
+</tbody>
+</table>
+<span style=3D"font-size: 13px;"><span style=3D"font-family: 'Times New Roman';=
+"><br>
+As your Representative, I am fully committed to combatting coronavirus (COV=
+ID-19) and am actively engaged with local, state, and federal health officia=
+ls.<br>
+<br>
+Last night, President Trump addressed the nation and outlined additional pl=
+ans to combat coronavirus. As this is a rapidly evolving situation, I wanted=
+ to reach out with additional resources for those impacted by this virus.
+<strong>You can also find frequent updates on my <a href=3D"https://vantaylor=
+.house.gov/components/redirect/r.aspx?ID=3D2307-414834" target=3D"_blank">
+website</a>.&nbsp;</strong><br>
+</span></span>
+<table style=3D"width: 68.3594px; height: 25px;" align=3D"center">
+<tbody>
+<tr>
+<td>
+<div>
+<table cellpadding=3D"5">
+<tbody>
+<tr>
+<td>
+<div>
+<table cellpadding=3D"5">
+<tbody>
+<tr>
+<td><span style=3D"font-size: 14px;"><a href=3D"https://vantaylor.house.gov/com=
+ponents/redirect/r.aspx?ID=3D2308-414834" target=3D"_blank"><img alt=3D"" src=3D"htt=
+ps://vantaylor.house.gov/UploadedPhotos/HighResolution/c17f487c-42f3-4850-84=
+dd-b2533c8d8422.jpg" width=3D"550" height=3D"172" style=3D"vertical-align: middle;=
+"></a></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<span style=3D"font-family: 'Times New Roman';"><span style=3D"font-size: 13px;=
+"><span style=3D"font-size: 14px;"><span style=3D"font-size: 13px;">Below is add=
+itional information about resources available to those negatively impacted b=
+y the coronavirus. Should you
+ have any questions or concerns, please <a href=3D"https://vantaylor.house.go=
+v/components/redirect/r.aspx?ID=3D2309-414834" target=3D"_blank">
+<strong>contact</strong></a> my office.</span><br>
+<br>
+<strong><span style=3D"color: #17365d;"><span style=3D"font-size: 16px;">Travel=
+ Assistance<br>
+</span></span></strong><span style=3D"font-size: 13px;">On Wednesday, March 1=
+1, 2020, President Trump
+<a href=3D"https://vantaylor.house.gov/components/redirect/r.aspx?ID=3D2310-414=
+834" target=3D"_blank">
+announced</a> new travel restrictions for non-U.S. citizens who have visite=
+d the 26-nation Schengen Area within the last 14 days.
+<strong>These new travel restrictions will go into effect at midnight tomor=
+row, Friday, March 13, 2020.
+</strong>While <span style=3D"background-color: yellow;">American citizens ar=
+e exempt from the travel restrictions</span>, there may be some difficulty i=
+n finding commercial airline availability.<br>
+<br>
+Travelers are urged to enroll in the <a href=3D"https://vantaylor.house.gov/c=
+omponents/redirect/r.aspx?ID=3D2311-414834" target=3D"_blank">
+Smart Traveler Enrollment Program</a>&nbsp;to receive alerts and make it ea=
+sier to locate you in an emergency. In an emergency, please contact the near=
+est U.S. Embassy or Consulate or call the following numbers: 1(888) 407-4747=
+ (toll-free in the United States and
+ Canada) or 1 (202) 501-4444 from other countries or jurisdictions.<br>
+<br>
+Those currently traveling abroad or those with planned trips should review =
+<a href=3D"https://vantaylor.house.gov/components/redirect/r.aspx?ID=3D2312-4148=
+34" target=3D"_blank">
+CDC Travel Health Notices</a> and <a href=3D"https://vantaylor.house.gov/comp=
+onents/redirect/r.aspx?ID=3D2313-414834" target=3D"_blank">
+international travel guidance</a> issued by the Department of State. All De=
+partment of State updates on coronavirus can be found
+<a href=3D"https://vantaylor.house.gov/components/redirect/r.aspx?ID=3D2314-414=
+834" target=3D"_blank">
+online</a>.<br>
+<br>
+Should you need assistance navigating international travel policy, or have =
+questions about domestic travel, please contact my office at (972) 202-4150.=
+</span><br>
+<br>
+<strong><span style=3D"font-size: 16px; color: #17365d;">Assistance for Worke=
+rs</span></strong></span><br>
+Following the President's address, the U.S. Department of Labor announced n=
+ew guidance outlining flexibilities that states have in administering their =
+unemployment insurance (UI) programs to assist Americans affected by the COV=
+ID-19 outbreak. More information
+ on guidance from the Department of Labor can be found <a href=3D"https://van=
+taylor.house.gov/components/redirect/r.aspx?ID=3D2315-414834" target=3D"_blank">
+here</a>.<strong><br>
+</strong><br>
+<strong><span style=3D"font-size: 16px; color: #17365d;">Support for Business=
+es</span></strong><br>
+The White House has instructed the Small Business Administration (SBA) to e=
+xercise available authority to provide loans to businesses affected by the c=
+oronavirus. These loans will help overcome disruptions caused by the coronav=
+irus. More information about SBA
+ programs, such as the Economic Injury Disaster Loan Program, can be found =
+<a href=3D"https://vantaylor.house.gov/components/redirect/r.aspx?ID=3D2316-4148=
+34" target=3D"_blank">
+here</a>.<br>
+<br>
+Small businesses are encouraged to do their part to keep their employees, c=
+ustomers, and themselves healthy. Visit the CDC's
+<a href=3D"https://vantaylor.house.gov/components/redirect/r.aspx?ID=3D2317-414=
+834" target=3D"_blank">
+Guide for Businesses and Employers</a> to learn more about planning, prepar=
+ing, and responding to coronavirus.<br>
+<br>
+<strong><span style=3D"font-size: 16px; color: #17365d;">Washington Tours</sp=
+an></strong><br>
+To aid ongoing efforts to combat coronavirus and in consultation with the O=
+ffice of the Attending Physician, the Sergeant of Arms has closed the United=
+ States Capitol to all tours until April 1, 2020. As a result, our office is=
+ unable to provide previously
+ scheduled tours at this time. Should you have any additional questions, pl=
+ease contact my office via
+<a href=3D"https://vantaylor.house.gov/components/redirect/r.aspx?ID=3D2318-414=
+834">email</a> or phone at (202) 225-4201.<br>
+<br>
+<strong><span style=3D"font-size: 16px; color: #17365d;">Prevention and Signs=
+</span></strong><br>
+While reports indicate treatments to treat COVID-19, the illness caused by =
+the virus, should be available soon, there is currently no vaccine for coron=
+avirus and the best way to prevent illness&nbsp;is to avoid being exposed to=
+ the virus.&nbsp;</span></span><span style=3D"font-size: 13px;"><span style=3D"f=
+ont-family: 'Times New Roman';">While
+ the CDC reports that the immediate risk to average, healthy Americans rema=
+ins low, it's important for communities and families to take the necessary s=
+teps, like washing your hands and staying home if you're sick, to
+<a href=3D"https://vantaylor.house.gov/components/redirect/r.aspx?ID=3D2319-414=
+834" target=3D"_blank">
+avoid spreading the virus</a>. More information can be found at&nbsp;<a hre=
+f=3D"https://vantaylor.house.gov/components/redirect/r.aspx?ID=3D2320-414834" ta=
+rget=3D"_blank">CDC.gov</a>. If you think you may have coronavirus, contact yo=
+ur healthcare provider for guidance.<br>
+<br>
+<strong><span style=3D"color: #17365d;">Please <a href=3D"https://vantaylor.hou=
+se.gov/components/redirect/r.aspx?ID=3D2321-414834" target=3D"_blank">
+subscribe</a>&nbsp;t<strong>o continue receiving&nbsp;<a href=3D"https://vant=
+aylor.house.gov/components/redirect/r.aspx?ID=3D2322-414834" target=3D"_blank">o=
+fficial updates</a>&nbsp;on coronavirus from my office.</strong></span><br>
+</strong></span></span><span style=3D"font-size: 13px;"><span style=3D"font-fam=
+ily: 'Times New Roman';"><br>
+It is a privilege to serve you in the United States House of Representative=
+s.&nbsp;I will continue to closely monitor this situation and update you on =
+any changes as we work together to keep Americans safe and healthy.<br>
+<br>
+</span></span>
+<table align=3D"center" style=3D"font-family: helvetica, arial, sans-serif; col=
+or: #000000; font-size: 15px; width: 216px; height: 125px;" width=3D"100%" cel=
+lspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td style=3D"text-align: left;">
+<p style=3D"margin-left: 160px;"><span style=3D"font-family: 'Times New Roman';=
+ font-size: 13px;"><span style=3D"font-family: 'Times New Roman';">Semper Fide=
+lis,<br>
+<img alt=3D"" src=3D"https://vantaylor.house.gov/images/email/vt-sig19.jpg" wid=
+th=3D"180" style=3D"width:180px;"><br>
+Van Taylor<br>
+Member of Congress</span> </span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td class=3D"contentholder" valign=3D"top" style=3D"background:#ffffff;">
+<table width=3D"100%" align=3D"center" class=3D"content" style=3D"font-family: helv=
+etica, arial, sans-serif; color: #000000; font-size: 12px;" border=3D"0" cells=
+pacing=3D"0" cellpadding=3D"0" topmargin=3D"0" leftmargin=3D"0" marginwidth=3D"0" marg=
+inheight=3D"0">
+<tbody>
+<tr>
+<td colspan=3D"2" style=3D"font-family: helvetica, arial, sans-serif; color: #0=
+00000; font-size: 12px; text-align:center;">
+<span style=3D"font-size: 14px;"><span style=3D"font-family: 'Times New Roman';=
+"><a href=3D"https://vantaylor.house.gov/components/redirect/r.aspx?ID=3D2323-41=
+4834"><img alt=3D"" width=3D"40" src=3D"https://vantaylorforms.house.gov/images/em=
+ail/facebook.png"></a>
+<a href=3D"https://vantaylor.house.gov/components/redirect/r.aspx?ID=3D2324-414=
+834"><img alt=3D"" width=3D"40" src=3D"https://vantaylorforms.house.gov/images/ema=
+il/twitter.png"></a>
+<a href=3D"https://vantaylor.house.gov/components/redirect/r.aspx?ID=3D2325-414=
+834"><img alt=3D"" width=3D"40" src=3D"https://vantaylorforms.house.gov/images/ema=
+il/instagram.png"></a>
+<a href=3D"https://vantaylor.house.gov/components/redirect/r.aspx?ID=3D2326-414=
+834"><img alt=3D"" width=3D"40" src=3D"https://vantaylorforms.house.gov/images/ema=
+il/youtube.png"></a>
+</span></span></td>
+</tr>
+<tr>
+<td style=3D"height: 10px;" colspan=3D"2"></td>
+</tr>
+<tr>
+<td style=3D"font-family: helvetica, arial, sans-serif; color: #000000; font-=
+size: 12px; text-align: center; width: 50%;">
+<span style=3D"font-size: 14px;"><span style=3D"font-family: 'Times New Roman';=
+"><b>WASHINGTON, DC OFFICE</b><br>
+1404 Longworth HOB<br>
+Washington, DC 20515<br>
+Phone: (202) 225-4201 </span></span></td>
+<td style=3D"font-family: helvetica, arial, sans-serif; color: #000000; font-=
+size: 12px; text-align: center; width: 50%;">
+<span style=3D"font-size: 14px;"><span style=3D"font-family: 'Times New Roman';=
+"><b>COLLIN COUNTY OFFICE</b><br>
+5600 Tennyson Pkwy, #275<br>
+Plano, TX 75024<br>
+Phone: (972) 202-4150</span></span></td>
+</tr>
+<tr>
+<td style=3D"height: 10px;" colspan=3D"2"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"text-align:center; width: 620px;">
+<table width=3D"100%" align=3D"center" class=3D"content" style=3D"font-family: aria=
+l, helvetica, sans-serif; background: #08244a; padding: 5px 0;" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" style=3D"font-size: 12px; color: #ffffff;"><span style=3D"fo=
+nt-size: 14px;"><span style=3D"font-family: 'Times New Roman';">NOTE: DO NOT r=
+espond to this email as this inbox is unattended. To contact my office pleas=
+e
+<a href=3D"https://vantaylor.house.gov/components/redirect/r.aspx?ID=3D2327-414=
+834" style=3D"color:#ffffff;">
+click here</a>. </span></span></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" align=3D"center" class=3D"content" style=3D"font-family: aria=
+l, helvetica, sans-serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"20">
+<tbody>
+<tr>
+<td colspan=3D"3" style=3D"font-family: helvetica, arial, sans-serif; color: #0=
+00000; font-size: 11px; text-transform:uppercase; text-align:center;">
+<span style=3D"font-size: 14px;"><span style=3D"font-family: 'Times New Roman';=
+"><a href=3D"https://vantaylor.house.gov/components/redirect/r.aspx?ID=3D2328-41=
+4834" style=3D"text-decoration:none;">Unsubscribe</a> |
+<a href=3D"https://vantaylor.house.gov/news/email/show.aspx?ID=3DDRE66SKM75DPJH=
+6MBBUORWOL7A" style=3D"text-decoration:none;">
+View Online</a></span></span></td>
+</tr>
+</tbody>
+</table>
+<img src=3D"https://vantaylor.house.gov/images/spacerx2042-414834.open" width=
+=3D"20" height=3D"1"><br>
+<a href=3D"https://vantaylor.house.gov/news/email/show.aspx?ID=3DDRE66SKM75DPJH=
+6MBBUORWOL7A">Click Here</a> to view this email in your browser
+<br>
+<a href=3D"https://vantaylor.house.gov/Forms/EmailSignup/?Delete=3Dtrue&amp;Mes=
+sageID=3D2042&amp;Email=3DAnna.Vetter@mail.house.gov">Click Here</a> to be remov=
+ed from this list
+</body>
+</html>
+
+
+--B_3666938457_689279165--
+

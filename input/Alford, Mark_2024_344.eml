@@ -1,0 +1,694 @@
+Received: from DS0PR09MB11749.namprd09.prod.outlook.com (2603:10b6:8:16b::17)
+ by PH8PR09MB10224.namprd09.prod.outlook.com with HTTPS; Mon, 13 May 2024
+ 16:30:24 +0000
+Received: from CYXPR09CA0010.namprd09.prod.outlook.com (2603:10b6:930:d4::15)
+ by DS0PR09MB11749.namprd09.prod.outlook.com (2603:10b6:8:16b::17) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7544.55; Mon, 13 May
+ 2024 16:30:23 +0000
+Received: from BL02EPF0001B417.namprd09.prod.outlook.com
+ (2603:10b6:930:d4:cafe::6c) by CYXPR09CA0010.outlook.office365.com
+ (2603:10b6:930:d4::15) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7544.55 via Frontend
+ Transport; Mon, 13 May 2024 16:30:23 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.151.104)
+ smtp.mailfrom=mail.house.gov; dkim=fail (body hash did not verify)
+ header.d=mail.house.gov;dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.151.104 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.151.104;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.151.104) by
+ BL02EPF0001B417.mail.protection.outlook.com (10.167.242.197) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7587.21 via Frontend Transport; Mon, 13 May 2024 16:30:23 +0000
+Received: from EXCH1911.US.House.gov (143.228.151.110) by
+ EXCH1914.US.House.gov (143.228.151.104) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.2.1544.9; Mon, 13 May 2024 12:30:12 -0400
+Received: from serg-bulk4-a.house.gov (143.228.42.100) by
+ EXCH1911.US.House.gov (143.228.151.110) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1544.9
+ via Frontend Transport; Mon, 13 May 2024 12:30:12 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mail.house.gov; h=from : to : date
+ : subject : content-type : message-id : mime-version;
+ s=january2024-msgb-mhg; bh=dpVl9NcUkdI3LsZMXLn26vAVfszpvh7X249UQk4O128=;
+ b=cCCAiMR5aN/sz57D43rMpfLxcrjc14mHGZ7nLWytGCyy1JnhO5v1lh0tCh4YRoGm4LHV
+ OhODPg2XLPH+ae/gkuTlSW7bg5JKS/uBQSbF60gd101twFtUdVIRhbM15R0E7lCqSh+d
+ xCVDIwr93CWXRzZCThRh7GQIVMlG8dnwCFbmhH98RcmQFufRKzbaKiFUu6lXYBQpol+S
+ BvVxE2qITfRNhQe2sNEsV5mShXtFHe7Qw/mryAc2GBcXrQK9UMJeDVAe7CGdJqO9+FYx
+ ECd6mIJayerUO10q7a/5cW8n6Uh55nRPoC1Qsm8y7UXJMnVmReHtkiFB0Wt2FpsjsjO7 XQ== 
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=from : to : date :
+ subject : content-type : message-id : mime-version; s=august2019-msgb-hg;
+ bh=dpVl9NcUkdI3LsZMXLn26vAVfszpvh7X249UQk4O128=;
+ b=ggMhL0oxlYYquce6gCFQ9aq1O3cv6tvYY1jRiubqIdsT7lxypjd2wdmexqTVOwn0gqC5
+ 1OR1RIxPmeEuVSFmC5PKyVXYVg1bnzL19YfI7uXgFB9JIA+Q+WS3u9A6Lyh7xDQmboSU
+ BPhnirNxL290w4BZpBTJGiWp+tg3Y7AmdohEIM+krJ71cf2JL5bZtZ+rYBAVOl1XuSld
+ EPAOK/JKqrcgTN6KX9Y7uQlxXQiB8XqOy/2EJcSLvr74W/T3/J+GZbHfeVoseRT+lddV
+ e/huraEuIqhqJZDfcwjt8Nk8hwnSEv/IEOW9qJ5aDeYVPNle7dHUSk3g9RbCp6yxcx/R 2Q== 
+Received: from FIRESIDEADMIN04 (firesideadmin04.us.house.gov [143.228.58.69])
+	by serg-bulk4-a.house.gov (8.17.1.19/8.17.1.19) with ESMTP id 44DGUCGu010982;
+	Mon, 13 May 2024 12:30:12 -0400
+Message-Id: <3y23tqsbn0-1@serg-bulk4-a.house.gov>
+envelope-from: Alford.Newsletter@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+X-House-Vendor-Seg: Fireside21-1
+From: "Rep. Mark Alford" <Alford.Newsletter@mail.house.gov>
+To: Austin.Higginbotham@mail.house.gov
+Date: 13 May 2024 12:30:12 -0400
+Subject: TEST Final Reminder: Join Us for the Fentanyl Forum Tonight
+Content-Type: multipart/alternative;
+ boundary=--boundary_1099_ac5c5545-b758-4493-b0ea-7a57832b271f
+X-Proofpoint-Virus-Version: vendor=baseguard
+ engine=ICAP:2.0.293,Aquarius:18.0.1039,Hydra:6.0.650,FMLib:17.11.176.26
+ definitions=2024-05-13_11,2024-05-10_02,2023-05-22_02
+Return-Path: Alford.Newsletter@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1914.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 13 May 2024 16:30:23.0910
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ d4f59fc1-f683-49a9-9e6d-08dc7369fcdd
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1911.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted: BL02EPF0001B417.namprd09.prod.outlook.com
+X-CrossPremisesHeadersFiltered: BL02EPF0001B417.namprd09.prod.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ BL02EPF0001B417:EE_|DS0PR09MB11749:EE_|PH8PR09MB10224:EE_
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: d4f59fc1-f683-49a9-9e6d-08dc7369fcdd
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;ARA:13230031|82310400017|366007|41050700001;
+X-Forefront-Antispam-Report:
+ CIP:143.228.151.104;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:(13230031)(82310400017)(366007)(41050700001);DIR:INT;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 13 May 2024 16:30:23.0754
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: d4f59fc1-f683-49a9-9e6d-08dc7369fcdd
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.151.104];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1911.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DS0PR09MB11749
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.8920301
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.7544.049
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(425001)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	lm5LpnhQrmP0Y4b/DV/kfOqCyw3R2ZF503ONALRxtWjWEdCD7iNh+Piwb3U5xrktGaHW85vi0F6Z8CwQMXtnUrJzyQp7K8h69aqjalnVFmFdJ2hKphb0+GJSJb2N0+VreHocZNDz3TiQpmpdGG6cfYdfm/pVaFRmDMbhgaLq1Ewse1WkDj79AXF1/9FyzPksDn7XKFDNNO4HCzE3uxb7ck6A/amybez+bCsZgtZBaCJZTUmtMJWdPraVWKjf+LNh05oL8/YWdMU8+BPmHqQFZmxJfNo5nKhZcn2bLdKDrLa1qlQYS+Vlee0yU13HleFfq4NS2tmimo1/u7TOz8dnKluw//IQrGEParR8VWrdyOVD+87Qv4pYZjGjrJgrISJS5mJvtLOWZYJAEKp9AbQvhrx8ttVYWsTgs0XHm+gGhpXK1FdbLpiSalO58e78k5pyf3OGPaR5swRzVlOL7o4uRh8B0tRfFTxCrfetqNx0/uOXcyVhjXcu46OwOzedpWSJtEgfJDs//aWK7QYAla6iVNDJR2/ovyNx3uqIyg3icLuhzqZRf1QzYeKJ5LitYBzKTOH8oNvjGieY1n2cZRpvvikaIOSs1VRVmx0y5xCwUN4fVbx+oA0PHS6e69zcOtINsfhBFkdyFI2Pp046pQI53Dsd+onVnBKwVSbAGN+pvjppNn1dBYOFzmFUvpkhP38rj7AiZwYeYySUwXsEiT12A8GXO2RcVFVSMAyrKKLS/Zq4CgUPfRI4efIMptb0ZoaHkWwf1QQqBk0p1u4DACM7IMRrNkR0PzNEkikCBCW7oHY/wIfGM8Rns9ZOFcaUN4GBfl7GgixSfObbfG3T8voPwgTLPa1WUPSK/PZ7ItktnN00iKzo9FsK4layHONqTCe/
+MIME-Version: 1.0
+
+----boundary_1099_ac5c5545-b758-4493-b0ea-7a57832b271f
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+UmVwcmVzZW50YXRpdmUgTWFyayBBbGZvcmQgIChodHRwczovL2FsZm9yZC5ob3VzZS5n
+b3YpCgoKRmluYWwgUmVtaW5kZXI6IEpvaW4gVXMgZm9yIHRoZSBGZW50YW55bCBGb3J1
+bSBUb2RheQoKRmVudGFueWwgRm9ydW06IE1heSAxMywgMjAyNAoKCgpEZWFyIEpvaG4s
+CgpUb25pZ2h0LCBDb25ncmVzc21hbiBNYXJrIEFsZm9yZCwgYWxvbmcgd2l0aCBTZWRh
+bGlhIGFuZCBQZXR0aXMgQ291bnR5IG9mZmljaWFscywgd2lsbCBiZSBob3N0aW5nIGEg
+RmVudGFueWwgRm9ydW0uIEFzIHRoZSBldmVudCBhcHByb2FjaGVzLCBhIHdhcm0gaW52
+aXRhdGlvbiBpcyBleHRlbmRlZCBmb3IgeW91IHRvIGpvaW4uIFRoaXMgaXMgcGFydCBv
+ZiBhIHNlcmllcyB0aGF0IG15IHRlYW0gYW5kIEkgaGF2ZSBoZWxwZWQgcHV0IHRvZ2V0
+aGVyIGFsbCBvdmVyIE1pc3NvdXJpLgpFdmVudCBEZXRhaWxzCkRhdGU6IE1vbmRheSwg
+TWF5IDEzLCAyMDI0VGltZTogNyBQLk0uIHRvIDkgUC5NIChEb29ycyBvcGVuIGF0IDY6
+MDBwbSlMb2NhdGlvbjogSGVja2FydCBQZXJmb3JtaW5nIEFydHMgQ2VudGVyICgyMDEw
+IFRpZ2VyIFByaWRlIEJsdmRTZWRhbGlhLCBNTyA2NTMwMSkKVGhpcyBmb3J1bSBvZmZl
+cnMgYSB1bmlxdWUgb3Bwb3J0dW5pdHkgZm9yIG91ciBjb21tdW5pdHkgdG8gdW5pdGUs
+IHNoYXJlIHBlcnNwZWN0aXZlcywgYW5kIHNlZWsgc29sdXRpb25zIHRvIHRoZSBmZW50
+YW55bCBjcmlzaXPigJRhIHB1YmxpYyBoZWFsdGggZW1lcmdlbmN5IHRoYXQgaW1wYWN0
+cyBmYW1pbGllcywgc2Nob29scywgYW5kIGNvbW11bml0aWVzIGFjcm9zcyBvdXIgZGlz
+dHJpY3QuCkkgYmVsaWV2ZSB0aGF0IGV2ZXJ5IHZvaWNlIG1hdHRlcnMgaW4gdGhpcyBm
+aWdodCBhZ2FpbnN0IGZlbnRhbnlsLiAKCkxvb2tpbmcgZm9yd2FyZCB0byBzZWVpbmcg
+eW91IHRoZXJlIQoKZmVudCAK
+----boundary_1099_ac5c5545-b758-4493-b0ea-7a57832b271f
+Content-Location: https://alford.house.gov/
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>Representative Mark Alford</title>
+       =20
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1">
+        <!--[if !mso]><!-->
+        <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![e=
+ndif]-->
+        <style>body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default t=
+ext sizes */ img{-ms-interpolation-mode: bicubic;} /* Allow smoother render=
+ing of resized image in Internet Explorer *//* RESET STYLES */img { border:=
+ 0; height: auto; line-height: 100%; outline: none; text-decoration: none; =
+}table { border-collapse: collapse !important; }body { height: 100% !import=
+ant; margin: 0 !important; padding: 0 !important; width: 100% !important; }=
+strong { font-weight: bold; } /* Editor reset *//* FIRESIDE STYLES */.compo=
+nent img {max-width:600px;}.component table {mso-table-rspace:10pt; border-=
+collapse:collapse;}.component { padding: 0px !important; }.press {padding-b=
+ottom: 0px;}</style><style>@media all and (max-width:650px) {            .i=
+mage-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td, .image-2, .img-2 =
+img, .image-2 tr, .image-2 td {max-width: 100% !important; width: 100% !imp=
+ortant;}            .responsive-table {width:100% !important;}            .=
+responsive-table img {max-width:100% !important; height: auto !important;} =
+           .press .component, .press td {text-align:center;}            .co=
+mponent { margin-left: 20px; margin-right: 20px;}            .component .re=
+sponsive-table { margin-left: 0px !important; margin-right: 0px !important;=
+}            .wide .video-thumb { width: 100% !important;height: auto !impo=
+rtant; }             .wide.video-container { width: 100% !important; }     =
+    .component.full-width {margin-left: 0px; margin-right: 0px; }   }</styl=
+e><style type=3D"text/css">
+            /* CLIENT-SPECIFIC STYLES */
+            body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text=
+ sizes */
+            table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Rem=
+ove spacing between tables in Outlook 2007 and up */
+            img{-ms-interpolation-mode: bicubic;} /* Allow smoother renderi=
+ng of resized image in Internet Explorer */
+            /* RESET STYLES */
+            img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: =
+0 !important; width: 100% !important; }
+            strong { font-weight: bold; } /* Editor reset */
+            /* FIRESIDE STYLES */
+            .component img {max-width:600px;}
+            .component table {mso-table-rspace:10pt; border-collapse:collap=
+se; font-family: Arial, Helvetica, sans-serif;}
+            .component td, td {font-family: Arial, Helvetica, sans-serif;}
+            .component { padding: 0px !important; }
+            .press {padding-bottom: 0px;}
+            .caption-1 td {font-family: Arial, Helvetica, sans-serif;}
+            /* Margin/NoMargin STYLES */
+            .component.full-width{ overflow: hidden; margin: 0px; }
+            /* HEADER STYLES */
+            .header-bar {width: 100%;}
+            .header-bar-margin {background-color:#ffffff;}
+            .header-bar h2 {margin: 0 !important; padding: 0 !important; co=
+lor: #000000 !important;text-align: center;font-size: 24px !important;font-=
+weight: bold !important; }
+            .survey-content > table > tbody tr td { border-color: #16285A !=
+important; }
+            .survey-content input.survey-submit { font-family: Arial, Helve=
+tica, sans-serif !important; }
+        </style>       =20
+        <style id=3D"media-queries">=20
+            @media all and (max-width:650px) {
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max=
+-width: 100% !important; width: 100% !important;}
+            .responsive-table {width:100% !important;}
+            .responsive-table img {max-width:100% !important; height: auto =
+!important;}
+            .press .component, .press td, .split .component, .split .compon=
+ent td, .split td {text-align:center;}
+            .component { margin-left: 20px; margin-right: 20px;}
+            .component .responsive-table { margin-left: 0px !important; mar=
+gin-right: 0px !important;}
+            .wide .video-thumb { width: 100% !important;height: auto !impor=
+tant; }=20
+            .wide.video-container { width: 100% !important; }
+            }
+        </style>
+       =20
+    <!--[if (gte mso 9)|(IE)]>
+                                        <style>=20
+                                    </style>
+                                    <![endif]--></head>
+    <body style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%;margin: 0px !important; padding: 0px !important;">
+        <div id=3D"preview-text" style=3D"display: none; font-size: 1px; co=
+lor: #fefefe; line-height: 1px; font-family: Arial, Helvetica, sans-serif; =
+max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">Final Remin=
+der: Join Us for the Fentanyl Forum TodayFentanyl Forum: May 13, 2024 Dear =
+John, Tonight, Congressman Mark Alford, along with Sedalia and Pettis Count=
+y officials, will be hosting a Fentanyl Forum. As the event approaches, a w=
+arm invitation is extended for you to join. This is part of a series that m=
+y team and I have helped put together all over Missouri. Event DetailsDate:=
+ Monday, May 13, 2024Time: 7 P.M. to 9 P.M (Doors open at 6:00pm)Location: =
+Heckart Performing Arts Center (2010 Tiger Pride BlvdSedalia, MO 65301)This=
+ forum offers a unique opportunity for our community to unite, share perspe=
+ctives, and seek solutions to the fentanyl crisis=E2=80=94a public health e=
+mergency that impacts families, schools, and communities across our distric=
+t. I believe that every voice matters in this fight against fentanyl.  Look=
+ing forward to seeing you there! </div>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color:=
+ #ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D=
+"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td align=3D"center" valign=3D"top" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvet=
+ica, sans-serif; font-size: 16px;">
+                        <div class=3D"region" id=3D"region-1"><div class=3D=
+"component full-width" style=3D"padding: 0px !important;"> <div class=3D"im=
+age" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 0px; margin-left: 0px;" width=3D"650">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;"><a href=3D"https://alford.house.gov" target=3D"_blank" style=3D=
+"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img style=3D=
+"max-width:600px;-ms-interpolation-mode: bicubic;vertical-align: bottom; ma=
+x-width: 650px;" alt=3D"Representative Mark Alford" src=3D"https://alfordfo=
+rms.house.gov/uploadedphotos/highresolution/6698c486-5c82-4ce9-acde-e81cf8d=
+6af6a.jpg"></a></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;background-color: #ffffff; font-family: Arial, Helvetica, sa=
+ns-serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D=
+"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td class=3D"responsive-table" valign=3D"top" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Ari=
+al, Helvetica, sans-serif; font-size: 16px; color: #000000;">
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class=3D"region" id=3D"region-2"><div class=3D=
+"component full-width" style=3D"padding: 0px !important;"> <div class=3D"he=
+ader-bar" style=3D"overflow: hidden;">
+                                    <table role=3D"presentation" align=3D"c=
+enter" class=3D"responsive-table table-w-bg-color" style=3D"mso-table-lspac=
+e:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse=
+;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Ar=
+ial, Helvetica, sans-serif; margin-right: 0px; margin-left: 0px;" border=3D=
+"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0=
+" leftmargin=3D"0" topmargin=3D"0" width=3D"650">
+                                        <tbody>
+                                            <tr height=3D"0" class=3D"space=
+rRow">
+                                                <td style=3D"-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 0p=
+x">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td class=3D"responsive-tab=
+le" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fon=
+t-size:24px;color:#000000;" valign=3D"top">
+                                                <table role=3D"presentation=
+" width=3D"100%" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-ta=
+ble-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -=
+ms-text-size-adjust: 100%;min-width: 100%;" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" top=
+margin=3D"0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;padding: 0 15pt; f=
+ont-family: Arial, Helvetica, sans-serif;">
+                                                                <div class=
+=3D"cke_editable cke_editable_inline cke_contents_ltr cke_show_borders cke_=
+focus" style=3D"overflow: hidden;"><h2 style=3D"text-align: center;"><em>Fi=
+nal Reminder: Join Us for the Fentanyl Forum Today</em></h2><h2 style=3D"te=
+xt-align: center;">Fentanyl Forum: May 13, 2024</h2></div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                </td>
+                                            </tr>
+                                            <tr height=3D"0" class=3D"space=
+rRow">
+                                                <td style=3D"-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 0p=
+x">&nbsp;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><d=
+iv class=3D"component-template" style=3D"overflow: hidden;"><p style=3D"mar=
+gin: 0;margin: 0;"><br></p><p style=3D"margin: 0;margin: 0;"><span style=3D=
+"font-family:Georgia,serif;"><span style=3D"font-size:16px;">Dear <span cla=
+ss=3D"fs-merge-field" contenteditable=3D"false"><span contenteditable=3D"fa=
+lse"><span class=3D"merge-field" contenteditable=3D"false" unselectable=3D"=
+true">John</span></span></span>,</span></span></p><p style=3D"margin: 0;mar=
+gin: 0;"><br></p><p style=3D"margin: 0;line-height:1.38"><span style=3D"fon=
+t-family:Georgia,serif;"><span style=3D"font-size:16px;">Tonight, Congressm=
+an Mark Alford, along with Sedalia and Pettis County officials, will be hos=
+ting a Fentanyl Forum. As the event approaches, a warm invitation is extend=
+ed for you to join. This is part of a series that my team and I have helped=
+ put together all over Missouri.</span></span></p><br><p style=3D"margin: 0=
+;line-height:1.38"><span style=3D"font-size:16px;"><u><span style=3D"font-f=
+amily:Georgia,serif;"><span style=3D"font-variant: normal; white-space: pre=
+-wrap;"><span style=3D"color:#000000"><span style=3D"font-weight:400"><span=
+ style=3D"font-style:normal"><span style=3D"text-decoration:none">Event Det=
+ails</span></span></span></span></span></span></u></span></p><ul><li style=
+=3D"line-height: 1.38;"><span style=3D"font-size:16px;"><span style=3D"font=
+-family:Georgia,serif;"><span style=3D"font-variant: normal; white-space: p=
+re-wrap;"><span style=3D"color:#000000"><span style=3D"font-weight:400"><sp=
+an style=3D"font-style:normal"><span style=3D"text-decoration:none">Date: M=
+onday, May 13, 2024</span></span></span></span></span></span></span></li><l=
+i style=3D"line-height: 1.38;"><span style=3D"font-size:16px;"><span style=
+=3D"font-family:Georgia,serif;"><span style=3D"font-variant: normal; white-=
+space: pre-wrap;"><span style=3D"color:#000000"><span style=3D"font-weight:=
+400"><span style=3D"font-style:normal"><span style=3D"text-decoration:none"=
+>Time: 7 P.M. to 9 P.M <strong style=3D"font-weight: bold;">(Doors open at =
+6:00pm)</strong></span></span></span></span></span></span></span></li><li s=
+tyle=3D"line-height: 1.38;"><span style=3D"font-size:16px;"><span style=3D"=
+font-family:Georgia,serif;"><span style=3D"font-variant: normal; white-spac=
+e: pre-wrap;"><span style=3D"color:#000000"><span style=3D"font-weight:400"=
+><span style=3D"font-style:normal"><span style=3D"text-decoration:none">Loc=
+ation: </span></span></span></span></span>Heckart Performing Arts Center (2=
+010 Tiger Pride Blvd</span></span><p style=3D"margin: 0;"><span style=3D"fo=
+nt-size:16px;"><span style=3D"font-family:Georgia,serif;">Sedalia, MO 65301=
+)</span></span></p></li></ul><p style=3D"margin: 0;line-height:1.38"><span =
+style=3D"font-size:16px;"><span style=3D"font-family:Georgia,serif;"><span =
+style=3D"font-variant: normal; white-space: pre-wrap;"><span style=3D"color=
+:#000000"><span style=3D"font-weight:400"><span style=3D"font-style:normal"=
+><span style=3D"text-decoration:none">This forum offers a unique opportunit=
+y for our community to unite, share perspectives, and seek solutions to the=
+ fentanyl crisis=E2=80=94a public health emergency that impacts families, s=
+chools, and communities across our district.</span></span></span></span></s=
+pan></span></span></p><br><p style=3D"margin: 0;"><span style=3D"font-famil=
+y:Georgia,serif;"><span style=3D"font-size:16px;">I believe that every voic=
+e matters in this fight against fentanyl.<span style=3D"font-variant: norma=
+l; white-space: pre-wrap;"><span style=3D"color:#000000"><span style=3D"fon=
+t-weight:400"><span style=3D"font-style:normal"><span style=3D"text-decorat=
+ion:none"> </span></span></span></span></span></span></span></p><p style=3D=
+"margin: 0;line-height:1.38"><br></p><p style=3D"margin: 0;line-height:1.38=
+"><span style=3D"font-size:16px;"><span style=3D"font-family:Georgia,serif;=
+"><span style=3D"font-variant: normal; white-space: pre-wrap;"><span style=
+=3D"color:#000000"><span style=3D"font-weight:400"><span style=3D"font-styl=
+e:normal"><span style=3D"text-decoration:none">Looking forward to seeing yo=
+u there!</span></span></span></span></span></span></span></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 1080px;" alt=3D"fent" sr=
+c=3D"https://alford.house.gov/UploadedPhotos/HighResolution/a7dfa812-fdbe-4=
+3a2-9a88-d3314bc247bb.png" width=3D"609.5"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div></div>
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color: #=
+16285A;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0=
+" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #16285A;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; backgro=
+und-color: #16285A; font-family: arial, helvetica, sans-serif; font-size: 2=
+4px; text-align: center;">
+                    <h2 style=3D"font-family: arial, helvetica, sans-serif;=
+ font-size: 24px; margin: 0; font-weight: normal;">Office Locations</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #16285A;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; backgro=
+und-color: #16285A; padding: 0 20px;">
+                    <table role=3D"presentation" width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"10" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;text-align:center;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;text-align:=
+center;">
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"49=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: arial, helvetica, sans-serif; text-align:center; font-size: 13px=
+; color: #ffffff; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0=
+pt;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, san=
+s-serif;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: Arial, Helvetica, sans-serif; text-transform: uppercase;">=
+Washington, DC Office</strong><br>
+                                            1516 Longworth HOB<br>
+                                            Washington, DC  20515<br>
+                                            Phone: (202) 225-2876<br>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"49=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: arial, helvetica, sans-serif; text-align:center; font-size: 13px=
+; color: #ffffff; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0=
+pt;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, san=
+s-serif;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: Arial, Helvetica, sans-serif; text-transform: uppercase;">=
+Lebanon District Office</strong><br>
+                                            500 E. Elm Street<br>
+                                            Lebanon, MO  65536<br>
+                                            Phone: (417) 532-5582
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; backgro=
+und-color: #16285A; padding: 0 20px;">
+                    <table role=3D"presentation" width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"10" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;text-align:center;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;text-align:=
+center;">
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"49=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: arial, helvetica, sans-serif; text-align:center; font-size: 13px=
+; color: #ffffff; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0=
+pt;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, san=
+s-serif;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: Arial, Helvetica, sans-serif; text-transform: uppercase;">=
+Raymore District Office</strong><br>
+                                            1272 West Foxwood Dr.<br>
+                                            Raymore, MO  64083<br>
+                                            Phone: (816) 441-6318<br>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"49=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: arial, helvetica, sans-serif; text-align:center; font-size: 13px=
+; color: #ffffff; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0=
+pt;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, san=
+s-serif;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: Arial, Helvetica, sans-serif; text-transform: uppercase;">=
+Columbia District Office</strong><br>
+                                            2401 Bernadette Drive<br>
+                                            Suite 117<br>
+                                            Columbia, MO  65203<br>
+                                            Phone: (573) 540-6600<br>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #16285A;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <!-- <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"color: =
+#16285A; background-color: #16285A;">
+                    <a target=3D"_blank" href=3D"https://www.facebook.com/X=
+XXXXXX"><img alt=3D"facebook icon" width=3D"32" src=3D"https://alfordforms.=
+house.gov/images/email/facebook.png" style=3D"border-width: 0px; border-sty=
+le: solid; width: 32px;" /></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://twitter.com/=
+XXXXXXX"><img alt=3D"twitter icon" width=3D"32" src=3D"https://alfordforms.=
+house.gov/images/email/twitter.png" style=3D"border-width: 0px; border-styl=
+e: solid; width: 32px;" /></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://www.instagra=
+m.com/XXXXXX"><img alt=3D"instagram icon" width=3D"32" src=3D"https://alfor=
+dforms.house.gov/images/email/instagram.png" style=3D"border-width: 0px; bo=
+rder-style: solid; width: 32px;" /></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://www.youtube.=
+com/channel/XXXXXX"><img alt=3D"youtube icon" width=3D"32" src=3D"https://a=
+lfordforms.house.gov/images/email/youtube.png" style=3D"border-width: 0px; =
+border-style: solid; width: 32px;" /></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"height:=
+30px; background-color: #16285A;">
+                    &nbsp;
+                    </td>
+                </tr> -->
+                <tr>
+                    <td valign=3D"middle" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;background-color: #16285A;">
+                    <table role=3D"presentation" cellpadding=3D"0" cellspac=
+ing=3D"20" align=3D"center" width=3D"90%" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #162=
+85A; font-size: 15px; font-family: Arial, Helvetica, sans-serif;">
+                                <a target=3D"_blank" href=3D"https://alford=
+forms.house.gov/forms/emailsignup/?delete=3Dtrue" style=3D"-webkit-text-siz=
+e-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; text-decoration:=
+none; font-family: Arial, Helvetica, sans-serif;">Unsubscribe</a>&nbsp;|&nb=
+sp;
+                                <a target=3D"_blank" href=3D"https://urldef=
+ense.com/v3/__https://www.facebook.com/sharer.php?u=3Dhttps:**Aalford.house=
+.gov*news*email*show.aspx*ID=3D75PY2ZFMTH7AU&amp;t=3D*subject*__;Ly8vLy8_W1=
+0!!Ckt11KVezJIME51BYf4a6hrLATHilnk!GkiRXVOCoC_9uqDiXHL7wBs5B7TCiboFgRAysGZ8=
+RYrW7EvEAK4CUT7-Dt6ezx5C__n6fXP9anSU1dH53OhD_uU1PVGYTjqO3BSXEkvWd28y3j0$" s=
+tyle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #=
+ffffff; text-decoration:none; font-family: Arial, Helvetica, sans-serif;">S=
+hare on Facebook</a>&nbsp;|&nbsp;
+                                <a target=3D"_blank" href=3D"https://alford=
+forms.house.gov/Components/Redirect/twitter.aspx?url=3Dhttps://alford.house=
+.gov/news/email/show.aspx?ID=3D75PY2ZFMTH7AU&amp;name=3D[subject]" style=3D=
+"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff;=
+ text-decoration:none; font-family: Arial, Helvetica, sans-serif;">Share on=
+ Twitter</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #16285A;">
+                    &nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html> =
+
+----boundary_1099_ac5c5545-b758-4493-b0ea-7a57832b271f--

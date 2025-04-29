@@ -1,0 +1,799 @@
+Received: from BLAPR09MB7315.namprd09.prod.outlook.com (2603:10b6:208:28b::14)
+ by BY5PR09MB5796.namprd09.prod.outlook.com with HTTPS; Tue, 8 Dec 2020
+ 16:14:15 +0000
+Received: from MWHPR09CA0037.namprd09.prod.outlook.com (2603:10b6:300:6d::23)
+ by BLAPR09MB7315.namprd09.prod.outlook.com (2603:10b6:208:28b::14) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.3632.23; Tue, 8 Dec
+ 2020 16:14:14 +0000
+Received: from BL0GCC02FT007.eop-gcc02.prod.protection.outlook.com
+ (2a01:111:f400:7d05::202) by MWHPR09CA0037.outlook.office365.com
+ (2603:10b6:300:6d::23) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.3654.12 via Frontend
+ Transport; Tue, 8 Dec 2020 16:14:13 +0000
+Authentication-Results: spf=fail (sender IP is 143.231.249.134)
+ smtp.mailfrom=mail.house.gov; ushouse.mail.onmicrosoft.com; dkim=fail (body
+ hash did not verify) header.d=house.gov;ushouse.mail.onmicrosoft.com;
+ dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.231.249.134 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.231.249.134;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.231.249.134) by
+ BL0GCC02FT007.mail.protection.outlook.com (10.97.10.173) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.3632.17 via Frontend Transport; Tue, 8 Dec 2020 16:14:13 +0000
+Received: from HRM224.US.House.gov (143.228.51.103) by EXGW203.US.House.gov
+ (143.228.51.91) with Microsoft SMTP Server (TLS) id 15.0.1497.2; Tue, 8 Dec
+ 2020 11:13:53 -0500
+Received: from EXGW201.US.House.gov (143.228.51.89) by HRM224.US.House.gov
+ (143.228.51.103) with Microsoft SMTP Server (TLS) id 15.0.1497.2; Tue, 8 Dec
+ 2020 11:13:52 -0500
+Received: from serg-bulk3-h.house.gov (143.228.145.95) by EXGW201.US.House.gov
+ (143.228.51.89) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
+ Transport; Tue, 8 Dec 2020 11:13:52 -0500
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=message-id :
+ list-unsubscribe : mime-version : from : to : date : subject :
+ content-type; s=august2019-msgb-hg;
+ bh=cuSzEelJZsfvOwQwGsiT04w8msxS4zEGC8XxpY3FNbI=;
+ b=cOrpQSFeQi5DSWCb5oCMQT3accsnzQhI42jtG+WCGNsZhmYpXjfFfI38PRtvZkPFF2JO
+ 9gjxoA4qm7GUJDIzR8hggr4Ol2ewmzwTBtHvwbHS99yv1WTmEfD8f8IUH8Z1XLWj4QRF
+ 0AfYWexnVNdO3d4128LlwSBx9sRm9uuWFOiF9LmwDL6AeONwiG68BOTXeZehGWidUUPb
+ kqXZtWqIChyT+TMefupbnup74TDrDluPTGYK6UwytUMETu2rUf4H4djNpVxilAmyKNSN
+ eYajRdiGBTlHw4uCJkYKbCO1swx4J3r3TEBAPgh40mbI7djLT8DWCJjXuup0EA9iq7lU Ww== 
+Received: from FIRESIDESERV05 (firesideserv05.us.house.gov [143.228.58.88])
+	by serg-bulk3-h.house.gov (8.16.0.27/8.16.0.27) with ESMTP id 0B8GDqXF005705
+	for <David.Todisco@mail.house.gov>; Tue, 8 Dec 2020 11:13:52 -0500
+envelope-from: Rep.LoriTrahan@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+Message-ID: <QPszNgZITdpkiNdeH+dXVaHkukWhVnmlduwuSLfbKYGmvz56g6ymHVGIbc4LbeoLMfSbbZ1Y9ZU8fz+NzdHaEILuQ/2LciYsexO4YAJ+8huT7Y+Tpw8l2EsnKlB077km6O6NX673EZR7kHoi3O1lAhrkUryekb/Jb/JTTphoy0rQdihE+Jx5+qZuegSn/yoT@fireside21.com>
+X-House-Vendor-Seg: unmanaged
+List-Unsubscribe: <https://trahan.house.gov/forms/emailsignup/?Delete=true&MessageID=851&Email=David.Todisco@mail.house.gov&Submit=true>
+Precedence: bulk
+MIME-Version: 1.0
+From: "Congresswoman Lori Trahan" <Rep.LoriTrahan@mail.house.gov>
+To: David.Todisco@mail.house.gov
+Date: 8 Dec 2020 11:13:52 -0500
+Subject: JOIN ME: Supporting our health care heroes
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:6.0.343,18.0.737
+ definitions=2020-12-08_11:2020-12-08,2020-12-08 signatures=0
+Return-Path: Rep.LoriTrahan@mail.house.gov
+X-OrganizationHeadersPreserved: EXGW203.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 08 Dec 2020 16:14:13.3518
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ f4cf5902-5e01-471b-2a50-08d89b944dac
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXGW201.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted:
+ BL0GCC02FT007.eop-gcc02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ BL0GCC02FT007.eop-gcc02.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: f4cf5902-5e01-471b-2a50-08d89b944dac
+X-MS-TrafficTypeDiagnostic: BLAPR09MB7315:
+X-MS-Exchange-Organization-SCL: -1
+X-MS-Oob-TLC-OOBClassifiers: OLM:6790;
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:143.231.249.134;CTRY:US;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SKI;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:;DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 08 Dec 2020 16:14:13.2639
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: f4cf5902-5e01-471b-2a50-08d89b944dac
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.231.249.134];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXGW201.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BLAPR09MB7315
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.8187719
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.3589.038
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(750128)(520011016)(706158)(944506458)(944626604);
+X-Microsoft-Antispam-Message-Info:
+	SzTbYJm+w9MpOGXRkuub+J08CsYiJSVO4JOHjoh59p2ebrjqxhFoeX2od5sL8hOh8pQyEU68gvSkdG4Ug3/lZldorcXb6D63g5YFT3yDV9i6nsSud/vj+A2DwEch0mQdiklm0GNqH3rah9H1F7qyUEZ1IKUGvkT6Lve8ooixybfp0YXImxXeU74SiMf9mnYZO8U2eqJ3VGJoMfwSatTkV7SunpmnbMeNzY70U1/Sb4wdUazGVqeQo3wU8xswmSxNNg9G2NGLbl3FIWAyrqJZYaorLq/+8bnmNX2WnPE983t3HJXBuU9s4XQZzKlrdjaipXCRVofIDQHBfTePf3O2AcYVRbxnctNLMqC16TRz/IF4lNbYzjjJ0c5s5MGwwNNq17mOhXcOCDcxNhPUKVlh+jcxKxhOYlXIhHhgCVKXjYs=
+Content-type: multipart/alternative;
+	boundary="B_3693824145_1535521207"
+
+> This message is in MIME format. Since your mail reader does not understand
+this format, some or all of this message may not be legible.
+
+--B_3693824145_1535521207
+Content-type: text/plain;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+Friend,As a community, a Commonwealth, and a nation, we=E2=80=99re at a pivotal m=
+oment in the fight against COVID-19. Cases are reaching all-time highs almos=
+t every day. Hospitalizations are increasing. And tragically, more and more =
+people are dying from this dangerous virus.This has placed even more pressur=
+e on our frontline health care workers who have been working tirelessly for =
+the past nine months to save as many lives as possible. It=E2=80=99s critical that=
+ we keep them at the forefront of all we do -- from securing additional pand=
+emic relief to simple things like wearing a mask during a visit to the groce=
+ry store.That=E2=80=99s why TOMORROW at 4pm, I=E2=80=99ll be joined by Katie Murphy, Pre=
+sident of the Massachusetts Nurses Association and Congressman Raul Ruiz, M.=
+D., for a Facebook Live discussion on the challenges our health care heroes =
+are facing and what we can do to continue supporting them.CLICK HERE to RSVP=
+ and get a reminder when the event starts!For questions about the coronaviru=
+s pandemic or help with a federal agency, contact my office HERE. As always =
+- for coronavirus resources, you can visit my COVID-19 resource page HERE.Wa=
+rm regards,Lori TrahanMember of Congress   P.S. Due to the ongoing public he=
+alth crisis, my offices will continue to be physically closed. However, my s=
+taff and I are teleworking full time and can be reached via phone at 978-459=
+-0101 or by email at Rep.LoriTrahan@mail.house.gov.=20
+=20
+Friend,
+As a community, a Commonwealth, and a nation, we=E2=80=99re at a pivotal moment i=
+n the fight against COVID-19. Cases are reaching all-time highs almost every=
+ day. Hospitalizations are increasing. And tragically, more and more people =
+are dying from this dangerous virus.
+This has placed even more pressure on our frontline health care workers who=
+ have been working tirelessly for the past nine months to save as many lives=
+ as possible. It=E2=80=99s critical that we keep them at the forefront of all we d=
+o -- from securing additional pandemic relief to simple things like wearing =
+a mask during a visit to the grocery store.
+That=E2=80=99s why TOMORROW at 4pm, I=E2=80=99ll be joined by Katie Murphy, President o=
+f the Massachusetts Nurses Association and Congressman Raul Ruiz, M.D., for =
+a Facebook Live discussion on the challenges our health care heroes are faci=
+ng and what we can do to continue supporting them.
+CLICK HERE to RSVP and get a reminder when the event starts!
+
+For questions about the coronavirus pandemic or help with a federal agency,=
+ contact my office HERE. As always - for coronavirus resources, you can visi=
+t my COVID-19 resource page HERE.
+Warm regards,
+
+Lori Trahan
+Member of Congress
+  =20
+
+
+
+
+
+P.S. Due to the ongoing public health crisis, my offices will continue to b=
+e physically closed. However, my staff and I are teleworking full time and c=
+an be reached via phone at 978-459-0101 or by email at Rep.LoriTrahan@mail.h=
+ouse.gov.
+
+
+
+=20
+ =20
+WASHINGTON, DC OFFICE
+1616 Longworth HOB
+Washington, DC 20515
+Phone: (202) 225-3411=20
+LAWRENCE OFFICE
+15 Union Street
+4th Floor
+Lawrence, MA 01840
+Phone: (978) 258-1138=20
+LOWELL OFFICE
+126 John Street
+Lowell, MA 01852
+Phone: (978) 459-0101=20
+FITCHBURG OFFICE HOURS
+Fitchburg State University Center for Professional Studies
+150B Main Street
+Fitchburg, MA 01420
+Phone: (978) 459-0101
+Hours: Tuesdays & Thursdays, 8:30 AM - 12:00 PM=20
+ACTON OFFICE HOURS
+Acton Town Hall, Room 121
+472 Main Street
+Acton, MA 01720
+Phone: (978) 459-0101
+Hours: 1st and 3rd Wednesdays of the Month, 8:30 AM - 12:00 PM
+15 Union Street=20
+HUDSON OFFICE HOURS
+Hudson Public Library
+3 Washington Street
+Hudson, MA 01749
+Phone: (978) 459-0101
+Hours: 2nd and 4th Wednesdays of the Month, 9:00 AM - 12:00 PM=20
+ =20
+      =20
+ =20
+Unsubscribe |  Share on Facebook |  Share on Twitter=20
+ =20
+=20
+Click Here to view this email in your browser=20
+Click Here to be removed from this list 
+
+--B_3693824145_1535521207
+Content-type: text/html;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><title>J=
+OIN ME: Supporting our health care heroes</title><meta name=3D"viewport" conte=
+nt=3D"width=3Ddevice-width, initial-scale=3D1"><!--[if !mso]><!--><meta http-equiv=
+=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![endif]--><style>body, table, td,=
+ a{-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;} /* Prevent W=
+ebKit and Windows mobile changing default text sizes */ img{-ms-interpolatio=
+n-mode: bicubic;} /* Allow smoother rendering of resized image in Internet E=
+xplorer *//* RESET STYLES */img { border: 0; height: auto; line-height: 100%=
+; outline: none; text-decoration: none; }table { border-collapse: collapse !=
+important; }body { height: 100% !important; margin: 0 !important; padding: 0=
+ !important; width: 100% !important; }strong { font-weight: bold; } /* Edito=
+r reset *//* FIRESIDE STYLES */.component img {max-width:600px;}.component t=
+able {mso-table-rspace:10pt; border-collapse:collapse;}.component { padding:=
+ 0px !important; }.press {padding-bottom: 0px;}</style><style>@media all and=
+ (max-width:650px) {            .image-1, .caption-1, .img-1 img, .image-1 t=
+r, .image-1 td, .image-2, .img-2 img, .image-2 tr, .image-2 td {max-width: 1=
+00% !important; width: 100% !important;}            .responsive-table {width=
+:100% !important;}            .responsive-table img {max-width:100% !importa=
+nt; height: auto !important;}            .press .component, .press td {text-=
+align:center;}            .component { margin-left: 20px; margin-right: 20px=
+;}            .component .responsive-table { margin-left: 0px !important; ma=
+rgin-right: 0px !important;}            .wide .video-thumb { width: 100% !im=
+portant;height: auto !important; }             .wide.video-container { width=
+: 100% !important; }            }</style><style type=3D"text/css">
+            /* CLIENT-SPECIFIC STYLES */
+            body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text =
+sizes */
+            table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Rem=
+ove spacing between tables in Outlook 2007 and up */
+            img{-ms-interpolation-mode: bicubic;} /* Allow smoother renderi=
+ng of resized image in Internet Explorer */
+            /* RESET STYLES */
+            img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: =
+0 !important; width: 100% !important; }
+            strong { font-weight: bold; } /* Editor reset */
+            /* FIRESIDE STYLES */
+            .component img {max-width:600px;}
+            .component table {mso-table-rspace:10pt; border-collapse:collap=
+se; font-family: Arial, Helvetica, sans-serif;}
+            .component td, td {font-family: Arial, Helvetica, sans-serif;}
+            .component { padding: 0px !important; }
+            .press {padding-bottom: 0px;}
+            .caption-1 td {font-family: Arial, Helvetica, sans-serif;}
+            /* Margin/NoMargin STYLES */
+            .component.full-width{ overflow: hidden; margin: 0px; }
+            /* HEADER STYLES */
+            .header-bar {width: 100%;}
+            .header-bar-margin {background-color:#ffffff;}
+            .header-bar h2 {margin: 0 !important; padding: 0 !important; co=
+lor: #000000 !important;text-align: center;font-size: 24px !important;font-w=
+eight: bold !important; }
+            .survey-content > table > tbody tr td { border-color: #366092 !=
+important; }
+            .survey-content input.survey-submit { font-family: Arial, Helve=
+tica, sans-serif !important; }
+            .signature table td table td { text-align: center; }
+        </style><style id=3D"media-queries"> 
+            @media all and (max-width:650px) {
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max=
+-width: 100% !important; width: 100% !important;}
+            .responsive-table {width:100% !important;}
+            .responsive-table img {max-width:100% !important; height: auto =
+!important;}
+            .press .component, .press td, .split .component, .split .compon=
+ent td, .split td {text-align:center;}
+            .component { margin-left: 20px; margin-right: 20px;}
+            .component .responsive-table { margin-left: 0px !important; mar=
+gin-right: 0px !important;}
+            .wide .video-thumb { width: 100% !important;height: auto !impor=
+tant; } 
+            .wide.video-container { width: 100% !important; }
+            }
+        </style></head><body style=3D"-webkit-text-size-adjust: 100%; -ms-tex=
+t-size-adjust: 100%;margin: 0px !important; padding: 0px !important;"><div i=
+d=3D"preview-text" style=3D"display: none; font-size: 1px; color: #fefefe; line-=
+height: 1px; font-family: Arial, Helvetica, sans-serif; max-height: 0px; max=
+-width: 0px; opacity: 0; overflow: hidden;">Friend,As a community, a Commonw=
+ealth, and a nation, we=E2=80=99re at a pivotal moment in the fight against COVID-=
+19. Cases are reaching all-time highs almost every day. Hospitalizations are=
+ increasing. And tragically, more and more people are dying from this danger=
+ous virus.This has placed even more pressure on our frontline health care wo=
+rkers who have been working tirelessly for the past nine months to save as m=
+any lives as possible. It=E2=80=99s critical that we keep them at the forefront of=
+ all we do -- from securing additional pandemic relief to simple things like=
+ wearing a mask during a visit to the grocery store.That=E2=80=99s why TOMORROW at=
+ 4pm, I=E2=80=99ll be joined by Katie Murphy, President of the Massachusetts Nurse=
+s Association and Congressman Raul Ruiz, M.D., for a Facebook Live discussio=
+n on the challenges our health care heroes are facing and what we can do to =
+continue supporting them.CLICK HERE to RSVP and get a reminder when the even=
+t starts!For questions about the coronavirus pandemic or help with a federal=
+ agency, contact my office HERE. As always - for coronavirus resources, you =
+can visit my COVID-19 resource page HERE.<!--{cke_protected}{C}%3C!%2D%2D%7B=
+C%7D%253C!%252D%252D%257BC%257D%25253C!%25252D%25252D%25257BC%25257D%2525253=
+C!%2525252D%2525252D%2525257BC%2525257D%252525253C!%252525252D%252525252D%25=
+2525257BC%252525257D%25252525253C!%25252525252D%25252525252D%25252525257BC%2=
+5252525257D%2525252525253C!%2525252525252D%2525252525252D%2525252525257BC%25=
+25252525257D%252525252525253C!%252525252525252D%252525252525252D%25252525252=
+5257BC%252525252525257D%25252525252525253C!%25252525252525252D%2525252525252=
+5252D%2525252525252525253Cmeta%25252525252525252520charset%25252525252525252=
+53D%25252525252525252522UTF-8%25252525252525252522%25252525252525252520%2525=
+252525252525252F%2525252525252525253E%25252525252525252D%25252525252525252D%=
+25252525252525253E%252525252525252D%252525252525252D%252525252525253E%252525=
+2525252D%2525252525252D%2525252525253E%25252525252D%25252525252D%25252525253=
+E%252525252D%252525252D%252525253E%2525252D%2525252D%2525253E%25252D%25252D%=
+25253E%252D%252D%253E%2D%2D%3E-->Warm regards,Lori TrahanMember of Congress&=
+nbsp;&nbsp;&nbsp;P.S. Due to the ongoing public health crisis, my offices wi=
+ll continue to be physically closed. However, my staff and I are teleworking=
+ full time and can be reached via phone at 978-459-0101 or by email at Rep.L=
+oriTrahan@mail.house.gov. </div><table role=3D"presentation" width=3D"650" align=
+=3D"center" class=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -m=
+s-text-size-adjust: 100%;font-family: Arial, Helvetica, sans-serif; backgrou=
+nd-color: #ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D=
+"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><tbody><tr><td align=3D"cente=
+r" valign=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust:=
+ 100%;font-family: Arial, Helvetica, sans-serif; font-size: 16px;"><a target=
+=3D"_blank" href=3D"https://trahan.house.gov/components/redirect/r.aspx?ID=3D2098-=
+1321195" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"=
+><img alt=3D"Representative Lori Trahan" width=3D"650" style=3D"-ms-interpolation-=
+mode: bicubic;display: block; width: 650px;" src=3D"https://trahan.house.gov/i=
+mages/email/banner.jpg"> </a></td></tr></tbody></table><table role=3D"presenta=
+tion" width=3D"650" align=3D"center" class=3D"responsive-table" style=3D"-webkit-tex=
+t-size-adjust: 100%; -ms-text-size-adjust: 100%;background-color: #ffffff; f=
+ont-family: Arial, Helvetica, sans-serif;" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><tbo=
+dy><tr><td class=3D"responsive-table" valign=3D"top" style=3D"-webkit-text-size-ad=
+just: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, sans-s=
+erif; font-size: 16px; color: #000000;"><div class=3D"region" id=3D"region-1"><d=
+iv class=3D"component " style=3D"padding: 0px !important;"><div class=3D"editable"=
+ style=3D"overflow: hidden;width:100%"><table class=3D"responsive-table" role=3D"p=
+resentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collaps=
+e;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: f=
+ixed;mso-table-lspace:0pt; mso-table-rspace:0pt;margin-right: 20px; margin-l=
+eft: 20px;" width=3D"610"><tbody><tr><td class=3D"table-w-bg-color cke_table-fak=
+ed-selection" valign=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%;"><div class=3D"cke_editable cke_editable_inline cke_contents=
+_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p style=3D"margin:=
+ 0;line-height:1.2; background-color:#ffffff"><span style=3D"font-size:11pt; f=
+ont-variant-ligatures:normal; font-variant-east-asian:normal; font-variant-p=
+osition:normal; white-space:pre-wrap"><span style=3D"font-family:Arial"><span =
+style=3D"color:#000000"><span style=3D"font-weight:400"><span style=3D"font-style:=
+normal"><span style=3D"text-decoration:none">Friend,</span></span></span></spa=
+n></span></span></p><p style=3D"margin: 0;line-height:1.2; background-color:#f=
+fffff"><br></p><p style=3D"margin: 0;line-height:1.2; background-color:#ffffff=
+"><span style=3D"font-size:11pt; font-variant-ligatures:normal; font-variant-e=
+ast-asian:normal; font-variant-position:normal; white-space:pre-wrap"><span =
+style=3D"font-family:Arial"><span style=3D"color:#000000"><span style=3D"font-weig=
+ht:400"><span style=3D"font-style:normal"><span style=3D"text-decoration:none">A=
+s a community, a Commonwealth, and a nation, we=E2=80=99re at a pivotal moment in =
+the fight against COVID-19. Cases are reaching all-time highs almost every d=
+ay. Hospitalizations are increasing. And tragically, more and more people ar=
+e dying from this dangerous virus.</span></span></span></span></span></span>=
+</p><p style=3D"margin: 0;line-height:1.2; background-color:#ffffff"><br></p><=
+p style=3D"margin: 0;line-height:1.2; background-color:#ffffff"><span style=3D"f=
+ont-size:11pt; font-variant-ligatures:normal; font-variant-east-asian:normal=
+; font-variant-position:normal; white-space:pre-wrap"><span style=3D"font-fami=
+ly:Arial"><span style=3D"color:#000000"><span style=3D"font-weight:400"><span st=
+yle=3D"font-style:normal"><span style=3D"text-decoration:none">This has placed e=
+ven more pressure on our frontline health care workers who have been working=
+ tirelessly for the past nine months to save as many lives as possible. It=E2=80=
+=99s critical that we keep them at the forefront of all we do -- from securing=
+ additional pandemic relief to simple things like wearing a mask during a vi=
+sit to the grocery store.</span></span></span></span></span></span></p><p st=
+yle=3D"margin: 0;line-height:1.2; background-color:#ffffff"><br></p><p style=3D"=
+margin: 0;line-height:1.2; background-color:#ffffff"><span style=3D"font-size:=
+11pt; font-variant-ligatures:normal; font-variant-east-asian:normal; font-va=
+riant-position:normal; white-space:pre-wrap"><span style=3D"font-family:Arial"=
+><span style=3D"color:#000000"><span style=3D"font-weight:400"><span style=3D"font=
+-style:normal"><span style=3D"text-decoration:none">That=E2=80=99s why <strong style=
+=3D"font-weight: bold;">TOMORROW</strong></span></span></span></span></span></=
+span><span style=3D"font-size:11pt; font-variant-ligatures:normal; font-varian=
+t-east-asian:normal; font-variant-position:normal; white-space:pre-wrap"><sp=
+an style=3D"font-family:Arial"><span style=3D"color:#000000"><span style=3D"font-w=
+eight:700"><span style=3D"font-style:normal"><span style=3D"text-decoration:none=
+"> at 4pm</span></span></span></span></span></span><span style=3D"font-size:11=
+pt; font-variant-ligatures:normal; font-variant-east-asian:normal; font-vari=
+ant-position:normal; white-space:pre-wrap"><span style=3D"font-family:Arial"><=
+span style=3D"color:#000000"><span style=3D"font-weight:400"><span style=3D"font-s=
+tyle:normal"><span style=3D"text-decoration:none">, I=E2=80=99ll be joined by </span=
+></span></span></span></span></span><span style=3D"font-size:11pt; font-varian=
+t-ligatures:normal; font-variant-east-asian:normal; font-variant-position:no=
+rmal; white-space:pre-wrap"><span style=3D"font-family:Arial"><span style=3D"col=
+or:#000000"><span style=3D"font-weight:700"><span style=3D"font-style:normal"><s=
+pan style=3D"text-decoration:none">Katie Murphy, President of the Massachusett=
+s Nurses Association</span></span></span></span></span></span><span style=3D"f=
+ont-size:11pt; font-variant-ligatures:normal; font-variant-east-asian:normal=
+; font-variant-position:normal; white-space:pre-wrap"><span style=3D"font-fami=
+ly:Arial"><span style=3D"color:#000000"><span style=3D"font-weight:400"><span st=
+yle=3D"font-style:normal"><span style=3D"text-decoration:none"> and </span></spa=
+n></span></span></span></span><span style=3D"font-size:11pt; font-variant-liga=
+tures:normal; font-variant-east-asian:normal; font-variant-position:normal; =
+white-space:pre-wrap"><span style=3D"font-family:Arial"><span style=3D"color:#00=
+0000"><span style=3D"font-weight:700"><span style=3D"font-style:normal"><span st=
+yle=3D"text-decoration:none">Congressman Raul Ruiz, M.D</span></span></span></=
+span></span></span><span style=3D"font-size:11pt; font-variant-ligatures:norma=
+l; font-variant-east-asian:normal; font-variant-position:normal; white-space=
+:pre-wrap"><span style=3D"font-family:Arial"><span style=3D"color:#000000"><span=
+ style=3D"font-weight:400"><span style=3D"font-style:normal"><span style=3D"text-d=
+ecoration:none">., for a </span></span></span></span></span></span><span sty=
+le=3D"font-size:11pt; font-variant-ligatures:normal; font-variant-east-asian:n=
+ormal; font-variant-position:normal; white-space:pre-wrap"><span style=3D"font=
+-family:Arial"><span style=3D"color:#000000"><span style=3D"font-weight:700"><sp=
+an style=3D"font-style:normal"><span style=3D"text-decoration:none">Facebook Liv=
+e</span></span></span></span></span></span><span style=3D"font-size:11pt; font=
+-variant-ligatures:normal; font-variant-east-asian:normal; font-variant-posi=
+tion:normal; white-space:pre-wrap"><span style=3D"font-family:Arial"><span sty=
+le=3D"color:#000000"><span style=3D"font-weight:400"><span style=3D"font-style:nor=
+mal"><span style=3D"text-decoration:none"> discussion on the challenges our he=
+alth care heroes are facing and what we can do to continue supporting them.<=
+/span></span></span></span></span></span></p><p style=3D"margin: 0;line-height=
+:1.2; background-color:#ffffff"><br></p><p style=3D"margin: 0;line-height:1.2;=
+ text-align:center; background-color:#ffffff"><u><a data-cke-saved-href=3D"htt=
+ps://trahan.house.gov/components/redirect/r.aspx?ID=3D2099-1321195" href=3D"http=
+s://www.facebook.com/RepLoriTrahan/posts/756764948380777" style=3D"-webkit-tex=
+t-size-adjust: 100%; -ms-text-size-adjust: 100%;"><span style=3D"color:#2980b9=
+;"><span style=3D"font-size:11pt; font-variant-ligatures:normal; font-variant-=
+east-asian:normal; font-variant-position:normal; white-space:pre-wrap"><span=
+ style=3D"font-family:Arial"><span style=3D"font-weight:700"><span style=3D"font-s=
+tyle:normal"><span style=3D"text-decoration:none">CLICK HERE</span></span></sp=
+an></span></span></span></a></u><span style=3D"font-size:11pt; font-variant-li=
+gatures:normal; font-variant-east-asian:normal; font-variant-position:normal=
+; white-space:pre-wrap"><span style=3D"font-family:Arial"><span style=3D"color:#=
+000000"><span style=3D"font-weight:400"><span style=3D"font-style:normal"><span =
+style=3D"text-decoration:none"> to RSVP and get a reminder when the event star=
+ts!</span></span></span></span></span></span></p><p style=3D"margin: 0;line-he=
+ight:1.2; text-align:center; background-color:#ffffff"><br></p><p style=3D"mar=
+gin: 0;line-height:1.2; text-align:center; background-color:#ffffff"><span t=
+abindex=3D"-1" contenteditable=3D"false" data-cke-widget-wrapper=3D"1" data-cke-fi=
+lter=3D"off" class=3D"cke_widget_wrapper cke_widget_inline cke_widget_image cke_=
+image_nocaption" data-cke-display-name=3D"image" data-cke-widget-id=3D"5" role=3D"=
+region" aria-label=3D" image widget"><a href=3D"https://trahan.house.gov/compone=
+nts/redirect/r.aspx?ID=3D2100-1321195" data-cke-saved-href=3D"https://www.facebo=
+ok.com/RepLoriTrahan/posts/756764948380777" data-cke-widget-keep-attr=3D"0" da=
+ta-widget=3D"image" class=3D"cke_widget_element" data-cke-widget-data=3D"%7B%22has=
+Caption%22%3Afalse%2C%22src%22%3A%22https%3A%2F%2Ftrahan.house.gov%2FUploade=
+dPhotos%2FMediumResolution%2Fbb5fe3a2-f335-4eeb-8bc0-979d7768116e.png%22%2C%=
+22alt%22%3A%22%22%2C%22width%22%3A535%2C%22height%22%3A295%2C%22style%22%3A%=
+22%22%2C%22lock%22%3Atrue%2C%22align%22%3A%22none%22%2C%22link%22%3A%7B%22li=
+nkText%22%3A%22%22%2C%22type%22%3A%22url%22%2C%22email%22%3A%7B%22address%22=
+%3A%22%22%2C%22subject%22%3A%22%22%2C%22body%22%3A%22%22%7D%2C%22tel%22%3A%2=
+2%22%2C%22url%22%3A%7B%22protocol%22%3A%22https%3A%2F%2F%22%2C%22url%22%3A%2=
+2www.facebook.com%2FRepLoriTrahan%2Fposts%2F756764948380777%22%7D%2C%22ancho=
+r%22%3A%7B%22name%22%3A%22%22%2C%22id%22%3A%22%22%7D%2C%22target%22%3A%7B%22=
+type%22%3A%22notSet%22%2C%22name%22%3A%22notSet%22%2C%22resizable%22%3A%22%2=
+2%2C%22status%22%3A%22%22%2C%22location%22%3A%22%22%2C%22toolbar%22%3A%22%22=
+%2C%22menubar%22%3A%22%22%2C%22fullscreen%22%3A%22%22%2C%22scrollbars%22%3A%=
+22%22%2C%22dependent%22%3A%22%22%2C%22width%22%3A%22%22%2C%22left%22%3A%22%2=
+2%2C%22height%22%3A%22%22%2C%22top%22%3A%22%22%7D%2C%22advanced%22%3A%7B%22a=
+dvId%22%3A%22%22%2C%22advLangDir%22%3A%22%22%2C%22advAccessKey%22%3A%22%22%2=
+C%22advName%22%3A%22%22%2C%22advLangCode%22%3A%22%22%2C%22advTabIndex%22%3A%=
+22%22%2C%22advTitle%22%3A%22%22%2C%22advContentType%22%3A%22%22%2C%22advCSSC=
+lasses%22%3A%22%22%2C%22advCharset%22%3A%22%22%2C%22advRel%22%3A%22%22%2C%22=
+advStyles%22%3A%22%22%7D%7D%2C%22classes%22%3Anull%2C%22widthPerc%22%3A%221%=
+22%7D" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><=
+img alt=3D"" src=3D"https://trahan.house.gov/UploadedPhotos/MediumResolution/bb5=
+fe3a2-f335-4eeb-8bc0-979d7768116e.png" width=3D"535" height=3D"295" style=3D"max-w=
+idth:600px;-ms-interpolation-mode: bicubic;"></a></span></p><p style=3D"margin=
+: 0;line-height:1.2; text-align:center; background-color:#ffffff"><br></p><p=
+ style=3D"margin: 0;line-height:1.2; background-color:#ffffff"><span style=3D"fo=
+nt-size:11pt; font-variant-ligatures:normal; font-variant-east-asian:normal;=
+ font-variant-position:normal; white-space:pre-wrap"><span style=3D"font-famil=
+y:Arial"><span style=3D"color:#000000"><span style=3D"background-color:#ffffff">=
+<span style=3D"font-weight:400"><span style=3D"font-style:normal"><span style=3D"t=
+ext-decoration:none">For questions about the coronavirus pandemic or help wi=
+th a federal agency, contact my office </span></span></span></span></span></=
+span></span><a data-cke-saved-href=3D"https://trahan.house.gov/components/redi=
+rect/r.aspx?ID=3D2101-1321195" href=3D"https://trahan.house.gov/contact/" style=3D=
+"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;text-decoration:=
+none"><span style=3D"color:#2980b9;"><span style=3D"font-size:11pt; font-variant=
+-ligatures:normal; font-variant-east-asian:normal; font-variant-position:nor=
+mal; white-space:pre-wrap"><span style=3D"font-family:Arial"><span style=3D"back=
+ground-color:#ffffff"><span style=3D"font-weight:700"><span style=3D"font-style:=
+normal"><span style=3D"text-decoration:underline"><span style=3D"text-decoration=
+-skip:none">HERE</span></span></span></span></span></span></span></span></a>=
+<span style=3D"font-size:11pt; font-variant-ligatures:normal; font-variant-eas=
+t-asian:normal; font-variant-position:normal; white-space:pre-wrap"><span st=
+yle=3D"font-family:Arial"><span style=3D"color:#000000"><span style=3D"background-=
+color:#ffffff"><span style=3D"font-weight:400"><span style=3D"font-style:normal"=
+><span style=3D"text-decoration:none">. As always - for coronavirus resources,=
+ you can visit my COVID-19 resource page </span></span></span></span></span>=
+</span></span><a data-cke-saved-href=3D"https://trahan.house.gov/components/re=
+direct/r.aspx?ID=3D2102-1321195" href=3D"https://trahan.house.gov/covid19/" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;text-decoratio=
+n:none"><span style=3D"color:#2980b9;"><span style=3D"font-size:11pt; font-varia=
+nt-ligatures:normal; font-variant-east-asian:normal; font-variant-position:n=
+ormal; white-space:pre-wrap"><span style=3D"font-family:Arial"><span style=3D"ba=
+ckground-color:#ffffff"><span style=3D"font-weight:700"><span style=3D"font-styl=
+e:normal"><span style=3D"text-decoration:underline"><span style=3D"text-decorati=
+on-skip:none">HERE</span></span></span></span></span></span></span></span></=
+a><span style=3D"font-size:11pt; font-variant-ligatures:normal; font-variant-e=
+ast-asian:normal; font-variant-position:normal; white-space:pre-wrap"><span =
+style=3D"font-family:Arial"><span style=3D"color:#000000"><span style=3D"backgroun=
+d-color:#ffffff"><span style=3D"font-weight:400"><span style=3D"font-style:norma=
+l"><span style=3D"text-decoration:none">.</span></span></span></span></span></=
+span></span></p><p style=3D"margin: 0;line-height:1.2; background-color:#fffff=
+f"><br></p><p style=3D"margin: 0;line-height:1.2; background-color:#ffffff"><!=
+--{cke_protected}{C}%3C!%2D%2D%7BC%7D%253C!%252D%252D%257BC%257D%25253C!%252=
+52D%25252D%25257BC%25257D%2525253C!%2525252D%2525252D%2525257BC%2525257D%252=
+525253C!%252525252D%252525252D%252525257BC%252525257D%25252525253C!%25252525=
+252D%25252525252D%25252525257BC%25252525257D%2525252525253C!%2525252525252D%=
+2525252525252D%2525252525257BC%2525252525257D%252525252525253C!%252525252525=
+252D%252525252525252D%252525252525257BC%252525252525257D%25252525252525253C!=
+%25252525252525252D%25252525252525252D%2525252525252525253Cmeta%252525252525=
+25252520charset%2525252525252525253D%25252525252525252522UTF-8%2525252525252=
+5252522%25252525252525252520%2525252525252525252F%2525252525252525253E%25252=
+525252525252D%25252525252525252D%25252525252525253E%252525252525252D%2525252=
+52525252D%252525252525253E%2525252525252D%2525252525252D%2525252525253E%2525=
+2525252D%25252525252D%25252525253E%252525252D%252525252D%252525253E%2525252D=
+%2525252D%2525253E%25252D%25252D%25253E%252D%252D%253E%2D%2D%3E--></p><table=
+ role=3D"presentation" align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" class=3D"cke_show_border" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt=
+;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 1=
+00%; -ms-text-size-adjust: 100%;"><tbody><tr><td valign=3D"top" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><p style=3D"margin: 0;te=
+xt-align: center;"><strong style=3D"font-weight: bold;">Warm regards,</strong>=
+</p></td></tr><tr><td valign=3D"top" style=3D"-webkit-text-size-adjust: 100%; -m=
+s-text-size-adjust: 100%;"><p style=3D"margin: 0;text-align: center;"><span ta=
+bindex=3D"-1" contenteditable=3D"false" data-cke-widget-wrapper=3D"1" data-cke-fil=
+ter=3D"off" class=3D"cke_widget_wrapper cke_widget_inline cke_widget_image cke_i=
+mage_nocaption" data-cke-display-name=3D"image" data-cke-widget-id=3D"4" role=3D"r=
+egion" aria-label=3D"Lori Trahan Signature image widget"><img data-cke-saved-s=
+rc=3D"https://trahan.house.gov/images/email/sig.png" src=3D"https://trahan.house=
+.gov/images/email/sig.png" alt=3D"Lori Trahan Signature" width=3D"200" data-cke-=
+widget-data=3D"%7B%22hasCaption%22%3Afalse%2C%22src%22%3A%22https%3A%2F%2Ftrah=
+an.house.gov%2Fimages%2Femail%2Fsig.png%22%2C%22alt%22%3A%22Lori%20Trahan%20=
+Signature%22%2C%22width%22%3A%22200%22%2C%22height%22%3A%22%22%2C%22style%22=
+%3A%22%22%2C%22lock%22%3Atrue%2C%22align%22%3A%22none%22%2C%22classes%22%3An=
+ull%7D" data-cke-widget-upcasted=3D"1" data-cke-widget-keep-attr=3D"0" data-widg=
+et=3D"image" class=3D"cke_widget_element" style=3D"max-width:600px;-ms-interpolati=
+on-mode: bicubic;"></span></p></td></tr><tr height=3D"0"><td style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;text-align: center;"><br></=
+td></tr><tr><td valign=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;"><p style=3D"margin: 0;text-align: center;">Lori Trahan<br=
+>Member of Congress<br><span tabindex=3D"-1" contenteditable=3D"false" data-cke-=
+widget-wrapper=3D"1" data-cke-filter=3D"off" class=3D"cke_widget_wrapper cke_widge=
+t_inline cke_widget_image cke_image_nocaption" data-cke-display-name=3D"image"=
+ data-cke-widget-id=3D"3" role=3D"region" aria-label=3D"facebook icon image widget=
+"><a target=3D"_blank" data-cke-saved-href=3D"https://trahan.house.gov/component=
+s/redirect/r.aspx?ID=3D2103-1321195" href=3D"https://www.facebook.com/reploritra=
+han/" data-cke-widget-data=3D"%7B%22hasCaption%22%3Afalse%2C%22src%22%3A%22htt=
+ps%3A%2F%2Ftrahan.house.gov%2Fimages%2Femail%2Ffacebook-bl.png%22%2C%22alt%2=
+2%3A%22facebook%20icon%22%2C%22width%22%3A%2232%22%2C%22height%22%3A%22%22%2=
+C%22style%22%3A%22%22%2C%22lock%22%3Atrue%2C%22align%22%3A%22none%22%2C%22li=
+nk%22%3A%7B%22type%22%3A%22url%22%2C%22url%22%3A%7B%22protocol%22%3A%22https=
+%3A%2F%2F%22%2C%22url%22%3A%22www.facebook.com%2Freploritrahan%2F%22%7D%2C%2=
+2target%22%3A%7B%22type%22%3A%22_blank%22%2C%22name%22%3A%22_blank%22%7D%2C%=
+22advanced%22%3A%7B%22advCSSClasses%22%3A%22%22%7D%7D%2C%22classes%22%3Anull=
+%7D" data-cke-widget-upcasted=3D"1" data-cke-widget-keep-attr=3D"0" data-widget=3D=
+"image" class=3D"cke_widget_element" style=3D"-webkit-text-size-adjust: 100%; -m=
+s-text-size-adjust: 100%;"><img alt=3D"facebook icon" width=3D"32" data-cke-save=
+d-src=3D"https://trahan.house.gov/images/email/facebook-bl.png" src=3D"https://t=
+rahan.house.gov/images/email/facebook-bl.png" style=3D"max-width:600px;-ms-int=
+erpolation-mode: bicubic;"></a></span>&nbsp;<span tabindex=3D"-1" contentedita=
+ble=3D"false" data-cke-widget-wrapper=3D"1" data-cke-filter=3D"off" class=3D"cke_wid=
+get_wrapper cke_widget_inline cke_widget_image cke_image_nocaption" data-cke=
+-display-name=3D"image" data-cke-widget-id=3D"2" role=3D"region" aria-label=3D"twitt=
+er icon image widget"><a target=3D"_blank" data-cke-saved-href=3D"https://trahan=
+.house.gov/components/redirect/r.aspx?ID=3D2104-1321195" href=3D"https://twitter=
+.com/reploritrahan" data-cke-widget-data=3D"%7B%22hasCaption%22%3Afalse%2C%22s=
+rc%22%3A%22https%3A%2F%2Ftrahan.house.gov%2Fimages%2Femail%2Ftwitter-bl.png%=
+22%2C%22alt%22%3A%22twitter%20icon%22%2C%22width%22%3A%2232%22%2C%22height%2=
+2%3A%22%22%2C%22style%22%3A%22%22%2C%22lock%22%3Atrue%2C%22align%22%3A%22non=
+e%22%2C%22link%22%3A%7B%22type%22%3A%22url%22%2C%22url%22%3A%7B%22protocol%2=
+2%3A%22https%3A%2F%2F%22%2C%22url%22%3A%22twitter.com%2Freploritrahan%22%7D%=
+2C%22target%22%3A%7B%22type%22%3A%22_blank%22%2C%22name%22%3A%22_blank%22%7D=
+%2C%22advanced%22%3A%7B%22advCSSClasses%22%3A%22%22%7D%7D%2C%22classes%22%3A=
+null%7D" data-cke-widget-upcasted=3D"1" data-cke-widget-keep-attr=3D"0" data-wid=
+get=3D"image" class=3D"cke_widget_element" style=3D"-webkit-text-size-adjust: 100%=
+; -ms-text-size-adjust: 100%;"><img alt=3D"twitter icon" width=3D"32" data-cke-s=
+aved-src=3D"https://trahan.house.gov/images/email/twitter-bl.png" src=3D"https:/=
+/trahan.house.gov/images/email/twitter-bl.png" style=3D"max-width:600px;-ms-in=
+terpolation-mode: bicubic;"></a></span>&nbsp;<span tabindex=3D"-1" contentedit=
+able=3D"false" data-cke-widget-wrapper=3D"1" data-cke-filter=3D"off" class=3D"cke_wi=
+dget_wrapper cke_widget_inline cke_widget_image cke_image_nocaption" data-ck=
+e-display-name=3D"image" data-cke-widget-id=3D"1" role=3D"region" aria-label=3D"inst=
+agram icon image widget"><a target=3D"_blank" data-cke-saved-href=3D"https://tra=
+han.house.gov/components/redirect/r.aspx?ID=3D2105-1321195" href=3D"https://www.=
+instagram.com/reploritrahan/" data-cke-widget-data=3D"%7B%22hasCaption%22%3Afa=
+lse%2C%22src%22%3A%22https%3A%2F%2Ftrahan.house.gov%2Fimages%2Femail%2Finsta=
+gram-bl.png%22%2C%22alt%22%3A%22instagram%20icon%22%2C%22width%22%3A%2232%22=
+%2C%22height%22%3A%22%22%2C%22style%22%3A%22%22%2C%22lock%22%3Atrue%2C%22ali=
+gn%22%3A%22none%22%2C%22link%22%3A%7B%22type%22%3A%22url%22%2C%22url%22%3A%7=
+B%22protocol%22%3A%22https%3A%2F%2F%22%2C%22url%22%3A%22www.instagram.com%2F=
+reploritrahan%2F%22%7D%2C%22target%22%3A%7B%22type%22%3A%22_blank%22%2C%22na=
+me%22%3A%22_blank%22%7D%2C%22advanced%22%3A%7B%22advCSSClasses%22%3A%22%22%7=
+D%7D%2C%22classes%22%3Anull%7D" data-cke-widget-upcasted=3D"1" data-cke-widget=
+-keep-attr=3D"0" data-widget=3D"image" class=3D"cke_widget_element" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"instagram ic=
+on" width=3D"32" data-cke-saved-src=3D"https://trahan.house.gov/images/email/ins=
+tagram-bl.png" src=3D"https://trahan.house.gov/images/email/instagram-bl.png" =
+style=3D"max-width:600px;-ms-interpolation-mode: bicubic;"></a></span>&nbsp;<s=
+pan tabindex=3D"-1" contenteditable=3D"false" data-cke-widget-wrapper=3D"1" data-c=
+ke-filter=3D"off" class=3D"cke_widget_wrapper cke_widget_inline cke_widget_image=
+ cke_image_nocaption" data-cke-display-name=3D"image" data-cke-widget-id=3D"0" r=
+ole=3D"region" aria-label=3D"youtube icon image widget"><a target=3D"_blank" data-=
+cke-saved-href=3D"https://trahan.house.gov/components/redirect/r.aspx?ID=3D2106-=
+1321195" href=3D"https://www.youtube.com/channel/UCsRXg0BmoS4Rkjz-pqX1PmQ" dat=
+a-cke-widget-data=3D"%7B%22hasCaption%22%3Afalse%2C%22src%22%3A%22https%3A%2F%=
+2Ftrahan.house.gov%2Fimages%2Femail%2Fyoutube-bl.png%22%2C%22alt%22%3A%22you=
+tube%20icon%22%2C%22width%22%3A%2232%22%2C%22height%22%3A%22%22%2C%22style%2=
+2%3A%22%22%2C%22lock%22%3Atrue%2C%22align%22%3A%22none%22%2C%22link%22%3A%7B=
+%22type%22%3A%22url%22%2C%22url%22%3A%7B%22protocol%22%3A%22https%3A%2F%2F%2=
+2%2C%22url%22%3A%22www.youtube.com%2Fchannel%2FUCsRXg0BmoS4Rkjz-pqX1PmQ%22%7=
+D%2C%22target%22%3A%7B%22type%22%3A%22_blank%22%2C%22name%22%3A%22_blank%22%=
+7D%2C%22advanced%22%3A%7B%22advCSSClasses%22%3A%22%22%7D%7D%2C%22classes%22%=
+3Anull%7D" data-cke-widget-upcasted=3D"1" data-cke-widget-keep-attr=3D"0" data-w=
+idget=3D"image" class=3D"cke_widget_element" style=3D"-webkit-text-size-adjust: 10=
+0%; -ms-text-size-adjust: 100%;"><img alt=3D"youtube icon" width=3D"32" data-cke=
+-saved-src=3D"https://trahan.house.gov/images/email/youtube-bl.png" src=3D"https=
+://trahan.house.gov/images/email/youtube-bl.png" style=3D"max-width:600px;-ms-=
+interpolation-mode: bicubic;"></a></span></p></td></tr></tbody></table><p st=
+yle=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"=
+><span style=3D"font-size:11pt; font-variant-ligatures:normal; font-variant-ea=
+st-asian:normal; font-variant-position:normal; white-space:pre-wrap"><span s=
+tyle=3D"font-family:Arial"><span style=3D"color:#000000"><span style=3D"font-weigh=
+t:400"><span style=3D"font-style:normal"><span style=3D"text-decoration:none">P.=
+S. Due to the ongoing public health crisis, my offices will continue to be p=
+hysically closed. However, my staff and I are teleworking full time and can =
+be reached via phone at 978-459-0101 or by email at Rep.LoriTrahan@mail.hous=
+e.gov.</span></span></span></span></span></span></p><p style=3D"margin: 0;line=
+-height:1.2; background-color:#ffffff"><br></p></div></td></tr></tbody></tab=
+le></div></div><div class=3D"component " style=3D"padding: 0px !important;"><div=
+ class=3D"editable" style=3D"overflow: hidden;width:100%"><table class=3D"responsi=
+ve-table" role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" sty=
+le=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border=
+-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;table-layout: fixed;mso-table-lspace:0pt; mso-table-rspace:0pt;margin-righ=
+t: 20px; margin-left: 20px;" width=3D"610"><tbody><tr><td class=3D"table-w-bg-co=
+lor" valign=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjus=
+t: 100%;"><div class=3D"cke_editable cke_editable_inline cke_contents_ltr cke_=
+show_borders cke_focus" style=3D"overflow: hidden;"><p style=3D"margin: 0;"><br>=
+</p></div></td></tr></tbody></table></div></div></div><table role=3D"presentat=
+ion" class=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-tex=
+t-size-adjust: 100%;"><tbody><tr height=3D"20"><td style=3D"-webkit-text-size-ad=
+just: 100%; -ms-text-size-adjust: 100%;"><span></span></td></tr></tbody></ta=
+ble></td></tr></tbody></table><table role=3D"presentation" width=3D"650" class=3D"=
+responsive-table" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-=
+text-size-adjust: 100%;font-family: Arial, Helvetica, sans-serif; background=
+-color: #f5f5f5;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0=
+" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><tbody><tr><td align=3D"center"=
+ valign=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;font-family: Arial, Helvetica, sans-serif; font-size: 16px;"><img alt=3D"O=
+ffice Locations" width=3D"650" style=3D"-ms-interpolation-mode: bicubic;display:=
+ block; width: 650px;" src=3D"https://trahan.house.gov/images/email/footer19.j=
+pg"> </td></tr><tr><td valign=3D"middle" align=3D"center" style=3D"-webkit-text-si=
+ze-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background-color: #=
+f5f5f5;">&nbsp; </td></tr><tr><td valign=3D"middle" align=3D"center" style=3D"-web=
+kit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #08244a; backg=
+round-color: #f5f5f5; padding: 0 20px;"><table role=3D"presentation" width=3D"10=
+0%" cellpadding=3D"0" cellspacing=3D"10" style=3D"-webkit-text-size-adjust: 100%; =
+-ms-text-size-adjust: 100%;text-align:center;"><tbody><tr><td valign=3D"middle=
+" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust=
+: 100%;text-align:center;"><table role=3D"presentation" cellpadding=3D"0" class=3D=
+"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"32.9%" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: 'Times New =
+Roman', times, serif; text-align:center; font-size: 14px; color: #08244a; ma=
+rgin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tbody><tr><td s=
+tyle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family=
+: 'Times New Roman', times, serif;"><strong style=3D"font-weight: bold;font-fa=
+mily: Arial, Helvetica, sans-serif;">WASHINGTON, DC OFFICE</strong><br>1616 =
+Longworth HOB<br>Washington, DC 20515<br>Phone: (202) 225-3411 </td></tr></t=
+body></table><table role=3D"presentation" cellpadding=3D"0" class=3D"responsive-ta=
+ble" align=3D"left" cellspacing=3D"0" width=3D"32.9%" style=3D"-webkit-text-size-adj=
+ust: 100%; -ms-text-size-adjust: 100%;font-family: 'Times New Roman', times,=
+ serif; text-align:center; font-size: 14px; color: #08244a; margin: 10px 0;m=
+so-table-lspace: 0pt; mso-table-rspace: 0pt;"><tbody><tr><td style=3D"-webkit-=
+text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: 'Times New R=
+oman', times, serif;"><strong style=3D"font-weight: bold;font-family: Arial, H=
+elvetica, sans-serif;">LAWRENCE OFFICE</strong><br>15 Union Street<br>4th Fl=
+oor<br>Lawrence, MA 01840<br>Phone: (978) 258-1138 </td></tr></tbody></table=
+><table role=3D"presentation" cellpadding=3D"0" class=3D"responsive-table" align=3D"=
+left" cellspacing=3D"0" width=3D"32.9%" style=3D"-webkit-text-size-adjust: 100%; -=
+ms-text-size-adjust: 100%;font-family: 'Times New Roman', times, serif; text=
+-align:center; font-size: 14px; color: #08244a; margin: 10px 0;mso-table-lsp=
+ace: 0pt; mso-table-rspace: 0pt;"><tbody><tr><td style=3D"-webkit-text-size-ad=
+just: 100%; -ms-text-size-adjust: 100%;font-family: 'Times New Roman', times=
+, serif;"><strong style=3D"font-weight: bold;font-family: Arial, Helvetica, sa=
+ns-serif;">LOWELL OFFICE</strong><br>126 John Street<br>Lowell, MA 01852<br>=
+Phone: (978) 459-0101 </td></tr></tbody></table></td></tr></tbody></table></=
+td></tr><tr><td valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;color: #08244a; background-color: #f5f5=
+f5; padding: 0 20px;"><table role=3D"presentation" width=3D"100%" cellpadding=3D"0=
+" cellspacing=3D"10" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adju=
+st: 100%;text-align:center;"><tbody><tr><td valign=3D"middle" align=3D"center" s=
+tyle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;text-align:=
+center;"><table role=3D"presentation" cellpadding=3D"0" class=3D"responsive-table"=
+ align=3D"left" cellspacing=3D"0" width=3D"32.9%" style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;font-family: 'Times New Roman', times, ser=
+if; text-align:center; font-size: 14px; color: #08244a; margin: 10px 0;mso-t=
+able-lspace: 0pt; mso-table-rspace: 0pt;"><tbody><tr><td style=3D"-webkit-text=
+-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: 'Times New Roman=
+', times, serif;"><strong style=3D"font-weight: bold;font-family: Arial, Helve=
+tica, sans-serif;">FITCHBURG OFFICE HOURS</strong><br>Fitchburg State Univer=
+sity Center for Professional Studies<br>150B Main Street<br>Fitchburg, MA 01=
+420<br>Phone: (978) 459-0101<br>Hours: Tuesdays &amp; Thursdays, 8:30 AM - 1=
+2:00 PM </td></tr></tbody></table><table role=3D"presentation" cellpadding=3D"0"=
+ class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"32.9%" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: 'Tim=
+es New Roman', times, serif; text-align:center; font-size: 14px; color: #082=
+44a; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tbody><t=
+r><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font=
+-family: 'Times New Roman', times, serif;"><strong style=3D"font-weight: bold;=
+font-family: Arial, Helvetica, sans-serif;">ACTON OFFICE HOURS</strong><br>A=
+cton Town Hall, Room 121<br>472 Main Street<br>Acton, MA 01720<br>Phone: (97=
+8) 459-0101<br>Hours: 1st and 3rd Wednesdays of the Month, 8:30 AM - 12:00 P=
+M<br>15 Union Street </td></tr></tbody></table><table role=3D"presentation" ce=
+llpadding=3D"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"3=
+2.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font=
+-family: 'Times New Roman', times, serif; text-align:center; font-size: 14px=
+; color: #08244a; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0p=
+t;"><tbody><tr><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adju=
+st: 100%;font-family: 'Times New Roman', times, serif;"><strong style=3D"font-=
+weight: bold;font-family: Arial, Helvetica, sans-serif;">HUDSON OFFICE HOURS=
+</strong><br>Hudson Public Library<br>3 Washington Street<br>Hudson, MA 0174=
+9<br>Phone: (978) 459-0101<br>Hours: 2nd and 4th Wednesdays of the Month, 9:=
+00 AM - 12:00 PM </td></tr></tbody></table></td></tr></tbody></table></td></=
+tr><tr><td valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-adjust: 1=
+00%; -ms-text-size-adjust: 100%;height:30px; background-color: #f5f5f5;">&nb=
+sp; </td></tr><tr><td valign=3D"middle" align=3D"center" style=3D"-webkit-text-siz=
+e-adjust: 100%; -ms-text-size-adjust: 100%;color: #08244a; background-color:=
+ #f5f5f5;"><a target=3D"_blank" href=3D"https://trahan.house.gov/components/redi=
+rect/r.aspx?ID=3D2107-1321195" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;"><img alt=3D"facebook icon" width=3D"32" src=3D"https://trahan=
+.house.gov/images/email/facebook-bl.png" style=3D"-ms-interpolation-mode: bicu=
+bic;border-width: 0px; border-style: solid; width: 32px;"></a> &nbsp;<a targ=
+et=3D"_blank" href=3D"https://trahan.house.gov/components/redirect/r.aspx?ID=3D210=
+8-1321195" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%=
+;"><img alt=3D"twitter icon" width=3D"32" src=3D"https://trahan.house.gov/images/e=
+mail/twitter-bl.png" style=3D"-ms-interpolation-mode: bicubic;border-width: 0p=
+x; border-style: solid; width: 32px;"></a> &nbsp;<a target=3D"_blank" href=3D"ht=
+tps://trahan.house.gov/components/redirect/r.aspx?ID=3D2109-1321195" style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"instagr=
+am icon" width=3D"32" src=3D"https://trahan.house.gov/images/email/instagram-bl.=
+png" style=3D"-ms-interpolation-mode: bicubic;border-width: 0px; border-style:=
+ solid; width: 32px;"></a> &nbsp;<a target=3D"_blank" href=3D"https://trahan.hou=
+se.gov/components/redirect/r.aspx?ID=3D2110-1321195" style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"youtube icon" width=3D"32=
+" src=3D"https://trahan.house.gov/images/email/youtube-bl.png" style=3D"-ms-inte=
+rpolation-mode: bicubic;border-width: 0px; border-style: solid; width: 32px;=
+"></a> </td></tr><tr><td valign=3D"middle" align=3D"center" style=3D"-webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background-color:=
+ #f5f5f5;">&nbsp; </td></tr><tr><td valign=3D"middle" style=3D"-webkit-text-size=
+-adjust: 100%; -ms-text-size-adjust: 100%;background-color: #f5f5f5;"><table=
+ role=3D"presentation" cellpadding=3D"0" cellspacing=3D"20" align=3D"center" width=3D"=
+90%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><tb=
+ody><tr><td valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;color: #08244a; font-size: 15px; font-famil=
+y: Arial, Helvetica, sans-serif;"><a target=3D"_blank" href=3D"https://trahan.ho=
+use.gov/components/redirect/r.aspx?ID=3D2111-1321195" style=3D"-webkit-text-size=
+-adjust: 100%; -ms-text-size-adjust: 100%;color: #08244a; text-decoration:no=
+ne; font-family: Arial, Helvetica, sans-serif;">Unsubscribe</a>&nbsp;|&nbsp;=
+ <a target=3D"_blank" href=3D"https://www.facebook.com/sharer.php?u=3Dhttps://trah=
+an.house.gov/news/email/show.aspx?ID=3DDWAMHL4U55CZQ&amp;t=3DJOIN+ME%3a+Supporti=
+ng+our+health+care+heroes" style=3D"-webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%;color: #08244a; text-decoration:none; font-family: Arial, H=
+elvetica, sans-serif;">Share on Facebook</a>&nbsp;|&nbsp; <a target=3D"_blank"=
+ href=3D"https://trahan.house.gov/Components/Redirect/twitter.aspx?url=3Dhttps:/=
+/trahan.house.gov/news/email/show.aspx?ID=3DDWAMHL4U55CZQ&amp;name=3DJOIN+ME%3a+=
+Supporting+our+health+care+heroes" style=3D"-webkit-text-size-adjust: 100%; -m=
+s-text-size-adjust: 100%;color: #08244a; text-decoration:none; font-family: =
+Arial, Helvetica, sans-serif;">Share on Twitter</a> </td></tr></tbody></tabl=
+e></td></tr><tr><td valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background-color: #f5f=
+5f5;">&nbsp; </td></tr></tbody></table><table role=3D"presentation" width=3D"100=
+%" align=3D"center" style=3D"font-family: Georgia, times, serif; background-colo=
+r: #ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" mar=
+ginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><tbody><tr><td valign=3D"middle" ali=
+gn=3D"center" style=3D"color: #000000; font-size: 16px; text-align: left;"><img =
+src=3D"https://trahan.house.gov/images/spacerx851-1321195.open" width=3D"20" hei=
+ght=3D"1"> <br><a href=3D"https://trahan.house.gov/news/email/show.aspx?ID=3DDWAMH=
+L4U55CZQ">Click Here</a> to view this email in your browser <br><a href=3D"htt=
+ps://trahan.house.gov/Forms/EmailSignup/?Delete=3Dtrue&amp;MessageID=3D851&amp;E=
+mail=3DDavid.Todisco@mail.house.gov">Click Here</a> to be removed from this li=
+st </td></tr></tbody></table></body></html>
+
+--B_3693824145_1535521207--
+

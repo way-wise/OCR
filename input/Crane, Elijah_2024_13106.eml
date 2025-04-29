@@ -1,0 +1,681 @@
+Received: from PH0PR09MB10510.namprd09.prod.outlook.com
+ (2603:10b6:510:2c8::10) by MW4PR09MB10058.namprd09.prod.outlook.com with
+ HTTPS; Tue, 21 May 2024 19:25:18 +0000
+Received: from DM6PR09CA0032.namprd09.prod.outlook.com (2603:10b6:5:160::45)
+ by PH0PR09MB10510.namprd09.prod.outlook.com (2603:10b6:510:2c8::10) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7611.18; Tue, 21 May
+ 2024 19:25:16 +0000
+Received: from BL02EPF0001B417.namprd09.prod.outlook.com
+ (2603:10b6:5:160:cafe::96) by DM6PR09CA0032.outlook.office365.com
+ (2603:10b6:5:160::45) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7587.36 via Frontend
+ Transport; Tue, 21 May 2024 19:25:16 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.51.113)
+ smtp.mailfrom=mail.house.gov; dkim=fail (body hash did not verify)
+ header.d=mail.house.gov;dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.51.113 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.51.113;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.51.113) by
+ BL02EPF0001B417.mail.protection.outlook.com (10.167.242.197) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7611.14 via Frontend Transport; Tue, 21 May 2024 19:25:16 +0000
+Received: from EXCH1923.US.House.gov (143.228.51.115) by EXCH1921.US.House.gov
+ (143.228.51.113) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1544.9; Tue, 21 May
+ 2024 15:25:11 -0400
+Received: from serg-bulk2-h.house.gov (143.228.145.36) by
+ EXCH1923.US.House.gov (143.228.51.115) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1544.9
+ via Frontend Transport; Tue, 21 May 2024 15:25:11 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mail.house.gov; h=from : to : date
+ : subject : content-type : message-id : mime-version;
+ s=january2024-msgb-mhg; bh=MHOEVabOm58vEmFoISbNMxuzi4aA3IFmDZJl8aF+7wg=;
+ b=QN9h6YqkCVc5VBN0+YaixH5q9ahyifzE+ahvyQEVSype2g0gjkW5AB594I1aZ+BrHk5M
+ S+RQ41cB5pBvG+vhsftoNdwYD9RY+5tqB8PrzEgUrRXby/bIiftjfkS+6Cx6DYD6CpAA
+ Ai+6LczeN/TexnMWCU1OBV/GGoJ3a8oIM25L0fUmFYj3893srZg5qDV22zaUx5xFBsoc
+ 3UanLpXROPcfaumqi2VL35RA0XhIOKNpL5YpMsrWr8uqpr8Jv7rjkzvpUXxxSCTuAqLx
+ QPBNZCelALq0pDFMMaj4W9pUhDonhyWdhD1Tav5OeIAciOOqcNAjLa9RDJ/U+Fdar6wE aw== 
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=from : to : date :
+ subject : content-type : message-id : mime-version; s=august2019-msgb-hg;
+ bh=MHOEVabOm58vEmFoISbNMxuzi4aA3IFmDZJl8aF+7wg=;
+ b=p5SCTQnx0UlbiX8BWg04v38ONl3WL4XdCKN5RRNy+u41EuGmXb3S5CNB5O5kDjlt/0G6
+ ex7R8XydYGtybxETWFtQEQHk6n4skP5XqHaDUJ15KtctgZ0v6mCe6k78s73rJLwbsM48
+ ruaAma0yTm0CWtGO1oyAq+5/hwktd4B8rGRZ4tS7JKBMXpU/eEU7Zpj37Cg96zeERxan
+ EQbS45xA5LB1JoF7P8/mVG6Zq8BNfvpB+KVX8hFPyue5QqbfxjW/q3KbWxzX0Y7G9C5S
+ 7TR7jM7xZl0YHEc100nwAhqh4RfqOJsJpp465G6yBP+XgM7T1max4dF1X5ESkKnHES59 9Q== 
+Received: from FIRESIDEADMIN04 (firesideadmin04.us.house.gov [143.228.58.69])
+	by serg-bulk2-h.house.gov (8.17.1.19/8.17.1.19) with ESMTP id 44LJPAjA022073;
+	Tue, 21 May 2024 15:25:10 -0400
+Message-Id: <3y6qfra5d8-1@serg-bulk2-h.house.gov>
+envelope-from: repelijahcrane@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+X-House-Vendor-Seg: Fireside21-1
+From: "Rep. Elijah Crane" <repelijahcrane@mail.house.gov>
+To: Zach.Kahler@mail.house.gov
+Date: 21 May 2024 15:25:10 -0400
+Subject: TEST TOMORROW: Join a Tele-Town Hall with Congressman Eli Crane
+Content-Type: multipart/alternative;
+ boundary=--boundary_1699_3222c466-a1e0-49cc-adf9-0e4729caa2b8
+X-Proofpoint-Virus-Version: vendor=baseguard
+ engine=ICAP:2.0.293,Aquarius:18.0.1039,Hydra:6.0.650,FMLib:17.12.28.16
+ definitions=2024-05-21_12,2024-05-21_01,2024-05-17_01
+Return-Path: Rep.EliCrane@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1921.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 21 May 2024 19:25:16.5594
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ b4af7095-5d58-4d57-d533-08dc79cbbec3
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1923.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted: BL02EPF0001B417.namprd09.prod.outlook.com
+X-CrossPremisesHeadersFiltered: BL02EPF0001B417.namprd09.prod.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ BL02EPF0001B417:EE_|PH0PR09MB10510:EE_|MW4PR09MB10058:EE_
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: b4af7095-5d58-4d57-d533-08dc79cbbec3
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam:
+ BCL:0;ARA:13230031|82310400017|366007|69100299006|41050700001;
+X-Forefront-Antispam-Report:
+ CIP:143.228.51.113;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:(13230031)(82310400017)(366007)(69100299006)(41050700001);DIR:INT;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 21 May 2024 19:25:16.5126
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: b4af7095-5d58-4d57-d533-08dc79cbbec3
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.51.113];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1923.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PH0PR09MB10510
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.7414804
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.7587.028
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(425001)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	+fFT3EXXd3OI9Q+68/61yW0/ejXsS3iH+C4qX5KGnCbfZRgLdax3iUNPOyAAR4huRkG86DaXYaUhFt/5a7Bxjfod3O9sJTAt6duzxQjydNjwHd4mQjM4BKHN7W6hai0cSm91tDiQ/cf6kkYIySBbUcCjcOEgfVDPLvpHEPhjQ0oTuK44uVrWhxhK/dBZ2Z9TINZaj3VhKqGjAx03vat33AnRohlTRtht8xgvCUU8+C+QWPuE3DlitPaPbjuGfjiplnnVjHn7YGLBAHrFl3UubUny0Kpztdu3XKmg6hW66Kt4/Flkk9B9lvFwTyofOOTfp+LEm1kej32v/1QwrDIx8QXIiM6bZ2VW+sLsNrcVXr1pyST5mwCaKmY4jLC1V6eBvIRtLUJrI9DSud6OGf3GRWHQ8z/f6mEy5yGgubUpVh0u0H0iouEfKd5k/3wrfGZxnwZUFRnjuovUJmFfLlE1whhHz0X34SVzRemK6T4UMgHUnAULRZRkeSzLzqnpaVyD8MbW5MtDrSvCteuOolSjWp3KCczoTt4KYC5LqpICdtx8vhnlJ3yy/t+wtTiLrwMeVG6r7SFhZBebmPI3lVxhQ2lMm3DFs372+8rpwqLiDPHD3rVLbEhKTOsyET04nxLMv/kZHt2mLyZTGg1SCeclLpH/DtNF1cZ8lN2MJSzWTBk/nndPuzM2mWW/vw4rLbY2zcrCcQyjJbZIt6rSrApgG+Muwk5j/Cd7CxnrmGTs7rpJ9tiYeRHPV1AwhyKkfycvB1yeF5fPabdsmy4cP/A09gibe+9hlIxelF88Y66DCOjc3xKsPHHJt/LbnZw965vClPp2f6MSKT2xOjv9Wp2DKLppFO91Jb0LTawPOoHRlzI=
+MIME-Version: 1.0
+
+----boundary_1699_3222c466-a1e0-49cc-adf9-0e4729caa2b8
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+UmVwcmVzZW50YXRpdmUgRWxpamFoIENyYW5lICAoaHR0cHM6Ly9jcmFuZS5ob3VzZS5n
+b3YpCgoKVE9NT1JST1c6IEpvaW4gYSBUZWxlLVRvd24gSGFsbCB3aXRoIENvbmdyZXNz
+bWFuIEVsaSBDcmFuZQoKCgpUb21vcnJvdyBldmVuaW5nLCBSZXByZXNlbnRhdGl2ZSBF
+bGkgQ3JhbmUgd2lsbCBiZSBob2xkaW5nIGEgdGVsZS10b3duIGhhbGwgdG9uaWdodCBh
+dCA1cG0gTVNULgoKSGUnbGwgYmUgcHJvdmlkaW5nIGFudXBkYXRlIGZyb20gREMsIHRh
+bGtpbmcgYWJvdXQgdGhlIGxhdGVzdCB3aXRoIHRoZSBmaWdodCB0byBzZWN1cmUgdGhl
+IGJvcmRlciwgZGlzY3Vzc2luZyBoaXMgcmVjZW50IGxlZ2lzbGF0aXZlIHdpbnMsYXMg
+d2VsbCBhcyBhbnN3ZXJpbmcgeW91ciBxdWVzdGlvbnMuCgpUbyBsaXN0ZW4gaW5hbmQg
+aGF2ZSB0aGUgb3Bwb3J0dW5pdHkgdG8gYXNrIGEgcXVlc3Rpb24sIGRpYWw6ICg4ODgp
+IDg4Ni02NjAyCgoKQ0xJQ0sgSEVSRSBUTyBTSUdOIFVQIEZPUiBVUERBVEVTKGh0dHBz
+Oi8vY3JhbmUuaG91c2UuZ292L2NvbnRhY3QvbmV3c2xldHRlci1zdWJzY3JpYmUpIAoK
+----boundary_1699_3222c466-a1e0-49cc-adf9-0e4729caa2b8
+Content-Location: https://craneforms.house.gov/
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>Representative Elijah Crane</title>
+       =20
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1">
+        <!--[if !mso]><!-->
+        <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![e=
+ndif]-->
+        <style>body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default t=
+ext sizes */ img{-ms-interpolation-mode: bicubic;} /* Allow smoother render=
+ing of resized image in Internet Explorer *//* RESET STYLES */img { border:=
+ 0; height: auto; line-height: 100%; outline: none; text-decoration: none; =
+}table { border-collapse: collapse !important; }body { height: 100% !import=
+ant; margin: 0 !important; padding: 0 !important; width: 100% !important; }=
+strong { font-weight: bold; } /* Editor reset *//* FIRESIDE STYLES */.compo=
+nent img {max-width:600px;}.component table {mso-table-rspace:10pt; border-=
+collapse:collapse;}.component { padding: 0px !important; }.press {padding-b=
+ottom: 0px;}</style><style>@media all and (max-width:650px) {            .i=
+mage-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td, .image-2, .img-2 =
+img, .image-2 tr, .image-2 td {max-width: 100% !important; width: 100% !imp=
+ortant;}            .responsive-table {width:100% !important;}            .=
+responsive-table img {max-width:100% !important; height: auto !important;} =
+           .press .component, .press td {text-align:center;}            .co=
+mponent { margin-left: 20px; margin-right: 20px;}            .component .re=
+sponsive-table { margin-left: 0px !important; margin-right: 0px !important;=
+}            .wide .video-thumb { width: 100% !important;height: auto !impo=
+rtant; }             .wide.video-container { width: 100% !important; }     =
+    .component.full-width {margin-left: 0px; margin-right: 0px; }   }</styl=
+e><style type=3D"text/css">
+            /* CLIENT-SPECIFIC STYLES */
+            body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text=
+ sizes */
+            table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Rem=
+ove spacing between tables in Outlook 2007 and up */
+            img{-ms-interpolation-mode: bicubic;} /* Allow smoother renderi=
+ng of resized image in Internet Explorer */
+            /* RESET STYLES */
+            img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: =
+0 !important; width: 100% !important; }
+            strong { font-weight: bold; } /* Editor reset */
+            /* FIRESIDE STYLES */
+            .component img {max-width:600px;}
+            .component table {mso-table-rspace:10pt; border-collapse:collap=
+se; font-family: Arial, Helvetica, sans-serif;}
+            .component td, td {font-family: Arial, Helvetica, sans-serif;}
+            .component { padding: 0px !important; }
+            .press {padding-bottom: 0px;}
+            .caption-1 td {font-family: Arial, Helvetica, sans-serif;}
+            /* Margin/NoMargin STYLES */
+            .component.full-width{ overflow: hidden; margin: 0px; }
+            /* HEADER STYLES */
+            .header-bar {width: 100%;}
+            .header-bar-margin {background-color:#ffffff;}
+            .header-bar h2 {margin: 0 !important; padding: 0 !important; co=
+lor: #000000 !important;text-align: center;font-size: 24px !important;font-=
+weight: bold !important; }
+            .survey-content > table > tbody tr td { border-color: #0B3077 !=
+important; }
+            .survey-content input.survey-submit { font-family: Arial, Helve=
+tica, sans-serif !important; }
+        </style>       =20
+        <style id=3D"media-queries">=20
+            @media all and (max-width:650px) {
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max=
+-width: 100% !important; width: 100% !important;}
+            .responsive-table {width:100% !important;}
+            .responsive-table img {max-width:100% !important; height: auto =
+!important;}
+            .press .component, .press td, .split .component, .split .compon=
+ent td, .split td {text-align:center;}
+            .component { margin-left: 20px; margin-right: 20px;}
+            .component .responsive-table { margin-left: 0px !important; mar=
+gin-right: 0px !important;}
+            .wide .video-thumb { width: 100% !important;height: auto !impor=
+tant; }=20
+            .wide.video-container { width: 100% !important; }
+            }
+        </style>
+       =20
+    <!--[if (gte mso 9)|(IE)]>
+                                        <style>=20
+                                    .button-padding-18-19 { padding: 18px 1=
+9px;}=20
+</style>
+                                    <![endif]--></head>
+    <body style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%;margin: 0px !important; padding: 0px !important;">
+        <div id=3D"preview-text" style=3D"display: none; font-size: 1px; co=
+lor: #fefefe; line-height: 1px; font-family: Arial, Helvetica, sans-serif; =
+max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">TOMORROW: J=
+oin a Tele-Town Hall with Congressman Eli Crane Tomorrow evening, Represent=
+ative Eli Crane will be holding a tele-town hall tonight at 5pm MST. He'll =
+be providing an&nbsp;update from DC, talking about the latest with the figh=
+t to secure the border, discussing his recent legislative wins,&nbsp;as wel=
+l as answering your questions. To listen in&nbsp;and have the opportunity t=
+o ask a question, dial: (888) 886-6602 </div>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color:=
+ #ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D=
+"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td align=3D"center" valign=3D"top" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvet=
+ica, sans-serif; font-size: 16px;">
+                        <div class=3D"region" id=3D"region-1"><div class=3D=
+"component full-width" style=3D"padding: 0px !important;"> <div class=3D"im=
+age" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 0px; margin-left: 0px;" width=3D"650">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;"><a href=3D"https://crane.house.gov" target=3D"_blank" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img style=3D"=
+max-width:600px;-ms-interpolation-mode: bicubic;vertical-align: bottom; max=
+-width: 650px;" alt=3D"Representative Elijah Crane" src=3D"https://cranefor=
+ms.house.gov/UploadedPhotos/TemplateImages/constituent-services.png"></a></=
+div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;background-color: #ffffff; font-family: Arial, Helvetica, sa=
+ns-serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D=
+"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td class=3D"responsive-table" valign=3D"top" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Ari=
+al, Helvetica, sans-serif; font-size: 16px; color: #000000;">
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class=3D"region" id=3D"region-2"><div class=3D=
+"component full-width" style=3D"padding: 0px !important;"> <div class=3D"he=
+ader-bar" style=3D"overflow: hidden;">
+                                    <table role=3D"presentation" align=3D"c=
+enter" class=3D"responsive-table table-w-bg-color" style=3D"mso-table-lspac=
+e:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse=
+;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Ar=
+ial, Helvetica, sans-serif; margin-right: 0px; margin-left: 0px;" border=3D=
+"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0=
+" leftmargin=3D"0" topmargin=3D"0" width=3D"650">
+                                        <tbody>
+                                            <tr height=3D"0" class=3D"space=
+rRow">
+                                                <td style=3D"-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 0p=
+x">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td class=3D"responsive-tab=
+le" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fon=
+t-size:24px;color:#000000;" valign=3D"top">
+                                                <table role=3D"presentation=
+" width=3D"100%" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-ta=
+ble-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -=
+ms-text-size-adjust: 100%;min-width: 100%;" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" top=
+margin=3D"0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;padding: 0 15pt; f=
+ont-family: Arial, Helvetica, sans-serif;">
+                                                                <div class=
+=3D"cke_editable cke_editable_inline cke_contents_ltr cke_focus cke_show_bo=
+rders" style=3D"overflow: hidden;"><h2 style=3D"text-align: center;"><span =
+style=3D"font-size:24px;">TOMORROW: Join a Tele-Town Hall with Congressman =
+Eli Crane</span></h2></div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                </td>
+                                            </tr>
+                                            <tr height=3D"0" class=3D"space=
+rRow">
+                                                <td style=3D"-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 0p=
+x">&nbsp;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><d=
+iv class=3D"component-template" style=3D"overflow: hidden;"><p style=3D"mar=
+gin: 0;margin: 0;"><span style=3D"font-size:14px;"><span style=3D"font-fami=
+ly:Tahoma,Geneva,sans-serif;">Tomorrow evening, Representative Eli Crane wi=
+ll be holding a tele-town hall tonight at <strong style=3D"font-weight: bol=
+d;">5pm MST.</strong></span></span></p><p style=3D"margin: 0;margin: 0;"><b=
+r></p><p style=3D"margin: 0;margin: 0;"><font face=3D"Tahoma, Geneva, sans-=
+serif"><span style=3D"font-size: 14px;">He'll be providing an&nbsp;update f=
+rom DC, talking about the latest with the fight to secure the border, discu=
+ssing his recent legislative wins,&nbsp;as well as answering your questions=
+.</span></font></p><p style=3D"margin: 0;margin: 0;"><br></p><p style=3D"ma=
+rgin: 0;margin: 0;"><span style=3D"font-size:22px;"><strong style=3D"font-w=
+eight: bold;"><span style=3D"font-family:Tahoma,Geneva,sans-serif;">To list=
+en in&nbsp;and have the opportunity to ask a question, dial: <span style=3D=
+"color:#e32400;">(888) 886-6602</span></span></strong></span></p></div></di=
+v>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"button" style=3D"overflow: hidden;overflow: hidden;width:100%;">
+            <table class=3D"responsive-table" align=3D"center" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-tab=
+le-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:=
+collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-l=
+ayout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td valign=3D"top" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%;">
+                            <table align=3D"center" class=3D"button-table" =
+role=3D"presentation" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;m=
+so-table-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 10=
+0%; -ms-text-size-adjust: 100%;table-layout: fixed;">
+                                <tbody>
+                                    <tr>
+                                        <td style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;">
+                                            <table align=3D"center" class=
+=3D"responsive-table" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-t=
+able-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; =
+-ms-text-size-adjust: 100%;border-collapse: separate !important;table-layou=
+t: fixed;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class=3D"button=
+-padding-18-19" align=3D"center" bgcolor=3D"#e32400" style=3D"-webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%;border-radius: 8.815px; line-=
+height: 16px; background-color: rgb(227, 36, 0);">
+                                                            <a class=3D"cli=
+ckable" href=3D"https://crane.house.gov/contact/newsletter-subscribe" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;text-decorat=
+ion: none; padding: 18px 19px; display: block; line-height: 16px; border-ra=
+dius: 8.815px;" target=3D"_blank"><strong style=3D"font-weight: bold;"><spa=
+n style=3D"font-size:24px;"><span style=3D"color:white;">CLICK HERE TO SIGN=
+ UP FOR UPDATES</span></span></strong></a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div></div>
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color: e=
+83e36;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0"=
+ marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #e83e36;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; backgro=
+und-color: #e83e36; padding: 0 20px;">
+                    <table role=3D"presentation" width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"10" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;text-align:center;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;text-align:=
+center;">
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"49=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: arial, helvetica, sans-serif; text-align:center; font-size: 14px=
+; font-weight:bold; color: #ffffff; margin: 10px 0;mso-table-lspace: 0pt; m=
+so-table-rspace: 0pt;text-transform:uppercase;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, san=
+s-serif; font-wieght:bold;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: Arial, Helvetica, sans-serif; text-transform: uppercase;fo=
+nt-size:18px">Washington, DC Office</strong><br>
+                                            <span style=3D"color:#000000">1=
+229 Longworth HOB<br>
+                                            Washington, DC  20515<br>
+                                            (202) 225-3361</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"right" cellspacing=3D"0" width=3D"4=
+9.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;f=
+ont-family: arial, helvetica, sans-serif; text-align:center; font-size: 14p=
+x; text-transform:uppercase; font-weight:bold; color: #ffffff; margin: 10px=
+ 0;mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, san=
+s-serif; font-wieght:bold;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: Arial, Helvetica, sans-serif; text-transform: uppercase;fo=
+nt-size:18px">Prescott Office</strong><br>
+                                            <span style=3D"color:#000000">1=
+22 N. Cortez Street<br>
+                                            Suite 211<br>
+                                            Prescott, AZ 86301<br>
+                                            (928) 286-5338</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #e83e36;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #000000; backgro=
+und-color: #e83e36;">
+                    <a target=3D"_blank" href=3D"https://urldefense.com/v3/=
+__https://www.facebook.com/profile.php?id=3D100088851021670__;!!Fr0YZsIsFWx=
+TZsBm-qTAg68!mIt_wnurVGz2W6Nv3WPwyKes-B3NrBB8_2QbMjd_HUkPQORci7zs-XRiNXc4aU=
+BEn7ohWkcKB6s8Ifogsm9jfEdDtt7LkQtIPZncm_s$" style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"facebook icon" width=3D"=
+32" src=3D"https://craneforms.house.gov/images/email/facebook.png" style=3D=
+"-ms-interpolation-mode: bicubic;border-width: 0px; border-style: solid; wi=
+dth: 32px;"></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://urldefense.c=
+om/v3/__https://twitter.com/RepEliCrane__;!!Fr0YZsIsFWxTZsBm-qTAg68!mIt_wnu=
+rVGz2W6Nv3WPwyKes-B3NrBB8_2QbMjd_HUkPQORci7zs-XRiNXc4aUBEn7ohWkcKB6s8Ifogsm=
+9jfEdDtt7LkQtIddTLteo$" style=3D"-webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%;"><img alt=3D"twitter icon" width=3D"32" src=3D"https://cr=
+aneforms.house.gov/images/email/twitter.png" style=3D"-ms-interpolation-mod=
+e: bicubic;border-width: 0px; border-style: solid; width: 32px;"></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://urldefense.c=
+om/v3/__https://www.instagram.com/rep.elicrane/__;!!Fr0YZsIsFWxTZsBm-qTAg68=
+!mIt_wnurVGz2W6Nv3WPwyKes-B3NrBB8_2QbMjd_HUkPQORci7zs-XRiNXc4aUBEn7ohWkcKB6=
+s8Ifogsm9jfEdDtt7LkQtIZJ9xUmg$" style=3D"-webkit-text-size-adjust: 100%; -m=
+s-text-size-adjust: 100%;"><img alt=3D"instagram icon" width=3D"32" src=3D"=
+https://craneforms.house.gov/images/email/instagram.png" style=3D"-ms-inter=
+polation-mode: bicubic;border-width: 0px; border-style: solid; width: 32px;=
+"></a><!--
+                    &nbsp;<a target=3D"_blank" href=3D"https://www.youtube.=
+com/channel/XXXXXX"><img alt=3D"youtube icon" width=3D"32" src=3D"https://c=
+raneforms.house.gov/images/email/youtube.png" style=3D"border-width: 0px; b=
+order-style: solid; width: 32px;" /></a>-->
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #e83e36;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #000000;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;background-color: #000000;">
+                    <table role=3D"presentation" cellpadding=3D"0" cellspac=
+ing=3D"20" align=3D"center" width=3D"90%" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #fff=
+fff; font-size: 14px; font-family: Arial, Helvetica, sans-serif; font-weigh=
+t:bold;text-transform:uppercase;">
+                                <a href=3D"[link]" style=3D"-webkit-text-si=
+ze-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; text-decoration=
+: none; font-size: 14px;">View Online</a>&nbsp;|&nbsp;
+                                <a target=3D"_blank" href=3D"https://cranef=
+orms.house.gov/forms/emailsignup/?delete=3Dtrue" style=3D"-webkit-text-size=
+-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; text-decoration:n=
+one; font-family: Arial, Helvetica, sans-serif;">Unsubscribe</a>&nbsp;|&nbs=
+p;
+                                <a target=3D"_blank" href=3D"https://urldef=
+ense.com/v3/__https://www.facebook.com/sharer.php?u=3Dhttps:**Acraneforms.h=
+ouse.gov*news*email*show.aspx*ID=3DHOXGH76ZBST2O&amp;t=3D*subject*__;Ly8vLy=
+8_W10!!Fr0YZsIsFWxTZsBm-qTAg68!mIt_wnurVGz2W6Nv3WPwyKes-B3NrBB8_2QbMjd_HUkP=
+QORci7zs-XRiNXc4aUBEn7ohWkcKB6s8Ifogsm9jfEdDtt7LkQtI9WragVs$" style=3D"-web=
+kit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; text=
+-decoration:none; font-family: Arial, Helvetica, sans-serif;">Share on Face=
+book</a>&nbsp;|&nbsp;
+                                <a target=3D"_blank" href=3D"https://cranef=
+orms.house.gov/Components/Redirect/twitter.aspx?url=3Dhttps://craneforms.ho=
+use.gov/news/email/show.aspx?ID=3DHOXGH76ZBST2O&amp;name=3D[subject]" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffff=
+ff; text-decoration:none; font-family: Arial, Helvetica, sans-serif;">Share=
+ on Twitter</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #000000;">
+                    &nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>=
+
+----boundary_1699_3222c466-a1e0-49cc-adf9-0e4729caa2b8--

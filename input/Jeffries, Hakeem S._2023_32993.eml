@@ -1,0 +1,752 @@
+Received: from SA1PR09MB11275.namprd09.prod.outlook.com
+ (2603:10b6:806:367::20) by MW4PR09MB8931.namprd09.prod.outlook.com with
+ HTTPS; Thu, 26 Oct 2023 18:56:16 +0000
+Received: from CYXPR09CA0020.namprd09.prod.outlook.com (2603:10b6:930:d4::27)
+ by SA1PR09MB11275.namprd09.prod.outlook.com (2603:10b6:806:367::20) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6933.20; Thu, 26 Oct
+ 2023 18:56:15 +0000
+Received: from DM3GCC02FT006.eop-gcc02.prod.protection.outlook.com
+ (2a01:111:f400:7d04::202) by CYXPR09CA0020.outlook.office365.com
+ (2603:10b6:930:d4::27) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6933.22 via Frontend
+ Transport; Thu, 26 Oct 2023 18:56:15 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.151.74)
+ smtp.mailfrom=mail.house.gov; dkim=fail (body hash did not verify)
+ header.d=house.gov;dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.151.74 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.151.74;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.151.74) by
+ DM3GCC02FT006.mail.protection.outlook.com (10.97.8.155) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.6933.23 via Frontend Transport; Thu, 26 Oct 2023 18:56:15 +0000
+Received: from EXCH1911.US.House.gov (143.228.151.110) by
+ EXCH1915.US.House.gov (143.228.151.74) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.2.1258.25; Thu, 26 Oct 2023 14:56:12 -0400
+Received: from serg-bulk3-a.house.gov (143.228.42.95) by EXCH1911.US.House.gov
+ (143.228.151.110) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1258.25 via Frontend
+ Transport; Thu, 26 Oct 2023 14:56:12 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=message-id :
+ list-unsubscribe : from : to : date : subject : content-type :
+ mime-version; s=august2019-msgb-hg;
+ bh=FhEi+M+T5lYIF5dYI2XUYcL8KJmAY+6D8VT9TsgwIdA=;
+ b=C5TotfmFopW7Lc12i2QFMIP+GTLXilUN+jD9R8NfGi1vE0HLoT/PRkGmd0HowJVKdBsT
+ iwNgr90CKAkIbDg2GjJjwpJ/85GViPHBrTq+Mws0LYw106QANgV8w9NemG/iqa08/ZE9
+ vVJ2OmNINqjxpNGHzwsJ6C8MlSH9zScbyALyQLpoMKswZccCk3zu4QFU0slUtfw7CBtf
+ bEb4k12+JPKlzX0yjRBKBw1eq6BB3Rea2tLp0PWNHhtpaecqsfTdPJFltwEfQdXVV2l0
+ YmgrvcSiol/mHqunXu6wD/fzQ6pNNO5egSyED0cH8LdHZezng0rSzC8m0JPgYl3PnClN CQ== 
+Received: from FIRESIDESERV08 (firesideserv08.us.house.gov [143.228.58.71])
+	by serg-bulk3-a.house.gov (8.17.1.19/8.17.1.19) with ESMTP id 39QIuB86005701
+	for <Andy.Eichar@mail.house.gov>; Thu, 26 Oct 2023 14:56:11 -0400
+envelope-from: Congressman.Jeffries@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+Message-ID: <vPCI4EStweVf6zt1Vlxc38VKwhM+BsAeZjiYM8X70u5IEZXRjL8twFAkDqIE9NXTNZuvAhDLxeB2apOK6Hf3TcL3lK57cLa7IJEOWIlRtfI97OTSQGAD8hEa9uKWB0D/hcmwaTzEm4yJ2EjOMhJ2zE974TSSLmv/azTIFz6TimVx8XZJ3jEucfksYMW93YR3@fireside21.com>
+X-House-Vendor-Seg: unmanaged
+List-Unsubscribe: <https://jeffriesforms.house.gov/forms/emailsignup/?Delete=true&MessageID=191005&Email=Andy.Eichar@mail.house.gov&Submit=true>
+Precedence: bulk
+From: "Congressman Hakeem Jeffries" <Congressman.Jeffries@mail.house.gov>
+To: Andy.Eichar@mail.house.gov
+Date: 26 Oct 2023 14:56:11 -0400
+Subject: WE MUST STAND UP FOR AMERICA'S NATIONAL SECURITY. WE MUST STAND UP
+ FOR DEMOCRACY.
+Content-Type: multipart/alternative;
+ boundary=--boundary_3901211_60bdf419-228a-4834-b1c7-1a974806afa7
+X-Proofpoint-Virus-Version: vendor=baseguard
+ engine=ICAP:2.0.272,Aquarius:18.0.987,Hydra:6.0.619,FMLib:17.11.176.26
+ definitions=2023-10-26_17,2023-10-26_01,2023-05-22_02
+Return-Path: Congressman.Jeffries@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1915.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 26 Oct 2023 18:56:15.2366
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 3f11273e-5510-420f-0c2e-08dbd6553aef
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1911.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted:
+ DM3GCC02FT006.eop-gcc02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ DM3GCC02FT006.eop-gcc02.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ DM3GCC02FT006:EE_|SA1PR09MB11275:EE_|MW4PR09MB8931:EE_
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: 3f11273e-5510-420f-0c2e-08dbd6553aef
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:143.228.151.74;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:;DIR:INT;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 26 Oct 2023 18:56:15.1428
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 3f11273e-5510-420f-0c2e-08dbd6553aef
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.151.74];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1911.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SA1PR09MB11275
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.3950651
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.6933.023
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(425001)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	i1RruCRH24By6j1ooSv7BuKwYTPSCx5vXn/iUAhAZlxel6Kb5Co/f38IdklRnegoTIKqX1WYSeo3tAJIkNm+A445J7gAByH2q2IZxJyw9HZrCSNgyJto97lSUHBg6R4OzcGjG+K/0k74YW0z67GsXIyIh2Mkx5fGazW9COnPjnla77bm6OVt2z+Y/Lon+OZNapLsEZAHLaJMOgiQIDwbRQkiFukdqsCseuadD8XjU/uEqx1n7DAj/YJ9LiQsVJCbZ/04r4Ax3iO5KiH28/rI5Adj8KXs7/Dko9zkbxv0TvzTQtDePCj1y06e8Y8JxqJbv6LlPBv6mnhJEuANjOabY/7I5PNQCjboqpKumACMqX2kCQNDoM+x5neQddzcHBc8CNKUsXItJJBMTBxbcBxDH7qiW0gNfJnpk+rao/3Lyqdn0CW1V6JBS2OeFIAdXFhGTaMxFlgax2L3+YLKwTH69iGZ9CTra54eR5RS2/uy0rTkd/wRKRA2O+5p3aIinJSlYVAW6JBpPOxI7djqa6d5WMgE3T2vRqIlip17RIZFoMzlNvSGd/mResJp+qLjmDRBeOHUKQKTlXlLdp5bwKNfqcjmh4aXhoC/oHYNw53UiZqisCqRRN19nIJGCFDIIZv6gDG7h/GTG6wareAPMJfwMH/YXr6BE51iPE0J/Au2d5osUgrJITDDjSRAaNFyGxSucNQ5ePCbMqtw/mqYI1mmqJdNI7qZCmzzphQO7EcTV6V8R3vyhAsIMkSa/WSE4auAfTGVCilPzWpPskZUgv94Lg==
+MIME-Version: 1.0
+
+----boundary_3901211_60bdf419-228a-4834-b1c7-1a974806afa7
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+DQpVbnN1YnNjcmliZTogaHR0cHM6Ly9qZWZmcmllc2Zvcm1zLmhvdXNlLmdvdi9Gb3Jt
+cy9FbWFpbFNpZ251cC8/RGVsZXRlPXRydWUmTWVzc2FnZUlEPTE5MTAwNSZFbWFpbD1B
+bmR5LkVpY2hhckBtYWlsLmhvdXNlLmdvdg==
+----boundary_3901211_60bdf419-228a-4834-b1c7-1a974806afa7
+Content-Location: https://jeffriesforms.house.gov/
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>WE MUST STAND UP FOR AMERICA'S NATIONAL SECURITY. WE MUST STAND UP FOR=
+ DEMOCRACY.</title>
+       =20
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1">
+        <!--[if !mso]><!-->
+        <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![e=
+ndif]-->
+        <style>body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default t=
+ext sizes */ img{-ms-interpolation-mode: bicubic;} /* Allow smoother render=
+ing of resized image in Internet Explorer *//* RESET STYLES */img { border:=
+ 0; height: auto; line-height: 100%; outline: none; text-decoration: none; =
+}table { border-collapse: collapse !important; }body { height: 100% !import=
+ant; margin: 0 !important; padding: 0 !important; width: 100% !important; }=
+strong { font-weight: bold; } /* Editor reset *//* FIRESIDE STYLES */.compo=
+nent img {max-width:600px;}.component table {mso-table-rspace:10pt; border-=
+collapse:collapse;}.component { padding: 0px !important; }.press {padding-b=
+ottom: 0px;}</style><style>@media all and (max-width:650px) {            .i=
+mage-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td, .image-2, .img-2 =
+img, .image-2 tr, .image-2 td {max-width: 100% !important; width: 100% !imp=
+ortant;}            .responsive-table {width:100% !important;}            .=
+responsive-table img {max-width:100% !important; height: auto !important;} =
+           .press .component, .press td {text-align:center;}            .co=
+mponent { margin-left: 20px; margin-right: 20px;}            .component .re=
+sponsive-table { margin-left: 0px !important; margin-right: 0px !important;=
+}            .wide .video-thumb { width: 100% !important;height: auto !impo=
+rtant; }             .wide.video-container { width: 100% !important; }     =
+    .component.full-width {margin-left: 0px; margin-right: 0px; }   }</styl=
+e><style type=3D"text/css">
+            /* CLIENT-SPECIFIC STYLES */
+            body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text=
+ sizes */
+            table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Rem=
+ove spacing between tables in Outlook 2007 and up */
+            img{-ms-interpolation-mode: bicubic;} /* Allow smoother renderi=
+ng of resized image in Internet Explorer */
+            /* RESET STYLES */
+            img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: =
+0 !important; width: 100% !important; }
+            strong { font-weight: bold; } /* Editor reset */
+            /* FIRESIDE STYLES */
+            .component img {max-width:600px;}
+            .component table {mso-table-rspace:10pt; border-collapse:collap=
+se; font-family: Verdana, Arial, sans-serif;}
+            .component td, td {font-family: Verdana, Arial, sans-serif;}
+            .component { padding: 0px !important; }
+            .press {padding-bottom: 0px;}
+            .caption-1 td {font-family: Verdana, Arial, sans-serif;}
+            /* Margin/NoMargin STYLES */
+            .component.full-width{ overflow: hidden; margin: 0px; }
+            /* HEADER STYLES */
+            .header-bar {width: 100%;}
+            .header-bar-margin {background-color:#ffffff;}
+            .header-bar h2 {margin: 0 !important; padding: 0 !important; co=
+lor: #6089aa !important;text-align: center;font-size: 32px !important;font-=
+weight: bold !important; }
+            .survey-content > table > tbody tr td { border-color: #6089aa !=
+important; }
+            .survey-content input.survey-submit { font-family: Verdana, Ari=
+al, sans-serif !important; }
+        </style>      =20
+        <style id=3D"media-queries">=20
+            @media all and (max-width:650px) {
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max=
+-width: 100% !important; width: 100% !important;}
+            .responsive-table {width:100% !important;}
+            .responsive-table img {max-width:100% !important; height: auto =
+!important;}
+            .press .component, .press td, .split .component, .split .compon=
+ent td, .split td {text-align:center;}
+            .component { margin-left: 20px; margin-right: 20px;}
+            .component .responsive-table { margin-left: 0px !important; mar=
+gin-right: 0px !important;}
+            .wide .video-thumb { width: 100% !important;height: auto !impor=
+tant; }=20
+            .wide.video-container { width: 100% !important; }
+            }
+        </style>
+       =20
+    <!--[if (gte mso 9)|(IE)]>
+                                        <style>=20
+                                    </style>
+                                    <![endif]--></head>
+    <body style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%;margin: 0px !important; padding: 0px !important;">
+        <div id=3D"preview-text" style=3D"display: none; font-size: 1px; co=
+lor: #fefefe; line-height: 1px; font-family: Verdana, Arial, sans-serif; ma=
+x-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">We must also =
+continue to stand by President Biden as he works to bring American hostages=
+<span>&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=
+=80=8C</span></div>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;font-family: Verdana, Arial, sans-serif; background-color: #=
+ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0=
+" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td align=3D"center" valign=3D"top" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Verdana, Aria=
+l, sans-serif; font-size: 16px;">
+                    <a target=3D"_blank" href=3D"https://jeffriesforms.hous=
+e.gov/components/redirect/r.aspx?ID=3D463851-72252626" style=3D"-webkit-tex=
+t-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                    <img alt=3D"Representative Hakeem Jeffries" width=3D"17=
+5" style=3D"-ms-interpolation-mode: bicubic;display: block; width: 175px;" =
+src=3D"https://jeffriesforms.house.gov/images/newsletter/logo-hj.png">
+                    </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Verdana, Arial, sans-serif; background-color: #60=
+89aa; border-collapse: separate !important; border-radius: 10px;" border=3D=
+"0" cellspacing=3D"0" cellpadding=3D"5" marginheight=3D"0" marginwidth=3D"0=
+" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #2e2f30; font-si=
+ze: 11px; font-family: Verdana, Arial, sans-serif; text-align: center; back=
+ground-color: #6089aa; text-transform: uppercase; border-radius: 10px;">
+                        <a href=3D"https://jeffriesforms.house.gov/componen=
+ts/redirect/r.aspx?ID=3D463852-72252626" style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;color: #2e2f30; text-decoration: none; fo=
+nt-weight: bold; font-family: Verdana, Arial, sans-serif; font-size: 11px;"=
+>ABOUT</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href=3D"https://jeffriesforms.house.gov/componen=
+ts/redirect/r.aspx?ID=3D463853-72252626" style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;color: #2e2f30; text-decoration: none; fo=
+nt-weight: bold; font-family: Verdana, Arial, sans-serif; font-size: 11px;"=
+>CONTACT</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href=3D"https://jeffriesforms.house.gov/componen=
+ts/redirect/r.aspx?ID=3D463854-72252626" style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;color: #2e2f30; text-decoration: none; fo=
+nt-weight: bold; font-family: Verdana, Arial, sans-serif; font-size: 11px;"=
+>SERVING YOU</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href=3D"https://jeffriesforms.house.gov/componen=
+ts/redirect/r.aspx?ID=3D463855-72252626" style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;color: #2e2f30; text-decoration: none; fo=
+nt-weight: bold; font-family: Verdana, Arial, sans-serif; font-size: 11px;"=
+>MEDIA CENTER</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href=3D"https://jeffriesforms.house.gov/componen=
+ts/redirect/r.aspx?ID=3D463856-72252626" style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;color: #2e2f30; text-decoration: none; fo=
+nt-weight: bold; font-family: Verdana, Arial, sans-serif; font-size: 11px;"=
+>LEGISLATION</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href=3D"https://jeffriesforms.house.gov/componen=
+ts/redirect/r.aspx?ID=3D463857-72252626" style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;color: #2e2f30; text-decoration: none; fo=
+nt-weight: bold; font-family: Verdana, Arial, sans-serif; font-size: 11px;"=
+>ISSUES</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href=3D"https://jeffriesforms.house.gov/componen=
+ts/redirect/r.aspx?ID=3D463858-72252626" style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;color: #2e2f30; text-decoration: none; fo=
+nt-weight: bold; font-family: Verdana, Arial, sans-serif; font-size: 11px;"=
+>RESOURCES</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;background-color: #ffffff; font-family: Verdana, Arial, sans=
+-serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0=
+" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td class=3D"responsive-table" valign=3D"top" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Ver=
+dana, Arial, sans-serif; font-size: 18px; color: #262626;">
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class=3D"region" id=3D"region-1"><div class=3D=
+"component " style=3D"padding: 0px !important;"> <div class=3D"editable" st=
+yle=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><p=
+ align=3D"center" style=3D"margin: 0;text-align:center"><span style=3D"font=
+-family:Verdana,Geneva,sans-serif;"><span style=3D"font-size:28px;"><span s=
+tyle=3D"color:#6089aa;"><span style=3D"font-style:normal"><span style=3D"fo=
+nt-weight:400"><span style=3D"white-space:normal"><span style=3D"background=
+-color:#ffffff"><span style=3D"text-decoration:none"><strong style=3D"font-=
+weight: bold;"><span style=3D"line-height:1.2">LEADER JEFFRIES: =E2=80=9CWE=
+ MUST STAND UP FOR AMERICA=E2=80=99S NATIONAL SECURITY. WE MUST STAND UP FO=
+R DEMOCRACY.=E2=80=9D</span></strong></span></span></span></span></span></s=
+pan></span></span></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;overflow:hidden; background-color:#ffffff"><p =
+style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span style=3D"font-fa=
+mily:Verdana,Geneva,sans-serif;">Washington, DC - In his remarks upon the e=
+lection of the Speaker of the House, Congressman Hakeem Jeffries (NY-08), t=
+he House Democratic Leader, reiterated the need to support our allies, incl=
+uding Israel and Ukraine, in their efforts to defeat aggression and protect=
+ their democracies.&nbsp;</span><br><br></p><div contenteditable=3D"false" =
+class=3D"cke_widget_wrapper cke_widget_block cke_widget_image cke_image_noc=
+aption" style=3D"overflow: hidden;"><p data-cke-widget-keep-attr=3D"0" data=
+-widget=3D"image" class=3D"cke_widget_element" data-cke-widget-data=3D"%7B%=
+22hasCaption%22%3Afalse%2C%22src%22%3A%22https%3A%2F%2Fjeffriesforms.house.=
+gov%2FUploadedPhotos%2FMediumResolution%2F0181487c-c7b6-4ee2-827a-b8ca50913=
+360.png%22%2C%22alt%22%3A%22Leader%20Jeffries%20stands%20at%20the%20Rostrum=
+%20delivering%20remarks%22%2C%22width%22%3A%22610%22%2C%22height%22%3A%2234=
+3%22%2C%22style%22%3A%22%22%2C%22lock%22%3Atrue%2C%22align%22%3A%22center%2=
+2%2C%22classes%22%3Anull%2C%22widthPerc%22%3A%221%22%7D" style=3D"margin: 0=
+;text-align: center;"><span class=3D"cke_image_resizer_wrapper"><img alt=3D=
+"Leader Jeffries stands at the Rostrum delivering remarks" src=3D"https://j=
+effriesforms.house.gov/UploadedPhotos/MediumResolution/0181487c-c7b6-4ee2-8=
+27a-b8ca50913360.png" data-cke-widget-upcasted=3D"1" width=3D"610" height=
+=3D"343" style=3D"max-width:600px;-ms-interpolation-mode: bicubic;"></span>=
+</p></div><p style=3D"margin: 0;text-align: center;"><a data-cke-saved-href=
+=3D"https://jeffriesforms.house.gov/components/redirect/r.aspx?ID=3D463859-=
+72252626" href=3D"https://urldefense.com/v3/__https://www.youtube.com/watch=
+?v=3DflVdjxOvlYI__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!Glx7L3AzIeJKrDt_lYLxIN=
+iZzGmZhMXXgOQnG8d48gZkqvDgR1FxCdjULaJPFiyPi3waJ_G_3eNRT9blse6JTzqBAIEUIsgiv=
+oQEFwz-XA$" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: =
+100%;"><em><strong style=3D"font-weight: bold;">WATCH HERE</strong></em></a=
+></p><p style=3D"margin: 0;text-align: center;"><br></p><p style=3D"margin:=
+ 0;">&quot;We must also continue to stand by President Biden as he works to=
+ bring American hostages and Israeli hostages held by Hamas back home. Amer=
+ican hostages and Israeli hostages and international hostages back home. We=
+ must also stand by our friends on the international stage.<strong style=3D=
+"font-weight: bold;">&nbsp;And we have no better friend in the Middle East =
+than the State of Israel.&nbsp;</strong><br><br><strong style=3D"font-weigh=
+t: bold;">Israel has a right to exist as a Jewish and Democratic state. The=
+ special relationship between the United States and Israel is unbreakable. =
+Our commitment to Israel=E2=80=99s security is ironclad.</strong>&nbsp;And =
+Israel has a right to defend itself under the international rules of war ag=
+ainst the brutal terror unleashed on its citizens by Hamas.<br><br>Our iron=
+clad commitment to Israel=E2=80=99s security and the effort to defeat Hamas=
+ is not inconsistent with the goal of achieving a lasting and just peace be=
+tween Israel and the Palestinian people. In many ways, it is a necessary in=
+gredient, because Hamas is not good for Israel, Hamas is not good for Ameri=
+ca, Hamas is not good for the Free World, Hamas is not good for the democra=
+tic aspirations of the Palestinian people.<br><br><strong style=3D"font-wei=
+ght: bold;">We must also support Ukraine in its courageous effort to defeat=
+ Russian aggression.</strong>&nbsp;There are only two paths in front of us.=
+&nbsp;<strong style=3D"font-weight: bold;">We can either stand up for Ukrai=
+ne or bow down to Vladimir Putin.&nbsp;</strong>That is not a difficult cho=
+ice.&nbsp;<br><br><strong style=3D"font-weight: bold;">We must stand up for=
+ America=E2=80=99s national security.&nbsp;</strong><br><br><strong style=
+=3D"font-weight: bold;">We must stand up for democracy.&nbsp;</strong><br><=
+br><b><strong style=3D"font-weight: bold;">We must stand up for freedom.&nb=
+sp;</strong></b><br><br><strong style=3D"font-weight: bold;">We must stand =
+up for truth.&nbsp;</strong><br><br><strong style=3D"font-weight: bold;">We=
+ must stand up for the Ukrainian people until victory is won.&nbsp;</strong=
+><br><br><span style=3D"font-family:Verdana,Geneva,sans-serif;">It is my ex=
+pectation that in the next week or so the Senate will send over for conside=
+ration a bipartisan National Security Funding Package for Israel, Ukraine a=
+nd our other allies throughout the Free World, that also includes humanitar=
+ian assistance for Palestinian civilians and others who may be in harm=E2=
+=80=99s way. The House of Representatives should take up this national secu=
+rity package and humanitarian relief package immediately, in totality and w=
+ithout delay.</span><br><br>The time for gamesmanship is over, the time for=
+ brinksmanship is over, the time of partisanship is over.&nbsp;<strong styl=
+e=3D"font-weight: bold;">It=E2=80=99s time to get back to doing the busines=
+s of the American people.=E2=80=9D</strong></p><p style=3D"margin: 0;"><br>=
+</p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><em>Full speech=
+ can be watched&nbsp;<a data-cke-saved-href=3D"https://jeffriesforms.house.=
+gov/components/redirect/r.aspx?ID=3D463860-72252626" href=3D"https://iqconn=
+ect.house.gov/iqextranet/iqClickTrk.aspx?&amp;cid=3DLDRDHJ&amp;crop=3D14192=
+.5302650.5005317.7118519&amp;report_id=3D&amp;redirect=3Dhttps%3a%2f%2fwww.=
+youtube.com%2flive%2fsc8Jjccs_jM%3fsi%3dsW7ajUzUy4KcC6EW%26t%3d38&amp;redir=
+_log=3D346148993738457" target=3D"_blank" title=3D"https://iqconnect.house.=
+gov/iqextranet/iqClickTrk.aspx?&amp;cid=3DLDRDHJ&amp;crop=3D14192.5302650.5=
+005317.7118519&amp;report_id=3D&amp;redirect=3Dhttps%3a%2f%2fwww.youtube.co=
+m%2flive%2fsc8Jjccs_jM%3fsi%3dsW7ajUzUy4KcC6EW%26t%3d38&amp;redir_log=3D346=
+148993738457" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust=
+: 100%;">here</a>.</em></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Verdana, Arial, sans-serif; background-color: #ff=
+ffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" =
+marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:10px; background=
+-color: #ffffff; font-size: 10px; line-height: 10px;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;background-color: #ffff=
+ff; padding: 0 15pt; color: #262626;">
+                    <p style=3D"margin: 0;text-align: center; font-size: 14=
+px; color: #262626;"><em>U.S. Representative Hakeem&nbsp;Jeffries&nbsp;(NY-=
+08) is the Democratic Leader. He proudly represents parts of Brooklyn in th=
+e United States Congress.</em></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:10px; background=
+-color: #ffffff; font-size: 10px; line-height: 10px;">
+                    &nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Verdana, Arial, sans-serif; background-color: #60=
+89aa; border-collapse: separate !important; border-radius: 10px;" border=3D=
+"0" cellspacing=3D"0" cellpadding=3D"10" marginheight=3D"0" marginwidth=3D"=
+0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; backgro=
+und-color: #6089aa; text-align: center; border-radius: 10px;">
+                        <h2 style=3D"font-family: Verdana, Arial, sans-seri=
+f; font-size: 18px; margin-top: 0; font-weight: normal; text-transform: upp=
+ercase; color: #0e253a;">Follow Me</h2>
+                    <a target=3D"_blank" href=3D"https://jeffriesforms.hous=
+e.gov/components/redirect/r.aspx?ID=3D463861-72252626" style=3D"-webkit-tex=
+t-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"Website icon"=
+ width=3D"48" src=3D"https://jeffriesforms.house.gov/images/newsletter/webs=
+ite.png" style=3D"-ms-interpolation-mode: bicubic;border-width: 0px; border=
+-style: solid; width: 48px;"></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://jeffriesform=
+s.house.gov/components/redirect/r.aspx?ID=3D463862-72252626" style=3D"-webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"faceboo=
+k icon" width=3D"48" src=3D"https://jeffriesforms.house.gov/images/newslett=
+er/facebook-rd.png" style=3D"-ms-interpolation-mode: bicubic;border-width: =
+0px; border-style: solid; width: 48px;"></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://jeffriesform=
+s.house.gov/components/redirect/r.aspx?ID=3D463863-72252626" style=3D"-webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"twitter=
+ icon" width=3D"48" src=3D"https://jeffriesforms.house.gov/images/newslette=
+r/twitter-rd.png" style=3D"-ms-interpolation-mode: bicubic;border-width: 0p=
+x; border-style: solid; width: 48px;"></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://jeffriesform=
+s.house.gov/components/redirect/r.aspx?ID=3D463864-72252626" style=3D"-webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"instagr=
+am icon" width=3D"48" src=3D"https://jeffriesforms.house.gov/images/newslet=
+ter/instagram-rd.png" style=3D"-ms-interpolation-mode: bicubic;border-width=
+: 0px; border-style: solid; width: 48px;"></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://jeffriesform=
+s.house.gov/components/redirect/r.aspx?ID=3D463865-72252626" style=3D"-webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"youtube=
+ icon" width=3D"48" src=3D"https://jeffriesforms.house.gov/images/newslette=
+r/youtube-rd.png" style=3D"-ms-interpolation-mode: bicubic;border-width: 0p=
+x; border-style: solid; width: 48px;"></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Verdana, Arial, sans-serif; background-color: #ff=
+ffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" =
+marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #262626; backgro=
+und-color: #ffffff; padding: 0 20px;">
+                    <table role=3D"presentation" width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"10" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;text-align:center;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;text-align:=
+center;">
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"32=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: Verdana, Arial, sans-serif; text-align:center; font-size: 12px; =
+color: #262626; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0pt=
+;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Verdana, Arial, sans-=
+serif; font-weight: bold;">
+                                            2433 Rayburn House Office Build=
+ing<br>
+                                Washington, DC 20515<br>
+                                202-225-5936
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"32=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: Verdana, Arial, sans-serif; text-align:center; font-size: 12px; =
+color: #262626; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0pt=
+;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Verdana, Arial, sans-=
+serif; font-weight: bold;">
+                                            445 Neptune Ave<br>
+                                Community Room 2C<br>
+                                Brooklyn, NY 11224<br>
+                                718-373-0033
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"32=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: Verdana, Arial, sans-serif; text-align:center; font-size: 12px; =
+color: #262626; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0pt=
+;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Verdana, Arial, sans-=
+serif; font-weight: bold;">
+                                            55 Hanson Pl., Ste. 603<br>
+                                Brooklyn, NY 11217<br>
+                                718-237-2211
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:10px; background=
+-color: #ffffff; font-size: 10px; line-height: 10px;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;background-color: #ffff=
+ff; font-size: 12px; font-family: Verdana, Arial, sans-serif; text-align: c=
+enter; color: #262626;">
+                    <em><strong style=3D"font-weight: bold;">
+                                Know someone who lives in the 8th District =
+and would be interested in receiving this email? Share it!</strong></em>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:20px; background=
+-color: #ffffff; font-size: 20px; line-height: 20px;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;background-color: #ffffff;">
+                    <table role=3D"presentation" cellpadding=3D"0" cellspac=
+ing=3D"20" align=3D"center" width=3D"90%" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #262=
+626; font-size: 12px; font-family: Verdana, Arial, sans-serif; font-weight:=
+ bold;">
+                                <a target=3D"_blank" href=3D"https://jeffri=
+esforms.house.gov/components/redirect/r.aspx?ID=3D463866-72252626" style=3D=
+"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-size: 12px=
+; font-family: Verdana, Arial, sans-serif;">Unsubscribe</a>&nbsp;&nbsp;|&nb=
+sp;&nbsp;
+                                <a target=3D"_blank" href=3D"https://jeffri=
+esforms.house.gov/components/redirect/r.aspx?ID=3D463867-72252626" style=3D=
+"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-size: 12px=
+; font-family: Verdana, Arial, sans-serif;">Privacy Policy</a>&nbsp;&nbsp;|=
+&nbsp;&nbsp;
+                                <a target=3D"_blank" href=3D"https://jeffri=
+esforms.house.gov/news/email/show.aspx?ID=3DJYFGL5X43Y4DK54VTOZF3H5NQA" sty=
+le=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-size:=
+ 12px; font-family: Verdana, Arial, sans-serif;">View this Email in Your Br=
+owser</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:10px; background=
+-color: #ffffff; font-size: 10px; line-height: 10px;">
+                    &nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    <table role=3D"presentation" width=3D"100%" align=3D"center" style=3D"f=
+ont-family: Georgia, times, serif; background-color: #ffffff;" border=3D"0"=
+ cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" l=
+eftmargin=3D"0" topmargin=3D"0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td valign=3D"m=
+iddle" align=3D"center" style=3D"color: #000000; font-size: 16px; text-alig=
+n: left;">=20
+                                                                <img src=3D=
+"https://jeffriesforms.house.gov/images/spacerx191005-72252626.open" width=
+=3D"20" height=3D"1" style=3D"height: 1px">
+                                                                <br>
+<a href=3D"https://jeffriesforms.house.gov/news/email/show.aspx?ID=3DJYFGL5=
+X43Y4DK54VTOZF3H5NQA">Click Here</a> to view this email in your browser <br=
+>
+<a href=3D"https://jeffriesforms.house.gov/Forms/EmailSignup/?Delete=3Dtrue=
+&amp;MessageID=3D191005&amp;Email=3DAndy.Eichar@mail.house.gov">Click Here<=
+/a> to be removed from this list
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table></body>
+</html>=
+
+----boundary_3901211_60bdf419-228a-4834-b1c7-1a974806afa7--

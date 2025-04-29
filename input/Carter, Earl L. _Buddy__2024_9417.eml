@@ -1,0 +1,758 @@
+Received: from PH0PR09MB11358.namprd09.prod.outlook.com
+ (2603:10b6:510:2ad::17) by DM6PR09MB5269.namprd09.prod.outlook.com with
+ HTTPS; Tue, 1 Oct 2024 17:32:24 +0000
+Received: from BL0PR0901CA0023.namprd09.prod.outlook.com
+ (2603:10b6:208:1c0::33) by PH0PR09MB11358.namprd09.prod.outlook.com
+ (2603:10b6:510:2ad::17) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.8026.16; Tue, 1 Oct
+ 2024 17:32:22 +0000
+Received: from BL02EPF0001B417.namprd09.prod.outlook.com
+ (2603:10b6:208:1c0:cafe::3d) by BL0PR0901CA0023.outlook.office365.com
+ (2603:10b6:208:1c0::33) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.8026.16 via Frontend
+ Transport; Tue, 1 Oct 2024 17:32:22 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.151.110)
+ smtp.mailfrom=mail.house.gov; dkim=fail (body hash did not verify)
+ header.d=mail.house.gov;dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.151.110 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.151.110;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.151.110) by
+ BL02EPF0001B417.mail.protection.outlook.com (10.167.242.197) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.8026.11 via Frontend Transport; Tue, 1 Oct 2024 17:32:22 +0000
+Received: from EXCH1913.US.House.gov (143.228.151.112) by
+ EXCH1911.US.House.gov (143.228.151.110) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.2.1544.11; Tue, 1 Oct 2024 13:32:22 -0400
+Received: from serg-bulk1-a.house.gov (143.228.42.31) by EXCH1913.US.House.gov
+ (143.228.151.112) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1544.11 via Frontend
+ Transport; Tue, 1 Oct 2024 13:32:22 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mail.house.gov; h=content-type :
+ date : from : message-id : mime-version : subject : to;
+ s=january2024-msgb-mhg; bh=Fbm2nkVJk/iMYxHpQgpnaVoFVE8hq5FlSwMMUA+TQng=;
+ b=g0ONYTlDqoZZj0vl9YofY+6T0Y3i6bBdwO0hy75Qpq+EUGNZbc14iOJ0zApZrAfydUoW
+ LQuYSfO295ABbZz1g0Wtg6j6S1iXLOB+8y3JsNllbCmoOanXaCuK6dOT1OUcdhG9yz0d
+ ix0KkTPg+fmpdla+4i44arXJRi+47C2O+ovlKjnIPz/nWnbwOgJp7fHpIFilket040E3
+ h38zaf9NfEefeGhN0cmPKrFpIifSUdfkPKfATRZTxL6YpUpFzDNvoDz13OqExAzaZKfd
+ +mo94HtIdKBHQ6q7q8k7BTBj4LvaUINIwlbSnmNsEOYuslhLLX4APQKFczo6wklyt1fN /Q== 
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=content-type : date :
+ from : message-id : mime-version : subject : to; s=august2019-msgb-hg;
+ bh=Fbm2nkVJk/iMYxHpQgpnaVoFVE8hq5FlSwMMUA+TQng=;
+ b=ykNz3i07g8Tw9v2q6+Bdq5eFeBLzepMjGVDX3hh0P5xRmSrusgKcD0ZS+ZBwiBiaFLMq
+ X0Dp2hlbNpBHISQcukeDUs8Te7KT8e/26MzD7HtyFwjmKWvMOuVg8vO4BySdtAnQT8tU
+ Ksn+xiUbW10LriGxFbD1f21B1eOVvcDxDAKalbgTcqctNJoGPNPhvrijMYTjc08B+dSs
+ sorp4ZcHCyFpNq5aaYdSRbzmkX2ZAt/ql/byDdoM2fYQ/+CBsbO7LCy7I3jUa9j7dFdX
+ r3M8XfZZWBudcgMUK34U1IhOm3WnXB6ikIuxTFvQ74DQ/hhpoIiqXJe8PDXHcRUwT4ZB Eg== 
+Received: from FIRESIDEADMIN04 (firesideadmin04.us.house.gov [143.228.113.69])
+	by serg-bulk1-a.house.gov (8.18.1.2/8.18.1.2) with ESMTP id 491HWLLR009999;
+	Tue, 1 Oct 2024 13:32:21 -0400
+Message-Id: <41xxeb7gap-1@serg-bulk1-a.house.gov>
+envelope-from: GA01Newsletter@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+From: "Rep. Earl L. "Buddy" Carter" <GA01Newsletter@mail.house.gov>
+To: Harley.Adsit@mail.house.gov
+Date: 1 Oct 2024 13:32:21 -0400
+Subject: TEST Hurricane Helene Update
+Content-Type: multipart/alternative;
+ boundary=--boundary_217_19c9cc24-fb1d-46fd-a322-797eb229776c
+X-Proofpoint-Virus-Version: vendor=baseguard
+ engine=ICAP:2.0.293,Aquarius:18.0.1051,Hydra:6.0.680,FMLib:17.12.62.30
+ definitions=2024-10-01_13,2024-09-30_01,2024-09-30_01
+Return-Path: GA01News@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1911.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 01 Oct 2024 17:32:22.7154
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 49757e50-2dad-492c-010b-08dce23f022e
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1913.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted: BL02EPF0001B417.namprd09.prod.outlook.com
+X-CrossPremisesHeadersFiltered: BL02EPF0001B417.namprd09.prod.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ BL02EPF0001B417:EE_|PH0PR09MB11358:EE_|DM6PR09MB5269:EE_
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: 49757e50-2dad-492c-010b-08dce23f022e
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam:
+ BCL:0;ARA:13230040|4022899009|69100299015|366016|82310400026|41050700001;
+X-Forefront-Antispam-Report:
+ CIP:143.228.151.110;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:(13230040)(4022899009)(69100299015)(366016)(82310400026)(41050700001);DIR:INT;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 01 Oct 2024 17:32:22.6841
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 49757e50-2dad-492c-010b-08dce23f022e
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.151.110];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1913.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PH0PR09MB11358
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.9771047
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.8026.009
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(425001)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	XMwxGH6LOrjgRGinRgrZt0EFZG3gPvLDsJwayXITmFswpRmQbWnkp3r9YLk2B8EIVqXbLrc7KFlwhM7FUKZbwNnJjc9ZnBjEDOcOzud3UNG0HY8nz6vGZjltm6Zq+WgIQe1NLSMu2+CiMM4xbX3jxiOcQHjftb2yQvQ+zXAERXJKryQynXN37Z8drAO6ppJZXc2SQ6W27iMT9GytaixWs97pVaZ683D+8ixo8MzyK6qKFSIdG3WFPNAJm3QxRK2jTrqIcDm9Wbqa4R/7V6JetaG+EJJMKlQnD8FTs2rhWrjPgQ4B2u3d017ztf8HhuuCKTOzuwkROysT0v7jfxGKG6SE9lLSK1syT6c6NAmiF+CLXGg+1mRcP50MKLKBCHFH/gnbDatuV7jsuW/DOlNlLpXfEGTyw375wyUYa2X4slEbgC+U9IUhj6RR3cAuiiiWfqYhvi2pS5aqt8Bd89tUxkYqJxk7nm+Z77NJmiZvANhVZglJVMtLX9vCsJwyPyKBz6iLTdc3XK9s/bqJqXx2Pkj04wxLgDnq5nMuRQXnDMx3wUclli8bWJLRm1x3vGtOLNEsUAPXrBrBRNDu5NP5i/k6G/k4hYKmgvKiKfOY4K3oISoqnb+mMOSrQtaekq30tuH84YVxd9WUy1khDXAJ0TpQ0df0BtfBHgfFbx2q42PEdn148gasNIVHiPchxT1/8vMWoex+35plR//az4LJBeUHNasjgnoFCiPkq+BtTgLSQNnAAGH9V2P14gZonkA2P4VdC78SVM0RfVzk/B+4r+TmNwrEs+bsYlfQp33rJ3HocgNxOMoQo8giNTW6b5fE3alVjg/TuL6E7NbZC7m14SjgtpsScXIon9aOE7RO5sy+OCmKxZ3zJUlWTHwUNWPW
+MIME-Version: 1.0
+
+----boundary_217_19c9cc24-fb1d-46fd-a322-797eb229776c
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Representative Buddy Carter  (https://buddycarter.house.gov)
+
+
+HURRICANE HELENE Update
+
+
+
+Dear Friend,As we continue recovery from Hurricane Helene, I wanted to let =
+you know that 11 Georgia counties have received aMajor Disaster Declaration=
+ from the White House, and we anticipate announcements that more counties w=
+ill qualify in the coming days.I am working with Governor Kemp, FEMA, and t=
+he White House to expand this declaration.
+
+This declarationwill release federal funding to help the recovery of commun=
+ities and individuals impacted by Hurricane Helene.
+
+Federal funding is available for individuals and households inAppling, Atki=
+nson, Bacon, Ben Hill, Berrien, Brooks, Bulloch, Burke, Candler, Chatham, C=
+linch Coffee, Colquitt, Columbia, Cook, Echols, Emanuel, Evans, Glascock, I=
+rwin, Jeff Davis, Jefferson, Jenkins, Johnson, Lanier, Laurens, Liberty, Li=
+ncoln, Lowndes, McDuffie, Montgomery, Pierce, Richmond, Screven, Tattnall, =
+Telfair,Toombs, Treutlen, Ware, Washington, and WheelerCounties.
+
+Federal funding is also available for emergency work and repair or replacem=
+ent of disaster-damaged facilities inAppling, Atkinson, Bacon, Ben Hill, Be=
+rrien, Brooks, Bulloch, Burke, Candler, Chatham, Clinch, Coffee, Colquitt, =
+Columbia, Cook, Echols, Emanuel, Evans, Glascock, Irwin, Jeff Davis,Jeffers=
+on, Jenkins, Johnson, Lanier, Laurens, Liberty, Lincoln, Lowndes, mcDuffie,=
+ Montgomery, Pierce, Richmond, Screven, Tattnall, Telfair, Toombs, Treutlen=
+, Ware, Washington, and WheelerCounties.
+
+Individuals can apply for assistance the following ways:
+
+- Online at www.DisasterAssistance.gov(https://urldefense.com/v3/__http://w=
+ww.DisasterAssistance.gov__;!!Bg5easoyC-OII2vlEqY8mTBrtW-N4OJKAQ!IdvB4lh94y=
+U8Ybv9fmVJyc1UkqB_mdzIJMzKUy5_D3BEWTWCiSSWkOJT4yMs1AGwZvI0Yp4w9X_fiORQfTJAw=
+tPHZ0EntQ19HbRou8s$)=20
+
+- Over thephone at 1-800-621-3362 (TTY: 800-462-7585)
+
+
+Power Outages
+
+Power outages are continuing to impact our district. For information about =
+when your county's power is expected to return, visit Georgia Power's outag=
+e map here(https://urldefense.com/v3/__https://outagemap.georgiapower.com/e=
+xternal/default.html?hp=3Dtm_po_view_outage_map__;!!Ckt11KVezJIME51BYf4a6hr=
+LATHilnk!H1yjW6aHazSkuiYCLFkbPwwM6xAVi4zlim81Z5IRwg2wa3c44oWCbJk-WkvIv5vLz_=
+E15_eHELABg8LulUUbxHRVxlqlOpLPRI2EYFEd$ )  and Georgia EMC's map, pictured =
+below, here(https://urldefense.com/v3/__https://georgiaemc.com/page/outages=
+__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!H1yjW6aHazSkuiYCLFkbPwwM6xAVi4zlim81Z5=
+IRwg2wa3c44oWCbJk-WkvIv5vLz_E15_eHELABg8LulUUbxHRVxlqlOpLPRFAX_zeJ$ ) .
+
+Thank you to the brave linemen who are working around the clock to bring po=
+wer back to our district, and all first responders assisting GA-01's recove=
+ry.
+
+
+
+
+
+Please continue to follow local advisories and do not take unnecessary risk=
+s as recovery efforts continue.
+
+If you need shelter, a list of open shelters can be found here(https://urld=
+efense.com/v3/__https://gema.georgia.gov/hurricane-helene__;!!Ckt11KVezJIME=
+51BYf4a6hrLATHilnk!H1yjW6aHazSkuiYCLFkbPwwM6xAVi4zlim81Z5IRwg2wa3c44oWCbJk-=
+WkvIv5vLz_E15_eHELABg8LulUUbxHRVxlqlOpLPRNDpampd$ ) .Additional Hurricane H=
+elene resources can be foundhere(https://urldefense.com/v3/__https://www.us=
+a.gov/hurricane-helene__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!H1yjW6aHazSkuiYC=
+LFkbPwwM6xAVi4zlim81Z5IRwg2wa3c44oWCbJk-WkvIv5vLz_E15_eHELABg8LulUUbxHRVxlq=
+lOpLPRKyQ6qm-$ ) .
+
+Both our Savannah and Brunswick offices are available if you need assistanc=
+e:
+
+Savannah office number: 912-352-0101
+
+Brunswick office number: 912-265-9010
+
+
+Stay Safe,
+
+
+----boundary_217_19c9cc24-fb1d-46fd-a322-797eb229776c
+Content-Location: https://buddycarter.house.gov/
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>Representative Buddy Carter</title>
+       =20
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1">
+        <!--[if !mso]><!-->
+        <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![e=
+ndif]-->
+        <style>body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default t=
+ext sizes */ img{-ms-interpolation-mode: bicubic;} /* Allow smoother render=
+ing of resized image in Internet Explorer *//* RESET STYLES */img { border:=
+ 0; height: auto; line-height: 100%; outline: none; text-decoration: none; =
+}table { border-collapse: collapse !important; }body { height: 100% !import=
+ant; margin: 0 !important; padding: 0 !important; width: 100% !important; }=
+strong { font-weight: bold; } /* Editor reset *//* FIRESIDE STYLES */.compo=
+nent img {max-width:600px;}.component table {mso-table-rspace:10pt; border-=
+collapse:collapse;}.component { padding: 0px !important; }.press {padding-b=
+ottom: 0px;}</style><style>@media all and (max-width:650px) {            .i=
+mage-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td, .image-2, .img-2 =
+img, .image-2 tr, .image-2 td {max-width: 100% !important; width: 100% !imp=
+ortant;}            .responsive-table {width:100% !important;}            .=
+responsive-table img {max-width:100% !important; height: auto !important;} =
+           .press .component, .press td {text-align:center;}            .co=
+mponent { margin-left: 20px; margin-right: 20px;}            .component .re=
+sponsive-table { margin-left: 0px !important; margin-right: 0px !important;=
+}            .wide .video-thumb { width: 100% !important;height: auto !impo=
+rtant; }             .wide.video-container { width: 100% !important; }     =
+    .component.full-width {margin-left: 0px; margin-right: 0px; }   }</styl=
+e><style type=3D"text/css">
+            /* CLIENT-SPECIFIC STYLES */
+            body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text=
+ sizes */
+            table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Rem=
+ove spacing between tables in Outlook 2007 and up */
+            img{-ms-interpolation-mode: bicubic;} /* Allow smoother renderi=
+ng of resized image in Internet Explorer */
+            /* RESET STYLES */
+            img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: =
+0 !important; width: 100% !important; }
+            strong { font-weight: bold; } /* Editor reset */
+            /* FIRESIDE STYLES */
+            .component img {max-width:600px;}
+            .component table {mso-table-rspace:10pt; border-collapse:collap=
+se; font-family: Arial, Helvetica, sans-serif;}
+            .component td {font-family: Arial, Helvetica, sans-serif;}
+            .component { padding: 0px !important; }
+            .caption-1 td {font-family: Arial, Helvetica, sans-serif;}
+            /* Non-Outlook Styles */
+            body {background-color: #fafafa;}
+            /* Margin/NoMargin STYLES */
+            .component.full-width{ overflow: hidden; margin: 0px; }
+            /* HEADER STYLES */
+            .header-bar {width: 100%;}
+            .header-bar-margin {background-color:#ffffff;}
+            .header-bar h2 {margin: 0 !important; padding: 0 !important; co=
+lor: #0865c1 !important;text-align: left;font-size: 25px !important;font-we=
+ight: bold !important; }
+            .survey-content > table > tbody tr td { border-color: #0865c1 !=
+important; }
+            .survey-content input.survey-submit { font-family: Arial, Helve=
+tica, sans-serif !important; }
+        </style>
+        <!--[if (gte mso 9)|(IE)]>
+            <style>
+                body {background-color: #ffffff !important;}
+            </style>
+        <![endif]-->        =20
+        <style id=3D"media-queries">=20
+            @media all and (max-width:650px) {
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max=
+-width: 100% !important; width: 100% !important;}
+            .responsive-table {width:100% !important;}
+            .responsive-table img {max-width:100% !important; height: auto =
+!important;}
+            .split .component, .split td {text-align:center;}
+            .component { margin-left: 20px; margin-right: 20px;}
+            .component .responsive-table { margin-left: 0px !important; mar=
+gin-right: 0px !important;}
+            .wide .video-thumb { width: 100% !important;height: auto !impor=
+tant; }=20
+            .wide.video-container { width: 100% !important; }
+            }
+        </style>
+       =20
+    <!--[if (gte mso 9)|(IE)]>
+                                        <style>=20
+                                    </style>
+                                    <![endif]--></head>
+    <body style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%;margin: 0px !important; padding: 0px !important;">
+        <div id=3D"preview-text" style=3D"display: none; font-size: 1px; co=
+lor: #fefefe; line-height: 1px; font-family: Arial, Helvetica, sans-serif; =
+max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">HURRICANE H=
+ELENE Update Dear Friend,As we continue recovery from Hurricane Helene, I w=
+anted to let you know that 11 Georgia counties have received a&nbsp;Major D=
+isaster Declaration from the White House, and we anticipate announcements t=
+hat more counties will qualify in the coming days.&nbsp;I am working with G=
+overnor Kemp, FEMA, and the White House to expand this declaration.&nbsp;Th=
+is declaration&nbsp;will release federal funding to help the recovery of co=
+mmunities and individuals impacted by Hurricane Helene.Federal funding is a=
+vailable for individuals and households in&nbsp;Appling, Atkinson, Bacon, B=
+en Hill, Berrien, Brooks, Bulloch, Burke, Candler, Chatham, Clinch Coffee, =
+Colquitt, Columbia, Cook, Echols, Emanuel, Evans, Glascock, Irwin, Jeff Dav=
+is, Jefferson, Jenkins, Johnson, Lanier, Laurens, Liberty, Lincoln, Lowndes=
+, McDuffie, Montgomery, Pierce, Richmond, Screven, Tattnall, Telfair,&nbsp;=
+Toombs, Treutlen, Ware, Washington, and Wheeler&nbsp;Counties.Federal fundi=
+ng is also available for emergency work and repair or replacement of disast=
+er-damaged facilities in&nbsp;Appling, Atkinson, Bacon, Ben Hill, Berrien, =
+Brooks, Bulloch, Burke, Candler, Chatham, Clinch, Coffee, Colquitt, Columbi=
+a, Cook, Echols, Emanuel, Evans, Glascock, Irwin, Jeff Davis,&nbsp;Jefferso=
+n, Jenkins, Johnson, Lanier, Laurens, Liberty, Lincoln, Lowndes, mcDuffie, =
+Montgomery, Pierce, Richmond, Screven, Tattnall, Telfair, Toombs, Treutlen,=
+ Ware, Washington, and Wheeler&nbsp;Counties.Individuals can apply for assi=
+stance the following ways:&nbsp;- Online at www.DisasterAssistance.gov- Ove=
+r the&nbsp;phone at 1-800-621-3362 (TTY: 800-462-7585)Power Outages&nbsp;Po=
+wer outages are continuing to impact our district. For information about wh=
+en your county's power is expected to return, visit Georgia Power's outage =
+map here and Georgia EMC's map, pictured below, here.&nbsp;Thank you to the=
+ brave linemen who are working around the clock to bring power back to our =
+district, and all first responders assisting GA-01's recovery.&nbsp;Please =
+continue to follow local advisories and do not take unnecessary risks as re=
+covery efforts continue.&nbsp;If you need shelter, a list of open shelters =
+can be found here.&nbsp;Additional Hurricane Helene resources can be found&=
+nbsp;here.Both our Savannah and Brunswick offices are available if you need=
+ assistance:&nbsp;Savannah office number: 912-352-0101Brunswick office numb=
+er: 912-265-9010Stay Safe, </div>
+    <!--[if (gte mso 9)|(IE)]>
+    <table style=3D"background-color:#fafafa;" width=3D"100%" align=3D"cent=
+er" role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><tr><=
+td>
+    <![endif]-->
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color:=
+ #ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D=
+"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td align=3D"center" valign=3D"top" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvet=
+ica, sans-serif; font-size: 16px;">
+                        <div class=3D"region" id=3D"region-1"><div class=3D=
+"component full-width" style=3D"padding: 0px !important;"> <div class=3D"im=
+age" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 0px; margin-left: 0px;" width=3D"650">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;"><a href=3D"https://buddycarter.house.gov" target=3D"_blank" sty=
+le=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img sty=
+le=3D"max-width:600px;-ms-interpolation-mode: bicubic;vertical-align: botto=
+m; max-width: 700px;" alt=3D"Representative Buddy Carter" src=3D"https://bu=
+ddycarter.house.gov/images/bc_header.jpg" width=3D"649.5"></a></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;background-color: #ffffff; font-family: Arial, Helvetica, sa=
+ns-serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D=
+"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td class=3D"responsive-table" valign=3D"top" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Ari=
+al, Helvetica, sans-serif; font-size: 16px; color: #000000;">
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class=3D"region" id=3D"region-2"><div class=3D=
+"component full-width" style=3D"padding: 0px !important;"> <div class=3D"he=
+ader-bar" style=3D"overflow: hidden;">
+                                    <table role=3D"presentation" align=3D"c=
+enter" class=3D"responsive-table table-w-bg-color" style=3D"mso-table-lspac=
+e:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse=
+;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Ar=
+ial, Helvetica, sans-serif; margin-right: 0px; margin-left: 0px;" border=3D=
+"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0=
+" leftmargin=3D"0" topmargin=3D"0" width=3D"650">
+                                        <tbody>
+                                            <tr height=3D"0" class=3D"space=
+rRow">
+                                                <td style=3D"-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 0p=
+x">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td class=3D"responsive-tab=
+le" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fon=
+t-size:25px;color:#0865c1;" valign=3D"top">
+                                                <table role=3D"presentation=
+" width=3D"100%" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-ta=
+ble-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -=
+ms-text-size-adjust: 100%;min-width: 100%;" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" top=
+margin=3D"0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;padding: 0 15pt; f=
+ont-family: Arial, Helvetica, sans-serif;">
+                                                                <div class=
+=3D"cke_editable cke_editable_inline cke_contents_ltr cke_focus cke_show_bo=
+rders" style=3D"overflow: hidden;"><h2 style=3D"text-align: left; text-tran=
+sform: uppercase;">HURRICANE HELENE Update</h2></div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                </td>
+                                            </tr>
+                                            <tr height=3D"0" class=3D"space=
+rRow">
+                                                <td style=3D"-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 0p=
+x">&nbsp;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><d=
+iv class=3D"component-template" style=3D"overflow: hidden;"><p style=3D"mar=
+gin: 0;margin: 0;"><br></p><p style=3D"margin: 0;margin: 0;"><span style=3D=
+"font-size:16px;"><span style=3D"font-family:Arial,Helvetica,sans-serif;">D=
+ear Friend,<br><br>As we continue recovery from Hurricane Helene, I wanted =
+to let you know that 11 Georgia counties have received a&nbsp;Major Disaste=
+r Declaration from the White House, and <u><strong style=3D"font-weight: bo=
+ld;">we anticipate announcements that more counties will qualify in the com=
+ing days.</strong></u>&nbsp;I am working with Governor Kemp, FEMA, and the =
+White House to expand this declaration.<strong style=3D"font-weight: bold;"=
+>&nbsp;</strong></span></span></p><p style=3D"margin: 0;margin: 0;"><br></p=
+><p style=3D"margin: 0;"><span style=3D"font-size:16px;"><span style=3D"fon=
+t-family:Arial,Helvetica,sans-serif;">This declaration&nbsp;will release fe=
+deral funding to help the recovery of communities and individuals impacted =
+by Hurricane Helene.</span></span></p><p style=3D"margin: 0;"><br></p><p st=
+yle=3D"margin: 0;"><span style=3D"font-size:16px;"><span style=3D"font-fami=
+ly:Arial,Helvetica,sans-serif;">Federal funding is available for individual=
+s and households in&nbsp;<strong style=3D"font-weight: bold;">Appling, Atki=
+nson, Bacon, Ben Hill, Berrien, Brooks, Bulloch, Burke, Candler, Chatham, C=
+linch Coffee, Colquitt, Columbia, Cook, Echols, Emanuel, Evans, Glascock, I=
+rwin, Jeff Davis, Jefferson, Jenkins, Johnson, Lanier, Laurens, Liberty, Li=
+ncoln, Lowndes, McDuffie, Montgomery, Pierce, Richmond, Screven, Tattnall, =
+Telfair,&nbsp;Toombs, Treutlen, Ware, Washington, and Wheeler</strong>&nbsp=
+;Counties.</span></span></p><p style=3D"margin: 0;"><br></p><p style=3D"mar=
+gin: 0;"><span style=3D"font-size:16px;"><span style=3D"font-family:Arial,H=
+elvetica,sans-serif;">Federal funding is also available for emergency work =
+and repair or replacement of disaster-damaged facilities in&nbsp;<strong st=
+yle=3D"font-weight: bold;">Appling, Atkinson, Bacon, Ben Hill, Berrien, Bro=
+oks, Bulloch, Burke, Candler, Chatham, Clinch, Coffee, Colquitt, Columbia, =
+Cook, Echols, Emanuel, Evans, Glascock, Irwin, Jeff Davis,&nbsp;Jefferson, =
+Jenkins, Johnson, Lanier, Laurens, Liberty, Lincoln, Lowndes, mcDuffie, Mon=
+tgomery, Pierce, Richmond, Screven, Tattnall, Telfair, Toombs, Treutlen, Wa=
+re, Washington, and Wheeler&nbsp;</strong>Counties.</span></span></p><p sty=
+le=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span style=3D"font-size:=
+16px;"><span style=3D"font-family:Arial,Helvetica,sans-serif;">Individuals =
+can apply for assistance the following ways:&nbsp;</span></span></p><p styl=
+e=3D"margin: 0;margin: 0;"><br></p><p style=3D"margin: 0;margin: 0;"><span =
+style=3D"font-size:16px;"><span style=3D"font-family:Arial,Helvetica,sans-s=
+erif;"><span style=3D"line-height:1.2">- Online at <a data-cke-saved-href=
+=3D"https://urldefense.com/v3/__http://www.DisasterAssistance.gov__;!!Bg5ea=
+soyC-OII2vlEqY8mTBrtW-N4OJKAQ!IdvB4lh94yU8Ybv9fmVJyc1UkqB_mdzIJMzKUy5_D3BEW=
+TWCiSSWkOJT4yMs1AGwZvI0Yp4w9X_fiORQfTJAwtPHZ0EntQ19HbRou8s$" href=3D"https:=
+//urldefense.com/v3/__http://www.DisasterAssistance.gov__;!!Bg5easoyC-OII2v=
+lEqY8mTBrtW-N4OJKAQ!IdvB4lh94yU8Ybv9fmVJyc1UkqB_mdzIJMzKUy5_D3BEWTWCiSSWkOJ=
+T4yMs1AGwZvI0Yp4w9X_fiORQfTJAwtPHZ0EntQ19HbRou8s$" title=3D"https://urldefe=
+nse.com/v3/__http://www.DisasterAssistance.gov__;!!Bg5easoyC-OII2vlEqY8mTBr=
+tW-N4OJKAQ!IdvB4lh94yU8Ybv9fmVJyc1UkqB_mdzIJMzKUy5_D3BEWTWCiSSWkOJT4yMs1AGw=
+ZvI0Yp4w9X_fiORQfTJAwtPHZ0EntQ19HbRou8s$" data-outlook-id=3D"b189249b-1a61-=
+424b-808a-fa0811ec4efd" style=3D"-webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%;color:#0078d7; text-decoration:underline">www.DisasterAssi=
+stance.gov</a></span></span></span></p><p style=3D"margin: 0;margin: 0;"><b=
+r></p><p style=3D"margin: 0;margin: 0;"><span style=3D"font-size:16px;"><sp=
+an style=3D"font-family:Arial,Helvetica,sans-serif;"><span style=3D"line-he=
+ight:1.2">- Over the&nbsp;phone at 1-800-621-3362 (TTY: 800-462-7585)</span=
+></span></span></p><p style=3D"margin: 0;margin: 0;"><br></p><p style=3D"ma=
+rgin: 0;margin: 0;"><br></p><p style=3D"margin: 0;margin: 0;"><u><strong st=
+yle=3D"font-weight: bold;">Power Outages&nbsp;</strong></u></p><p style=3D"=
+margin: 0;margin: 0;"><br></p><p style=3D"margin: 0;margin: 0;">Power outag=
+es are continuing to impact our district. For information about when your c=
+ounty's power is expected to return, visit Georgia Power's outage map <a da=
+ta-cke-saved-href=3D"https://outagemap.georgiapower.com/external/default.ht=
+ml?hp=3Dtm_po_view_outage_map" href=3D"https://urldefense.com/v3/__https://=
+outagemap.georgiapower.com/external/default.html?hp=3Dtm_po_view_outage_map=
+__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!H1yjW6aHazSkuiYCLFkbPwwM6xAVi4zlim81Z5=
+IRwg2wa3c44oWCbJk-WkvIv5vLz_E15_eHELABg8LulUUbxHRVxlqlOpLPRI2EYFEd$" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">here</a> a=
+nd Georgia EMC's map, pictured below, <a data-cke-saved-href=3D"https://geo=
+rgiaemc.com/page/outages" href=3D"https://urldefense.com/v3/__https://georg=
+iaemc.com/page/outages__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!H1yjW6aHazSkuiYC=
+LFkbPwwM6xAVi4zlim81Z5IRwg2wa3c44oWCbJk-WkvIv5vLz_E15_eHELABg8LulUUbxHRVxlq=
+lOpLPRFAX_zeJ$" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adju=
+st: 100%;">here</a>.&nbsp;</p><p style=3D"margin: 0;margin: 0;"><br></p><p =
+style=3D"margin: 0;margin: 0;">Thank you to the brave linemen who are worki=
+ng around the clock to bring power back to our district, and all first resp=
+onders assisting GA-01's recovery.&nbsp;</p><p style=3D"margin: 0;margin: 0=
+;"><br></p><p style=3D"margin: 0;margin: 0;"><br></p><p style=3D"margin: 0;=
+margin: 0;"><br></p><p style=3D"margin: 0;margin: 0;"><span contenteditable=
+=3D"false" class=3D"cke_widget_wrapper cke_widget_inline cke_widget_image c=
+ke_image_nocaption"><img alt=3D"" src=3D"https://buddycarter.house.gov/Uplo=
+adedPhotos/HighResolution/9d7a9fc2-65cb-4ba3-becf-d2827e0adc16.png" class=
+=3D"cke_widget_element" width=3D"610" height=3D"274" style=3D"max-width:600=
+px;-ms-interpolation-mode: bicubic;"></span></p><p style=3D"margin: 0;margi=
+n: 0;"><br></p><p style=3D"margin: 0;margin: 0;">Please continue to follow =
+local advisories and do not take unnecessary risks as recovery efforts cont=
+inue.&nbsp;</p><p style=3D"margin: 0;margin: 0;"><br></p><p style=3D"margin=
+: 0;margin: 0;">If you need shelter, a list of open shelters can be found <=
+a data-cke-saved-href=3D"https://gema.georgia.gov/hurricane-helene" href=3D=
+"https://urldefense.com/v3/__https://gema.georgia.gov/hurricane-helene__;!!=
+Ckt11KVezJIME51BYf4a6hrLATHilnk!H1yjW6aHazSkuiYCLFkbPwwM6xAVi4zlim81Z5IRwg2=
+wa3c44oWCbJk-WkvIv5vLz_E15_eHELABg8LulUUbxHRVxlqlOpLPRNDpampd$" style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><span style=3D"c=
+olor:#2980b9;">here</span></a>.&nbsp;Additional Hurricane Helene resources =
+can be found&nbsp;<a data-cke-saved-href=3D"https://www.usa.gov/hurricane-h=
+elene" href=3D"https://urldefense.com/v3/__https://www.usa.gov/hurricane-he=
+lene__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!H1yjW6aHazSkuiYCLFkbPwwM6xAVi4zlim=
+81Z5IRwg2wa3c44oWCbJk-WkvIv5vLz_E15_eHELABg8LulUUbxHRVxlqlOpLPRKyQ6qm-$" st=
+yle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><span s=
+tyle=3D"color:#2980b9;">here</span></a>.</p><p style=3D"margin: 0;margin: 0=
+;"><br></p><p style=3D"margin: 0;margin: 0;">Both our Savannah and Brunswic=
+k offices are available if you need assistance:&nbsp;</p><p style=3D"margin=
+: 0;margin: 0;"><br></p><p style=3D"margin: 0;margin: 0;">Savannah office n=
+umber: 912-352-0101</p><p style=3D"margin: 0;margin: 0;"><br></p><p style=
+=3D"margin: 0;margin: 0;">Brunswick office number: 912-265-9010</p><p style=
+=3D"margin: 0;margin: 0;"><br></p><p style=3D"margin: 0;margin: 0;"><br></p=
+><p style=3D"margin: 0;margin: 0;">Stay Safe,</p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"signature" style=3D"overflow: hidden;width:100%">=20
+            <table role=3D"presentation" class=3D"responsive-table" align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-t=
+able-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collaps=
+e:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table=
+-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td valign=3D"top" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%;">
+                            <table align=3D"left" class=3D"signature-table"=
+ role=3D"presentation" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;=
+mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 1=
+00%; -ms-text-size-adjust: 100%;table-layout: fixed;">
+                                <tbody>
+                                    <tr>
+                                        <td style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;">
+                                            <table role=3D"presentation" al=
+ign=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-=
+table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collap=
+se:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;bord=
+er-collapse: separate !important;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td valign=3D"top" =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                                            <div class=3D"n=
+g-binding" style=3D"overflow: hidden;"></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td valign=3D"top" =
+class=3D"image-td" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-a=
+djust: 100%;">
+                                                            <div class=3D"i=
+mg-1 image-container" style=3D"overflow: hidden;text-align:left"><img style=
+=3D"max-width:600px;-ms-interpolation-mode: bicubic;vertical-align: bottom;=
+ max-width: 147px; width: 90px !important;" src=3D"https://buddycarter.hous=
+e.gov/images/email/buddy-sig.png" alt=3D"Buddy Carter Signature"></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class=3D"spacerRow"=
+ height=3D"0">
+                                                        <td style=3D"-webki=
+t-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-size:0%;line-heig=
+ht: 0px;">
+                                                            &nbsp;
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td valign=3D"top" =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                                            <div class=3D"n=
+g-binding" style=3D"overflow: hidden;">Buddy Carter<br>Member of Congress</=
+div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div></div>
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;background-color: #e3e4e6; font-family: Arial, Helvetica, sa=
+ns-serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"10" marginheight=
+=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td class=3D"split" align=3D"center" valign=3D"middle" =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-=
+top: 2px solid #b5bbbd; border-bottom: 2px solid #b5bbbd;">
+                    <table align=3D"left" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" width=3D"49.9%" class=3D"responsive-table" role=3D"presenta=
+tion" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"=
+>
+                        <tbody>
+                            <tr>
+                                <td align=3D"center" valign=3D"middle" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                <table border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" width=3D"100%" role=3D"presentation" style=3D"-webkit-text-siz=
+e-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                    <tbody>
+                                        <tr>
+                                            <td align=3D"left" style=3D"-we=
+bkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial,=
+ helvetica, sans-serif; font-size: 11px; color: #b5bbbd; height: 36px;">
+                                            <a href=3D"https://buddycarter.=
+house.gov/" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: =
+100%;color: #b5bbbd; text-decoration: none; font-size: 11px;">WEBSITE</a> |
+                                            <a href=3D"https://buddycarter.=
+house.gov/forms/emailsignup/?Delete=3Dtrue" style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;color: #b5bbbd; text-decoration: none;=
+  font-size: 11px;">UNSUBSCRIBE</a> |
+                                            <a href=3D"https://buddycarter.=
+house.gov/contact" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-a=
+djust: 100%;color: #b5bbbd; text-decoration: none; font-size: 11px;">CONTAC=
+T</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table align=3D"left" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" width=3D"49.9%" class=3D"responsive-table" role=3D"presenta=
+tion" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"=
+>
+                        <tbody>
+                            <tr>
+                                <td align=3D"center" valign=3D"middle" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                <table border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" width=3D"100%" role=3D"presentation" style=3D"-webkit-text-siz=
+e-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                    <tbody>
+                                        <tr>
+                                            <td align=3D"right" style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial=
+, helvetica, sans-serif; font-size: 16px; color: #000000;">
+                                            <a target=3D"_blank" href=3D"ht=
+tps://urldefense.com/v3/__https://www.facebook.com/CongressmanBuddyCarter__=
+;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!H1yjW6aHazSkuiYCLFkbPwwM6xAVi4zlim81Z5IR=
+wg2wa3c44oWCbJk-WkvIv5vLz_E15_eHELABg8LulUUbxHRVxlqlOpLPRPPhVpWm$" style=3D=
+"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"f=
+acebook icon" width=3D"32" src=3D"https://buddycarter.house.gov/images/face=
+book.png" style=3D"-ms-interpolation-mode: bicubic;border-width: 0px; borde=
+r-style: solid; width: 32px;"></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://urldefense.c=
+om/v3/__https://www.twitter.com/RepBuddyCarter__;!!Ckt11KVezJIME51BYf4a6hrL=
+ATHilnk!H1yjW6aHazSkuiYCLFkbPwwM6xAVi4zlim81Z5IRwg2wa3c44oWCbJk-WkvIv5vLz_E=
+15_eHELABg8LulUUbxHRVxlqlOpLPRIU9mmcg$" style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;"><img alt=3D"twitter icon" width=3D"32" s=
+rc=3D"https://buddycarter.house.gov/images/twitter.png" style=3D"-ms-interp=
+olation-mode: bicubic;border-width: 0px; border-style: solid; width: 32px;"=
+></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://urldefense.c=
+om/v3/__https://www.youtube.com/channel/UCHQm49T6ikD_ioMAt50AwKQ__;!!Ckt11K=
+VezJIME51BYf4a6hrLATHilnk!H1yjW6aHazSkuiYCLFkbPwwM6xAVi4zlim81Z5IRwg2wa3c44=
+oWCbJk-WkvIv5vLz_E15_eHELABg8LulUUbxHRVxlqlOpLPRDCGhU0K$" style=3D"-webkit-=
+text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"youtube ic=
+on" width=3D"32" src=3D"https://buddycarter.house.gov/images/youtube.png" s=
+tyle=3D"-ms-interpolation-mode: bicubic;border-width: 0px; border-style: so=
+lid; width: 32px;"></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    <!--[if (gte mso 9)|(IE)]>
+    </td></tr></table>
+    <![endif]-->
+    </body>
+</html>=
+
+----boundary_217_19c9cc24-fb1d-46fd-a322-797eb229776c--

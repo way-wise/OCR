@@ -1,0 +1,574 @@
+Received: from SA1PR09MB11595.namprd09.prod.outlook.com
+ (2603:10b6:806:372::12) by SA1PR09MB9517.namprd09.prod.outlook.com with
+ HTTPS; Wed, 8 May 2024 23:48:27 +0000
+Received: from DM6PR09CA0023.namprd09.prod.outlook.com (2603:10b6:5:160::36)
+ by SA1PR09MB11595.namprd09.prod.outlook.com (2603:10b6:806:372::12) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7544.46; Wed, 8 May
+ 2024 23:48:25 +0000
+Received: from DS4PEPF00000170.namprd09.prod.outlook.com
+ (2603:10b6:5:160:cafe::52) by DM6PR09CA0023.outlook.office365.com
+ (2603:10b6:5:160::36) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7544.46 via Frontend
+ Transport; Wed, 8 May 2024 23:48:25 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.151.112)
+ smtp.mailfrom=mail.house.gov; dkim=fail (body hash did not verify)
+ header.d=mail.house.gov;dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.151.112 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.151.112;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.151.112) by
+ DS4PEPF00000170.mail.protection.outlook.com (10.167.18.196) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7544.18 via Frontend Transport; Wed, 8 May 2024 23:48:25 +0000
+Received: from EXCH1911.US.House.gov (143.228.151.110) by
+ EXCH1913.US.House.gov (143.228.151.112) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.2.1544.9; Wed, 8 May 2024 19:48:20 -0400
+Received: from serg-bulk2-a.house.gov (143.228.42.63) by EXCH1911.US.House.gov
+ (143.228.151.110) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1544.9 via Frontend
+ Transport; Wed, 8 May 2024 19:48:20 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mail.house.gov; h=message-id :
+ list-unsubscribe : from : to : date : subject : content-type :
+ mime-version; s=january2024-msgb-mhg;
+ bh=ByDNeMqgUzbK/zwYwEU5N5HTuE15n8F7W8SVK2nnY3I=;
+ b=JJIBqa9nb9iMAccoAJWXBqbbcdKGbwlzcGQ8S/2k1839YEOcpYKPLDRl2EWXEFCDIBsc
+ c+Vuk8q5reWOwKJ8lnbOnWf4clmZTLVSCxBzLjXf0bOh/RIhu92C54qIx4PMERoGmL4A
+ kK9VI/fT6Kr3AaQcy1QcO03ZhGulx6dBkOLZy4ONZc/SBqpHK74BkDQNqngxHihakADS
+ 8DObVORkSnwMUGsnMNQN3smMaL7i2u81yOHYu4cMxP3kShTgyl+suNin5/xTKX0X3mg9
+ kfNH++Z6+GWliAKW1pk70YhIR0222wo73EMne67kzqMiEWnosBa/6ynF+hHEbDMbZ2OC 2g== 
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=message-id :
+ list-unsubscribe : from : to : date : subject : content-type :
+ mime-version; s=august2019-msgb-hg;
+ bh=ByDNeMqgUzbK/zwYwEU5N5HTuE15n8F7W8SVK2nnY3I=;
+ b=DlzYkiY0xHRk/6X9gTBRMKSGtFNcfi90lVnGukrcojQ0S8gX1SzNaMY6e+AytTAxo3tz
+ A1gp7cfswDahILxvPcnpA684llZMYPvbUiVnvpZ3CLGC9AS59cMY2CKtvKMVPcsnQ56s
+ BTNAJw0hW5YxrSK/8Zn0wWpTRDU0WShK1/l1jrtxlJL3vV8Xr5IieQeh6RPVJdQHc2QE
+ aIB0u+ajeu3LnZquEfF/5+ebhjXxqSBC4aUSq2VtIi5QmRHBfjk87bj8Ng9yViYyjWLp
+ kDAdoR8rBlfE3Ddo7u+lTg2i/sD2lilLzWYH55ej3tNd0OFbhbSVv5g1bPCCOexujmuN WQ== 
+Received: from FIRESIDESERV08 (firesideserv08.us.house.gov [143.228.58.71])
+	by serg-bulk2-a.house.gov (8.17.1.19/8.17.1.19) with ESMTP id 448NmKZa027633
+	for <Peter.Finocchio@mail.house.gov>; Wed, 8 May 2024 19:48:20 -0400
+envelope-from: repmikelawler@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+Message-ID: <4tbAJChfz5/lM5zFp6YT1db8hjr1KETbvJVtd7XqvBcpyHwfPurEtlTaNFOlMomK4UPB09wwNxGWlCg9eXgTCYSZjhzjOfdNHnt2//d74qNsaxQYKk/SsiIMxfTMYplw/o14bNO6msxDfZPLqsvC72ueyovTpKO86FeDS4L/T9ANik2amCyiaax7TpFPmpah@fireside21.com>
+X-House-Vendor-Seg: unmanaged
+List-Unsubscribe: <https://lawler.house.gov/forms/emailsignup/?Delete=true&MessageID=522&Email=Peter.Finocchio@mail.house.gov>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Precedence: bulk
+From: "Rep. Michael Lawler" <repmikelawler@mail.house.gov>
+To: Peter.Finocchio@mail.house.gov
+Date: 8 May 2024 19:48:20 -0400
+Subject: Putnam County Town Hall NEXT SATURDAY!
+Content-Type: multipart/alternative;
+ boundary=--boundary_9708245_f383c8a7-f7e8-4182-b99c-e76ccc5a4565
+X-Proofpoint-Virus-Version: vendor=baseguard
+ engine=ICAP:2.0.293,Aquarius:18.0.1039,Hydra:6.0.650,FMLib:17.11.176.26
+ definitions=2024-05-08_09,2024-05-08_01,2023-05-22_02
+Return-Path: RepMikeLawler@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1913.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 08 May 2024 23:48:25.4826
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ baabb6aa-5d9c-4684-8eb2-08dc6fb95a53
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1911.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted: DS4PEPF00000170.namprd09.prod.outlook.com
+X-CrossPremisesHeadersFiltered: DS4PEPF00000170.namprd09.prod.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ DS4PEPF00000170:EE_|SA1PR09MB11595:EE_|SA1PR09MB9517:EE_
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: baabb6aa-5d9c-4684-8eb2-08dc6fb95a53
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;ARA:13230031|82310400017|366007|41050700001;
+X-Forefront-Antispam-Report:
+ CIP:143.228.151.112;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:(13230031)(82310400017)(366007)(41050700001);DIR:INT;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 08 May 2024 23:48:25.3888
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: baabb6aa-5d9c-4684-8eb2-08dc6fb95a53
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.151.112];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1911.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SA1PR09MB11595
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.7842146
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.7544.013
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(425001)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	ezOKpldaJMVIn6aJeMxTRVhNT0tNjnvoUJ5ezaXlWcwwMR8VNnbV1PTQ+Z592PXEemdOOq2j1Pis0iI3gIsiELAZyq+foMdNz15nXylQbTsLCmW4cHEggI90/gYsTCIHGgtrF7P/xPPUHeK/jJLSerTT/HFN6sqEnYhR1bG27JALMh9C9GVI6p8OO5gPVKQiaq3XstS8BALokCIPRocqllTPodZmFAKo0r4ESJY6tWeYwXptZ5P85HFgj2Yf04RErk+Gu6jKhYj0L/65GH4wgPyeuLWHxbyoBK4tlwb2wODuDoOzx+mNQeVWqsRnlvLEJyM5beDY3oeeZJ16/14ExNnyiJ14DbBcWJTRfngF5DZFo6PGT2KCwl4AiecsTt4DV1KbiXXxfNISUl7ZzYPUYZHcRl27agmeLbvv/xCBc/AKc1z3FBBSdCxiOlSmoT1Xmgj+b2giPdX3kT+bINScJczmzDnpJbP6yYpEG3A7og3KtETHNYnUKqdpZ9IaFol4oetTN9PFG4RPL9ZjnMEE4jYKhE9nBBUnfoN8zH1cz4aZC1JHoW6ZtdgW6/5O8gNJ6ESyHv2/0GUPswGIxeKNNsBXh/kr4VS7FUdSKKEK8S2VTg3lpax2UJ6xS9WMJaogJBdzG5EvM7ETT+ZuIs9S+kiORW38WgFTD0gZmMAZSzX0tgGlWQMOTaMKFooFwNfgxHgQ3dPow++OA7PmbrVEMJ3kwbGpmzReCCpfiEq9fS5ElIO9d4VQORCG6oGZuCqkV8wR2etKjDypk3MXuy6cWK0HCPXFkwj/21CGaI1xuF8O+0yL2RbKU7Vfct39Ar1yQLwpSKXLXBejXiYXFWurg9/n9CiVQh0ET8Vp8NB1vlM+uplkz7aoJN3Ws481Czbs
+MIME-Version: 1.0
+
+----boundary_9708245_f383c8a7-f7e8-4182-b99c-e76ccc5a4565
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+DQpVbnN1YnNjcmliZTogaHR0cHM6Ly9sYXdsZXIuaG91c2UuZ292L0Zvcm1zL0VtYWls
+U2lnbnVwLz9EZWxldGU9dHJ1ZSZNZXNzYWdlSUQ9NTIyJkVtYWlsPVBldGVyLkZpbm9j
+Y2hpb0BtYWlsLmhvdXNlLmdvdg==
+----boundary_9708245_f383c8a7-f7e8-4182-b99c-e76ccc5a4565
+Content-Location: https://lawler.house.gov/
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>Putnam County Town Hall NEXT SATURDAY!</title>
+       =20
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1">
+        <!--[if !mso]><!-->
+        <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![e=
+ndif]-->
+        <style>body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default t=
+ext sizes */ img{-ms-interpolation-mode: bicubic;} /* Allow smoother render=
+ing of resized image in Internet Explorer *//* RESET STYLES */img { border:=
+ 0; height: auto; line-height: 100%; outline: none; text-decoration: none; =
+}table { border-collapse: collapse !important; }body { height: 100% !import=
+ant; margin: 0 !important; padding: 0 !important; width: 100% !important; }=
+strong { font-weight: bold; } /* Editor reset *//* FIRESIDE STYLES */.compo=
+nent img {max-width:600px;}.component table {mso-table-rspace:10pt; border-=
+collapse:collapse;}.component { padding: 0px !important; }.press {padding-b=
+ottom: 0px;}</style><style>@media all and (max-width:650px) {            .i=
+mage-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td, .image-2, .img-2 =
+img, .image-2 tr, .image-2 td {max-width: 100% !important; width: 100% !imp=
+ortant;}            .responsive-table {width:100% !important;}            .=
+responsive-table img {max-width:100% !important; height: auto !important;} =
+           .press .component, .press td {text-align:center;}            .co=
+mponent { margin-left: 20px; margin-right: 20px;}            .component .re=
+sponsive-table { margin-left: 0px !important; margin-right: 0px !important;=
+}            .wide .video-thumb { width: 100% !important;height: auto !impo=
+rtant; }             .wide.video-container { width: 100% !important; }     =
+    .component.full-width {margin-left: 0px; margin-right: 0px; }   }</styl=
+e><style type=3D"text/css">
+            /* CLIENT-SPECIFIC STYLES */
+            body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text=
+ sizes */
+            table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Rem=
+ove spacing between tables in Outlook 2007 and up */
+            img{-ms-interpolation-mode: bicubic;} /* Allow smoother renderi=
+ng of resized image in Internet Explorer */
+            /* RESET STYLES */
+            img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: =
+0 !important; width: 100% !important; }
+            strong { font-weight: bold; } /* Editor reset */
+            /* FIRESIDE STYLES */
+            .component img {max-width:600px;}
+            .component table {mso-table-rspace:10pt; border-collapse:collap=
+se; font-family: Arial, Helvetica, sans-serif;}
+            .component td, td {font-family: Arial, Helvetica, sans-serif;}
+            .component { padding: 0px !important; }
+            .press {padding-bottom: 0px;}
+            .caption-1 td {font-family: Arial, Helvetica, sans-serif;}
+            /* Margin/NoMargin STYLES */
+            .component.full-width{ overflow: hidden; margin: 0px; }
+            /* HEADER STYLES */
+            .header-bar {width: 100%;}
+            .header-bar-margin {background-color:#ffffff;}
+            .header-bar h2 {margin: 0 !important; padding: 0 !important; co=
+lor: #000000;text-align: center;font-size: 24px;font-weight: bold; }
+            .survey-content > table > tbody tr td { border-color: #08244a !=
+important; }
+            .survey-content input.survey-submit { font-family: Arial, Helve=
+tica, sans-serif !important; }
+        </style>     =20
+        <style id=3D"media-queries">=20
+            @media all and (max-width:650px) {
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max=
+-width: 100% !important; width: 100% !important;}
+            .responsive-table {width:100% !important;}
+            .responsive-table img {max-width:100% !important; height: auto =
+!important;}
+            .press .component, .press td, .split .component, .split .compon=
+ent td, .split td {text-align:center;}
+            .component { margin-left: 20px; margin-right: 20px;}
+            .component .responsive-table { margin-left: 0px !important; mar=
+gin-right: 0px !important;}
+            .wide .video-thumb { width: 100% !important;height: auto !impor=
+tant; }=20
+            .wide.video-container { width: 100% !important; }
+            }
+        </style>
+       =20
+    <!--[if (gte mso 9)|(IE)]>
+                                        <style>=20
+                                    </style>
+                                    <![endif]--></head>
+    <body style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%;margin: 0px !important; padding: 0px !important;">
+        <div id=3D"preview-text" style=3D"display: none; font-size: 1px; co=
+lor: #fefefe; line-height: 1px; font-family: Arial, Helvetica, sans-serif; =
+max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">Wednesday, =
+May 8, 2024 Peter,  I'm excited to announce our upcoming Putnam County Town=
+ Hall, which will be held in-person at Carmel High School next Saturday, Ma=
+y 18th at 6 PM. This is our first county-wide in-person town hall of the ye=
+ar, our fifth one since I took office, and our second one in Putnam County.=
+ I have enjoyed getting around communities across NY-17, hearing directly f=
+rom constituents at town halls, mobile office hours, and events in the comm=
+unity. I hope you'll be able to join us on May 18th for our Putnam County T=
+own Hall. Due to security considerations and limited seating available, an =
+RSVP is required. Please visit <a href=3D"https://urldefense.com/v3/__http:=
+//NY17TownHall.com__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!EgFrSx5A-HLNzrAHbbXJ=
+EsPS61cJP0HfBHuCina8LKv2GEiCOJX5Fldl7u_0OVsgqy466m9igvww2rFagfwQVmctlvvHwi8=
+mCv8eUQfHOw$">NY17TownHall.com</a> to reserve your spot today! </div>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;background-color: #ffffff; font-family: Arial, Helvetica, sa=
+ns-serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D=
+"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td class=3D"responsive-table" valign=3D"top" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Ari=
+al, Helvetica, sans-serif; font-size: 16px; color: #000000;">
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class=3D"region" id=3D"region-1"><div class=3D=
+"component " style=3D"padding: 0px !important;"> <div class=3D"image" style=
+=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 700px;" alt=3D"Newslette=
+r Header" src=3D"https://lawler.house.gov/UploadedPhotos/HighResolution/853=
+6055d-473d-4710-9910-3c594a8ab5d3.png" width=3D"609.5"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;text-align: right;"><br></p><p style=3D"margin: 0;text-=
+align: right;"><span style=3D"font-size:16px;"><span style=3D"font-family:A=
+rial,Helvetica,sans-serif;"><span style=3D"color:#000066;"><strong style=3D=
+"font-weight: bold;">Wednesday, May 8, 2024</strong></span></span></span></=
+p><p style=3D"margin: 0;text-align: right;"><br></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;"><span style=3D"line-height:2;"><span style=3D"font-si=
+ze:16px;"><span style=3D"font-family:Arial,Helvetica,sans-serif;"><span cla=
+ss=3D"fs-merge-field" contenteditable=3D"false"><span contenteditable=3D"fa=
+lse"><span class=3D"merge-field" contenteditable=3D"false" unselectable=3D"=
+true">Peter</span></span></span>,</span></span></span></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;overflow:hidden; background-color:#ffffff"><p =
+style=3D"margin: 0;"><br></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;line-height:1.38"><span style=3D"font-size:16px;"><span=
+ style=3D"font-family:Arial,Helvetica,sans-serif;"><span style=3D"line-heig=
+ht:2;"><span style=3D"font-variant-ligatures: normal; font-variant-alternat=
+es: normal; font-variant-numeric: normal; font-variant-east-asian: normal; =
+font-variant-position: normal; white-space: pre-wrap;"><span style=3D"color=
+:#000000"><span style=3D"font-weight:400"><span style=3D"font-style:normal"=
+><span style=3D"text-decoration:none">I'm excited to announce our upcoming =
+Putnam County Town Hall, which will be held in-person at Carmel High School=
+ next </span></span></span></span></span><span style=3D"font-variant-ligatu=
+res: normal; font-variant-alternates: normal; font-variant-numeric: normal;=
+ font-variant-east-asian: normal; font-variant-position: normal; white-spac=
+e: pre-wrap;"><span style=3D"color:#000000"><span style=3D"font-weight:700"=
+><span style=3D"font-style:normal"><span style=3D"text-decoration:none">Sat=
+urday, May 18th at 6 PM</span></span></span></span></span><span style=3D"fo=
+nt-variant-ligatures: normal; font-variant-alternates: normal; font-variant=
+-numeric: normal; font-variant-east-asian: normal; font-variant-position: n=
+ormal; white-space: pre-wrap;"><span style=3D"color:#000000"><span style=3D=
+"font-weight:400"><span style=3D"font-style:normal"><span style=3D"text-dec=
+oration:none">. </span></span></span></span></span><span style=3D"font-vari=
+ant-ligatures: normal; font-variant-alternates: normal; font-variant-numeri=
+c: normal; font-variant-east-asian: normal; font-variant-position: normal; =
+white-space: pre-wrap;"><span style=3D"color:#000000"><span style=3D"font-w=
+eight:400"><span style=3D"font-style:normal"><span style=3D"text-decoration=
+:none">This is our first county-wide in-person town hall of the year, our f=
+ifth one since I took office, and our second one in Putnam County. </span><=
+/span></span></span></span><span style=3D"font-variant-ligatures: normal; f=
+ont-variant-alternates: normal; font-variant-numeric: normal; font-variant-=
+east-asian: normal; font-variant-position: normal; white-space: pre-wrap;">=
+<span style=3D"color:#000000"><span style=3D"font-weight:400"><span style=
+=3D"font-style:normal"><span style=3D"text-decoration:none">I have enjoyed =
+getting around communities across NY-17, hearing directly from constituents=
+ at town halls, mobile office hours, and events in the community. </span></=
+span></span></span></span><span style=3D"font-variant-ligatures: normal; fo=
+nt-variant-alternates: normal; font-variant-numeric: normal; font-variant-e=
+ast-asian: normal; font-variant-position: normal; white-space: pre-wrap;"><=
+span style=3D"color:#000000"><span style=3D"font-weight:400"><span style=3D=
+"font-style:normal"><span style=3D"text-decoration:none">I hope you'll be a=
+ble to join us on May 18th for our Putnam County Town Hall. Due to security=
+ considerations and limited seating available, an RSVP is required. Please =
+visit </span></span></span></span></span><a data-cke-saved-href=3D"https://=
+lawler.house.gov/components/redirect/r.aspx?ID=3D1914-84" href=3D"https://u=
+rldefense.com/v3/__http://www.NY17TownHall.com__;!!Ckt11KVezJIME51BYf4a6hrL=
+ATHilnk!EgFrSx5A-HLNzrAHbbXJEsPS61cJP0HfBHuCina8LKv2GEiCOJX5Fldl7u_0OVsgqy4=
+66m9igvww2rFagfwQVmctlvvHwi8mCv-g2Rromw$" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;"><span style=3D"font-variant-ligatures:=
+ normal; font-variant-alternates: normal; font-variant-numeric: normal; fon=
+t-variant-east-asian: normal; font-variant-position: normal; white-space: p=
+re-wrap;"><span style=3D"color:#000000"><span style=3D"font-weight:700"><sp=
+an style=3D"font-style:normal"><span style=3D"text-decoration:none">NY17Tow=
+nHall.com</span></span></span></span></span></a><span style=3D"font-variant=
+-ligatures: normal; font-variant-alternates: normal; font-variant-numeric: =
+normal; font-variant-east-asian: normal; font-variant-position: normal; whi=
+te-space: pre-wrap;"><span style=3D"color:#000000"><span style=3D"font-weig=
+ht:400"><span style=3D"font-style:normal"><span style=3D"text-decoration:no=
+ne"> to reserve your spot today!</span></span></span></span></span></span><=
+/span></span></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;overflow:hidden; background-color:#ffffff"><p =
+style=3D"margin: 0;"><br></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><a href=3D"www.NY17TownHall.com" target=3D"_bl=
+ank" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">=
+<img style=3D"max-width:600px;-ms-interpolation-mode: bicubic;vertical-alig=
+n: bottom; max-width: 550px;" alt=3D"Putnam Town Hall" src=3D"https://lawle=
+r.house.gov/UploadedPhotos/MediumResolution/b7ff5f19-6302-48c1-8ed7-903859c=
+5a873.png"></a></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;overflow:hidden; background-color:#ffffff"><p =
+style=3D"margin: 0;"><br></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;"><span style=3D"line-height:2;">I=E2=80=99m <span styl=
+e=3D"font-family:Arial,Helvetica,sans-serif;">honored </span>to serve as yo=
+ur Representative in Congress. If there is anything we can do for you or yo=
+ur family, please don=E2=80=99t hesitate to contact my office at 845-201-20=
+60&nbsp;or reach out through my website at <a data-cke-saved-href=3D"https:=
+//lawler.house.gov/components/redirect/r.aspx?ID=3D1915-84" href=3D"http://=
+lawler.house.gov/" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-a=
+djust: 100%;">lawler.house.gov</a>. Additionally,&nbsp;you can keep up with=
+ the latest news on my efforts by following us on&nbsp;<a data-cke-saved-hr=
+ef=3D"https://lawler.house.gov/components/redirect/r.aspx?ID=3D1916-84" hre=
+f=3D"https://urldefense.com/v3/__https://www.facebook.com/RepMikeLawler/__;=
+!!Ckt11KVezJIME51BYf4a6hrLATHilnk!EgFrSx5A-HLNzrAHbbXJEsPS61cJP0HfBHuCina8L=
+Kv2GEiCOJX5Fldl7u_0OVsgqy466m9igvww2rFagfwQVmctlvvHwi8mCv-Ld0I9Ng$" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">Facebook</=
+a>,&nbsp;<a data-cke-saved-href=3D"https://lawler.house.gov/components/redi=
+rect/r.aspx?ID=3D1917-84" href=3D"https://urldefense.com/v3/__https://twitt=
+er.com/repmikelawler__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!EgFrSx5A-HLNzrAHbb=
+XJEsPS61cJP0HfBHuCina8LKv2GEiCOJX5Fldl7u_0OVsgqy466m9igvww2rFagfwQVmctlvvHw=
+i8mCv9zjgX1mQ$" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adju=
+st: 100%;">Twitter</a>, and&nbsp;<a data-cke-saved-href=3D"https://lawler.h=
+ouse.gov/components/redirect/r.aspx?ID=3D1918-84" href=3D"https://urldefens=
+e.com/v3/__https://www.instagram.com/repmikelawler/__;!!Ckt11KVezJIME51BYf4=
+a6hrLATHilnk!EgFrSx5A-HLNzrAHbbXJEsPS61cJP0HfBHuCina8LKv2GEiCOJX5Fldl7u_0OV=
+sgqy466m9igvww2rFagfwQVmctlvvHwi8mCv_tTsJhvA$" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;">Instagram</a>&nbsp;- and by optin=
+g in to periodic updates from my office by&nbsp;<a data-cke-saved-href=3D"h=
+ttps://lawler.house.gov/components/redirect/r.aspx?ID=3D1919-84" href=3D"ht=
+tps://lawler.house.gov/forms/form/?ID=3D8" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%;">CLICKING HERE</a>.</span></p><p style=
+=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><br></p><p style=3D"margin:=
+ 0;"><span style=3D"line-height:2;"><span style=3D"font-size:16px;">Sincere=
+ly,</span></span></p><p style=3D"margin: 0;"><span style=3D"font-size:16px;=
+"><span contenteditable=3D"false" class=3D"cke_widget_wrapper cke_widget_in=
+line cke_widget_image cke_image_nocaption"><img alt=3D"" src=3D"https://law=
+ler.house.gov/UploadedPhotos/LowResolution/45f3089e-3e5f-44ba-99bf-fc223a20=
+9cb4.png" class=3D"cke_widget_element" width=3D"251" height=3D"87" style=3D=
+"max-width:600px;-ms-interpolation-mode: bicubic;"></span></span></p><p sty=
+le=3D"margin: 0;"><span style=3D"font-size:16px;">Michael V. Lawler</span><=
+/p><p style=3D"margin: 0;"><span style=3D"font-size:16px;">Member of Congre=
+ss</span></p><p style=3D"margin: 0;"><span style=3D"font-size:16px;">17th D=
+istrict, New York</span></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div></div>
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    <table role=3D"presentation" width=3D"100%" align=3D"center" style=3D"f=
+ont-family: Georgia, times, serif; background-color: #ffffff;" border=3D"0"=
+ cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" l=
+eftmargin=3D"0" topmargin=3D"0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td valign=3D"m=
+iddle" align=3D"center" style=3D"color: #000000; font-size: 16px; text-alig=
+n: left;">=20
+                                                                <img src=3D=
+"https://lawler.house.gov/images/spacerx522-84.open" width=3D"20" height=3D=
+"1" style=3D"height: 1px">
+                                                                <br>
+<a href=3D"https://lawler.house.gov/news/email/show.aspx?ID=3DOFRFHPF32RBQS=
+">Click Here</a> to view this email in your browser <br>
+<a href=3D"https://lawler.house.gov/Forms/EmailSignup/?Delete=3Dtrue&amp;Me=
+ssageID=3D522&amp;Email=3DPeter.Finocchio@mail.house.gov">Click Here</a> to=
+ be removed from this list
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table></body>
+</html>=
+
+----boundary_9708245_f383c8a7-f7e8-4182-b99c-e76ccc5a4565--

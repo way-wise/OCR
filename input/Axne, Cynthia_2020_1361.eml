@@ -1,0 +1,594 @@
+Received: from MN2PR09MB5979.namprd09.prod.outlook.com (2603:10b6:0:52::31) by
+ DM6PR09MB5494.namprd09.prod.outlook.com with HTTPS via
+ DM3PR08CA0021.NAMPRD08.PROD.OUTLOOK.COM; Wed, 22 Apr 2020 12:51:01 +0000
+Received: from CY4PR09CA0085.namprd09.prod.outlook.com (2603:10b6:903:c7::23)
+ by MN2PR09MB5979.namprd09.prod.outlook.com (2603:10b6:208:219::13) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2921.25; Wed, 22 Apr
+ 2020 12:51:01 +0000
+Received: from BL0GCC02FT004.eop-gcc02.prod.protection.outlook.com
+ (2a01:111:f400:7d05::200) by CY4PR09CA0085.outlook.office365.com
+ (2603:10b6:903:c7::23) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2937.13 via Frontend
+ Transport; Wed, 22 Apr 2020 12:51:00 +0000
+Authentication-Results: spf=fail (sender IP is 143.231.249.134)
+ smtp.mailfrom=mail.house.gov; ushouse.mail.onmicrosoft.com; dkim=pass
+ (signature was verified) header.d=house.gov;ushouse.mail.onmicrosoft.com;
+ dmarc=pass action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.231.249.134 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.231.249.134;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.231.249.134) by
+ BL0GCC02FT004.mail.protection.outlook.com (10.97.10.83) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.2937.15 via Frontend Transport; Wed, 22 Apr 2020 12:51:00 +0000
+Received: from EXGW204.US.House.gov (143.228.51.92) by EXGW201.US.House.gov
+ (143.228.51.89) with Microsoft SMTP Server (TLS) id 15.0.1497.2; Wed, 22 Apr
+ 2020 08:50:47 -0400
+Received: from serg-bulk1-a.house.gov (143.228.42.14) by EXGW204.US.House.gov
+ (143.228.51.92) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
+ Transport; Wed, 22 Apr 2020 08:50:46 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=mime-version : from :
+ to : date : subject : content-type : content-transfer-encoding :
+ message-id; s=august2019-msgb-hg;
+ bh=rYidiEDHGpyoDf0Fp7bXAoexDDDWqfKMw6FTyj4Rnos=;
+ b=P4jAs+asGNTxSKc2k6eRhBVNFM1cPPpFc1CkZV2V5D229xtdd7p0A1T4bermLWQamw4W
+ kfsdrdAfUYQ+O2bPAUntZqDxIzIubt5YrGsOFCchwVhp38l0iCt/WDB58gdy8yDK+Rlv
+ FmU77kow0Z0UPmcsT1mXZZ2WOWyOc2CXyGmyzGC4bGhmpWRe+pcDpDeOSeh74/LzI+Ry
+ vPbR2x5Legtz2oVCPfwZt03ZTksv0/0U073hspikFcQQ6n1fnzYkuqeyI2nNRO+VDg29
+ du+l7QMoA6vQPdw5Z2CBWh2wDT4h+eMDGUCLQXs1ptq9laPbQbuSotcdnyyuS9mokte1 wg== 
+Received: from IQ020.US.House.gov (iq020.us.house.gov [143.228.113.60])
+	by serg-bulk1-a.house.gov (8.16.0.27/8.16.0.27) with ESMTP id 03MCol39000349
+	for <Ian.Mariani@mail.house.gov>; Wed, 22 Apr 2020 08:50:47 -0400
+Received: from IQ020 ([127.0.0.1]) by IQ020.US.House.gov with Microsoft SMTPSVC(10.0.14393.2608);
+	 Wed, 22 Apr 2020 08:50:47 -0400
+X-IQCropID: 14388.8994295.5141285.7621982
+X-House-Vendor-Seg: LMDSI-1
+MIME-Version: 1.0
+From: "Representative Cindy Axne" <IA03CA.Outreach@mail.house.gov>
+To: Ian.Mariani@mail.house.gov
+Date: 22 Apr 2020 08:50:47 -0400
+Subject: Have You Received a Direct Payment for Coronavirus?
+Message-ID: <IQ0204sKuCYZvN4U78100001fad@IQ020.US.House.gov>
+X-OriginalArrivalTime: 22 Apr 2020 12:50:47.0135 (UTC) FILETIME=[A4B9C6F0:01D618A4]
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:6.0.138,18.0.676
+ definitions=2020-04-22_06:2020-04-22,2020-04-22 signatures=0
+Return-Path: IA03CAIMA@mail.house.gov
+X-OrganizationHeadersPreserved: EXGW201.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 22 Apr 2020 12:51:00.4672
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 6be15a12-057d-4d59-1e31-08d7e6bbcf23
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXGW204.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted:
+ BL0GCC02FT004.eop-gcc02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ BL0GCC02FT004.eop-gcc02.prod.protection.outlook.com
+X-Forefront-Antispam-Report:
+ CIP:143.231.249.134;CTRY:US;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SKI;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFTY:;SFS:;DIR:INB;SFP:;
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 6be15a12-057d-4d59-1e31-08d7e6bbcf23
+X-MS-TrafficTypeDiagnostic: MN2PR09MB5979:
+X-MS-Exchange-Organization-SCL: -1
+X-MS-Oob-TLC-OOBClassifiers: OLM:6430;
+X-Microsoft-Antispam: BCL:0;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 22 Apr 2020 12:51:00.3912
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 6be15a12-057d-4d59-1e31-08d7e6bbcf23
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.231.249.134];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: MN2PR09MB5979
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.3038850
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2921.030
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(750127)(520011016)(706158)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	97/ypS4Yqi0JcfN/s8iUTvBYutAZJl8HTaJpogKkn03LivY1k9ALzrWtLaWoGaOx+n5zaYnC7UB5cKkIiRDD/BqmFaocEDWDQJlF9F6cpXq/IkJ1MIehB5IRgqQO/kIZHHvnJ5O5GxZHdkiKzWlha9qnF3AxYTnG/pwEQMLOFJdbwCFK9a545uDjeMZ5oUOr2tkcassYWGhyGOcQ8AO6zMiX6fmbNglRfOZ6cvolzX0rnCdCRmOO+MwBTscs4m8pI22IhhUeAbE3bS8qT2ZT1oSOaJE2mR+02yFKAqkSAURmW5SakxVMGEUmoy48M6iXQsrIoltXe+/LoQ8DBvPFbskcZlm4xoqyx3DRYNDpB6t7+t9Kz4e/NAoWvsU1xKqzge0xCh5k3bBEzM1kwCzGrFyeqNpO7YksjTqf3NQLxQurJ3mx2gDWOJxCyLv68iMdr9s9T/542iXd2jtpikazbo5EpNQr/eg3KlzhF/5SN6FYAqENjBwq0up5PkmQyhYZBb3lMstSqpIzFXLjxFlFtpnd0DQ+JSM+iciXIn4ylM0=
+Content-type: multipart/alternative;
+	boundary="B_3670390305_1936301752"
+
+> This message is in MIME format. Since your mail reader does not understand
+this format, some or all of this message may not be legible.
+
+--B_3670390305_1936301752
+Content-type: text/plain;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+About Contact Issues Media Services=20
+For regular updates on my work in Washington and information on when I=E2=80=99ll=
+ be in your neighborhood, sign up here for my e-newsletter. =20
+
+Friends,=20
+
+Last month, Congress authorized direct payments for Iowans to help families=
+ deal with the economic impacts of the coronavirus pandemic. Some of those p=
+ayments have already reached bank accounts in Iowa, and I wanted to reach ou=
+t to provide some new information on direct payments  and give you a quick u=
+pdate on what I'm working on.
+
+How Are You Getting Your Direct Payment?=20
+
+The IRS has launched a portal to help those who qualify for a direct paymen=
+t. Find it here.=20
+
+As you may already know, the CARES Act authorized direct payments to Iowans=
+ to help lessen the financial burdens related to COVID-19.
+
+The amount of the rebate depends on family size. The payment is $1,200 for =
+each adult individual ($2,400 for joint filers), and $500 per qualifying chi=
+ld under age 17. The advance payment of rebates is reduced by $5 for every $=
+100 of income to the extent a  taxpayer=E2=80=99s income exceeds $150,000 for a jo=
+int filer, $112,500 for a head of household filer, and $75,000 for anyone el=
+se (including single filers).
+
+If you would like to check the status of your direct payment or update your=
+ direct deposit information, you can use the IRS' new portal by clicking her=
+e.=20
+
+If you do not usually file taxes, but receive Social Security, SSI, or VA b=
+enefits, you can still qualify for a payment. You can add your direct deposi=
+t information for the IRS to use  for disbursing your direct payment through=
+ the portal here.=20
+
+Beware of Scammers Claiming to Be Able to Help You Get Your Direct Payment=20
+
+As direct payments begin to show up in Iowans' bank accounts and mailboxes,=
+ please take care when dealing with potential scams that may try to steal pe=
+rsonal information  or claim that they can help get you your payment faster.
+
+The IRS is providing updates on the status of direct payments =E2=80=93 but it wi=
+ll never contact you seeking to verify personal information. If someone clai=
+ming to be the IRS, the Treasury Department, or an agency that is seeking to=
+ expedite your payment contacts  you =E2=80=93 hang up!
+
+Tell your friends and family to watch not only for emails but text messages=
+, websites and social media attempts that request money or personal informat=
+ion.
+
+If you do encounter a scam attempt, do not try to engage them online or on =
+the phone. Learn more about reporting suspected scams by going to the Report=
+  Phishing and Online Scams page on IRS.gov.=20
+
+Join My Next Coronavirus Telephone Town Hall=20
+
+Over the last few weeks, I've been speaking with Iowa business owners, heal=
+th care professionals, educators, and local emergency managers on my Virtual=
+ District Tour  =E2=80=93 and they've been sharing with me the burdens they're fee=
+ling from the coronavirus outbreak in Iowa.
+
+Hearing directly from Iowans allows me to know what to prioritize as Congre=
+ss works on the next pieces of legislation to respond to this crisis. I hope=
+ that you can join me next week on Wednesday,  April 29th at 12:50pm CT for =
+my next coronavirus telephone town hall.=20
+
+You can ask questions about legislation we've passed, direct payments, test=
+ing, or assistance programs available for Iowa.
+
+Sign up to join the town hall at: axne.house.gov/live=20
+
+You can join the call at 12:50p next Wednesday by calling: 866-295-1715=20
+
+Securing More Funding for Small Businesses and Rural Communities=20
+
+This week, Congress is working on emergency legislation to quickly provide =
+additional funding to help Iowa small businesses, protect our hospitals, and=
+ expand testing capabilities to  put us on a path to responsibly reopening o=
+ur state.
+
+I'm glad that we're allocating another $321 billion for the Paycheck Protec=
+tion Program =E2=80=93 which has been helping Iowa businesses stay afloat and keep=
+ their employees on payroll =E2=80=93 and that we're reserving $60 billion in that=
+ program specifically for smaller  community banks to make sure that our mom=
+-and-pop shops and rural businesses have the same access to loans as larger =
+urban businesses. The bill also provides funding to support an additional $3=
+50 billion of Economic Injury Disaster Loans to provide additional  loans fo=
+r small businesses to go beyond payroll.
+
+The bill making its way through Congress this week also has $75 billion for=
+ hospitals and $25 billion to help expand testing for coronavirus.
+
+As we finalize this funding, we will move forward with negotiating addition=
+al legislation that will help states and local governments deal with the gro=
+wing costs of fighting this pandemic, protect our health care and frontline =
+emergency response workers, and  invest in infrastructure and rural broadban=
+d connectivity to help Iowa recover more quickly from the economic effects o=
+f the outbreak.
+
+If you have a provision that you'd like to see included in our next bill, w=
+rite to me and tell me the help that your community needs: axne.house.gov/co=
+ntact/email-me
+
+I look forward to hearing from you!=20
+
+Thank you,=20
+
+Cindy=20
+
+ =20
+
+To  unsubscribe from updates from my office, click here.=20
+
+
+--B_3670390305_1936301752
+Content-type: text/html;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+</head>
+<body>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www=
+.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+><style id=3D"IQEmailStyle">
+    /* Client-specific Styles */
+    body { width: 100% !important; margin: 0px;}
+    .ReadMsgBody { width: 100%; }
+    .ExternalClass { width: 100%; display:block !important; } /* Force Hotm=
+ail to display emails at full width */
+
+    /* Reset Styles */
+    body { margin:0; padding: 0; }
+    img { outline: none; text-decoration: none; max-width :100%;}
+    br, strong br, b br, em br, i br { line-height: 100%; }
+    h1, h2, h3, h4, h5, h6 { line-height: 100% !important; -webkit-font-smo=
+othing: antialiased; }
+	/*ly, tr#221562, add same margin as margin-block-start/end*/
+	h1{margin-top:0.67em;margin-bottom:0.67em;}
+	h2{margin-top:0.83em;margin-bottom:0.83em;}
+	h3{margin-top:1em;margin-bottom:1em;}
+	h4{margin-top:1.33em;margin-bottom:1.33em;}
+	h5{margin-top:1.67em;margin-bottom:1.67em;}
+	h6{margin-top:2.33em;margin-bottom:2.33em;}
+    table td, table tr { border-collapse: collapse; }
+    p { margin-bottom: 1em; }
+  	table.menu-change a {
+  	text-decoration:none;
+		}
+
+		/* pre-header */
+		.preheader {
+    display:none !important;
+    visibility:hidden;
+    mso-hide:all !important;
+    font-size:0px;
+    color:#ffffff;
+    line-height:0px;
+    max-height:0px;
+    max-width:0px;
+    opacity:0;
+    overflow:hidden;
+    } 	
+  </style><style id=3D"IQMobileStyle" type=3D"text/css"></style>
+<div id=3D"newsletterContent" class=3D"">
+<table width=3D"100%" align=3D"center" style=3D"table-layout: fixed;" border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"center">
+<table class=3D"body-zone bg-change width-change" style=3D"padding: 0px; width:=
+ 640px; border-spacing: 0px;" bgcolor=3D"#7594ba" border=3D"0">
+<tbody class=3D"">
+<tr>
+<td class=3D"content-change general-change textedit" style=3D"padding: 0px; fon=
+t-family: Arial, sans-serif; font-size: 10pt; background-color: rgb(255, 255=
+, 255);">
+<img width=3D"640" style=3D"display: inline-block; max-width: 100%;; margin: 0p=
+x;" title=3D"New_Newsletter_Header-2.png" src=3D"https://iqconnect.lmhostediq.co=
+m/iqextranet/Customers/IA03CA/New_Newsletter_Header-2.png" alt=3D"Image"></td>
+</tr>
+<tr>
+<td class=3D"content-change general-change textedit" style=3D"padding: 0px; fon=
+t-family: Arial, sans-serif; font-size: 11pt; background-color: rgb(63, 171,=
+ 209);">
+<table class=3D"menu-change" style=3D"width: 100%; height: 32px; color: #f3f3f3=
+; font-family: Arial, sans-serif; font-size: 11pt; background-color: #054f7e=
+;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody class=3D"ui-sortable">
+<tr style=3D"height: 32px;">
+<td style=3D"width: 20%; height: 32px;" align=3D"center"><span style=3D"font-fami=
+ly: 'arial black', 'avant garde'; color: #ffffff;"><a style=3D"color: #ffffff;=
+" href=3D"https://iqconnect.lmhostediq.com/iqextranet/iqClickTrk.aspx?&amp;cid=
+=3DIA03CA&amp;crop=3D14388QQQ8994295QQQ5141285QQQ7621982&amp;report_id=3D&amp;redi=
+rect=3Dhttps%3a%2f%2faxne.house.gov%2fabout&amp;redir_log=3D079129988168199" tar=
+get=3D"_blank" rel=3D"noopener">About</a></span></td>
+<td style=3D"width: 20%; height: 32px;" align=3D"center"><span style=3D"font-fami=
+ly: 'arial black', 'avant garde'; color: #ffffff;"><a style=3D"color: #ffffff;=
+" href=3D"https://iqconnect.lmhostediq.com/iqextranet/iqClickTrk.aspx?&amp;cid=
+=3DIA03CA&amp;crop=3D14388QQQ8994295QQQ5141285QQQ7621982&amp;report_id=3D&amp;redi=
+rect=3Dhttps%3a%2f%2faxne.house.gov%2fcontact&amp;redir_log=3D942749344934213" t=
+arget=3D"_blank" rel=3D"noopener">Contact</a></span></td>
+<td style=3D"width: 20%; height: 32px;" align=3D"center"><span style=3D"font-fami=
+ly: 'arial black', 'avant garde'; color: #ffffff;"><a style=3D"color: #ffffff;=
+" href=3D"https://iqconnect.lmhostediq.com/iqextranet/iqClickTrk.aspx?&amp;cid=
+=3DIA03CA&amp;crop=3D14388QQQ8994295QQQ5141285QQQ7621982&amp;report_id=3D&amp;redi=
+rect=3Dhttps%3a%2f%2faxne.house.gov%2fissues&amp;redir_log=3D010817019479208" ta=
+rget=3D"_blank" rel=3D"noopener">Issues</a></span></td>
+<td style=3D"width: 20%; height: 32px;" align=3D"center"><span style=3D"font-fami=
+ly: 'arial black', 'avant garde'; color: #ffffff;"><a style=3D"color: #ffffff;=
+" href=3D"https://iqconnect.lmhostediq.com/iqextranet/iqClickTrk.aspx?&amp;cid=
+=3DIA03CA&amp;crop=3D14388QQQ8994295QQQ5141285QQQ7621982&amp;report_id=3D&amp;redi=
+rect=3Dhttps%3a%2f%2faxne.house.gov%2fmedia&amp;redir_log=3D112911796216197" tar=
+get=3D"_blank" rel=3D"noopener">Media</a></span></td>
+<td style=3D"width: 20%; height: 32px;" align=3D"center"><span style=3D"font-fami=
+ly: 'arial black', 'avant garde'; color: #ffffff;"><a style=3D"color: #ffffff;=
+" href=3D"https://iqconnect.lmhostediq.com/iqextranet/iqClickTrk.aspx?&amp;cid=
+=3DIA03CA&amp;crop=3D14388QQQ8994295QQQ5141285QQQ7621982&amp;report_id=3D&amp;redi=
+rect=3Dhttps%3a%2f%2faxne.house.gov%2fservices&amp;redir_log=3D266731647968222" =
+target=3D"_blank" rel=3D"noopener">Services</a></span></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td class=3D"content-change general-change textedit padding-change" style=3D"pa=
+dding: 0px 30px; font-family: Arial, sans-serif; font-size: 12pt; background=
+-color: rgb(255, 255, 255);">
+<p style=3D"text-align: center; color: #18416a;"><span style=3D"font-size: 12pt=
+;"><em><strong><span style=3D"color: #000000;">For regular updates on my work =
+in Washington and information on when I=E2=80=99ll be in your neighborhood, sign u=
+p
+<a style=3D"color: #054f7e;" href=3D"https://iqconnect.lmhostediq.com/iqextrane=
+t/iqClickTrk.aspx?&amp;cid=3DIA03CA&amp;crop=3D14388QQQ8994295QQQ5141285QQQ76219=
+82&amp;report_id=3D&amp;redirect=3Dhttps%3a%2f%2faxne.house.gov%2fcontact%2fnews=
+letter&amp;redir_log=3D674652276062295" target=3D"_blank" rel=3D"noopener">
+here</a> for my e-newsletter.&nbsp;</span></strong></em></span> </p>
+<p style=3D"text-align: left; color: #18416a;"><span style=3D"color: #000000;">=
+Friends,&nbsp;</span>
+</p>
+<p style=3D"text-align: left; color: #18416a;"><span style=3D"color: #000000;">=
+Last month, Congress
+<a href=3D"https://iqconnect.lmhostediq.com/iqextranet/iqClickTrk.aspx?&amp;c=
+id=3DIA03CA&amp;crop=3D14388QQQ8994295QQQ5141285QQQ7621982&amp;report_id=3D&amp;re=
+direct=3Dhttps%3a%2f%2faxne.house.gov%2fmedia%2fpress-releases%2frep-axne-appl=
+auds-unanimous-house-passage-critical-coronavirus-stimulus-package&amp;redir=
+_log=3D77422889683875" target=3D"_blank" rel=3D"noopener">
+authorized</a> direct payments for Iowans to help families deal with the ec=
+onomic impacts of the coronavirus pandemic. Some of those payments have alre=
+ady reached bank accounts in Iowa, and I wanted to reach out to provide some=
+ new information on direct payments
+ and give you a quick update on what I'm working on.</span></p>
+<p style=3D"color: #18416a; text-align: center;"><span style=3D"font-size: 16pt=
+; color: #000000;"><strong>How Are You Getting Your Direct Payment?</strong>=
+</span>
+</p>
+<p style=3D"color: #18416a; text-align: center;"><img width=3D"540" style=3D"disp=
+lay: inline-block; max-width: 100%;; margin: 0px;" title=3D"IRs_Portal.jpg" sr=
+c=3D"https://iqconnect.lmhostediq.com/iqextranet/Customers/IA03CA/IRs_Portal.j=
+pg" alt=3D"Image"></p>
+<p style=3D"color: #18416a; text-align: center;"><span style=3D"color: #000000;=
+"><em><span style=3D"font-size: 11pt;">The IRS has launched a portal to help t=
+hose who qualify for a direct payment. Find it&nbsp;<a href=3D"https://iqconne=
+ct.lmhostediq.com/iqextranet/iqClickTrk.aspx?&amp;cid=3DIA03CA&amp;crop=3D14388Q=
+QQ8994295QQQ5141285QQQ7621982&amp;report_id=3D&amp;redirect=3Dhttps%3a%2f%2firs.=
+gov%2feip%2f&amp;redir_log=3D939767756975136" target=3D"_blank" rel=3D"noopener">h=
+ere</a>.</span></em></span>
+</p>
+<p style=3D"color: #18416a; text-align: left;"><span style=3D"color: #000000;">=
+As you may already know,
+<a href=3D"https://iqconnect.lmhostediq.com/iqextranet/iqClickTrk.aspx?&amp;c=
+id=3DIA03CA&amp;crop=3D14388QQQ8994295QQQ5141285QQQ7621982&amp;report_id=3D&amp;re=
+direct=3Dhttps%3a%2f%2faxne.house.gov%2fmedia%2fpress-releases%2frep-axne-appl=
+auds-unanimous-house-passage-critical-coronavirus-stimulus-package&amp;redir=
+_log=3D77422889683875" target=3D"_blank" rel=3D"noopener">
+the CARES Act</a> authorized direct payments to Iowans to help lessen the f=
+inancial burdens related to COVID-19.<br>
+<br>
+The amount of the rebate depends on family size. The payment is $1,200 for =
+each adult individual ($2,400 for joint filers), and $500 per qualifying chi=
+ld under age 17. The advance payment of rebates is reduced by $5 for every $=
+100 of income to the extent a
+ taxpayer=E2=80=99s income exceeds $150,000 for a joint filer, $112,500 for a hea=
+d of household filer, and $75,000 for anyone else (including single filers).=
+<br>
+<br>
+If you would like to check the status of your direct payment or update your=
+ direct deposit information, you can use the IRS' new portal by clicking</sp=
+an><span style=3D"color: #000000; font-size: 12pt;">&nbsp;</span><a style=3D"fon=
+t-size: 12pt;" href=3D"https://iqconnect.lmhostediq.com/iqextranet/iqClickTrk.=
+aspx?&amp;cid=3DIA03CA&amp;crop=3D14388QQQ8994295QQQ5141285QQQ7621982&amp;report=
+_id=3D&amp;redirect=3Dhttps%3a%2f%2fwww.irs.gov%2fcoronavirus%2fget-my-payment&a=
+mp;redir_log=3D908041857971328" target=3D"_blank" rel=3D"noopener">here</a><span s=
+tyle=3D"color: #000000; font-size: 12pt;">.</span>
+</p>
+<p style=3D"color: #18416a; text-align: left;"><span style=3D"color: #000000;">=
+If you do not usually file taxes, but receive Social Security, SSI, or VA be=
+nefits, you can still qualify for a payment. You can add your direct deposit=
+ information for the IRS to use
+ for disbursing your direct payment through the portal <a href=3D"https://iqc=
+onnect.lmhostediq.com/iqextranet/iqClickTrk.aspx?&amp;cid=3DIA03CA&amp;crop=3D14=
+388QQQ8994295QQQ5141285QQQ7621982&amp;report_id=3D&amp;redirect=3Dhttps%3a%2f%2f=
+www.irs.gov%2fcoronavirus%2fnon-filers-enter-payment-info-here&amp;redir_log=
+=3D271334450796467" target=3D"_blank" rel=3D"noopener">
+here</a>.</span> </p>
+<p style=3D"color: #18416a; text-align: center;"><span style=3D"font-size: 16pt=
+;"><strong><span style=3D"color: #000000;">Beware of Scammers Claiming to Be A=
+ble to Help You Get Your Direct Payment</span></strong></span>
+</p>
+<p style=3D"color: #18416a; text-align: center;"><img width=3D"490" style=3D"disp=
+lay: inline-block; max-width: 100%;; margin: 0px;" title=3D"IRS_Scam.jpg" src=3D=
+"https://iqconnect.lmhostediq.com/iqextranet/Customers/IA03CA/IRS_Scam.jpg" =
+alt=3D"Image" height=3D"276"></p>
+<p style=3D"color: #18416a; text-align: left;"><span style=3D"font-size: 12pt; =
+color: #000000;">As direct payments begin to show up in Iowans' bank account=
+s and mailboxes, please take care when dealing with potential scams that may=
+ try to steal personal information
+ or claim that they can help get you your payment faster.<br>
+<br>
+The IRS is providing updates on the status of direct payments =E2=80=93 but it wi=
+ll never contact you seeking to verify personal information. If someone clai=
+ming to be the IRS, the Treasury Department, or an agency that is seeking to=
+ expedite your payment contacts
+ you =E2=80=93 hang up!<br>
+<br>
+Tell your friends and family to watch not only for emails but text messages=
+, websites and social media attempts that request money or personal informat=
+ion.<br>
+<br>
+If you do encounter a scam attempt, do not try to engage them online or on =
+the phone. Learn more about reporting suspected scams by going to the&nbsp;<=
+/span><a style=3D"font-size: 12pt;" href=3D"https://iqconnect.lmhostediq.com/iqe=
+xtranet/iqClickTrk.aspx?&amp;cid=3DIA03CA&amp;crop=3D14388QQQ8994295QQQ5141285QQ=
+Q7621982&amp;report_id=3D&amp;redirect=3Dhttps%3a%2f%2fwww.irs.gov%2fprivacy-dis=
+closure%2freport-phishing&amp;redir_log=3D466858302187388" target=3D"_blank" rel=
+=3D"noopener">Report
+ Phishing and Online Scams</a> <span style=3D"color: #000000;">page on IRS.go=
+v.</span>
+</p>
+<p style=3D"color: #18416a; text-align: center;"><span style=3D"font-size: 16pt=
+;"><strong><span style=3D"color: #000000;">Join My Next Coronavirus Telephone =
+Town Hall</span></strong></span>
+</p>
+<p style=3D"color: #18416a; text-align: center;"><img width=3D"494" style=3D"disp=
+lay: inline-block; max-width: 100%;; margin: 0px;" title=3D"Teletown_Hall_Anno=
+uncement_4-29-20.png" src=3D"https://iqconnect.lmhostediq.com/iqextranet/Custo=
+mers/IA03CA/Teletown_Hall_Announcement_4-29-20.png" alt=3D"Image" height=3D"278"=
+></p>
+<p style=3D"color: #18416a; text-align: left;"><span style=3D"color: #000000; f=
+ont-size: 12pt;">Over the last few weeks, I've been speaking with Iowa busin=
+ess owners, health care professionals, educators, and local emergency manage=
+rs on my Virtual District Tour
+ =E2=80=93 and they've been sharing with me the burdens they're feeling from the =
+coronavirus outbreak in Iowa.<br>
+<br>
+Hearing directly from Iowans allows me to know what to prioritize as Congre=
+ss works on the next pieces of legislation to respond to this crisis. I hope=
+ that you can join me next week on&nbsp;</span><a style=3D"font-size: 12pt;" h=
+ref=3D"https://iqconnect.lmhostediq.com/iqextranet/iqClickTrk.aspx?&amp;cid=3DIA=
+03CA&amp;crop=3D14388QQQ8994295QQQ5141285QQQ7621982&amp;report_id=3D&amp;redirec=
+t=3Dhttps%3a%2f%2faxne.house.gov%2flive&amp;redir_log=3D241993287516191" target=3D=
+"_blank" rel=3D"noopener">Wednesday,
+ April 29th at 12:50pm CT</a><span style=3D"color: #000000; font-size: 12pt;"=
+> for my next coronavirus telephone town hall.</span>
+</p>
+<p style=3D"color: #18416a; text-align: left;"><span style=3D"color: #000000;">=
+You can ask questions about legislation we've passed, direct payments, testi=
+ng, or assistance programs available for Iowa.<br>
+<br>
+Sign up to join the town hall at:</span><span style=3D"font-size: 12pt;">&nbs=
+p;</span><a style=3D"font-size: 12pt;" href=3D"https://iqconnect.lmhostediq.com/=
+iqextranet/iqClickTrk.aspx?&amp;cid=3DIA03CA&amp;crop=3D14388QQQ8994295QQQ514128=
+5QQQ7621982&amp;report_id=3D&amp;redirect=3Dhttps%3a%2f%2faxne.house.gov%2flive&=
+amp;redir_log=3D241993287516191" target=3D"_blank" rel=3D"noopener">axne.house.gov=
+/live</a>
+</p>
+<p style=3D"color: #18416a; text-align: left;"><span style=3D"color: #000000;">=
+You can join the call at 12:50p next Wednesday by calling: 866-295-1715</spa=
+n>
+</p>
+<p style=3D"color: #18416a; text-align: center;"><span style=3D"color: #000000;=
+"><strong><span style=3D"font-size: 16pt;">Securing More Funding for Small Bus=
+inesses and Rural Communities</span></strong></span>
+</p>
+<p style=3D"color: #18416a; text-align: left;"><span style=3D"color: #000000;">=
+This week, Congress is working on emergency legislation to quickly provide a=
+dditional funding to help Iowa small businesses, protect our hospitals, and =
+expand testing capabilities to
+ put us on a path to responsibly reopening our state.<br>
+<br>
+I'm glad that we're allocating another $321 billion for the Paycheck Protec=
+tion Program =E2=80=93 which has been helping Iowa businesses stay afloat and keep=
+ their employees on payroll =E2=80=93 and that we're reserving $60 billion in that=
+ program specifically for smaller
+ community banks to make sure that our mom-and-pop shops and rural business=
+es have the same access to loans as larger urban businesses. The bill also p=
+rovides funding to support an additional $350 billion of Economic Injury Dis=
+aster Loans to provide additional
+ loans for small businesses to go beyond payroll.<br>
+<br>
+The bill making its way through Congress this week also has $75 billion for=
+ hospitals and $25 billion to help expand testing for coronavirus.<br>
+<br>
+As we finalize this funding, we will move forward with negotiating addition=
+al legislation that will help states and local governments deal with the gro=
+wing costs of fighting this pandemic, protect our health care and frontline =
+emergency response workers, and
+ invest in infrastructure and rural broadband connectivity to help Iowa rec=
+over more quickly from the economic effects of the outbreak.<br>
+<br>
+If you have a provision that you'd like to see included in our next bill, w=
+rite to me and tell me the help that your community needs:</span><span style=
+=3D"font-size: 12pt;">&nbsp;</span><a style=3D"font-size: 12pt;" href=3D"https://i=
+qconnect.lmhostediq.com/iqextranet/iqClickTrk.aspx?&amp;cid=3DIA03CA&amp;crop=3D=
+14388QQQ8994295QQQ5141285QQQ7621982&amp;report_id=3D&amp;redirect=3Dhttps%3a%2f%=
+2faxne.house.gov%2fcontact%2femail-me&amp;redir_log=3D248055799718273" target=3D=
+"_blank" rel=3D"noopener">axne.house.gov/contact/email-me</a></p>
+<p style=3D"color: #18416a; text-align: left;"><span style=3D"color: #000000;">=
+I look forward to hearing from you!</span>
+</p>
+<p style=3D"text-align: left; color: #18416a;"><span style=3D"color: #000000;">=
+Thank you,&nbsp;</span>
+</p>
+<p style=3D"color: #18416a; text-align: left;"><span style=3D"color: #000000;">=
+Cindy</span>
+</p>
+<p style=3D"color: #18416a; text-align: left;">&nbsp; </p>
+</td>
+</tr>
+<tr>
+<td class=3D"content-change general-change textedit" style=3D"padding: 0px; fon=
+t-family: Arial, sans-serif; font-size: 10pt; background-color: rgb(63, 171,=
+ 209); color: rgb(255, 255, 255);">
+<div style=3D"padding: 0.6em;">
+<div style=3D"border-top: 1px solid #afa4a4; text-align: center;"><img width=3D=
+"640" style=3D"display: inline-block; max-width: 100%;; margin: 0px;" title=3D"N=
+ewsletter_Footer_v2.png" src=3D"https://iqconnect.lmhostediq.com/iqextranet/Cu=
+stomers/IA03CA/Newsletter_Footer_v2.png" alt=3D"Image"></div>
+</div>
+</td>
+</tr>
+<tr>
+<td class=3D"content-change general-change textedit" style=3D"padding: 0px; fon=
+t-family: Arial, sans-serif; font-size: 10pt; background-color: rgb(63, 171,=
+ 209);">
+<table class=3D"button-change" style=3D"width: 100%; font-family: Arial, sans-s=
+erif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody class=3D"ui-sortable">
+<tr>
+<td style=3D"width: 100%;" align=3D"center"><span style=3D"color: #ffffff;"><a cl=
+ass=3D"ui-iqbutton ui-link" style=3D"display: inline-block; text-decoration: non=
+e; font-size: 10pt; margin: 10px; background-color: #18416a; color: #ffffff;=
+ border-radius: 8px; text-align: center; padding: 10px;" href=3D"https://iqcon=
+nect.lmhostediq.com/iqextranet/iqClickTrk.aspx?&amp;cid=3DIA03CA&amp;crop=3D1438=
+8QQQ8994295QQQ5141285QQQ7621982&amp;report_id=3D&amp;redirect=3Dhttps%3a%2f%2fax=
+ne.house.gov%2fcontact%2fnewsletter%2fnewsletter-unsubscribe&amp;redir_log=3D6=
+84017445401462">To
+ unsubscribe from updates from my office, click here.</a></span></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<img src=3D"https://iqconnect.lmhostediq.com/iqextranet/Customers/IA03CA/iqtr=
+k.gif?crop=3D14388QQQ8994295QQQ5141285QQQ7621982" height=3D"0" width=3D"0"><span n=
+ame=3D"14388QQQ8994295QQQ5141285QQQ7621982" data-crop=3D"14388QQQ8994295QQQ51412=
+85QQQ7621982"></span><img src=3D"https://iqconnect.lmhostediq.com/iqextranet/C=
+ustomers/IA03CA/iqtrk.gif?crop=3D14388QQQ8994295QQQ5141285QQQ7621982" height=3D"=
+0" width=3D"0"><span name=3D"14388QQQ8994295QQQ5141285QQQ7621982" data-crop=3D"143=
+88QQQ8994295QQQ5141285QQQ7621982"></span>
+</body>
+</html>
+
+
+--B_3670390305_1936301752--
+

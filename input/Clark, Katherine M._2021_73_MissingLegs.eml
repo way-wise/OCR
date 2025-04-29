@@ -1,0 +1,367 @@
+Received: from SA9PR09MB5582.namprd09.prod.outlook.com (2603:10b6:806:46::15)
+ by MN2PR09MB5081.namprd09.prod.outlook.com with HTTPS; Wed, 1 Sep 2021
+ 14:34:03 +0000
+Received: from BN3PR09CA0047.namprd09.prod.outlook.com (2603:10b6:400:3::15)
+ by SA9PR09MB5582.namprd09.prod.outlook.com (2603:10b6:806:46::15) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.4478.17; Wed, 1 Sep
+ 2021 14:34:03 +0000
+Received: from DM3GCC02FT013.eop-gcc02.prod.protection.outlook.com
+ (2a01:111:f400:7d04::209) by BN3PR09CA0047.outlook.office365.com
+ (2603:10b6:400:3::15) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.4478.20 via Frontend
+ Transport; Wed, 1 Sep 2021 14:34:03 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.151.110)
+ smtp.mailfrom=mail.house.gov; ushouse.mail.onmicrosoft.com; dkim=pass
+ (signature was verified) header.d=house.gov;ushouse.mail.onmicrosoft.com;
+ dmarc=pass action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.151.110 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.151.110;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.151.110) by
+ DM3GCC02FT013.mail.protection.outlook.com (10.97.8.176) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.4478.19 via Frontend Transport; Wed, 1 Sep 2021 14:34:02 +0000
+Received: from EXCH1912.US.House.gov (143.228.151.111) by
+ EXCH1911.US.House.gov (143.228.151.110) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.2.922.13; Wed, 1 Sep 2021 10:33:52 -0400
+Received: from serg-bulk2-h.house.gov (143.228.145.46) by
+ EXCH1912.US.House.gov (143.228.151.111) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.922.13
+ via Frontend Transport; Wed, 1 Sep 2021 10:33:52 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=mime-version : from :
+ to : date : subject : content-type : content-transfer-encoding :
+ message-id; s=august2019-msgb-hg;
+ bh=RuH64bqps23wMJbJMGnrZXU1WJD2qWQWetOSMLN/TJQ=;
+ b=zwXwMp7f0ZSJr7qqz2HpRO63Bzr6Zx0E/guqhRlG1Zi2DH9D7oziguh0JM5Sh0OAd4cj
+ oiHVf1D7alypPG88SmpvuxWX4xSWGlWU3b8Cv69de6MX2Ol0cQ30VOPV3+tg5+L0qKbf
+ XVZn9NzSblZ18GDIyfvkncKCTwPxdHRbpTEjYYkMyalon8uPC/Z4jEZkGl2gzC/d8aIf
+ SF2h7FpEmmKhR1Tv554S2hQqGRF9Bftg93BuYAAZfPLdL+kPNExsd4aIUoJOmz8UtC0S
+ 6lVDn7d4TqA/yuPq4Wq85rxN3t98WtcL3zf58h1+WpkgeHyZrLkX7AxdQKofiwKgZDSj Ig== 
+Received: from IQ026.US.House.gov (iq026.us.house.gov [143.228.58.115])
+	by serg-bulk2-h.house.gov (8.16.0.27/8.16.0.27) with ESMTP id 181EXqkT008108
+	for <Jon.House@mail.house.gov>; Wed, 1 Sep 2021 10:33:52 -0400
+Received: from IQ026 ([127.0.0.1]) by IQ026.US.House.gov with Microsoft SMTPSVC(10.0.14393.4169);
+	 Wed, 1 Sep 2021 10:33:52 -0400
+X-IQCropID: 15639.20406021.6050238.7297918
+X-House-Vendor-Seg: LMDSI-1
+MIME-Version: 1.0
+From: "Congresswoman Katherine Clark" <MA05KCIMA@mail.house.gov>
+To: Jon.House@mail.house.gov
+Date: 1 Sep 2021 10:33:52 -0400
+Subject: Welcome to the Neighborhood!
+Message-ID: <IQ026nzi95HfqR77bie0000300f@IQ026.US.House.gov>
+X-OriginalArrivalTime: 01 Sep 2021 14:33:52.0004 (UTC) FILETIME=[627FA440:01D79F3E]
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:6.0.391,18.0.790
+ definitions=2021-09-01_04:2021-09-01,2021-09-01 signatures=0
+Return-Path: MA05KCIMA@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1911.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 01 Sep 2021 14:34:02.5371
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 049c94f3-d650-432a-e130-08d96d558b3d
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1912.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted:
+ DM3GCC02FT013.eop-gcc02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ DM3GCC02FT013.eop-gcc02.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: 049c94f3-d650-432a-e130-08d96d558b3d
+X-MS-TrafficTypeDiagnostic: SA9PR09MB5582:
+X-MS-Exchange-Organization-SCL: -1
+X-MS-Oob-TLC-OOBClassifiers: OLM:9508;
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:143.228.151.110;CTRY:US;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SKI;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:;DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 01 Sep 2021 14:34:02.4682
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 049c94f3-d650-432a-e130-08d96d558b3d
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.151.110];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1912.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SA9PR09MB5582
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.0935068
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.4478.019
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:1;jmr:0;auth:0;dest:C;OFR:CustomRules;ENG:(750129)(520011016)(706158)(944506458)(944626604);
+X-Microsoft-Antispam-Message-Info:
+	pwHCTbmgNvs/3FzOH+tzAaafsLXMNzdsoPfzsWzSym86qfDewobFJmQGKKOF864HKR7wrYwrtpf9Ys/53GmX/qfKjBF9sE1GzlRcWma4F57rC5VrT3KCtVeefujSgVsJvCTCv7LuXMrbs7vJpkM5kTKBtIC1686xDsGbosFPpaoa5Qd7sAlSYISVyQTca0tAD+oWqCd01bHlQuU8JYubs3uBVcpy30CVh5y7hCV95kraVpdyru7Fhcmpvuydqy1JGZv8t1CcG+bnVhrXaOkJkLWb7p2GwL0pnc0mb1jyvyuTLDId5EmlxQfp2VSQZaw1a7tT76RNrB88ikDCIy2h+IvScxUOUm12vRPx1Rl9RggXV3+jRbY4z6Zj4k7ykUgI0PoTN4eB0f+moSQ3yL4hiTGsjQkLP+s+IJCzLl+umsrte+S76gCatJ/1aW7vcRb2fA7drVOAkNZaNzYY/cPBLh0YhdwD3GwyZd6i89Dj2RSUUdQ7QEQUzVqdQArqKkE1tc0gSLOeC0TsUGJkMC8Ug4RGOOFog7GDZwO6VwNapR2xaiA/zQkRGSdsiYL8u9KVajLOFa6vfsgoiaYGLGeaTebvev4pLbi/2KAlxfCf18mw9yPzQ6PfZCWETc6wwDDgeQkQ1QV0dlfpzQRUwPiXlHxSLH57Gd6qc+yoP1fSlaJSYncpYhWSWPzjNWq19/xskX03agpelpGBYOkD+ZYAbA==
+Content-type: multipart/alternative;
+	boundary="B_3715157115_289976384"
+
+> This message is in MIME format. Since your mail reader does not understand
+this format, some or all of this message may not be legible.
+
+--B_3715157115_289976384
+Content-type: text/plain;
+	charset="UTF-8"
+Content-transfer-encoding: 7bit
+
+ 
+Welcome to the 5th District!
+Hello Neighbor,
+
+Welcome to our community! I'm Katherine Clark, your representative in Congress. I wanted to send a quick note to introduce myself and share how my office can be of assistance to you, especially during the COVID-19 pandemic.
+
+I know this is a difficult and uncertain time for our community and the country. While my staff is working remotely to help stop the spread of COVID-19, we remain ready and eager to help you however we can. If you find that you need help with the federal government - that's anything from backlogged veterans' benefits or Social Security issues to missing stimulus checks or immigration problems - we are here to help. 
+
+If you have an urgent constituent services request, please fill out this form or leave a voicemail including your name and phone number at 617-354-0292 and a member of my staff will respond to you as soon as possible. 
+
+Email is a great way to stay in touch as well. I will be passing along additional resources as they become available and regularly send email updates on what I'm doing in Congress to end the pandemic and help our community. Email also lets us stay connected so I can listen to you and respond to your most pressing concerns.   What pressing issues and topics would you like to hear more about from me?
+Vaccine Distribution and COVID-19 Relief
+Child Care and Paid Family Leave
+Racial Justice and Equity 
+Immigration Reform
+Confronting the Climate Crisis
+Student Debt Relief 
+Health Care 
+Ending Gun Violence
+Protecting Your Voting Rights 
+Other (please specify)
+ 
+Submit
+
+Click to open in a separate window
+   
+
+Please don't hesitate to reach out if you think our office can be of any assistance to you. It is an honor to represent you, and I look forward to hearing what you think about the issues facing our country. 
+
+ 
+
+Sincerely, 
+
+Congresswoman Katherine Clark Asst. Speaker of the House of Representatives
+
+  
+
+*It is my job to listen to Massachusetts families. Please click to take my survey to share your views and join my email list. 
+
+SubscribeUnsubscribe
+
+
+--B_3715157115_289976384
+Content-type: text/html;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"></head><=
+body><!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http:/=
+/www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+><style id=3D"IQEmailStyle">
+    /* Client-specific Styles */
+    body { width: 100% !important; margin: 0px;}
+    .ReadMsgBody { width: 100%; }
+    .ExternalClass { width: 100%; display:block !important; } /* Force Hotm=
+ail to display emails at full width */
+
+    /* Reset Styles */
+    body { margin:0; padding: 0; }
+    img { outline: none; text-decoration: none; max-width :100%;}
+    br, strong br, b br, em br, i br { line-height: 100%; }
+    h1, h2, h3, h4, h5, h6 { line-height: 100% !important; -webkit-font-smo=
+othing: antialiased; }
+	/*ly, tr#221562, add same margin as margin-block-start/end*/
+	h1{margin-top:0.67em;margin-bottom:0.67em;}
+	h2{margin-top:0.83em;margin-bottom:0.83em;}
+	h3{margin-top:1em;margin-bottom:1em;}
+	h4{margin-top:1.33em;margin-bottom:1.33em;}
+	h5{margin-top:1.67em;margin-bottom:1.67em;}
+	h6{margin-top:2.33em;margin-bottom:2.33em;}
+    table td, table tr { border-collapse: collapse; }
+    p { margin-bottom: 1em; }
+  	table.menu-change a {
+  	text-decoration:none;
+		}
+
+		/* pre-header */
+		.preheader {
+    display:none !important;
+    visibility:hidden;
+    mso-hide:all !important;
+    font-size:0px;
+    color:#ffffff;
+    line-height:0px;
+    max-height:0px;
+    max-width:0px;
+    opacity:0;
+    overflow:hidden;
+    } 	
+  </style><style id=3D"IQMobileStyle" type=3D"text/css"> @media screen and (max=
+-width: 497px) {
+a {	text-decoration: none;}
+.mobile-menu {font-size:10pt !important;}
+.mobile-content {font-size:18pt !important;}
+.mobile-footer {font-size:8pt !important;}
+}
+</style><meta name=3D"viewport" content=3D"width=3Ddevice-width,initial-scale=3D1.0=
+,user-scalable=3D0,minimum-scale=3D1.0,maximum-scale=3D1.0"><div id=3D"newsletterCon=
+tent" class=3D""><div class=3D"header" style=3D"background: white; color: black;">=
+&nbsp;</div><table style=3D"table-layout: fixed;" border=3D"0" width=3D"100%" cell=
+spacing=3D"0" cellpadding=3D"0" align=3D"center"><tbody><tr><td align=3D"center"><ta=
+ble class=3D"bg-change" style=3D"margin: 0 auto;" border=3D"0" width=3D"640" cellspa=
+cing=3D"0" cellpadding=3D"0" bgcolor=3D"#ffffff"><tbody><!-- Banner --><tr><td ali=
+gn=3D"center" width=3D"640"><table class=3D"banner-change" style=3D"font-family: Ari=
+al, sans-serif;" border=3D"0" width=3D"640" cellspacing=3D"0" cellpadding=3D"0"><tbo=
+dy><tr><td class=3D"textedit" style=3D"line-height: 0px; background-color: #ffff=
+ff;"><p style=3D"text-align: center;"><img height=3D"162" width=3D"640" style=3D"dis=
+play: block; max-width: 100%;;; margin: 0px auto 0px auto;" title=3D"Header_wi=
+th_border_0.png" src=3D"https://iqconnect.house.gov/iqextranet/Customers/MA05K=
+C/Header_with_border_0.png" alt=3D"Header image that says &quot;From the Offic=
+e of Assistant Speaker Katherine Clark&quot;"></p></td></tr></tbody></table>=
+</td></tr><!-- /Banner --><!-- Content --><tr><td width=3D"640"><table style=3D"=
+text-align: left; height: 505px; width: 646px;" border=3D"0" width=3D"474" cells=
+pacing=3D"0" cellpadding=3D"0" align=3D"left"><tbody><tr style=3D"height: 505px;"><t=
+d class=3D"width-change" style=3D"padding-left: 10px; padding-right: 10px; verti=
+cal-align: top; width: 626.997px; height: 505px;" width=3D"NaN"><table class=3D"=
+body-zone width-change" style=3D"width: 627px; height: 483px;" border=3D"0" widt=
+h=3D"NaN" cellspacing=3D"0" cellpadding=3D"0"><tbody class=3D""><tr style=3D"height: 4=
+83px;"><td class=3D"content-change width-change general-change textedit mobile=
+-content" style=3D"font-size: 12pt; font-family: Arial, sans-serif; vertical-a=
+lign: top; background-color: #ffffff; color: #333333; width: 572.552px; padd=
+ing: 0px 25px; height: 483px;" width=3D"NaN"><h1 style=3D"color: #4681fb; font-f=
+amily: 'Arial Black', 'avant garde'; text-align: left;"><span style=3D"font-fa=
+mily: 'arial black', 'avant garde'; color: #fb46b1;">Welcome to the 5th Dist=
+rict!</span></h1><p style=3D"margin: 0pt  0pt 0pt 0pt;">Hello Neighbor,<br><br=
+>Welcome to our community! I'm Katherine Clark, your representative in Congr=
+ess. I wanted to send a quick note to introduce myself and share how my offi=
+ce can be of assistance to you, especially during the COVID-19 pandemic.<br>=
+<br>I know this is a difficult and uncertain time for our community and the =
+country. While my staff is working remotely to help stop the spread of COVID=
+-19, we remain ready and eager to help you however we can. If you find that =
+you need help with the federal government - that's anything from backlogged =
+veterans' benefits or Social Security issues to missing stimulus checks or i=
+mmigration problems&nbsp;- we are here to help. <br><br>If you have an urgen=
+t constituent services request, please <a href=3D"https://iqconnect.house.gov/=
+iqextranet/iqClickTrk.aspx?&amp;cid=3DMA05KC&amp;crop=3D15639QQQ20406021QQQ60502=
+38QQQ7297918&amp;report_id=3D&amp;redirect=3Dhttps%3a%2f%2fkatherineclark.house.=
+gov%2fservices&amp;redir_log=3D478352342848294" target=3D"_blank" rel=3D"noopener"=
+>fill out this form</a> or leave a voicemail including your name and phone n=
+umber at 617-354-0292 and a member of my staff will respond to you as soon a=
+s possible. <br><br>Email is a great way to stay in touch as well. I will be=
+ passing along additional resources as they become available and regularly s=
+end email updates on what I'm doing in Congress to end the pandemic and help=
+ our community.&nbsp;Email also lets us&nbsp;stay connected&nbsp;so I can li=
+sten to you and respond&nbsp;to your most pressing concerns. &nbsp; </p><p s=
+tyle=3D"margin: 0pt  0pt 0pt 0pt;"><form id=3D"100077" class=3D"surveybody modern"=
+ action=3D"https://iqconnect.house.gov/iqextranet/ESurveyPost.aspx" method=3D"GE=
+T"></p><div id=3D"qsc_1" class=3D"checkbox arr_over" style=3D"background-color: ">=
+<div><div style=3D"font-family:Arial Black;color:#fb46b1;font-size:12pt;margin=
+:0;padding:10px 10px 5px;">What pressing issues and topics would you like to=
+ hear more about from me?</div></div><div><table id=3D"qsi_1" data-required=3D"t=
+rue" class=3D"cbTable"><tbody><tr><td style=3D"padding:0 0 0 20px;"><input name=3D=
+"qsi_1_0" type=3D"checkbox" id=3D"qsi_1_0" style=3D"margin-right:3px;" value=3D"EMAI=
+L.OPTIN--COVID"><label for=3D"qsi_1_0" style=3D"font-family:Arial;font-size:11pt=
+;">Vaccine Distribution and COVID-19 Relief</label></td></tr><tr><td style=3D"=
+padding:0 0 0 20px;"><input name=3D"qsi_1_1" type=3D"checkbox" id=3D"qsi_1_1" styl=
+e=3D"margin-right:3px;" value=3D"EMAIL.OPTIN--CHILD CARE"><label for=3D"qsi_1_1" s=
+tyle=3D"font-family:Arial;font-size:11pt;">Child Care and Paid Family Leave</l=
+abel></td></tr><tr><td style=3D"padding:0 0 0 20px;"><input name=3D"qsi_1_2" typ=
+e=3D"checkbox" id=3D"qsi_1_2" style=3D"margin-right:3px;" value=3D"EMAIL.OPTIN--Raci=
+sm"><label for=3D"qsi_1_2" style=3D"font-family:Arial;font-size:11pt;">Racial Ju=
+stice and&nbsp;Equity </label></td></tr><tr><td style=3D"padding:0 0 0 20px;">=
+<input name=3D"qsi_1_3" type=3D"checkbox" id=3D"qsi_1_3" style=3D"margin-right:3px;"=
+ value=3D"EMAIL.OPTIN--IMM"><label for=3D"qsi_1_3" style=3D"font-family:Arial;font=
+-size:11pt;">Immigration Reform</label></td></tr><tr><td style=3D"padding:0 0 =
+0 20px;"><input name=3D"qsi_1_4" type=3D"checkbox" id=3D"qsi_1_4" style=3D"margin-ri=
+ght:3px;" value=3D"EMAIL.OPTIN--ENV"><label for=3D"qsi_1_4" style=3D"font-family:A=
+rial;font-size:11pt;">Confronting the Climate Crisis</label></td></tr><tr><t=
+d style=3D"padding:0 0 0 20px;"><input name=3D"qsi_1_5" type=3D"checkbox" id=3D"qsi_=
+1_5" style=3D"margin-right:3px;" value=3D"EMAIL.OPTIN--EDU"><label for=3D"qsi_1_5"=
+ style=3D"font-family:Arial;font-size:11pt;">Student Debt Relief </label></td>=
+</tr><tr><td style=3D"padding:0 0 0 20px;"><input name=3D"qsi_1_6" type=3D"checkbo=
+x" id=3D"qsi_1_6" style=3D"margin-right:3px;" value=3D"EMAIL.OPTIN--HEA"><label fo=
+r=3D"qsi_1_6" style=3D"font-family:Arial;font-size:11pt;">Health Care </label></=
+td></tr><tr><td style=3D"padding:0 0 0 20px;"><input name=3D"qsi_1_7" type=3D"chec=
+kbox" id=3D"qsi_1_7" style=3D"margin-right:3px;" value=3D"EMAIL.OPTIN--GUN"><label=
+ for=3D"qsi_1_7" style=3D"font-family:Arial;font-size:11pt;">Ending Gun Violence=
+</label></td></tr><tr><td style=3D"padding:0 0 0 20px;"><input name=3D"qsi_1_8" =
+type=3D"checkbox" id=3D"qsi_1_8" style=3D"margin-right:3px;" value=3D"EMAIL.OPTIN--E=
+LEC"><label for=3D"qsi_1_8" style=3D"font-family:Arial;font-size:11pt;">Protecti=
+ng Your Voting Rights </label></td></tr><tr><td style=3D"padding:0 0 0 20px;">=
+<input name=3D"qsi_1_9" type=3D"checkbox" id=3D"qsi_1_9" style=3D"margin-right:3px;"=
+ value=3D"$$GETFROM qsi_1_9_text" onclick=3D"document.getElementById('qsi_1_9_te=
+xt').readOnly=3D!this.checked"><label for=3D"qsi_1_9" style=3D"font-family:Arial;f=
+ont-size:11pt;margin-right:5px;">Other (please specify)</label><input name=3D"=
+qsi_1_9_text" type=3D"text" maxlength=3D"1571" id=3D"qsi_1_9_text" style=3D"font-siz=
+e:11pt;"></td></tr></tbody></table></div></div><div style=3D"background-color:=
+;font-size:2pt;" class=3D"separator">&nbsp;</div><div style=3D"background-color:=
+;text-align:center;"><button id=3D"btn_submit" type=3D"submit" style=3D"background=
+-color:#FFFFFF;color:black;">Submit</button></div><div style=3D"text-align:;">=
+<a href=3D"https://iqconnect.house.gov/iqextranet/EsurveyForm.aspx?__cid=3DMA05K=
+C&amp;__sid=3D100077&amp;__crop=3D15639QQQ20406021QQQ6050238QQQ7297918" style=3D"t=
+ext-align:;display:block;font-size:8pt;" target=3D"_blank"><br>Click to open i=
+n a separate window</a></div><input type=3D"hidden" name=3D"__cid" value=3D"MA05KC=
+"> <input type=3D"hidden" name=3D"__crop" value=3D"15639QQQ20406021QQQ6050238QQQ72=
+97918"> <input type=3D"hidden" name=3D"__sid" value=3D"100077"> </form><p></p><p s=
+tyle=3D"margin: 0pt  0pt 0pt 0pt;">Please don't hesitate to reach out if you t=
+hink our office can be of any assistance to you. It is an honor to represent=
+ you, and I look forward to hearing what you think about the issues&nbsp;fac=
+ing our country. </p><p style=3D"margin: 0pt  0pt 0pt 0pt;">&nbsp;</p><p style=
+=3D"margin: 0pt  0pt 0pt 0pt;"><span style=3D"font-size: 12pt;">Sincerely,</span=
+> </p><table style=3D"height: 86px; width: 60.5235%; border-collapse: collapse=
+;" border=3D"0"><tbody class=3D"ui-sortable"><tr style=3D"height: 46px;"><td style=
+=3D"width: 100%; height: 46px;"><img align=3D"left" height=3D"64" width=3D"277" styl=
+e=3D"margin-top: 0px; margin-bottom: 0px; max-width: 100%;;; float: left;" tit=
+le=3D"Signature_0.png" src=3D"https://iqconnect.house.gov/iqextranet/Customers/M=
+A05KC/Signature_0.png" alt=3D"An image of Congresswoman Clark's signature."></=
+td></tr><tr style=3D"height: 40px;"><td style=3D"width: 100%; height: 40px;"><p =
+style=3D"margin: 0pt  0pt 0pt 0pt;"><span style=3D"font-size: 12pt;">Congresswom=
+an Katherine Clark</span> </p><p style=3D"margin: 0pt  0pt 0pt 0pt;"><span sty=
+le=3D"font-size: 12pt;">Asst. Speaker of the House of Representatives</span></=
+p></td></tr></tbody></table><p style=3D"margin: 0pt  0pt 0pt 0pt;">&nbsp; </p>=
+<p style=3D"margin: 0pt  0pt 0pt 0pt;"><span style=3D"font-size: 8pt; color: #99=
+9999;">*It is my job to listen to Massachusetts families. Please click to ta=
+ke my survey to share your views and join my email list.</span> </p></td></t=
+r></tbody></table></td></tr></tbody></table></td></tr><!-- /Content --><!-- =
+Footer --><tr><td class=3D"content-change general-change textedit no-delzone m=
+obile-content" width=3D"640"><table class=3D"footer-change general-change office=
+-change mobile-footer" style=3D"width: 100%; font-size: 10pt; font-family: Ari=
+al, sans-serif; color: #f3f3f3; background-color: #ffffff; height: 76px;" bo=
+rder=3D"0" width=3D"640" cellspacing=3D"0" cellpadding=3D"0"><tbody class=3D""><tr sty=
+le=3D"height: 76px;"><td style=3D"width: 31.9181%; height: 76px;" align=3D"center"=
+><span style=3D"color: #999999;"><a style=3D"color: #999999;" href=3D"https://iqco=
+nnect.house.gov/iqextranet/iqClickTrk.aspx?&amp;cid=3DMA05KC&amp;crop=3D15639QQQ=
+20406021QQQ6050238QQQ7297918&amp;report_id=3D&amp;redirect=3Dhttps%3a%2f%2fkathe=
+rineclark.house.gov%2fsignup&amp;redir_log=3D952674569123279" target=3D"_blank" =
+rel=3D"noopener">Subscribe</a></span></td><td style=3D"width: 37.1732%; height: =
+76px;" align=3D"center"><img align=3D"left" height=3D"73" width=3D"73" style=3D"font-s=
+ize: 13.3333px;;; margin-top: 0px; margin-bottom: 0px; float: left;" title=3D"=
+facebook_2_0.png" src=3D"https://iqconnect.house.gov/iqextranet/Customers/MA05=
+KC/facebook_2_0.png" alt=3D"An image of the Facebook icon"><img align=3D"left" h=
+eight=3D"75" width=3D"75" style=3D"font-size: 13.3333px;;; margin-top: 0px; margin=
+-bottom: 0px; float: left;" title=3D"twitter.png" src=3D"https://iqconnect.house=
+.gov/iqextranet/Customers/MA05KC/twitter.png" alt=3D"An image of the Twitter i=
+con"><img align=3D"left" height=3D"75" width=3D"75" style=3D"font-size: 13.3333px;;;=
+ margin-top: 0px; margin-bottom: 0px; float: left;" title=3D"instagram.png" sr=
+c=3D"https://iqconnect.house.gov/iqextranet/Customers/MA05KC/instagram.png" al=
+t=3D"An image of the Instagram icon"></td><td style=3D"width: 29.9087%; height: =
+76px;" align=3D"center"><span style=3D"color: #999999;"><a style=3D"color: #999999=
+;" href=3D"https://iqconnect.house.gov/iqextranet/iqClickTrk.aspx?&amp;cid=3DMA0=
+5KC&amp;crop=3D15639QQQ20406021QQQ6050238QQQ7297918&amp;report_id=3D&amp;redirec=
+t=3Dhttps%3a%2f%2fkatherineclark.house.gov%2findex.cfm%2funsubscribe&amp;redir=
+_log=3D898038445452384" target=3D"_blank" rel=3D"noopener">Unsubscribe</a></span><=
+/td></tr></tbody></table></td></tr><!-- /Footer --></tbody></table></td></tr=
+></tbody></table></div><img alt=3D"image" src=3D"https://iqconnect.house.gov/iqe=
+xtranet/Customers/MA05KC/iqtrk.gif?crop=3D15639QQQ20406021QQQ6050238QQQ7297918=
+" height=3D"0" width=3D"0"><span name=3D"15639QQQ20406021QQQ6050238QQQ7297918" dat=
+a-crop=3D"15639QQQ20406021QQQ6050238QQQ7297918"></span><img alt=3D"image" src=3D"h=
+ttps://iqconnect.house.gov/iqextranet/Customers/MA05KC/iqtrk.gif?crop=3D15639Q=
+QQ20406021QQQ6050238QQQ7297918" height=3D"0" width=3D"0"><span name=3D"15639QQQ204=
+06021QQQ6050238QQQ7297918" data-crop=3D"15639QQQ20406021QQQ6050238QQQ7297918">=
+</span></body></html>
+
+--B_3715157115_289976384--
+

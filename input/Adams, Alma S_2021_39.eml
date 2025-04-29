@@ -1,0 +1,533 @@
+Received: from SA1PR09MB7519.namprd09.prod.outlook.com (2603:10b6:806:174::13)
+ by SJ0PR09MB7245.namprd09.prod.outlook.com with HTTPS; Thu, 15 Apr 2021
+ 03:57:10 +0000
+Received: from DM6PR09CA0017.namprd09.prod.outlook.com (2603:10b6:5:160::30)
+ by SA1PR09MB7519.namprd09.prod.outlook.com (2603:10b6:806:174::13) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.4020.21; Thu, 15 Apr
+ 2021 03:57:10 +0000
+Received: from DM3GCC02FT005.eop-gcc02.prod.protection.outlook.com
+ (2a01:111:f400:7d04::204) by DM6PR09CA0017.outlook.office365.com
+ (2603:10b6:5:160::30) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.4042.16 via Frontend
+ Transport; Thu, 15 Apr 2021 03:57:09 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.129.7)
+ smtp.mailfrom=mail.house.gov; ushouse.mail.onmicrosoft.com; dkim=fail (body
+ hash did not verify) header.d=house.gov;ushouse.mail.onmicrosoft.com;
+ dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.129.7 as permitted sender) receiver=protection.outlook.com;
+ client-ip=143.228.129.7; helo=owa.house.gov;
+Received: from owa.house.gov (143.228.129.7) by
+ DM3GCC02FT005.mail.protection.outlook.com (10.97.8.206) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.4042.16 via Frontend Transport; Thu, 15 Apr 2021 03:57:09 +0000
+Received: from EXGW101.US.House.gov (143.228.151.82) by HRM103.US.House.gov
+ (143.228.151.71) with Microsoft SMTP Server (TLS) id 15.0.1497.2; Wed, 14 Apr
+ 2021 23:57:08 -0400
+Received: from serg-bulk1-a.house.gov (143.228.42.4) by EXGW101.US.House.gov
+ (143.228.151.82) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
+ Transport; Wed, 14 Apr 2021 23:57:08 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=mime-version : from :
+ to : date : subject : content-type; s=august2019-msgb-hg;
+ bh=s82Ngm1PvTOpxDTb9Qu6saE2+B31kJW5g4qKS1Ht9zY=;
+ b=DwQ7k1H+yVscBAO/m6vpDmD/WxM4ZZrFBMeon5BN4ozOfrOA7bO5P1pxfH4sW9NgroP/
+ hVPH8HOgZEpCLxOKcp4CvPeY9MT4eFNw93Mn2EjBhNAGWHTzGKoQkt/HH4kTPfxR5eCV
+ e2TllBshT/vv+pbPhhfue3x8l7QDI0H+kSmRF9u6D4Wo16ipXIIixzZHuHIUPztDRAip
+ d69f9u0nvYADNNDkO7RUhS2olBrIdBUj14He0gX2vaEmQ8kv9Kvcv/rfZvnojQIXjWu9
+ ZWdg4qlb+jOyOS15sjDSiMihbXflZwSm+q36LoWIJKyc4c4M4eNthRmvarbjgr2f5xGZ fQ== 
+Received: from firesideadmin02 ([143.228.58.54])
+	by serg-bulk1-a.house.gov (8.16.0.27/8.16.0.27) with ESMTP id 13F3tMid007962;
+	Wed, 14 Apr 2021 23:57:08 -0400
+Message-ID: <202104150357.13F3tMid007962@serg-bulk1-a.house.gov>
+envelope-from: no-reply@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+X-House-Vendor-Seg: Fireside21-1
+From: "Congresswoman Alma Adams" <no-reply@mail.house.gov>
+To: Sam.Spencer@mail.house.gov
+Date: 14 Apr 2021 23:57:08 -0400
+Subject: TEST ASK THE EXPERTS Your Covid-19 Vaccine Questions
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:6.0.391,18.0.761
+ definitions=2021-04-15_01:2021-04-15,2021-04-15 signatures=0
+Return-Path: no-reply@mail.house.gov
+X-OrganizationHeadersPreserved: HRM103.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 15 Apr 2021 03:57:09.5044
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ d4cd7739-be64-498f-9346-08d8ffc28b14
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXGW101.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted:
+ DM3GCC02FT005.eop-gcc02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ DM3GCC02FT005.eop-gcc02.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: d4cd7739-be64-498f-9346-08d8ffc28b14
+X-MS-TrafficTypeDiagnostic: SA1PR09MB7519:
+X-MS-Exchange-Organization-SCL: -1
+X-MS-Oob-TLC-OOBClassifiers: OLM:6108;
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:143.228.129.7;CTRY:US;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SKI;H:owa.house.gov;PTR:housegate34.house.gov;CAT:NONE;SFS:;DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 15 Apr 2021 03:57:09.3605
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: d4cd7739-be64-498f-9346-08d8ffc28b14
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.129.7];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXGW101.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SA1PR09MB7519
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.2434751
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.4042.016
+X-Microsoft-Antispam-Mailbox-Delivery:
+ ucf:0;jmr:0;auth:0;dest:I;ENG:(750129)(520011016)(706158)(944506458)(944626604);
+X-Microsoft-Antispam-Message-Info:
+ j9uwQzktlxkNNfhm6U6crV6QdhJL9eoaKOD6OIZofwB2J7da8Mfg6HT6KBX6ytUHVTeTgi2AHDtaj+pnTVdTO6qbpGhgFsm/QRt6Y16JSovpXmz1YLE6p0Gpd1baGR4Og/f7cxJ3NmxH34nf/u2rxSRHD671pkhxUU69rrLoKC0lysmIqCespWX+jKg9a9oKtp82f7TOzcIPijakJtlayh/JHhn92QY5Z4ah6aRsUDWj1j3vDG2outepd48HaUJgXAdd1efQIIHMjK9FWOQ2938EtrREAs6+S7W5tlJNHGs8T/gPD0MeB85EesniWIer9Mm3D0BytB5IJ/su6AEh0M2t4Le28Hf+65biHD08Vv8M6yNB+FL++Vb70IV63hU3qSOmA3ig5MfuqX9QfIN5g0cIr9jIcE0s7pZXs6jRE06Kzz3j2DIDEpQruaKzG6C4Wts8h5L0Cz8q9vdYOhUX9nOWnNMui5TkUQbbBoXaR2rvQF4D/CqM9mlGJVJQElTrtDX8aszOup9pp8FNnBwJV8vf5Rvx9vEYu9qhusLhirdePv8amJHgZu67aDIpNXXmulpPM0ci9nLmNh3zpUWJ/fZG2RNyzD/UljPCiyGBcaz8HBxwJUDmMwN9COEc3vFF
+Content-type: multipart/alternative;
+	boundary="B_3701289493_2110550142"
+MIME-Version: 1.0
+
+--B_3701289493_2110550142
+Content-type: text/plain;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+Don't Miss This Chance ToASK THE EXPERTSYour Covid-19 Vaccine Questions Dea=
+r Friends,Tomorrow, February 16 from 6p-7p, join me and a panel of medical e=
+xperts for a virtual healthcare forum on COVID-19 testing and the vaccine ca=
+lled: =E2=80=9CASK THE EXPERTS Your COVID-19 Vaccine Questions." This virtual foru=
+m provides an opportunity for experts to share information on COVID-19 testi=
+ng, how the vaccine was developed, how it works, vaccination events and sche=
+duling vaccination appointments when it=E2=80=99s your time.  Our confirmed paneli=
+sts are:Dr. Gary Little, Chief Medical Officer at AtriumDr. Meg Sullivan, Me=
+dical Director at Mecklenburg County Public HealthDr. Jerome Williams, Senio=
+r Vice President for Consumer Engagement at Novant HealthAsk your questsions=
+! You will have a chance to ask questions during the Q&A segment using the Q=
+&A/Chat function of the Zoom platform. You can also submit questions when yo=
+u register at Adams.House.gov/vaccine or by using the link below. Register i=
+n advance for this webinar:https://zoom.us/webinar/register/WN__hChVR5VS0Koi=
+1YtctiGDwRegards and see you at the virtual forum,=20
+=20
+=20
+Don't Miss This Chance To
+ASK THE EXPERTS
+Your Covid-19 Vaccine Questions
+=20
+
+Dear Friends,
+Tomorrow, February 16 from 6p-7p, join me and a panel of medical experts fo=
+r a virtual healthcare forum on COVID-19 testing and the vaccine called: =E2=80=9C=
+ASK THE EXPERTS Your COVID-19 Vaccine Questions." This virtual forum provide=
+s an opportunity for experts to share information on COVID-19 testing, how t=
+he vaccine was developed, how it works, vaccination events and scheduling va=
+ccination appointments when it=E2=80=99s your time.  Our confirmed panelists are:D=
+r. Gary Little, Chief Medical Officer at AtriumDr. Meg Sullivan, Medical Dir=
+ector at Mecklenburg County Public HealthDr. Jerome Williams, Senior Vice Pr=
+esident for Consumer Engagement at Novant Health
+Ask your questsions! You will have a chance to ask questions during the Q&A=
+ segment using the Q&A/Chat function of the Zoom platform. You can also subm=
+it questions when you register at Adams.House.gov/vaccine or by using the li=
+nk below. Register in advance for this webinar:https://zoom.us/webinar/regis=
+ter/WN__hChVR5VS0Koi1YtctiGDw
+Regards and see you at the virtual forum,=20
+ =20
+Congresswoman Alma S. Adams, Ph.D.
+ =20
+ =20
+   =20
+Washington, D.C. Office
+2436 Rayburn House Office Building
+Washington, DC 20515
+P: 202.225.1510
+F: 202.225.1512=20
+Charlotte District Office
+801 East Morehead Street
+Suite 150
+Charlotte, NC 28202
+P: 704.344.9950
+F: 704.344.9971=20
+UPDATE SUBSCRIBPTION OPTIONS |  PRIVACY POLICY |  CONTACT US=20
+  
+
+--B_3701289493_2110550142
+Content-type: text/html;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>Representative Alma Adams</title><meta name=3D"viewport" content=3D"wi=
+dth=3Ddevice-width, initial-scale=3D1"><!--[if !mso]><!--><meta http-equiv=
+=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![endif]--><style>body, tab=
+le, td, a{-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;} /* P=
+revent WebKit and Windows mobile changing default text sizes */ img{-ms-int=
+erpolation-mode: bicubic;} /* Allow smoother rendering of resized image in =
+Internet Explorer *//* RESET STYLES */img { border: 0; height: auto; line-h=
+eight: 100%; outline: none; text-decoration: none; }table { border-collapse=
+: collapse !important; }body { height: 100% !important; margin: 0 !importan=
+t; padding: 0 !important; width: 100% !important; }strong { font-weight: bo=
+ld; } /* Editor reset *//* FIRESIDE STYLES */.component img {max-width:600p=
+x;}.component table {mso-table-rspace:10pt; border-collapse:collapse;}.comp=
+onent { padding: 0px !important; }.press {padding-bottom: 0px;}</style><sty=
+le>@media all and (max-width:650px) {            .image-1, .caption-1, .img=
+-1 img, .image-1 tr, .image-1 td, .image-2, .img-2 img, .image-2 tr, .image=
+-2 td {max-width: 100% !important; width: 100% !important;}            .res=
+ponsive-table {width:100% !important;}            .responsive-table img {ma=
+x-width:100% !important; height: auto !important;}            .press .compo=
+nent, .press td {text-align:center;}            .component { margin-left: 2=
+0px; margin-right: 20px;}            .component .responsive-table { margin-=
+left: 0px !important; margin-right: 0px !important;}            .wide .vide=
+o-thumb { width: 100% !important;height: auto !important; }             .wi=
+de.video-container { width: 100% !important; }         .component.full-widt=
+h {margin-left: 0px; margin-right: 0px; }   }</style><style type=3D"text/cs=
+s">
+            /* CLIENT-SPECIFIC STYLES */
+            body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text=
+ sizes */
+            table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Rem=
+ove spacing between tables in Outlook 2007 and up */
+            img{-ms-interpolation-mode: bicubic;} /* Allow smoother renderi=
+ng of resized image in Internet Explorer */
+            /* RESET STYLES */
+            img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: =
+0 !important; width: 100% !important; }
+            strong { font-weight: bold; } /* Editor reset */
+            /* FIRESIDE STYLES */
+            .component img {max-width:600px;}
+            .component table {mso-table-rspace:10pt; border-collapse:collap=
+se; font-family: 'Times New Roman', times, serif;}
+            .component td {font-family: 'Times New Roman', times, serif;}
+            .component { padding: 0px !important; }
+            .press {padding-bottom: 0px;}
+            .caption-1 td {font-family: 'Times New Roman', times, serif;}
+            /* Non-Outlook Styles */
+            body {background-color: #cccccc;}
+            /* Margin/NoMargin STYLES */
+            .component.full-width{ overflow: hidden; margin: 0px; }
+            /* HEADER STYLES */
+            .header-bar {width: 100%;}
+            .header-bar-margin {background-color:#ffffff;}
+            .header-bar h2 {margin: 0 !important; padding: 0 !important; co=
+lor: #1f497d !important;text-align: center;font-size: 32px !important;font-=
+weight: bold !important; }
+            .survey-content > table > tbody tr td { border-color: #1f497d !=
+important; }
+            .survey-content input.survey-submit { font-family: 'Times New R=
+oman', times, serif !important; }
+        </style><!--[if (gte mso 9)|(IE)]>
+            <style>
+                body {background-color: #ffffff !important;}
+            </style>
+        <![endif]--><style id=3D"media-queries">=20
+            @media all and (max-width:650px) {
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max=
+-width: 100% !important; width: 100% !important;}
+            .responsive-table {width:100% !important;}
+            .responsive-table img {max-width:100% !important; height: auto =
+!important;}
+            .press .component, .press td {text-align:center;}
+            .component { margin-left: 20px; margin-right: 20px;}
+            .component .responsive-table { margin-left: 0px !important; mar=
+gin-right: 0px !important;}
+            .wide .video-thumb { width: 100% !important;height: auto !impor=
+tant; }=20
+            .wide.video-container { width: 100% !important; }
+            }
+        </style><!--[if (gte mso 9)|(IE)]>
+                                            <style>=20
+                                        </style>
+                                        <![endif]--></head><body style=3D"-=
+webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;margin: 0px !impo=
+rtant; padding: 0px !important;"><div id=3D"preview-text" style=3D"display:=
+ none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: 'Time=
+s New Roman', times, serif; max-height: 0px; max-width: 0px; opacity: 0; ov=
+erflow: hidden;">Don't Miss This Chance ToASK THE EXPERTSYour Covid-19 Vacc=
+ine Questions Dear Friends,Tomorrow, February 16 from 6p-7p, join me and a =
+panel of medical experts for a virtual healthcare forum on COVID-19 testing=
+ and the vaccine called: =E2=80=9CASK THE EXPERTS Your COVID-19 Vaccine Que=
+stions.&quot;&nbsp;This virtual forum provides an opportunity for experts t=
+o share information on&nbsp;COVID-19 testing, how the vaccine was developed=
+, how it works, vaccination events and scheduling vaccination appointments =
+when it=E2=80=99s your time.&nbsp;&nbsp;Our confirmed panelists are:Dr. Gar=
+y Little,&nbsp;Chief Medical Officer at AtriumDr. Meg Sullivan,&nbsp;Medica=
+l Director at Mecklenburg County Public HealthDr. Jerome Williams,&nbsp;Sen=
+ior Vice President for Consumer Engagement at Novant HealthAsk your questsi=
+ons!&nbsp;You will have a chance to ask questions during the Q&amp;A segmen=
+t using the Q&amp;A/Chat function of the Zoom platform. You can also submit=
+ questions when you register at Adams.House.gov/vaccine or by using the lin=
+k below.&nbsp;Register in advance for this webinar:https://zoom.us/webinar/=
+register/WN__hChVR5VS0Koi1YtctiGDwRegards and see you at the virtual forum,=
+ </div><!--[if (gte mso 9)|(IE)]>
+    <table style=3D"background-color:#cccccc;" width=3D"100%" align=3D"cent=
+er" role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><tr><=
+td>
+    <![endif]--><table role=3D"presentation" width=3D"650" align=3D"center"=
+ class=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;font-family: 'Times New Roman', times, serif; backgrou=
+nd-color: #ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" margin=
+height=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><tbody><tr>=
+<td align=3D"center" valign=3D"top" style=3D"-webkit-text-size-adjust: 100%=
+; -ms-text-size-adjust: 100%;font-family: 'Times New Roman', times, serif; =
+font-size: 18px;"><a target=3D"_blank" href=3D"https://adams.house.gov" sty=
+le=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=
+=3D"Representative Alma Adams" width=3D"650" style=3D"-ms-interpolation-mod=
+e: bicubic;display: block; width: 650px;" src=3D"https://adamsforms.house.g=
+ov/images/aa_header.jpg"> </a></td></tr></tbody></table><table role=3D"pres=
+entation" width=3D"650" align=3D"center" class=3D"responsive-table" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;background-c=
+olor: #ffffff; font-family: 'Times New Roman', times, serif;" border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" le=
+ftmargin=3D"0" topmargin=3D"0"><tbody><tr><td class=3D"responsive-table" va=
+lign=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust:=
+ 100%;font-family: 'Times New Roman', times, serif; font-size: 18px; color:=
+ #000000;"><table role=3D"presentation" style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;"><tbody><tr height=3D"20"><td style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><span></span></t=
+d></tr></tbody></table><div class=3D"region" id=3D"region-1"><div class=3D"=
+component full-width" style=3D"padding: 0px !important;"><div class=3D"head=
+er-bar" style=3D"overflow: hidden;"><table role=3D"presentation" align=3D"c=
+enter" class=3D"responsive-table table-w-bg-color" style=3D"mso-table-lspac=
+e:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse=
+;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: &q=
+uot;Times New Roman&quot;, times, serif; margin-right: 0px; margin-left: 0p=
+x;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" mar=
+ginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0" width=3D"650"><tbody><tr he=
+ight=3D"0" class=3D"spacerRow"><td style=3D"-webkit-text-size-adjust: 100%;=
+ -ms-text-size-adjust: 100%;font-size: 0%; line-height: 0px">&nbsp;</td></t=
+r><tr><td class=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100=
+%; -ms-text-size-adjust: 100%;font-size:32px;color:#1f497d;" valign=3D"top"=
+><table width=3D"100%" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;=
+mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 1=
+00%; -ms-text-size-adjust: 100%;min-width: 100%;" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D=
+"0" topmargin=3D"0"><tbody><tr><td style=3D"-webkit-text-size-adjust: 100%;=
+ -ms-text-size-adjust: 100%;padding: 0 15pt; font-family: 'Times New Roman'=
+, times, serif;"><div class=3D"cke_editable cke_editable_inline cke_content=
+s_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><h2><span sty=
+le=3D"color:#16a085;"><span style=3D"font-size:20px;">Don't Miss This Chanc=
+e To</span></span></h2><h2>ASK THE EXPERTS</h2><h2>Your Covid-19 Vaccine Qu=
+estions</h2></div></td></tr></tbody></table></td></tr><tr height=3D"0" clas=
+s=3D"spacerRow"><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-size: 0%; line-height: 0px">&nbsp;</td></tr></tbody></tab=
+le></div></div><div class=3D"component " style=3D"padding: 0px !important;"=
+><div class=3D"editable" style=3D"overflow: hidden;width:100%"><table class=
+=3D"responsive-table" role=3D"presentation" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-t=
+able-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; =
+-ms-text-size-adjust: 100%;table-layout: fixed; margin-right: 20px; margin-=
+left: 20px;" width=3D"610"><tbody><tr><td class=3D"table-w-bg-color" valign=
+=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;"><div class=3D"cke_editable cke_editable_inline cke_contents_ltr cke_foc=
+us cke_show_borders" style=3D"overflow: hidden;"><p style=3D"margin: 0;"><b=
+r></p><p style=3D"margin: 0;"><span style=3D"font-size:18px;"><span style=
+=3D"font-family:Georgia,serif;">Dear Friends,</span></span></p><p style=3D"=
+margin: 0;"><br></p><p style=3D"margin: 0;"><span style=3D"font-size:18px;"=
+><span style=3D"font-family:Georgia,serif;">Tomorrow, <b><span style=3D"col=
+or:black">February 16 from 6p-7p</span></b>, join me and a panel of medical=
+ experts for a virtual healthcare forum on COVID-19 testing and the vaccine=
+ called: =E2=80=9C<b>ASK THE EXPERTS Your COVID-19 Vaccine Questions</b><b>=
+<span style=3D"color:black">.&quot;</span></b></span></span></p><p style=3D=
+"margin: 0;"><span style=3D"font-size:18px;"><span style=3D"font-family:Geo=
+rgia,serif;">&nbsp;</span></span></p><p style=3D"margin: 0;"><span style=3D=
+"font-size:18px;"><span style=3D"font-family:Georgia,serif;"><span style=3D=
+"color:black">This virtual forum provides an opportunity for experts to sha=
+re information on&nbsp;<b>COVID-19 testing, </b>how the vaccine was develop=
+ed, how it works, vaccination events and scheduling vaccination appointment=
+s when it=E2=80=99s your time.&nbsp;</span></span></span></p><p style=3D"ma=
+rgin: 0;"><span style=3D"font-size:18px;"><span style=3D"font-family:Georgi=
+a,serif;">&nbsp;</span></span></p><p style=3D"margin: 0;"><span style=3D"fo=
+nt-size:18px;"><span style=3D"font-family:Georgia,serif;"><b><span style=3D=
+"color:black">Our confirmed panelists are:</span></b></span></span></p><p s=
+tyle=3D"margin: 0;"><span style=3D"font-size:18px;"><span style=3D"font-fam=
+ily:Georgia,serif;"><b><span style=3D"color:black">Dr. Gary Little,&nbsp;</=
+span></b><span style=3D"color:black">Chief Medical Officer at Atrium</span>=
+</span></span></p><p style=3D"margin: 0;"><span style=3D"font-size:18px;"><=
+span style=3D"font-family:Georgia,serif;"><b><span style=3D"color:black">Dr=
+. Meg Sullivan,&nbsp;</span></b><span style=3D"color:black">Medical Directo=
+r at Mecklenburg County Public Health</span></span></span></p><p style=3D"m=
+argin: 0;"><span style=3D"font-size:18px;"><span style=3D"font-family:Georg=
+ia,serif;"><b><span style=3D"color:black">Dr. Jerome Williams,&nbsp;</span>=
+</b><span style=3D"color:black">Senior Vice President for Consumer Engageme=
+nt at Novant Health</span></span></span></p><p style=3D"margin: 0;"><br></p=
+><p style=3D"margin: 0;"><strong style=3D"font-weight: bold;"><span style=
+=3D"font-size:18px;"><span style=3D"font-family:Georgia,serif;">Ask your qu=
+estsions!&nbsp;</span></span></strong></p><p style=3D"margin: 0;"><span sty=
+le=3D"font-size:18px;"><span style=3D"font-family:Georgia,serif;"><span sty=
+le=3D"color:black">You will have a chance to ask questions during the <b>Q&=
+amp;A segment </b>using the Q&amp;A/Chat function of the Zoom platform. You=
+ can also submit questions when you register at <b><a data-cke-saved-href=
+=3D"Register%20in%20advance%20for%20this%20webinar:%20https:/zoom.us/webina=
+r/register/WN__hChVR5VS0Koi1YtctiGDw" href=3D"Register%20in%20advance%20for=
+%20this%20webinar:%20https:/zoom.us/webinar/register/WN__hChVR5VS0Koi1Ytcti=
+GDw" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;co=
+lor:#0563c1; text-decoration:underline">Adams.House.gov/vaccine</a></b> or =
+by using the link below.</span></span></span></p><p style=3D"margin: 0;"><s=
+pan style=3D"font-size:18px;"><span style=3D"font-family:Georgia,serif;">&n=
+bsp;</span></span></p><p style=3D"margin: 0;"><span style=3D"font-size:18px=
+;"><span style=3D"font-family:Georgia,serif;"><span style=3D"color:black">R=
+egister in advance for this webinar:</span></span></span></p><p style=3D"ma=
+rgin: 0;text-align:start"><span style=3D"font-size:18px;"><span style=3D"fo=
+nt-family:Georgia,serif;"><span style=3D"color:black"><a data-cke-saved-hre=
+f=3D"https://zoom.us/webinar/register/WN__hChVR5VS0Koi1YtctiGDw" href=3D"ht=
+tps://zoom.us/webinar/register/WN__hChVR5VS0Koi1YtctiGDw" title=3D"https://=
+zoom.us/webinar/register/WN__hChVR5VS0Koi1YtctiGDw" style=3D"-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%;color:#0563c1; text-decoration=
+:underline">https://zoom.us/webinar/register/WN__hChVR5VS0Koi1YtctiGDw</a><=
+/span></span></span></p><p style=3D"margin: 0;"><br></p><p style=3D"margin:=
+ 0;"><span style=3D"font-size:18px;"><span style=3D"font-family:Georgia,ser=
+if;">Regards and see you at the virtual forum, </span></span></p><p style=
+=3D"margin: 0;"><br></p></div></td></tr></tbody></table></div></div><div cl=
+ass=3D"component " style=3D"padding: 0px !important;"><div class=3D"signatu=
+re" style=3D"overflow: hidden;width:100%"><table role=3D"presentation" clas=
+s=3D"responsive-table" align=3D"center" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table=
+-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-=
+text-size-adjust: 100%;table-layout: fixed; margin-right: 20px; margin-left=
+: 20px;" width=3D"610"><tbody><tr><td valign=3D"top" style=3D"-webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%;"><table align=3D"left" class=
+=3D"signature-table" role=3D"presentation" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed;"><=
+tbody><tr><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust=
+: 100%;"><table role=3D"presentation" align=3D"left" border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:=
+0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%;border-collapse: separate !important;">=
+<tbody><tr><td valign=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms-=
+text-size-adjust: 100%;"><div class=3D"ng-binding" style=3D"overflow: hidde=
+n;"></div></td></tr><tr><td valign=3D"top" class=3D"image-td" style=3D"-web=
+kit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><div class=3D"img-=
+1 image-container" style=3D"overflow: hidden;text-align:left"><img style=3D=
+"max-width:600px;-ms-interpolation-mode: bicubic;vertical-align: bottom; ma=
+x-width: 100%; width: 200px !important;" src=3D"https://adamsforms.house.go=
+v/UploadedPhotos/LowResolution/cb616c5f-6ca1-4ea5-a5ab-9bcc0f268e26.jpg" al=
+t=3D"Alma Adams Signature" width=3D"200"></div></td></tr><tr class=3D"space=
+rRow" height=3D"0"><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-si=
+ze-adjust: 100%;font-size:0%;line-height: 0px;">&nbsp; </td></tr><tr><td va=
+lign=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust:=
+ 100%;"><div class=3D"ng-binding" style=3D"overflow: hidden;">Congresswoman=
+ Alma S. Adams, Ph.D.</div></td></tr></tbody></table></td></tr></tbody></ta=
+ble></td></tr></tbody></table></div></div><div class=3D"component " style=
+=3D"padding: 0px !important;"><div class=3D"spacing" style=3D"overflow: hid=
+den;width:100%"><table role=3D"presentation" class=3D"responsive-table" sty=
+le=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; bor=
+der-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust:=
+ 100%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"610"><tbody><tr><td sty=
+le=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;min-width:=
+ 100%;"><table role=3D"presentation" style=3D"mso-table-lspace:0pt; mso-tab=
+le-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%;border-spacing: 0px;" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"><tbody><tr class=
+=3D"spacerRow" height=3D"20"><td style=3D"-webkit-text-size-adjust: 100%; -=
+ms-text-size-adjust: 100%;font-size: 0%; line-height: 20px;">&nbsp; </td></=
+tr></tbody></table></td></tr></tbody></table></div></div><div class=3D"comp=
+onent " style=3D"padding: 0px !important;"><div class=3D"image" style=3D"ov=
+erflow: hidden;width:100%"><table class=3D"responsive-table" role=3D"presen=
+tation" align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" s=
+tyle=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; b=
+order-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjus=
+t: 100%;float: left; table-layout: fixed; margin-right: 20px; margin-left: =
+20px;" width=3D"610"><tbody><tr><td valign=3D"top" class=3D"image-td" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><div class=
+=3D"img-1 image-container" style=3D"overflow: hidden;text-align:center"><im=
+g style=3D"max-width:600px;-ms-interpolation-mode: bicubic;vertical-align: =
+bottom; max-width: 800px;" alt=3D"covid" src=3D"https://adamsforms.house.go=
+v/UploadedPhotos/HighResolution/23cadf8e-64f0-48ba-a11a-fa603e2dacbb.png" w=
+idth=3D"609.5"></div></td></tr></tbody></table></div></div></div><table rol=
+e=3D"presentation" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-a=
+djust: 100%;"><tbody><tr height=3D"20"><td style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%;"><span></span></td></tr></tbody></tabl=
+e></td></tr></tbody></table><table role=3D"presentation" width=3D"650" clas=
+s=3D"responsive-table" align=3D"center" style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-family: 'Times New Roman', times, ser=
+if; background-color: #cccccc;" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0=
+"><tbody><tr><td valign=3D"middle" align=3D"center" style=3D"-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%;height:10px; background-color:=
+ #cccccc;">&nbsp; </td></tr><tr><td valign=3D"middle" style=3D"-webkit-text=
+-size-adjust: 100%; -ms-text-size-adjust: 100%;background-color: #cccccc;">=
+<table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"20" align=3D"=
+center" width=3D"90%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;"><tbody><tr><td valign=3D"middle" align=3D"center" style=3D=
+"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #004c65;=
+ font-size: 10px; font-family: Arial, Helvetica, sans-serif;"><a href=3D"ht=
+tps://www.facebook.com/CongresswomanAdams" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"facebook icon." src=3D"ht=
+tps://adamsforms.house.gov/images/facebook.png" style=3D"-ms-interpolation-=
+mode: bicubic;"></a> <a href=3D"https://twitter.com/RepAdams" style=3D"-web=
+kit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"twitte=
+r icon." src=3D"https://adamsforms.house.gov/images/twitter.png" style=3D"-=
+ms-interpolation-mode: bicubic;"></a> <a href=3D"https://www.youtube.com/ch=
+annel/UCPI9ao1Cr1nxEUD2r-usRjQ" style=3D"-webkit-text-size-adjust: 100%; -m=
+s-text-size-adjust: 100%;"><img alt=3D"youtube icon." src=3D"https://adamsf=
+orms.house.gov/images/youtube.png" style=3D"-ms-interpolation-mode: bicubic=
+;"></a> <a href=3D"https://instagram.com/repadams/" style=3D"-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"instagram icon."=
+ src=3D"https://adamsforms.house.gov/images/instagram.png" style=3D"-ms-int=
+erpolation-mode: bicubic;"></a> </td></tr></tbody></table></td></tr><tr><td=
+ valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-adjust: 100%=
+; -ms-text-size-adjust: 100%;color: #004c65; background-color: #cccccc; pad=
+ding: 0 20px;"><table role=3D"presentation" width=3D"100%" cellpadding=3D"0=
+" cellspacing=3D"10" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size=
+-adjust: 100%;text-align:center;"><tbody><tr><td valign=3D"middle" align=3D=
+"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;text-align:center;"><table role=3D"presentation" cellpadding=3D"0" class=
+=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"49.9%" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family=
+: Arial, Helvetica, sans-serif; text-align:center; font-size: 11px; color: =
+#004c65; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tbo=
+dy><tr><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;font-family: Arial, Helvetica, sans-serif;"><strong style=3D"font-weigh=
+t: bold;font-family: Arial, Helvetica, sans-serif;">Washington, D.C. Office=
+</strong><br>2436 Rayburn House Office Building<br>Washington, DC 20515<br>=
+P: 202.225.1510<br>F: 202.225.1512 </td></tr></tbody></table><table role=3D=
+"presentation" cellpadding=3D"0" class=3D"responsive-table" align=3D"left" =
+cellspacing=3D"0" width=3D"49.9%" style=3D"-webkit-text-size-adjust: 100%; =
+-ms-text-size-adjust: 100%;font-family: Arial, Helvetica, sans-serif; text-=
+align:center; font-size: 11px; color: #004c65; margin: 10px 0;mso-table-lsp=
+ace: 0pt; mso-table-rspace: 0pt;"><tbody><tr><td style=3D"-webkit-text-size=
+-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, sa=
+ns-serif;"><strong style=3D"font-weight: bold;font-family: Arial, Helvetica=
+, sans-serif;">Charlotte District Office</strong><br>801 East Morehead Stre=
+et<br>Suite 150<br>Charlotte, NC 28202<br>P: 704.344.9950<br>F: 704.344.997=
+1 </td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td val=
+ign=3D"middle" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjus=
+t: 100%;background-color: #cccccc;"><table role=3D"presentation" cellpaddin=
+g=3D"0" cellspacing=3D"20" align=3D"center" width=3D"90%" style=3D"-webkit-=
+text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><tbody><tr><td valign=
+=3D"middle" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-t=
+ext-size-adjust: 100%;color: #08244a; font-size: 10px; font-family: Arial, =
+Helvetica, sans-serif;"><a target=3D"_blank" href=3D"https://adams.house.go=
+v/contact/newsletter/" style=3D"-webkit-text-size-adjust: 100%; -ms-text-si=
+ze-adjust: 100%;color: #004c65; text-decoration:none; font-family: Arial, H=
+elvetica, sans-serif; font-size: 10px;">UPDATE SUBSCRIBPTION OPTIONS</a>&nb=
+sp;|&nbsp; <a target=3D"_blank" href=3D"https://adams.house.gov/Privacy/" s=
+tyle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #=
+004c65; text-decoration:none; font-family: Arial, Helvetica, sans-serif; fo=
+nt-size: 10px;">PRIVACY POLICY</a>&nbsp;|&nbsp; <a target=3D"_blank" href=
+=3D"https://adams.house.gov/Contact/" style=3D"-webkit-text-size-adjust: 10=
+0%; -ms-text-size-adjust: 100%;color: #004c65; text-decoration:none; font-f=
+amily: Arial, Helvetica, sans-serif; font-size: 10px;">CONTACT US</a> </td>=
+</tr></tbody></table></td></tr><tr><td valign=3D"middle" align=3D"center" s=
+tyle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:3=
+0px; background-color: #cccccc;">&nbsp; </td></tr></tbody></table><!--[if (=
+gte mso 9)|(IE)]>
+    </td></tr></table>
+    <![endif]--></body></html>
+
+--B_3701289493_2110550142--

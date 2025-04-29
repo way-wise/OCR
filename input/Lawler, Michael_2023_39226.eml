@@ -1,0 +1,794 @@
+Received: from PH8PR09MB10297.namprd09.prod.outlook.com (2603:10b6:510:18d::6)
+ by SA1PR09MB9517.namprd09.prod.outlook.com with HTTPS; Mon, 17 Apr 2023
+ 20:38:14 +0000
+Received: from CYXPR09CA0018.namprd09.prod.outlook.com (2603:10b6:930:d4::6)
+ by PH8PR09MB10297.namprd09.prod.outlook.com (2603:10b6:510:18d::6) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6298.45; Mon, 17 Apr
+ 2023 20:38:13 +0000
+Received: from DM3GCC02FT005.eop-gcc02.prod.protection.outlook.com
+ (2a01:111:f400:7d04::208) by CYXPR09CA0018.outlook.office365.com
+ (2603:10b6:930:d4::6) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6298.46 via Frontend
+ Transport; Mon, 17 Apr 2023 20:38:13 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.151.110)
+ smtp.mailfrom=mail.house.gov; dkim=fail (body hash did not verify)
+ header.d=house.gov;dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.151.110 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.151.110;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.151.110) by
+ DM3GCC02FT005.mail.protection.outlook.com (10.97.8.206) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.6319.20 via Frontend Transport; Mon, 17 Apr 2023 20:38:13 +0000
+Received: from EXCH1914.US.House.gov (143.228.151.104) by
+ EXCH1911.US.House.gov (143.228.151.110) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.2.1118.26; Mon, 17 Apr 2023 16:38:08 -0400
+Received: from serg-bulk2-h.house.gov (143.228.145.63) by
+ EXCH1914.US.House.gov (143.228.151.104) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.2.1118.26 via Frontend Transport; Mon, 17 Apr 2023 16:38:08 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=list-unsubscribe :
+ from : to : date : subject : content-type : message-id : mime-version;
+ s=august2019-msgb-hg; bh=V0Fb88SvDWcEyCCABtbJZThxckvS9Vx6q642NgkEPZk=;
+ b=ufdcLZWQQTfxuqKyCviy6n1tyN6NhpizkyHE4A+IHPK79ObN/HKiCROsvJXYLhfEy2Mg
+ 4EMLNoL1Uzl6vJddb0FIH6N0SNTa5wXSWbu+Ov0dIgDPWpzSGL04mNoZzX6WnBEJawuO
+ ZEtF8+CbZheWAMd+itEOtOwN9VUqi5G+Wh2p4LXHdQnthsdRd+/u38ZU7y8zcQnyPfDG
+ aVXDyRUDD1XvOFahrQGbB+tVoBTaeP2XBWIx61Fb7oxCIA7PIPpFz6Z8FmWgfd9U8QiR
+ +APPJnFCap/CfsCjEK7zEcda2U+8jRZbpYKBoxtHdFhLF7FP3yfH1VjXxWFh65Dlfhxd Iw== 
+Received: from FIRESIDESERV03 (firesideserv03.us.house.gov [143.228.113.103])
+	by serg-bulk2-h.house.gov (8.17.1.19/8.17.1.19) with ESMTP id 33HKc8Gt021586
+	for <Peter.Finocchio@mail.house.gov>; Mon, 17 Apr 2023 16:38:08 -0400
+Message-Id: <3pyq2rf4vg-1@serg-bulk2-h.house.gov>
+envelope-from: RepMikeLawler@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+X-House-Vendor-Seg: unmanaged
+List-Unsubscribe: <https://lawler.house.gov/forms/emailsignup/?Delete=true&MessageID=89&Email=Peter.Finocchio@mail.house.gov&Submit=true>
+Precedence: bulk
+From: "Rep. Michael Lawler" <RepMikeLawler@mail.house.gov>
+To: Peter.Finocchio@mail.house.gov
+Date: 17 Apr 2023 16:38:08 -0400
+Subject: Lowering Your Tax Burden
+Content-Type: multipart/alternative;
+ boundary=--boundary_346580_9d10a683-40d9-4a05-a23b-75cb6eb29c62
+X-Proofpoint-Virus-Version: vendor=baseguard
+ engine=ICAP:2.0.254,Aquarius:18.0.942,Hydra:6.0.573,FMLib:17.11.170.22
+ definitions=2023-04-17_14,2023-04-17_01,2023-02-09_01
+Return-Path: RepMikeLawler@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1911.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 17 Apr 2023 20:38:13.0654
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 591000d8-313c-4bf6-a51d-08db3f83aa21
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1914.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted:
+ DM3GCC02FT005.eop-gcc02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ DM3GCC02FT005.eop-gcc02.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ DM3GCC02FT005:EE_|PH8PR09MB10297:EE_|SA1PR09MB9517:EE_
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: 591000d8-313c-4bf6-a51d-08db3f83aa21
+X-MS-Exchange-Organization-SCL: -1
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:143.228.151.110;CTRY:US;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SKI;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:;DIR:INT;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 17 Apr 2023 20:38:13.0029
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 591000d8-313c-4bf6-a51d-08db3f83aa21
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.151.110];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1914.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PH8PR09MB10297
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.1804908
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.6298.030
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(425001)(930097);
+X-Microsoft-Antispam-Message-Info:
+	rJxYhQ21Ei/fD4epnlcGPcaFgwEudnyKgXYgN0eLP0XGHfH5n5zXdbEBYzlC6dEvPKpdlvmIhDwX54FzQOB7H7EfneXaKUshQNcbweTCllGSzxUH4g/D2w6UTx/oJEDhH3TBjSk9QrFbDOr6lnK/+owwR3AEDhs0ol9zqQwVyS+hTynSL1uzjfGIelqAi0iU22MjwYjeFlAHob9ErNVaUCNgxEM+c8I9pkf1mi7uSFNo5MryiYBmZOhyzEiPfhk5Tiws8QftR1yLPRyMJxpBjNfiUvfb62Za0WF8nKO0gukyRcmmm1Z6WzQFt3lpwfGgqk7GJ44N2e3n4MYaJmCKEKZDowAkXn5L/QJveJwVEKFoNkttrzhYhYTswwfGGZPlqYn/D/L1oay2pbCI3qXNF/ixNjpo4m9hSGOimmWxIQWpZ9sXCzEtvTDBP2cHR/2yltRlPsXTDqvR9PhN+1OAlulCYLZPHT4lI+zvSklYihczgCccjvrcT3UrIwG/rL0IaRTqmpg7Pn+z+Oup9ZXGp+VLWU6VnyTOeTYpcUG8vkvh6P+d7oSkbZ6GLKzAAU53GsmUskJhmtnm2INfet4e9B5nmI1Awz+N4KHN2WIMJLJSb3hOTmubwEgYR5sE5i6I17DqNfTIs8TQIcy0hPWi8EOtzIPqHJalMeKYKmQftGI=
+MIME-Version: 1.0
+
+----boundary_346580_9d10a683-40d9-4a05-a23b-75cb6eb29c62
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+DQpVbnN1YnNjcmliZTogaHR0cHM6Ly9sYXdsZXIuaG91c2UuZ292L0Zvcm1zL0VtYWls
+U2lnbnVwLz9EZWxldGU9dHJ1ZSZNZXNzYWdlSUQ9ODkmRW1haWw9UGV0ZXIuRmlub2Nj
+aGlvQG1haWwuaG91c2UuZ292
+----boundary_346580_9d10a683-40d9-4a05-a23b-75cb6eb29c62
+Content-Location: https://lawler.house.gov/
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>Lowering Your Tax Burden</title>
+       =20
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1">
+        <!--[if !mso]><!-->
+        <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![e=
+ndif]-->
+        <style>body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default t=
+ext sizes */ img{-ms-interpolation-mode: bicubic;} /* Allow smoother render=
+ing of resized image in Internet Explorer *//* RESET STYLES */img { border:=
+ 0; height: auto; line-height: 100%; outline: none; text-decoration: none; =
+}table { border-collapse: collapse !important; }body { height: 100% !import=
+ant; margin: 0 !important; padding: 0 !important; width: 100% !important; }=
+strong { font-weight: bold; } /* Editor reset *//* FIRESIDE STYLES */.compo=
+nent img {max-width:600px;}.component table {mso-table-rspace:10pt; border-=
+collapse:collapse;}.component { padding: 0px !important; }.press {padding-b=
+ottom: 0px;}</style><style>@media all and (max-width:650px) {            .i=
+mage-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td, .image-2, .img-2 =
+img, .image-2 tr, .image-2 td {max-width: 100% !important; width: 100% !imp=
+ortant;}            .responsive-table {width:100% !important;}            .=
+responsive-table img {max-width:100% !important; height: auto !important;} =
+           .press .component, .press td {text-align:center;}            .co=
+mponent { margin-left: 20px; margin-right: 20px;}            .component .re=
+sponsive-table { margin-left: 0px !important; margin-right: 0px !important;=
+}            .wide .video-thumb { width: 100% !important;height: auto !impo=
+rtant; }             .wide.video-container { width: 100% !important; }     =
+    .component.full-width {margin-left: 0px; margin-right: 0px; }   }</styl=
+e><style type=3D"text/css">
+            /* CLIENT-SPECIFIC STYLES */
+            body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text=
+ sizes */
+            table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Rem=
+ove spacing between tables in Outlook 2007 and up */
+            img{-ms-interpolation-mode: bicubic;} /* Allow smoother renderi=
+ng of resized image in Internet Explorer */
+            /* RESET STYLES */
+            img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: =
+0 !important; width: 100% !important; }
+            strong { font-weight: bold; } /* Editor reset */
+            /* FIRESIDE STYLES */
+            .component img {max-width:600px;}
+            .component table {mso-table-rspace:10pt; border-collapse:collap=
+se; font-family: Arial, Helvetica, sans-serif;}
+            .component td, td {font-family: Arial, Helvetica, sans-serif;}
+            .component { padding: 0px !important; }
+            .press {padding-bottom: 0px;}
+            .caption-1 td {font-family: Arial, Helvetica, sans-serif;}
+            /* Margin/NoMargin STYLES */
+            .component.full-width{ overflow: hidden; margin: 0px; }
+            /* HEADER STYLES */
+            .header-bar {width: 100%;}
+            .header-bar-margin {background-color:#ffffff;}
+            .header-bar h2 {margin: 0 !important; padding: 0 !important; co=
+lor: #000000;text-align: center;font-size: 24px;font-weight: bold; }
+            .survey-content > table > tbody tr td { border-color: #08244a !=
+important; }
+            .survey-content input.survey-submit { font-family: Arial, Helve=
+tica, sans-serif !important; }
+        </style>     =20
+        <style id=3D"media-queries">=20
+            @media all and (max-width:650px) {
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max=
+-width: 100% !important; width: 100% !important;}
+            .responsive-table {width:100% !important;}
+            .responsive-table img {max-width:100% !important; height: auto =
+!important;}
+            .press .component, .press td, .split .component, .split .compon=
+ent td, .split td {text-align:center;}
+            .component { margin-left: 20px; margin-right: 20px;}
+            .component .responsive-table { margin-left: 0px !important; mar=
+gin-right: 0px !important;}
+            .wide .video-thumb { width: 100% !important;height: auto !impor=
+tant; }=20
+            .wide.video-container { width: 100% !important; }
+            }
+        </style>
+       =20
+    <!--[if (gte mso 9)|(IE)]>
+                                            <style>=20
+                                        </style>
+                                        <![endif]--></head>
+    <body style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%;margin: 0px !important; padding: 0px !important;">
+        <div id=3D"preview-text" style=3D"display: none; font-size: 1px; co=
+lor: #fefefe; line-height: 1px; font-family: Arial, Helvetica, sans-serif; =
+max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">Monday, Apr=
+il 17, 2023 Peter, Tomorrow is Tax Day and for many families across the Hud=
+son Valley&nbsp;it's a painful reminder of the high cost of living in our c=
+ommunity. There's no question the crushing&nbsp;state and local taxes we pa=
+y in New York are fueling the ongoing affordability crisis we are facing. T=
+hat's why since I took office in January, I have been fighting to lift the =
+cap on the State and Local Tax (SALT) deduction. The very first bill I intr=
+oduced in the 118th Congress was H.R. 339, the =E2=80=9CSALT Marriage Penal=
+ty Elimination Act.=E2=80=9D This legislation would let married couples fil=
+ing individual returns deduct the full $10,000 while those filing joint ret=
+urns would be able to deduct $20,000. Under the current law, individuals ca=
+n file for a federal deduction on state and local taxes up to $10,000 while=
+ a married individual filing a separate return can only file $5,000 - which=
+ is nothing more than a marriage penalty that adds insult to injury.&nbsp;I=
+ also worked alongside my colleague Congresswoman Mikie Sherrill (D-NJ) to =
+introduce H.R. 680, =E2=80=9Cthe Tax Relief for Middle Class Families Act,=
+=E2=80=9D which would lift the SALT deduction cap tenfold from a $10,000 li=
+mit to a $100,000 limit for individual filers and a $200,000 cap for marrie=
+d couples filing joint returns.  Most recently, I was proud to co-lead H.R.=
+ 2555, &quot;The Securing Access to Lower Taxes by ensuring (SALT) Deductib=
+ility Act. This bill will amend the Internal Revenue Code of 1986 to comple=
+tely repeal the cap on SALT. This legislation was introduced by my fellow N=
+ew Yorker and House Financial Services Committee colleague Andrew Garbarino=
+ (R-NY) and has a broad bipartisan coalition&nbsp;of co-leads, which in add=
+ition to myself&nbsp;includes&nbsp;Representatives Josh Gottheimer (D-NJ), =
+Young Kim (R-CA), Anna Eshoo (D-CA), Chris Smith (R-NJ), Brad Schneider (D-=
+IL), and&nbsp;Rob Menendez (D-NJ). As a member of the Bipartisan Salt Caucu=
+s, I will continue working with my colleagues on both sides of the aisle to=
+ advocate for our constituents who have been burdened by the current cap on=
+ SALT deductions and champion the tax relief our communities so desperately=
+ need. I know that the inability to deduct the full cost of state and local=
+ taxes has put a tremendous burden on Hudson Valley families, but I want to=
+ hear from you on how much lifting the SALT cap will help you and your fami=
+ly. Respond by filling out the survey below. </div>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;background-color: #ffffff; font-family: Arial, Helvetica, sa=
+ns-serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D=
+"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td class=3D"responsive-table" valign=3D"top" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Ari=
+al, Helvetica, sans-serif; font-size: 16px; color: #000000;">
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class=3D"region" id=3D"region-1"><div class=3D=
+"component " style=3D"padding: 0px !important;"> <div class=3D"image" style=
+=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 5833px;" alt=3D"Header w=
+ith Headshot" src=3D"https://lawler.house.gov/UploadedPhotos/HighResolution=
+/94638877-579a-477e-a4de-4f831867b14f.png" width=3D"609.5"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;text-align: right;"><br></p><p style=3D"margin: 0;text-=
+align: right;"><span style=3D"color:#000066;"><strong style=3D"font-weight:=
+ bold;">Monday, April 17, 2023</strong></span></p><p style=3D"margin: 0;tex=
+t-align: right;"><br></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;"><span style=3D"line-height:2;"><span class=3D"fs-merg=
+e-field" contenteditable=3D"false"><span contenteditable=3D"false"><span cl=
+ass=3D"merge-field" contenteditable=3D"false" unselectable=3D"true">Peter</=
+span></span></span><span style=3D"font-size:16px;">,</span></span></p><p st=
+yle=3D"margin: 0;"><br></p><p style=3D"margin: 0;line-height:1.38"><br></p>=
+</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;overflow:hidden; background-color:#ffffff"><p =
+style=3D"margin: 0;"><span style=3D"line-height:2;"><span style=3D"font-fam=
+ily:Arial,Helvetica,sans-serif;"><span style=3D"font-size:16px;">Tomorrow i=
+s Tax Day and for many families across the Hudson Valley&nbsp;it's a painfu=
+l reminder of the high cost of living in our community. There's no question=
+ the crushing&nbsp;state and local taxes we pay in New York are fueling the=
+ ongoing affordability crisis we are facing. That's why since I took office=
+ in January, I have been fighting to lift the cap on the State and Local Ta=
+x (SALT) deduction.</span></span></span></p><p style=3D"margin: 0;"><br></p=
+><p style=3D"margin: 0;line-height:1.38; background-color:#ffffff; margin-b=
+ottom:16px"><span style=3D"line-height:2;"><span style=3D"font-family:Arial=
+,Helvetica,sans-serif;"><span style=3D"font-size:16px;"><span style=3D"font=
+-variant-ligatures: normal; font-variant-numeric: normal; font-variant-alte=
+rnates: normal; font-variant-east-asian: normal; font-variant-position: nor=
+mal; white-space: pre-wrap;"><span style=3D"color:#000000"><span style=3D"f=
+ont-weight:400"><span style=3D"font-style:normal"><span style=3D"text-decor=
+ation:none">The very first bill I introduced in the 118th Congress was H.R.=
+ 339, the =E2=80=9CSALT Marriage Penalty Elimination Act.=E2=80=9D This leg=
+islation would let married couples filing individual returns deduct the ful=
+l $10,000 while those filing joint returns would be able to deduct $20,000.=
+ Under the current law, individuals can file for a federal deduction on sta=
+te and local taxes up to $10,000 while a married individual filing a separa=
+te return can only file $5,000 - which is nothing more than a marriage pena=
+lty that adds insult to injury.&nbsp;</span></span></span></span></span></s=
+pan></span></span></p><p style=3D"margin: 0;line-height:1.38"><span style=
+=3D"line-height:2;"><span style=3D"font-family:Arial,Helvetica,sans-serif;"=
+><span style=3D"font-size:16px;"><span style=3D"font-variant-ligatures: nor=
+mal; font-variant-numeric: normal; font-variant-alternates: normal; font-va=
+riant-east-asian: normal; font-variant-position: normal; white-space: pre-w=
+rap;"><span style=3D"color:#000000"><span style=3D"font-weight:400"><span s=
+tyle=3D"font-style:normal"><span style=3D"text-decoration:none">I also work=
+ed alongside my colleague Congresswoman Mikie Sherrill (D-NJ) to introduce =
+H.R. 680, =E2=80=9Cthe Tax Relief for Middle Class Families Act,=E2=80=9D w=
+hich would lift the SALT deduction cap tenfold from a $10,000 limit to a $1=
+00,000 limit for individual filers and a $200,000 cap for married couples f=
+iling joint returns. </span></span></span></span></span></span></span></spa=
+n></p><p style=3D"margin: 0;line-height:1.38"><br></p><p style=3D"margin: 0=
+;line-height:1.38"><span style=3D"line-height:2;"><span style=3D"font-famil=
+y:Arial,Helvetica,sans-serif;"><span style=3D"font-size:16px;"><span style=
+=3D"font-variant-ligatures: normal; font-variant-numeric: normal; font-vari=
+ant-alternates: normal; font-variant-east-asian: normal; font-variant-posit=
+ion: normal; white-space: pre-wrap;"><span style=3D"color:#000000"><span st=
+yle=3D"font-weight:400"><span style=3D"font-style:normal"><span style=3D"te=
+xt-decoration:none">Most recently, I was proud to co-lead H.R. 2555, &quot;=
+The Securing Access to Lower Taxes by ensuring (SALT) Deductibility Act. Th=
+is bill will amend the Internal Revenue Code of 1986 to completely repeal t=
+he cap on SALT. This legislation was introduced by my fellow New Yorker and=
+ House Financial Services Committee colleague Andrew Garbarino (R-NY) and h=
+as a broad </span></span></span></span></span><span style=3D"white-space: p=
+re-wrap;">bipartisan coalition</span>&nbsp;of co-leads, which in addition t=
+o myself&nbsp;includes&nbsp;Representatives Josh Gottheimer (D-NJ), Young K=
+im (R-CA), Anna Eshoo (D-CA), Chris Smith (R-NJ), Brad Schneider (D-IL), an=
+d&nbsp;Rob Menendez (D-NJ).</span></span></span></p><p style=3D"margin: 0;l=
+ine-height:1.38"><br></p><p style=3D"margin: 0;line-height:1.38"><span styl=
+e=3D"line-height:2;"><span style=3D"font-family:Arial,Helvetica,sans-serif;=
+"><span style=3D"font-size:16px;"><span style=3D"font-variant-ligatures: no=
+rmal; font-variant-numeric: normal; font-variant-alternates: normal; font-v=
+ariant-east-asian: normal; font-variant-position: normal; white-space: pre-=
+wrap;"><span style=3D"color:#000000"><span style=3D"font-weight:400"><span =
+style=3D"font-style:normal"><span style=3D"text-decoration:none">As a membe=
+r of the Bipartisan Salt Caucus, I will continue working with my colleagues=
+ on both sides of the aisle to advocate for our constituents who have been =
+burdened by the current cap on SALT deductions and champion the tax relief =
+our communities so desperately need.</span></span></span></span></span></sp=
+an></span></span></p><p style=3D"margin: 0;line-height:1.38"><br></p><p sty=
+le=3D"margin: 0;line-height:1.38"><span style=3D"font-size:16px;"><span sty=
+le=3D"line-height:2;"><span style=3D"font-family:Arial,Helvetica,sans-serif=
+;"><span style=3D"font-variant-ligatures: normal; font-variant-numeric: nor=
+mal; font-variant-alternates: normal; font-variant-east-asian: normal; font=
+-variant-position: normal; white-space: pre-wrap;"><span style=3D"color:#00=
+0000"><span style=3D"font-weight:400"><span style=3D"font-style:normal"><sp=
+an style=3D"text-decoration:none">I know that the inability to deduct the f=
+ull cost of state and local taxes has put a tremendous burden on Hudson Val=
+ley families, but I want to hear from you on how much lifting the SALT cap =
+will help you and your family. Respond by filling out the survey below.</sp=
+an></span></span></span></span></span></span></span></p><p style=3D"margin:=
+ 0;line-height:1.38"><br></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"survey" style=3D"overflow: hidden;width:100%;">=20
+            <table align=3D"center" class=3D"responsive-table" role=3D"pres=
+entation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-tab=
+le-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:=
+collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-l=
+ayout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td valign=3D"top" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"survey-content" style=3D"overflow=
+: hidden;"><table role=3D"presentation" align=3D"center" class=3D"responsiv=
+e-table" cellspacing=3D"0" cellpadding=3D"0" style=3D"mso-table-lspace:0pt;=
+ mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%;margin: 0 auto; borde=
+r-collapse: separate !important;">
+          <tbody>
+              <tr>
+                  <td colspan=3D"3" valign=3D"middle" align=3D"center" heig=
+ht=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;height:5px;line-height: 5px; letter-spacing: 5px; font-size: 5px; border-=
+top: 5px solid #353484; border-left: 5px solid #353484; border-right: 5px s=
+olid #353484;">
+                  &nbsp;
+                  </td>
+              </tr><tr>
+                <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;width: 10px; border-left: 5px solid #353484;" width=3D"10">&nb=
+sp;</td>
+                <td valign=3D"top" style=3D"-webkit-text-size-adjust: 100%;=
+ -ms-text-size-adjust: 100%;">
+                    <p class=3D"survey-text" style=3D"margin: 0;text-align:=
+ center;font:24px " times=3D"" new=3D"" roman?,=3D"" times,=3D"" serif?=3D"=
+">How much will an increase in or removal of the SALT deduction cap impact =
+you and your family's bottom line?</p>
+                </td>
+                <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;width: 10px; border-right: 5px solid #353484;" width=3D"10">&n=
+bsp;</td>
+            </tr>
+            <tr>
+                <td colspan=3D"3" valign=3D"middle" align=3D"center" height=
+=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;=
+height:5px;line-height: 5px; letter-spacing: 5px; font-size: 5px; border-le=
+ft: 5px solid #353484; border-right: 5px solid #353484;">
+                &nbsp;
+                </td>
+            </tr><tr>
+                  <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;width: 10px; border-left: 5px solid #353484;" width=3D"10">&=
+nbsp;</td>
+                  <td valign=3D"top" style=3D"-webkit-text-size-adjust: 100=
+%; -ms-text-size-adjust: 100%;">
+                      <table role=3D"presentation" align=3D"center" width=
+=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"mso-tab=
+le-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:=
+collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-=
+collapse: separate !important;">
+                          <tbody>
+                              <tr>
+                                  <td style=3D"-webkit-text-size-adjust: 10=
+0%; -ms-text-size-adjust: 100%;">
+                                    <table role=3D"presentation" class=3D"r=
+esponsive-table" align=3D"center" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspac=
+e:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%;width: 100%; border-collapse: separate !important;">
+                                      <tbody><tr>
+                                        <td align=3D"center" class=3D"respo=
+nsive-survey response response-77" id=3D"77" style=3D"-webkit-text-size-adj=
+ust: 100%; -ms-text-size-adjust: 100%;background-color: #353484; width: 100=
+%; line-height: 24px;" bgcolor=3D"#353484">
+                                          <a href=3D"https://lawler.house.g=
+ov/Forms/Form/QuickSurvey.aspx?email=3DPeter.Finocchio@mail.house.gov&amp;s=
+id=3D19&amp;fid=3D16763&amp;aid=3D77&amp;mid=3D89" target=3D"_blank" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;line-height:=
+ 24px; color: rgb(255, 255, 255); text-decoration: none; padding: 12px 18px=
+; border: 1px solid rgb(53, 52, 132); display: block;">A lot</a>
+                                        </td>
+                                      </tr>
+                                    </tbody></table>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </td>
+                  <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;width: 10px; border-right: 5px solid #353484;" width=3D"10">=
+&nbsp;</td>
+              </tr>
+              <tr>
+                  <td colspan=3D"3" valign=3D"middle" align=3D"center" heig=
+ht=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;height:5px; line-height: 5px; letter-spacing: 5px; font-size: 5px; border=
+-left: 5px solid #353484; border-right: 5px solid #353484;">
+                  &nbsp;
+                  </td>
+              </tr><tr>
+                  <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;width: 10px; border-left: 5px solid #353484;" width=3D"10">&=
+nbsp;</td>
+                  <td valign=3D"top" style=3D"-webkit-text-size-adjust: 100=
+%; -ms-text-size-adjust: 100%;">
+                      <table role=3D"presentation" align=3D"center" width=
+=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"mso-tab=
+le-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:=
+collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-=
+collapse: separate !important;">
+                          <tbody>
+                              <tr>
+                                  <td style=3D"-webkit-text-size-adjust: 10=
+0%; -ms-text-size-adjust: 100%;">
+                                    <table role=3D"presentation" class=3D"r=
+esponsive-table" align=3D"center" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspac=
+e:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%;width: 100%; border-collapse: separate !important;">
+                                      <tbody><tr>
+                                        <td align=3D"center" class=3D"respo=
+nsive-survey response response-78" id=3D"78" style=3D"-webkit-text-size-adj=
+ust: 100%; -ms-text-size-adjust: 100%;background-color: #353484; width: 100=
+%; line-height: 24px;" bgcolor=3D"#353484">
+                                          <a href=3D"https://lawler.house.g=
+ov/Forms/Form/QuickSurvey.aspx?email=3DPeter.Finocchio@mail.house.gov&amp;s=
+id=3D19&amp;fid=3D16763&amp;aid=3D78&amp;mid=3D89" target=3D"_blank" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;line-height:=
+ 24px; color: #fff; text-decoration: none; padding: 12px 18px; border: 1px =
+solid #353484; display: block;">A little</a>
+                                        </td>
+                                      </tr>
+                                    </tbody></table>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </td>
+                  <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;width: 10px; border-right: 5px solid #353484;" width=3D"10">=
+&nbsp;</td>
+              </tr>
+              <tr>
+                  <td colspan=3D"3" valign=3D"middle" align=3D"center" heig=
+ht=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;height:5px; line-height: 5px; letter-spacing: 5px; font-size: 5px; border=
+-left: 5px solid #353484; border-right: 5px solid #353484;">
+                  &nbsp;
+                  </td>
+              </tr><tr>
+                  <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;width: 10px; border-left: 5px solid #353484;" width=3D"10">&=
+nbsp;</td>
+                  <td valign=3D"top" style=3D"-webkit-text-size-adjust: 100=
+%; -ms-text-size-adjust: 100%;">
+                      <table role=3D"presentation" align=3D"center" width=
+=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"mso-tab=
+le-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:=
+collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-=
+collapse: separate !important;">
+                          <tbody>
+                              <tr>
+                                  <td style=3D"-webkit-text-size-adjust: 10=
+0%; -ms-text-size-adjust: 100%;">
+                                    <table role=3D"presentation" class=3D"r=
+esponsive-table" align=3D"center" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspac=
+e:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%;width: 100%; border-collapse: separate !important;">
+                                      <tbody><tr>
+                                        <td align=3D"center" class=3D"respo=
+nsive-survey response response-79" id=3D"79" style=3D"-webkit-text-size-adj=
+ust: 100%; -ms-text-size-adjust: 100%;background-color: #353484; width: 100=
+%; line-height: 24px;" bgcolor=3D"#353484">
+                                          <a href=3D"https://lawler.house.g=
+ov/Forms/Form/QuickSurvey.aspx?email=3DPeter.Finocchio@mail.house.gov&amp;s=
+id=3D19&amp;fid=3D16763&amp;aid=3D79&amp;mid=3D89" target=3D"_blank" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;line-height:=
+ 24px; color: #fff; text-decoration: none; padding: 12px 18px; border: 1px =
+solid #353484; display: block;">Not at all</a>
+                                        </td>
+                                      </tr>
+                                    </tbody></table>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </td>
+                  <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;width: 10px; border-right: 5px solid #353484;" width=3D"10">=
+&nbsp;</td>
+              </tr>
+              <tr>
+                  <td colspan=3D"3" valign=3D"middle" align=3D"center" heig=
+ht=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;height:5px; line-height: 5px; letter-spacing: 5px; font-size: 5px; border=
+-left: 5px solid #353484; border-right: 5px solid #353484;">
+                  &nbsp;
+                  </td>
+              </tr><tr>
+                  <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;width: 10px; border-left: 5px solid #353484;" width=3D"10">&=
+nbsp;</td>
+                  <td valign=3D"top" style=3D"-webkit-text-size-adjust: 100=
+%; -ms-text-size-adjust: 100%;">
+                      <table role=3D"presentation" align=3D"center" width=
+=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"mso-tab=
+le-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:=
+collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-=
+collapse: separate !important;">
+                          <tbody>
+                              <tr>
+                                  <td style=3D"-webkit-text-size-adjust: 10=
+0%; -ms-text-size-adjust: 100%;">
+                                    <table role=3D"presentation" class=3D"r=
+esponsive-table" align=3D"center" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspac=
+e:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%;width: 100%; border-collapse: separate !important;">
+                                      <tbody><tr>
+                                        <td align=3D"center" class=3D"respo=
+nsive-survey response response-80" id=3D"80" style=3D"-webkit-text-size-adj=
+ust: 100%; -ms-text-size-adjust: 100%;background-color: #353484; width: 100=
+%; line-height: 24px;" bgcolor=3D"#353484">
+                                          <a href=3D"https://lawler.house.g=
+ov/Forms/Form/QuickSurvey.aspx?email=3DPeter.Finocchio@mail.house.gov&amp;s=
+id=3D19&amp;fid=3D16763&amp;aid=3D80&amp;mid=3D89" target=3D"_blank" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;line-height:=
+ 24px; color: #fff; text-decoration: none; padding: 12px 18px; border: 1px =
+solid #353484; display: block;">Unsure</a>
+                                        </td>
+                                      </tr>
+                                    </tbody></table>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </td>
+                  <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;width: 10px; border-right: 5px solid #353484;" width=3D"10">=
+&nbsp;</td>
+              </tr>
+              <tr>
+                  <td colspan=3D"3" valign=3D"middle" align=3D"center" heig=
+ht=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;height:5px; line-height: 5px; letter-spacing: 5px; font-size: 5px; border=
+-left: 5px solid #353484; border-right: 5px solid #353484;">
+                  &nbsp;
+                  </td>
+              </tr>
+          <tr>
+                  <td colspan=3D"3" valign=3D"middle" align=3D"center" heig=
+ht=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;height:5px;line-height: 5px; letter-spacing: 5px; font-size: 5px; border-=
+bottom: 5px solid #353484; border-left: 5px solid #353484; border-right: 5p=
+x solid #353484;">
+                  &nbsp;
+                  </td>
+              </tr>
+              <tr><td colspan=3D"3" align=3D"center" style=3D"-webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%;">
+              <i class=3D"newsletter-optin">Submit survey to sign up for up=
+dates.*</i>
+          </td></tr>
+            </tbody>
+          </table></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span style=3D"line-h=
+eight:2;"><span style=3D"font-family:Arial,Helvetica,sans-serif;"><span sty=
+le=3D"font-size:16px;">I=E2=80=99m honored to serve as your Representative =
+in Congress. If there is anything we can do for you or your family, please =
+don=E2=80=99t hesitate to contact my office at 845-201-2060&nbsp;or reach o=
+ut through my website at <a data-cke-saved-href=3D"https://lawler.house.gov=
+/components/redirect/r.aspx?ID=3D88-84" href=3D"http://lawler.house.gov/" s=
+tyle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">lawler=
+.house.gov</a>. Additionally,&nbsp;</span></span>you can keep up with the l=
+atest news on my efforts by following us on&nbsp;<a data-cke-saved-href=3D"=
+https://lawler.house.gov/components/redirect/r.aspx?ID=3D89-84" href=3D"htt=
+ps://urldefense.com/v3/__https://www.facebook.com/RepMikeLawler/__;!!Fr0YZs=
+IsFWxTZsBm-qTAg68!hKx7ImmMNvmLzACaVif2au1qoPMbyJ2h_Tajs4M2lOlRITZhkOSurii1m=
+sdWlVPjM8S4ayuOFhpi2mXi6UxKn1a166Al50TwjQJ4XGTdLA$" style=3D"-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%;">Facebook</a>,&nbsp;<a data-c=
+ke-saved-href=3D"https://lawler.house.gov/components/redirect/r.aspx?ID=3D9=
+0-84" href=3D"https://urldefense.com/v3/__https://twitter.com/repmikelawler=
+__;!!Fr0YZsIsFWxTZsBm-qTAg68!hKx7ImmMNvmLzACaVif2au1qoPMbyJ2h_Tajs4M2lOlRIT=
+ZhkOSurii1msdWlVPjM8S4ayuOFhpi2mXi6UxKn1a166Al50TwjQIrL6brbA$" style=3D"-we=
+bkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">Twitter</a>, and&=
+nbsp;<a data-cke-saved-href=3D"https://lawler.house.gov/components/redirect=
+/r.aspx?ID=3D91-84" href=3D"https://urldefense.com/v3/__https://www.instagr=
+am.com/repmikelawler/__;!!Fr0YZsIsFWxTZsBm-qTAg68!hKx7ImmMNvmLzACaVif2au1qo=
+PMbyJ2h_Tajs4M2lOlRITZhkOSurii1msdWlVPjM8S4ayuOFhpi2mXi6UxKn1a166Al50TwjQKN=
+BzgE9g$" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;">Instagram</a>&nbsp;- and by opting in to periodic updates from my offic=
+e by&nbsp;<a data-cke-saved-href=3D"https://lawler.house.gov/components/red=
+irect/r.aspx?ID=3D92-84" href=3D"https://lawler.house.gov/forms/form/?ID=3D=
+8" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">CL=
+ICKING HERE</a>.</span></p><p style=3D"margin: 0;"><br></p><p style=3D"marg=
+in: 0;"><span style=3D"line-height:2;"><span style=3D"font-size:16px;">Sinc=
+erely,</span></span></p><p style=3D"margin: 0;"><br></p><p style=3D"margin:=
+ 0;"><span style=3D"font-size:16px;"><span contenteditable=3D"false" class=
+=3D"cke_widget_wrapper cke_widget_inline cke_widget_image cke_image_nocapti=
+on"><img alt=3D"" src=3D"https://lawler.house.gov/UploadedPhotos/LowResolut=
+ion/45f3089e-3e5f-44ba-99bf-fc223a209cb4.png" class=3D"cke_widget_element" =
+width=3D"251" height=3D"87" style=3D"max-width:600px;-ms-interpolation-mode=
+: bicubic;"></span></span></p><p style=3D"margin: 0;"><span style=3D"font-s=
+ize:16px;">Michael V. Lawler</span></p><p style=3D"margin: 0;"><span style=
+=3D"font-size:16px;">Member of Congress</span></p><p style=3D"margin: 0;"><=
+span style=3D"font-size:16px;">17th District, New York</span></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div></div>
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    <table role=3D"presentation" width=3D"100%" align=3D"center" style=3D"f=
+ont-family: Georgia, times, serif; background-color: #ffffff;" border=3D"0"=
+ cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" l=
+eftmargin=3D"0" topmargin=3D"0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td valign=3D"m=
+iddle" align=3D"center" style=3D"color: #000000; font-size: 16px; text-alig=
+n: left;">=20
+                                                                <img src=3D=
+"https://lawler.house.gov/images/spacerx89-84.open" width=3D"20" height=3D"=
+1" style=3D"height: 1px">
+                                                                <br>
+<a href=3D"https://lawler.house.gov/news/email/show.aspx?ID=3DOXMCSDHWHVGVE=
+">Click Here</a> to view this email in your browser <br>
+<a href=3D"https://lawler.house.gov/Forms/EmailSignup/?Delete=3Dtrue&amp;Me=
+ssageID=3D89&amp;Email=3DPeter.Finocchio@mail.house.gov">Click Here</a> to =
+be removed from this list
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table></body>
+</html>=
+
+----boundary_346580_9d10a683-40d9-4a05-a23b-75cb6eb29c62--

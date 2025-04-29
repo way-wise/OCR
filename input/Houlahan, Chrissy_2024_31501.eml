@@ -1,0 +1,1546 @@
+Received: from MW4PR09MB10277.namprd09.prod.outlook.com
+ (2603:10b6:303:1f4::10) by SJ0PR09MB9765.namprd09.prod.outlook.com with
+ HTTPS; Fri, 21 Jun 2024 20:20:31 +0000
+Received: from BL0PR0901CA0005.namprd09.prod.outlook.com
+ (2603:10b6:208:1c0::15) by MW4PR09MB10277.namprd09.prod.outlook.com
+ (2603:10b6:303:1f4::10) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7698.21; Fri, 21 Jun
+ 2024 20:20:29 +0000
+Received: from BL02EPF0001B419.namprd09.prod.outlook.com
+ (2603:10b6:208:1c0:cafe::8c) by BL0PR0901CA0005.outlook.office365.com
+ (2603:10b6:208:1c0::15) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7677.36 via Frontend
+ Transport; Fri, 21 Jun 2024 20:20:29 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.151.74)
+ smtp.mailfrom=mail.house.gov; dkim=fail (body hash did not verify)
+ header.d=mail.house.gov;dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.151.74 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.151.74;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.151.74) by
+ BL02EPF0001B419.mail.protection.outlook.com (10.167.242.198) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7677.15 via Frontend Transport; Fri, 21 Jun 2024 20:20:29 +0000
+Received: from EXCH1914.US.House.gov (143.228.151.104) by
+ EXCH1915.US.House.gov (143.228.151.74) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.2.1544.9; Fri, 21 Jun 2024 16:20:26 -0400
+Received: from serg-bulk3-a.house.gov (143.228.42.95) by EXCH1914.US.House.gov
+ (143.228.151.104) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1544.9 via Frontend
+ Transport; Fri, 21 Jun 2024 16:20:26 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mail.house.gov; h=content-type :
+ date : from : list-unsubscribe : list-unsubscribe-post : message-id :
+ mime-version : subject : to; s=january2024-msgb-mhg;
+ bh=+cb8rhJMzuIOCfFyuL80im42AZgf0X0edk6OJ5WCg4I=;
+ b=RJ0Kd3khw/C8HLsWaKZDwdOixOeYUCMWDtZPUSx4RuWd8WljQd8F81Vp4MdCUc/sOyZ9
+ +TExM9kJqObCPezEuc0nIcWsAywReXtAmaXgrXZ8H6f8cYnPo5kpLIb0bbCdQ0ajgXL+
+ ofPkM/S4OnW2XhkPSTWwn+KDKzpezIykv9wMVcOCRcYeiAGgTL8VcXxF0uhkTSI5hpO6
+ Fq76GayI2DLaIz+eJC6IytOJCTuwfOTtj6msPb2Lvw9V8Jkr+EXc11U/XDpYz5Fm+Hnx
+ 3Pe4DotzWEunldlAxMoTBsFaHMp/EUqe5IpwmptsSrr5ZfMRw8W9hUMKUc4UWohtMAQD FQ== 
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=content-type : date :
+ from : list-unsubscribe : list-unsubscribe-post : message-id :
+ mime-version : subject : to; s=august2019-msgb-hg;
+ bh=+cb8rhJMzuIOCfFyuL80im42AZgf0X0edk6OJ5WCg4I=;
+ b=Ls5JI1RZb0tn8jafKo5JDmKh1UR+7HKVhI4JoLV07Je+JxmEF5W3TkbtAFpb/fXU0AAH
+ ncV2Cknzw7vI9qgonM6Cij2yPq/PpYre2Prp+mFUJzkr6gxo/uQXvsdx6eRS29SUziBI
+ L1q5wouDltQsvE5Rt828ty5ioJg94o3nJw5FZEKtIB5Mybw9VrKZCbi6qFY4jTJC53Ce
+ xXV141Hlu3gD/XlRetamXcq6TFJyAztZwk+Euc5R2ox6uZXnftbDqYYeR3frRtowiLQU
+ eLuL5/Gn6TtMJsPZmN6WFb+AzfEhldMd7tSewJSFYTR53eIvBpXOVA1+fOrTZQtauM6e uQ== 
+Received: from FIRESIDESERV08 (firesideserv08.us.house.gov [143.228.58.71])
+	by serg-bulk3-a.house.gov (8.17.1.19/8.17.1.19) with ESMTP id 45LKKQ6b017519
+	for <Sarah.Slavin@mail.house.gov>; Fri, 21 Jun 2024 16:20:26 -0400
+envelope-from: RepChrissyHoulahan@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+Message-ID: <+B3NR1jb2M9rjsf92oK/G/8E7jlrTEJFJCyj8fDnnk6vo7Rdoh2JzSlLLROYCXGiNPHD2FXm48tTZiyrpEsn5Kjmq2803FVJySHEl0DSKJ8zrdeNh9E8ks5yvbQc4ginSFJB+O3KrQSuxTvWGIaQ5ZB+a2QzRD5xVKav35fBxUYt5eMM4zrnSnKCIobXiUh/@fireside21.com>
+X-House-Vendor-Seg: unmanaged
+List-Unsubscribe: <https://houlahan.house.gov/forms/emailsignup/?Delete=true&MessageID=1159&Email=Sarah.Slavin@mail.house.gov>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Precedence: bulk
+From: "Rep. Chrissy Houlahan" <RepChrissyHoulahan@mail.house.gov>
+To: Sarah.Slavin@mail.house.gov
+Date: 21 Jun 2024 16:20:26 -0400
+Subject: =?utf-8?B?Q2VsZWJyYXRpbmcgb3VyIGNvbW11bml0eeKAmXMgZGl2ZXJz?=
+ =?utf-8?B?aXR5IQ==?=
+Content-Type: multipart/alternative;
+ boundary=--boundary_2019483_627edd89-fc9b-481e-81fc-543d36882e74
+X-Proofpoint-Virus-Version: vendor=baseguard
+ engine=ICAP:2.0.293,Aquarius:18.0.1039,Hydra:6.0.680,FMLib:17.12.28.16
+ definitions=2024-06-21_11,2024-06-21_01,2024-05-17_01
+Return-Path: RepChrissyHoulahan@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1915.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 21 Jun 2024 20:20:29.6836
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ f3d01b8a-939f-414d-b58b-08dc922f9858
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1914.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted: BL02EPF0001B419.namprd09.prod.outlook.com
+X-CrossPremisesHeadersFiltered: BL02EPF0001B419.namprd09.prod.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ BL02EPF0001B419:EE_|MW4PR09MB10277:EE_|SJ0PR09MB9765:EE_
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: f3d01b8a-939f-414d-b58b-08dc922f9858
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam:
+ BCL:0;ARA:13230037|82310400023|366013|69100299012|4022899006|41050700001;
+X-Forefront-Antispam-Report:
+ CIP:143.228.151.74;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:(13230037)(82310400023)(366013)(69100299012)(4022899006)(41050700001);DIR:INT;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 21 Jun 2024 20:20:29.6680
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: f3d01b8a-939f-414d-b58b-08dc922f9858
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.151.74];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1914.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: MW4PR09MB10277
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.9071125
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.7677.026
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(425001)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	AxKJFDjCAjSmx3ZdT1lIUgJOvspOWPcRU1xH3o5UCPgAmd9HCYTq117KeJIlN9sIXOjGakYKWQELQATrhucDk9nxxhjLvwpjCjYVxeIe3BQA0KAMsCHSjhKBwMz/Y2+dJEKJkvAw9FafPFrz4zfRV06jebplNt0sv38YIDv1znx5IaQN+SVqBmHQmZvZGOwt+XeZJ4ZOZ8PDIdYu+IxaY7turnpQTcz/1ZwO1WyzD8bPjnVefb5I2qfeVXDIoXfyor306zFBYvrL5QdVPaE/DGtmQLvY/roIx3hdyAKQh2ydNrMVVB1hpHg7yWEHXD/X3Y0U//CmmRKBGikgD29PltbauZrcso14uqz//zSKhC6TEzoTkUBQYD2AHwP0r2tKlLsMrFnGFiSpCuTU4KqwSN1kHYBFd+/A3to0uYMGDoLlOv+6g+vOoLZEQoCCHZAk+zbj7n0l6U18Ei4LBlEjR2QFBpUkRF0AjRnsE2yANjbw3pYGl2fnUQ51WvXPaFqHvbiz7azJDq8Nn8ble+0dNCSAfYdqiNnnpA9r0RKu8QwXoVlshXGOse7AetzHdN5z8zhsRTp2gf1fInRxKylOBGctazRZzVVpBBAnyOAUBsbAb1wGHhGUbixH+yzeKpfwAtPE8khL2FdQecwjFn9E/bAvt+YQ+56lwSzPiYGGKEkbyNdFdmkunw4pejM9rEwOJGsVY8NWJ/ueQVZPMmupmUEo+2cLc2WRsgKRU3amwe3y2Ro28Ne0qXeXOQQOXWTFYT1aTSECeX0oNiRqAJtqOs0wTgzdcjS24k6Topp7edPFLvV0dtvdzDr02XkHYTN86X+SiN8WjO/Ce3lnsI9d2SaEWjjTf5eLbq8aRGHQ413BD0xXKX7JeUPzgDKWVA7W
+MIME-Version: 1.0
+
+----boundary_2019483_627edd89-fc9b-481e-81fc-543d36882e74
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+DQpVbnN1YnNjcmliZTogaHR0cHM6Ly9ob3VsYWhhbi5ob3VzZS5nb3YvRm9ybXMvRW1h
+aWxTaWdudXAvP0RlbGV0ZT10cnVlJk1lc3NhZ2VJRD0xMTU5JkVtYWlsPVNhcmFoLlNs
+YXZpbkBtYWlsLmhvdXNlLmdvdg==
+----boundary_2019483_627edd89-fc9b-481e-81fc-543d36882e74
+Content-Location: https://houlahan.house.gov/
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>Celebrating our community=E2=80=99s diversity!</title>
+ =20
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1">
+  <!--[if !mso]><!-->
+  <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![endif]-=
+->
+  <meta name=3D"twitter:card" content=3D"summary">
+  <meta property=3D"og:title" content=3D"Congresswoman Chrissy Houlahan">
+  <meta name=3D"twitter:title" content=3D"Congresswoman Chrissy Houlahan">
+  <meta property=3D"og:description" content=3D"Congresswoman Chrissy Houlah=
+an, proudly serving Pennsylvanians">
+  <meta name=3D"twitter:description" content=3D"Congresswoman Chrissy Houla=
+han, proudly serving Pennsylvanians">
+  <meta property=3D"og:image" content=3D"https://houlahan.house.gov/images/=
+facebook-meta2.jpg">
+  <meta name=3D"twitter:image" content=3D"https://houlahan.house.gov/images=
+/facebook-meta2.jpg">
+  <meta name=3D"twitter:card" content=3D"summary_large_image">
+  <meta name=3D"twitter:site" content=3D"@RepHoulahan">
+  <meta name=3D"twitter:site:id" content=3D"1052896620797460481">
+  <meta property=3D"og:image:width" content=3D"1200">
+  <meta property=3D"og:image:height" content=3D"630">
+  <style>body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-size-a=
+djust: 100%;} /* Prevent WebKit and Windows mobile changing default text si=
+zes */ img{-ms-interpolation-mode: bicubic;} /* Allow smoother rendering of=
+ resized image in Internet Explorer *//* RESET STYLES */img { border: 0; he=
+ight: auto; line-height: 100%; outline: none; text-decoration: none; }table=
+ { border-collapse: collapse !important; }body { height: 100% !important; m=
+argin: 0 !important; padding: 0 !important; width: 100% !important; }strong=
+ { font-weight: bold; } /* Editor reset *//* FIRESIDE STYLES */.component i=
+mg {max-width:600px;}.component table {mso-table-rspace:10pt; border-collap=
+se:collapse;}.component { padding: 0px !important; }.press {padding-bottom:=
+ 0px;}</style><style>@media all and (max-width:650px) {            .image-1=
+, .caption-1, .img-1 img, .image-1 tr, .image-1 td, .image-2, .img-2 img, .=
+image-2 tr, .image-2 td {max-width: 100% !important; width: 100% !important=
+;}            .responsive-table {width:100% !important;}            .respon=
+sive-table img {max-width:100% !important; height: auto !important;}       =
+     .press .component, .press td {text-align:center;}            .componen=
+t { margin-left: 20px; margin-right: 20px;}            .component .responsi=
+ve-table { margin-left: 0px !important; margin-right: 0px !important;}     =
+       .wide .video-thumb { width: 100% !important;height: auto !important;=
+ }             .wide.video-container { width: 100% !important; }         .c=
+omponent.full-width {margin-left: 0px; margin-right: 0px; }   }</style><sty=
+le type=3D"text/css">
+    /* CLIENT-SPECIFIC STYLES */
+    body,
+    table,
+    td,
+    a {
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+
+    /* Prevent WebKit and Windows mobile changing default text sizes */
+    table,
+    td {
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+
+    /* Remove spacing between tables in Outlook 2007 and up */
+    img {
+      -ms-interpolation-mode: bicubic;
+    }
+
+    /* Allow smoother rendering of resized image in Internet Explorer */
+    /* RESET STYLES */
+    img {
+      border: 0;
+      height: auto;
+      line-height: 100%;
+      outline: none;
+      text-decoration: none;
+    }
+
+    table {
+      border-collapse: collapse !important;
+    }
+
+    body {
+      height: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100% !important;
+    }
+
+    strong {
+      font-weight: bold;
+    }
+
+    /* Editor reset */
+    /* FIRESIDE STYLES */
+    .component img {
+      max-width: 600px;
+    }
+
+    .component table {
+      mso-table-rspace: 10pt;
+      border-collapse: collapse;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .component td {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .component {
+      padding: 0px !important;
+    }
+
+    .press {
+      padding-bottom: 0px;
+    }
+
+    .caption-1 td {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Margin/NoMargin STYLES */
+    .component.full-width {
+      overflow: hidden;
+      margin: 0px;
+    }
+
+    /* HEADER STYLES */
+    .header-bar {
+      width: 100%;
+    }
+
+    .header-bar-margin {
+      background-color: #ffffff;
+    }
+
+    .header-bar h2 {
+      margin: 0 !important;
+      padding: 0 !important;
+      color: #000000 !important;
+      text-align: center;
+      font-size: 24px !important;
+      font-weight: bold !important;
+    }
+
+    .survey-content>table>tbody tr td {
+      border-color: #08244a !important;
+    }
+
+    .survey-content input.survey-submit {
+      font-family: Arial, Helvetica, sans-serif !important;
+    }
+  </style>
+
+  <style id=3D"media-queries">
+    @media all and (max-width:650px) {
+
+      .image-1,
+      .caption-1,
+      .img-1 img,
+      .image-1 tr,
+      .image-1 td {
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+
+      .responsive-table {
+        width: 100% !important;
+      }
+
+      .responsive-table img {
+        max-width: 100% !important;
+        height: auto !important;
+      }
+
+      .press .component,
+      .press td {
+        text-align: center;
+      }
+
+      .component {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+      .component .responsive-table {
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+      }
+
+      .wide .video-thumb {
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      .wide.video-container {
+        width: 100% !important;
+      }
+    }
+  </style>
+ =20
+<!--[if (gte mso 9)|(IE)]>
+                                        <style>=20
+                                    </style>
+                                    <![endif]--></head>
+
+<body style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;m=
+argin: 0px !important; padding: 0px !important;">
+  <div id=3D"preview-text" style=3D"display: none; font-size: 1px; color: #=
+fefefe; line-height: 1px; font-family: Arial, Helvetica, sans-serif; max-he=
+ight: 0px; max-width: 0px; opacity: 0; overflow: hidden;">And an opportunit=
+y to learn more about grants.<span>&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C</span></div>
+
+  <table role=3D"presentation" width=3D"650" align=3D"center" class=3D"resp=
+onsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust=
+: 100%;font-family: Arial, Helvetica, sans-serif; background-color: #ffffff=
+;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marg=
+inwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+    <tbody>
+      <tr>
+        <td align=3D"center" valign=3D"top" style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, sans-se=
+rif; font-size: 16px;">
+          <div class=3D"region" id=3D"region-1"><div class=3D"component ful=
+l-width" style=3D"padding: 0px !important;"> <div class=3D"image" style=3D"=
+overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 0px; margin-left: 0px;" width=3D"650">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align: center;"><a href=3D"https://houlahan.house.gov/compon=
+ents/redirect/r.aspx?ID=3D3842-731019" target=3D"_blank" style=3D"-webkit-t=
+ext-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img style=3D"max-width=
+:600px;-ms-interpolation-mode: bicubic;vertical-align: bottom; max-width: 1=
+296px;" alt=3D"Banner with Chrissy photo" src=3D"https://houlahan.house.gov=
+/UploadedPhotos/HighResolution/e2915ab9-ef3f-4031-911d-baadd4b521a5.png" wi=
+dth=3D"649.5"></a></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div></div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <table role=3D"presentation" width=3D"650" align=3D"center" class=3D"resp=
+onsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust=
+: 100%;background-color: #ffffff; font-family: Arial, Helvetica, sans-serif=
+;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marg=
+inwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+    <tbody>
+      <tr>
+        <td class=3D"responsive-table" valign=3D"top" style=3D"-webkit-text=
+-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetic=
+a, sans-serif; font-size: 16px; color: #000000;">
+          <table role=3D"presentation" style=3D"-webkit-text-size-adjust: 1=
+00%; -ms-text-size-adjust: 100%;">
+            <tbody>
+              <tr height=3D"20">
+                <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;">
+                  <span></span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class=3D"region" id=3D"region-2"><div class=3D"component " s=
+tyle=3D"padding: 0px !important;"> <div class=3D"editable" style=3D"overflo=
+w: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><d=
+iv class=3D"component-template" style=3D"overflow: hidden;"><p style=3D"mar=
+gin: 0;margin: 0px; text-align: right;"><span style=3D"font-family:Arial,He=
+lvetica,sans-serif;"><span style=3D"font-size:14px;"><strong style=3D"font-=
+weight: bold;">Versi=C3=B3n&nbsp;del boletin en espa=C3=B1ol&nbsp;<a data-c=
+ke-saved-href=3D"https://houlahan.house.gov/components/redirect/r.aspx?ID=
+=3D3843-731019" href=3D"https://houlahan.house.gov/news/email/show.aspx?ID=
+=3DI2XNKY73HGA7X6UWID7WLPYTVU" style=3D"-webkit-text-size-adjust: 100%; -ms=
+-text-size-adjust: 100%;">aqui</a>.</strong></span></span></p><p paraeid=3D=
+"{da88e584-ef7d-4a18-b5be-eb7a286a326f}{204}" paraid=3D"1505003287" style=
+=3D"margin: 0;"><span style=3D"font-family:Arial,Helvetica,sans-serif;"><sp=
+an style=3D"font-size:16px;">Dear <span class=3D"fs-merge-field"> <span cla=
+ss=3D"merge-container" contenteditable=3D"false"><span class=3D"merge-field=
+" contenteditable=3D"false" unselectable=3D"true">Sarah</span></span></span=
+>,</span></span></p><p paraeid=3D"{da88e584-ef7d-4a18-b5be-eb7a286a326f}{20=
+4}" paraid=3D"1505003287" style=3D"margin: 0;"><br></p><p style=3D"margin: =
+0;"><span style=3D"font-family:Arial,Helvetica,sans-serif;"><span style=3D"=
+font-size:16px;">I take great pride in representing Berks and Chester Count=
+ies for so many reasons, but one of the most important ones is the great di=
+versity of our pocket of southeastern Pennsylvania. This month, we've been =
+able to celebrate that diversity in so many ways, and I want to highlight i=
+t here for you all!&nbsp;</span></span></p><p style=3D"margin: 0;"><br></p>=
+<p paraeid=3D"{826b4a05-7902-4f4a-a657-8d62c19bd205}{112}" paraid=3D"158050=
+5075" style=3D"margin: 0;"><span style=3D"font-family:Arial,Helvetica,sans-=
+serif;"><span style=3D"font-size:18px;"><strong style=3D"font-weight: bold;=
+">Celebrating Pride Month =F0=9F=8F=B3=EF=B8=8F=E2=80=8D=F0=9F=8C=88</stron=
+g></span></span></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><a href=3D"https://houlahan.house.gov/componen=
+ts/redirect/r.aspx?ID=3D3844-731019" target=3D"_blank" style=3D"-webkit-tex=
+t-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img style=3D"max-width:6=
+00px;-ms-interpolation-mode: bicubic;vertical-align: bottom; max-width: 403=
+2px;" alt=3D"Phoenixville Pride Walk" src=3D"https://houlahan.house.gov/Upl=
+oadedPhotos/HighResolution/52aa6ff5-92a3-4eab-ae4c-de41aee3f38d.png" width=
+=3D"609.5"></a></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ paraid=3D"1871379919" paraeid=3D"{37a5684f-f182-4d59-a34c-9e10a59cedbd}{96=
+}" style=3D"margin: 0;text-align: center;"><span style=3D"font-size:14px;">=
+<span style=3D"font-family:Arial,Helvetica,sans-serif;"><em>Walking on the =
+Phoenixville Pride Walk with Phoenixville Mayor Peter Urscheler and the LGB=
+T Equality Alliance of Chester County.</em></span></span></p><p paraid=3D"1=
+871379919" paraeid=3D"{37a5684f-f182-4d59-a34c-9e10a59cedbd}{96}" style=3D"=
+margin: 0;"><br></p><p style=3D"margin: 0;"><span style=3D"font-size:16px;"=
+><span style=3D"font-family:Arial,Helvetica,sans-serif;">Earlier this month=
+, I met with Phoenixville Mayor Peter Urscheler and the LGBT Equality Allia=
+nce of Chester County to discuss issues facing the LGBTQIA+ community, cele=
+brate pride, and see Phoenixville's freshly painted Pride Walk. &nbsp;</spa=
+n></span></p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span =
+style=3D"font-size:16px;"><span style=3D"font-family:Arial,Helvetica,sans-s=
+erif;">My team also had the opportunity to attend Chester County's 7th annu=
+al PrideFest, which is hosted by the LGBT Equality Alliance of Chester Coun=
+ty and takes place in Phoenixville each year. It is always a beautiful, wel=
+l-attended celebration for our LGBTQIA+ community and allies to celebrate l=
+ove and some of the diversity that makes our community so special. It's not=
+ too late to celebrate pride! Berks Pride Fest is taking place next month o=
+n Sunday, July 21, at Jim Dietrich Park in Reading from 11 a.m. to 6 p.m.&n=
+bsp;</span></span></p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0=
+;"><strong style=3D"font-weight: bold;"><span style=3D"font-size:18px;"><sp=
+an style=3D"font-family:Arial,Helvetica,sans-serif;">Celebrating Juneteenth=
+ in our community&nbsp;</span></span></strong></p><p style=3D"margin: 0;"><=
+br></p><p style=3D"margin: 0;"><span style=3D"font-family:Arial,Helvetica,s=
+ans-serif;"><span style=3D"font-size:16px;">This week, we also celebrated J=
+uneteenth, which commemorates the arrival of Union troops in Galveston, Tex=
+as, on June 19, 1865, with news of the signing of the Emancipation Proclama=
+tion. With President Lincoln signing the document two years prior, the 250,=
+000 enslaved Black people in Texas were the last enslaved individuals in th=
+e U.S. to gain their freedom. Although communities around the country have =
+been celebrating this joyous day for generations, in 2021, President Biden =
+officially designated Juneteenth as a federal holiday. </span></span></p><p=
+ style=3D"margin: 0;"><span style=3D"font-family:Arial,Helvetica,sans-serif=
+;"><span style=3D"font-size:16px;">&nbsp;&nbsp;</span></span></p><p style=
+=3D"margin: 0;"><span style=3D"font-family:Arial,Helvetica,sans-serif;"><sp=
+an style=3D"font-size:16px;">This holiday is an important addition to the d=
+ays marked by our nation. It represents both the progress we=E2=80=99ve mad=
+e for equality and equity and the work still to be done. Juneteenth was cel=
+ebrated all throughout our community, and my team was able to attend many o=
+f these wonderful events. Learn more about them below.&nbsp;</span></span><=
+/p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><a href=3D"https://houlahan.house.gov/componen=
+ts/redirect/r.aspx?ID=3D3845-731019" target=3D"_blank" style=3D"-webkit-tex=
+t-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img style=3D"max-width:6=
+00px;-ms-interpolation-mode: bicubic;vertical-align: bottom; max-width: 403=
+2px;" alt=3D"West Chester Dance Group" src=3D"https://houlahan.house.gov/Up=
+loadedPhotos/HighResolution/1739ec24-b8f2-43b2-af70-479f950f100e.jpg" width=
+=3D"609.5"></a></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><p=
+ paraid=3D"560877624" paraeid=3D"{ee7b80c9-adfb-46fe-a26e-55c1e7025a06}{95}=
+" style=3D"margin: 0;text-align: center;"><span style=3D"font-size:14px;"><=
+em><span style=3D"font-family:Arial,Helvetica,sans-serif;">West Chester=E2=
+=80=99s Mountain Center Dance Team at the Juneteenth celebration.</span></e=
+m></span></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;"><span style=3D"font-size:16px;"><span style=3D"font-f=
+amily:Arial,Helvetica,sans-serif;">West Chester hosted their celebration on=
+ Saturday, June 15, at the Charles A. Melton Arts and Education Center. It =
+featured vendors, performances, a raising of the Juneteenth flag, and so mu=
+ch more! You can view photos from the celebration <a data-cke-saved-href=3D=
+"https://houlahan.house.gov/components/redirect/r.aspx?ID=3D3846-731019" hr=
+ef=3D"https://urldefense.com/v3/__https://photos.app.goo.gl/hpjw998n6ggroxn=
+n7__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!CvxpXDwXhh1TzQ2x2k9GbvrrZ-HAkgSAQSz5=
+ccoHKOo9YDhy-tsgHalTrXjAzd4SW4bzke2XLP9rFd9S-UpTlCBPWj73OGHGIellWuAG4g$" ta=
+rget=3D"_blank" rel=3D"noreferrer noopener" style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;">here</a>.&nbsp;</span></span></p></d=
+iv>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 4032px;" alt=3D"Phoenixv=
+ille Juneteenth" src=3D"https://houlahan.house.gov/UploadedPhotos/HighResol=
+ution/28ae31ea-d65b-4288-a34e-e2e211d8c242.jpg" width=3D"609.5"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ paraid=3D"1253533864" paraeid=3D"{f7ef4715-5c09-4cbd-a4e0-adb89e788134}{77=
+}" style=3D"margin: 0;text-align: center;"><em><span style=3D"font-size:14p=
+x;"><span style=3D"font-family:Arial,Helvetica,sans-serif;">Local musicians=
+ playing on Bridge Street in Phoenixville.&nbsp;</span></span></em></p><p p=
+araid=3D"1253533864" paraeid=3D"{f7ef4715-5c09-4cbd-a4e0-adb89e788134}{77}"=
+ style=3D"margin: 0;text-align: center;"><br></p><p paraid=3D"754645011" pa=
+raeid=3D"{f7ef4715-5c09-4cbd-a4e0-adb89e788134}{94}" style=3D"margin: 0;"><=
+span style=3D"font-size:16px;"><span style=3D"font-family:Arial,Helvetica,s=
+ans-serif;">Phoenixville celebrated the holiday a day later on Sunday, June=
+ 16, with a festival downtown on Bridge Street. The festival featured local=
+ Black musicians and Black-owned business vendors. You can see photos from =
+the Juneteenth event <a data-cke-saved-href=3D"https://houlahan.house.gov/c=
+omponents/redirect/r.aspx?ID=3D3847-731019" href=3D"https://urldefense.com/=
+v3/__https://photos.app.goo.gl/8cmRzoMe2Gw46ym69__;!!Ckt11KVezJIME51BYf4a6h=
+rLATHilnk!CvxpXDwXhh1TzQ2x2k9GbvrrZ-HAkgSAQSz5ccoHKOo9YDhy-tsgHalTrXjAzd4SW=
+4bzke2XLP9rFd9S-UpTlCBPWj73OGHGIekWRWvz4A$" target=3D"_blank" rel=3D"norefe=
+rrer noopener" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjus=
+t: 100%;">here</a>.&nbsp;</span></span></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 4032px;" alt=3D"Reading =
+Juneteenth Flag Raising" src=3D"https://houlahan.house.gov/UploadedPhotos/H=
+ighResolution/aabb366b-c441-42df-8337-080d4b46865e.jpg" width=3D"609.5"></d=
+iv>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ paraid=3D"1404677801" paraeid=3D"{f7ef4715-5c09-4cbd-a4e0-adb89e788134}{12=
+5}" style=3D"margin: 0;text-align: center;"><span style=3D"font-size:14px;"=
+><span style=3D"font-family:Arial,Helvetica,sans-serif;"><em>Raising of the=
+ Juneteenth flag at Reading=E2=80=99s City Park.&nbsp;</em></span></span></=
+p><p paraid=3D"1404677801" paraeid=3D"{f7ef4715-5c09-4cbd-a4e0-adb89e788134=
+}{125}" style=3D"margin: 0;text-align: center;"><br></p><p paraid=3D"165886=
+3198" paraeid=3D"{f7ef4715-5c09-4cbd-a4e0-adb89e788134}{132}" style=3D"marg=
+in: 0;"><span style=3D"font-size:16px;"><span style=3D"font-family:Arial,He=
+lvetica,sans-serif;">Lastly, Reading had a celebration all weekend long fro=
+m June 14 to 16, leading up to the holiday on June 19. It started with a Ju=
+neteenth flag raising in City Park on June 14 and then an announcement of F=
+reedom at Washington Towers in Reading, as well as a community barbecue on =
+Saturday and a closing ceremony on Sunday. Members of my team attended thes=
+e events and celebrated freedom with the Reading community. You can view pi=
+ctures from the weekend of events <a data-cke-saved-href=3D"https://houlaha=
+n.house.gov/components/redirect/r.aspx?ID=3D3848-731019" href=3D"https://ur=
+ldefense.com/v3/__https://photos.app.goo.gl/RxNCJ46XE65MhHAMA__;!!Ckt11KVez=
+JIME51BYf4a6hrLATHilnk!CvxpXDwXhh1TzQ2x2k9GbvrrZ-HAkgSAQSz5ccoHKOo9YDhy-tsg=
+HalTrXjAzd4SW4bzke2XLP9rFd9S-UpTlCBPWj73OGHGIekIu-YZwA$" target=3D"_blank" =
+rel=3D"noreferrer noopener" style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;">here</a>.&nbsp;</span></span></p><p paraid=3D"193790=
+8349" paraeid=3D"{f7ef4715-5c09-4cbd-a4e0-adb89e788134}{167}" style=3D"marg=
+in: 0;"><br></p><p paraid=3D"769492593" paraeid=3D"{f7ef4715-5c09-4cbd-a4e0=
+-adb89e788134}{171}" style=3D"margin: 0;"><span style=3D"font-size:16px;"><=
+span style=3D"font-family:Arial,Helvetica,sans-serif;">I know there were ma=
+ny more celebrations across Berks and Chester Counties to commemorate Junet=
+eenth than just those we were able to cover here. I hope you were able to e=
+njoy them! &nbsp;&nbsp;</span></span></p><p paraid=3D"769492593" paraeid=3D=
+"{f7ef4715-5c09-4cbd-a4e0-adb89e788134}{171}" style=3D"margin: 0;"><br></p>=
+<p paraid=3D"769492593" paraeid=3D"{f7ef4715-5c09-4cbd-a4e0-adb89e788134}{1=
+71}" style=3D"margin: 0;"><strong style=3D"font-weight: bold;"><span style=
+=3D"font-size:18px;"><span style=3D"font-family:Arial,Helvetica,sans-serif;=
+">USDA Financing Opportunities&nbsp;</span></span></strong></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 3375px;" alt=3D"USDA wor=
+kshop" src=3D"https://houlahan.house.gov/UploadedPhotos/HighResolution/e455=
+c6ed-b90d-4ceb-93f4-b2e70d2a03c1.png" width=3D"609.5"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ paraid=3D"1483590264" paraeid=3D"{f7ef4715-5c09-4cbd-a4e0-adb89e788134}{20=
+4}" style=3D"margin: 0;"><span style=3D"font-size:16px;"><span style=3D"fon=
+t-family:Arial,Helvetica,sans-serif;">Did you know that USDA grants are ava=
+ilable to those who aren=E2=80=99t farmers, too? I want to make sure that o=
+ur local farmers and other eligible community members know about these oppo=
+rtunities. That=E2=80=99s why my office is hosting a workshop to help sprea=
+d this information. &nbsp;</span></span></p><p paraid=3D"1483590264" paraei=
+d=3D"{f7ef4715-5c09-4cbd-a4e0-adb89e788134}{204}" style=3D"margin: 0;"><br>=
+</p><p xml:lang=3D"EN-US" lang=3D"EN-US" paraid=3D"542252379" paraeid=3D"{2=
+fa5efbf-8662-4c19-b11f-a88cea5e1450}{233}" style=3D"margin: 0;"><span style=
+=3D"font-size:16px;"><span style=3D"font-family:Arial,Helvetica,sans-serif;=
+">If you=E2=80=99re interested, please join my team and Pennsylvania Direct=
+or of the U.S. Department of Agriculture Rural Development Bob Morgan on Tu=
+esday, June 25, at 3 p.m. You can RSVP <a data-cke-saved-href=3D"https://ho=
+ulahan.house.gov/components/redirect/r.aspx?ID=3D3849-731019" href=3D"https=
+://houlahan.house.gov/forms/form/?ID=3D125" target=3D"_blank" rel=3D"norefe=
+rrer noopener" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjus=
+t: 100%;">here</a>.&nbsp;</span></span></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><p=
+ paraid=3D"1214807413" paraeid=3D"{d0d307cf-780d-4005-87be-0025985232fb}{71=
+}" style=3D"margin: 0;"><br></p><p paraid=3D"1672618057" paraeid=3D"{f5a322=
+2c-afd1-4d4e-b72c-f4216fac7863}{35}" style=3D"margin: 0;text-align: center;=
+"><span style=3D"font-size:16px;"><span style=3D"font-family:Arial,Helvetic=
+a,sans-serif;"><strong style=3D"font-weight: bold;">.&nbsp; .&nbsp; .</stro=
+ng></span></span></p><p paraid=3D"1672618057" paraeid=3D"{f5a3222c-afd1-4d4=
+e-b72c-f4216fac7863}{35}" style=3D"margin: 0;"><br></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;"><span style=3D"font-family:Arial,Helvetica,sans-serif=
+;"><span style=3D"font-size:16px;">Serving as our community's representativ=
+e is the honor of my lifetime, and I hope to hear from you soon about any i=
+ssue that concerns you.&nbsp;</span></span></p><p style=3D"margin: 0;"><br>=
+</p><p style=3D"margin: 0;"><span style=3D"font-family:Arial,Helvetica,sans=
+-serif;"><span style=3D"font-size:16px;">As always, please&nbsp;<a data-cke=
+-saved-href=3D"https://houlahan.house.gov/components/redirect/r.aspx?ID=3D3=
+850-731019" href=3D"https://houlahan.house.gov/connect/" style=3D"-webkit-t=
+ext-size-adjust: 100%; -ms-text-size-adjust: 100%;"><span style=3D"color:#2=
+980b9;">contact my office</span></a>&nbsp;if you need assistance.</span></s=
+pan></p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span style=
+=3D"font-family:Arial,Helvetica,sans-serif;"><span style=3D"font-size:16px;=
+">Be well, and see you soon!</span></span></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"signature" style=3D"overflow: hidden;width:100%">=20
+            <table role=3D"presentation" class=3D"responsive-table" align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-t=
+able-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collaps=
+e:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table=
+-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610.004">
+                <tbody>
+                    <tr>
+                        <td valign=3D"top" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%;">
+                            <table align=3D"left" class=3D"signature-table"=
+ role=3D"presentation" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;=
+mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 1=
+00%; -ms-text-size-adjust: 100%;table-layout: fixed;">
+                                <tbody>
+                                    <tr>
+                                        <td style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;">
+                                            <table role=3D"presentation" al=
+ign=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-=
+table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collap=
+se:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;bord=
+er-collapse: separate !important;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td valign=3D"top" =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                                            <div class=3D"n=
+g-binding" style=3D"overflow: hidden;"></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td valign=3D"top" =
+class=3D"image-td" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-a=
+djust: 100%;">
+                                                            <div class=3D"i=
+mg-1 image-container" style=3D"overflow: hidden;text-align:left"><img style=
+=3D"max-width:600px;-ms-interpolation-mode: bicubic;vertical-align: bottom;=
+ max-width: 100%; width: 240px !important;" src=3D"https://houlahan.house.g=
+ov/UploadedPhotos/LowResolution/39e8ecc2-b9b8-49dc-82e0-5819180136ff.png" a=
+lt=3D"Chrissy Houlahan Signature" width=3D"240"></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class=3D"spacerRow"=
+ height=3D"0">
+                                                        <td style=3D"-webki=
+t-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-size:0%;line-heig=
+ht: 0px;">
+                                                            &nbsp;
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td valign=3D"top" =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                                            <div class=3D"n=
+g-binding" style=3D"overflow: hidden;"><span></span></div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;"><span style=3D"font-family:Arial,Helvetica,sans-serif=
+;"><span style=3D"font-size:16px;">Chrissy Houlahan</span></span></p><p sty=
+le=3D"margin: 0;"><span style=3D"font-family:Arial,Helvetica,sans-serif;"><=
+span style=3D"font-size:16px;">U.S. Member of Congress</span></span></p><p =
+style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><em><strong style=3D"f=
+ont-weight: bold;"><span style=3D"font-size:16px;"><span style=3D"font-fami=
+ly:Arial,Helvetica,sans-serif;">Were you forwarded this email? Sign up for =
+my newsletter <a data-cke-saved-href=3D"https://houlahan.house.gov/componen=
+ts/redirect/r.aspx?ID=3D3851-731019" href=3D"https://houlahan.house.gov/for=
+ms/emailsignup/" target=3D"_blank" rel=3D"noreferrer noopener" style=3D"-we=
+bkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">here</a>.&nbsp;</=
+span></span></strong></em></p><p style=3D"margin: 0;text-align: center;"><b=
+r></p><p style=3D"margin: 0;"><em><span style=3D"font-size:14px;"><span sty=
+le=3D"font-family:Arial,Helvetica,sans-serif;">Please note that replying to=
+ this email will not direct your message to the right place. To contact the=
+ Office of Representative Houlahan, please click <a data-cke-saved-href=3D"=
+https://houlahan.house.gov/components/redirect/r.aspx?ID=3D3852-731019" hre=
+f=3D"https://houlahan.house.gov/contact/" target=3D"_blank" rel=3D"noreferr=
+er noopener" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust:=
+ 100%;">here</a>.</span></span></em></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div></div>
+          <table role=3D"presentation" style=3D"-webkit-text-size-adjust: 1=
+00%; -ms-text-size-adjust: 100%;">
+            <tbody>
+              <tr height=3D"20">
+                <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;">
+                  <span></span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <table role=3D"presentation" width=3D"650" class=3D"responsive-table" ali=
+gn=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust=
+: 100%;font-family: Arial, Helvetica, sans-serif; background-color: #f5f5f5=
+;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marg=
+inwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+    <tbody>
+      <tr>
+        <td valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;color: #08244a; background-color: #=
+f5f5f5; font-family: arial, helvetica, sans-serif; font-size: 24px; text-al=
+ign: center;">
+          <img alt=3D"Office Locations" width=3D"650" style=3D"-ms-interpol=
+ation-mode: bicubic;display: block; width: 650px;" src=3D"https://houlahan.=
+house.gov/images/email/footer19.jpg">
+        </td>
+      </tr>
+      <tr>
+        <td valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;height:30px; background-color: #f5f=
+5f5;">
+          &nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;color: #08244a; background-color: #=
+f5f5f5; padding: 0 20px;">
+          <table role=3D"presentation" width=3D"100%" cellpadding=3D"0" cel=
+lspacing=3D"10" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adju=
+st: 100%;text-align:center;">
+            <tbody>
+              <tr>
+                <td valign=3D"middle" align=3D"center" style=3D"-webkit-tex=
+t-size-adjust: 100%; -ms-text-size-adjust: 100%;text-align:center;">
+                  <table role=3D"presentation" cellpadding=3D"0" class=3D"r=
+esponsive-table" align=3D"left" cellspacing=3D"0" width=3D"32.9%" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: ari=
+al, helvetica, sans-serif; text-align:center; font-size: 13px; color: #0824=
+4a; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                    <tbody>
+                      <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;font-family: 'Arial','Times New Roman', times, serif;"=
+>
+                          <strong style=3D"font-weight: bold;font-family: A=
+rial, Helvetica, sans-serif;">WASHINGTON, DC
+                            OFFICE*</strong><br>
+                          1727 Longworth HOB<br>
+                          Washington, DC 20515<br>
+                          Phone: (202) 225-4315<br>
+                          M-F 9:00am-6:00pm<br>
+
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <table role=3D"presentation" cellpadding=3D"0" class=3D"r=
+esponsive-table" align=3D"left" cellspacing=3D"0" width=3D"32.9%" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: ari=
+al, helvetica, sans-serif; text-align:center; font-size: 13px; color: #0824=
+4a; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                    <tbody>
+                      <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;font-family: 'Arial','Times New Roman', times, serif;"=
+>
+                          <strong style=3D"font-weight: bold;font-family: A=
+rial, Helvetica, sans-serif;">WEST CHESTER OFFICE*</strong><br>
+                          709 E. Gay Street<br>
+                          Suite 4<br>
+                          West Chester, PA 19380<br>
+                          Phone: (610) 883-5050<br>
+
+                          Monday-Wednesday 9:00am-5:00pm<br>
+                          By Appointment Only: <br>
+                          Thursday and Friday
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <table role=3D"presentation" cellpadding=3D"0" class=3D"r=
+esponsive-table" align=3D"left" cellspacing=3D"0" width=3D"32.9%" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: ari=
+al, helvetica, sans-serif; text-align:center; font-size: 13px; color: #0824=
+4a; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                    <tbody>
+                      <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;font-family: 'Arial','Times New Roman', times, serif;"=
+>
+                          <strong style=3D"font-weight: bold;font-family: A=
+rial, Helvetica, sans-serif;">READING OFFICE*</strong><br>
+                          201 Penn Street<br>
+                          Suite 201<br>
+                          Reading, PA 19601<br>
+                          Phone: (610) 295-0815<br>
+                          Wednesday-Friday 9:00am-5:00pm <br>
+                          By Appointment Only: <br>
+                          Monday and Tuesday<br>
+
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;height:30px; background-color: #f5f=
+5f5;">
+          &nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;color: #08244a; background-color: #=
+f5f5f5;">
+          <a target=3D"_blank" href=3D"https://houlahan.house.gov/component=
+s/redirect/r.aspx?ID=3D3853-731019" style=3D"-webkit-text-size-adjust: 100%=
+; -ms-text-size-adjust: 100%;"><img alt=3D"facebook icon" width=3D"32" src=
+=3D"https://houlahan.house.gov/images/email/facebook.png" style=3D"-ms-inte=
+rpolation-mode: bicubic;border-width: 0px; border-style: solid; width: 32px=
+;"></a>
+          &nbsp;<a target=3D"_blank" href=3D"https://houlahan.house.gov/com=
+ponents/redirect/r.aspx?ID=3D3854-731019" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"twitter icon" width=3D"32"=
+ src=3D"https://houlahan.house.gov/images/email/x.png" style=3D"-ms-interpo=
+lation-mode: bicubic;border-width: 0px; border-style: solid; width: 32px;">=
+</a>
+          &nbsp;<a target=3D"_blank" href=3D"https://houlahan.house.gov/com=
+ponents/redirect/r.aspx?ID=3D3855-731019" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"instagram icon" width=3D"3=
+2" src=3D"https://houlahan.house.gov/images/email/instagram.png" style=3D"-=
+ms-interpolation-mode: bicubic;border-width: 0px; border-style: solid; widt=
+h: 32px;"></a>
+        </td>
+      </tr>
+      <tr>
+        <td valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;height:30px; background-color: #f5f=
+5f5;">
+          &nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td valign=3D"middle" style=3D"-webkit-text-size-adjust: 100%; -ms-=
+text-size-adjust: 100%;background-color: #f5f5f5;">
+          <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"20"=
+ align=3D"center" width=3D"90%" style=3D"-webkit-text-size-adjust: 100%; -m=
+s-text-size-adjust: 100%;">
+            <tbody>
+              <tr>
+                <td valign=3D"middle" align=3D"center" style=3D"-webkit-tex=
+t-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #08244a; font-size: =
+14px; font-family: Arial, Helvetica, sans-serif;">
+                  <a target=3D"_blank" href=3D"https://houlahan.house.gov/c=
+omponents/redirect/r.aspx?ID=3D3856-731019" style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;color: #08244a; text-decoration:none; =
+font-family: Arial, Helvetica, sans-serif;">Unsubscribe</a>&nbsp;|&nbsp;
+                  <a target=3D"_blank" href=3D"https://urldefense.com/v3/__=
+http://www.facebook.com/sharer.php?u=3Dhttps:**Ahoulahan.house.gov*news*ema=
+il*show.aspx*ID=3DPWJO4UP6CDOVLLB7F6SBOOWUGU&amp;t=3DCelebrating*our*commun=
+ity**Bs*diversity!__;Ly8vLy8_KyvigJkr!!Ckt11KVezJIME51BYf4a6hrLATHilnk!Cvxp=
+XDwXhh1TzQ2x2k9GbvrrZ-HAkgSAQSz5ccoHKOo9YDhy-tsgHalTrXjAzd4SW4bzke2XLP9rFd9=
+S-UpTlCBPWj73OGHGIem7bnKQvA$" style=3D"-webkit-text-size-adjust: 100%; -ms-=
+text-size-adjust: 100%;color: #08244a; text-decoration:none; font-family: A=
+rial, Helvetica, sans-serif;">Share on
+                    Facebook</a>&nbsp;|&nbsp;
+                  <a target=3D"_blank" href=3D"https://houlahan.house.gov/C=
+omponents/Redirect/twitter.aspx?url=3Dhttps://houlahan.house.gov/news/email=
+/show.aspx?ID=3DPWJO4UP6CDOVLLB7F6SBOOWUGU&amp;name=3DCelebrating+our+commu=
+nity%e2%80%99s+diversity!" style=3D"-webkit-text-size-adjust: 100%; -ms-tex=
+t-size-adjust: 100%;color: #08244a; text-decoration:none; font-family: Aria=
+l, Helvetica, sans-serif;">Share on
+                    Twitter</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;height:30px; background-color: #f5f=
+5f5;">
+          &nbsp;
+        </td>
+      </tr>
+    </tbody>
+  </table>
+<table role=3D"presentation" width=3D"100%" align=3D"center" style=3D"font-=
+family: Georgia, times, serif; background-color: #ffffff;" border=3D"0" cel=
+lspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftm=
+argin=3D"0" topmargin=3D"0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td valign=3D"m=
+iddle" align=3D"center" style=3D"color: #000000; font-size: 16px; text-alig=
+n: left;">=20
+                                                                <img src=3D=
+"https://houlahan.house.gov/images/spacerx1159-731019.open" width=3D"20" he=
+ight=3D"1" style=3D"height: 1px">
+                                                                <br>
+<a href=3D"https://houlahan.house.gov/news/email/show.aspx?ID=3DPWJO4UP6CDO=
+VLLB7F6SBOOWUGU">Click Here</a> to view this email in your browser <br>
+<a href=3D"https://houlahan.house.gov/Forms/EmailSignup/?Delete=3Dtrue&amp;=
+MessageID=3D1159&amp;Email=3DSarah.Slavin@mail.house.gov">Click Here</a> to=
+ be removed from this list
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table></body>
+
+</html>
+<br><a href=3D"https://houlahan.house.gov/news/email/show.aspx?ID=3DPWJO4UP=
+6CDOVLLB7F6SBOOWUGU">View in your browser</a>=
+
+----boundary_2019483_627edd89-fc9b-481e-81fc-543d36882e74--

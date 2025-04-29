@@ -1,0 +1,438 @@
+Received: from MW4PR09MB10186.namprd09.prod.outlook.com
+ (2603:10b6:303:1f2::21) by SA1PR09MB9517.namprd09.prod.outlook.com with
+ HTTPS; Mon, 8 Jul 2024 21:42:45 +0000
+Received: from BL0PR0901CA0019.namprd09.prod.outlook.com
+ (2603:10b6:208:1c0::29) by MW4PR09MB10186.namprd09.prod.outlook.com
+ (2603:10b6:303:1f2::21) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7741.36; Mon, 8 Jul
+ 2024 21:42:43 +0000
+Received: from BL02EPF0001B416.namprd09.prod.outlook.com
+ (2603:10b6:208:1c0:cafe::13) by BL0PR0901CA0019.outlook.office365.com
+ (2603:10b6:208:1c0::29) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7741.36 via Frontend
+ Transport; Mon, 8 Jul 2024 21:42:43 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.51.106)
+ smtp.mailfrom=mail.house.gov; dkim=fail (body hash did not verify)
+ header.d=mail.house.gov;dkim=fail (body hash did not verify)
+ header.d=house.gov;dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.51.106 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.51.106;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.51.106) by
+ BL02EPF0001B416.mail.protection.outlook.com (10.167.242.196) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7762.17 via Frontend Transport; Mon, 8 Jul 2024 21:42:43 +0000
+Received: from EXCH1922.US.House.gov (143.228.51.114) by EXCH1925.US.House.gov
+ (143.228.51.106) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1544.11; Mon, 8 Jul
+ 2024 17:42:42 -0400
+Received: from serg-bulk4-h.house.gov (143.228.145.126) by
+ EXCH1922.US.House.gov (143.228.51.114) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.2.1544.11 via Frontend Transport; Mon, 8 Jul 2024 17:42:42 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mail.house.gov; h=content-type :
+ date : from : list-unsubscribe : list-unsubscribe-post : message-id :
+ mime-version : subject : to; s=january2024-msgb-mhg;
+ bh=+lp8QdeLs3N5Rg5674+Mmf3Ac0U770LnTFudGOYvdYs=;
+ b=QKEIafiOsVM7nLAQCVUPfEMNp2lZBFINQQ7rZQGMh5idd4h+OFR4rtFesqBVuDG+Zwmy
+ qcqxQ1zY1K8rzp74A7egChZo8zJhWvclsW43iKdqqd3BLHgVhHNm321RcCXM1CDRAgOn
+ +EtmhOGTrV/HBbJxCwkhBommB88YLBWbYx/jtfDHO+dtOnVKthpsKIg2a3kgBICRGXLC
+ IqcrV92i2UFl2D0VKhhqgrs5zDfWZYmmC2UEZay1TNaj+NeQm40RW7Cv7i7d1aibu4zu
+ WMwWhqX2Q+W0hVyW+NIHqu3onkrtHheZZixi+BE6PIvRp2ARUltnFhesp11sf9JsT0Z6 EQ== 
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=content-type : date :
+ from : list-unsubscribe : list-unsubscribe-post : message-id :
+ mime-version : subject : to; s=august2019-msgb-hg;
+ bh=+lp8QdeLs3N5Rg5674+Mmf3Ac0U770LnTFudGOYvdYs=;
+ b=zOgcpEy3dvjPeZu+Y7OmNJuZPxmjhFWL4p/XgTYIlpgZxzcJPPjKwF8tUFQQYlA+q+L1
+ qw7+YCOVeKLumuPqz0ZjR6/z6NLAP3URuhwwSFbNYm0rvjasp2xSj7eq+0giMCuHq7f/
+ mUZntDKDlvqO+/l5kHanIOK5EhsyWFS3O1XY254oPMfAeZ6ItmKqWYwsZYtqxl6RVSfz
+ hwSCOrKotpQV6SdnPwNZ1+5/HkvudcTuO5D1jzGUUSHn8hMzvvNTwlCXlGIX0SSvpyzu
+ 3zwb2yXzBbTSpUGq9ohoHUNlucnQA+E632KsuNfD1WGpvRXlqe10pcJfoTUdsJeDKJlI FQ== 
+Received: from FIRESIDESERV08 (firesideserv08.us.house.gov [143.228.58.71])
+	by serg-bulk4-h.house.gov (8.17.1.19/8.17.1.19) with ESMTP id 468LgfML029621
+	for <Peter.Finocchio@mail.house.gov>; Mon, 8 Jul 2024 17:42:41 -0400
+envelope-from: repmikelawler@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+Message-ID: <4tbAJChfz58s7YR4aTv9HuCetqKUqI51CP4LBhTl9m3TucKK4NrcDnxYPVrKPDBBV+b7EMtALXaSvbOaoFIdrCc2msu+RzB9HKzTekcThjmjFBz/WzGO0fLM8stQ98fXN9MsGV0oDa6vvB+9enbP8ua7Ysc4LRMZuCR2YcK7hR+kGF5xjAwODGyRqfe/Gy6w@fireside21.com>
+X-House-Vendor-Seg: unmanaged
+List-Unsubscribe: <https://lawler.house.gov/forms/emailsignup/?Delete=true&MessageID=612&Email=Peter.Finocchio@mail.house.gov>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Precedence: bulk
+From: "Rep. Michael Lawler" <repmikelawler@mail.house.gov>
+To: Peter.Finocchio@mail.house.gov
+Date: 8 Jul 2024 17:42:41 -0400
+Subject: Join me in Briarcliff Manor on Friday!
+Content-Type: multipart/alternative;
+ boundary=--boundary_8306569_ab3c7e69-81a2-4165-9f62-1d68b6e0c3ce
+X-Proofpoint-Virus-Version: vendor=baseguard
+ engine=ICAP:2.0.293,Aquarius:18.0.1039,Hydra:6.0.680,FMLib:17.12.28.16
+ definitions=2024-07-08_11,2024-07-05_01,2024-05-17_01
+Return-Path: RepMikeLawler@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1925.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 08 Jul 2024 21:42:43.5676
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 91b2fe03-99c7-40e2-6add-08dc9f96e631
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1922.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted: BL02EPF0001B416.namprd09.prod.outlook.com
+X-CrossPremisesHeadersFiltered: BL02EPF0001B416.namprd09.prod.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ BL02EPF0001B416:EE_|MW4PR09MB10186:EE_|SA1PR09MB9517:EE_
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: 91b2fe03-99c7-40e2-6add-08dc9f96e631
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam:
+ BCL:0;ARA:13230040|69100299015|4022899009|82310400026|366016|41050700001;
+X-Forefront-Antispam-Report:
+ CIP:143.228.51.106;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:(13230040)(69100299015)(4022899009)(82310400026)(366016)(41050700001);DIR:INT;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 08 Jul 2024 21:42:43.5208
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 91b2fe03-99c7-40e2-6add-08dc9f96e631
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.51.106];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1922.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: MW4PR09MB10186
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.7650527
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.7741.016
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(425001)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	5365Om+/YbpfMTH6FBs4tQ83F//pUDFqYn4w5VrnPChf7IYLrF765SD3hz7qp+P3GoGjK1SLNQrjPQgpejFPlxiEF3Qxj5fDhf6fXR70HRGXx1W0dzqxk1GI1uP3ITfux5mK2HeoAnXYrMvFcPINRL35Ah8qufQwkl1uP0UgrFfU5RaVoc940ApaeuXvjfx7PsXcmltJXuvoQhxJMi0ZoIK8UJ+vIJyXrAcwvPPdSrh3qJiZ3OAti51wO78Pz0Kcf2jj0U3Ix3GOtVVCQB3NV7Dtdl1MBEagOKNohoVh5pNivFFY9WER7NQfdpUkBycZLyyli7f1zQa/UPo024uIE9xYqYsfB/BYXlP0tSU00OCdmYnVtyeHCGvEIUjlySIrOOVxlJDR0Oq4QTpVM/3gDhVoRAli/5XljLDZTmWzDlwJzclNu9Cut2qnDhP2MHYv++gm7pBAT7/kHProd28fwcFlRbJH8d6JvTPt+DezRd8o6Zn7GmqC6Ncehq8ro0LUcetUPD/mjKXS3zJcWlm/T3KU+Ld1/P4vpTV8Ds4Q++W4b4i5leBR8GMOeYojLjoEVR2jbNez/CPFU/qxgPwj4aN9iSrxnBvqE+DZdRnHZrSCyWky7WCryjFiGcJNqtAxWxYdIrzwieTE4PgI3QlaAdaRnfZ1AZHrxEh9kLBRMfdMs8ntDmPC9nZMjqpHv9dai9RoY5IroTrn8ETO2Bwoc+xv4d468NuNgZjn0hRL8vyEHMdhyGRBZ+wQTtbGIqIrb0Lt3pot6WZwycAX/9lEFTXRCWR95gSnS7toUSLiwyg7kJtIBcDYUVO84YDuK9OJyQrC5H/kKpkj1GtZydKGzY/83jsx5aVr0mTX2CE2SoxojiRPMuorHak5/AE0HhL0
+MIME-Version: 1.0
+
+----boundary_8306569_ab3c7e69-81a2-4165-9f62-1d68b6e0c3ce
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+DQpVbnN1YnNjcmliZTogaHR0cHM6Ly9sYXdsZXIuaG91c2UuZ292L0Zvcm1zL0VtYWls
+U2lnbnVwLz9EZWxldGU9dHJ1ZSZNZXNzYWdlSUQ9NjEyJkVtYWlsPVBldGVyLkZpbm9j
+Y2hpb0BtYWlsLmhvdXNlLmdvdg==
+----boundary_8306569_ab3c7e69-81a2-4165-9f62-1d68b6e0c3ce
+Content-Location: https://lawler.house.gov/
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>Join me in Briarcliff Manor on Friday!</title>
+       =20
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1">
+        <!--[if !mso]><!-->
+        <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![e=
+ndif]-->
+        <style>body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default t=
+ext sizes */ img{-ms-interpolation-mode: bicubic;} /* Allow smoother render=
+ing of resized image in Internet Explorer *//* RESET STYLES */img { border:=
+ 0; height: auto; line-height: 100%; outline: none; text-decoration: none; =
+}table { border-collapse: collapse !important; }body { height: 100% !import=
+ant; margin: 0 !important; padding: 0 !important; width: 100% !important; }=
+strong { font-weight: bold; } /* Editor reset *//* FIRESIDE STYLES */.compo=
+nent img {max-width:600px;}.component table {mso-table-rspace:10pt; border-=
+collapse:collapse;}.component { padding: 0px !important; }.press {padding-b=
+ottom: 0px;}</style><style>@media all and (max-width:650px) {            .i=
+mage-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td, .image-2, .img-2 =
+img, .image-2 tr, .image-2 td {max-width: 100% !important; width: 100% !imp=
+ortant;}            .responsive-table {width:100% !important;}            .=
+responsive-table img {max-width:100% !important; height: auto !important;} =
+           .press .component, .press td {text-align:center;}            .co=
+mponent { margin-left: 20px; margin-right: 20px;}            .component .re=
+sponsive-table { margin-left: 0px !important; margin-right: 0px !important;=
+}            .wide .video-thumb { width: 100% !important;height: auto !impo=
+rtant; }             .wide.video-container { width: 100% !important; }     =
+    .component.full-width {margin-left: 0px; margin-right: 0px; }   }</styl=
+e><style type=3D"text/css">
+            /* CLIENT-SPECIFIC STYLES */
+            body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text=
+ sizes */
+            table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Rem=
+ove spacing between tables in Outlook 2007 and up */
+            img{-ms-interpolation-mode: bicubic;} /* Allow smoother renderi=
+ng of resized image in Internet Explorer */
+            /* RESET STYLES */
+            img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: =
+0 !important; width: 100% !important; }
+            strong { font-weight: bold; } /* Editor reset */
+            /* FIRESIDE STYLES */
+            .component img {max-width:600px;}
+            .component table {mso-table-rspace:10pt; border-collapse:collap=
+se; font-family: Arial, Helvetica, sans-serif;}
+            .component td, td {font-family: Arial, Helvetica, sans-serif;}
+            .component { padding: 0px !important; }
+            .press {padding-bottom: 0px;}
+            .caption-1 td {font-family: Arial, Helvetica, sans-serif;}
+            /* Margin/NoMargin STYLES */
+            .component.full-width{ overflow: hidden; margin: 0px; }
+            /* HEADER STYLES */
+            .header-bar {width: 100%;}
+            .header-bar-margin {background-color:#ffffff;}
+            .header-bar h2 {margin: 0 !important; padding: 0 !important; co=
+lor: #000000;text-align: center;font-size: 24px;font-weight: bold; }
+            .survey-content > table > tbody tr td { border-color: #08244a !=
+important; }
+            .survey-content input.survey-submit { font-family: Arial, Helve=
+tica, sans-serif !important; }
+        </style>     =20
+        <style id=3D"media-queries">=20
+            @media all and (max-width:650px) {
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max=
+-width: 100% !important; width: 100% !important;}
+            .responsive-table {width:100% !important;}
+            .responsive-table img {max-width:100% !important; height: auto =
+!important;}
+            .press .component, .press td, .split .component, .split .compon=
+ent td, .split td {text-align:center;}
+            .component { margin-left: 20px; margin-right: 20px;}
+            .component .responsive-table { margin-left: 0px !important; mar=
+gin-right: 0px !important;}
+            .wide .video-thumb { width: 100% !important;height: auto !impor=
+tant; }=20
+            .wide.video-container { width: 100% !important; }
+            }
+        </style>
+       =20
+    <!--[if (gte mso 9)|(IE)]>
+                                        <style>=20
+                                    </style>
+                                    <![endif]--></head>
+    <body style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%;margin: 0px !important; padding: 0px !important;">
+        <div id=3D"preview-text" style=3D"display: none; font-size: 1px; co=
+lor: #fefefe; line-height: 1px; font-family: Arial, Helvetica, sans-serif; =
+max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">Monday, Jul=
+y&nbsp;8, 2024 Peter, On Friday, my district staff and I will be holding mo=
+bile office hours in Briarcliff Manor at the Briarcliff Manor Village Offic=
+e from 10:30am&nbsp;until 12pm. We hope to see you there! My team and I&nbs=
+p;look forward to hearing your feedback on important issues and helping you=
+ and your family with any constituent casework needs. </div>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;background-color: #ffffff; font-family: Arial, Helvetica, sa=
+ns-serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D=
+"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td class=3D"responsive-table" valign=3D"top" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Ari=
+al, Helvetica, sans-serif; font-size: 16px; color: #000000;">
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class=3D"region" id=3D"region-1"><div class=3D=
+"component " style=3D"padding: 0px !important;"> <div class=3D"image" style=
+=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 700px;" alt=3D"Newslette=
+r Header" src=3D"https://lawler.house.gov/UploadedPhotos/HighResolution/853=
+6055d-473d-4710-9910-3c594a8ab5d3.png" width=3D"609.5"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;text-align: right;"><br></p><p style=3D"margin: 0;text-=
+align: right;"><span style=3D"color:#000066;"><strong style=3D"font-weight:=
+ bold;">Monday, July&nbsp;8, 2024</strong></span></p><p style=3D"margin: 0;=
+text-align: right;"><br></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;"><span style=3D"line-height:2;"><span style=3D"font-si=
+ze:16px;"><span style=3D"font-family:Arial,Helvetica,sans-serif;"><span cla=
+ss=3D"fs-merge-field" contenteditable=3D"false"><span contenteditable=3D"fa=
+lse"><span class=3D"merge-field" contenteditable=3D"false" unselectable=3D"=
+true">Peter</span></span></span>,</span></span></span></p><p style=3D"margi=
+n: 0;"><br></p><p style=3D"margin: 0;line-height:1.38"><span style=3D"line-=
+height:2;">On Friday, my district staff and I will be holding mobile office=
+ hours in Briarcliff Manor at the Briarcliff Manor Village Office from 10:3=
+0am&nbsp;until 12pm. We hope to see you there! My team and I&nbsp;look forw=
+ard to hearing your feedback on important issues and helping you and your f=
+amily with any constituent casework needs.</span></p><p style=3D"margin: 0;=
+line-height:1.38"><br></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 550px;" alt=3D"Briarclif=
+f Manor Office Hours" src=3D"https://lawler.house.gov/UploadedPhotos/Medium=
+Resolution/c5de79da-5e20-4084-abba-e8a1ecf183d9.png"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span style=3D"line-h=
+eight:2;">I=E2=80=99m honored to serve as your Representative in Congress. =
+If there is anything we can do for you or your family, please don=E2=80=99t=
+ hesitate to contact my office at 845-201-2060&nbsp;or reach out through my=
+ website at <a data-cke-saved-href=3D"https://lawler.house.gov/components/r=
+edirect/r.aspx?ID=3D2348-84" href=3D"http://lawler.house.gov/" style=3D"-we=
+bkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">lawler.house.gov<=
+/a>. Additionally,&nbsp;you can keep up with the latest news on my efforts =
+by following us on&nbsp;<a data-cke-saved-href=3D"https://lawler.house.gov/=
+components/redirect/r.aspx?ID=3D2349-84" href=3D"https://urldefense.com/v3/=
+__https://www.facebook.com/RepMikeLawler/__;!!Fr0YZsIsFWxTZsBm-qTAg68!jyAUj=
+vkvwEMvnhQxsa6veHtAUvRy7m482E5UFseQiKlsSel6xJx1oQA-_cGdZqOuXwFlb-FxaWaSP7al=
+hcepBz8pC3nUz0Eu4r7y-ign1g$" style=3D"-webkit-text-size-adjust: 100%; -ms-t=
+ext-size-adjust: 100%;">Facebook</a>,&nbsp;<a data-cke-saved-href=3D"https:=
+//lawler.house.gov/components/redirect/r.aspx?ID=3D2350-84" href=3D"https:/=
+/urldefense.com/v3/__https://twitter.com/repmikelawler__;!!Fr0YZsIsFWxTZsBm=
+-qTAg68!jyAUjvkvwEMvnhQxsa6veHtAUvRy7m482E5UFseQiKlsSel6xJx1oQA-_cGdZqOuXwF=
+lb-FxaWaSP7alhcepBz8pC3nUz0Eu4r726pP8Dw$" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;">Twitter</a>, and&nbsp;<a data-cke-save=
+d-href=3D"https://lawler.house.gov/components/redirect/r.aspx?ID=3D2351-84"=
+ href=3D"https://urldefense.com/v3/__https://www.instagram.com/repmikelawle=
+r/__;!!Fr0YZsIsFWxTZsBm-qTAg68!jyAUjvkvwEMvnhQxsa6veHtAUvRy7m482E5UFseQiKls=
+Sel6xJx1oQA-_cGdZqOuXwFlb-FxaWaSP7alhcepBz8pC3nUz0Eu4r6z5e8j6A$" style=3D"-=
+webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">Instagram</a>&n=
+bsp;- and by opting in to periodic updates from my office by&nbsp;<a data-c=
+ke-saved-href=3D"https://lawler.house.gov/components/redirect/r.aspx?ID=3D2=
+352-84" href=3D"https://lawler.house.gov/forms/form/?ID=3D8" style=3D"-webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">CLICKING HERE</a>.<=
+/span></p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span sty=
+le=3D"line-height:2;"><span style=3D"font-size:16px;">Sincerely,</span></sp=
+an></p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span style=
+=3D"font-size:16px;"><span contenteditable=3D"false" class=3D"cke_widget_wr=
+apper cke_widget_inline cke_widget_image cke_image_nocaption"><img alt=3D""=
+ src=3D"https://lawler.house.gov/UploadedPhotos/LowResolution/45f3089e-3e5f=
+-44ba-99bf-fc223a209cb4.png" class=3D"cke_widget_element" width=3D"251" hei=
+ght=3D"87" style=3D"max-width:600px;-ms-interpolation-mode: bicubic;"></spa=
+n></span></p><p style=3D"margin: 0;"><span style=3D"font-size:16px;">Michae=
+l V. Lawler</span></p><p style=3D"margin: 0;"><span style=3D"font-size:16px=
+;">Member of Congress</span></p><p style=3D"margin: 0;"><span style=3D"font=
+-size:16px;">17th District, New York</span></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div></div>
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    <table role=3D"presentation" width=3D"100%" align=3D"center" style=3D"f=
+ont-family: Georgia, times, serif; background-color: #ffffff;" border=3D"0"=
+ cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" l=
+eftmargin=3D"0" topmargin=3D"0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td valign=3D"m=
+iddle" align=3D"center" style=3D"color: #000000; font-size: 16px; text-alig=
+n: left;">=20
+                                                                <img src=3D=
+"https://lawler.house.gov/images/spacerx612-84.open" width=3D"20" height=3D=
+"1" style=3D"height: 1px">
+                                                                <br>
+<a href=3D"https://lawler.house.gov/news/email/show.aspx?ID=3DNEVZ36QSGE35A=
+">Click Here</a> to view this email in your browser <br>
+<a href=3D"https://lawler.house.gov/Forms/EmailSignup/?Delete=3Dtrue&amp;Me=
+ssageID=3D612&amp;Email=3DPeter.Finocchio@mail.house.gov">Click Here</a> to=
+ be removed from this list
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table></body>
+</html>=
+
+----boundary_8306569_ab3c7e69-81a2-4165-9f62-1d68b6e0c3ce--

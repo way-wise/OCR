@@ -1,0 +1,777 @@
+Received: from MN2PR09MB4793.namprd09.prod.outlook.com (2603:10b6:208:212::22)
+ by MW4PR09MB10136.namprd09.prod.outlook.com with HTTPS; Tue, 2 Jul 2024
+ 17:59:55 +0000
+Received: from DM6PR09CA0016.namprd09.prod.outlook.com (2603:10b6:5:160::29)
+ by MN2PR09MB4793.namprd09.prod.outlook.com (2603:10b6:208:212::22) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7741.25; Tue, 2 Jul
+ 2024 17:59:53 +0000
+Received: from BL02EPF0001B418.namprd09.prod.outlook.com
+ (2603:10b6:5:160:cafe::ab) by DM6PR09CA0016.outlook.office365.com
+ (2603:10b6:5:160::29) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7719.33 via Frontend
+ Transport; Tue, 2 Jul 2024 17:59:53 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.51.113)
+ smtp.mailfrom=mail.house.gov; dkim=fail (body hash did not verify)
+ header.d=mail.house.gov;dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.51.113 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.51.113;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.51.113) by
+ BL02EPF0001B418.mail.protection.outlook.com (10.167.242.199) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7741.18 via Frontend Transport; Tue, 2 Jul 2024 17:59:53 +0000
+Received: from EXCH1922.US.House.gov (143.228.51.114) by EXCH1921.US.House.gov
+ (143.228.51.113) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1544.11; Tue, 2 Jul
+ 2024 13:59:48 -0400
+Received: from serg-bulk3-h.house.gov (143.228.145.68) by
+ EXCH1922.US.House.gov (143.228.51.114) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.2.1544.11 via Frontend Transport; Tue, 2 Jul 2024 13:59:48 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mail.house.gov; h=content-type :
+ date : from : message-id : mime-version : subject : to;
+ s=january2024-msgb-mhg; bh=gwzaBaIZP3QRW9dsXiG6jrkxHgyulfgoBQuXPzyLmD8=;
+ b=LxXGcvs3hmS3nVuk7vvBAEPXsa21iJIQDT4ewXZ9mwBPglUPOh0W0QCqUgSgFq6Kq7DV
+ 37US+KCkfXE51BYLnvPGjm/AkKA+EkoeMwlYt+gFiQGwNmlfO6LBZ4yfMCFpBNEDlGIS
+ BzPA6+tWjEqy+8GL872DyIm3sWuEmxjPilCBct6RzPHcU9LKxrzADUeK2ZS9Tp+VhLMY
+ kiJ17gEcsrtOCHahXY61X18vZqM6l+8rWLTlcTBcmE31j+Vco/qPV9pkvanfB8aa8kDG
+ Su+q5Y9Sy45P3AH6sC3JVWhtFge2NBaRfUSzCZn4OXeqK0Gi2/flAmlrH5rRlQPuI/RX gg== 
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=content-type : date :
+ from : message-id : mime-version : subject : to; s=august2019-msgb-hg;
+ bh=gwzaBaIZP3QRW9dsXiG6jrkxHgyulfgoBQuXPzyLmD8=;
+ b=RKQZT5yt8VNGPCnaV+As449Tu0j8dBF92wLkIc/xG3avutNCU/3oshCuQCMojPI4CN96
+ Nrtc6pMDnEshxss8fOIoJpYY9a26qTPHmPvEF1How0hMnLJU+zZcamNHesBl6Tj+bvq+
+ 3elcsScO5DvclP3snhc1F4E29wv8DixoOXveBbSxw8OOExXzH77qmTp/DWQ0nrKA80fE
+ Af0ljxS/d8mVQsNPlUdSjWMmSesTgZ4SzIcpZMCmzuk1fdhQ9LTUrnD02bTWepxrFBpx
+ 6S8FdOjvNWBOkPMDZ7VaFQhu5hJtXNzdSHBUR7pBepUda2ZvVI2WR3E+ok6/whsUrQ1G 9A== 
+Received: from FIRESIDEADMIN04 (firesideadmin04.us.house.gov [143.228.58.69])
+	by serg-bulk3-h.house.gov (8.17.1.19/8.17.1.19) with ESMTP id 462Hxmd9017103;
+	Tue, 2 Jul 2024 13:59:48 -0400
+Message-Id: <402ddrkap9-1@serg-bulk3-h.house.gov>
+envelope-from: Duarte.press@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+X-House-Vendor-Seg: Fireside21-1
+From: "Rep. John Duarte" <Duarte.press@mail.house.gov>
+To: Alexa.Manning@mail.house.gov
+Date: 2 Jul 2024 13:59:48 -0400
+Subject: TEST Newsletter
+Content-Type: multipart/alternative;
+ boundary=--boundary_1515_0ead17e1-88a4-4349-b1a7-21389f7f92aa
+X-Proofpoint-Virus-Version: vendor=baseguard
+ engine=ICAP:2.0.293,Aquarius:18.0.1039,Hydra:6.0.680,FMLib:17.12.28.16
+ definitions=2024-07-02_13,2024-07-02_02,2024-05-17_01
+Return-Path: Duarte.Press@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1921.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 02 Jul 2024 17:59:53.3017
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ abfb5692-054b-47e0-3daa-08dc9ac0c66a
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1922.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted: BL02EPF0001B418.namprd09.prod.outlook.com
+X-CrossPremisesHeadersFiltered: BL02EPF0001B418.namprd09.prod.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ BL02EPF0001B418:EE_|MN2PR09MB4793:EE_|MW4PR09MB10136:EE_
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: abfb5692-054b-47e0-3daa-08dc9ac0c66a
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam:
+ BCL:0;ARA:13230040|4022899009|69100299015|82310400026|366016|41050700001;
+X-Forefront-Antispam-Report:
+ CIP:143.228.51.113;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:(13230040)(4022899009)(69100299015)(82310400026)(366016)(41050700001);DIR:INT;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 02 Jul 2024 17:59:53.2704
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: abfb5692-054b-47e0-3daa-08dc9ac0c66a
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.51.113];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1922.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: MN2PR09MB4793
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.0082092
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.7719.007
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(425001)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	otYRwOJjo6AwGXXSTu6WxE685GqLRDhlkJuBwhAFdaltFE63nMXc39Wzfy4PLsGc4qyWbPyPl4cxIKRxhbX7ZSfoS46DEJVRNLJbDZDZIDfIHUTw5SHeUDE08U0pV3674w7rc5KdKMAkTkbke7kf3ybXmwfgC3FRRtrwdyovh1QxktWj78oR4wwnKFGSGphyBN3JyN2SC5RCc2lqyLZ0KZbhPPOeGtJYwz6ZdTo06FUaRrkiiC2gEoAvDUkoQJzI297mCmj3rc7uZdIar8020tVUloUNMoeJWmWQmRW6I8JrwlEWxDZEl4Dk8+GQz9AF4nxR9g350cXGh+geNz0e9KSxzY9wysoaqrl8u+qAjVVnX8L43Ie0QbOObMgXiK3yUVfzVHU+3kkNsAz70A3IezHe7X39stmL47gdT+RgNoFDKxf0l8JFdpkgzzZuUHDZvdj1NsYD8YnuNCiVXeXYSQtsoJrFeoBwhVVLPshs1gRqNI4KEd4Hn0Ss7+eyTHOWX+cPgHZWDq2Cht5Xbx/Z0dkTgro3jOOMdxrZkJILkJEBcUZE+Owamv25CIuC1nIZbvCphLcG8LD68a85GuxLcycoD5D4c0jViu8IWVa68SCBbjkSkEDUU1bH0ZzY5emOCRACL8acY1r4no86fTq1d0418GuRsTJSrvdSTd0iMjWiq31MQM0urTHniL90RWBjHLdTFV64s/yZiL2/o5GLQrDeU/zKXEGZHoTa04tBs9zmXNEp5k9h2zcVmJa4i2vaT8LKuniw4rZNPhMPoUqvP62EebSuORZQJVxhH3O8k+HYPB5n+zTv5otyxOnIJ25nvXWFIrSr7QA6mysS2cU8a89pobxV/gwAhR1Yzf3pTX0ItK6zkXkc3fmmVuqhOwhn
+MIME-Version: 1.0
+
+----boundary_1515_0ead17e1-88a4-4349-b1a7-21389f7f92aa
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+
+
+Extreme Heat Advisory
+
+
+Dear Friends,
+
+I want to make sure everyone stays safe from the heat this week, and to sta=
+y updated subscribe to my email list(http://duarte.house.gov/forms/emailsig=
+nup/) .
+
+The National Weather Service has issued an Excessive Heat Warning beginning=
+ this morning and continuing through the 4th of July weekend. Consistent hi=
+gh temperatures over 110 degrees Fahrenheit will persist until next Wednesd=
+ay, with little relief overnight.
+
+Even though we=E2=80=99ve lived through many heatwaves before, don=E2=80=99=
+t become complacent and let this one catch you off guard. As we come togeth=
+er to celebrate our country and Valley, let=E2=80=99s look out for each oth=
+er.
+
+Lastly, elevated temperatures are likely to occur multiple times this summe=
+r and fall, so this message provides information about resources like cooli=
+ng centers inStanislaus(https://urldefense.com/v3/__https://stanemergency.c=
+om/pdf/cooling-locations.pdf__;!!Fr0YZsIsFWxTZsBm-qTAg68!hs7z0o29AjzNs5wtdG=
+VgDeb7JvH2GyuXmBvrzs09cannx-kD34K5-AFtoFqL8c976SqqxqgSU9RYi0WVUgOcqgVYznfzD=
+UrjkbHwbA$ ) San Joaquin County(https://urldefense.com/v3/__https://sjready=
+.org/assets/docs/heat/Cooling-Locations-(070124).pdf__;!!Fr0YZsIsFWxTZsBm-q=
+TAg68!hs7z0o29AjzNs5wtdGVgDeb7JvH2GyuXmBvrzs09cannx-kD34K5-AFtoFqL8c976Sqqx=
+qgSU9RYi0WVUgOcqgVYznfzDUrwNzAFrA$ ) ,Merced(https://urldefense.com/v3/__ht=
+tps://myemail-api.constantcontact.com/Cooling-Zones-Available.html?soid=3D1=
+134023258165&aid=3DJVqQKSAla70__;!!Fr0YZsIsFWxTZsBm-qTAg68!hs7z0o29AjzNs5wt=
+dGVgDeb7JvH2GyuXmBvrzs09cannx-kD34K5-AFtoFqL8c976SqqxqgSU9RYi0WVUgOcqgVYznf=
+zDUqfDQXJHw$ ) ,Madera(https://urldefense.com/v3/__https://www.maderacounty=
+.com/home/showpublisheddocument/35057/638247670041109300__;!!Fr0YZsIsFWxTZs=
+Bm-qTAg68!hs7z0o29AjzNs5wtdGVgDeb7JvH2GyuXmBvrzs09cannx-kD34K5-AFtoFqL8c976=
+SqqxqgSU9RYi0WVUgOcqgVYznfzDUqxVx7MWA$ ) , andFresno(https://urldefense.com=
+/v3/__https://www.fresnocountyca.gov/Departments/Public-Health/Emergency-Se=
+rvices/Office-of-Emergency-Services-OES/Extreme-Heat__;!!Fr0YZsIsFWxTZsBm-q=
+TAg68!hs7z0o29AjzNs5wtdGVgDeb7JvH2GyuXmBvrzs09cannx-kD34K5-AFtoFqL8c976Sqqx=
+qgSU9RYi0WVUgOcqgVYznfzDUpXVZ7jSg$ ) Counties.
+
+Here are the signs and symptoms of heat stroke.
+
+
+Photo=20
+
+Stay hydrated, stay cool, stay informed, and stay safe! It is my honor to b=
+e your voice in Washington. To learn more about my positions on the issues,=
+ share your views with me, request assistance with resolving issues you may=
+ have with Federal agencies or programs, or tosubscribe to my email list(ht=
+tps://duarte.house.gov/forms/emailsignup/) , please visit my website,https:=
+//urldefense.com/v3/__https://duarte.house.gov(https:/*duarte.house.gov/)__=
+;Lw!!Fr0YZsIsFWxTZsBm-qTAg68!hs7z0o29AjzNs5wtdGVgDeb7JvH2GyuXmBvrzs09cannx-=
+kD34K5-AFtoFqL8c976SqqxqgSU9RYi0WVUgOcqgVYznfzDUqIazhj0A$  .
+
+
+
+
+----boundary_1515_0ead17e1-88a4-4349-b1a7-21389f7f92aa
+Content-Location: https://duarte.house.gov/
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>Representative John Duarte</title>
+       =20
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1">
+        <!--[if !mso]><!-->
+        <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![e=
+ndif]-->
+        <style>body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default t=
+ext sizes */ img{-ms-interpolation-mode: bicubic;} /* Allow smoother render=
+ing of resized image in Internet Explorer *//* RESET STYLES */img { border:=
+ 0; height: auto; line-height: 100%; outline: none; text-decoration: none; =
+}table { border-collapse: collapse !important; }body { height: 100% !import=
+ant; margin: 0 !important; padding: 0 !important; width: 100% !important; }=
+strong { font-weight: bold; } /* Editor reset *//* FIRESIDE STYLES */.compo=
+nent img {max-width:600px;}.component table {mso-table-rspace:10pt; border-=
+collapse:collapse;}.component { padding: 0px !important; }.press {padding-b=
+ottom: 0px;}</style><style>@media all and (max-width:650px) {            .i=
+mage-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td, .image-2, .img-2 =
+img, .image-2 tr, .image-2 td {max-width: 100% !important; width: 100% !imp=
+ortant;}            .responsive-table {width:100% !important;}            .=
+responsive-table img {max-width:100% !important; height: auto !important;} =
+           .press .component, .press td {text-align:center;}            .co=
+mponent { margin-left: 20px; margin-right: 20px;}            .component .re=
+sponsive-table { margin-left: 0px !important; margin-right: 0px !important;=
+}            .wide .video-thumb { width: 100% !important;height: auto !impo=
+rtant; }             .wide.video-container { width: 100% !important; }     =
+    .component.full-width {margin-left: 0px; margin-right: 0px; }   }</styl=
+e><style type=3D"text/css">
+            /* CLIENT-SPECIFIC STYLES */
+            body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text=
+ sizes */
+            table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Rem=
+ove spacing between tables in Outlook 2007 and up */
+            img{-ms-interpolation-mode: bicubic;} /* Allow smoother renderi=
+ng of resized image in Internet Explorer */
+            /* RESET STYLES */
+            img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: =
+0 !important; width: 100% !important; }
+            strong { font-weight: bold; } /* Editor reset */
+            /* FIRESIDE STYLES */
+            .component img {max-width:600px;}
+            .component table {mso-table-rspace:10pt; border-collapse:collap=
+se; font-family: Arial, Helvetica, sans-serif;}
+            .component td, td {font-family: Arial, Helvetica, sans-serif;}
+            .component { padding: 0px !important; }
+            .press {padding-bottom: 0px;}
+            .caption-1 td {font-family: Arial, Helvetica, sans-serif;}
+            /* Margin/NoMargin STYLES */
+            .component.full-width{ overflow: hidden; margin: 0px; }
+            /* HEADER STYLES */
+            .header-bar {width: 100%;}
+            .header-bar-margin {background-color:#ffffff;}
+            .header-bar h2 {margin: 0 !important; padding: 0 !important; co=
+lor: #000000 !important;text-align: center;font-size: 24px !important;font-=
+weight: bold !important; }
+            .survey-content > table > tbody tr td { border-color: #892106 !=
+important; }
+            .survey-content input.survey-submit { font-family: Arial, Helve=
+tica, sans-serif !important; }
+        </style>       =20
+        <style id=3D"media-queries">=20
+            @media all and (max-width:650px) {
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max=
+-width: 100% !important; width: 100% !important;}
+            .responsive-table {width:100% !important;}
+            .responsive-table img {max-width:100% !important; height: auto =
+!important;}
+            .press .component, .press td, .split .component, .split .compon=
+ent td, .split td {text-align:center;}
+            .component { margin-left: 20px; margin-right: 20px;}
+            .component .responsive-table { margin-left: 0px !important; mar=
+gin-right: 0px !important;}
+            .wide .video-thumb { width: 100% !important;height: auto !impor=
+tant; }=20
+            .wide.video-container { width: 100% !important; }
+            }
+        </style>
+       =20
+    <!--[if (gte mso 9)|(IE)]>
+                                        <style>=20
+                                    </style>
+                                    <![endif]--></head>
+    <body style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%;margin: 0px !important; padding: 0px !important;">
+        <div id=3D"preview-text" style=3D"display: none; font-size: 1px; co=
+lor: #fefefe; line-height: 1px; font-family: Arial, Helvetica, sans-serif; =
+max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">Extreme Hea=
+t Advisory&nbsp; Dear Friends, I want to make sure everyone stays safe from=
+ the heat this week, and to stay updated subscribe to my email list. The Na=
+tional Weather Service has issued an Excessive Heat Warning beginning this =
+morning and continuing through the 4th of July weekend. Consistent high tem=
+peratures over 110 degrees Fahrenheit will persist until next Wednesday, wi=
+th little relief overnight. Even though we=E2=80=99ve lived through many he=
+atwaves before, don=E2=80=99t become complacent and let this one catch you =
+off guard. As we come together to celebrate our country and Valley, let=E2=
+=80=99s look out for each other.&nbsp; Lastly, elevated temperatures are li=
+kely to occur multiple times this summer and fall, so this message provides=
+ information about resources like cooling centers in&nbsp;Stanislaus&nbsp;S=
+an Joaquin County,&nbsp;Merced,&nbsp;Madera, and&nbsp;Fresno&nbsp;Counties.=
+&nbsp; Here are the signs and symptoms of heat stroke. </div>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color: #=
+ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0=
+" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td valign=3D"middle" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;background-color: #ffffff;">
+                    <table role=3D"presentation" cellpadding=3D"10" cellspa=
+cing=3D"0" align=3D"center" width=3D"100%" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #000=
+000; font-size: 12px; font-family: Arial, Helvetica, sans-serif; text-align=
+: center;">
+                                <a href=3D"https://duarteforms.house.gov/fo=
+rms/emailsignup" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adj=
+ust: 100%;color: #000000; text-decoration: none; font-size: 12px;">Enews Si=
+gn Up</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href=3D"https://duarte.house.gov" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #000=
+000; text-decoration: none;font-size: 12px;">Visit My Website</a>&nbsp;&nbs=
+p;|&nbsp;&nbsp;<a href=3D"[link]" style=3D"-webkit-text-size-adjust: 100%; =
+-ms-text-size-adjust: 100%;color: #000000; text-decoration: none; font-size=
+: 12px;">View Online</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color:=
+ #ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D=
+"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td align=3D"center" valign=3D"top" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvet=
+ica, sans-serif; font-size: 16px;">
+                    <a target=3D"_blank" href=3D"https://duarte.house.gov" =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                    <img alt=3D"Representative John Duarte" width=3D"650" s=
+tyle=3D"-ms-interpolation-mode: bicubic;display: block; width: 650px;" src=
+=3D"https://duarte.house.gov/UploadedPhotos/TemplateImages/newsletter.png">
+                    </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;background-color: #ffffff; font-family: Arial, Helvetica, sa=
+ns-serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D=
+"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td class=3D"responsive-table" valign=3D"top" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Ari=
+al, Helvetica, sans-serif; font-size: 16px; color: #000000;">
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class=3D"region" id=3D"region-1"><div class=3D=
+"component full-width" style=3D"padding: 0px !important;"> <div class=3D"he=
+ader-bar" style=3D"overflow: hidden;">
+                                    <table role=3D"presentation" align=3D"c=
+enter" class=3D"responsive-table table-w-bg-color" style=3D"mso-table-lspac=
+e:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse=
+;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Ar=
+ial, Helvetica, sans-serif; margin-right: 0px; margin-left: 0px;" border=3D=
+"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0=
+" leftmargin=3D"0" topmargin=3D"0" width=3D"650">
+                                        <tbody>
+                                            <tr height=3D"0" class=3D"space=
+rRow">
+                                                <td style=3D"-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 0p=
+x">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td class=3D"responsive-tab=
+le" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fon=
+t-size:24px;color:#000000;" valign=3D"top">
+                                                <table role=3D"presentation=
+" width=3D"100%" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-ta=
+ble-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -=
+ms-text-size-adjust: 100%;min-width: 100%;" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" top=
+margin=3D"0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;padding: 0 15pt; f=
+ont-family: Arial, Helvetica, sans-serif;">
+                                                                <div class=
+=3D"cke_editable cke_editable_inline cke_contents_ltr cke_show_borders cke_=
+focus" style=3D"overflow: hidden;"><h2><span style=3D"font-family:Times New=
+ Roman,Times,serif;">Extreme Heat Advisory&nbsp;</span></h2></div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                </td>
+                                            </tr>
+                                            <tr height=3D"0" class=3D"space=
+rRow">
+                                                <td style=3D"-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 0p=
+x">&nbsp;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><d=
+iv class=3D"component-template" style=3D"overflow: hidden;"><p style=3D"mar=
+gin: 0;"><span style=3D"font-family:Times New Roman,Times,serif;">Dear Frie=
+nds,</span></p><p style=3D"margin: 0;"><span style=3D"font-family:Times New=
+ Roman,Times,serif;"><br></span></p><p style=3D"margin: 0;"><span style=3D"=
+font-family:Times New Roman,Times,serif;">I want to make sure everyone stay=
+s safe from the heat this week, and to stay updated <a data-cke-saved-href=
+=3D"http://duarte.house.gov/forms/emailsignup/" href=3D"http://duarte.house=
+.gov/forms/emailsignup/" style=3D"-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;">subscribe to my email list</a>.</span></p><p style=3D"m=
+argin: 0;"><span style=3D"font-family:Times New Roman,Times,serif;"><br></s=
+pan></p><p style=3D"margin: 0;"><span style=3D"font-family:Times New Roman,=
+Times,serif;">The National Weather Service has issued an Excessive Heat War=
+ning beginning this morning and continuing through the 4th of July weekend.=
+ Consistent high temperatures over 110 degrees Fahrenheit will persist unti=
+l next Wednesday, with little relief overnight.</span></p><p style=3D"margi=
+n: 0;"><span style=3D"font-family:Times New Roman,Times,serif;"><br></span>=
+</p><p style=3D"margin: 0;"><span style=3D"font-family:Times New Roman,Time=
+s,serif;">Even though we=E2=80=99ve lived through many heatwaves before, do=
+n=E2=80=99t become complacent and let this one catch you off guard. As we c=
+ome together to celebrate our country and Valley, let=E2=80=99s look out fo=
+r each other.&nbsp;</span></p><p style=3D"margin: 0;"><span style=3D"font-f=
+amily:Times New Roman,Times,serif;"><br></span></p><p style=3D"margin: 0;">=
+<span style=3D"font-family:Times New Roman,Times,serif;">Lastly, elevated t=
+emperatures are likely to occur multiple times this summer and fall, so thi=
+s message provides information about resources like cooling centers in&nbsp=
+;<a data-cke-saved-href=3D"https://stanemergency.com/pdf/cooling-locations.=
+pdf" href=3D"https://urldefense.com/v3/__https://stanemergency.com/pdf/cool=
+ing-locations.pdf__;!!Fr0YZsIsFWxTZsBm-qTAg68!hs7z0o29AjzNs5wtdGVgDeb7JvH2G=
+yuXmBvrzs09cannx-kD34K5-AFtoFqL8c976SqqxqgSU9RYi0WVUgOcqgVYznfzDUrjkbHwbA$"=
+ style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">Stan=
+islaus</a>&nbsp;<a data-cke-saved-href=3D"https://sjready.org/assets/docs/h=
+eat/Cooling-Locations-(070124).pdf" href=3D"https://urldefense.com/v3/__htt=
+ps://sjready.org/assets/docs/heat/Cooling-Locations-(070124).pdf__;!!Fr0YZs=
+IsFWxTZsBm-qTAg68!hs7z0o29AjzNs5wtdGVgDeb7JvH2GyuXmBvrzs09cannx-kD34K5-AFto=
+FqL8c976SqqxqgSU9RYi0WVUgOcqgVYznfzDUrwNzAFrA$" style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;">San Joaquin County</a>,&nbsp;<a =
+data-cke-saved-href=3D"https://myemail-api.constantcontact.com/Cooling-Zone=
+s-Available.html?soid=3D1134023258165&amp;aid=3DJVqQKSAla70" href=3D"https:=
+//urldefense.com/v3/__https://myemail-api.constantcontact.com/Cooling-Zones=
+-Available.html?soid=3D1134023258165&amp;aid=3DJVqQKSAla70__;!!Fr0YZsIsFWxT=
+ZsBm-qTAg68!hs7z0o29AjzNs5wtdGVgDeb7JvH2GyuXmBvrzs09cannx-kD34K5-AFtoFqL8c9=
+76SqqxqgSU9RYi0WVUgOcqgVYznfzDUqfDQXJHw$" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;">Merced</a>,&nbsp;<a data-cke-saved-hre=
+f=3D"https://www.maderacounty.com/home/showpublisheddocument/35057/63824767=
+0041109300" href=3D"https://urldefense.com/v3/__https://www.maderacounty.co=
+m/home/showpublisheddocument/35057/638247670041109300__;!!Fr0YZsIsFWxTZsBm-=
+qTAg68!hs7z0o29AjzNs5wtdGVgDeb7JvH2GyuXmBvrzs09cannx-kD34K5-AFtoFqL8c976Sqq=
+xqgSU9RYi0WVUgOcqgVYznfzDUqxVx7MWA$" style=3D"-webkit-text-size-adjust: 100=
+%; -ms-text-size-adjust: 100%;">Madera</a>, and&nbsp;<a data-cke-saved-href=
+=3D"https://www.fresnocountyca.gov/Departments/Public-Health/Emergency-Serv=
+ices/Office-of-Emergency-Services-OES/Extreme-Heat" href=3D"https://urldefe=
+nse.com/v3/__https://www.fresnocountyca.gov/Departments/Public-Health/Emerg=
+ency-Services/Office-of-Emergency-Services-OES/Extreme-Heat__;!!Fr0YZsIsFWx=
+TZsBm-qTAg68!hs7z0o29AjzNs5wtdGVgDeb7JvH2GyuXmBvrzs09cannx-kD34K5-AFtoFqL8c=
+976SqqxqgSU9RYi0WVUgOcqgVYznfzDUpXVZ7jSg$" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%;">Fresno</a>&nbsp;Counties.&nbsp;</span=
+></p><p style=3D"margin: 0;"><span style=3D"font-family:Times New Roman,Tim=
+es,serif;"><br></span></p><p style=3D"margin: 0;"><span style=3D"font-famil=
+y:Times New Roman,Times,serif;">Here are the signs and symptoms of heat str=
+oke.</span></p><p style=3D"margin: 0;"><br></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 550px;" alt=3D"Photo" sr=
+c=3D"https://duarte.house.gov/UploadedPhotos/MediumResolution/f9624b79-7207=
+-47aa-872a-ce06099ea0cb.png"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;overflow:hidden; background-color:#ffffff"><p =
+style=3D"margin: 0;"><span style=3D"font-family:Times New Roman,Times,serif=
+;">Stay hydrated, stay cool, stay informed, and stay safe! It is my honor t=
+o be your voice in Washington. To learn more about my positions on the issu=
+es, share your views with me, request assistance with resolving issues you =
+may have with Federal agencies or programs, or to&nbsp;<a data-cke-saved-hr=
+ef=3D"https://duarte.house.gov/forms/emailsignup/" href=3D"https://duarte.h=
+ouse.gov/forms/emailsignup/" style=3D"-webkit-text-size-adjust: 100%; -ms-t=
+ext-size-adjust: 100%;">subscribe to my email list</a>, please visit my web=
+site,&nbsp;<a data-cke-saved-href=3D"https://duarte.house.gov/" href=3D"htt=
+ps://duarte.house.gov/" style=3D"-webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%;">https://duarte.house.gov</a>.</span><br></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;overflow:hidden; background-color:#ffffff"><p =
+style=3D"margin: 0;"><br></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div></div>
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color: #=
+892106;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0=
+" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #892106;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; backgro=
+und-color: #892106; font-family: arial, helvetica, sans-serif; font-size: 2=
+4px; text-align: center;">
+                    <h2 style=3D"font-family: arial, helvetica, sans-serif;=
+ font-size: 24px; margin: 0; font-weight: normal;">Office Locations</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #892106;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; backgro=
+und-color: #892106; padding: 0 20px;">
+                    <table role=3D"presentation" width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"10" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;text-align:center;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;text-align:=
+center;">
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"49=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: arial, helvetica, sans-serif; text-align:center; font-size: 14px=
+; color: #ffffff; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0=
+pt;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, san=
+s-serif;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: Arial, Helvetica, sans-serif; text-transform: uppercase;">=
+Washington, DC Office</strong><br>
+                                            1535 Longworth HOB<br>
+Washington, DC  20515<br>
+Phone: (202) 225-1947<br>
+Office Hours: 9:00 am - 5:00 pm ET=20
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"49=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: arial, helvetica, sans-serif; text-align:center; font-size: 14px=
+; color: #ffffff; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0=
+pt;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, san=
+s-serif;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: Arial, Helvetica, sans-serif; text-transform: uppercase;">=
+California Office</strong><br>
+90 S. First Street<br>
+Turlock, CA 95380<br>
+Phone: (209) 226-6880<br>
+Office Hours: 9:00 am - 5:00 pm PST<br>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #892106;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <!-- <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"color: =
+#892106; background-color: #892106;">
+                    <a target=3D"_blank" href=3D"https://www.facebook.com/X=
+XXXXXX"><img alt=3D"facebook icon" width=3D"32" src=3D"https://duarteforms.=
+house.gov/images/email/facebook.png" style=3D"border-width: 0px; border-sty=
+le: solid; width: 32px;" /></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://twitter.com/=
+XXXXXXX"><img alt=3D"twitter icon" width=3D"32" src=3D"https://duarteforms.=
+house.gov/images/email/twitter.png" style=3D"border-width: 0px; border-styl=
+e: solid; width: 32px;" /></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://www.instagra=
+m.com/XXXXXX"><img alt=3D"instagram icon" width=3D"32" src=3D"https://duart=
+eforms.house.gov/images/email/instagram.png" style=3D"border-width: 0px; bo=
+rder-style: solid; width: 32px;" /></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://www.youtube.=
+com/channel/XXXXXX"><img alt=3D"youtube icon" width=3D"32" src=3D"https://d=
+uarteforms.house.gov/images/email/youtube.png" style=3D"border-width: 0px; =
+border-style: solid; width: 32px;" /></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"height:=
+30px; background-color: #892106;">
+                    &nbsp;
+                    </td>
+                </tr> -->
+                <tr>
+                    <td valign=3D"middle" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;background-color: #892106;">
+                    <table role=3D"presentation" cellpadding=3D"0" cellspac=
+ing=3D"20" align=3D"center" width=3D"90%" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #892=
+106; font-size: 15px; font-family: Arial, Helvetica, sans-serif;">
+                                <a target=3D"_blank" href=3D"https://duarte=
+forms.house.gov/forms/emailsignup/?delete=3Dtrue" style=3D"-webkit-text-siz=
+e-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; text-decoration:=
+none; font-family: Arial, Helvetica, sans-serif;">Unsubscribe</a>&nbsp;|&nb=
+sp;
+                                <a target=3D"_blank" href=3D"https://urldef=
+ense.com/v3/__https://www.facebook.com/sharer.php?u=3Dhttps:**Aduarte.house=
+.gov*news*email*show.aspx*ID=3DMWQDHSS7VQGDC&amp;t=3D*subject*__;Ly8vLy8_W1=
+0!!Fr0YZsIsFWxTZsBm-qTAg68!hs7z0o29AjzNs5wtdGVgDeb7JvH2GyuXmBvrzs09cannx-kD=
+34K5-AFtoFqL8c976SqqxqgSU9RYi0WVUgOcqgVYznfzDUqokZOZeg$" style=3D"-webkit-t=
+ext-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; text-deco=
+ration:none; font-family: Arial, Helvetica, sans-serif;">Share on Facebook<=
+/a>&nbsp;|&nbsp;
+                                <a target=3D"_blank" href=3D"https://duarte=
+forms.house.gov/Components/Redirect/twitter.aspx?url=3Dhttps://duarte.house=
+.gov/news/email/show.aspx?ID=3DMWQDHSS7VQGDC&amp;name=3D[subject]" style=3D=
+"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff;=
+ text-decoration:none; font-family: Arial, Helvetica, sans-serif;">Share on=
+ Twitter</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #892106;">
+                    &nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>=
+
+----boundary_1515_0ead17e1-88a4-4349-b1a7-21389f7f92aa--

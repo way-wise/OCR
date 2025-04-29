@@ -1,0 +1,505 @@
+Received: from SJ0PR09MB6512.namprd09.prod.outlook.com (2603:10b6:a03:26e::21)
+ by BLAPR09MB6500.namprd09.prod.outlook.com with HTTPS; Wed, 15 Dec 2021
+ 20:11:31 +0000
+Received: from MWHPR09CA0003.namprd09.prod.outlook.com (2603:10b6:300:80::13)
+ by SJ0PR09MB6512.namprd09.prod.outlook.com (2603:10b6:a03:26e::21) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.4778.17; Wed, 15 Dec
+ 2021 20:11:30 +0000
+Received: from DM3GCC02FT009.eop-gcc02.prod.protection.outlook.com
+ (2a01:111:f400:7d04::201) by MWHPR09CA0003.outlook.office365.com
+ (2603:10b6:300:80::13) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.4801.14 via Frontend
+ Transport; Wed, 15 Dec 2021 20:11:29 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.151.112)
+ smtp.mailfrom=mail.house.gov; dkim=fail (body hash did not verify)
+ header.d=house.gov;dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.151.112 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.151.112;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.151.112) by
+ DM3GCC02FT009.mail.protection.outlook.com (10.97.8.187) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.4778.12 via Frontend Transport; Wed, 15 Dec 2021 20:11:29 +0000
+Received: from EXCH1914.US.House.gov (143.228.151.104) by
+ EXCH1913.US.House.gov (143.228.151.112) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.2.986.14; Wed, 15 Dec 2021 15:11:28 -0500
+Received: from serg-bulk1-h.house.gov (143.228.145.31) by
+ EXCH1914.US.House.gov (143.228.151.104) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.986.14
+ via Frontend Transport; Wed, 15 Dec 2021 15:11:28 -0500
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=message-id :
+ list-unsubscribe : mime-version : from : to : date : subject :
+ content-type; s=august2019-msgb-hg;
+ bh=e16oHlB8z/TGSUToVEyQ0hUu3jLg8YyFCHjpUltU2vA=;
+ b=V8ULhAn1JgiCVqkUJWCDBJPD+AyqsqEvixz4f69R49F60eSLVGi7hsPMZuTwTe4ROfPD
+ u5WWzGcY90WiH+hDvoSUpr05MTuRmKsoMvLRdoq/eN8saHXdPkJV4eXaMOBMRj2B5VvX
+ +/wqE+dkIwlZfGgiSB2oeotkh5zFWeh8wsvOsPktUlC1ZeQTcCCiKVtALY70i+YfTraI
+ AQRuNNxXEqdZinN+SNTzD3Pibkihd4+moPwzBZ182ulurDTQm0W7HhfM9Idg1cofd1OO
+ X0IiC3uVnqkXcOfpd8bh+YJES461QDuK8I2busB8vq9BEKY3M4xTwyiQ94W9Biqz/3qV rA== 
+Received: from FIRESIDESERV06 (firesideserv06.us.house.gov [143.228.58.67])
+	by serg-bulk1-h.house.gov (8.16.1.2/8.16.1.2) with ESMTP id 1BFKBSoP008840
+	for <Carter.Moelk@mail.house.gov>; Wed, 15 Dec 2021 15:11:28 -0500
+envelope-from: trey@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+Message-ID: <SMmXJgVI0cZB14r1IJlBGjdcGxjLt/vy/NAlbnj+yIjG7Kw4vThyJvJbUyKw3QTZi0AEEGObFhQRgLcvIyTxFEBxDMFEkpCaje8y/h709fql7VgWnXzu/LyG6tGYsKVlAylBnv3YZ+8WHiljM+dGGt80OiVpy+hr57sTsVZWrNAioxuJQfWeKLoC2hxALwM6@fireside21.com>
+X-House-Vendor-Seg: unmanaged
+List-Unsubscribe: <https://hollingsworth.house.gov/forms/emailsignup/?Delete=true&MessageID=1509&Email=Carter.Moelk@mail.house.gov&Submit=true>
+Precedence: bulk
+MIME-Version: 1.0
+From: "Rep. Trey Hollingsworth" <trey@mail.house.gov>
+To: Carter.Moelk@mail.house.gov
+Date: 15 Dec 2021 15:11:28 -0500
+Subject: Poll: Noncitizens Voting in Federal Elections
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:6.0.425,18.0.790
+ definitions=2021-12-15_05:2021-12-13,2021-12-15 signatures=0
+Return-Path: RepresentativeTrey.Hollingsworth@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1913.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 15 Dec 2021 20:11:29.6491
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 567817c6-6bba-4212-bcf2-08d9c00714d5
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1914.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted:
+ DM3GCC02FT009.eop-gcc02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ DM3GCC02FT009.eop-gcc02.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: 567817c6-6bba-4212-bcf2-08d9c00714d5
+X-MS-TrafficTypeDiagnostic: SJ0PR09MB6512:EE_
+X-MS-Exchange-Organization-SCL: -1
+X-MS-Oob-TLC-OOBClassifiers: OLM:7219;
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:143.228.151.112;CTRY:US;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SKI;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:;DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 15 Dec 2021 20:11:29.5866
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 567817c6-6bba-4212-bcf2-08d9c00714d5
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.151.112];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1914.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SJ0PR09MB6512
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.6295681
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.4801.014
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506458)(944626604)(920097)(425001)(930097);
+X-Microsoft-Antispam-Message-Info:
+	4E9leWwAz0ZNg44+1CLVKKFo7avmiqn0zA61yl0bTDXoskGj9F748h/qFmDPjX6M1Tg927GB6vrR0CKJObRlRPR4nBCSEIbJpuMOpHYzCSRI685BRLYr+B6pzaJNERJIRG1Zh2Yd8mStKk53keo7BIKCRaqlRW0PFEdF2LEkI1+IO9v7J2+WgWTRG9DvwX246Ng5MsbTSuWqUtEVCVe8ihc7CrG3fqBVMtCZqr7op5ViJOvYBbOlneVGrbVkktgPeS58SR5jfdWxu+Va5wloNHGyHCqyWO8rImIL8UCM7cSv0JEvrJY0tMPu2AOGEd0AwZ2KUzN9P8EhqDIeIXbI+tAnQkaI9Ab/1NzPUT2ZEbfuHHjZ2NNF1cK+RmznlHl8yWwXcZ0hZqMBQhyWtffGbBC3pPq+1KkXBcWcoE7AH0xkq/MEgOzhgdDlebB3MD+Ygj1KLl4HVh5Y2RF1Ek9b8DskljHMLwb8mZvE5ayc3OVcth5By9OJGhOe/WRc5OeMXpQ99wefyHXCFZCt7QornpDYVDhmA9yLFM9oBq5YPfuheVa7UCQhbMU1OWKxMl8kDVypSKsdiP0hLXbcYZ8xdqvbstBVIFS6VTeYFfu9vgiJBoUlsJCCGbybtRfWy0NgydJxHsoD6j1mNJldhYPYI9iVfDOzmM5zDYK6D+fdChQ=
+Content-type: multipart/alternative;
+	boundary="B_3722426785_1127445160"
+
+> This message is in MIME format. Since your mail reader does not understand
+this format, some or all of this message may not be legible.
+
+--B_3722426785_1127445160
+Content-type: text/plain;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+Dear Hoosiers, The Constitution designates election authority and protocols=
+ to the States; however, U.S. election regulations are subject to change by =
+Congress. In 1996, Congress passed the Illegal Immigration Reform and Immigr=
+ant Responsibility Act, which established that it is unlawful for a noncitiz=
+en to vote in federal elections.  While it remains illegal for noncitizens, =
+such as visa holders or green card holders, to vote in federal elections, se=
+veral municipalities across the United States have allowed noncitizens to vo=
+te in local elections in recent years. Most recently, New York City passed a=
+ measure allowing about 800,000 noncitizens to vote in local elections.    T=
+hose who support noncitizens voting note that noncitizens pay taxes that sup=
+port government programs, so they deserve to be represented in local and sta=
+te elections. Opponents of noncitizens voting believe that noncitizens shoul=
+d attain citizenship, and accept all responsibility that comes with that tit=
+le, before attaining the right to vote.   QUESTION OF THE WEEK: Should the f=
+ederal government extend voting privileges to noncitizens for federal electi=
+ons?  [_] Yes[_] No [_] I don=E2=80=99t know[_] Other=20
+Dear Hoosiers, The Constitution designates election authority and protocols=
+ to the States; however, U.S. election regulations are subject to change by =
+Congress. In 1996, Congress passed the Illegal Immigration Reform and Immigr=
+ant Responsibility Act, which established that it is unlawful for a noncitiz=
+en to vote in federal elections.  While it remains illegal for noncitizens, =
+such as visa holders or green card holders, to vote in federal elections, se=
+veral municipalities across the United States have allowed noncitizens to vo=
+te in local elections in recent years. Most recently, New York City passed a=
+ measure allowing about 800,000 noncitizens to vote in local elections.    T=
+hose who support noncitizens voting note that noncitizens pay taxes that sup=
+port government programs, so they deserve to be represented in local and sta=
+te elections. Opponents of noncitizens voting believe that noncitizens shoul=
+d attain citizenship, and accept all responsibility that comes with that tit=
+le, before attaining the right to vote.   QUESTION OF THE WEEK: Should the f=
+ederal government extend voting privileges to noncitizens for federal electi=
+ons?  [_] Yes[_] No [_] I don=E2=80=99t know[_] Other
+      =20
+ =20
+Jeffersonville
+321 Quartermaster Court
+Jeffersonville, IN 47130
+Phone: 812.288.3999
+Franklin
+100 E Jefferson Street
+Franklin, IN 46131
+Phone: 317.851.8710
+Washington, D.C.
+1641 Longworth HOB
+Washington, DC 20515
+Phone: 202.225.5315
+ =20
+Unsubscribe=20
+ =20
+ =20
+NOTE: Please DO NOT respond to this email as this inbox is unattended. To c=
+ontact my office please click here
+
+ =20
+=20
+Click Here to view this email in your browser=20
+Click Here to be removed from this list 
+
+--B_3722426785_1127445160
+Content-type: text/html;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><title>P=
+oll: Noncitizens Voting in Federal Elections</title><meta name=3D"viewport" co=
+ntent=3D"width=3Ddevice-width, initial-scale=3D1"><!--[if !mso]><!--><meta http-eq=
+uiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![endif]--><style>body, table, =
+td, a{-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;} /* Preven=
+t WebKit and Windows mobile changing default text sizes */ img{-ms-interpola=
+tion-mode: bicubic;} /* Allow smoother rendering of resized image in Interne=
+t Explorer *//* RESET STYLES */img { border: 0; height: auto; line-height: 1=
+00%; outline: none; text-decoration: none; }table { border-collapse: collaps=
+e !important; }body { height: 100% !important; margin: 0 !important; padding=
+: 0 !important; width: 100% !important; }strong { font-weight: bold; } /* Ed=
+itor reset *//* FIRESIDE STYLES */.component img {max-width:600px;}.componen=
+t table {mso-table-rspace:10pt; border-collapse:collapse;}.component { paddi=
+ng: 0px !important; }.press {padding-bottom: 0px;}</style><style>@media all =
+and (max-width:650px) {            .image-1, .caption-1, .img-1 img, .image-=
+1 tr, .image-1 td, .image-2, .img-2 img, .image-2 tr, .image-2 td {max-width=
+: 100% !important; width: 100% !important;}            .responsive-table {wi=
+dth:100% !important;}            .responsive-table img {max-width:100% !impo=
+rtant; height: auto !important;}            .press .component, .press td {te=
+xt-align:center;}            .component { margin-left: 20px; margin-right: 2=
+0px;}            .component .responsive-table { margin-left: 0px !important;=
+ margin-right: 0px !important;}            .wide .video-thumb { width: 100% =
+!important;height: auto !important; }             .wide.video-container { wi=
+dth: 100% !important; }         .component.full-width {margin-left: 0px; mar=
+gin-right: 0px; }   }</style><style type=3D"text/css">
+            /* CLIENT-SPECIFIC STYLES */
+            body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text =
+sizes */
+            table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Rem=
+ove spacing between tables in Outlook 2007 and up */
+            img{-ms-interpolation-mode: bicubic;} /* Allow smoother renderi=
+ng of resized image in Internet Explorer */
+            /* RESET STYLES */
+            img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: =
+0 !important; width: 100% !important; }
+            strong { font-weight: bold; } /* Editor reset */
+            /* FIRESIDE STYLES */
+            .component img {max-width:600px;}
+            .component table {mso-table-rspace:10pt; border-collapse:collap=
+se; font-family: Arial, Helvetica, sans-serif;}
+            .component td, td {font-family: Arial, Helvetica, sans-serif;}
+            .component { padding: 0px !important; }
+            .press {padding-bottom: 0px;}
+            .caption-1 td {font-family: Arial, Helvetica, sans-serif;}
+            /* Margin/NoMargin STYLES */
+            .component.full-width{ overflow: hidden; margin: 0px; }
+            /* HEADER STYLES */
+            .header-bar {width: 100%;}
+            .header-bar-margin {background-color:#ffffff;}
+            .header-bar h2 {margin: 0 !important; padding: 0 !important; co=
+lor: #000000;text-align: center;font-size: 24px;font-weight: bold; }
+            .survey-content > table > tbody tr td { border-color: #2e4e7b !=
+important; }
+            .survey-content input.survey-submit { font-family: Arial, Helve=
+tica, sans-serif !important; }
+        </style><style id=3D"media-queries"> 
+            @media all and (max-width:650px) {
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max=
+-width: 100% !important; width: 100% !important;}
+            .responsive-table {width:100% !important;}
+            .responsive-table img {max-width:100% !important; height: auto =
+!important;}
+            .press .component, .press td, .split .component, .split .compon=
+ent td, .split td {text-align:center;}
+            .component { margin-left: 20px; margin-right: 20px;}
+            .component .responsive-table { margin-left: 0px !important; mar=
+gin-right: 0px !important;}
+            .wide .video-thumb { width: 100% !important;height: auto !impor=
+tant; } 
+            .wide.video-container { width: 100% !important; }
+            }
+        </style><!--[if (gte mso 9)|(IE)]>
+                                            <style>=20
+                                        </style>
+                                        <![endif]--></head><body style=3D"-we=
+bkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;margin: 0px !importa=
+nt; padding: 0px !important;"><div id=3D"preview-text" style=3D"display: none; f=
+ont-size: 1px; color: #fefefe; line-height: 1px; font-family: Arial, Helveti=
+ca, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidde=
+n;">Dear Hoosiers,&nbsp;The Constitution designates election authority and p=
+rotocols to the States; however, U.S. election regulations are subject to ch=
+ange by Congress. In 1996, Congress passed the Illegal Immigration Reform an=
+d Immigrant Responsibility Act, which established that it is unlawful for a =
+noncitizen to vote in federal elections.&nbsp;&nbsp;While it remains illegal=
+ for noncitizens, such as visa holders or green card holders, to vote in fed=
+eral elections, several municipalities across the United States have allowed=
+ noncitizens to vote in local elections in recent years. Most recently,&nbsp=
+;New York City passed a measure&nbsp;allowing about 800,000 noncitizens&nbsp=
+;to&nbsp;vote in local elections.&nbsp;&nbsp;&nbsp;&nbsp;Those who support n=
+oncitizens voting note that noncitizens pay&nbsp;taxes&nbsp;that support&nbs=
+p;government programs, so they deserve to be represented in local and state =
+elections. Opponents of noncitizens voting believe that noncitizens should a=
+ttain citizenship, and accept all responsibility that comes with that title,=
+ before attaining the right to vote.&nbsp;&nbsp;&nbsp;QUESTION OF THE WEEK: =
+Should the federal government extend voting privileges to noncitizens for fe=
+deral elections?&nbsp;&nbsp;[_] Yes[_] No&nbsp;[_] I don=E2=80=99t know[_] Other <=
+/div><table role=3D"presentation" width=3D"650" align=3D"center" class=3D"responsive=
+-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: Arial, Helvetica, sans-serif; background-color: #ffffff;" border=3D=
+"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmar=
+gin=3D"0" topmargin=3D"0"><tbody><tr><td align=3D"center" valign=3D"top" style=3D"-web=
+kit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, H=
+elvetica, sans-serif; font-size: 16px;"><div class=3D"region" id=3D"region-1"><d=
+iv class=3D"component full-width" style=3D"padding: 0px !important;"><div class=3D=
+"image" style=3D"overflow: hidden;width:100%"><table class=3D"responsive-table" =
+role=3D"presentation" align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; b=
+order-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust=
+: 100%;float: left; table-layout: fixed; margin-right: 0px; margin-left: 0px=
+;" width=3D"650"><tbody><tr><td valign=3D"top" class=3D"image-td" style=3D"-webkit-t=
+ext-size-adjust: 100%; -ms-text-size-adjust: 100%;"><div class=3D"img-1 image-=
+container" style=3D"overflow: hidden;"><a href=3D"https://hollingsworth.house.go=
+v/components/redirect/r.aspx?ID=3D4660-1494513" target=3D"_blank" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img style=3D"max-width:=
+600px;-ms-interpolation-mode: bicubic;vertical-align: bottom; max-width: 650=
+px;" alt=3D"Representative Trey Hollingsworth" src=3D"https://hollingsworth.hous=
+e.gov/uploadedphotos/highresolution/6a59fc1d-54ff-4c75-b9af-8f9b356cf98c.png=
+"></a></div></td></tr></tbody></table></div></div></div></td></tr></tbody></=
+table><table role=3D"presentation" width=3D"650" align=3D"center" class=3D"responsiv=
+e-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;b=
+ackground-color: #ffffff; font-family: Arial, Helvetica, sans-serif;" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftma=
+rgin=3D"0" topmargin=3D"0"><tbody><tr><td class=3D"responsive-table" valign=3D"top" =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-famil=
+y: Arial, Helvetica, sans-serif; font-size: 16px; color: #000000;"><div clas=
+s=3D"region" id=3D"region-2"><div class=3D"component " style=3D"padding: 0px !import=
+ant;"><div class=3D"editable" style=3D"overflow: hidden;width:100%"><table class=
+=3D"responsive-table" role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10=
+pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-a=
+djust: 100%;table-layout: fixed; margin-right: 20px; margin-left: 20px;" wid=
+th=3D"610"><tbody><tr><td class=3D"table-w-bg-color" valign=3D"top" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><div class=3D"cke_editab=
+le cke_editable_inline cke_contents_ltr cke_focus cke_show_borders" style=3D"o=
+verflow: hidden;"><div style=3D"overflow: hidden;overflow:hidden; background-c=
+olor:#ffffff"><p style=3D"margin: 0;"><span style=3D"font-size:12pt"><span style=
+=3D"font-family:Calibri,sans-serif"><span style=3D"font-size:11.0pt"><span style=
+=3D"color:black">Dear Hoosiers,<u1:p></u1:p></span></span></span></span></p><p=
+ style=3D"margin: 0;text-align:start"><span style=3D"font-size:12pt"><span style=
+=3D"font-family:Calibri,sans-serif"><span style=3D"font-size:11.0pt"><span style=
+=3D"color:black"><u1:p>&nbsp;</u1:p></span></span></span></span></p><p style=3D"=
+margin: 0;text-align:start"><span style=3D"font-size:12pt"><span style=3D"font-f=
+amily:Calibri,sans-serif"><span style=3D"font-size:11.0pt"><span style=3D"color:=
+black">The Constitution designates election authority and protocols to the S=
+tates; however, U.S. election regulations are subject to change by Congress.=
+ In 1996, Congress passed the Illegal Immigration Reform and Immigrant Respo=
+nsibility Act, which established that it is unlawful for a noncitizen to vot=
+e in federal elections.&nbsp;<u1:p></u1:p></span></span></span></span></p><p=
+ style=3D"margin: 0;text-align:start"><span style=3D"font-size:12pt"><span style=
+=3D"font-family:Calibri,sans-serif"><span style=3D"font-size:11.0pt"><span style=
+=3D"color:black"><u1:p>&nbsp;</u1:p></span></span></span></span></p><p style=3D"=
+margin: 0;text-align:start"><span style=3D"font-size:12pt"><span style=3D"font-f=
+amily:Calibri,sans-serif"><span style=3D"font-size:11.0pt"><span style=3D"color:=
+black">While it remains illegal for noncitizens, such as visa holders or gre=
+en card holders, to vote in federal elections, several municipalities across=
+ the United States have allowed noncitizens to vote in local elections in re=
+cent years. Most recently,&nbsp;<a data-cke-saved-href=3D"https://hollingswort=
+h.house.gov/components/redirect/r.aspx?ID=3D4661-1494513" href=3D"https://www.ws=
+j.com/articles/almost-anybody-can-now-vote-in-new-york-noncitizen-illegal-al=
+ien-election-interference-11639331608" title=3D"https://www.wsj.com/articles/a=
+lmost-anybody-can-now-vote-in-new-york-noncitizen-illegal-alien-election-int=
+erference-11639331608" contenteditable=3D"false" style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;color:#0563c1; text-decoration:underlin=
+e"><span style=3D"color:black;mso-themecolor:text1">New York City passed a mea=
+sure</span></a>&nbsp;allowing about 800,000 noncitizens&nbsp;to&nbsp;vote in=
+ local elections.&nbsp;&nbsp;<u1:p></u1:p></span></span></span></span></p><p=
+ style=3D"margin: 0;text-align:start"><span style=3D"font-size:12pt"><span style=
+=3D"font-family:Calibri,sans-serif"><span style=3D"font-size:11.0pt"><span style=
+=3D"color:black"><u1:p>&nbsp;</u1:p>&nbsp;</span></span></span></span></p><p s=
+tyle=3D"margin: 0;"><span style=3D"font-size:12pt"><span style=3D"font-family:Cali=
+bri,sans-serif"><span style=3D"font-size:11.0pt"><span style=3D"color:black">Tho=
+se who support noncitizens voting note that noncitizens pay&nbsp;taxes&nbsp;=
+that support&nbsp;government programs, so they deserve to be represented in =
+local and state elections. Opponents of noncitizens voting believe that nonc=
+itizens should attain citizenship, and accept all responsibility that comes =
+with that title, before attaining the right to vote.&nbsp;&nbsp;<u1:p></u1:p=
+></span></span></span></span></p><p style=3D"margin: 0;text-align:start"><span=
+ style=3D"font-size:12pt"><span style=3D"font-family:Calibri,sans-serif"><span s=
+tyle=3D"font-size:11.0pt"><span style=3D"color:black"><u1:p>&nbsp;</u1:p></span>=
+</span></span></span></p><p style=3D"margin: 0;text-align:start"><a data-cke-s=
+aved-href=3D"https://hollingsworth.house.gov/components/redirect/r.aspx?ID=3D466=
+2-1494513" target=3D"_blank" href=3D"https://hollingsworth.house.gov/forms/form/=
+?ID=3D154" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"=
+><span style=3D"font-size:12pt"><span style=3D"font-family:Calibri,sans-serif"><=
+span style=3D"font-size:11.0pt"><span style=3D"color:black"><strong style=3D"font-=
+weight: bold;">QUESTION OF THE WEEK</strong>: Should the federal government =
+extend voting privileges to noncitizens for federal elections?&nbsp;</span><=
+/span></span></span></a><span style=3D"font-size:12pt"><span style=3D"font-famil=
+y:Calibri,sans-serif"><span style=3D"font-size:11.0pt"><span style=3D"color:blac=
+k"><u1:p></u1:p></span></span></span></span></p><p style=3D"margin: 0;text-ali=
+gn:start"><span style=3D"font-size:12pt"><span style=3D"font-family:Calibri,sans=
+-serif"><span style=3D"font-size:11.0pt"><span style=3D"color:black"><u1:p>&nbsp=
+;</u1:p></span></span></span></span></p><p style=3D"margin: 0;text-align:start=
+"><span style=3D"font-size:12pt"><span style=3D"font-family:Calibri,sans-serif">=
+<span style=3D"font-size:11.0pt"><span style=3D"color:black"><a data-cke-saved-h=
+ref=3D"https://hollingsworth.house.gov/components/redirect/r.aspx?ID=3D4663-1494=
+513" target=3D"_blank" href=3D"https://hollingsworth.house.gov/forms/form/?ID=3D15=
+4" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">[_]</=
+a> Yes<u1:p></u1:p></span></span></span></span></p><p style=3D"margin: 0;text-=
+align:start"><span style=3D"font-size:12pt"><span style=3D"font-family:Calibri,s=
+ans-serif"><span style=3D"font-size:11.0pt"><span style=3D"color:black"><a data-=
+cke-saved-href=3D"https://hollingsworth.house.gov/components/redirect/r.aspx?I=
+D=3D4664-1494513" target=3D"_blank" href=3D"https://hollingsworth.house.gov/forms/=
+form/?ID=3D154" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;">[_]</a> No&nbsp;<u1:p></u1:p></span></span></span></span></p><p style=3D=
+"margin: 0;text-align:start"><span style=3D"font-size:12pt"><span style=3D"font-=
+family:Calibri,sans-serif"><span style=3D"font-size:11.0pt"><span style=3D"color=
+:black"><a data-cke-saved-href=3D"https://hollingsworth.house.gov/components/r=
+edirect/r.aspx?ID=3D4665-1494513" target=3D"_blank" href=3D"https://hollingsworth.=
+house.gov/forms/form/?ID=3D154" style=3D"-webkit-text-size-adjust: 100%; -ms-tex=
+t-size-adjust: 100%;">[_]</a> I don=E2=80=99t know<u1:p></u1:p></span></span></spa=
+n></span></p><p style=3D"margin: 0;text-align:start"><span style=3D"font-size:12=
+pt"><span style=3D"font-family:Calibri,sans-serif"><span style=3D"font-size:11.0=
+pt"><span style=3D"color:black"><a data-cke-saved-href=3D"https://hollingsworth.=
+house.gov/components/redirect/r.aspx?ID=3D4666-1494513" target=3D"_blank" href=3D"=
+https://hollingsworth.house.gov/forms/form/?ID=3D154" style=3D"-webkit-text-size=
+-adjust: 100%; -ms-text-size-adjust: 100%;">[_]</a> Other</span></span></spa=
+n></span></p></div></div></td></tr></tbody></table></div></div></div><table =
+role=3D"presentation" class=3D"responsive-table" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;"><tbody><tr height=3D"20"><td style=3D"-webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><span></span></td></=
+tr></tbody></table></td></tr></tbody></table><table role=3D"presentation" widt=
+h=3D"650" class=3D"responsive-table" align=3D"center" style=3D"-webkit-text-size-adj=
+ust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, sans-se=
+rif; background-color: #2e4e7b;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><tbody><tr><td=
+ valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-t=
+ext-size-adjust: 100%;color: #2e4e7b; background-color: #ffffff;"><a target=3D=
+"_blank" href=3D"https://hollingsworth.house.gov/components/redirect/r.aspx?ID=
+=3D4667-1494513" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: =
+100%;"><img alt=3D"instagram icon" width=3D"40" src=3D"https://hollingsworth.house=
+.gov/images/email/web.png" style=3D"-ms-interpolation-mode: bicubic;border-wid=
+th: 0px; border-style: solid; width: 40px;"></a> &nbsp;<a target=3D"_blank" hr=
+ef=3D"https://hollingsworth.house.gov/components/redirect/r.aspx?ID=3D4668-14945=
+13" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img=
+ alt=3D"facebook icon" width=3D"40" src=3D"https://hollingsworth.house.gov/images/=
+email/fb.png" style=3D"-ms-interpolation-mode: bicubic;border-width: 0px; bord=
+er-style: solid; width: 40px;"></a> &nbsp;<a target=3D"_blank" href=3D"https://h=
+ollingsworth.house.gov/components/redirect/r.aspx?ID=3D4669-1494513" style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"twitter=
+ icon" width=3D"40" src=3D"https://hollingsworth.house.gov/images/email/tw.png" =
+style=3D"-ms-interpolation-mode: bicubic;border-width: 0px; border-style: soli=
+d; width: 40px;"></a> &nbsp;<a target=3D"_blank" href=3D"https://hollingsworth.h=
+ouse.gov/components/redirect/r.aspx?ID=3D4670-1494513" style=3D"-webkit-text-siz=
+e-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"youtube icon" width=3D"=
+40" src=3D"https://hollingsworth.house.gov/images/email/yt.png" style=3D"-ms-int=
+erpolation-mode: bicubic;border-width: 0px; border-style: solid; width: 40px=
+;"></a> </td></tr><tr><td valign=3D"middle" align=3D"center" style=3D"-webkit-text=
+-size-adjust: 100%; -ms-text-size-adjust: 100%;height:10px; background-color=
+: #ffffff;">&nbsp; </td></tr><tr><td valign=3D"middle" align=3D"center" style=3D"-=
+webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; ba=
+ckground-color: #2e4e7b; padding: 0 20px;"><table role=3D"presentation" width=3D=
+"100%" cellpadding=3D"0" cellspacing=3D"10" style=3D"-webkit-text-size-adjust: 100=
+%; -ms-text-size-adjust: 100%;text-align:center;"><tbody><tr><td valign=3D"mid=
+dle" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adj=
+ust: 100%;text-align:center;"><table role=3D"presentation" cellpadding=3D"0" cla=
+ss=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"32.9%" style=3D"-web=
+kit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: arial, h=
+elvetica, sans-serif; text-align:center; font-size: 14px; color: #ffffff; ma=
+rgin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tbody><tr><td s=
+tyle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family=
+: Arial, Helvetica, sans-serif;"><strong style=3D"font-weight: bold;font-famil=
+y: Arial, Helvetica, sans-serif; text-transform: uppercase;">Jeffersonville<=
+/strong><br>321 Quartermaster Court<br>Jeffersonville, IN 47130<br>Phone: 81=
+2.288.3999<br></td></tr></tbody></table><table role=3D"presentation" cellpaddi=
+ng=3D"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"32.9%" s=
+tyle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family=
+: arial, helvetica, sans-serif; text-align:center; font-size: 14px; color: #=
+ffffff; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tbody=
+><tr><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;f=
+ont-family: Arial, Helvetica, sans-serif;"><strong style=3D"font-weight: bold;=
+font-family: Arial, Helvetica, sans-serif; text-transform: uppercase;">Frank=
+lin</strong><br>100 E Jefferson Street<br>Franklin, IN 46131<br>Phone: 317.8=
+51.8710<br></td></tr></tbody></table><table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"32.9%" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: a=
+rial, helvetica, sans-serif; text-align:center; font-size: 14px; color: #fff=
+fff; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tbody><t=
+r><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font=
+-family: Arial, Helvetica, sans-serif;"><strong style=3D"font-weight: bold;fon=
+t-family: Arial, Helvetica, sans-serif; text-transform: uppercase;">Washingt=
+on, D.C.</strong><br>1641 Longworth HOB<br>Washington, DC 20515<br>Phone: 20=
+2.225.5315<br></td></tr></tbody></table></td></tr></tbody></table></td></tr>=
+<tr><td valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-adjust: 100%=
+; -ms-text-size-adjust: 100%;height:10px; background-color: #2e4e7b;">&nbsp;=
+ </td></tr><tr><td valign=3D"middle" style=3D"-webkit-text-size-adjust: 100%; -m=
+s-text-size-adjust: 100%;background-color: #2e4e7b;"><table role=3D"presentati=
+on" cellpadding=3D"0" cellspacing=3D"20" align=3D"center" width=3D"90%" style=3D"-webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><tbody><tr><td valig=
+n=3D"middle" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-si=
+ze-adjust: 100%;color: #2e4e7b; font-size: 15px; font-family: Arial, Helveti=
+ca, sans-serif;"><a target=3D"_blank" href=3D"https://hollingsworth.house.gov/co=
+mponents/redirect/r.aspx?ID=3D4671-1494513" style=3D"-webkit-text-size-adjust: 1=
+00%; -ms-text-size-adjust: 100%;color: #ffffff; text-decoration:none; font-f=
+amily: Arial, Helvetica, sans-serif; font-size: 15px;">Unsubscribe</a> </td>=
+</tr></tbody></table></td></tr><tr><td valign=3D"middle" align=3D"center" style=3D=
+"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:10px; bac=
+kground-color: #2e4e7b;">&nbsp; </td></tr><tr><td valign=3D"middle" align=3D"cen=
+ter" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;heigh=
+t:10px; background-color: #D4AF37; font-size: 10px; line-height: 10px;">&nbs=
+p; </td></tr><tr><td valign=3D"middle" align=3D"center" style=3D"-webkit-text-size=
+-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; background-color: =
+#D4AF37; font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-al=
+ign: center;"><p style=3D"margin: 0;font-family: Arial, Helvetica, sans-serif;=
+ font-size: 12px; margin: 0; font-weight: normal; padding: 0 15pt;">NOTE: Pl=
+ease DO NOT respond to this email as this inbox is unattended. To contact my=
+ office please <a href=3D"https://hollingsworth.house.gov/components/redirect/=
+r.aspx?ID=3D4672-1494513" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size=
+-adjust: 100%;color: #ffffff; font-size: 12px;">click here</a></p></td></tr>=
+<tr><td valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-adjust: 100%=
+; -ms-text-size-adjust: 100%;height:10px; background-color: #D4AF37; font-si=
+ze: 10px; line-height: 10px;">&nbsp; </td></tr></tbody></table><table role=3D"=
+presentation" width=3D"100%" align=3D"center" style=3D"font-family: Georgia, times=
+, serif; background-color: #ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><tbody><tr=
+><td valign=3D"middle" align=3D"center" style=3D"color: #000000; font-size: 16px; =
+text-align: left;"><img src=3D"https://hollingsworth.house.gov/images/spacerx1=
+509-1494513.open" width=3D"20" height=3D"1" style=3D"height: 1px"> <br><a href=3D"ht=
+tps://hollingsworth.house.gov/news/email/show.aspx?ID=3DPW6QLCDS5I4VAQTS7CA7K5=
+7BC4">Click Here</a> to view this email in your browser <br><a href=3D"https:/=
+/hollingsworth.house.gov/Forms/EmailSignup/?Delete=3Dtrue&amp;MessageID=3D1509&a=
+mp;Email=3DCarter.Moelk@mail.house.gov">Click Here</a> to be removed from this=
+ list </td></tr></tbody></table></body></html>
+
+--B_3722426785_1127445160--
+

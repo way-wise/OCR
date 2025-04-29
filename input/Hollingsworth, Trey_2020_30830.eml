@@ -1,0 +1,725 @@
+Received: from DM6PR09MB5429.namprd09.prod.outlook.com (2603:10b6:5:268::9) by
+ BY5PR09MB5329.namprd09.prod.outlook.com with HTTPS; Thu, 10 Dec 2020 20:20:09
+ +0000
+Received: from MWHPR09CA0028.namprd09.prod.outlook.com (2603:10b6:300:6d::14)
+ by DM6PR09MB5429.namprd09.prod.outlook.com (2603:10b6:5:268::9) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.3654.12; Thu, 10 Dec
+ 2020 20:20:08 +0000
+Received: from BL0GCC02FT016.eop-gcc02.prod.protection.outlook.com
+ (2a01:111:f400:7d05::207) by MWHPR09CA0028.outlook.office365.com
+ (2603:10b6:300:6d::14) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.3654.12 via Frontend
+ Transport; Thu, 10 Dec 2020 20:20:08 +0000
+Authentication-Results: spf=softfail (sender IP is 143.231.249.134)
+ smtp.mailfrom=in.constantcontact.com; ushouse.mail.onmicrosoft.com; dkim=fail
+ (body hash did not verify)
+ header.d=auth.ccsend.com;ushouse.mail.onmicrosoft.com; dmarc=fail action=none
+ header.from=mail8.housecommunications.gov;
+Received-SPF: SoftFail (protection.outlook.com: domain of transitioning
+ in.constantcontact.com discourages use of 143.231.249.134 as permitted
+ sender)
+Received: from owa.house.gov (143.231.249.134) by
+ BL0GCC02FT016.mail.protection.outlook.com (10.97.10.110) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.3654.12 via Frontend Transport; Thu, 10 Dec 2020 20:20:07 +0000
+Received: from HRM201.US.House.gov (143.228.51.74) by EXGW203.US.House.gov
+ (143.228.51.91) with Microsoft SMTP Server (TLS) id 15.0.1497.2; Thu, 10 Dec
+ 2020 15:20:07 -0500
+Received: from serg-hub3-a.house.gov (143.228.50.180) by HRM201.US.House.gov
+ (143.228.51.74) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
+ Transport; Thu, 10 Dec 2020 15:20:07 -0500
+Authentication-Results-Original: house.gov;	spf=pass
+ smtp.mailfrom=A2sMU4RDZQR6V+jdv5XLDFw==_1133865901729_IOXhGGsaEeKCQojkYIhwmw==@in.constantcontact.com;
+	dkim=pass header.d=auth.ccsend.com header.s=1000073432;	dmarc=none
+ header.from=mail8.housecommunications.gov
+Received: from coi003.confirmedcc.com (coi003.confirmedcc.com [208.75.123.3])
+	by serg-hub3-a.house.gov (8.16.0.27/8.16.0.27) with ESMTPS id 0BAKK6hJ012883
+	(version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO)
+	for <carter.moelk@mail.house.gov>; Thu, 10 Dec 2020 15:20:06 -0500
+Received: from [10.252.0.101] ([10.252.0.101:44991] helo=p2-jbemailsyndicator23.ctct.net)
+	by 10.249.249.26 (envelope-from <A2sMU4RDZQR6V+jdv5XLDFw==_1133865901729_IOXhGGsaEeKCQojkYIhwmw==@in.constantcontact.com>)
+	(ecelerity 4.3.1.69340 r(Core:4.3.1.0)) with ESMTP
+	id 1B/B6-64548-6F282DF5; Thu, 10 Dec 2020 15:20:06 -0500
+DKIM-Signature: v=1; q=dns/txt; a=rsa-sha256; c=relaxed/relaxed; s=1000073432; d=auth.ccsend.com; h=date:mime-version:subject:X-Feedback-ID:X-250ok-CID:message-id:from:reply-to:list-unsubscribe:list-unsubscribe-post:to; bh=SmTaT4cfSnFUD7AkRhbbI0iBLY+0BvmXxcPfADL3U/g=; b=XVyXPB/zwGawsEgMkooj1sT07LtIgqSIsh8Zqm2WihuVIFWuRYBbWlQxWCuRISymPsKWnePp5DCcP6q+5Y3cxsE1KuDj4Pa8qS9kGGImKVr+5ssDZKAmoF3rEZ3+T7/RRFATu2vG3S/ZPea+FQMzqHMaJv9MiA6TLO5ZcmHUO44=
+Message-ID: <1135097557684.1133865901729.-1.0.251520JL.1001@scheduler.constantcontact.com>
+Date: Thu, 10 Dec 2020 15:20:06 -0500 (EST)
+From: "Rep. Trey Hollingsworth" <noreply@mail8.housecommunications.gov>
+Reply-To: noreply@mail8.housecommunications.gov
+To: carter.moelk@mail.house.gov
+Subject: Helping Hoosier Veterans
+MIME-Version: 1.0
+List-Unsubscribe: <https://visitor.constantcontact.com/do?p=un&m=001gUwAPvKf36geml4IGp12FA%3D%3D&se=001TAeZDpsMR68%3D&t=001EkZLEx15CcE%3D&llr=bvhz944ab>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-Campaign-Activity-ID: dac314e1-10d9-411e-95fa-376fe572c317
+X-250ok-CID: dac314e1-10d9-411e-95fa-376fe572c317
+X-Channel-ID: 20e5e118-6b1a-11e2-8242-88e46088709b
+X-Mailer: Roving Constant Contact 2012 (http://www.constantcontact.com)
+X-Return-Path-Hint: A2sMU4RDZQR6V+jdv5XLDFw==_1133865901729_IOXhGGsaEeKCQojkYIhwmw==@in.constantcontact.com
+X-Roving-Campaignid: 1135097557684
+X-Roving-Id: 1133865901729.-1
+X-Feedback-ID: 20e5e118-6b1a-11e2-8242-88e46088709b:dac314e1-10d9-411e-95fa-376fe572c317:1133865901729:CTCT
+X-CTCT-ID: 20e5e118-6b1a-11e2-8242-88e46088709b
+X-Proofpoint-HIR-SPF: spf_passed
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:6.0.343,18.0.737
+ definitions=2020-12-10_08:2020-12-09,2020-12-10 signatures=0
+X-Proofpoint-HIR-DMARC: none
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 suspectscore=0 malwarescore=0
+ phishscore=0 bulkscore=100 spamscore=0 mlxscore=0 mlxlogscore=999
+ adultscore=0 classifier=spam adjust=0 reason=mlx scancount=1
+ engine=8.0.1-2009150000 definitions=main-2012100128
+Return-Path:
+ A2sMU4RDZQR6V+jdv5XLDFw==_1133865901729_IOXhGGsaEeKCQojkYIhwmw==@in.constantcontact.com
+X-OrganizationHeadersPreserved: EXGW203.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 10 Dec 2020 20:20:07.7517
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ e87addaf-c059-4cba-6c00-08d89d48fcce
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: HRM201.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted:
+ BL0GCC02FT016.eop-gcc02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ BL0GCC02FT016.eop-gcc02.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: e87addaf-c059-4cba-6c00-08d89d48fcce
+X-MS-TrafficTypeDiagnostic: DM6PR09MB5429:
+X-MS-Exchange-Organization-SCL: -1
+X-MS-Oob-TLC-OOBClassifiers: OLM:7691;
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:143.231.249.134;CTRY:US;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SKI;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:;DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 10 Dec 2020 20:20:07.6608
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: e87addaf-c059-4cba-6c00-08d89d48fcce
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.231.249.134];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: HRM201.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM6PR09MB5429
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.3886259
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.3611.039
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(750128)(520011016)(706158)(944506458)(944626604);
+X-Microsoft-Antispam-Message-Info:
+	rwY5sYAy/mkt8/uvQJqc9TEb+iwwf9F0pTi/DzbyfjeFEEfuLVu7r2/u0Dr3SkrunctbBLU0MKifqHtBjStfssB9Xx2V/GoXF/StDFmNQXOEzlhYZ2ZN/L7qL0wdwkiccF6ZD64D0dclpjAoW/x/toKATck93r0TkpTI49b2pDdKddd1WmwJUePJb3JtRrbUl4Qjw4BvJzBxS90W03bFamYTBt9gXD8K4aUbKQpq9AqsFJuSbP4LaMhlq+nl/d3MJ/9CwzuB7Y9eH3oSyCKA8oNAHo9GNSALZMmdWRbgQXlagCxCRud3Q7d8Ezk3X3DPouTggFNnFsRKAK5w1RGTAl8+fIjyCeWCI8/6xVjy+0CTHEyuPHPgVFvp7oU2XGZ7eHfA8gIrgGmuSLJXh8HJc0IYE01g1uDWyrVfRGhWAZ8=
+Content-type: multipart/alternative;
+	boundary="B_3690458445_1605925941"
+
+> This message is in MIME format. Since your mail reader does not understand
+this format, some or all of this message may not be legible.
+
+--B_3690458445_1605925941
+Content-type: text/plain;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+Creating opportunities for our nation's heroes=20
+=20
+Hoosiers,
+
+Our nation=E2=80=99s veterans dedicate their lives to service and sacrifice on be=
+half of our great country. These heroes defend American lives, our ideals, o=
+ur freedoms, and a cause greater than themselves: the preservation and promi=
+se of the American dream.
+
+Our aim should always be to empower Americans to succeed. Our veterans, and=
+ especially those disabled in their service, should have the opportunity to =
+build a bright future for themselves. That is why, because of meetings with =
+Hoosier service-disabled veterans, I recently introduced the Investing in Ve=
+teran Entrepreneurial Talents (VETs) Act, to support service-disabled vetera=
+n-owned small businesses and increase economic opportunity for veterans.=20
+
+Our country should champion supporting those who defend it. In addition to =
+introducing this new legislation, I=E2=80=99m proud to have recently voted to:=20
+=20
+=C2=B7      Expand benefits for Vietnam-era veterans exposed to Agent Orange
+=C2=B7      Increase pay, housing benefits, and childcare for our current servi=
+cemembers
+=C2=B7      Strengthen safeguards against servicemember and veteran-targeted fr=
+aud
+
+America owes a debt of gratitude to our servicemembers and veterans. We sho=
+w our appreciation for their service and sacrifice by bolstering opportuniti=
+es and strengthening their futures.
+
+If you would like to continue to receive updates from my office on our effo=
+rts to support Hoosier veterans, please sign up for my e-newsletter.=20
+
+If you or someone you know is having issues receiving veteran benefits, ple=
+ase contact my office.  =20
+
+Be of good cheer,
+
+Rep. Trey Hollingsworth
+Rep. Trey Hollingsworth | Connect=20
+ =E2=80=8C  =E2=80=8C=20
+Rep. Trey Hollingsworth | 321 Quartermaster Ct., Jeffersonville, IN 47130=20
+Unsubscribe {recipient's email}=20
+Update Profile | About our service provider=20
+Sent by noreply@mail8.housecommunications.gov=20
+THIS IS A TEST EMAIL ONLY.
+This email was sent by the author for the sole purpose of testing a draft m=
+essage. If you believe you have received the message in error, please contac=
+t the author by replying to this message. Constant Contact takes reports of =
+abuse very seriously. If you wish to report abuse, please forward this messa=
+ge to abuse@constantcontact.com.
+
+
+--B_3690458445_1605925941
+Content-type: text/html;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+<!DOCTYPE html><html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><meta co=
+ntent=3D"width=3Ddevice-width, initial-scale=3D1.0" name=3D"viewport"><meta name=3D"vi=
+ewport" content=3D"width=3Ddevice-width, initial-scale=3D1, maximum-scale=3D1"><!--[=
+if gte mso 9]>
+<style id=3D"ol-styles">
+/* OUTLOOK-SPECIFIC STYLES */
+li {
+text-indent: -1em;
+padding: 0;
+margin: 0;
+line-height: 1.2;
+}
+ul, ol {
+padding: 0;
+margin: 0 0 0 40px;
+}
+p {
+margin: 0;
+padding: 0;
+margin-bottom: 0;
+}
+sup {
+font-size: 85% !important;
+}
+sub {
+font-size: 85% !important;
+}
+</style>
+<![endif]--><style id=3D"template-styles-head" data-premailer=3D"ignore">
+.footer-main-width {
+width: 610px!important;
+max-width: 610px;
+}
+table {
+border-collapse: collapse;
+table-layout: fixed;
+}
+.bgimage {
+table-layout: auto;
+}
+.preheader-container {
+color: transparent;
+display: none;
+font-size: 1px;
+line-height: 1px;
+max-height: 0px;
+max-width: 0px;
+opacity: 0;
+overflow: hidden;
+}
+/* LIST AND p STYLE OVERRIDES */
+.editor-text p {
+margin: 0;
+padding: 0;
+margin-bottom: 0;
+}
+.editor-text ul,
+.editor-text ol {
+padding: 0;
+margin: 0 0 0 40px;
+}
+.editor-text li {
+padding: 0;
+margin: 0;
+line-height: 1.2;
+}
+/* =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+CLIENT/BROWSER SPECIFIC OVERRIDES
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D */
+/* IE: correctly scale images with w/h attbs */
+img {
+-ms-interpolation-mode: bicubic;
+}
+/* Text Link Style Reset */
+a {
+text-decoration: underline;
+}
+/* iOS: Autolink styles inherited */
+a[x-apple-data-detectors] {
+text-decoration: underline !important;
+font-size: inherit !important;
+font-family: inherit !important;
+font-weight: inherit !important;
+line-height: inherit !important;
+color: inherit !important;
+}
+/* FF/Chrome: Smooth font rendering */
+.editor-text, .MainTextFullWidth {
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+/* Gmail/Web viewport fix */
+u + .body .template-body {
+width: 610px;
+}
+@media only screen and (max-width:480px) {
+u + .body .template-body {
+width: 100% !important;
+}
+}
+/* Office365/Outlook.com image reset */
+[office365] button, [office365] .divider-base div, [office365] .spacer-base=
+ div, [office365] .editor-image div { display: block !important; }
+</style><style>@media only screen and (max-width:480px) {
+table {
+border-collapse: collapse;
+}
+.main-width {
+width: 100% !important;
+}
+.mobile-hidden {
+display: none !important;
+}
+td.OneColumnMobile {
+display: block !important;
+}
+.OneColumnMobile {
+width: 100% !important;
+}
+td.editor-col .editor-text {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .editor-image.editor-image-hspace-on td {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .editor-button-container {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .editor-social td {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .block-margin {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col td.block-margin .editor-text {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.editor-col td.block-margin .editor-image.editor-image-hspace-on td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.editor-col td.block-margin .editor-button-container {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.editor-col td.block-margin .editor-social td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+.editor-button td > table tr > td {
+padding: 0px 0px 0px 0px !important;
+}
+.editor-button td > table tr > td td {
+padding: 9px 15px 10px 15px !important;
+}
+.layout {
+padding: 15px 9px 15px 9px !important;
+}
+.layout-container-border {
+padding: 0px 0px 0px 0px !important;
+}
+.layout-container {
+padding: 0px 0px 0px 0px !important;
+}
+.editor-image img {
+width: auto !important; margin-left: auto !important; margin-right: auto !i=
+mportant;
+}
+.editor-image .image-cell {
+padding-bottom: 15px !important;
+}
+.editor-text {
+font-size: 16px !important;
+}
+.section-headline-text {
+font-size: 24px !important;
+}
+.headline-text {
+font-size: 24px !important;
+}
+.subheadline-text {
+font-size: 20px !important;
+}
+.feature {
+padding-top: 0px !important; padding-bottom: 0px !important;
+}
+.layout-outer {
+padding: 0px 20px !important;
+}
+.feature-heading-text {
+font-size: 20px !important;
+}
+.feature-text {
+font-size: 16px !important;
+}
+.split.editor-col {
+margin-top: 0px !important;
+}
+.split.editor-col ~ .split.editor-col {
+margin-top: 10px !important;
+}
+.split-layout-margin {
+padding: 0px 20px !important;
+}
+.article {
+padding-top: 0px !important; padding-bottom: 0px !important;
+}
+.article-heading-text {
+font-size: 20px !important;
+}
+.article-text {
+font-size: 16px !important;
+}
+.social-container {
+text-align: center !important;
+}
+.social-text {
+font-size: 14px !important;
+}
+.cpn-heading-text {
+font-size: 28px !important;
+}
+.editor-cpn-heading-text {
+font-size: 28px !important;
+}
+td.col-divided .editor-col {
+border-right: 0px solid #869198 !important; border-bottom: 1px solid #86919=
+8 !important;
+}
+td.col-divided td.editor-col:last-of-type {
+border-bottom: 0 !important;
+}
+.col-divided {
+padding: 0 20px !important;
+}
+td.col-divided .editor-col .editor-text {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .editor-image.editor-image-hspace-on td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .editor-button-container {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .editor-social td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .block-margin {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+.action-block .poll-answer {
+width: 100% !important; display: block !important;
+}
+.action-block .poll-button {
+width: 100% !important;
+}
+div.MobileFooter {
+font-size: 11px !important;
+}
+td.FooterMobile {
+padding: 0px 10px 0px 10px !important;
+}
+td.MainCenter {
+width: 100% !important;
+}
+table.MainSide {
+display: none !important;
+}
+img.MainSide {
+display: none !important;
+}
+td.MainSide {
+display: none !important;
+}
+.rsvp-button-inner {
+padding: 0px 0px 10px 0px !important;
+}
+.rsvp-button-outer {
+width: 100% !important; max-width: 100% !important;
+}
+.footer-main-width {
+width: 100% !important;
+}
+.footer-mobile-hidden {
+display: none !important;
+}
+.footer-mobile-hidden {
+display: none !important;
+}
+.footer-column {
+display: block !important;
+}
+.footer-mobile-stack {
+display: block !important;
+}
+.footer-mobile-stack-padding {
+padding-top: 3px;
+}
+}
+@media only screen and (max-width:320px) {
+.layout {
+padding: 0px 0px 0px 0px !important;
+}
+}
+@media screen {
+@font-face {
+font-family: ''; font-style: normal; font-weight: 400; src: local(''), loca=
+l(''), url() format(''); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+=
+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+}
+</style></head><body class=3D"body" align=3D"center" style=3D"width: 100%; min-wi=
+dth: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; backg=
+round-color: #e6e6e6; margin: 0px; padding: 0px;" bgcolor=3D"#e6e6e6"><table c=
+lass=3D"template-body" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"text-=
+align: center; min-width: 100%;" width=3D"100%"><tbody><tr><td class=3D"preheade=
+r-container"><div><div id=3D"preheader" style=3D"display: none; font-size: 1px; =
+color: transparent; line-height: 1px; max-height: 0px; max-width: 0px; opaci=
+ty: 0; overflow: hidden;"><span data-entity-ref=3D"preheader">Creating opportu=
+nities for our nation's heroes</span> </div></div></td></tr><tr><td class=3D"t=
+emplate-shell-container" align=3D"center"><div class=3D"bgcolor" style=3D"backgrou=
+nd-color: #e6e6e6;"><table class=3D"bgimage" width=3D"100%" border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0" style=3D"background-color: #e6e6e6;" bgcolor=3D"#e6e6e6">=
+<tbody><tr><td align=3D"center"><table class=3D"main-width" width=3D"610" align=3D"c=
+enter" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"width: 610px;"><tbo=
+dy><tr><td class=3D"layout" align=3D"center" valign=3D"top" style=3D"padding: 15px 5=
+px;"><table width=3D"100%" align=3D"center" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0"><tbody><tr><td class=3D"layout-container-border" align=3D"center" valign=3D=
+"top" style=3D"background-color: #869198; padding: 0px;" bgcolor=3D"#869198"><ta=
+ble width=3D"100%" align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" s=
+tyle=3D"background-color: #869198;" bgcolor=3D"#869198"><tbody><tr><td class=3D"la=
+yout-container" align=3D"center" valign=3D"top" style=3D"background-color: #ffffff=
+; padding: 0;" bgcolor=3D"#ffffff"><div class=3D""><table width=3D"100%" cellpaddi=
+ng=3D"0" cellspacing=3D"0" border=3D"0" class=3D"galileo-ap-layout-editor" style=3D"mi=
+n-width: 100%;"><tbody><tr><td class=3D"editor-logo editor-col OneColumnMobile=
+" width=3D"100%" align=3D"left" valign=3D"top"><div class=3D"gl-contains-spacer"><ta=
+ble class=3D"editor-spacer" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" borde=
+r=3D"0"><tbody><tr><td class=3D"spacer-container" align=3D"center" valign=3D"top"><t=
+able width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tbody><tr><td =
+class=3D"spacer-base" style=3D"padding-bottom: 10px; height: 1px; line-height: 1=
+px;" width=3D"100%" align=3D"center" valign=3D"top"><div><img alt=3D"" width=3D"5" hei=
+ght=3D"1" border=3D"0" hspace=3D"0" vspace=3D"0" src=3D"https://imgssl.constantcontact=
+.com/letters/images/sys/S.gif" style=3D"display: block; height: 1px; width: 5p=
+x;"></div></td></tr></tbody></table></td></tr></tbody></table></div><div cla=
+ss=3D"gl-contains-image"><table class=3D"editor-image logo-container editor-imag=
+e-vspace-on" style=3D"min-width: 100%;" width=3D"100%" cellpadding=3D"0" cellspaci=
+ng=3D"0" border=3D"0"><tbody><tr><td align=3D"center" valign=3D"top" style=3D"padding-=
+top: 10px; padding-bottom: 10px;"><div class=3D"publish-container"><img alt=3D""=
+ class=3D"" style=3D"display: block; height: auto; max-width: 100%;" width=3D"250"=
+ border=3D"0" hspace=3D"0" vspace=3D"0" src=3D"https://files.constantcontact.com/1ae=
+9caff701/6339225e-8385-4f81-9a8b-bd9a931d6fd0.png"> </div></td></tr></tbody>=
+</table></div><div class=3D"gl-contains-spacer"><table class=3D"editor-spacer" w=
+idth=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tbody><tr><td class=3D=
+"spacer-container" align=3D"center" valign=3D"top"><table width=3D"100%" cellpaddi=
+ng=3D"0" cellspacing=3D"0" border=3D"0"><tbody><tr><td class=3D"spacer-base" style=3D"=
+padding-bottom: 10px; height: 1px; line-height: 1px;" width=3D"100%" align=3D"ce=
+nter" valign=3D"top"><div><img alt=3D"" width=3D"5" height=3D"1" border=3D"0" hspace=3D"=
+0" vspace=3D"0" src=3D"https://imgssl.constantcontact.com/letters/images/sys/S.g=
+if" style=3D"display: block; height: 1px; width: 5px;"></div></td></tr></tbody=
+></table></td></tr></tbody></table></div></td></tr></tbody></table><table wi=
+dth=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" class=3D"galileo-ap-layo=
+ut-editor" style=3D"min-width: 100%;"><tbody><tr><td class=3D"content editor-col=
+ OneColumnMobile" width=3D"100%" align=3D"left" valign=3D"top"><div class=3D"gl-cont=
+ains-text"><table width=3D"100%" style=3D"min-width: 100%;" cellpadding=3D"0" cell=
+spacing=3D"0" border=3D"0"><tbody><tr><td class=3D"editor-text content-text" align=
+=3D"left" valign=3D"top" style=3D"font-family: Arial, Verdana, Helvetica, sans-ser=
+if; font-size: 14px; color: #403F42; text-align: left; display: block; word-=
+wrap: break-word; line-height: 1.2; padding: 10px 20px;"><div></div><div cla=
+ss=3D"text-container galileo-ap-content-editor"><div><div><span style=3D"font-si=
+ze: 14px; color: rgb(0, 0, 0); font-family: Calibri, Helvetica, Arial, sans-=
+serif;">Hoosiers,</span></div><div><br></div><div><span style=3D"font-size: 14=
+px; color: rgb(0, 0, 0); font-family: Calibri, Helvetica, Arial, sans-serif;=
+">Our nation=E2=80=99s veterans dedicate their lives to service and sacrifice on b=
+ehalf of our great country. These heroes defend American lives, our ideals, =
+our freedoms, and a cause greater than themselves:&nbsp;the preservation and=
+ promise of the American dream.</span></div><div><br></div><div><span style=3D=
+"font-size: 14px; color: rgb(0, 0, 0); font-family: Calibri, Helvetica, Aria=
+l, sans-serif;">Our aim should always be to empower Americans to succeed. Ou=
+r veterans, and especially those disabled in their service, should have the =
+opportunity to build a bright future for themselves. That is why, because of=
+ meetings with Hoosier service-disabled veterans, </span><span style=3D"font-s=
+ize: 14px; color: rgb(0, 0, 0); font-family: Calibri, Helvetica, Arial, sans=
+-serif; font-weight: bold;">I recently introduced the Investing in Veteran E=
+ntrepreneurial Talents (VETs) Act</span><span style=3D"font-size: 14px; color:=
+ rgb(0, 0, 0); font-family: Calibri, Helvetica, Arial, sans-serif;">, to sup=
+port service-disabled veteran-owned small businesses and increase economic o=
+pportunity for veterans.</span> </div><div><br></div><div><span style=3D"font-=
+size: 14px; color: rgb(0, 0, 0); font-family: Calibri, Helvetica, Arial, san=
+s-serif;">Our country should champion supporting those who defend it.&nbsp;I=
+n addition to introducing this new legislation, </span><span style=3D"font-siz=
+e: 14px; color: rgb(0, 0, 0); font-family: Calibri, Helvetica, Arial, sans-s=
+erif; font-weight: bold;">I=E2=80=99m&nbsp;proud to&nbsp;have&nbsp;recently voted&=
+nbsp;to:</span> </div><div><span style=3D"font-size: 14px; color: rgb(0, 0, 0)=
+; font-family: Calibri, Helvetica, Arial, sans-serif;">&nbsp;</span></div><d=
+iv><span style=3D"font-size: 14px; color: rgb(0, 0, 0); font-weight: bold; fon=
+t-family: Calibri, Helvetica, Arial, sans-serif;">=C2=B7&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;Expand benefits for Vietnam-era veterans exposed to Agent Orange=
+</span></div><div><span style=3D"font-size: 14px; color: rgb(0, 0, 0); font-we=
+ight: bold; font-family: Calibri, Helvetica, Arial, sans-serif;">=C2=B7&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;Increase pay, housing benefits, and childcare for=
+ our current servicemembers</span></div><div><span style=3D"font-size: 14px; c=
+olor: rgb(0, 0, 0); font-weight: bold; font-family: Calibri, Helvetica, Aria=
+l, sans-serif;">=C2=B7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Strengthen safeguards =
+against servicemember and veteran-targeted fraud</span></div><div><br></div>=
+<div><span style=3D"font-size: 14px; color: rgb(0, 0, 0); font-family: Calibri=
+, Helvetica, Arial, sans-serif;">America owes a debt of gratitude to our ser=
+vicemembers and veterans. We show our appreciation for their service and sac=
+rifice by bolstering opportunities and strengthening their futures.</span></=
+div><div><br></div><div><span style=3D"font-size: 14px; color: rgb(0, 0, 0); f=
+ont-family: Calibri, Helvetica, Arial, sans-serif;">If you would like to con=
+tinue to receive updates from my office on our efforts to support Hoosier ve=
+terans, please </span><a href=3D"https://hollingsworth.house.gov/contact/subsc=
+ribe.htm" rel=3D"noopener noreferrer" target=3D"_blank" style=3D"font-size: 14px; =
+color: rgb(0, 0, 0); font-family: Calibri, Helvetica, Arial, sans-serif; fon=
+t-weight: normal; font-style: normal; text-decoration: underline;">sign up f=
+or my e-newsletter</a><span style=3D"font-size: 14px; color: rgb(0, 0, 0); fon=
+t-family: Calibri, Helvetica, Arial, sans-serif;">.</span> </div><div><br></=
+div><div><span style=3D"font-size: 14px; color: rgb(0, 0, 0); font-family: Cal=
+ibri, Helvetica, Arial, sans-serif;">If you or someone you know is having is=
+sues receiving veteran benefits, please </span><a href=3D"https://hollingswort=
+h.house.gov/contact/" rel=3D"noopener noreferrer" target=3D"_blank" style=3D"font-=
+size: 14px; color: rgb(0, 0, 0); font-family: Calibri, Helvetica, Arial, san=
+s-serif; font-weight: normal; font-style: normal; text-decoration: underline=
+;">contact my office. </a><span style=3D"font-size: 14px; color: rgb(0, 0, 0);=
+ font-family: Calibri, Helvetica, Arial, sans-serif;">&nbsp;</span> </div><d=
+iv><br></div><div><span style=3D"font-size: 14px; color: rgb(0, 0, 0); font-fa=
+mily: Calibri, Helvetica, Arial, sans-serif;">Be of good cheer,</span></div>=
+<div><br></div><div><span style=3D"font-size: 14px; color: rgb(0, 0, 0); font-=
+family: Calibri, Helvetica, Arial, sans-serif;">Rep. Trey Hollingsworth</spa=
+n></div></div></div></td></tr></tbody></table></div></td></tr></tbody></tabl=
+e><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" class=3D"gali=
+leo-ap-layout-editor" style=3D"min-width: 100%;"><tbody><tr><td class=3D"divider=
+-container editor-col OneColumnMobile" width=3D"100%" align=3D"left" valign=3D"top=
+"><div class=3D"gl-contains-divider"><table class=3D"editor-divider" width=3D"100%=
+" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"min-width: 100%;"><tbody=
+><tr><td class=3D"divider-container" align=3D"center" valign=3D"top"><table width=3D=
+"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" class=3D"galileo-ap-content-=
+editor" style=3D"cursor: default; min-width: 100%;"><tbody><tr><td class=3D"divi=
+der-base divider-solid" width=3D"100%" align=3D"center" valign=3D"top" style=3D"padd=
+ing: 9px 0px;"><table style=3D"height: 1px; width: 93%; min-width: 93%;" cellp=
+adding=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center"><tbody><tr><td height=3D"=
+1" align=3D"center" style=3D"border-bottom-style: none; height: 1px; line-height=
+: 1px; padding-bottom: 0px; background-color: #869198;" bgcolor=3D"#869198"><d=
+iv><img alt=3D"" width=3D"5" height=3D"1" border=3D"0" hspace=3D"0" vspace=3D"0" src=3D"ht=
+tps://imgssl.constantcontact.com/letters/images/sys/S.gif" style=3D"display: b=
+lock; height: 1px; width: 5px;"></div></td></tr></tbody></table></td></tr></=
+tbody></table></td></tr></tbody></table></div></td></tr></tbody></table><tab=
+le width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" class=3D"galileo-ap=
+-layout-editor" style=3D"min-width: 100%;"><tbody><tr><td class=3D"content edito=
+r-col OneColumnMobile" width=3D"50%" align=3D"left" valign=3D"top"><div><div class=
+=3D"column-resize-bar"><span class=3D"line"></span><span class=3D"grabber"></span>=
+</div></div><div class=3D"gl-contains-text"><table width=3D"100%" style=3D"min-wid=
+th: 100%;" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tbody><tr><td class=3D"=
+editor-text content-text" align=3D"left" valign=3D"top" style=3D"font-family: Aria=
+l, Verdana, Helvetica, sans-serif; font-size: 14px; color: #403F42; text-ali=
+gn: left; display: block; word-wrap: break-word; line-height: 1.2; padding: =
+10px 10px 10px 20px;"><div></div><div class=3D"text-container galileo-ap-conte=
+nt-editor"><div><div><span style=3D"font-weight: bold;">Rep. Trey Hollingswort=
+h</span> | <a href=3D"https://urldefense.proofpoint.com/v2/url?u=3Dhttps-3A__www=
+.facebook.com_RepTrey&amp;d=3DDwMFaQ&amp;c=3DL93KkjKsAC98uTvC4KvQDdTDRzAeWDDRmG6=
+S3YXllH0&amp;r=3Durkj49C9W9O1auQJMt3DTRjiQfeDXroeSGt-k9bIFvI&amp;m=3Dd_s3Pft6Au6=
+Xm3K-4CaJMW3Gk35pzBOdP8IBH5X_o90&amp;s=3D1jxEToxAUQuuhKJfK8yyUPEUft-Co6dlgNggp=
+QRP7_o&amp;e=3D" rel=3D"noopener noreferrer" target=3D"_blank" style=3D"color: #48a1=
+99; font-weight: normal; font-style: normal; text-decoration: underline;">Co=
+nnect</a> </div></div></div></td></tr></tbody></table></div></td><td class=3D"=
+content editor-col OneColumnMobile" width=3D"50%" align=3D"left" valign=3D"top"><d=
+iv class=3D"gl-contains-social-button"><table class=3D"editor-social" width=3D"100=
+%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width: 100%; min-width:=
+ 100%;"><tbody><tr><td class=3D" social-container social-container" align=3D"rig=
+ht" style=3D"padding: 0px 20px 10px 10px;"><div class=3D"galileo-ap-content-edit=
+or"><a href=3D"https://urldefense.proofpoint.com/v2/url?u=3Dhttps-3A__www.facebo=
+ok.com_RepTrey_&amp;d=3DDwMFaQ&amp;c=3DL93KkjKsAC98uTvC4KvQDdTDRzAeWDDRmG6S3YXll=
+H0&amp;r=3Durkj49C9W9O1auQJMt3DTRjiQfeDXroeSGt-k9bIFvI&amp;m=3Dd_s3Pft6Au6Xm3K-4=
+CaJMW3Gk35pzBOdP8IBH5X_o90&amp;s=3D-ANh47Bt6ZFKOUI489mwL2ygkJ4JuiFx5gD5IlL8R80=
+&amp;e=3D" style=3D"display: inline-block; text-decoration: none;"><img alt=3D"Fac=
+ebook" width=3D"32" border=3D"0" src=3D"https://imgssl.constantcontact.com/galileo=
+/images/templates/Galileo-SocialMedia/facebook-visit-gray-circle.png" style=3D=
+"display: inline-block; margin: 0; padding: 0;"> =E2=80=8C </a><a href=3D"https://ur=
+ldefense.proofpoint.com/v2/url?u=3Dhttps-3A__twitter.com_RepTrey&amp;d=3DDwMFaQ&=
+amp;c=3DL93KkjKsAC98uTvC4KvQDdTDRzAeWDDRmG6S3YXllH0&amp;r=3Durkj49C9W9O1auQJMt3D=
+TRjiQfeDXroeSGt-k9bIFvI&amp;m=3Dd_s3Pft6Au6Xm3K-4CaJMW3Gk35pzBOdP8IBH5X_o90&am=
+p;s=3D44eD7hIEsP6m8jNor9dFFgN3OMvTfjpjNOzxyIbee6w&amp;e=3D" style=3D"display: inli=
+ne-block; text-decoration: none;"><img alt=3D"Twitter" width=3D"32" border=3D"0" s=
+rc=3D"https://imgssl.constantcontact.com/galileo/images/templates/Galileo-Soci=
+alMedia/twitter-visit-gray-circle.png" style=3D"display: inline-block; margin:=
+ 0; padding: 0;"> =E2=80=8C </a></div></td></tr></tbody></table></div></td></tr></=
+tbody></table></div></td></tr></tbody></table></td></tr></tbody></table></td=
+></tr></tbody></table></td></tr></tbody></table></div></td></tr><tr><td></td=
+></tr></tbody></table><table class=3D"footer-container" width=3D"100%" cellpaddi=
+ng=3D"0" cellspacing=3D"0" border=3D"0" style=3D"background: #ffffff; margin-left: a=
+uto; margin-right: auto; table-layout: auto !important" bgcolor=3D"#ffffff"><t=
+body><tr><td width=3D"100%" align=3D"center" valign=3D"top" style=3D"width: 100%;"><=
+div class=3D"footer-max-main-width" align=3D"center" style=3D"margin-left: auto; m=
+argin-right: auto; max-width: 100%;"><table width=3D"100%" cellpadding=3D"0" cel=
+lspacing=3D"0" border=3D"0"><tbody><tr><td class=3D"footer-layout" align=3D"center" =
+valign=3D"top" style=3D"padding: 16px 0px;"><table class=3D"footer-main-width" sty=
+le=3D"width: 580px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tbody><tr><td=
+ class=3D"footer-text" align=3D"center" valign=3D"top" style=3D"color: #5d5d5d; font=
+-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;"><spa=
+n class=3D"footer-column">Rep. Trey Hollingsworth<span class=3D"footer-mobile-hi=
+dden"> | </span></span><span class=3D"footer-column">321 Quartermaster Ct.<spa=
+n class=3D"footer-mobile-hidden">, </span></span><span class=3D"footer-column"><=
+/span><span class=3D"footer-column"></span><span class=3D"footer-column">Jeffers=
+onville, IN 47130</span><span class=3D"footer-column"></span> </td></tr><tr><t=
+d class=3D"footer-row" align=3D"center" valign=3D"top" style=3D"padding: 10px 0px;">=
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tbody><tr><td class=3D"foot=
+er-text" align=3D"center" valign=3D"top" style=3D"color: #5d5d5d; font-family: Ver=
+dana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;"><a href=3D"#" styl=
+e=3D"color: #5d5d5d">Unsubscribe {recipient's email}</a> </td></tr><tr><td cla=
+ss=3D"footer-text" align=3D"center" valign=3D"top" style=3D"color: #5d5d5d; font-fam=
+ily: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;"><a href=3D=
+"#" style=3D"color: #5d5d5d">Update Profile</a> | <a class=3D"footer-about-provi=
+der" href=3D"https://urldefense.proofpoint.com/v2/url?u=3Dhttp-3A__www.constantc=
+ontact.com_legal_service-2Dprovider-3Fcc-3Dabout-2Dservice-2Dprovider&amp;d=3D=
+DwMFaQ&amp;c=3DL93KkjKsAC98uTvC4KvQDdTDRzAeWDDRmG6S3YXllH0&amp;r=3Durkj49C9W9O1a=
+uQJMt3DTRjiQfeDXroeSGt-k9bIFvI&amp;m=3Dd_s3Pft6Au6Xm3K-4CaJMW3Gk35pzBOdP8IBH5X=
+_o90&amp;s=3Dpz4D2t75WSFiNOVXomhBuStpUXKtkF4kY_tlzzhS5iA&amp;e=3D" style=3D"color:=
+ #5d5d5d">About our service provider</a> </td></tr><tr><td class=3D"footer-tex=
+t" align=3D"center" valign=3D"top" style=3D"color: #5d5d5d; font-family: Verdana,G=
+eneva,sans-serif; font-size: 12px; padding: 4px 0px;">Sent by <a href=3D"mailt=
+o:noreply@mail8.housecommunications.gov" style=3D"color: #5d5d5d; text-decorat=
+ion: none">noreply@mail8.housecommunications.gov</a> </td></tr></tbody></tab=
+le></td></tr><tr><td class=3D"footer-text" align=3D"center" valign=3D"top" style=3D"=
+color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; pad=
+ding: 4px 0px;"></td></tr></tbody></table></td></tr></tbody></table></div></=
+td></tr></tbody></table><div align=3D"center" style=3D"background-color: #F3F3F3=
+;"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"bac=
+kground-color: #f3f3f3"><tbody><tr><td align=3D"center" valign=3D"top" style=3D"pa=
+dding: 0px 0px 0px 0px;"><div align=3D"center" style=3D"max-width: 600px; margin=
+-left: auto; margin-right: auto;"><table cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" style=3D"width: 600px; width: auto !important; margin-left: auto; marg=
+in-right: auto;"><tbody><tr><td align=3D"left" valign=3D"top" style=3D"color: #5b5=
+b5b; font-size: 11px; line-height: 1.3; font-family: Arial, Helvetica, sans-=
+serif; padding: 20px 20px 20px 20px;"><div style=3D"color: #FF0000; font-size:=
+ 11px; line-height: 1.3; font-family: Arial, Helvetica, sans-serif;"><span s=
+tyle=3D"font-size: 13px; font-weight: bold;">THIS IS A TEST EMAIL ONLY.</span>=
+<br>This email was sent by the author for the sole purpose of testing a draf=
+t message. If you believe you have received the message in error, please con=
+tact the author by replying to this message. Constant Contact takes reports =
+of abuse very seriously. If you wish to report abuse, please forward this me=
+ssage to <a href=3D"mailto:abuse@constantcontact.com">abuse@constantcontact.co=
+m</a>.<br></div></td></tr></tbody></table></div></td></tr></tbody></table></=
+div></body></html>
+
+--B_3690458445_1605925941--
+

@@ -1,0 +1,965 @@
+Received: from DM6PR09MB5461.namprd09.prod.outlook.com (2603:10b6:5:269::19)
+ by MW4PR09MB8898.namprd09.prod.outlook.com with HTTPS; Tue, 20 Dec 2022
+ 15:43:14 +0000
+Received: from CY4PR09CA0029.namprd09.prod.outlook.com (2603:10b6:903:c0::15)
+ by DM6PR09MB5461.namprd09.prod.outlook.com (2603:10b6:5:269::19) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.5924.16; Tue, 20 Dec
+ 2022 15:43:13 +0000
+Received: from DM3GCC02FT044.eop-gcc02.prod.protection.outlook.com
+ (2a01:111:f400:7d04::209) by CY4PR09CA0029.outlook.office365.com
+ (2603:10b6:903:c0::15) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.5924.21 via Frontend
+ Transport; Tue, 20 Dec 2022 15:43:13 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.51.120)
+ smtp.mailfrom=mail.house.gov; dkim=fail (body hash did not verify)
+ header.d=house.gov;dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.51.120 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.51.120;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.51.120) by
+ DM3GCC02FT044.mail.protection.outlook.com (10.97.8.186) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.5924.16 via Frontend Transport; Tue, 20 Dec 2022 15:43:13 +0000
+Received: from EXCH1923.US.House.gov (143.228.51.115) by EXCH1924.US.House.gov
+ (143.228.51.120) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1118.20; Tue, 20 Dec
+ 2022 10:43:11 -0500
+Received: from serg-bulk2-h.house.gov (143.228.145.36) by
+ EXCH1923.US.House.gov (143.228.51.115) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.2.1118.20 via Frontend Transport; Tue, 20 Dec 2022 10:43:11 -0500
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=from : to : date :
+ subject : content-type : message-id : mime-version; s=august2019-msgb-hg;
+ bh=/Eq+3liMoL7WdUiwmQu7/iOsJ+g0spLAztl0gCS8raM=;
+ b=eMfVvaiaGhRK5OJXUMjx+jONp5EGIFuE2+zohY0swdO8k7GsjN6uwOOmk0ogyTQ3Ad+c
+ OAmB4Xqqc6dv44xBQD6gZfVYbt930ExDP0GUA2ElHewy+InBf1Cb1fOu0+b/v5DBA93D
+ 6hssJVD3RqmJ/uHj6tCv6j3A+xKr7jwoXcWsB6qzhMiZ09//Bt0yyhzp+vFUCes+uByy
+ rz5OnVJGr7SWZaav3LRGcAkpiKG3E6rx+NlR4rhwl3WIxrHA25or8MzY3yidbNdI8vV8
+ 133CrZLyO0Wga+30l3j/MlvrJFg3uzOGSra7iZ39QYtfD9VT65oFqFoqQhdR1k6+bO9h OQ== 
+Received: from firesideadmin02 (firesideadmin02.us.house.gov [143.228.113.54])
+	by serg-bulk2-h.house.gov (8.16.1.2/8.16.1.2) with ESMTP id 2BKFhBY5024243;
+	Tue, 20 Dec 2022 10:43:11 -0500
+Message-Id: <3mh9sxy8g8-1@serg-bulk2-h.house.gov>
+envelope-from: RepChuyGarcia@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+X-House-Vendor-Seg: Fireside21-1
+From: "Rep. Chuy Garcia" <RepChuyGarcia@mail.house.gov>
+To: Sam.Kwait-Spitzer@mail.house.gov
+Date: 20 Dec 2022 10:43:11 -0500
+Subject: =?utf-8?B?VEVTVCBXaXNoaW5nIHlvdSBhIEhhcHB5IEhvbGlkYXlzIOKA?=
+ =?utf-8?B?lCBJdCBpcyBhbiBob25vciB0byBiZSB5b3VyIENvbmdyZXNzbWFuIQ==?=
+Content-Type: multipart/alternative;
+ boundary=--boundary_1442_d9c1ff27-15b1-4896-a98f-43063533729b
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:6.0.545,18.0.923
+ definitions=2022-12-20_06:2022-12-19,2022-12-20 signatures=0
+Return-Path: RepChuy.Garcia@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1924.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 20 Dec 2022 15:43:13.3043
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ e20b28b7-870b-4dfb-f0bf-08dae2a0e781
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1923.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted:
+ DM3GCC02FT044.eop-gcc02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ DM3GCC02FT044.eop-gcc02.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: DM3GCC02FT044:EE_|DM6PR09MB5461:EE_
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: e20b28b7-870b-4dfb-f0bf-08dae2a0e781
+X-MS-Exchange-Organization-SCL: -1
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:143.228.51.120;CTRY:US;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SKI;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:;DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 20 Dec 2022 15:43:13.1950
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: e20b28b7-870b-4dfb-f0bf-08dae2a0e781
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.51.120];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1923.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM6PR09MB5461
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.3202144
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.5924.016
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(425001)(930097);
+X-Microsoft-Antispam-Message-Info:
+	F405gR2Zi/xfGjJA4AX1tgUj88O0/ZUa5jp1ufrTunEQJX3qKQdj9F7oz7c7O6jPi67ltNQcwTbdPfWoDy0gycmgYfA4CD+1oHdE5y/oxskvhTlf+wLvY+PDHzV3I2XI1dINaH4I0s2rhJ0XrM8N8ioc2Qvm+fSm3oWDrGUEznukWxs3rbVHbBO7pLZpaDfGdl3rENjysDuChqW/ewfuIdmHwZ/MXfvZHw2vJJv05/kX/cLAhlKjUlemw5qx1tZfW+DOOPHyu27V8Xsk+3XzhT7+JpVIG5hyl8cCpNm6bocnxk9y04JDZp0CHYP20ukwOAcJfWbwRcadPfYWGztZyZ6JldPai6P9cP+0is7M/1j9DSWUvsKprurXidbZeCkQZc9ZR05fuuqUzaPLJhLUxYlVTWpBck7YM6CczRqXHsfoUQvBL9a3gCdluf3YNGM/4pUOVaN2SgmoVVJrwujaEDUVTt8QsaYfPqPeSaWMC91YOAn2ZUfowfc309D6RPyozHDrdZ+YnEAKS6Cb/ERGvLbg5T3bQPL96ydLxgF12RQ5aywBoCnP/vD9REaXcW+wotCICv/qJY/v8ZAp7XEavaoh86IYgLBq62DH5AfyXEq4E/+iUlenHydGH6yWnGECicciHhYNac12anWOveSVL5lyfMzUIk30cBL2y52+GSWBkuHDqHfgvHkZkcY1O9jUYp2udYuP6VaoqlCn0r1aWQ==
+MIME-Version: 1.0
+
+----boundary_1442_d9c1ff27-15b1-4896-a98f-43063533729b
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+
+Dear Friends,
+
+It has been an honor to serve as your Congressman for the past four years. =
+Due to the decennial redistricting process, some constituents will be repre=
+sented by a different Congressperson when the next term begins on January 3=
+, 2023. Click here(http://house.gov/representatives/find-your-representativ=
+e) to identify your Representative at that time.
+
+As we prepare for that transition, my constituents remain my first priority=
+. Over the past year, my office resolved 334 constituent cases with federal=
+ agencies and responded to 22,386 letters. We hosted 470 constituent meetin=
+gs, listening sessions, roundtables, including three telephone town halls a=
+nd two in-person town halls.
+
+
+
+image widgetimage widget
+This Congress, I=E2=80=99m proud to have delivered watershed legislation fo=
+r Chicagoland. The American Rescue Plan(https://urldefense.com/v3/__https:/=
+/www.whitehouse.gov/briefing-room/statements-releases/2022/05/24/fact-sheet=
+-biden-harris-report-advancing-equity-through-the-american-rescue-plan/__;!=
+!Fr0YZsIsFWxTZsBm-qTAg68!wEsd6hzSvypU2OU2fDdJFKvzAn2fxajTRNfAZNZxZKhAMNG-kb=
+bUrrhoWMNixDzHlEM8fIVagEWScQ$ )  saved small businesses, funded our city=E2=
+=80=99s COVID response, and kept local governments afloat. As a member of t=
+he Transportation & Infrastructure Committee, I helped author the Infrastru=
+cture Investment and Jobs Act(https://urldefense.com/v3/__https://www.white=
+house.gov/briefing-room/statements-releases/2021/08/02/updated-fact-sheet-b=
+ipartisan-infrastructure-investment-and-jobs-act/__;!!Fr0YZsIsFWxTZsBm-qTAg=
+68!wEsd6hzSvypU2OU2fDdJFKvzAn2fxajTRNfAZNZxZKhAMNG-kbbUrrhoWMNixDzHlEM8fIWm=
+b6knig$ ) , which includes $11.3 billion for Illinois=E2=80=99 roads, bridg=
+es, airports, pedestrian infrastructure, and transit systems like CTA, Metr=
+a, and Pace.
+
+
+
+Our work to enact progressive legislation to advance racial and economic ju=
+stice has continued this year, as we face the accumulating challenges of th=
+e pandemic, rising costs, and attacks on our democracy and rights.
+
+
+
+We passed the Inflation Reduction Act(https://urldefense.com/v3/__https://w=
+ww.whitehouse.gov/briefing-room/statements-releases/2022/08/19/fact-sheet-t=
+he-inflation-reduction-act-supports-workers-and-families/__;!!Fr0YZsIsFWxTZ=
+sBm-qTAg68!wEsd6hzSvypU2OU2fDdJFKvzAn2fxajTRNfAZNZxZKhAMNG-kbbUrrhoWMNixDzH=
+lEM8fIXufjnJTA$ ) , a package that does the most we=E2=80=99ve ever done to=
+ create millions of union jobs and promote affordable, sustainable energy p=
+roduction. It also lowers prescription drug prices, caps the price of insul=
+in for Medicare recipients, and more than pays for itself by making billion=
+aires pay their fair share. Still, it=E2=80=99s disappointing we did not ha=
+ve the votes in the Senate to go further to address the climate crisis, tac=
+kle immigration reform, expand affordable housing, or establish universal c=
+hildcare.
+
+In the wake of the Buffalo, Uvalde, and Highland Park mass shootings, and a=
+s gun violence continues to tear our communities apart, Congress finally pa=
+ssed the Bipartisan Safer Communities Act(https://chuygarcia.house.gov/medi=
+a/press-releases/congressman-garcia-votes-for-bipartisan-gun-safety-legisla=
+tion) , legislation to enhance background checks, help keep guns away from =
+domestic abusers, and invest in mental health and support after traumatic e=
+vents. But there is still an urgent need for comprehensive legislation that=
+ builds on the package we passed. I also voted for the Assault Weapons Ban(=
+https://judiciary.house.gov/uploadedfiles/hjc_fact_sheet_hr_1808_awb.pdf)  =
+when it passed the House and support its final passage.
+
+Earlier this year, a Supreme Court decision overturned Roe v. Wade, part of=
+ a longer, coordinated attack on abortion rights and reproductive freedom. =
+While Illinois has strong protections for reproductive rights, the same can=
+not be said at the federal level. I voted for the Women=E2=80=99s Health Pr=
+otection Act (https://urldefense.com/v3/__https://www.congress.gov/bill/117=
+th-congress/house-bill/3755__;!!Fr0YZsIsFWxTZsBm-qTAg68!wEsd6hzSvypU2OU2fDd=
+JFKvzAn2fxajTRNfAZNZxZKhAMNG-kbbUrrhoWMNixDzHlEM8fIU8plMPEA$ ) to codify th=
+e right to abortion nationally and to protect the right to travel for abort=
+ion care between states.
+I wish you and your family a safe holiday season. It isan honor to be your =
+representative.
+In solidarity,
+
+Jes=C3=BAs G. =E2=80=9CChuy=E2=80=9D Garc=C3=ADa
+PS: As we prepare for the next Congress, my office on the North Side (5624 =
+W. Diversey Ave) has closed as of December 14. My South Side office (4376 S=
+. Archer Ave) remains open and you can call us at that location at (773) 47=
+5-0833. Stay tuned for information on the opening of my new office in Melro=
+se Park!
+Resource Guide
+Unemployment: The Illinois Department of Employment Security (IDES) is proc=
+essing unemployment claims online here(https://chuygarciaforms.house.gov/co=
+mponents/redirect/r.aspx?ID=3D150-674079) .
+Food: Supplemental Nutrition Assistance Program (SNAP) can help you and you=
+r family purchase groceries. To check your eligibility or to apply, visit a=
+be.illinois.gov(https://chuygarciaforms.house.gov/components/redirect/r.asp=
+x?ID=3D155-674079)  or call 844-600-7627.
+CPS is providing meals at over 270 schools across Chicago. Click here(https=
+://chuygarciaforms.house.gov/components/redirect/r.aspx?ID=3D156-674079)  f=
+or locations and pickup details.
+Student Loan Forgiveness: Click here(http://chuygarcia.house.gov/sites/evo-=
+subsites/chuygarcia.house.gov/files/evo-media-document/student-loan-debt-on=
+e-pager.pdf)  to learn more about the federal student loan forgiveness prog=
+ram and see if you are eligible.
+Social Security and Senior Services: Our office can connect(http://chuygarc=
+ia.house.gov/sites/evo-subsites/chuygarcia.house.gov/files/evo-media-docume=
+nt/one-pager-senior-services.pdf)  you with federal support services and re=
+sources available to older adults.
+Citizenship Workshops: My office partners with local organizations to host =
+citizenship workshops throughout the year. Click here(http://chuygarcia.hou=
+se.gov/sites/evo-subsites/chuygarcia.house.gov/files/evo-media-document/cit=
+izenship-workshop-flyer.pdf)  to learn more about how to attend.
+image widgetimage widgetimage widgetimage widgetimage widgetimage widget
+
+----boundary_1442_d9c1ff27-15b1-4896-a98f-43063533729b
+Content-Type: text/html; charset=utf-8
+Content-Location: https://chuygarciaforms.house.gov/
+Content-Transfer-Encoding: Quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>Representative Chuy Garcia</title>
+       =20
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1">
+        <!--[if !mso]><!-->
+        <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![e=
+ndif]-->
+        <link href=3D"https://fonts.googleapis.com/css?family=3DOpen+Sans|O=
+swald&amp;display=3Dswap" rel=3D"stylesheet">
+        <style>body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default t=
+ext sizes */ img{-ms-interpolation-mode: bicubic;} /* Allow smoother render=
+ing of resized image in Internet Explorer *//* RESET STYLES */img { border:=
+ 0; height: auto; line-height: 100%; outline: none; text-decoration: none; =
+}table { border-collapse: collapse !important; }body { height: 100% !import=
+ant; margin: 0 !important; padding: 0 !important; width: 100% !important; }=
+strong { font-weight: bold; } /* Editor reset *//* FIRESIDE STYLES */.compo=
+nent img {max-width:600px;}.component table {mso-table-rspace:10pt; border-=
+collapse:collapse;}.component { padding: 0px !important; }.press {padding-b=
+ottom: 0px;}</style><style>@media all and (max-width:650px) {            .i=
+mage-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td, .image-2, .img-2 =
+img, .image-2 tr, .image-2 td {max-width: 100% !important; width: 100% !imp=
+ortant;}            .responsive-table {width:100% !important;}            .=
+responsive-table img {max-width:100% !important; height: auto !important;} =
+           .press .component, .press td {text-align:center;}            .co=
+mponent { margin-left: 20px; margin-right: 20px;}            .component .re=
+sponsive-table { margin-left: 0px !important; margin-right: 0px !important;=
+}            .wide .video-thumb { width: 100% !important;height: auto !impo=
+rtant; }             .wide.video-container { width: 100% !important; }     =
+    .component.full-width {margin-left: 0px; margin-right: 0px; }   }</styl=
+e><style type=3D"text/css">
+            /* CLIENT-SPECIFIC STYLES */
+            body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text=
+ sizes */
+            table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Rem=
+ove spacing between tables in Outlook 2007 and up */
+            img{-ms-interpolation-mode: bicubic;} /* Allow smoother renderi=
+ng of resized image in Internet Explorer */
+            /* RESET STYLES */
+            img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: =
+0 !important; width: 100% !important; }
+            strong { font-weight: bold; } /* Editor reset */
+            /* FIRESIDE STYLES */
+            .component img {max-width:600px;}
+            .component table {mso-table-rspace:10pt; border-collapse:collap=
+se; font-family: Arial, Helvetica, sans-serif;}
+            .component td, td {font-family: Arial, Helvetica, sans-serif;}
+            .component { padding: 0px !important; }
+            .press {padding-bottom: 0px;}
+            .caption-1 td {font-family: Arial, Helvetica, sans-serif;}
+            /* Non-Outlook Styles */
+            body {background-color: #1a263a;}
+            /* Margin/NoMargin STYLES */
+            .component.full-width{ overflow: hidden; margin: 0px; }
+            /* HEADER STYLES */
+            .header-bar {width: 100%;}
+            .header-bar-margin {background-color:#ffffff;}
+            .header-bar h2 {margin: 0 !important; padding: 0 !important; co=
+lor: #1a263a !important;text-align: center;font-size: 36px !important;font-=
+weight: bold !important; }
+            .survey-content > table > tbody tr td { border-color: #1a263a !=
+important; font-size: 14px !important;}
+            .survey-content .survey-text { font-size: 14px !important;}
+            .survey-content input.survey-submit { font-family: Arial, Helve=
+tica, sans-serif !important; }
+        </style>
+        <!--[if (gte mso 9)|(IE)]>
+            <style>
+                body {background-color: #ffffff !important;}
+            </style>
+        <![endif]-->        =20
+        <style id=3D"media-queries">=20
+            @media all and (max-width:650px) {
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max=
+-width: 100% !important; width: 100% !important;}
+            .responsive-table {width:100% !important;}
+            .responsive-table img {max-width:100% !important; height: auto =
+!important;}
+            .press .component, .press td, .split .component, .split .compon=
+ent td, .split td {text-align:center;}
+            .component { margin-left: 20px; margin-right: 20px;}
+            .component .responsive-table { margin-left: 0px !important; mar=
+gin-right: 0px !important;}
+            .wide .video-thumb { width: 100% !important;height: auto !impor=
+tant; }=20
+            .wide.video-container { width: 100% !important; }
+            }
+        </style>
+       =20
+    <!--[if (gte mso 9)|(IE)]>
+                                            <style>=20
+                                        </style>
+                                        <![endif]--></head>
+    <body style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%;margin: 0px !important; padding: 0px !important;">
+        <div id=3D"preview-text" style=3D"display: none; font-size: 1px; co=
+lor: #fefefe; line-height: 1px; font-family: Arial, Helvetica, sans-serif; =
+max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">Dear Friend=
+s, It has been an honor to serve as your Congressman for the past four year=
+s. Due to the decennial redistricting process, some constituents will be re=
+presented by a different Congressperson when the next term begins on Januar=
+y 3, 2023. Click here&nbsp;to identify your Representative at that time.&nb=
+sp; As we prepare for that transition, my constituents remain my first prio=
+rity. Over the past year, my office resolved 334 constituent cases with fed=
+eral agencies and responded to 22,386 letters. We hosted 470 constituent me=
+etings, listening sessions, roundtables, including three telephone town hal=
+ls and two in-person town halls.  image widgetimage widget </div>
+    <!--[if (gte mso 9)|(IE)]>
+    <table style=3D"background-color:#1a263a;" width=3D"100%" align=3D"cent=
+er" role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><tr><=
+td>
+    <![endif]-->
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color:=
+ #1a263a;" border=3D"0" cellspacing=3D"0" cellpadding=3D"10" marginheight=
+=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td align=3D"center" valign=3D"top" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvet=
+ica, sans-serif; font-size: 16px;">
+                    <a target=3D"_blank" href=3D"https://chuygarcia.house.g=
+ov" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                    <img alt=3D"Representative Chuy Garcia" width=3D"630" s=
+tyle=3D"-ms-interpolation-mode: bicubic;display: block; width: 630px;" src=
+=3D"https://chuygarciaforms.house.gov/images/email/logo.png">
+                    </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;background-color: #1a263a; font-family: 'lucida sans unicode=
+', 'Oswald', helvetica, arial, sans-serif;" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"10" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" to=
+pmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td class=3D"split" align=3D"center" valign=3D"middle" =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border:=
+ 2px solid #e84a27;">
+                    <table align=3D"left" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" width=3D"59.9%" class=3D"responsive-table" role=3D"presenta=
+tion" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"=
+>
+                        <tbody>
+                            <tr>
+                                <td align=3D"center" valign=3D"middle" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                <table border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" width=3D"100%" role=3D"presentation" style=3D"-webkit-text-siz=
+e-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                    <tbody>
+                                        <tr>
+                                            <td align=3D"left" style=3D"-we=
+bkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: 'lucid=
+a sans unicode', 'Oswald', helvetica, arial, sans-serif; font-size: 18px; c=
+olor: #ffffff; height: 36px;">
+                                            <a href=3D"https://chuygarcia.h=
+ouse.gov/About%20Chuy" style=3D"-webkit-text-size-adjust: 100%; -ms-text-si=
+ze-adjust: 100%;color: #ffffff; text-decoration: none; font-size: 18px;">AB=
+OUT</a>&nbsp;&nbsp;
+                                            <a href=3D"https://chuygarcia.h=
+ouse.gov/services" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-a=
+djust: 100%;color: #ffffff; text-decoration: none; font-size: 18px;">SERVIC=
+ES</a>&nbsp;&nbsp;
+                                            <a href=3D"https://chuygarcia.h=
+ouse.gov/contact" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-ad=
+just: 100%;color: #ffffff; text-decoration: none;  font-size: 18px;">CONTAC=
+T</a>&nbsp;&nbsp;
+                                            <a href=3D"https://chuygarcia.h=
+ouse.gov/media" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adju=
+st: 100%;color: #ffffff; text-decoration: none; font-size: 18px;">MEDIA</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table align=3D"left" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" width=3D"39.9%" class=3D"responsive-table" role=3D"presenta=
+tion" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"=
+>
+                        <tbody>
+                            <tr>
+                                <td align=3D"center" valign=3D"middle" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                <table border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" width=3D"100%" role=3D"presentation" style=3D"-webkit-text-siz=
+e-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                    <tbody>
+                                        <tr>
+                                            <td align=3D"right" style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: 'luci=
+da sans unicode', 'Oswald', helvetica, arial, sans-serif; font-size: 16px; =
+color: #000000;">
+                                            <a target=3D"_blank" href=3D"ht=
+tps://urldefense.com/v3/__https://www.facebook.com/RepChuyGarcia__;!!Fr0YZs=
+IsFWxTZsBm-qTAg68!wEsd6hzSvypU2OU2fDdJFKvzAn2fxajTRNfAZNZxZKhAMNG-kbbUrrhoW=
+MNixDzHlEM8fIW82RwE0A$" style=3D"-webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%;"><img alt=3D"facebook icon" width=3D"32" src=3D"https://c=
+huygarciaforms.house.gov/images/email/facebook-transparent.png" style=3D"-m=
+s-interpolation-mode: bicubic;border-width: 0px; border-style: solid; width=
+: 32px;"></a>
+                                            &nbsp;<a target=3D"_blank" href=
+=3D"https://urldefense.com/v3/__https://twitter.com/RepChuyGarcia__;!!Fr0YZ=
+sIsFWxTZsBm-qTAg68!wEsd6hzSvypU2OU2fDdJFKvzAn2fxajTRNfAZNZxZKhAMNG-kbbUrrho=
+WMNixDzHlEM8fIUVTaz5zg$" style=3D"-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;"><img alt=3D"twitter icon" width=3D"32" src=3D"https://c=
+huygarciaforms.house.gov/images/email/twitter-transparent.png" style=3D"-ms=
+-interpolation-mode: bicubic;border-width: 0px; border-style: solid; width:=
+ 32px;"></a>
+                                            &nbsp;<a target=3D"_blank" href=
+=3D"https://urldefense.com/v3/__https://www.instagram.com/repchuygarcia/__;=
+!!Fr0YZsIsFWxTZsBm-qTAg68!wEsd6hzSvypU2OU2fDdJFKvzAn2fxajTRNfAZNZxZKhAMNG-k=
+bbUrrhoWMNixDzHlEM8fIUbLnAuTw$" style=3D"-webkit-text-size-adjust: 100%; -m=
+s-text-size-adjust: 100%;"><img alt=3D"instagram icon" width=3D"32" src=3D"=
+https://chuygarciaforms.house.gov/images/email/instagram-transparent.png" s=
+tyle=3D"-ms-interpolation-mode: bicubic;border-width: 0px; border-style: so=
+lid; width: 32px;"></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;background-color: #ffffff; font-family: Arial, Helvetica, sa=
+ns-serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D=
+"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td class=3D"responsive-table" valign=3D"top" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Ari=
+al, Helvetica, sans-serif; font-size: 16px; color: #000000;">
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class=3D"region" id=3D"region-1"><div class=3D=
+"component " style=3D"padding: 0px !important;"> <div class=3D"editable" st=
+yle=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;margin: 0;"><span style=3D"font-size:16px;"><span style=
+=3D"font-family:Times New Roman,Times,serif;">Dear Friends,</span></span></=
+p><p style=3D"margin: 0;margin: 0;"><br></p><p style=3D"margin: 0;margin: 0=
+;"><span style=3D"font-family:Times New Roman,Times,serif;"><span style=3D"=
+font-size:16px;"><span style=3D"line-height:normal"><span style=3D"color:bl=
+ack">It has been an honor to serve as your Congressman </span>for the past =
+four years. Due to the decennial redistricting process, some constituents w=
+ill be represented by a different Congressperson when the next term begins =
+on January 3, 2023. Click <strong style=3D"font-weight: bold;"><a data-cke-=
+saved-href=3D"http://house.gov/representatives/find-your-representative" hr=
+ef=3D"http://house.gov/representatives/find-your-representative" style=3D"-=
+webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">here</a>&nbsp;<=
+/strong>to identify your Representative at that time.&nbsp;</span></span></=
+span></p><div class=3D"WordSection1" style=3D"overflow: hidden;"><p style=
+=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span style=3D"font-family:=
+Times New Roman,Times,serif;"><span style=3D"font-size:16px;"><span style=
+=3D"line-height:normal"><span style=3D"background:white"><span style=3D"col=
+or:black">As we prepare for that transition, my constituents remain my firs=
+t priority. Over the past year, my office resolved <strong style=3D"font-we=
+ight: bold;">334 </strong>constituent cases with federal agencies and respo=
+nded to <strong style=3D"font-weight: bold;">22,386 </strong>letters. We ho=
+sted <strong style=3D"font-weight: bold;">470 </strong>constituent meetings=
+, listening sessions, roundtables, including three telephone town halls and=
+ two in-person town halls.</span></span></span></span></span></p><p style=
+=3D"margin: 0;"><br></p><div contenteditable=3D"false" class=3D"cke_widget_=
+wrapper cke_widget_block cke_widget_image cke_image_nocaption" style=3D"ove=
+rflow: hidden;"><p data-cke-widget-keep-attr=3D"0" data-widget=3D"image" cl=
+ass=3D"cke_widget_element" data-cke-widget-data=3D"%7B%22hasCaption%22%3Afa=
+lse%2C%22src%22%3A%22https%3A%2F%2Fchuygarciaforms.house.gov%2FUploadedPhot=
+os%2FMediumResolution%2Ff4d76d6f-70f1-4739-8c88-eed0b4b7ec29.png%22%2C%22al=
+t%22%3A%22%22%2C%22width%22%3A364%2C%22height%22%3A364%2C%22style%22%3A%22%=
+22%2C%22lock%22%3Atrue%2C%22align%22%3A%22center%22%2C%22classes%22%3Anull%=
+2C%22widthPerc%22%3A%221%22%7D" style=3D"margin: 0;text-align: center;"><sp=
+an class=3D"cke_image_resizer_wrapper"><img alt=3D"" src=3D"https://chuygar=
+ciaforms.house.gov/UploadedPhotos/MediumResolution/f4d76d6f-70f1-4739-8c88-=
+eed0b4b7ec29.png" width=3D"364" height=3D"364" style=3D"max-width:600px;-ms=
+-interpolation-mode: bicubic;"></span></p></div><p style=3D"margin: 0;"><br=
+></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;margin: 0;"><span style=3D"font-size:16px;"><span style=
+=3D"font-family:Times New Roman,Times,serif;">This Congress, I=E2=80=99m pr=
+oud to have delivered watershed legislation for Chicagoland. The<strong sty=
+le=3D"font-weight: bold;"> <a data-cke-saved-href=3D"https://www.whitehouse=
+.gov/briefing-room/statements-releases/2022/05/24/fact-sheet-biden-harris-r=
+eport-advancing-equity-through-the-american-rescue-plan/" href=3D"https://u=
+rldefense.com/v3/__https://www.whitehouse.gov/briefing-room/statements-rele=
+ases/2022/05/24/fact-sheet-biden-harris-report-advancing-equity-through-the=
+-american-rescue-plan/__;!!Fr0YZsIsFWxTZsBm-qTAg68!wEsd6hzSvypU2OU2fDdJFKvz=
+An2fxajTRNfAZNZxZKhAMNG-kbbUrrhoWMNixDzHlEM8fIVagEWScQ$" style=3D"-webkit-t=
+ext-size-adjust: 100%; -ms-text-size-adjust: 100%;"><i>American Rescue Plan=
+</i></a></strong> saved small businesses, funded our city=E2=80=99s COVID r=
+esponse, and kept local governments afloat. As a member of the Transportati=
+on &amp; Infrastructure Committee, I helped author the <i><a data-cke-saved=
+-href=3D"https://www.whitehouse.gov/briefing-room/statements-releases/2021/=
+08/02/updated-fact-sheet-bipartisan-infrastructure-investment-and-jobs-act/=
+" href=3D"https://urldefense.com/v3/__https://www.whitehouse.gov/briefing-r=
+oom/statements-releases/2021/08/02/updated-fact-sheet-bipartisan-infrastruc=
+ture-investment-and-jobs-act/__;!!Fr0YZsIsFWxTZsBm-qTAg68!wEsd6hzSvypU2OU2f=
+DdJFKvzAn2fxajTRNfAZNZxZKhAMNG-kbbUrrhoWMNixDzHlEM8fIWmb6knig$" style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><strong style=3D=
+"font-weight: bold;">Infrastructure Investment and Jobs Ac</strong>t</a>, <=
+/i>which includes $11.3 billion for Illinois=E2=80=99 roads, bridges, airpo=
+rts, pedestrian infrastructure, and transit systems like CTA, Metra, and Pa=
+ce.</span></span></p><p style=3D"margin: 0;margin: 0;"><br></p><div content=
+editable=3D"false" class=3D"cke_widget_wrapper cke_widget_block cke_widget_=
+image cke_image_nocaption" style=3D"overflow: hidden;"><p data-cke-widget-k=
+eep-attr=3D"0" data-widget=3D"image" class=3D"cke_widget_element" data-cke-=
+widget-data=3D"%7B%22hasCaption%22%3Afalse%2C%22src%22%3A%22https%3A%2F%2Fc=
+huygarciaforms.house.gov%2FUploadedPhotos%2FMediumResolution%2F04c162c1-82c=
+1-4b0f-9ba9-eefafd8b6507.png%22%2C%22alt%22%3A%22%22%2C%22width%22%3A419%2C=
+%22height%22%3A466%2C%22style%22%3A%22%22%2C%22lock%22%3Atrue%2C%22align%22=
+%3A%22center%22%2C%22classes%22%3Anull%2C%22widthPerc%22%3A%221%22%7D" styl=
+e=3D"margin: 0;text-align: center;"><span class=3D"cke_image_resizer_wrappe=
+r"><img alt=3D"" src=3D"https://chuygarciaforms.house.gov/UploadedPhotos/Me=
+diumResolution/04c162c1-82c1-4b0f-9ba9-eefafd8b6507.png" width=3D"419" heig=
+ht=3D"466" style=3D"max-width:600px;-ms-interpolation-mode: bicubic;"></spa=
+n></p></div><p style=3D"margin: 0;margin: 0;"><br></p><div class=3D"WordSec=
+tion1" style=3D"overflow: hidden;"><p style=3D"margin: 0;"><span style=3D"f=
+ont-size:16px;"><span style=3D"font-family:Times New Roman,Times,serif;">Ou=
+r work to enact progressive legislation to advance racial and economic just=
+ice has continued this year, <span style=3D"background:white"><span style=
+=3D"color:black">as we face the accumulating challenges of the pandemic, ri=
+sing costs, and attacks on our democracy and rights.</span></span></span></=
+span></p><p style=3D"margin: 0;"><br></p><div contenteditable=3D"false" cla=
+ss=3D"cke_widget_wrapper cke_widget_block cke_widget_image cke_image_nocapt=
+ion" style=3D"overflow: hidden;"><p data-cke-widget-keep-attr=3D"0" data-wi=
+dget=3D"image" class=3D"cke_widget_element" data-cke-widget-data=3D"%7B%22h=
+asCaption%22%3Afalse%2C%22src%22%3A%22https%3A%2F%2Fchuygarciaforms.house.g=
+ov%2FUploadedPhotos%2FHighResolution%2F4f219975-dda1-4ab6-ab27-0f54609b2193=
+.png%22%2C%22alt%22%3A%22%22%2C%22width%22%3A524%2C%22height%22%3A1222%2C%2=
+2style%22%3A%22%22%2C%22lock%22%3Atrue%2C%22align%22%3A%22center%22%2C%22cl=
+asses%22%3Anull%2C%22widthPerc%22%3A%221%22%7D" style=3D"margin: 0;text-ali=
+gn: center;"><span class=3D"cke_image_resizer_wrapper"><img alt=3D"" src=3D=
+"https://chuygarciaforms.house.gov/UploadedPhotos/HighResolution/4f219975-d=
+da1-4ab6-ab27-0f54609b2193.png" data-cke-saved-src=3D"https://chuygarciafor=
+ms.house.gov/UploadedPhotos/HighResolution/4f219975-dda1-4ab6-ab27-0f54609b=
+2193.png" width=3D"524" height=3D"1222" style=3D"max-width:600px;-ms-interp=
+olation-mode: bicubic;"></span></p></div><p style=3D"margin: 0;"><br></p><p=
+ style=3D"margin: 0;"><span style=3D"font-size:16px;"><span style=3D"font-f=
+amily:Times New Roman,Times,serif;"><span style=3D"line-height:normal">We p=
+assed the<span style=3D"background:white"><span style=3D"color:black"> <str=
+ong style=3D"font-weight: bold;"><a data-cke-saved-href=3D"https://www.whit=
+ehouse.gov/briefing-room/statements-releases/2022/08/19/fact-sheet-the-infl=
+ation-reduction-act-supports-workers-and-families/" href=3D"https://urldefe=
+nse.com/v3/__https://www.whitehouse.gov/briefing-room/statements-releases/2=
+022/08/19/fact-sheet-the-inflation-reduction-act-supports-workers-and-famil=
+ies/__;!!Fr0YZsIsFWxTZsBm-qTAg68!wEsd6hzSvypU2OU2fDdJFKvzAn2fxajTRNfAZNZxZK=
+hAMNG-kbbUrrhoWMNixDzHlEM8fIXufjnJTA$" style=3D"-webkit-text-size-adjust: 1=
+00%; -ms-text-size-adjust: 100%;"><i>Inflation Reduction Act</i></a></stron=
+g>, a </span></span>package that does the most we=E2=80=99ve <i>ever done</=
+i> to create millions of union jobs and promote affordable, sustainable ene=
+rgy production. It also lowers prescription drug prices, caps the price of =
+insulin for Medicare recipients, and more than pays for itself by making bi=
+llionaires pay their fair share. <span style=3D"background:white"><span sty=
+le=3D"color:black">Still, it=E2=80=99s disappointing we did not have the vo=
+tes in the Senate to go further to address the climate crisis, tackle immig=
+ration reform, expand affordable housing, or establish universal childcare.=
+&nbsp;&nbsp;</span></span></span></span></span></p><p style=3D"margin: 0;">=
+<br></p><p style=3D"margin: 0;"><span style=3D"font-size:16px;"><span style=
+=3D"font-family:Times New Roman,Times,serif;"><span style=3D"line-height:no=
+rmal">In the wake of the Buffalo, Uvalde, and Highland Park mass shootings,=
+ and as gun violence continues to tear our communities apart, Congress fina=
+lly passed the<strong style=3D"font-weight: bold;"> <a data-cke-saved-href=
+=3D"https://chuygarcia.house.gov/media/press-releases/congressman-garcia-vo=
+tes-for-bipartisan-gun-safety-legislation" href=3D"https://chuygarcia.house=
+.gov/media/press-releases/congressman-garcia-votes-for-bipartisan-gun-safet=
+y-legislation" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjus=
+t: 100%;"><i>Bipartisan Safer Communities Act</i></a></strong>, legislation=
+ to enhance background checks, help keep guns away from domestic abusers, a=
+nd invest in mental health and support after traumatic events. But there is=
+ still an urgent need for comprehensive legislation that builds on the pack=
+age we passed. I also voted for the <i><a data-cke-saved-href=3D"https://ju=
+diciary.house.gov/uploadedfiles/hjc_fact_sheet_hr_1808_awb.pdf" href=3D"htt=
+ps://judiciary.house.gov/uploadedfiles/hjc_fact_sheet_hr_1808_awb.pdf" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><strong s=
+tyle=3D"font-weight: bold;">Assault Weapons Ban</strong></a> </i>when it pa=
+ssed the House and support its final passage.</span></span></span></p><p st=
+yle=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span style=3D"font-size=
+:16px;"><span style=3D"font-family:Times New Roman,Times,serif;"><span styl=
+e=3D"line-height:normal">Earlier this year, a Supreme Court decision overtu=
+rned <i>Roe v. Wade, </i>part of a longer, coordinated attack on abortion r=
+ights and reproductive freedom. While Illinois has strong protections for r=
+eproductive rights, the same cannot be said at the federal level. I voted f=
+or the <a data-cke-saved-href=3D"https://www.congress.gov/bill/117th-congre=
+ss/house-bill/3755" href=3D"https://urldefense.com/v3/__https://www.congres=
+s.gov/bill/117th-congress/house-bill/3755__;!!Fr0YZsIsFWxTZsBm-qTAg68!wEsd6=
+hzSvypU2OU2fDdJFKvzAn2fxajTRNfAZNZxZKhAMNG-kbbUrrhoWMNixDzHlEM8fIU8plMPEA$"=
+ style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><str=
+ong style=3D"font-weight: bold;"><i>Women=E2=80=99s Health Protection Act</=
+i></strong> </a>to codify the right to abortion nationally and to protect t=
+he right to travel for abortion care between states.</span></span></span></=
+p><p style=3D"margin: 0;margin-top:16px; margin-bottom:16px"><span style=3D=
+"font-size:11pt"><span style=3D"font-family:Calibri,sans-serif"><span style=
+=3D"font-size:12.0pt"><span style=3D"font-family:&quot;Times New Roman&quot=
+;,serif"><span style=3D"color:black"><span id=3D"cke_bm_651S" style=3D"disp=
+lay: none;">&nbsp;</span>I wish you and your family a safe holiday season. =
+It is&nbsp;an honor to be your representative.&nbsp;</span></span></span></=
+span></span></p><p style=3D"margin: 0;margin-top:16px; margin-bottom:16px">=
+<span style=3D"font-size:11pt"><span style=3D"font-family:Calibri,sans-seri=
+f"><span style=3D"font-size:12.0pt"><span style=3D"font-family:&quot;Times =
+New Roman&quot;,serif"><span style=3D"color:black">In solidarity,</span></s=
+pan></span></span></span></p><p style=3D"margin: 0;margin-top:16px; margin-=
+bottom:16px"><span style=3D"font-size:11pt"><span style=3D"font-family:Cali=
+bri,sans-serif"><span style=3D"border:none windowtext 1.0pt; font-size:12.0=
+pt; padding:0in"><span style=3D"font-family:&quot;Times New Roman&quot;,ser=
+if"><span style=3D"color:black"><span style=3D"font-size:11pt"><span style=
+=3D"font-family:Calibri,sans-serif"><span style=3D"border:none windowtext 1=
+.0pt; font-size:12.0pt; padding:0in"><span style=3D"font-family:&quot;Times=
+ New Roman&quot;,serif"><span style=3D"color:black"><span tabindex=3D"-1" c=
+ontenteditable=3D"false" data-cke-widget-wrapper=3D"1" data-cke-filter=3D"o=
+ff" class=3D"cke_widget_wrapper cke_widget_inline cke_widget_image cke_imag=
+e_nocaption" data-cke-display-name=3D"image" data-cke-widget-id=3D"0" role=
+=3D"region" aria-label=3D" image widget"><img alt=3D"" class=3D"cke_widget_=
+element" data-cke-saved-src=3D"https://lh5.googleusercontent.com/AG2XB1Yu73=
+fx-sdKzslSyANeefXeYELpheOaV5YdhGQ_-CJlljKcCzEiSydf2r6ACOspSNMDWxW7zdfF-UXsD=
+cd32NbEQCRE35sbjMW3RohjGR1umICz_x9_Fm9FMcaF9d09PVKm" data-cke-widget-data=
+=3D"%7B%22hasCaption%22%3Afalse%2C%22src%22%3A%22https%3A%2F%2Flh5.googleus=
+ercontent.com%2FAG2XB1Yu73fx-sdKzslSyANeefXeYELpheOaV5YdhGQ_-CJlljKcCzEiSyd=
+f2r6ACOspSNMDWxW7zdfF-UXsDcd32NbEQCRE35sbjMW3RohjGR1umICz_x9_Fm9FMcaF9d09PV=
+Km%22%2C%22alt%22%3A%22%22%2C%22width%22%3A246%2C%22height%22%3A72%2C%22sty=
+le%22%3A%22height%3A59px%3B%20width%3A201px%22%2C%22lock%22%3Atrue%2C%22ali=
+gn%22%3A%22none%22%2C%22classes%22%3Anull%7D" data-cke-widget-keep-attr=3D"=
+0" data-cke-widget-upcasted=3D"1" data-widget=3D"image" id=3D"_x0000_i1025"=
+ src=3D"https://lh5.googleusercontent.com/AG2XB1Yu73fx-sdKzslSyANeefXeYELph=
+eOaV5YdhGQ_-CJlljKcCzEiSydf2r6ACOspSNMDWxW7zdfF-UXsDcd32NbEQCRE35sbjMW3Rohj=
+GR1umICz_x9_Fm9FMcaF9d09PVKm" style=3D"max-width:600px;-ms-interpolation-mo=
+de: bicubic;height:59px; width:201px" width=3D"246" height=3D"72"></span></=
+span></span></span></span></span></span></span></span></span></span></p><p =
+style=3D"margin: 0;"><span style=3D"font-size:11pt"><span style=3D"font-fam=
+ily:Calibri,sans-serif"><span style=3D"font-size:12.0pt"><span style=3D"fon=
+t-family:&quot;Times New Roman&quot;,serif"><span style=3D"color:black">Jes=
+=C3=BAs G. =E2=80=9CChuy=E2=80=9D Garc=C3=ADa</span></span></span></span></=
+span></p><p style=3D"margin: 0;"><br><span style=3D"font-size:12pt; font-va=
+riant:normal; white-space:pre-wrap"><span style=3D"font-family:'Times New R=
+oman'"><span style=3D"color:#000000"><span style=3D"background-color:#fffff=
+f"><span style=3D"font-weight:400"><span style=3D"font-style:italic"><span =
+style=3D"text-decoration:none">PS: As we prepare for the next Congress, my =
+of<em><span style=3D"font-size:16px;"><span style=3D"font-family:Times New =
+Roman,Times,serif;">fice on the North Side (5624 W. Diversey Ave) has close=
+d as of December 14. My South Side office (4376 S. Archer Ave) remains open=
+ and you can call us at that location at (773) 475-0833. </span></span></em=
+></span></span></span></span></span></span></span><em><span style=3D"font-s=
+ize:16px;"><span style=3D"font-family:Times New Roman,Times,serif;">Stay tu=
+ned for information on the opening of my new office in Melrose Park!</span>=
+</span></em></p><hr><p style=3D"margin: 0;margin-top:16px; margin-bottom:16=
+px"><span style=3D"font-family:Times New Roman,Times,serif;"><span style=3D=
+"font-size:16px;"><b><u><span style=3D"color:#1a263a">Resource Guide</span>=
+</u></b></span></span></p><p style=3D"margin: 0;"><span style=3D"font-famil=
+y:Times New Roman,Times,serif;"><span style=3D"font-size:16px;"><b><span st=
+yle=3D"color:#1a263a">Unemployment:</span></b><span style=3D"color:#1a263a"=
+> The Illinois Department of Employment Security (IDES) is processing unemp=
+loyment claims online <strong style=3D"font-weight: bold;"><a data-cke-save=
+d-href=3D"https://chuygarciaforms.house.gov/components/redirect/r.aspx?ID=
+=3D150-674079" href=3D"https://chuygarciaforms.house.gov/components/redirec=
+t/r.aspx?ID=3D150-674079" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;color:blue; text-decoration:underline"><span style=3D"co=
+lor:#1155cc">here</span></a></strong>.</span></span></span></p><p style=3D"=
+margin: 0;margin-top:16px; margin-bottom:16px"><span style=3D"font-family:T=
+imes New Roman,Times,serif;"><span style=3D"font-size:16px;"><b><span style=
+=3D"color:#1a263a">Food</span></b><span style=3D"color:#1a263a">: Supplemen=
+tal Nutrition Assistance Program (SNAP) can help you and your family purcha=
+se groceries. To check your eligibility or to apply, visit <strong style=3D=
+"font-weight: bold;"><a data-cke-saved-href=3D"https://chuygarciaforms.hous=
+e.gov/components/redirect/r.aspx?ID=3D155-674079" href=3D"https://chuygarci=
+aforms.house.gov/components/redirect/r.aspx?ID=3D155-674079" style=3D"-webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color:blue; text-deco=
+ration:underline"><span style=3D"color:#1155cc">abe.illinois.gov</span></a>=
+ </strong>or call 844-600-7627.</span></span></span></p><p style=3D"margin:=
+ 0;margin-top:16px; margin-bottom:16px"><span style=3D"font-family:Times Ne=
+w Roman,Times,serif;"><span style=3D"font-size:16px;"><span style=3D"color:=
+#1a263a">CPS is providing meals at over 270 schools across Chicago. Click <=
+strong style=3D"font-weight: bold;"><a data-cke-saved-href=3D"https://chuyg=
+arciaforms.house.gov/components/redirect/r.aspx?ID=3D156-674079" href=3D"ht=
+tps://chuygarciaforms.house.gov/components/redirect/r.aspx?ID=3D156-674079"=
+ style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color:=
+blue; text-decoration:underline"><span style=3D"color:#1155cc">here</span><=
+/a> </strong>for locations and pickup details.</span></span></span></p><p s=
+tyle=3D"margin: 0;margin-top:16px; margin-bottom:16px"><span style=3D"font-=
+family:Times New Roman,Times,serif;"><span style=3D"font-size:16px;"><stron=
+g style=3D"font-weight: bold;">Student Loan Forgiveness:</strong> Click <st=
+rong style=3D"font-weight: bold;"><a data-cke-saved-href=3D"http://chuygarc=
+ia.house.gov/sites/evo-subsites/chuygarcia.house.gov/files/evo-media-docume=
+nt/student-loan-debt-one-pager.pdf" href=3D"http://chuygarcia.house.gov/sit=
+es/evo-subsites/chuygarcia.house.gov/files/evo-media-document/student-loan-=
+debt-one-pager.pdf" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;"><span style=3D"color:#0000ff;">here</span></a><span style=3D=
+"color:#0000ff;"> </span></strong>to learn more about the federal student l=
+oan forgiveness program and see if you are eligible.&nbsp;</span></span></p=
+><p style=3D"margin: 0;margin-top:16px; margin-bottom:16px"><span style=3D"=
+font-family:Times New Roman,Times,serif;"><span style=3D"font-size:16px;"><=
+strong style=3D"font-weight: bold;">Social Security and Senior Services:</s=
+trong> Our office can <strong style=3D"font-weight: bold;"><a data-cke-save=
+d-href=3D"http://chuygarcia.house.gov/sites/evo-subsites/chuygarcia.house.g=
+ov/files/evo-media-document/one-pager-senior-services.pdf" href=3D"http://c=
+huygarcia.house.gov/sites/evo-subsites/chuygarcia.house.gov/files/evo-media=
+-document/one-pager-senior-services.pdf" style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;"><span style=3D"color:#0000ff;">connect<=
+/span></a><span style=3D"color:#0000ff;"> </span></strong>you with federal =
+support services and resources available to older adults.</span></span></p>=
+<p style=3D"margin: 0;margin-top:16px; margin-bottom:16px"><span style=3D"f=
+ont-family:Times New Roman,Times,serif;"><span style=3D"font-size:16px;"><s=
+trong style=3D"font-weight: bold;">Citizenship Workshops</strong>: My offic=
+e partners with local organizations to host citizenship workshops throughou=
+t the year. Click <strong style=3D"font-weight: bold;"><a data-cke-saved-hr=
+ef=3D"http://chuygarcia.house.gov/sites/evo-subsites/chuygarcia.house.gov/f=
+iles/evo-media-document/citizenship-workshop-flyer.pdf" href=3D"http://chuy=
+garcia.house.gov/sites/evo-subsites/chuygarcia.house.gov/files/evo-media-do=
+cument/citizenship-workshop-flyer.pdf" style=3D"-webkit-text-size-adjust: 1=
+00%; -ms-text-size-adjust: 100%;"><span style=3D"color:#0000ff;">here</span=
+></a><span style=3D"color:#0000ff;"> </span></strong>to learn more about ho=
+w to attend.</span></span></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div></div>
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color: #=
+f5f5f5;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0=
+" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #f5f5f5;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #1a263a; backgro=
+und-color: #f5f5f5; font-family: 'lucida sans unicode', 'Oswald', helvetica=
+, arial, sans-serif; font-size: 36px; text-align: center;">
+                    <h2 style=3D"font-family: 'lucida sans unicode', 'Oswal=
+d', helvetica, arial, sans-serif; font-size: 36px; margin: 0; font-weight: =
+normal;">Office Locations</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #f5f5f5;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #1a263a; backgro=
+und-color: #f5f5f5; padding: 0 20px;">
+                    <table role=3D"presentation" width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"10" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;text-align:center;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;text-align:=
+center;">
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"32=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: arial, 'open sans', helvetica, sans-serif; text-align:center; fo=
+nt-size: 14px; color: #1a263a; margin: 10px 0;mso-table-lspace: 0pt; mso-ta=
+ble-rspace: 0pt;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: arial, 'open sans', h=
+elvetica, sans-serif;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: 'lucida sans unicode', 'oswald',helvetica, arial, sans-ser=
+if; font-size: 16px;">DC OFFICE</strong><br>
+                                            1519 Longworth HOB<br>
+                                            Washington, DC 20515<br>
+                                            Phone: (202) 225-8203
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"32=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: arial, 'open sans', helvetica, sans-serif; text-align:center; fo=
+nt-size: 14px; color: #1a263a; margin: 10px 0;mso-table-lspace: 0pt; mso-ta=
+ble-rspace: 0pt;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: arial, 'open sans', h=
+elvetica, sans-serif;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: 'lucida sans unicode', 'oswald',helvetica, arial, sans-ser=
+if; font-size: 16px;">SOUTHSIDE OFFICE</strong><br>
+                                            4376 S Archer Ave<br>
+                                            Chicago, IL 60632<br>
+                                            Phone: (773) 475-0833
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"32=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: arial, 'open sans', helvetica, sans-serif; text-align:center; fo=
+nt-size: 14px; color: #1a263a; margin: 10px 0;mso-table-lspace: 0pt; mso-ta=
+ble-rspace: 0pt;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: arial, 'open sans', h=
+elvetica, sans-serif;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: 'lucida sans unicode', 'oswald',helvetica, arial, sans-ser=
+if; font-size: 16px;"></strong><br>
+                                    <strong style=3D"font-weight: bold;marg=
+in: 0; padding:0;"><em>New office location coming soon. Stay tuned!</em></s=
+trong>
+                                    <!--5624 W Diversey Ave<br />
+                                            Chicago, IL 60639<br />
+                                            Phone: (773) 342-0774-->
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                               =20
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #f5f5f5;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;background-color: #f5f5f5;">
+                    <table role=3D"presentation" cellpadding=3D"0" cellspac=
+ing=3D"20" align=3D"center" width=3D"90%" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #1a2=
+63a; font-size: 15px; font-family: arial, 'open sans', helvetica, sans-seri=
+f;">
+                                <a target=3D"_blank" href=3D"https://chuyga=
+rcia.house.gov/contact/newsletter" style=3D"-webkit-text-size-adjust: 100%;=
+ -ms-text-size-adjust: 100%;color: #1a263a; text-decoration:none; font-fami=
+ly: arial, 'open sans', helvetica, sans-serif; font-size: 15px;">Unsubscrib=
+e</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #f5f5f5;">
+                    &nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    <!--[if (gte mso 9)|(IE)]>
+    </td></tr></table>
+    <![endif]-->
+    </body>
+</html>=
+
+----boundary_1442_d9c1ff27-15b1-4896-a98f-43063533729b--

@@ -1,0 +1,669 @@
+Received: from DM8PR09MB6567.namprd09.prod.outlook.com (2603:10b6:5:2e5::17)
+ by MN2PR09MB5897.namprd09.prod.outlook.com with HTTPS; Mon, 3 May 2021
+ 20:29:01 +0000
+Received: from MWHPR09CA0015.namprd09.prod.outlook.com (2603:10b6:300:80::25)
+ by DM8PR09MB6567.namprd09.prod.outlook.com (2603:10b6:5:2e5::17) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.4087.26; Mon, 3 May
+ 2021 20:29:01 +0000
+Received: from BL0GCC02FT004.eop-gcc02.prod.protection.outlook.com
+ (2a01:111:f400:7d05::200) by MWHPR09CA0015.outlook.office365.com
+ (2603:10b6:300:80::25) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.4087.25 via Frontend
+ Transport; Mon, 3 May 2021 20:29:00 +0000
+Authentication-Results: spf=fail (sender IP is 143.231.249.134)
+ smtp.mailfrom=mail8.housecommunications.gov; ushouse.mail.onmicrosoft.com;
+ dkim=fail (body hash did not verify)
+ header.d=mail8.housecommunications.gov;ushouse.mail.onmicrosoft.com;
+ dmarc=fail action=none header.from=mail8.housecommunications.gov;
+Received-SPF: Fail (protection.outlook.com: domain of
+ mail8.housecommunications.gov does not designate 143.231.249.134 as permitted
+ sender) receiver=protection.outlook.com; client-ip=143.231.249.134;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.231.249.134) by
+ BL0GCC02FT004.mail.protection.outlook.com (10.97.10.83) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.4087.27 via Frontend Transport; Mon, 3 May 2021 20:29:00 +0000
+Received: from EXGW203.US.House.gov (143.228.51.91) by EXGW204.US.House.gov
+ (143.228.51.92) with Microsoft SMTP Server (TLS) id 15.0.1497.2; Mon, 3 May
+ 2021 16:28:40 -0400
+Received: from serg-hub1-a.house.gov (143.228.40.77) by EXGW203.US.House.gov
+ (143.228.51.91) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
+ Transport; Mon, 3 May 2021 16:28:40 -0400
+Authentication-Results-Original: house.gov;	spf=pass
+ smtp.mailfrom=repkim@mail8.housecommunications.gov;	dkim=pass
+ header.d=mail8.housecommunications.gov header.s=zendesk2;	dmarc=pass
+ header.from=mail8.housecommunications.gov
+Received: from outbyoip13.pod20.usw2.zdsys.com (outbyoip13.pod20.usw2.zdsys.com [192.161.151.43])
+	by serg-hub1-a.house.gov (8.16.0.27/8.16.0.27) with ESMTPS id 143KSc20015293
+	(version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO)
+	for <justin.doil@mail.house.gov>; Mon, 3 May 2021 16:28:39 -0400
+Received: from zendesk.com (unknown [10.219.91.31])
+	by outbyoip13.pod20.usw2.zdsys.com (Postfix) with ESMTP id 4FYvgp3VHRz14K2t
+	for <justin.doil@mail.house.gov>; Mon,  3 May 2021 20:28:38 +0000 (UTC)
+Date: Mon, 03 May 2021 20:28:38 +0000
+From: "Rep. Young Kim" <repkim@mail8.housecommunications.gov>
+Reply-To: "Rep. Young Kim" <repkim@mail8.housecommunications.gov>
+To: Justin Doil <justin.doil@mail.house.gov>
+Message-ID: <PMOL5G8GQM_60905cf63926_2a2b10262259641316213_sprut@zendesk.com>
+In-Reply-To: <PMOL5G8GQM@zendesk.com>
+Subject: Stopping Scams
+MIME-Version: 1.0
+X-Delivery-Context: event-id-1538967548191
+X-Priority: 3
+Auto-Submitted: auto-generated
+X-Auto-Response-Suppress: All
+X-Mailer: Zendesk Mailer
+X-Zendesk-From-Account-Id: 9cffd39
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=mail8.housecommunications.gov; q=dns/txt; s=zendesk2; t=1620073718;
+ bh=MGpl6ctJa8J3+CYaYiq2VAn/1afw/uWY6yDc0esmZ+Q=;
+ h=date:from:reply-to:to:message-id:in-reply-to:subject:mime-version:content-type:content-transfer-encoding;
+ b=l3haF4UiDVORSpAc33Ke4j83fP5dau2tjsMOMyOVlYKjjA/w82OPSQZLnvAKsJZuW/nyGm+ojCrTQ28PDIdMOgBbRX0qdTDiXJc3R4yyfTcOBed8UMkk7E0wgplNmYLdKgTG/ZpO9JRyHJQno4oVYH7Gu8qpoSFvzz9be5uAxhr7VB0mt2nTrLeTkY86Mgjx7cWnNPiAUQxjnyAenR2kj+kmeGlZGuxS18jeJuE3AVl/nSP9BLQFiCDgRTgEtzPS2hckIOyZu0GIHfG5+ZaDrCLTH/s/BucVMynxvKqipUSeMq7rA44oRTRLKGfpJ4y9z5arXULXzOfIFh+oWHJOsg==
+X-Proofpoint-HIR-SPF: spf_passed
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:6.0.391,18.0.761
+ definitions=2021-05-03_19:2021-05-03,2021-05-03 signatures=0
+X-Proofpoint-HIR-DMARC: Pass
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 suspectscore=0 malwarescore=0
+ phishscore=0 bulkscore=0 spamscore=0 mlxscore=0 mlxlogscore=999
+ adultscore=0 classifier=spam adjust=0 reason=mlx scancount=1
+ engine=8.0.1-2103310000 definitions=main-2105030140
+Return-Path: repkim@mail8.housecommunications.gov
+X-OrganizationHeadersPreserved: EXGW204.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 03 May 2021 20:29:00.4831
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ d1d5c816-e834-43a8-c817-08d90e7215d2
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXGW203.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted:
+ BL0GCC02FT004.eop-gcc02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ BL0GCC02FT004.eop-gcc02.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: d1d5c816-e834-43a8-c817-08d90e7215d2
+X-MS-TrafficTypeDiagnostic: DM8PR09MB6567:
+X-MS-Exchange-Organization-SCL: -1
+X-MS-Oob-TLC-OOBClassifiers: OLM:8882;
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:143.231.249.134;CTRY:US;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SKI;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:;DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 03 May 2021 20:29:00.4052
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: d1d5c816-e834-43a8-c817-08d90e7215d2
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.231.249.134];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXGW203.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM8PR09MB6567
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.5247852
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.4087.043
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(750129)(520011016)(706158)(944506458)(944626604);
+X-Microsoft-Antispam-Message-Info:
+	NDdo6dYSTjLBTImwa16M7ZV1mMNh9CT6VHzumKW91JLqBoo9fpUyFwvdp7f6WvrH15vIkb4cfjgmE7xnUsMhxwEz6Wtl6aymEq68bs2KgxNoCJrSDS7OHDtjdqyoD7iswMK6qzVELjdU9UF1e1mNrFJX4njbHG3+FKszFqEQ+up9jk7Vsg2mFjE+05OX/gqNaF4fDfmrQnbqZ+qxEil/Grq7Y7xrmwYUXMi2+3FsYrDKX3VUjKmf8nHnfkY+uyqCiUBN3AjCBza6WMVcsnrmEOD1zbG5nfRk9ATf50BdFGp+U0QdZ+TxV7+JM7gMPOPb36lTzpeqfd1UH/DKkq7DVqj0SkrIRzIDBUbWF+X618BhmH0F8Ps34HrKRhLTm46Ah8E0Vj1hLPomzepKp4NR431AAEAWottSskCyTQtiDI8kH4Wi5vxkcdUdoGEi16huBpgxxJ9Fb25PglFEJA2nVVFnFOex4CVutNv6DrG7ZsxxcNFtmwa9hS/7ujFIgYpe1zhejlxQ7yuoeNU5FN1bH27o5CMqnCW0zg9H96LkCTMmmvXz/OLwyPzNMOJANKh77JGGE649CneWWBFBuQIQr1r5WDP8zgfIt7YoUOXhoCHXSn2+mPoRPiX4sidUtE3U
+Content-type: multipart/alternative;
+	boundary="B_3702905567_1247978078"
+
+> This message is in MIME format. Since your mail reader does not understand
+this format, some or all of this message may not be legible.
+
+--B_3702905567_1247978078
+Content-type: text/plain;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+
+Dear Justin,
+
+Since the beginning of the COVID-19 pandemic, the Federal Trade Commission =
+(FTC) reported nearly 260,000 cases of fraud costing more than $406.3 millio=
+n in losses. These fraud reports also mainly targeted individuals over the a=
+ge of 60.Each year, seniors throughout our country are scammed out of an est=
+imated $3 billion, but just 1-in-4 cases of this fraud are ever reported to =
+authorities.We must protect our parents and grandparents and hold scammers a=
+ccountable. That=E2=80=99s why I helped pass two bipartisan bills out of the House=
+ to do exactly that.I was proud to support and help pass out of the House:
+The Fraud and Scam Reduction Act (H.R. 1215), which would create a Senior S=
+cams Prevention Advisory Group and help the Federal Trade Commission (FTC), =
+Treasury Department and the Consumer Financial Protection Bureau gather info=
+rmation and promote education to prevent fraud targeting seniors.
+The Protecting Seniors from Emergency Scams Act (H.R. 446), would help the =
+FTC expand resources for consumers to search for scams targeting seniors bas=
+ed on region.
+It is wrong that so many senior citizens are taken advantage of and robbed =
+of their hard-earned dollars. Sadly, just 1-in-4 cases of elder fraud and fi=
+nancial abuse are ever reported. As your Representative in Congress, I am co=
+mmitted to protecting our elder generation and stopping scams targeting the =
+elderly.These two bills are an important step to hold scammers accountable a=
+nd protect seniors from fraud. I will continue to do all that I can to suppo=
+rt seniors in Congress.As always, my team and I are here to serve you. Pleas=
+e do not hesitate to reach out to my office with any questions or concerns. =
+For updates on my work for you in Congress, I encourage you to sign up for m=
+y e-newsletter and follow me on Facebook, Twitter, Instagram and YouTube at =
+@RepYoungKim.Sincerely,Young
+
+
+Sincerely,
+
+
+Rep. Young Kim
+Member of Congress
+
+Click here to unsubscribe
+
+Click here to learn more about my work in Congress!
+
+SIGN UP=20
+Contact Me
+
+Washington, D.C.
+1306 Longworth House Office Building
+Washington, DC  20515
+
+Phone: (202) 225-4111
+
+Website | youngkim.house.gov
+
+[PMOL5G-8GQM]Ticket-Id:541734Account-Subdomain:repkim
+
+
+--B_3702905567_1247978078
+Content-type: text/html;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www=
+.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3.or=
+g/1999/xhtml" xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-micr=
+osoft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office"><head><!--[=
+if gte mso 9]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>9=
+6</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]-->
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><meta na=
+me=3D"viewport" content=3D"width=3Ddevice-width"><!--[if !mso]><!--><meta http-equ=
+iv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![endif]--><title></title><!--[i=
+f !mso]><!--><!--<![endif]--><style type=3D"text/css">
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		table,
+		td,
+		tr {
+			vertical-align: top;
+			border-collapse: collapse;
+		}
+
+		* {
+			line-height: inherit;
+		}
+
+		a[x-apple-data-detectors=3Dtrue] {
+			color: inherit !important;
+			text-decoration: none !important;
+		}
+	</style><style type=3D"text/css" id=3D"media-query">
+		@media (max-width: 620px) {
+
+			.block-grid,
+			.col {
+				min-width: 320px !important;
+				max-width: 100% !important;
+				display: block !important;
+			}
+
+			.block-grid {
+				width: 100% !important;
+			}
+
+			.col {
+				width: 100% !important;
+			}
+
+			.col_cont {
+				margin: 0 auto;
+			}
+
+			img.fullwidth,
+			img.fullwidthOnMobile {
+				max-width: 100% !important;
+			}
+
+			.no-stack .col {
+				min-width: 0 !important;
+				display: table-cell !important;
+			}
+
+			.no-stack.two-up .col {
+				width: 50% !important;
+			}
+
+			.no-stack .col.num2 {
+				width: 16.6% !important;
+			}
+
+			.no-stack .col.num3 {
+				width: 25% !important;
+			}
+
+			.no-stack .col.num4 {
+				width: 33% !important;
+			}
+
+			.no-stack .col.num5 {
+				width: 41.6% !important;
+			}
+
+			.no-stack .col.num6 {
+				width: 50% !important;
+			}
+
+			.no-stack .col.num7 {
+				width: 58.3% !important;
+			}
+
+			.no-stack .col.num8 {
+				width: 66.6% !important;
+			}
+
+			.no-stack .col.num9 {
+				width: 75% !important;
+			}
+
+			.no-stack .col.num10 {
+				width: 83.3% !important;
+			}
+
+			.video-block {
+				max-width: none !important;
+			}
+
+			.mobile_hide {
+				min-height: 0px;
+				max-height: 0px;
+				max-width: 0px;
+				display: none;
+				overflow: hidden;
+				font-size: 0px;
+			}
+
+			.desktop_hide {
+				display: block !important;
+				max-height: none !important;
+			}
+		}
+	</style></head><body class=3D"clean-body" style=3D"margin: 0; padding: 0; -web=
+kit-text-size-adjust: 100%; background-color: #FFFFFF;"><!--[if IE]><div cla=
+ss=3D"ie-browser"><![endif]--><table class=3D"nl-container" style=3D"table-layout:=
+ fixed; vertical-align: top; min-width: 320px; border-spacing: 0; border-col=
+lapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-co=
+lor: #FFFFFF; width: 100%;" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentati=
+on" width=3D"100%" bgcolor=3D"#FFFFFF" valign=3D"top"><tbody><tr style=3D"vertical-a=
+lign: top;" valign=3D"top"><td style=3D"word-break: break-word; vertical-align: =
+top;" valign=3D"top"><!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" c=
+ellspacing=3D"0" border=3D"0"><tr><td align=3D"center" style=3D"background-color:#FF=
+FFFF"><![endif]--><div style=3D"background-color:transparent;"><div class=3D"blo=
+ck-grid " style=3D"min-width: 320px; max-width: 600px; overflow-wrap: break-wo=
+rd; word-wrap: break-word; word-break: break-word; Margin: 0 auto; backgroun=
+d-color: transparent;"><div style=3D"border-collapse: collapse;display: table;=
+width: 100%;background-color:transparent;"><!--[if (mso)|(IE)]><table width=3D=
+"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"background-color:tr=
+ansparent;"><tr><td align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" bo=
+rder=3D"0" style=3D"width:600px"><tr class=3D"layout-full-width" style=3D"background=
+-color:transparent"><![endif]--><!--[if (mso)|(IE)]><td align=3D"center" width=
+=3D"600" style=3D"background-color:transparent;width:600px; border-top: 0px soli=
+d transparent; border-left: 0px solid transparent; border-bottom: 0px solid =
+transparent; border-right: 0px solid transparent;" valign=3D"top"><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding-ri=
+ght: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px;"><![endif]=
+--><div class=3D"col num12" style=3D"min-width: 320px; max-width: 600px; display=
+: table-cell; vertical-align: top; width: 600px;"><div class=3D"col_cont" styl=
+e=3D"width:100% !important;"><!--[if (!mso)&(!IE)]><!--><div style=3D"border-top=
+:0px solid transparent; border-left:0px solid transparent; border-bottom:0px=
+ solid transparent; border-right:0px solid transparent; padding-top:5px; pad=
+ding-bottom:5px; padding-right: 0px; padding-left: 0px;"><!--<![endif]--><di=
+v class=3D"img-container center autowidth" align=3D"center" style=3D"padding-right=
+: 0px;padding-left: 0px;"></div><!--[if mso]><table width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 10px; padding-=
+left: 10px; padding-top: 10px; padding-bottom: 10px; font-family: Verdana, s=
+ans-serif"><![endif]--><div style=3D"color:#393d47;font-family:'Lucida Sans Un=
+icode', 'Lucida Grande', 'Lucida Sans', Geneva, Verdana, sans-serif;line-hei=
+ght:1.2;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left=
+:10px;"><div class=3D"txtTinyMce-wrapper" style=3D"line-height: 1.2; font-size: =
+12px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Ge=
+neva, Verdana, sans-serif; color: #393d47; mso-line-height-alt: 14px;"><p st=
+yle=3D"font-size: 14px; line-height: 1.2; word-break: break-word; font-family:=
+ 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Geneva, Verdana, san=
+s-serif; mso-line-height-alt: 17px; margin: 0;" dir=3D"ltr"></p><p dir=3D"ltr"><=
+/p><div><img align=3D"center" alt=3D"" src=3D"https://us-congress-templates.s3-us-=
+gov-west-1.amazonaws.com/repkim/email_assets/header_templates/CA39_RepKim_ne=
+wsletter.png" width=3D"100%" style=3D"padding-bottom: 0; display: inline !import=
+ant; vertical-align: bottom;" class=3D"header-image"></div><br><div style=3D"col=
+or: #2b2e2f; font-size: 14px; line-height: 1.2; font-family: 'Lucida Sans Un=
+icode', 'Lucida Grande', 'Lucida Sans', Geneva, Verdana, sans-serif; word-br=
+eak: break-word; mso-line-height-alt: 17px; margin: 0;">Dear Justin,</div><b=
+r><div class=3D"zd-comment" dir=3D"auto" style=3D"color: #2b2e2f; font-family: 'Lu=
+cida Sans Unicode', 'Lucida Grande', 'Tahoma', Verdana, sans-serif; font-siz=
+e: 14px; line-height: 22px; margin: 15px 0"><p dir=3D"ltr" style=3D"color: #2b2e=
+2f; font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Tahoma', Verdana, =
+sans-serif; font-size: 14px; line-height: 22px; margin: 15px 0">Since the be=
+ginning of the COVID-19 pandemic, the <a href=3D"https://urldefense.proofpoint=
+.com/v2/url?u=3Dhttps-3A__327wmp5mtf.execute-2Dapi.us-2Dgov-2Dwest-2D1.amazona=
+ws.com_prod_redirect-3Fsubdomain-3Drepkim-26userId-3D410961187171-26bulkMail=
+erId-3D3201-26url-3Dhttps-253A-252F-252Fpublic.tableau.com-252Fprofile-252Ff=
+ederal.trade.commission-2523-21-252Fvizhome-252FCOVID-2D19andStimulusReports=
+-252FAgeFraud&amp;d=3DDwMFaQ&amp;c=3DL93KkjKsAC98uTvC4KvQDdTDRzAeWDDRmG6S3YXllH0=
+&amp;r=3DhB0wlr9PC_OrOygsMFesDOJ06GnzD2k-OzTQaGb4d94&amp;m=3Dv5elmSw0qKs8-jICIKY=
+8mcfozOr8vDnb3DgLMK__XZY&amp;s=3DwLua9YKBjXumdjcdVxV_Xrk3SvYwtc8s39c3Bm0Pb5w&a=
+mp;e=3D" rel=3D"noreferrer">Federal Trade Commission (FTC)</a> reported nearly 2=
+60,000 cases of fraud costing more than $406.3 million in losses. These frau=
+d reports also mainly targeted individuals over the age of 60.</p><p dir=3D"lt=
+r" style=3D"color: #2b2e2f; font-family: 'Lucida Sans Unicode', 'Lucida Grande=
+', 'Tahoma', Verdana, sans-serif; font-size: 14px; line-height: 22px; margin=
+: 15px 0">Each year, seniors throughout our country are scammed out of an es=
+timated <a href=3D"https://urldefense.proofpoint.com/v2/url?u=3Dhttps-3A__327wmp=
+5mtf.execute-2Dapi.us-2Dgov-2Dwest-2D1.amazonaws.com_prod_redirect-3Fsubdoma=
+in-3Drepkim-26userId-3D410961187171-26bulkMailerId-3D3201-26url-3Dhttps-253A=
+-252F-252Fwww.aging.senate.gov-252Fpress-2Dreleases-252Faging-2Dcommittee-2D=
+examines-2Dlaw-2Denforcements-2Defforts-2Dto-2Dcrack-2Ddown-2Don-2Dfraud-2Dt=
+hat-2Dcosts-2Dseniors-2Dbillions-2Dannually&amp;d=3DDwMFaQ&amp;c=3DL93KkjKsAC98u=
+TvC4KvQDdTDRzAeWDDRmG6S3YXllH0&amp;r=3DhB0wlr9PC_OrOygsMFesDOJ06GnzD2k-OzTQaGb=
+4d94&amp;m=3Dv5elmSw0qKs8-jICIKY8mcfozOr8vDnb3DgLMK__XZY&amp;s=3DyXtOxPB8N3asCr9=
+xBWvdaVSblKjgX6fxdsC_VmrtRuM&amp;e=3D" rel=3D"noreferrer">$3 billion</a>, but ju=
+st <a href=3D"https://urldefense.proofpoint.com/v2/url?u=3Dhttps-3A__327wmp5mtf.=
+execute-2Dapi.us-2Dgov-2Dwest-2D1.amazonaws.com_prod_redirect-3Fsubdomain-3D=
+repkim-26userId-3D410961187171-26bulkMailerId-3D3201-26url-3Dhttps-253A-252F=
+-252Fwww.aarp.org-252Fmoney-252Fscams-2Dfraud-252Finfo-2D2015-252Fhow-2Dto-2=
+Dspot-2Dearly-2Dwarning-2Dsigns-2Dof-2Delder-2Dfinancial-2Dabuse.html-2523-2=
+53A-7E-253Atext-253DMost-2520cases-2520go-2520unreported-252Cwhen-2520Allian=
+z-2520Life-2520Insurance-2520Co.&amp;d=3DDwMFaQ&amp;c=3DL93KkjKsAC98uTvC4KvQDdTD=
+RzAeWDDRmG6S3YXllH0&amp;r=3DhB0wlr9PC_OrOygsMFesDOJ06GnzD2k-OzTQaGb4d94&amp;m=3D=
+v5elmSw0qKs8-jICIKY8mcfozOr8vDnb3DgLMK__XZY&amp;s=3D3hS92XunlMBx0TMacBu5lpq62c=
+3gC-7xXVZXTz_t14I&amp;e=3D" rel=3D"noreferrer">1-in-4</a> cases of this fraud ar=
+e ever reported to authorities.</p><p dir=3D"ltr" style=3D"color: #2b2e2f; font-=
+family: 'Lucida Sans Unicode', 'Lucida Grande', 'Tahoma', Verdana, sans-seri=
+f; font-size: 14px; line-height: 22px; margin: 15px 0"><strong>We must prote=
+ct our parents and grandparents and hold scammers accountable. That=E2=80=99s why =
+I helped pass two bipartisan bills out of the House to do exactly that.</str=
+ong></p><p dir=3D"ltr" style=3D"color: #2b2e2f; font-family: 'Lucida Sans Unicod=
+e', 'Lucida Grande', 'Tahoma', Verdana, sans-serif; font-size: 14px; line-he=
+ight: 22px; margin: 15px 0">I was proud to support and help pass out of the =
+House:</p><ul style=3D"list-style-type: disc; margin: 10px 0 15px 30px; paddin=
+g-left: 0" dir=3D"auto"><li style=3D"font-family: 'Lucida Sans Unicode', 'Lucida=
+ Grande', 'tahoma', Verdana, sans-serif; font-size: 14px; line-height: 22px;=
+ margin: 10px 0">The Fraud and Scam Reduction Act (H.R. 1215), which would c=
+reate a Senior Scams Prevention Advisory Group and help the Federal Trade Co=
+mmission (FTC), Treasury Department and the Consumer Financial Protection Bu=
+reau gather information and promote education to prevent fraud targeting sen=
+iors.</li><li style=3D"font-family: 'Lucida Sans Unicode', 'Lucida Grande', 't=
+ahoma', Verdana, sans-serif; font-size: 14px; line-height: 22px; margin: 10p=
+x 0">The Protecting Seniors from Emergency Scams Act (H.R. 446), would help =
+the FTC expand resources for consumers to search for scams targeting seniors=
+ based on region.</li></ul><p dir=3D"ltr" style=3D"color: #2b2e2f; font-family: =
+'Lucida Sans Unicode', 'Lucida Grande', 'Tahoma', Verdana, sans-serif; font-=
+size: 14px; line-height: 22px; margin: 15px 0">It is wrong that so many seni=
+or citizens are taken advantage of and robbed of their hard-earned dollars. =
+Sadly, just <a href=3D"https://urldefense.proofpoint.com/v2/url?u=3Dhttps-3A__32=
+7wmp5mtf.execute-2Dapi.us-2Dgov-2Dwest-2D1.amazonaws.com_prod_redirect-3Fsub=
+domain-3Drepkim-26userId-3D410961187171-26bulkMailerId-3D3201-26url-3Dhttps-=
+253A-252F-252Fwww.aarp.org-252Fmoney-252Fscams-2Dfraud-252Finfo-2D2015-252Fh=
+ow-2Dto-2Dspot-2Dearly-2Dwarning-2Dsigns-2Dof-2Delder-2Dfinancial-2Dabuse.ht=
+ml-2523-253A-7E-253Atext-253DMost-2520cases-2520go-2520unreported-252Cwhen-2=
+520Allianz-2520Life-2520Insurance-2520Co.&amp;d=3DDwMFaQ&amp;c=3DL93KkjKsAC98uTv=
+C4KvQDdTDRzAeWDDRmG6S3YXllH0&amp;r=3DhB0wlr9PC_OrOygsMFesDOJ06GnzD2k-OzTQaGb4d=
+94&amp;m=3Dv5elmSw0qKs8-jICIKY8mcfozOr8vDnb3DgLMK__XZY&amp;s=3D3hS92XunlMBx0TMac=
+Bu5lpq62c3gC-7xXVZXTz_t14I&amp;e=3D" rel=3D"noreferrer">1-in-4</a> cases of elde=
+r fraud and financial abuse are ever reported. As your Representative in Con=
+gress, I am committed to protecting our elder generation and stopping scams =
+targeting the elderly.</p><p dir=3D"ltr" style=3D"color: #2b2e2f; font-family: '=
+Lucida Sans Unicode', 'Lucida Grande', 'Tahoma', Verdana, sans-serif; font-s=
+ize: 14px; line-height: 22px; margin: 15px 0">These two bills are an importa=
+nt step to hold scammers accountable and protect seniors from fraud. I will =
+continue to do all that I can to support seniors in Congress.</p><p dir=3D"ltr=
+" style=3D"color: #2b2e2f; font-family: 'Lucida Sans Unicode', 'Lucida Grande'=
+, 'Tahoma', Verdana, sans-serif; font-size: 14px; line-height: 22px; margin:=
+ 15px 0">As always, my team and I are here to serve you. Please do not hesit=
+ate to reach out to my office with any questions or concerns. <strong>For up=
+dates on my work for you in Congress, I encourage you to </strong><a href=3D"h=
+ttps://urldefense.proofpoint.com/v2/url?u=3Dhttps-3A__327wmp5mtf.execute-2Dapi=
+.us-2Dgov-2Dwest-2D1.amazonaws.com_prod_redirect-3Fsubdomain-3Drepkim-26user=
+Id-3D410961187171-26bulkMailerId-3D3201-26url-3Dhttps-253A-252F-252Fyoungkim=
+.house.gov-252Fcontact-252Fnewsletter-2Dsubscribe&amp;d=3DDwMFaQ&amp;c=3DL93KkjK=
+sAC98uTvC4KvQDdTDRzAeWDDRmG6S3YXllH0&amp;r=3DhB0wlr9PC_OrOygsMFesDOJ06GnzD2k-O=
+zTQaGb4d94&amp;m=3Dv5elmSw0qKs8-jICIKY8mcfozOr8vDnb3DgLMK__XZY&amp;s=3DxKGYXnvXt=
+8iKi8rV9tnJxrUnmUSHqD-7aZUOA_ppnS4&amp;e=3D" rel=3D"noreferrer"><strong>sign up =
+for my e-newsletter</strong></a><strong> and follow me on Facebook, Twitter,=
+ Instagram and YouTube at @RepYoungKim.</strong></p><p dir=3D"ltr" style=3D"colo=
+r: #2b2e2f; font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Tahoma', V=
+erdana, sans-serif; font-size: 14px; line-height: 22px; margin: 15px 0">Sinc=
+erely,</p><p dir=3D"ltr" style=3D"color: #2b2e2f; font-family: 'Lucida Sans Unic=
+ode', 'Lucida Grande', 'Tahoma', Verdana, sans-serif; font-size: 14px; line-=
+height: 22px; margin: 15px 0">Young</p><img src=3D"https://www.google-analytic=
+s.com/collect?v=3D1&amp;tid=3DUA-154457933-1&amp;cid=3D410961187171&amp;t=3Devent&am=
+p;ec=3Demail&amp;ea=3Dopen&amp;el=3D3201&amp;cs=3Drepkim&amp;cn=3D410961187171&amp;cm=3D=
+email&amp;dp=3D%2Femail%2F410961187171%2F3201" style=3D"display: none; max-width=
+: 100%"></div><p dir=3D"ltr"></p><p dir=3D"ltr"></p><div style=3D"color: #2b2e2f; =
+font-size: 14px; line-height: 1.2; font-family: 'Lucida Sans Unicode', 'Luci=
+da Grande', 'Lucida Sans', Geneva, Verdana, sans-serif; word-break: break-wo=
+rd; mso-line-height-alt: 17px; margin: 0;"><br></div><br><div style=3D"color: =
+#2b2e2f; font-size: 14px; line-height: 1.2; font-family: 'Lucida Sans Unicod=
+e', 'Lucida Grande', 'Lucida Sans', Geneva, Verdana, sans-serif; word-break:=
+ break-word; mso-line-height-alt: 17px; margin: 0;">Sincerely,</div><br><div=
+><img align=3D"center" alt=3D"" src=3D"https://email-signatures.s3-us-gov-west-1.a=
+mazonaws.com/kim+sig.jpg" width=3D"213" style=3D"max-width:213px; padding-bottom=
+: 0; display: inline !important; vertical-align: bottom;" class=3D"mcnImage"><=
+/div><br><div style=3D"color: #2b2e2f; font-size: 14px; line-height: 1.2; font=
+-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Geneva, Verd=
+ana, sans-serif; word-break: break-word; mso-line-height-alt: 17px; margin: =
+0;"><strong>Rep. Young Kim<br>Member of Congress</strong></div><p dir=3D"ltr">=
+<img src=3D"https://www.google-analytics.com/collect?v=3D1&amp;tid=3DUA-154457933-=
+1&amp;cid=3D410961187171&amp;t=3Devent&amp;ec=3Demail&amp;ea=3Dopen_general&amp;el=3D5=
+41734&amp;cs=3Drepkim&amp;cn=3D410961187171&amp;cm=3Demail&amp;dp=3D%2Femail%2F41096=
+1187171%2F541734"><br></p><div style=3D"font-size: 10px; text-align: center;">=
+<a href=3D"https://youngkim.house.gov/newsletter-unsubscribe-bulk">Click here =
+to unsubscribe</a></div><br><span style=3D"color: white; margin-left: -10000px=
+; position:absolute; left: -9999999px; opacity: 0; visibility: hidden; displ=
+ay: none !important;"></span><p dir=3D"ltr"></p></div></div><!--[if mso]></td>=
+</tr></table><![endif]--><table class=3D"divider" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" width=3D"100%" style=3D"table-layout: fixed; vertical-align: top;=
+ border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-ta=
+ble-rspace: 0pt; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-s=
+ize-adjust: 100%;" role=3D"presentation" valign=3D"top"><tbody><tr style=3D"vertic=
+al-align: top;" valign=3D"top"><td class=3D"divider_inner" style=3D"word-break: br=
+eak-word; vertical-align: top; min-width: 100%; -ms-text-size-adjust: 100%; =
+-webkit-text-size-adjust: 100%; padding-top: 10px; padding-right: 10px; padd=
+ing-bottom: 10px; padding-left: 10px;" valign=3D"top"><table class=3D"divider_co=
+ntent" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-=
+layout: fixed; vertical-align: top; border-spacing: 0; border-collapse: coll=
+apse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-top: 1px solid #B=
+BBBBB; width: 100%;" align=3D"center" role=3D"presentation" valign=3D"top"><tbody>=
+<tr style=3D"vertical-align: top;" valign=3D"top"><td style=3D"word-break: break-w=
+ord; vertical-align: top; -ms-text-size-adjust: 100%; -webkit-text-size-adju=
+st: 100%;" valign=3D"top"><span></span></td></tr></tbody></table></td></tr></t=
+body></table><!--[if (!mso)&(!IE)]><!--></div><!--<![endif]--></div></div><!=
+--[if (mso)|(IE)]></td></tr></table><![endif]--><!--[if (mso)|(IE)]></td></t=
+r></table></td></tr></table><![endif]--></div></div></div><div style=3D"backgr=
+ound-color:#e5e5e5;"><div class=3D"block-grid " style=3D"min-width: 320px; max-w=
+idth: 600px; overflow-wrap: break-word; word-wrap: break-word; word-break: b=
+reak-word; Margin: 0 auto; background-color: #e5e5e5;"><div style=3D"border-co=
+llapse: collapse;display: table;width: 100%;background-color:#e5e5e5;"><!--[=
+if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0=
+" style=3D"background-color:#e5e5e5;"><tr><td align=3D"center"><table cellpaddin=
+g=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:600px"><tr class=3D"layout-full-=
+width" style=3D"background-color:#e5e5e5"><![endif]--><!--[if (mso)|(IE)]><td =
+align=3D"center" width=3D"600" style=3D"background-color:#e5e5e5;width:600px; bord=
+er-top: 0px solid transparent; border-left: 0px solid transparent; border-bo=
+ttom: 0px solid transparent; border-right: 0px solid transparent;" valign=3D"t=
+op"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td s=
+tyle=3D"padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom=
+:5px;"><![endif]--><div class=3D"col num12" style=3D"min-width: 320px; max-width=
+: 600px; display: table-cell; vertical-align: top; width: 600px;"><div class=
+=3D"col_cont" style=3D"width:100% !important;"><!--[if (!mso)&(!IE)]><!--><div s=
+tyle=3D"border-top:0px solid transparent; border-left:0px solid transparent; b=
+order-bottom:0px solid transparent; border-right:0px solid transparent; padd=
+ing-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: 0px;"><!-=
+-<![endif]--><!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0=
+" border=3D"0"><tr><td style=3D"padding-right: 10px; padding-left: 10px; padding=
+-top: 10px; padding-bottom: 10px; font-family: Arial, sans-serif"><![endif]-=
+-><div style=3D"color:#555555;font-family:Arial, Helvetica Neue, Helvetica, sa=
+ns-serif;line-height:1.2;padding-top:10px;padding-right:10px;padding-bottom:=
+10px;padding-left:10px;"><div class=3D"txtTinyMce-wrapper" style=3D"line-height:=
+ 1.2; font-size: 12px; font-family: Arial, Helvetica Neue, Helvetica, sans-s=
+erif; color: #555555; mso-line-height-alt: 14px;"><p style=3D"font-size: 14px;=
+ line-height: 1.2; text-align: center; word-break: break-word; font-family: =
+Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 17px; mar=
+gin: 0;" dir=3D"ltr">Click here to learn more about my work in Congress!</p></=
+div></div><!--[if mso]></td></tr></table><![endif]--><div class=3D"button-cont=
+ainer" align=3D"center" style=3D"padding-top:10px;padding-right:10px;padding-bot=
+tom:10px;padding-left:10px;"><!--[if mso]><table width=3D"100%" cellpadding=3D"0=
+" cellspacing=3D"0" border=3D"0" style=3D"border-spacing: 0; border-collapse: coll=
+apse; mso-table-lspace:0pt; mso-table-rspace:0pt;"><tr><td style=3D"padding-to=
+p: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px" alig=
+n=3D"center"><v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn=
+:schemas-microsoft-com:office:word" href=3D"https://youngkim.house.gov/contact=
+/newsletter-subscribe" style=3D"height:31.5pt;width:228.75pt;v-text-anchor:mid=
+dle;" arcsize=3D"10%" stroke=3D"false" fillcolor=3D"#324559"><w:anchorlock/><v:tex=
+tbox inset=3D"0,0,0,0"><center style=3D"color:#ffffff; font-family:Arial, sans-s=
+erif; font-size:16px"><![endif]--><a href=3D"https://youngkim.house.gov/contac=
+t/newsletter-subscribe" target=3D"_blank" style=3D"-webkit-text-size-adjust: non=
+e; text-decoration: none; display: inline-block; color: #ffffff; background-=
+color: #324559; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-=
+radius: 4px; width: auto; width: auto; border-top: 1px solid #324559; border=
+-right: 1px solid #324559; border-bottom: 1px solid #324559; border-left: 1p=
+x solid #324559; padding-top: 5px; padding-bottom: 5px; font-family: Arial, =
+Helvetica Neue, Helvetica, sans-serif; text-align: center; mso-border-alt: n=
+one; word-break: keep-all;"><span style=3D"padding-left:60px;padding-right:60p=
+x;font-size:16px;display:inline-block;letter-spacing:undefined;"><span style=
+=3D"font-size: 16px; margin: 0; line-height: 2; word-break: break-word; mso-li=
+ne-height-alt: 32px;">SIGN UP</span></span></a><!--[if mso]></center></v:tex=
+tbox></v:roundrect></td></tr></table><![endif]--> </div><!--[if (!mso)&(!IE)=
+]><!--></div><!--<![endif]--></div></div><!--[if (mso)|(IE)]></td></tr></tab=
+le><![endif]--><!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![en=
+dif]--></div></div></div><div style=3D"background-color:transparent;"><div cla=
+ss=3D"block-grid " style=3D"min-width: 320px; max-width: 600px; overflow-wrap: b=
+reak-word; word-wrap: break-word; word-break: break-word; Margin: 0 auto; ba=
+ckground-color: transparent;"><div style=3D"border-collapse: collapse;display:=
+ table;width: 100%;background-color:transparent;"><!--[if (mso)|(IE)]><table=
+ width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"background-c=
+olor:transparent;"><tr><td align=3D"center"><table cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" style=3D"width:600px"><tr class=3D"layout-full-width" style=3D"bac=
+kground-color:transparent"><![endif]--><!--[if (mso)|(IE)]><td align=3D"center=
+" width=3D"600" style=3D"background-color:transparent;width:600px; border-top: 0=
+px solid transparent; border-left: 0px solid transparent; border-bottom: 0px=
+ solid transparent; border-right: 0px solid transparent;" valign=3D"top"><tabl=
+e width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"pad=
+ding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px;"><!=
+[endif]--><div class=3D"col num12" style=3D"min-width: 320px; max-width: 600px; =
+display: table-cell; vertical-align: top; width: 600px;"><div class=3D"col_con=
+t" style=3D"width:100% !important;"><!--[if (!mso)&(!IE)]><!--><div style=3D"bor=
+der-top:0px solid transparent; border-left:0px solid transparent; border-bot=
+tom:0px solid transparent; border-right:0px solid transparent; padding-top:5=
+px; padding-bottom:5px; padding-right: 0px; padding-left: 0px;"><!--<![endif=
+]--><!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D=
+"0"><tr><td style=3D"padding-right: 10px; padding-left: 10px; padding-top: 10p=
+x; padding-bottom: 10px; font-family: Verdana, sans-serif"><![endif]--><div =
+style=3D"color:#555555;font-family:'Lucida Sans Unicode', 'Lucida Grande', 'Lu=
+cida Sans', Geneva, Verdana, sans-serif;line-height:1.2;padding-top:10px;pad=
+ding-right:10px;padding-bottom:10px;padding-left:10px;"><div class=3D"txtTinyM=
+ce-wrapper" style=3D"line-height: 1.2; font-size: 12px; font-family: 'Lucida S=
+ans Unicode', 'Lucida Grande', 'Lucida Sans', Geneva, Verdana, sans-serif; c=
+olor: #555555; mso-line-height-alt: 14px;"><p style=3D"font-size: 14px; line-h=
+eight: 1.2; word-break: break-word; text-align: center; font-family: Arial, =
+Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 17px; margin: 0;=
+" dir=3D"ltr"><strong>Contact Me</strong></p></div></div><!--[if mso]></td></t=
+r></table><![endif]--><!--[if mso]><table width=3D"100%" cellpadding=3D"0" cells=
+pacing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 10px; padding-left: 10px=
+; padding-top: 10px; padding-bottom: 10px; font-family: Verdana, sans-serif"=
+><![endif]--><div style=3D"color:#393d47;font-family:'Lucida Sans Unicode', 'L=
+ucida Grande', 'Lucida Sans', Geneva, Verdana, sans-serif;line-height:1.2;pa=
+dding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;"><d=
+iv class=3D"txtTinyMce-wrapper" style=3D"line-height: 1.2; font-size: 12px; colo=
+r: #393d47; font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San=
+s', Geneva, Verdana, sans-serif; mso-line-height-alt: 14px;"><p style=3D"font-=
+size: 14px; line-height: 1.2; word-break: break-word; text-align: center; ms=
+o-line-height-alt: 17px; margin: 0;" dir=3D"ltr">Washington, D.C.<br><span sty=
+le=3D"font-size: 12px;">1306 Longworth House Office Building</span><br><span s=
+tyle=3D"font-size: 12px;">W<span style=3D"">ashington,&nbsp;DC&nbsp;&nbsp;20515<=
+/span></span></p><p style=3D"text-align: center; line-height: 1.2; word-break:=
+ break-word; font-size: 12px; mso-line-height-alt: 14px; margin: 0;" dir=3D"lt=
+r"><span style=3D"font-size: 12px;">Phone: (202) 225-4111</span></p></div></di=
+v><!--[if mso]></td></tr></table><![endif]--><!--[if mso]><table width=3D"100%=
+" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 1=
+0px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; font-famil=
+y: Verdana, sans-serif"><![endif]--><div style=3D"color:#555555;font-family:'L=
+ucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Geneva, Verdana, sans-s=
+erif;line-height:1.2;padding-top:10px;padding-right:10px;padding-bottom:10px=
+;padding-left:10px;"><div class=3D"txtTinyMce-wrapper" style=3D"line-height: 1.2=
+; font-size: 12px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Luc=
+ida Sans', Geneva, Verdana, sans-serif; color: #555555; mso-line-height-alt:=
+ 14px;"><p style=3D"font-size: 12px; line-height: 1.2; word-break: break-word;=
+ text-align: center; font-family: Arial, Helvetica Neue, Helvetica, sans-ser=
+if; mso-line-height-alt: 14px; margin: 0;" dir=3D"ltr"><span style=3D"color: #39=
+3d47; font-size: 12px;">Website |&nbsp;<a href=3D"https://youngkim.house.gov/"=
+ target=3D"_blank" rel=3D"noopener" style=3D"text-decoration: underline; color: #3=
+93d47;">youngkim.house.gov</a></span></p></div></div><!--[if mso]></td></tr>=
+</table><![endif]--><table class=3D"social_icons" cellpadding=3D"0" cellspacing=3D=
+"0" width=3D"100%" role=3D"presentation" style=3D"table-layout: fixed; vertical-al=
+ign: top; border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0p=
+t; mso-table-rspace: 0pt;" valign=3D"top"><tbody><tr style=3D"vertical-align: to=
+p;" valign=3D"top"><td style=3D"word-break: break-word; vertical-align: top; pad=
+ding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;" =
+valign=3D"top"><table class=3D"social_table" align=3D"center" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" style=3D"table-layout: fixed; vertical-align: =
+top; border-spacing: 0; border-collapse: collapse; mso-table-tspace: 0; mso-=
+table-rspace: 0; mso-table-bspace: 0; mso-table-lspace: 0;" valign=3D"top"><tb=
+ody><tr style=3D"vertical-align: top; display: inline-block; text-align: cente=
+r;" align=3D"center" valign=3D"top"><td style=3D"word-break: break-word; vertical-=
+align: top; padding-bottom: 0; padding-right: 2.5px; padding-left: 2.5px;" v=
+align=3D"top"><a href=3D"https://urldefense.proofpoint.com/v2/url?u=3Dhttps-3A__ww=
+w.facebook.com_YoungKimCA_&amp;d=3DDwMFaQ&amp;c=3DL93KkjKsAC98uTvC4KvQDdTDRzAeWD=
+DRmG6S3YXllH0&amp;r=3DhB0wlr9PC_OrOygsMFesDOJ06GnzD2k-OzTQaGb4d94&amp;m=3Dv5elmS=
+w0qKs8-jICIKY8mcfozOr8vDnb3DgLMK__XZY&amp;s=3DXr3Cex1OBUTZYt7MO9rUiZB3MkIRfRO5=
+nv03ZVIkoOo&amp;e=3D" target=3D"_blank"><img width=3D"32" height=3D"32" src=3D"https:/=
+/d2fi4ri5dhpqd1.cloudfront.net/public/resources/social-networks-icon-sets/ci=
+rcle-gray/facebook@2x.png" alt=3D"Facebook" title=3D"facebook" style=3D"text-decor=
+ation: none; -ms-interpolation-mode: bicubic; height: auto; border: 0; displ=
+ay: block;"></a></td><td style=3D"word-break: break-word; vertical-align: top;=
+ padding-bottom: 0; padding-right: 2.5px; padding-left: 2.5px;" valign=3D"top"=
+><a href=3D"https://urldefense.proofpoint.com/v2/url?u=3Dhttps-3A__twitter.com_R=
+epYoungKim&amp;d=3DDwMFaQ&amp;c=3DL93KkjKsAC98uTvC4KvQDdTDRzAeWDDRmG6S3YXllH0&am=
+p;r=3DhB0wlr9PC_OrOygsMFesDOJ06GnzD2k-OzTQaGb4d94&amp;m=3Dv5elmSw0qKs8-jICIKY8mc=
+fozOr8vDnb3DgLMK__XZY&amp;s=3DHMY99JeZfwbWlGw27mHAO0LxYdjU_SCoguucqFGv754&amp;=
+e=3D" target=3D"_blank"><img width=3D"32" height=3D"32" src=3D"https://d2fi4ri5dhpqd1.=
+cloudfront.net/public/resources/social-networks-icon-sets/circle-gray/twitte=
+r@2x.png" alt=3D"Twitter" title=3D"twitter" style=3D"text-decoration: none; -ms-in=
+terpolation-mode: bicubic; height: auto; border: 0; display: block;"></a></t=
+d><td style=3D"word-break: break-word; vertical-align: top; padding-bottom: 0;=
+ padding-right: 2.5px; padding-left: 2.5px;" valign=3D"top"><a href=3D"https://u=
+rldefense.proofpoint.com/v2/url?u=3Dhttps-3A__www.instagram.com_youngkimca_-3F=
+hl-3Den&amp;d=3DDwMFaQ&amp;c=3DL93KkjKsAC98uTvC4KvQDdTDRzAeWDDRmG6S3YXllH0&amp;r=
+=3DhB0wlr9PC_OrOygsMFesDOJ06GnzD2k-OzTQaGb4d94&amp;m=3Dv5elmSw0qKs8-jICIKY8mcfoz=
+Or8vDnb3DgLMK__XZY&amp;s=3DExP8Vy8N36WjVlGU9AZr6qQvOeqBw6W0jAzZHdfehBs&amp;e=3D"=
+ target=3D"_blank"><img width=3D"32" height=3D"32" src=3D"https://d2fi4ri5dhpqd1.clo=
+udfront.net/public/resources/social-networks-icon-sets/circle-gray/instagram=
+@2x.png" alt=3D"Instagram" title=3D"instagram" style=3D"text-decoration: none; -ms=
+-interpolation-mode: bicubic; height: auto; border: 0; display: block;"></a>=
+</td></tr></tbody></table></td></tr></tbody></table><!--[if (!mso)&(!IE)]><!=
+--></div><!--<![endif]--></div></div><!--[if (mso)|(IE)]></td></tr></table><=
+![endif]--><!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]=
+--></div></div></div><!--[if (mso)|(IE)]></td></tr></table><![endif]--></td>=
+</tr></tbody></table><!--[if (IE)]></div><![endif]--><span style=3D"color:#FFF=
+FFF" aria-hidden=3D"true">[PMOL5G-8GQM]</span><span style=3D"color:#FFFFFF" aria=
+-hidden=3D"true">Ticket-Id:541734</span><span style=3D"color:#FFFFFF" aria-hidde=
+n=3D"true">Account-Subdomain:repkim</span><div itemscope=3D"" itemtype=3D"http://s=
+chema.org/EmailMessage" style=3D"display:none"><div itemprop=3D"action" itemscop=
+e=3D"" itemtype=3D"http://schema.org/ViewAction"><link itemprop=3D"url" href=3D"http=
+s://repkim.zendesk.com/agent/tickets/541734"><meta itemprop=3D"name" content=3D"=
+View ticket"></div></div></body></html>
+
+--B_3702905567_1247978078--
+

@@ -1,0 +1,630 @@
+Delivered-To: gabriellelipsky@gmail.com
+Received: by 2002:a05:7208:3c6:b0:8d:f65a:2bae with SMTP id m6csp1022074rbb;
+        Thu, 26 Sep 2024 07:43:19 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IGQGQC6KCKcoF4/dFYVzGRIFspMOMKmC/iX7lW0qXIYY6OjgdoZ1ozK5ho9Y9HEiVDCU9YO
+X-Received: by 2002:a05:6870:1647:b0:277:e5a5:3362 with SMTP id 586e51a60fabf-28710bd269bmr50928fac.30.1727361799129;
+        Thu, 26 Sep 2024 07:43:19 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1727361799; cv=none;
+        d=google.com; s=arc-20240605;
+        b=I4r/EaL4i0tCnKowEMzujuhWWa8wkEA1bnkgPwF+h2Z+NleyYtjcEdyCXnQkAj/yA+
+         rHaIlkyB8PClE7WRqUVWHrIbaLoEmJqjmUzpLjIyhlboDygYfLIfNKZwzJiR7VslhMb3
+         xpO4SvFVY8LShrAifMMqXXtd+n7tYBxQ8CeteyvV2x5u2EYCBW6BmLaqNAJlMvx6XFLn
+         KR9ssMn2CgI8M51PLKZU6zPBPaMrLdDDXtAf6QgRs2AQLcR6lSYf8/wgaMCD3nMaOsIt
+         bAjBoy22UtBzE9s3LHQHreSB7sjmBSCLePaxTZOCSes3EaLXjrkLmEcodtmaVd/HeUQg
+         oaDw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=list-id:list-unsubscribe-post:list-unsubscribe:feedback-id:subject
+         :from:reply-to:mime-version:date:message-id:to
+         :content-transfer-encoding:dkim-signature;
+        bh=2ge7EnnCWwa4JuCFtOJekWC9zG4z0n9FFgCriDUnbq0=;
+        fh=9l7m+PBNZk42xl9K4SI6s6D87WTSrflSroXybwJk4pM=;
+        b=Gjar/lr3xE7p5mlXW86c7XXhs6IytqXd0kKM1X4r2iKHiPsNczrlmgH6IOFDwgLXnv
+         s6lukUBdVNSO/4pj2lNXs/PwKdOXflj9DFE5u3HXYfp1a3ocnQLOonJ/h0Hj1MMYDDOq
+         KufnRr9xU49s5oHkAjJ0StUWdHfb7SwCvdXzlzD913MSLFRC2ROK4EgHK+C0BhdR5pSi
+         t2pGoCFaSRVmgErSMKCNwVhIKhIlqnLbrgoR8IR21VwyZk0kZ9UYZCwbc4N6C+UoVEKd
+         MpOrfTy8E/V+AsrV3oML9NzNbgwoBGFXeYRNPppIT7HPhOE0R7ihkCt6W8CXwe9UIFfc
+         AvCw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mail8.housecommunications.gov header.s=scph1121 header.b=CxaDs2dm;
+       spf=pass (google.com: domain of msprvs1=19999di62kv0g=bounces-308938-33@bounce.mail8.housecommunications.gov designates 156.70.52.220 as permitted sender) smtp.mailfrom="msprvs1=19999DI62KV0G=bounces-308938-33@bounce.mail8.housecommunications.gov";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=housecommunications.gov
+Return-Path: <msprvs1=19999DI62KV0G=bounces-308938-33@bounce.mail8.housecommunications.gov>
+Received: from mta-70-52-220.sparkpostmail.com (mta-70-52-220.sparkpostmail.com. [156.70.52.220])
+        by mx.google.com with ESMTPS id 41be03b00d2f7-7e6b7cac5b9si6656084a12.495.2024.09.26.07.43.18
+        for <gabriellelipsky@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 26 Sep 2024 07:43:19 -0700 (PDT)
+Received-SPF: pass (google.com: domain of msprvs1=19999di62kv0g=bounces-308938-33@bounce.mail8.housecommunications.gov designates 156.70.52.220 as permitted sender) client-ip=156.70.52.220;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mail8.housecommunications.gov header.s=scph1121 header.b=CxaDs2dm;
+       spf=pass (google.com: domain of msprvs1=19999di62kv0g=bounces-308938-33@bounce.mail8.housecommunications.gov designates 156.70.52.220 as permitted sender) smtp.mailfrom="msprvs1=19999DI62KV0G=bounces-308938-33@bounce.mail8.housecommunications.gov";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=housecommunications.gov
+X-MSFBL: Ag66WwcnRDEbEKfDeAE2IhLnFxYBGM2JHjZwwUMVzU4=|eyJjdXN0b21lcl9pZCI
+	6IjMwODkzOCIsInIiOiJnYWJyaWVsbGVsaXBza3lAZ21haWwuY29tIiwic3ViYWN
+	jb3VudF9pZCI6IjMzIiwidGVuYW50X2lkIjoic3BjIiwibWVzc2FnZV9pZCI6IjY
+	2ZjQwNjczZjU2NjJmYzM1Y2Q5In0=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=mail8.housecommunications.gov; s=scph1121; t=1727361798;
+	i=@mail8.housecommunications.gov;
+	bh=2ge7EnnCWwa4JuCFtOJekWC9zG4z0n9FFgCriDUnbq0=;
+	h=Content-Type:To:Message-ID:Date:From:Subject:List-Unsubscribe:
+	 List-Unsubscribe-Post:From:To:Cc:Subject;
+	b=CxaDs2dmix5DSy8egnCLY9pRkS6E15eByCRe1XRC9YYgc4Jtl9Yj2lxeiKSylI7Kc
+	 Rc37lC86H1yQo1bZZCHTP6BnyxEoNdxItOSJzjDgUIb8HuVdtbksuCsTLKNFjYYzsF
+	 LtiIR5Wa3KEg3qcl4MS/OgrL4z22YU6BQ7bx55J0=
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="UTF-8"
+To: "test test test" <gabriellelipsky@gmail.com>
+Message-ID: <9D.CD.24485.60375F66@hm.mta1vrest.cc.prd.sparkpost>
+Date: Thu, 26 Sep 2024 14:43:18 +0000
+MIME-Version: 1.0
+Reply-To: repmace+newsletter@mail8.housecommunications.gov
+From: "Rep. Nancy Mace" <repmace@mail8.housecommunications.gov>
+Subject: Emergency Declaration for the State of South Carolina 
+Feedback-ID: bulk_93303:repmace:Indigov
+List-Unsubscribe: <mailto:unsubscribe@unsub.spmta.com?subject=unsubscribe:3Qwkt1VP_eXL7OsrmBVYvxxkPCLrbDwd9BgjRpU45Y4~|eyAicmNwdF90byI6ICJnYWJyaWVsbGVsaXBza3lAZ21haWwuY29tIiwgInRlbmFudF9pZCI6ICJzcGMiLCAiY3VzdG9tZXJfaWQiOiAiMzA4OTM4IiwgInN1YmFjY291bnRfaWQiOiAiMzMiLCAibWVzc2FnZV9pZCI6ICI2NmY0MDY3M2Y1NjYyZmMzNWNkOSIgfQ~~>,<https://unsubscribe.spmta.com/u/MNfuhCfSCtdSzEmNhzjqiw~~/AAS2ygA~/RgRo1_gGPFcDc3BjQgpm9AZz9WYvw1zZUhlnYWJyaWVsbGVsaXBza3lAZ21haWwuY29tWAQAAAAh>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Id: <spc.308938.33.sparkpostmail.com>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www=
+.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> <html xmlns=3D"http://www.=
+w3.org/1999/xhtml"xmlns:v=3D"urn:schemas-microsoft-com:vml"xmlns:o=3D"urn:s=
+chemas-microsoft-com:office:office"> <head> <!--[if gte mso 9]>=0A<xml>=0A =
+ <o:OfficeDocumentSettings>=0A    <o:AllowPNG/>=0A    <o:PixelsPerInch>96</=
+o:PixelsPerInch>=0A  </o:OfficeDocumentSettings>=0A</xml>=0A<![endif]--> <m=
+eta http-equiv=3D"Content-Type"content=3D"text/html; charset=3DUTF-8"> <met=
+a name=3D"viewport"content=3D"width=3Ddevice-width,initial-scale=3D1"> <met=
+a name=3D"x-apple-disable-message-reformatting"> <!--[if !mso]><!--><meta h=
+ttp-equiv=3D"X-UA-Compatible"content=3D"IE=3Dedge"><!--<![endif]--> <title>=
+</title> <style type=3D"text/css">@media only screen and (min-width:660px){=
+.u-row{width:640px!important}.u-row .u-col{vertical-align:top}.u-row .u-co=
+l-30p74{width:196.736px!important}.u-row .u-col-33p33{width:213.31199999999=
+998px!important}.u-row .u-col-35p93{width:229.952px!important}.u-row .u-col=
+-100{width:640px!important}}@media (max-width:660px){.u-row-container{max-w=
+idth:100%!important;padding-left:0!important;padding-right:0!important}.u-r=
+ow .u-col{min-width:320px!important;max-width:100%!important;display:block!=
+important}.u-row{width:100%!important}.u-col{width:100%!important}.u-col>di=
+v{margin:0 auto}}body{margin:0;padding:0}table,td,tr{vertical-align:top;bor=
+der-collapse:collapse}p{margin:0}.ie-container table,.mso-container table{t=
+able-layout:fixed}*{line-height:inherit}a[x-apple-data-detectors=3Dtrue]{co=
+lor:inherit!important;text-decoration:none!important}table,td{color:#000}#u=
+_body a{color:#04162b;text-decoration:underline}</style> <!--[if !mso]><!--=
+><link href=3D"https://fonts.googleapis.com/css2=3Ffamily=3DMontserrat:ital=
+,wght@0,400;0,600;1,400"rel=3D"stylesheet"type=3D"text/css"><link href=3D"h=
+ttps://fonts.googleapis.com/css2=3Ffamily=3DRoboto:ital,wght@0,400;0,700;1,=
+400;1,700"rel=3D"stylesheet"type=3D"text/css"><!--<![endif]--> </head> <bod=
+y class=3D"clean-body u_body"style=3D"margin:0;padding:0;-webkit-text-size-=
+adjust:100%;background-color:#fff;color:#000">=0D=0A<div style=3D"color:tra=
+nsparent;visibility:hidden;opacity:0;font-size:0px;border:0;max-height:1px;=
+width:1px;margin:0px;padding:0px;border-width:0px!important;display:none!im=
+portant;line-height:0px!important;"><img border=3D"0" width=3D"1" height=3D=
+"1" src=3D"http://engagement.mail8.housecommunications.gov/q/8xesdpJ6IL_Gm1=
+3pH_yVcw~~/AAS2ygA~/RgRo1_gGPVcDc3BjQgpm9AZz9WYvw1zZUhlnYWJyaWVsbGVsaXBza3l=
+AZ21haWwuY29tWAQAAAAh" alt=3D""/></div>=0D=0A <!--[if IE]><div class=3D"ie-=
+container"><![endif]--> <!--[if mso]><div class=3D"mso-container"><![endif]=
+--> <table id=3D"u_body"style=3D"border-collapse:collapse;table-layout:fixe=
+d;border-spacing:0;mso-table-lspace:0;mso-table-rspace:0;vertical-align:top=
+;min-width:320px;Margin:0 auto;background-color:#fff;width:100%"cellpadding=
+=3D"0"cellspacing=3D"0"> <tbody> <tr style=3D"vertical-align:top"> <td styl=
+e=3D"word-break:break-word;border-collapse:collapse!important;vertical-alig=
+n:top"> <!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cellspa=
+cing=3D"0" border=3D"0"><tr><td align=3D"center" style=3D"background-color:=
+ #FFF;"><![endif]--> <div class=3D"u-row-container"style=3D"padding:0;backg=
+round-color:transparent"> <div class=3D"u-row"style=3D"margin:0 auto;min-wi=
+dth:320px;max-width:640px;overflow-wrap:break-word;word-wrap:break-word;wor=
+d-break:break-word;background-color:transparent"> <div style=3D"border-coll=
+apse:collapse;display:table;width:100%;height:100%;background-color:transpa=
+rent"> <!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0"><tr><td style=3D"padding: 0px;background-color: tran=
+sparent;" align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" borde=
+r=3D"0" style=3D"width:640px;"><tr style=3D"background-color: transparent;"=
+><![endif]--> <!--[if (mso)|(IE)]><td align=3D"center" width=3D"640" style=
+=3D"width: 640px;padding: 0px;border-top: 0px solid transparent;border-left=
+: 0px solid transparent;border-right: 0px solid transparent;border-bottom: =
+0px solid transparent;" valign=3D"top"><![endif]--> <div class=3D"u-col u-c=
+ol-100"style=3D"max-width:320px;min-width:640px;display:table-cell;vertical=
+-align:top"> <div style=3D"height:100%;width:100%!important"> <!--[if (!mso=
+)&(!IE)]><!--><div style=3D"box-sizing:border-box;height:100%;padding:0;bor=
+der-top:0 solid transparent;border-left:0 solid transparent;border-right:0 =
+solid transparent;border-bottom:0 solid transparent"><!--<![endif]--> <tabl=
+e style=3D"font-family:Roboto"role=3D"presentation"cellpadding=3D"0"cellspa=
+cing=3D"0"width=3D"100%"border=3D"0"> <tbody> <tr> <td style=3D"overflow-wr=
+ap:break-word;word-break:break-word;padding:10px;font-family:Roboto"align=
+=3D"left"> <table width=3D"100%"cellpadding=3D"0"cellspacing=3D"0"border=3D=
+"0"> <tr> <td style=3D"padding-right:0;padding-left:0"align=3D"center"> <im=
+g align=3D"center"border=3D"0"src=3D"https://images.unlayer.com/projects%2F=
+27642%2F1640143767128-SC01_RepMace_newsletter.png"alt=3D"Rep. Nancy Mace ba=
+nner"title=3D"Rep. Nancy Mace banner"style=3D"outline:0;text-decoration:non=
+e;-ms-interpolation-mode:bicubic;clear:both;display:inline-block!important;=
+border:none;height:auto;float:none;width:100%;max-width:620px"width=3D"620"=
+> </td> </tr> </table> </td> </tr> </tbody> </table> <!--[if (!mso)&(!IE)]>=
+<!--></div><!--<![endif]--> </div> </div> <!--[if (mso)|(IE)]></td><![endif=
+]--> <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]--> </div>=
+ </div> </div> <div class=3D"u-row-container"style=3D"padding:0;background-=
+color:transparent"> <div class=3D"u-row"style=3D"margin:0 auto;min-width:32=
+0px;max-width:640px;overflow-wrap:break-word;word-wrap:break-word;word-brea=
+k:break-word;background-color:transparent"> <div style=3D"border-collapse:c=
+ollapse;display:table;width:100%;height:100%;background-color:transparent">=
+ <!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cellspacing=3D=
+"0" border=3D"0"><tr><td style=3D"padding: 0px;background-color: transparen=
+t;" align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0=
+" style=3D"width:640px;"><tr style=3D"background-color: transparent;"><![en=
+dif]--> <!--[if (mso)|(IE)]><td align=3D"center" width=3D"640" style=3D"wid=
+th: 640px;padding: 0px;border-top: 0px solid transparent;border-left: 0px s=
+olid transparent;border-right: 0px solid transparent;border-bottom: 0px sol=
+id transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-r=
+adius: 0px;" valign=3D"top"><![endif]--> <div class=3D"u-col u-col-100"styl=
+e=3D"max-width:320px;min-width:640px;display:table-cell;vertical-align:top"=
+> <div style=3D"height:100%;width:100%!important;border-radius:0;-webkit-bo=
+rder-radius:0;-moz-border-radius:0"> <!--[if (!mso)&(!IE)]><!--><div style=
+=3D"box-sizing:border-box;height:100%;padding:0;border-top:0 solid transpar=
+ent;border-left:0 solid transparent;border-right:0 solid transparent;border=
+-bottom:0 solid transparent;border-radius:0;-webkit-border-radius:0;-moz-bo=
+rder-radius:0"><!--<![endif]--> <table style=3D"font-family:Roboto"role=3D"=
+presentation"cellpadding=3D"0"cellspacing=3D"0"width=3D"100%"border=3D"0"> =
+<tbody> <tr> <td style=3D"overflow-wrap:break-word;word-break:break-word;pa=
+dding:10px;font-family:Roboto"align=3D"left"> <div style=3D"font-size:14px;=
+line-height:140%;text-align:left;word-wrap:break-word"> <p style=3D"line-he=
+ight:140%;text-align:left"><span style=3D"font-family:Montserrat,Arial,Helv=
+etica,Verdana,Tahoma,sans-serif;line-height:19.6px;color:#000">Dear test,</=
+span></p> <p style=3D"line-height:140%">=C2=A0</p> <p style=3D"line-height:=
+140%"><span style=3D"font-family:Montserrat,Arial,Helvetica,Verdana,Tahoma,=
+sans-serif;line-height:19.6px;color:#000">Governor Henry McMaster has issue=
+d Executive Order 2024-24, declaring a State of Emergency in anticipation o=
+f Hurricane Helene and its potential effects on South Carolina. Although ou=
+r state may not experience the full impact of the storm, it is still expect=
+ed to bring dangerous flooding, high winds, and isolated tornadoes to many =
+areas.</span></p> <p style=3D"line-height:140%">=C2=A0</p> <p style=3D"line=
+-height:140%"><span style=3D"font-family:Montserrat,Arial,Helvetica,Verdana=
+,Tahoma,sans-serif;line-height:19.6px;color:#000">The Governor has activate=
+d the South Carolina Emergency Operations Plan, and the South Carolina Emer=
+gency Management Division (SCEMD) is coordinating efforts with local offici=
+als and state agencies to ensure that resources are in place to respond swi=
+ftly and effectively to any emergency needs.</span></p> <p style=3D"line-he=
+ight:140%">=C2=A0</p> <p style=3D"line-height:140%"><span style=3D"font-fam=
+ily:Montserrat,Arial,Helvetica,Verdana,Tahoma,sans-serif;line-height:19.6px=
+;color:#000">As Hurricane Helene intensifies and prepares to make landfall =
+in Florida on September 26, 2024, South Carolina is expected to feel its ef=
+fects shortly after. We strongly urge all residents in potentially affected=
+ areas to monitor local weather updates, take necessary precautions, and st=
+ay informed about the storm=E2=80=99s progress.</span></p> <p style=3D"line=
+-height:140%"><span style=3D"font-family:Montserrat,Arial,Helvetica,Verdana=
+,Tahoma,sans-serif;line-height:19.6px;color:#000">Here are some resources t=
+o help you prepare:</span></p> <p style=3D"line-height:140%">=C2=A0</p> <p =
+style=3D"line-height:140%"><span style=3D"color:#000;line-height:19.6px"><s=
+pan style=3D"font-family:Montserrat,Arial,Helvetica,Verdana,Tahoma,sans-ser=
+if;line-height:19.6px">Our disaster resource page:</span> <a rel=3D"noopene=
+r"href=3D"http://engagement.mail8.housecommunications.gov/f/a/YUMIm_gsVFIqG=
+DjLawIq1w~~/AAS2ygA~/RgRo1_gGP0QoaHR0cHM6Ly9tYWNlLmhvdXNlLmdvdi9EaXNhc3Rlcl=
+Jlc291cmNlc1cDc3BjQgpm9AZz9WYvw1zZUhlnYWJyaWVsbGVsaXBza3lAZ21haWwuY29tWAQAA=
+AAh"target=3D"_blank"style=3D"color:#000"><span style=3D"font-family:Montse=
+rrat,Arial,Helvetica,Verdana,Tahoma,sans-serif;line-height:19.6px">Mace.Hou=
+se.Gov/DisasterResources</span></a></span></p> <p style=3D"line-height:140%=
+">=C2=A0</p> <p style=3D"line-height:140%"><span style=3D"font-family:Monts=
+errat,Arial,Helvetica,Verdana,Tahoma,sans-serif;line-height:19.6px;color:#0=
+00"><strong>SCEMD Hurricane Hub:</strong> An interactive tool to assist in =
+hurricane preparedness. Visit <a href=3D"http://engagement.mail8.housecommu=
+nications.gov/f/a/sEDDbgyafmNeuDM4RFBDSQ~~/AAS2ygA~/RgRo1_gGP0QTaHR0cDovL2h=
+1cnJpY2FuZS5zY1cDc3BjQgpm9AZz9WYvw1zZUhlnYWJyaWVsbGVsaXBza3lAZ21haWwuY29tWA=
+QAAAAh"style=3D"color:#000">http://hurricane.sc</a> for important informati=
+on.</span></p> <p style=3D"line-height:140%">=C2=A0</p> <p style=3D"line-he=
+ight:140%"><span style=3D"font-family:Montserrat,Arial,Helvetica,Verdana,Ta=
+homa,sans-serif;line-height:19.6px;color:#000"><strong>SC Emergency Manager=
+ App: </strong>Download the app for instant alerts and updates. Available o=
+n <a rel=3D"noopener"href=3D"http://engagement.mail8.housecommunications.go=
+v/f/a/qz8l2B9kjwG30oihAQAjiQ~~/AAS2ygA~/RgRo1_gGP0QYaHR0cDovL29uZWxpbmsudG8=
+vZG45MnJ4VwNzcGNCCmb0BnP1Zi_DXNlSGWdhYnJpZWxsZWxpcHNreUBnbWFpbC5jb21YBAAAAC=
+E~"target=3D"_blank"style=3D"color:#000">App Store</a> and <a rel=3D"noopen=
+er"href=3D"http://engagement.mail8.housecommunications.gov/f/a/qz8l2B9kjwG3=
+0oihAQAjiQ~~/AAS2ygA~/RgRo1_gGP0QYaHR0cDovL29uZWxpbmsudG8vZG45MnJ4VwNzcGNCC=
+mb0BnP1Zi_DXNlSGWdhYnJpZWxsZWxpcHNreUBnbWFpbC5jb21YBAAAACE~"target=3D"_blan=
+k"style=3D"color:#000">Google Play</a>.</span></p> <p style=3D"line-height:=
+140%">=C2=A0</p> <p style=3D"line-height:140%"><span style=3D"font-family:M=
+ontserrat,Arial,Helvetica,Verdana,Tahoma,sans-serif;line-height:19.6px;colo=
+r:#000"><strong>2024 Hurricane Guide: </strong>Access the official South Ca=
+rolina Hurricane Guide in both English and Spanish at <a href=3D"http://eng=
+agement.mail8.housecommunications.gov/f/a/enac6wxFnXDan_G551P1Hw~~/AAS2ygA~=
+/RgRo1_gGP0QQaHR0cDovL3NjZW1kLm9yZ1cDc3BjQgpm9AZz9WYvw1zZUhlnYWJyaWVsbGVsaX=
+Bza3lAZ21haWwuY29tWAQAAAAh"style=3D"color:#000">http://scemd.org</a><span s=
+tyle=3D"line-height:19.6px">.</span></span></p> <p style=3D"line-height:140=
+%">=C2=A0</p> <p style=3D"line-height:140%"><span style=3D"font-size:14px;l=
+ine-height:19.6px;font-family:Montserrat,Arial,Helvetica,Verdana,Tahoma,san=
+s-serif;color:#000">Our office is here to assist you in any way and w<span =
+style=3D"line-height:19.6px">e are closely tracking Hurricane Helene as it =
+moves through the Gulf. </span>=C2=A0=C2=A0</span></p> </div> </td> </tr> <=
+/tbody> </table> <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]--> </div> <=
+/div> <!--[if (mso)|(IE)]></td><![endif]--> <!--[if (mso)|(IE)]></tr></tabl=
+e></td></tr></table><![endif]--> </div> </div> </div> <div class=3D"u-row-c=
+ontainer"style=3D"padding:0;background-color:transparent"> <div class=3D"u-=
+row"style=3D"margin:0 auto;min-width:320px;max-width:640px;overflow-wrap:br=
+eak-word;word-wrap:break-word;word-break:break-word;background-color:transp=
+arent"> <div style=3D"border-collapse:collapse;display:table;width:100%;hei=
+ght:100%;background-color:transparent"> <!--[if (mso)|(IE)]><table width=3D=
+"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"pa=
+dding: 0px;background-color: transparent;" align=3D"center"><table cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:640px;"><tr style=
+=3D"background-color: transparent;"><![endif]--> <!--[if (mso)|(IE)]><td al=
+ign=3D"center" width=3D"640" style=3D"width: 640px;padding: 0px;border-top:=
+ 0px solid transparent;border-left: 0px solid transparent;border-right: 0px=
+ solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;=
+-webkit-border-radius: 0px; -moz-border-radius: 0px;" valign=3D"top"><![end=
+if]--> <div class=3D"u-col u-col-100"style=3D"max-width:320px;min-width:640=
+px;display:table-cell;vertical-align:top"> <div style=3D"height:100%;width:=
+100%!important;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0=
+"> <!--[if (!mso)&(!IE)]><!--><div style=3D"box-sizing:border-box;height:10=
+0%;padding:0;border-top:0 solid transparent;border-left:0 solid transparent=
+;border-right:0 solid transparent;border-bottom:0 solid transparent;border-=
+radius:0;-webkit-border-radius:0;-moz-border-radius:0"><!--<![endif]--> <ta=
+ble style=3D"font-family:Roboto"role=3D"presentation"cellpadding=3D"0"cells=
+pacing=3D"0"width=3D"100%"border=3D"0"> <tbody> <tr> <td style=3D"overflow-=
+wrap:break-word;word-break:break-word;padding:0 10px;font-family:Roboto"ali=
+gn=3D"left"> <div style=3D"font-size:14px;line-height:140%;text-align:left;=
+word-wrap:break-word"> <p style=3D"font-size:14px;line-height:140%"><span s=
+tyle=3D"font-family:Montserrat,Arial,Helvetica,Verdana,Tahoma,sans-serif;li=
+ne-height:19.6px">Stay safe,</span></p> </div> </td> </tr> </tbody> </table=
+> <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]--> </div> </div> <!--[if (=
+mso)|(IE)]></td><![endif]--> <!--[if (mso)|(IE)]></tr></table></td></tr></t=
+able><![endif]--> </div> </div> </div> <div class=3D"u-row-container"style=
+=3D"padding:0;background-color:transparent"> <div class=3D"u-row"style=3D"m=
+argin:0 auto;min-width:320px;max-width:640px;overflow-wrap:break-word;word-=
+wrap:break-word;word-break:break-word;background-color:transparent"> <div s=
+tyle=3D"border-collapse:collapse;display:table;width:100%;height:100%;backg=
+round-color:transparent"> <!--[if (mso)|(IE)]><table width=3D"100%" cellpad=
+ding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding: 0px;bac=
+kground-color: transparent;" align=3D"center"><table cellpadding=3D"0" cell=
+spacing=3D"0" border=3D"0" style=3D"width:640px;"><tr style=3D"background-c=
+olor: transparent;"><![endif]--> <!--[if (mso)|(IE)]><td align=3D"center" w=
+idth=3D"640" style=3D"width: 640px;padding: 0px;border-top: 0px solid trans=
+parent;border-left: 0px solid transparent;border-right: 0px solid transpare=
+nt;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-r=
+adius: 0px; -moz-border-radius: 0px;" valign=3D"top"><![endif]--> <div clas=
+s=3D"u-col u-col-100"style=3D"max-width:320px;min-width:640px;display:table=
+-cell;vertical-align:top"> <div style=3D"height:100%;width:100%!important;b=
+order-radius:0;-webkit-border-radius:0;-moz-border-radius:0"> <!--[if (!mso=
+)&(!IE)]><!--><div style=3D"box-sizing:border-box;height:100%;padding:0;bor=
+der-top:0 solid transparent;border-left:0 solid transparent;border-right:0 =
+solid transparent;border-bottom:0 solid transparent;border-radius:0;-webkit=
+-border-radius:0;-moz-border-radius:0"><!--<![endif]--> <table style=3D"fon=
+t-family:Roboto"role=3D"presentation"cellpadding=3D"0"cellspacing=3D"0"widt=
+h=3D"100%"border=3D"0"> <tbody> <tr> <td style=3D"overflow-wrap:break-word;=
+word-break:break-word;padding:10px;font-family:Roboto"align=3D"left"> <tabl=
+e width=3D"100%"cellpadding=3D"0"cellspacing=3D"0"border=3D"0"> <tr> <td st=
+yle=3D"padding-right:0;padding-left:0"align=3D"left"> <img align=3D"left"bo=
+rder=3D"0"src=3D"https://images.unlayer.com/projects%2F27642%2F164014378921=
+6-mace+sig.png"alt=3D"Rep. Nancy Mace signature"title=3D"Rep. Nancy Mace si=
+gnature"style=3D"outline:0;text-decoration:none;-ms-interpolation-mode:bicu=
+bic;clear:both;display:inline-block!important;border:none;height:auto;float=
+:none;width:32%;max-width:198.4px"width=3D"198.4"> </td> </tr> </table> </t=
+d> </tr> </tbody> </table> <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]--=
+> </div> </div> <!--[if (mso)|(IE)]></td><![endif]--> <!--[if (mso)|(IE)]><=
+/tr></table></td></tr></table><![endif]--> </div> </div> </div> <div class=
+=3D"u-row-container"style=3D"padding:0;background-color:transparent"> <div =
+class=3D"u-row"style=3D"margin:0 auto;min-width:320px;max-width:640px;overf=
+low-wrap:break-word;word-wrap:break-word;word-break:break-word;background-c=
+olor:transparent"> <div style=3D"border-collapse:collapse;display:table;wid=
+th:100%;height:100%;background-color:transparent"> <!--[if (mso)|(IE)]><tab=
+le width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td =
+style=3D"padding: 0px;background-color: transparent;" align=3D"center"><tab=
+le cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:640px;">=
+<tr style=3D"background-color: transparent;"><![endif]--> <!--[if (mso)|(IE=
+)]><td align=3D"center" width=3D"640" style=3D"width: 640px;padding: 0px;bo=
+rder-top: 0px solid transparent;border-left: 0px solid transparent;border-r=
+ight: 0px solid transparent;border-bottom: 0px solid transparent;border-rad=
+ius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;" valign=3D"to=
+p"><![endif]--> <div class=3D"u-col u-col-100"style=3D"max-width:320px;min-=
+width:640px;display:table-cell;vertical-align:top"> <div style=3D"height:10=
+0%;width:100%!important;border-radius:0;-webkit-border-radius:0;-moz-border=
+-radius:0"> <!--[if (!mso)&(!IE)]><!--><div style=3D"box-sizing:border-box;=
+height:100%;padding:0;border-top:0 solid transparent;border-left:0 solid tr=
+ansparent;border-right:0 solid transparent;border-bottom:0 solid transparen=
+t;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0"><!--<![endi=
+f]--> <table style=3D"font-family:Roboto"role=3D"presentation"cellpadding=
+=3D"0"cellspacing=3D"0"width=3D"100%"border=3D"0"> <tbody> <tr> <td style=
+=3D"overflow-wrap:break-word;word-break:break-word;padding:0 10px 10px;font=
+-family:Roboto"align=3D"left"> <div style=3D"font-size:14px;line-height:140=
+%;text-align:left;word-wrap:break-word"> <p style=3D"font-size:14px;line-he=
+ight:140%"><span style=3D"font-family:Montserrat,Arial,Helvetica,Verdana,Ta=
+homa,sans-serif;line-height:19.6px"><strong>Congresswoman Nancy Mace</stron=
+g></span></p> <p style=3D"font-size:14px;line-height:140%"><span style=3D"f=
+ont-family:Montserrat,Arial,Helvetica,Verdana,Tahoma,sans-serif;line-height=
+:19.6px"><strong>Member of Congress</strong></span></p> </div> </td> </tr> =
+</tbody> </table> <table style=3D"font-family:Roboto"role=3D"presentation"c=
+ellpadding=3D"0"cellspacing=3D"0"width=3D"100%"border=3D"0"> <tbody> <tr> <=
+td style=3D"overflow-wrap:break-word;word-break:break-word;padding:10px;fon=
+t-family:Roboto"align=3D"left"> <table height=3D"0px"align=3D"center"border=
+=3D"0"cellpadding=3D"0"cellspacing=3D"0"width=3D"100%"style=3D"border-colla=
+pse:collapse;table-layout:fixed;border-spacing:0;mso-table-lspace:0;mso-tab=
+le-rspace:0;vertical-align:top;border-top:1px solid #bbb;-ms-text-size-adju=
+st:100%;-webkit-text-size-adjust:100%"> <tbody> <tr style=3D"vertical-align=
+:top"> <td style=3D"word-break:break-word;border-collapse:collapse!importan=
+t;vertical-align:top;font-size:0;line-height:0;mso-line-height-rule:exactly=
+;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"> <span>&#160;</sp=
+an> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> <!--[if (!m=
+so)&(!IE)]><!--></div><!--<![endif]--> </div> </div> <!--[if (mso)|(IE)]></=
+td><![endif]--> <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif=
+]--> </div> </div> </div> <div class=3D"u-row-container"style=3D"padding:0;=
+background-color:transparent"> <div class=3D"u-row"style=3D"margin:0 auto;m=
+in-width:320px;max-width:640px;overflow-wrap:break-word;word-wrap:break-wor=
+d;word-break:break-word;background-color:transparent"> <div style=3D"border=
+-collapse:collapse;display:table;width:100%;height:100%;background-color:tr=
+ansparent"> <!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cel=
+lspacing=3D"0" border=3D"0"><tr><td style=3D"padding: 0px;background-color:=
+ transparent;" align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" =
+border=3D"0" style=3D"width:640px;"><tr style=3D"background-color: transpar=
+ent;"><![endif]--> <!--[if (mso)|(IE)]><td align=3D"center" width=3D"640" s=
+tyle=3D"width: 640px;padding: 0px;border-top: 0px solid transparent;border-=
+left: 0px solid transparent;border-right: 0px solid transparent;border-bott=
+om: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -m=
+oz-border-radius: 0px;" valign=3D"top"><![endif]--> <div class=3D"u-col u-c=
+ol-100"style=3D"max-width:320px;min-width:640px;display:table-cell;vertical=
+-align:top"> <div style=3D"height:100%;width:100%!important;border-radius:0=
+;-webkit-border-radius:0;-moz-border-radius:0"> <!--[if (!mso)&(!IE)]><!-->=
+<div style=3D"box-sizing:border-box;height:100%;padding:0;border-top:0 soli=
+d transparent;border-left:0 solid transparent;border-right:0 solid transpar=
+ent;border-bottom:0 solid transparent;border-radius:0;-webkit-border-radius=
+:0;-moz-border-radius:0"><!--<![endif]--> <table style=3D"font-family:Robot=
+o"role=3D"presentation"cellpadding=3D"0"cellspacing=3D"0"width=3D"100%"bord=
+er=3D"0"> <tbody> <tr> <td style=3D"overflow-wrap:break-word;word-break:bre=
+ak-word;padding:10px;font-family:Roboto"align=3D"left"> <div style=3D"font-=
+size:14px;line-height:140%;text-align:left;word-wrap:break-word"> <p style=
+=3D"font-size:14px;line-height:140%;text-align:center"><strong>Contact Me</=
+strong></p> </div> </td> </tr> </tbody> </table> <!--[if (!mso)&(!IE)]><!--=
+></div><!--<![endif]--> </div> </div> <!--[if (mso)|(IE)]></td><![endif]-->=
+ <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]--> </div> </d=
+iv> </div> <div class=3D"u-row-container"style=3D"padding:0;background-colo=
+r:#e7e7e7"> <div class=3D"u-row"style=3D"margin:0 auto;min-width:320px;max-=
+width:640px;overflow-wrap:break-word;word-wrap:break-word;word-break:break-=
+word;background-color:#e7e7e7"> <div style=3D"border-collapse:collapse;disp=
+lay:table;width:100%;height:100%;background-color:transparent"> <!--[if (ms=
+o)|(IE)]><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0"><tr><td style=3D"padding: 0px;background-color: #e7e7e7;" align=3D"c=
+enter"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"wid=
+th:640px;"><tr style=3D"background-color: #e7e7e7;"><![endif]--> <!--[if (m=
+so)|(IE)]><td align=3D"center" width=3D"640" style=3D"width: 640px;padding:=
+ 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;b=
+order-right: 0px solid transparent;border-bottom: 0px solid transparent;bor=
+der-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;" valig=
+n=3D"top"><![endif]--> <div class=3D"u-col u-col-100"style=3D"max-width:320=
+px;min-width:640px;display:table-cell;vertical-align:top"> <div style=3D"he=
+ight:100%;width:100%!important;border-radius:0;-webkit-border-radius:0;-moz=
+-border-radius:0"> <!--[if (!mso)&(!IE)]><!--><div style=3D"box-sizing:bord=
+er-box;height:100%;padding:0;border-top:0 solid transparent;border-left:0 s=
+olid transparent;border-right:0 solid transparent;border-bottom:0 solid tra=
+nsparent;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0"><!--=
+<![endif]--> <table style=3D"font-family:Roboto"role=3D"presentation"cellpa=
+dding=3D"0"cellspacing=3D"0"width=3D"100%"border=3D"0"> <tbody> <tr> <td st=
+yle=3D"overflow-wrap:break-word;word-break:break-word;padding:10px;font-fam=
+ily:Roboto"align=3D"left"> <div style=3D"font-size:14px;line-height:140%;te=
+xt-align:left;word-wrap:break-word"> <p style=3D"font-size:14px;line-height=
+:140%;text-align:center">Sign up for my newsletter to get updates on this i=
+ssue and others!</p> </div> </td> </tr> </tbody> </table> <table style=3D"f=
+ont-family:Roboto"role=3D"presentation"cellpadding=3D"0"cellspacing=3D"0"wi=
+dth=3D"100%"border=3D"0"> <tbody> <tr> <td style=3D"overflow-wrap:break-wor=
+d;word-break:break-word;padding:10px;font-family:Roboto"align=3D"left"> <!-=
+-[if mso]><style>.v-button {background: transparent !important;}</style><![=
+endif]--> <div align=3D"center"> <!--[if mso]><v:roundrect xmlns:v=3D"urn:s=
+chemas-microsoft-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:word"=
+ href=3D"https://mace.house.gov/contact/newsletter-subscribe" style=3D"heig=
+ht:37px; v-text-anchor:middle; width:144px;" arcsize=3D"11%"  stroke=3D"f" =
+fillcolor=3D"#324559"><w:anchorlock/><center style=3D"color:#FFFFFF;"><![en=
+dif]--> <a href=3D"http://engagement.mail8.housecommunications.gov/f/a/YMaJ=
+BT9bh-Z_HrpEbPBGdg~~/AAS2ygA~/RgRo1_gGP0QzaHR0cHM6Ly9tYWNlLmhvdXNlLmdvdi9jb=
+250YWN0L25ld3NsZXR0ZXItc3Vic2NyaWJlVwNzcGNCCmb0BnP1Zi_DXNlSGWdhYnJpZWxsZWxp=
+cHNreUBnbWFpbC5jb21YBAAAACE~"target=3D"_blank"class=3D"v-button"style=3D"bo=
+x-sizing:border-box;display:inline-block;text-decoration:none;-webkit-text-=
+size-adjust:none;text-align:center;color:#fff;background-color:#324559;bord=
+er-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;width:30%;ma=
+x-width:100%;overflow-wrap:break-word;word-break:break-word;word-wrap:break=
+-word;mso-border-alt:none;font-size:14px"> <span style=3D"display:block;pad=
+ding:10px 20px;line-height:120%"><span style=3D"font-size:14px;line-height:=
+16.8px">Sign Up</span></span> </a> <!--[if mso]></center></v:roundrect><![e=
+ndif]--> </div> </td> </tr> </tbody> </table> <!--[if (!mso)&(!IE)]><!--></=
+div><!--<![endif]--> </div> </div> <!--[if (mso)|(IE)]></td><![endif]--> <!=
+--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]--> </div> </div>=
+ </div> <div class=3D"u-row-container"style=3D"padding:0;background-color:t=
+ransparent"> <div class=3D"u-row"style=3D"margin:0 auto;min-width:320px;max=
+-width:640px;overflow-wrap:break-word;word-wrap:break-word;word-break:break=
+-word;background-color:transparent"> <div style=3D"border-collapse:collapse=
+;display:table;width:100%;height:100%;background-color:transparent"> <!--[i=
+f (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0"><tr><td style=3D"padding: 0px;background-color: transparent;" ali=
+gn=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=
+=3D"width:640px;"><tr style=3D"background-color: transparent;"><![endif]-->=
+ <!--[if (mso)|(IE)]><td align=3D"center" width=3D"213" style=3D"width: 213=
+px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid tr=
+ansparent;border-right: 0px solid transparent;border-bottom: 0px solid tran=
+sparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: =
+0px;" valign=3D"top"><![endif]--> <div class=3D"u-col u-col-33p33"style=3D"=
+max-width:320px;min-width:213.31px;display:table-cell;vertical-align:top"> =
+<div style=3D"height:100%;width:100%!important;border-radius:0;-webkit-bord=
+er-radius:0;-moz-border-radius:0"> <!--[if (!mso)&(!IE)]><!--><div style=3D=
+"box-sizing:border-box;height:100%;padding:0;border-top:0 solid transparent=
+;border-left:0 solid transparent;border-right:0 solid transparent;border-bo=
+ttom:0 solid transparent;border-radius:0;-webkit-border-radius:0;-moz-borde=
+r-radius:0"><!--<![endif]--> <table style=3D"font-family:Roboto"role=3D"pre=
+sentation"cellpadding=3D"0"cellspacing=3D"0"width=3D"100%"border=3D"0"> <tb=
+ody> <tr> <td style=3D"overflow-wrap:break-word;word-break:break-word;paddi=
+ng:10px;font-family:Roboto"align=3D"left"> <div style=3D"font-size:14px;lin=
+e-height:140%;text-align:left;word-wrap:break-word"> <p style=3D"font-size:=
+14px;line-height:140%;text-align:center"><strong>Washington, D.C.</strong><=
+/p> <p style=3D"font-size:14px;line-height:140%;text-align:center">1728 Lon=
+gworth House Office Building</p> <p style=3D"font-size:14px;line-height:140=
+%;text-align:center">Washington, DC 20515</p> </div> </td> </tr> </tbody> <=
+/table> <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]--> </div> </div> <!-=
+-[if (mso)|(IE)]></td><![endif]--> <!--[if (mso)|(IE)]><td align=3D"center"=
+ width=3D"196" style=3D"width: 196px;padding: 0px;border-top: 0px solid tra=
+nsparent;border-left: 0px solid transparent;border-right: 0px solid transpa=
+rent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border=
+-radius: 0px; -moz-border-radius: 0px;" valign=3D"top"><![endif]--> <div cl=
+ass=3D"u-col u-col-30p74"style=3D"max-width:320px;min-width:196.74px;displa=
+y:table-cell;vertical-align:top"> <div style=3D"height:100%;width:100%!impo=
+rtant;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0"> <!--[i=
+f (!mso)&(!IE)]><!--><div style=3D"box-sizing:border-box;height:100%;paddin=
+g:0;border-top:0 solid transparent;border-left:0 solid transparent;border-r=
+ight:0 solid transparent;border-bottom:0 solid transparent;border-radius:0;=
+-webkit-border-radius:0;-moz-border-radius:0"><!--<![endif]--> <table style=
+=3D"font-family:Roboto"role=3D"presentation"cellpadding=3D"0"cellspacing=3D=
+"0"width=3D"100%"border=3D"0"> <tbody> <tr> <td style=3D"overflow-wrap:brea=
+k-word;word-break:break-word;padding:10px;font-family:Roboto"align=3D"left"=
+> <div style=3D"font-size:14px;line-height:140%;text-align:left;word-wrap:b=
+reak-word"> <p style=3D"font-size:14px;line-height:140%;text-align:center">=
+<strong>Beaufort</strong></p> <p style=3D"font-size:14px;line-height:140%;t=
+ext-align:center">710 Boundary Street</p> <p style=3D"font-size:14px;line-h=
+eight:140%;text-align:center">Beaufort, SC 29902</p> </div> </td> </tr> </t=
+body> </table> <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]--> </div> </d=
+iv> <!--[if (mso)|(IE)]></td><![endif]--> <!--[if (mso)|(IE)]><td align=3D"=
+center" width=3D"229" style=3D"width: 229px;padding: 0px;border-top: 0px so=
+lid transparent;border-left: 0px solid transparent;border-right: 0px solid =
+transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit=
+-border-radius: 0px; -moz-border-radius: 0px;" valign=3D"top"><![endif]--> =
+<div class=3D"u-col u-col-35p93"style=3D"max-width:320px;min-width:229.95px=
+;display:table-cell;vertical-align:top"> <div style=3D"height:100%;width:10=
+0%!important;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0">=
+ <!--[if (!mso)&(!IE)]><!--><div style=3D"box-sizing:border-box;height:100%=
+;padding:0;border-top:0 solid transparent;border-left:0 solid transparent;b=
+order-right:0 solid transparent;border-bottom:0 solid transparent;border-ra=
+dius:0;-webkit-border-radius:0;-moz-border-radius:0"><!--<![endif]--> <tabl=
+e style=3D"font-family:Roboto"role=3D"presentation"cellpadding=3D"0"cellspa=
+cing=3D"0"width=3D"100%"border=3D"0"> <tbody> <tr> <td style=3D"overflow-wr=
+ap:break-word;word-break:break-word;padding:10px;font-family:Roboto"align=
+=3D"left"> <div style=3D"font-size:14px;line-height:140%;text-align:left;wo=
+rd-wrap:break-word"> <p style=3D"font-size:14px;line-height:140%;text-align=
+:center"><strong>Mount Pleasant</strong></p> <p style=3D"line-height:140%;t=
+ext-align:center">652 Coleman Blvd. Suite 102</p> <p style=3D"line-height:1=
+40%;text-align:center">Mt. Pleasant, SC 29464</p> </div> </td> </tr> </tbod=
+y> </table> <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]--> </div> </div>=
+ <!--[if (mso)|(IE)]></td><![endif]--> <!--[if (mso)|(IE)]></tr></table></t=
+d></tr></table><![endif]--> </div> </div> </div> <div class=3D"u-row-contai=
+ner"style=3D"padding:0;background-color:transparent"> <div class=3D"u-row"s=
+tyle=3D"margin:0 auto;min-width:320px;max-width:640px;overflow-wrap:break-w=
+ord;word-wrap:break-word;word-break:break-word;background-color:transparent=
+"> <div style=3D"border-collapse:collapse;display:table;width:100%;height:1=
+00%;background-color:transparent"> <!--[if (mso)|(IE)]><table width=3D"100%=
+" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding=
+: 0px;background-color: transparent;" align=3D"center"><table cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:640px;"><tr style=3D"b=
+ackground-color: transparent;"><![endif]--> <!--[if (mso)|(IE)]><td align=
+=3D"center" width=3D"640" style=3D"width: 640px;padding: 0px;border-top: 0p=
+x solid transparent;border-left: 0px solid transparent;border-right: 0px so=
+lid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-we=
+bkit-border-radius: 0px; -moz-border-radius: 0px;" valign=3D"top"><![endif]=
+--> <div class=3D"u-col u-col-100"style=3D"max-width:320px;min-width:640px;=
+display:table-cell;vertical-align:top"> <div style=3D"height:100%;width:100=
+%!important;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0"> =
+<!--[if (!mso)&(!IE)]><!--><div style=3D"box-sizing:border-box;height:100%;=
+padding:0;border-top:0 solid transparent;border-left:0 solid transparent;bo=
+rder-right:0 solid transparent;border-bottom:0 solid transparent;border-rad=
+ius:0;-webkit-border-radius:0;-moz-border-radius:0"><!--<![endif]--> <table=
+ style=3D"font-family:Roboto"role=3D"presentation"cellpadding=3D"0"cellspac=
+ing=3D"0"width=3D"100%"border=3D"0"> <tbody> <tr> <td style=3D"overflow-wra=
+p:break-word;word-break:break-word;padding:10px;font-family:Roboto"align=3D=
+"left"> <div align=3D"center"> <div style=3D"display:table;max-width:110px"=
+> <!--[if (mso)|(IE)]><table width=3D"110" cellpadding=3D"0" cellspacing=3D=
+"0" border=3D"0"><tr><td style=3D"border-collapse:collapse;" align=3D"cente=
+r"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" s=
+tyle=3D"border-collapse:collapse; mso-table-lspace: 0pt;mso-table-rspace: 0=
+pt; width:110px;"><tr><![endif]--> <!--[if (mso)|(IE)]><td width=3D"32" sty=
+le=3D"width:32px; padding-right: 5px;" valign=3D"top"><![endif]--> <table a=
+lign=3D"left"border=3D"0"cellspacing=3D"0"cellpadding=3D"0"width=3D"32"heig=
+ht=3D"32"style=3D"width:32px!important;height:32px!important;display:inline=
+-block;border-collapse:collapse;table-layout:fixed;border-spacing:0;mso-tab=
+le-lspace:0;mso-table-rspace:0;vertical-align:top;margin-right:5px"> <tbody=
+><tr style=3D"vertical-align:top"><td align=3D"left"valign=3D"middle"style=
+=3D"word-break:break-word;border-collapse:collapse!important;vertical-align=
+:top"> <a href=3D"http://engagement.mail8.housecommunications.gov/f/a/5GHnO=
+Gn1C3QgOhMz_OnPOA~~/AAS2ygA~/RgRo1_gGP0QlaHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL1=
+JlcE5hbmN5TWFjZVcDc3BjQgpm9AZz9WYvw1zZUhlnYWJyaWVsbGVsaXBza3lAZ21haWwuY29tW=
+AQAAAAh"title=3D"Facebook"target=3D"_blank"> <img src=3D"https://cdn.tools.=
+unlayer.com/social/icons/circle/facebook.png"alt=3D"Facebook"title=3D"Faceb=
+ook"width=3D"32"style=3D"outline:0;text-decoration:none;-ms-interpolation-m=
+ode:bicubic;clear:both;display:block!important;border:none;height:auto;floa=
+t:none;max-width:32px!important"> </a> </td></tr> </tbody></table> <!--[if =
+(mso)|(IE)]></td><![endif]--> <!--[if (mso)|(IE)]><td width=3D"32" style=3D=
+"width:32px; padding-right: 5px;" valign=3D"top"><![endif]--> <table align=
+=3D"left"border=3D"0"cellspacing=3D"0"cellpadding=3D"0"width=3D"32"height=
+=3D"32"style=3D"width:32px!important;height:32px!important;display:inline-b=
+lock;border-collapse:collapse;table-layout:fixed;border-spacing:0;mso-table=
+-lspace:0;mso-table-rspace:0;vertical-align:top;margin-right:5px"> <tbody><=
+tr style=3D"vertical-align:top"><td align=3D"left"valign=3D"middle"style=3D=
+"word-break:break-word;border-collapse:collapse!important;vertical-align:to=
+p"> <a href=3D"http://engagement.mail8.housecommunications.gov/f/a/foakDK8P=
+nyEceUz30eo2ZA~~/AAS2ygA~/RgRo1_gGP0QgaHR0cHM6Ly90d2l0dGVyLmNvbS9SZXBOYW5je=
+U1hY2VXA3NwY0IKZvQGc_VmL8Nc2VIZZ2FicmllbGxlbGlwc2t5QGdtYWlsLmNvbVgEAAAAIQ~~=
+"title=3D"Twitter"target=3D"_blank"> <img src=3D"https://cdn.tools.unlayer.=
+com/social/icons/circle/twitter.png"alt=3D"Twitter"title=3D"Twitter"width=
+=3D"32"style=3D"outline:0;text-decoration:none;-ms-interpolation-mode:bicub=
+ic;clear:both;display:block!important;border:none;height:auto;float:none;ma=
+x-width:32px!important"> </a> </td></tr> </tbody></table> <!--[if (mso)|(IE=
+)]></td><![endif]--> <!--[if (mso)|(IE)]><td width=3D"32" style=3D"width:32=
+px; padding-right: 0px;" valign=3D"top"><![endif]--> <table align=3D"left"b=
+order=3D"0"cellspacing=3D"0"cellpadding=3D"0"width=3D"32"height=3D"32"style=
+=3D"width:32px!important;height:32px!important;display:inline-block;border-=
+collapse:collapse;table-layout:fixed;border-spacing:0;mso-table-lspace:0;ms=
+o-table-rspace:0;vertical-align:top;margin-right:0"> <tbody><tr style=3D"ve=
+rtical-align:top"><td align=3D"left"valign=3D"middle"style=3D"word-break:br=
+eak-word;border-collapse:collapse!important;vertical-align:top"> <a href=3D=
+"http://engagement.mail8.housecommunications.gov/f/a/JRH1MvS0x-D6s8zmHHSBlg=
+~~/AAS2ygA~/RgRo1_gGP0QnaHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9yZXBuYW5jeW1hY2U=
+vVwNzcGNCCmb0BnP1Zi_DXNlSGWdhYnJpZWxsZWxpcHNreUBnbWFpbC5jb21YBAAAACE~"title=
+=3D"Instagram"target=3D"_blank"> <img src=3D"https://cdn.tools.unlayer.com/=
+social/icons/circle/instagram.png"alt=3D"Instagram"title=3D"Instagram"width=
+=3D"32"style=3D"outline:0;text-decoration:none;-ms-interpolation-mode:bicub=
+ic;clear:both;display:block!important;border:none;height:auto;float:none;ma=
+x-width:32px!important"> </a> </td></tr> </tbody></table> <!--[if (mso)|(IE=
+)]></td><![endif]--> <!--[if (mso)|(IE)]></tr></table></td></tr></table><![=
+endif]--> </div> </div> </td> </tr> </tbody> </table> <!--[if (!mso)&(!IE)]=
+><!--></div><!--<![endif]--> </div> </div> <!--[if (mso)|(IE)]></td><![endi=
+f]--> <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]--> </div=
+> </div> </div> <div class=3D"u-row-container"style=3D"padding:0;background=
+-color:transparent"> <div class=3D"u-row"style=3D"margin:0 auto;min-width:3=
+20px;max-width:640px;overflow-wrap:break-word;word-wrap:break-word;word-bre=
+ak:break-word;background-color:transparent"> <div style=3D"border-collapse:=
+collapse;display:table;width:100%;height:100%;background-color:transparent"=
+> <!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0"><tr><td style=3D"padding: 0px;background-color: transpa=
+rent;" align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" style=3D"width:640px;"><tr style=3D"background-color: transparent;">=
+<![endif]--> <!--[if (mso)|(IE)]><td align=3D"center" width=3D"640" style=
+=3D"width: 640px;padding: 0px;border-top: 0px solid transparent;border-left=
+: 0px solid transparent;border-right: 0px solid transparent;border-bottom: =
+0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-b=
+order-radius: 0px;" valign=3D"top"><![endif]--> <div class=3D"u-col u-col-1=
+00"style=3D"max-width:320px;min-width:640px;display:table-cell;vertical-ali=
+gn:top"> <div style=3D"height:100%;width:100%!important;border-radius:0;-we=
+bkit-border-radius:0;-moz-border-radius:0"> <!--[if (!mso)&(!IE)]><!--><div=
+ style=3D"box-sizing:border-box;height:100%;padding:0;border-top:0 solid tr=
+ansparent;border-left:0 solid transparent;border-right:0 solid transparent;=
+border-bottom:0 solid transparent;border-radius:0;-webkit-border-radius:0;-=
+moz-border-radius:0"><!--<![endif]--> <table style=3D"font-family:Roboto"ro=
+le=3D"presentation"cellpadding=3D"0"cellspacing=3D"0"width=3D"100%"border=
+=3D"0"> <tbody> <tr> <td style=3D"overflow-wrap:break-word;word-break:break=
+-word;padding:10px;font-family:Roboto"align=3D"left"> <div style=3D"font-si=
+ze:14px;line-height:140%;text-align:left;word-wrap:break-word"> <p style=3D=
+"font-size:14px;line-height:140%;text-align:center">Visit my website to lea=
+rn more!<br><a rel=3D"noopener"href=3D"http://engagement.mail8.housecommuni=
+cations.gov/f/a/qKPwczOJweUCSewBaUM1yQ~~/AAS2ygA~/RgRo1_gGP0QXaHR0cHM6Ly9tY=
+WNlLmhvdXNlLmdvdi9XA3NwY0IKZvQGc_VmL8Nc2VIZZ2FicmllbGxlbGlwc2t5QGdtYWlsLmNv=
+bVgEAAAAIQ~~"target=3D"_blank">mace.house.gov</a></p> </div> </td> </tr> </=
+tbody> </table> <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]--> </div> </=
+div> <!--[if (mso)|(IE)]></td><![endif]--> <!--[if (mso)|(IE)]></tr></table=
+></td></tr></table><![endif]--> </div> </div> </div> <!--[if (mso)|(IE)]></=
+td></tr></table><![endif]--> </td> </tr> </tbody> </table> <!--[if mso]></d=
+iv><![endif]--> <!--[if IE]></div><![endif]--> </body> </html>=0A=0A<div st=
+yle=3D'=0A        font-family: system-ui, -apple-system, BlinkMacSystemFont=
+, Roboto,=0A          Oxygen-Sans, Ubuntu, Cantarell, Arial, sans-serif;=0A=
+        background-color: #f8f8f8;=0A        padding: 32px;=0A      '>=0A  =
+<br/>=0A  <p style=3D'margin: 0; font-size: 12px; line-height: 16px; letter=
+-spacing: 0.02em; color: #626262 !important; text-align: center;'>=0A    <a=
+ href=3D"http://engagement.mail8.housecommunications.gov/f/a/yCuxMhX9iSvd6C=
+E5h7O1SQ~~/AAS2ygA~/RgRo1_gGP0TtaHR0cHM6Ly9tYWlsLmdvdm1haWx1bnN1YnNjcmliZS5=
+jb20vbWFpbGVycy9zdWJzY3JpcHRpb25zP2p3dD1leUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0=
+k2SWtwWFZDSjkuZXlKNmFXUWlPaUl5TkRFMU5EQXdNVEUzT0RJMU15SXNJbWxrSWpvaU9UTXpNR=
+E1pTENKemRXSWlPaUp5WlhCdFlXTmxJaXdpYVdGMElqb3hOekkzTXpZeE56azNmUS5oVklZTm04=
+VGZXTE5RLWx6dGVyTTRab3I0NXhhdy10T09uVW9kRnlnTWNVVwNzcGNCCmb0BnP1Zi_DXNlSGWd=
+hYnJpZWxsZWxpcHNreUBnbWFpbC5jb21YBAAAACE~">Unsubscribe from future messages=
+.</a>=0A  </p>=0A  <br/>=0A</div>=0D=0A<img border=3D"0" width=3D"1" heigh=
+t=3D"1" alt=3D"" src=3D"http://engagement.mail8.housecommunications.gov/q/M=
+apqKkjsHgl09qTTKVqpLQ~~/AAS2ygA~/RgRo1_gGPlcDc3BjQgpm9AZz9WYvw1zZUhlnYWJyaW=
+VsbGVsaXBza3lAZ21haWwuY29tWAQAAAAh">=0D=0A
+

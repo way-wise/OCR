@@ -1,0 +1,624 @@
+Received: from SA1PR09MB9162.namprd09.prod.outlook.com (2603:10b6:806:285::14)
+ by SA1PR09MB10682.namprd09.prod.outlook.com with HTTPS; Fri, 3 Nov 2023
+ 18:14:29 +0000
+Received: from CYXPR09CA0016.namprd09.prod.outlook.com (2603:10b6:930:d4::20)
+ by SA1PR09MB9162.namprd09.prod.outlook.com (2603:10b6:806:285::14) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6954.24; Fri, 3 Nov
+ 2023 18:14:26 +0000
+Received: from DM3GCC02FT048.eop-gcc02.prod.protection.outlook.com
+ (2a01:111:f400:7d04::201) by CYXPR09CA0016.outlook.office365.com
+ (2603:10b6:930:d4::20) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6954.22 via Frontend
+ Transport; Fri, 3 Nov 2023 18:14:26 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.151.112)
+ smtp.mailfrom=mail.house.gov; dkim=fail (body hash did not verify)
+ header.d=house.gov;dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.151.112 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.151.112;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.151.112) by
+ DM3GCC02FT048.mail.protection.outlook.com (10.97.8.159) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.6977.13 via Frontend Transport; Fri, 3 Nov 2023 18:14:26 +0000
+Received: from EXCH1915.US.House.gov (143.228.151.74) by EXCH1913.US.House.gov
+ (143.228.151.112) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1258.27; Fri, 3 Nov
+ 2023 14:14:22 -0400
+Received: from serg-bulk2-h.house.gov (143.228.145.36) by
+ EXCH1915.US.House.gov (143.228.151.74) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.2.1258.27 via Frontend Transport; Fri, 3 Nov 2023 14:14:22 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=from : to : date :
+ subject : content-type : message-id : mime-version; s=august2019-msgb-hg;
+ bh=Ac0gv10TaGLikaF1Qhu4Imor5sQxURTmrynSjOr3Znc=;
+ b=BEje3UVVfwVE9lFo9CCegxAkEZuzi3ML40YVLG3XwwYMoWb5S4rvnV8PhrAqqhK5dKyg
+ XymuJ4/ckZ3wC5EEJjr1T0GSqcz26fJI77X2qwVcrIMa83bRN4qnnpOlUcXMZh64YOzI
+ FVNk4yUaXdn6dNUgyhI9u6AyLbb0/evnbXQi/mGDNKsBrlo4ppzAzMJoi88dKNC0YF9k
+ 3xuKbA9HpSJeAyta/0vOt/WhQ/QLyFZyggPsiYFayEAOIPc6J32RUgXy1f9F0l1ewNYD
+ 0aT/1GmT41ITomJt/2D6/kNi/ExKBzA1fVsth5KhLYdtrtRiblJerESZ5Spx5rblLRo9 kA== 
+Received: from FIRESIDEADMIN04 (firesideadmin04.us.house.gov [143.228.58.69])
+	by serg-bulk2-h.house.gov (8.17.1.19/8.17.1.19) with ESMTP id 3A3IEMmc021808;
+	Fri, 3 Nov 2023 14:14:22 -0400
+Message-Id: <3u0wergk78-1@serg-bulk2-h.house.gov>
+envelope-from: Rep.AOC@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+X-House-Vendor-Seg: Fireside21-1
+From: "Rep. Alexandria Ocasio-Cortez" <Rep.AOC@mail.house.gov>
+To: Ankita.Verma@mail.house.gov
+Date: 3 Nov 2023 14:14:22 -0400
+Subject: TEST Temporary Protected Status (TPS) Re-Registration Period
+Content-Type: multipart/alternative;
+ boundary=--boundary_284_237cb53e-9c50-4d07-9975-dfe9c6239ebb
+X-Proofpoint-Virus-Version: vendor=baseguard
+ engine=ICAP:2.0.272,Aquarius:18.0.987,Hydra:6.0.619,FMLib:17.11.176.26
+ definitions=2023-11-03_17,2023-11-02_03,2023-05-22_02
+Return-Path: Rep.AOC@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1913.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 03 Nov 2023 18:14:26.5561
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ d3e002fb-5fce-4d5a-ca4e-08dbdc98b6f2
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1915.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted:
+ DM3GCC02FT048.eop-gcc02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ DM3GCC02FT048.eop-gcc02.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ DM3GCC02FT048:EE_|SA1PR09MB9162:EE_|SA1PR09MB10682:EE_
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: d3e002fb-5fce-4d5a-ca4e-08dbdc98b6f2
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:143.228.151.112;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:;DIR:INT;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 03 Nov 2023 18:14:26.4624
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: d3e002fb-5fce-4d5a-ca4e-08dbdc98b6f2
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.151.112];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1915.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SA1PR09MB9162
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.6927020
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.6954.021
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(425001)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	w50ZV7vjuRdvDvI9Q9mbTQTOrcGmTQyFKNqZ1XnB8vGUi5Pzo1I4E6IwgKm3e3iGvYC18Ob2xgzVbGVygMHpnvoVbWmBDlVrVr4IgzNlRMaFvl6duGkn2AxBxDZXuWwN/Ja5i/w8UyJC95HQ4C2+Z6DUhsjeHQ3eWi//SdvOObeBzalAa8Ay1JRPvlEyDX1VqKJLpUsQrrTzixgoPz+wo0W+spOjw8QGpjk+ci2l7g9iMUCvoYsvHPM9/HCTxsq17/oNlbSdHH615/KuE7oiH9Sy352toj1ANXh3KcQC6XoJrSXrlf4P0iLLYxuTSDp35hRHnMjH3fflGL3ZLYW/rIZQQt7Od3r9z/hbshN5dLkpwIZcyafg7LiPOekBP7FQaEZ8b0PS2N9jTxPhiLYOQBL0J/QdbpK8eSa/BQLxo0RBJCaxg4Y3ENl0eEyQVHMNcRKw/F7WRTb/X70eVlEsEE90klzcB229ma+DlFUgWFgUMW46ibC5kHxcibdOUt3hlfDo0V9ZP9ABKgHRgsQ/a7xB/R8O/zYmkqmUY4NYwiGqjFt93qjspRx8yRitEr7C6cA6eur7YvgDagjUaAjIGN/LHN88RNMyknRjMupGJ8XViKM5ZY5CbVKbjUiZKOToZzEhyBvDFGXh2EdUgnr83t7Rtr54o8Ggm0smsdmEqaMi9+7JuFjVXyKKzUd3stkENG15C6SYzKosBxQlYugDUsUv+sAcjsVheURP8Kc9QRkKg5hzIr+OjPksoAZCjtNEzNV2tWlVmMgrPPSqBd399Q==
+MIME-Version: 1.0
+
+----boundary_284_237cb53e-9c50-4d07-9975-dfe9c6239ebb
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+
+Temporary protected status (TPS) is a program that allows migrants whose ho=
+me countries are considered unsafe by the Department of Homeland Security t=
+o live and work legally in the United States for a temporary period of time=
+. Residents with TPS have to reregister periodically in order to extend the=
+ir legal status. The Department of Homeland Security announced that it is e=
+xtending the re-registration periods for the TPS designations of several co=
+untries, including Nepal, Nicaragua and Honduras.
+
+If you are from Nepal, you must re-register by December 23, 2023. Your TPS =
+designation would be valid to live and work in the U.S. for 18 months throu=
+gh June 24, 2025.
+
+If you are from Nicaragua, you must re-register by January 5, 2024. Your TP=
+S designation would be valid to live and work in the U.S. for 18 months thr=
+ough July 5, 2025.
+
+If you are from Honduras, you must re-register by January 5, 2024. Your TPS=
+ designation would be valid to live and work in the U.S. for 18 months thro=
+ugh July 5, 2025.
+For more information about when and where to file, click on the country spe=
+cific to you on the left side of this page(https://urldefense.com/v3/__http=
+s://www.uscis.gov/humanitarian/temporary-protected-status__;!!Fr0YZsIsFWxTZ=
+sBm-qTAg68!hnAgZrlnbAgwk4IRr_2KWQP-Pr5LtiVlUAOgeolbmV68YfaDn0NxMICQqJQmo2Xe=
+jffA7EesogQh3fnhY0wWchBQGrygQus$ ) . Our office can assist with I-821 (TPS)=
+, I-765 (EAD), and I-131 (travel document) applications if you have not hea=
+rd back from USCIS within normal process times. Click here(https://urldefen=
+se.com/v3/__https://egov.uscis.gov/processing-times/__;!!Fr0YZsIsFWxTZsBm-q=
+TAg68!hnAgZrlnbAgwk4IRr_2KWQP-Pr5LtiVlUAOgeolbmV68YfaDn0NxMICQqJQmo2XejffA7=
+EesogQh3fnhY0wWchBQSVSUjis$ )  to check if your application is outside of p=
+rocessing times. We can be contacted by phone at 718-662-5970 or email us h=
+ere(https://ocasio-cortez.house.gov/contact) . Translation services are ava=
+ilable.=20
+
+
+----boundary_284_237cb53e-9c50-4d07-9975-dfe9c6239ebb
+Content-Location: https://ocasiocortezforms.house.gov/
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>Representative Alexandria Ocasio-Cortez</title>
+       =20
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1">
+        <!--[if !mso]><!-->
+        <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![e=
+ndif]-->
+        <style>body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default t=
+ext sizes */ img{-ms-interpolation-mode: bicubic;} /* Allow smoother render=
+ing of resized image in Internet Explorer *//* RESET STYLES */img { border:=
+ 0; height: auto; line-height: 100%; outline: none; text-decoration: none; =
+}table { border-collapse: collapse !important; }body { height: 100% !import=
+ant; margin: 0 !important; padding: 0 !important; width: 100% !important; }=
+strong { font-weight: bold; } /* Editor reset *//* FIRESIDE STYLES */.compo=
+nent img {max-width:600px;}.component table {mso-table-rspace:10pt; border-=
+collapse:collapse;}.component { padding: 0px !important; }.press {padding-b=
+ottom: 0px;}</style><style>@media all and (max-width:650px) {            .i=
+mage-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td, .image-2, .img-2 =
+img, .image-2 tr, .image-2 td {max-width: 100% !important; width: 100% !imp=
+ortant;}            .responsive-table {width:100% !important;}            .=
+responsive-table img {max-width:100% !important; height: auto !important;} =
+           .press .component, .press td {text-align:center;}            .co=
+mponent { margin-left: 20px; margin-right: 20px;}            .component .re=
+sponsive-table { margin-left: 0px !important; margin-right: 0px !important;=
+}            .wide .video-thumb { width: 100% !important;height: auto !impo=
+rtant; }             .wide.video-container { width: 100% !important; }     =
+    .component.full-width {margin-left: 0px; margin-right: 0px; }   }</styl=
+e><style type=3D"text/css">
+            /* CLIENT-SPECIFIC STYLES */
+            body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text=
+ sizes */
+            table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Rem=
+ove spacing between tables in Outlook 2007 and up */
+            img{-ms-interpolation-mode: bicubic;} /* Allow smoother renderi=
+ng of resized image in Internet Explorer */
+            /* RESET STYLES */
+            img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: =
+0 !important; width: 100% !important; }
+            strong { font-weight: bold; } /* Editor reset */
+            /* FIRESIDE STYLES */
+            .component img {max-width:600px;}
+            .component table {mso-table-rspace:10pt; border-collapse:collap=
+se; font-family: 'Georgia', times, serif;}
+            .component td, td {font-family: 'Georgia', times, serif;}
+            .component { padding: 0px !important; }
+            .press {padding-bottom: 0px;}
+            .caption-1 td {font-family: 'Georgia', times, serif;}
+            /* Margin/NoMargin STYLES */
+            .component.full-width{ overflow: hidden; margin: 0px; }
+            /* HEADER STYLES */
+            .header-bar {width: 100%;}
+            .header-bar-margin {background-color:#ffffff;}
+            .header-bar h2 {margin: 0 !important; padding: 0 !important; co=
+lor: #000080 !important;text-align: center;font-size: 30px !important;font-=
+weight: bold !important; }
+            .survey-content > table > tbody tr td { border-color: #18335b !=
+important; }
+            .survey-content input.survey-submit { font-family: 'Georgia', t=
+imes, serif !important; }
+        </style>      =20
+        <style id=3D"media-queries">=20
+            @media all and (max-width:650px) {
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max=
+-width: 100% !important; width: 100% !important;}
+            .responsive-table {width:100% !important;}
+            .responsive-table img {max-width:100% !important; height: auto =
+!important;}
+            .press .component, .press td, .split .component, .split .compon=
+ent td, .split td {text-align:center;}
+            .component { margin-left: 20px; margin-right: 20px;}
+            .component .responsive-table { margin-left: 0px !important; mar=
+gin-right: 0px !important;}
+            .wide .video-thumb { width: 100% !important;height: auto !impor=
+tant; }=20
+            .wide.video-container { width: 100% !important; }
+            }
+        </style>
+       =20
+    <!--[if (gte mso 9)|(IE)]>
+                                        <style>=20
+                                    </style>
+                                    <![endif]--></head>
+    <body style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%;margin: 0px !important; padding: 0px !important;">
+        <div id=3D"preview-text" style=3D"display: none; font-size: 1px; co=
+lor: #fefefe; line-height: 1px; font-family: 'Georgia', times, serif; max-h=
+eight: 0px; max-width: 0px; opacity: 0; overflow: hidden;">Temporary Protec=
+ted Status (TPS) Re-Registration Period Temporary protected status (TPS) is=
+ a program that allows migrants whose home countries are considered unsafe =
+by the Department of Homeland Security to live and work legally in the Unit=
+ed States for a temporary period of time. Residents with TPS have to reregi=
+ster periodically in order to extend their legal status. The Department of =
+Homeland Security announced that it is extending the re-registration period=
+s for the TPS designations of several countries, including Nepal, Nicaragua=
+ and Honduras.&nbsp;If you are from Nepal, you must re-register by December=
+ 23, 2023. Your TPS designation would be valid to live and work in the U.S.=
+ for 18 months through June 24, 2025.If you are from Nicaragua, you must re=
+-register by January 5, 2024. Your TPS designation would be valid to live a=
+nd work in the U.S. for 18 months through July 5, 2025.If you are from Hond=
+uras, you must re-register by January 5, 2024. Your TPS designation would b=
+e valid to live and work in the U.S. for 18 months through July 5, 2025.For=
+ more information about when and where to file, click on the country specif=
+ic to you on the left side of this page. Our office can assist with I-821 (=
+TPS), I-765 (EAD), and I-131 (travel document) applications if you have not=
+ heard back from USCIS within normal process times. Click here to check if =
+your application is outside of processing times. We can be contacted by pho=
+ne at 718-662-5970 or email us here. Translation services are available.  <=
+/div>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;font-family: 'Georgia', times, serif; background-color: #fff=
+fff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" m=
+arginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td align=3D"center" valign=3D"top" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: 'Georgia', ti=
+mes, serif; font-size: 16px;">
+                    <a target=3D"_blank" href=3D"https://ocasio-cortez.hous=
+e.gov" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;=
+">
+                    <img alt=3D"Representative Alexandria Ocasio-Cortez" wi=
+dth=3D"650" style=3D"-ms-interpolation-mode: bicubic;display: block; width:=
+ 650px;" src=3D"https://ocasiocortezforms.house.gov/uploadedphotos/highreso=
+lution/f4dffe58-d3d1-45e8-a6e7-5e3a5efc4cb3.jpg">
+                    </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;background-color: #ffffff; font-family: 'Georgia', times, se=
+rif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" m=
+arginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td class=3D"responsive-table" valign=3D"top" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: 'Ge=
+orgia', times, serif; font-size: 16px; color: #000000;">
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class=3D"region" id=3D"region-1"><div class=3D=
+"component full-width" style=3D"padding: 0px !important;"> <div class=3D"co=
+mponent-template header-bar" style=3D"overflow: hidden;">
+                                    <table role=3D"presentation" align=3D"c=
+enter" class=3D"responsive-table table-w-bg-color" style=3D"mso-table-lspac=
+e:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse=
+;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Ge=
+orgia, times, serif; margin-right: 0px; margin-left: 0px;" border=3D"0" cel=
+lspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftm=
+argin=3D"0" topmargin=3D"0" width=3D"650">
+                                        <tbody>
+                                            <tr height=3D"0" class=3D"space=
+rRow">
+                                                <td style=3D"-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 0p=
+x">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td class=3D"responsive-tab=
+le" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fon=
+t-size:30px;color:#000080;" valign=3D"top">
+                                                <table role=3D"presentation=
+" width=3D"100%" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-ta=
+ble-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -=
+ms-text-size-adjust: 100%;min-width: 100%;" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" top=
+margin=3D"0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;padding: 0 15pt; f=
+ont-family: 'Georgia', times, serif;">
+                                                                <div class=
+=3D"cke_editable cke_editable_inline cke_contents_ltr cke_show_borders cke_=
+focus" style=3D"overflow: hidden;"><h2 style=3D"text-align: center;">Tempor=
+ary Protected Status (TPS) Re-Registration Period</h2></div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                </td>
+                                            </tr>
+                                            <tr height=3D"0" class=3D"space=
+rRow">
+                                                <td style=3D"-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 0p=
+x">&nbsp;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><d=
+iv class=3D"component-template" style=3D"overflow: hidden;"><p style=3D"mar=
+gin: 0;line-height:1.38; background-color:#ffffff"><span style=3D"font-size=
+:12pt; font-variant:normal; white-space:pre-wrap"><span style=3D"font-famil=
+y:Georgia,serif"><span style=3D"color:#000000"><span style=3D"font-weight:4=
+00"><span style=3D"font-style:normal"><span style=3D"text-decoration:none">=
+Temporary protected status (TPS) is a program that allows migrants whose ho=
+me countries are considered unsafe by the Department of Homeland Security t=
+o live and work legally in the United States for a temporary period of time=
+. Residents with TPS have to reregister periodically in order to extend the=
+ir legal status. The Department of Homeland Security announced that it is e=
+xtending the re-registration periods for the TPS designations of several co=
+untries, including Nepal, Nicaragua and Honduras.&nbsp;</span></span></span=
+></span></span></span></p><p style=3D"margin: 0;line-height:1.38; backgroun=
+d-color:#ffffff"><br></p><p style=3D"margin: 0;line-height:1.38; background=
+-color:#ffffff"><span style=3D"font-size:12pt; font-variant:normal; white-s=
+pace:pre-wrap"><span style=3D"font-family:Georgia,serif"><span style=3D"col=
+or:#000000"><span style=3D"font-weight:700"><span style=3D"font-style:norma=
+l"><span style=3D"text-decoration:none">If you are from Nepal, you must re-=
+register by December 23, 2023.</span></span></span></span></span></span><sp=
+an style=3D"font-size:12pt; font-variant:normal; white-space:pre-wrap"><spa=
+n style=3D"font-family:Georgia,serif"><span style=3D"color:#000000"><span s=
+tyle=3D"font-weight:400"><span style=3D"font-style:normal"><span style=3D"t=
+ext-decoration:none"> Your TPS designation would be valid to live and work =
+in the U.S. for 18 months through June 24, 2025.</span></span></span></span=
+></span></span></p><p style=3D"margin: 0;line-height:1.38; background-color=
+:#ffffff"><br></p><p style=3D"margin: 0;line-height:1.38; background-color:=
+#ffffff"><span style=3D"font-size:12pt; font-variant:normal; white-space:pr=
+e-wrap"><span style=3D"font-family:Georgia,serif"><span style=3D"color:#000=
+000"><span style=3D"font-weight:700"><span style=3D"font-style:normal"><spa=
+n style=3D"text-decoration:none">If you are from Nicaragua,</span></span></=
+span></span></span></span><span style=3D"font-size:12pt; font-variant:norma=
+l; white-space:pre-wrap"><span style=3D"font-family:Georgia,serif"><span st=
+yle=3D"color:#000000"><span style=3D"font-weight:400"><span style=3D"font-s=
+tyle:normal"><span style=3D"text-decoration:none"> </span></span></span></s=
+pan></span></span><span style=3D"font-size:12pt; font-variant:normal; white=
+-space:pre-wrap"><span style=3D"font-family:Georgia,serif"><span style=3D"c=
+olor:#000000"><span style=3D"font-weight:700"><span style=3D"font-style:nor=
+mal"><span style=3D"text-decoration:none">you must re-register by January 5=
+, 2024</span></span></span></span></span></span><span style=3D"font-size:12=
+pt; font-variant:normal; white-space:pre-wrap"><span style=3D"font-family:G=
+eorgia,serif"><span style=3D"color:#000000"><span style=3D"font-weight:400"=
+><span style=3D"font-style:normal"><span style=3D"text-decoration:none">. Y=
+our TPS designation would be valid to live and work in the U.S. for 18 mont=
+hs through July 5, 2025.</span></span></span></span></span></span></p><p st=
+yle=3D"margin: 0;line-height:1.38; background-color:#ffffff"><br></p><p sty=
+le=3D"margin: 0;line-height:1.38; background-color:#ffffff"><span style=3D"=
+font-size:12pt; font-variant:normal; white-space:pre-wrap"><span style=3D"f=
+ont-family:Georgia,serif"><span style=3D"color:#000000"><span style=3D"font=
+-weight:700"><span style=3D"font-style:normal"><span style=3D"text-decorati=
+on:none">If you are from Honduras,</span></span></span></span></span></span=
+><span style=3D"font-size:12pt; font-variant:normal; white-space:pre-wrap">=
+<span style=3D"font-family:Georgia,serif"><span style=3D"color:#000000"><sp=
+an style=3D"font-weight:400"><span style=3D"font-style:normal"><span style=
+=3D"text-decoration:none"> </span></span></span></span></span></span><span =
+style=3D"font-size:12pt; font-variant:normal; white-space:pre-wrap"><span s=
+tyle=3D"font-family:Georgia,serif"><span style=3D"color:#000000"><span styl=
+e=3D"font-weight:700"><span style=3D"font-style:normal"><span style=3D"text=
+-decoration:none">you must re-register by January 5, 2024.</span></span></s=
+pan></span></span></span><span style=3D"font-size:12pt; font-variant:normal=
+; white-space:pre-wrap"><span style=3D"font-family:Georgia,serif"><span sty=
+le=3D"color:#000000"><span style=3D"font-weight:400"><span style=3D"font-st=
+yle:normal"><span style=3D"text-decoration:none"> Your TPS designation woul=
+d be valid to live and work in the U.S. for 18 months through July 5, 2025.=
+</span></span></span></span></span></span></p><p style=3D"margin: 0;margin:=
+ 0;"><br><span style=3D"font-size:12pt; font-variant:normal; white-space:pr=
+e-wrap"><span style=3D"font-family:Georgia,serif"><span style=3D"color:#000=
+000"><span style=3D"font-weight:400"><span style=3D"font-style:normal"><spa=
+n style=3D"text-decoration:none">For more information about when and where =
+to file, click on the country specific to you on the left side of </span></=
+span></span></span></span></span><a data-cke-saved-href=3D"https://www.usci=
+s.gov/humanitarian/temporary-protected-status" href=3D"https://urldefense.c=
+om/v3/__https://www.uscis.gov/humanitarian/temporary-protected-status__;!!F=
+r0YZsIsFWxTZsBm-qTAg68!hnAgZrlnbAgwk4IRr_2KWQP-Pr5LtiVlUAOgeolbmV68YfaDn0Nx=
+MICQqJQmo2XejffA7EesogQh3fnhY0wWchBQGrygQus$" style=3D"-webkit-text-size-ad=
+just: 100%; -ms-text-size-adjust: 100%;text-decoration:none"><span style=3D=
+"font-size:12pt; font-variant:normal; white-space:pre-wrap"><span style=3D"=
+font-family:Georgia,serif"><span style=3D"color:#1155cc"><span style=3D"fon=
+t-weight:700"><span style=3D"font-style:normal"><span style=3D"text-decorat=
+ion:underline"><span style=3D"-webkit-text-decoration-skip:none"><span styl=
+e=3D"text-decoration-skip-ink:none">this page</span></span></span></span></=
+span></span></span></span></a><span style=3D"font-size:12pt; font-variant:n=
+ormal; white-space:pre-wrap"><span style=3D"font-family:Georgia,serif"><spa=
+n style=3D"color:#000000"><span style=3D"font-weight:400"><span style=3D"fo=
+nt-style:normal"><span style=3D"text-decoration:none">. Our office can assi=
+st with I-821 (TPS), I-765 (EAD), and I-131 (travel document) applications =
+</span></span></span></span></span></span><span style=3D"font-size:12pt; fo=
+nt-variant:normal; white-space:pre-wrap"><span style=3D"font-family:Georgia=
+,serif"><span style=3D"color:#000000"><span style=3D"font-weight:700"><span=
+ style=3D"font-style:italic"><span style=3D"text-decoration:none">if </span=
+></span></span></span></span></span><span style=3D"font-size:12pt; font-var=
+iant:normal; white-space:pre-wrap"><span style=3D"font-family:Georgia,serif=
+"><span style=3D"color:#000000"><span style=3D"font-weight:400"><span style=
+=3D"font-style:normal"><span style=3D"text-decoration:none">you have not he=
+ard back from USCIS within normal process times. </span></span></span></spa=
+n></span></span><a data-cke-saved-href=3D"https://egov.uscis.gov/processing=
+-times/" href=3D"https://urldefense.com/v3/__https://egov.uscis.gov/process=
+ing-times/__;!!Fr0YZsIsFWxTZsBm-qTAg68!hnAgZrlnbAgwk4IRr_2KWQP-Pr5LtiVlUAOg=
+eolbmV68YfaDn0NxMICQqJQmo2XejffA7EesogQh3fnhY0wWchBQSVSUjis$" style=3D"-web=
+kit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;text-decoration:none=
+"><span style=3D"font-size:12pt; font-variant:normal; white-space:pre-wrap"=
+><span style=3D"font-family:Georgia,serif"><span style=3D"color:#1155cc"><s=
+pan style=3D"font-weight:700"><span style=3D"font-style:normal"><span style=
+=3D"text-decoration:underline"><span style=3D"-webkit-text-decoration-skip:=
+none"><span style=3D"text-decoration-skip-ink:none">Click here</span></span=
+></span></span></span></span></span></span></a><span style=3D"font-size:12p=
+t; font-variant:normal; white-space:pre-wrap"><span style=3D"font-family:Ge=
+orgia,serif"><span style=3D"color:#000000"><span style=3D"font-weight:400">=
+<span style=3D"font-style:normal"><span style=3D"text-decoration:none"> to =
+check if your application is outside of processing times. We can be contact=
+ed by phone at 718-662-5970 or </span></span></span></span></span></span><a=
+ data-cke-saved-href=3D"https://ocasio-cortez.house.gov/contact" href=3D"ht=
+tps://ocasio-cortez.house.gov/contact" style=3D"-webkit-text-size-adjust: 1=
+00%; -ms-text-size-adjust: 100%;text-decoration:none"><span style=3D"font-s=
+ize:12pt; font-variant:normal; white-space:pre-wrap"><span style=3D"font-fa=
+mily:Georgia,serif"><span style=3D"color:#1155cc"><span style=3D"font-weigh=
+t:700"><span style=3D"font-style:normal"><span style=3D"text-decoration:und=
+erline"><span style=3D"-webkit-text-decoration-skip:none"><span style=3D"te=
+xt-decoration-skip-ink:none">email us here</span></span></span></span></spa=
+n></span></span></span></a><span style=3D"font-size:12pt; font-variant:norm=
+al; white-space:pre-wrap"><span style=3D"font-family:Georgia,serif"><span s=
+tyle=3D"color:#000000"><span style=3D"font-weight:400"><span style=3D"font-=
+style:normal"><span style=3D"text-decoration:none">. Translation services a=
+re available. </span></span></span></span></span></span></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div></div>
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color: #=
+ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0=
+" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #08244a; backgro=
+und-color: #ffffff;">
+                    <a target=3D"_blank" href=3D"https://urldefense.com/v3/=
+__https://www.facebook.com/RepAOC__;!!Fr0YZsIsFWxTZsBm-qTAg68!hnAgZrlnbAgwk=
+4IRr_2KWQP-Pr5LtiVlUAOgeolbmV68YfaDn0NxMICQqJQmo2XejffA7EesogQh3fnhY0wWchBQ=
+oqNdxas$" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%;"><img alt=3D"facebook icon" width=3D"32" src=3D"https://ocasiocortezfor=
+ms.house.gov/images/email/facebook.png" style=3D"-ms-interpolation-mode: bi=
+cubic;border-width: 0px; border-style: solid; width: 32px;"></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://urldefense.c=
+om/v3/__https://twitter.com/RepAOC__;!!Fr0YZsIsFWxTZsBm-qTAg68!hnAgZrlnbAgw=
+k4IRr_2KWQP-Pr5LtiVlUAOgeolbmV68YfaDn0NxMICQqJQmo2XejffA7EesogQh3fnhY0wWchB=
+QNLDvVxA$" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;"><img alt=3D"twitter icon" width=3D"32" src=3D"https://ocasiocortezfor=
+ms.house.gov/images/email/twitter.png" style=3D"-ms-interpolation-mode: bic=
+ubic;border-width: 0px; border-style: solid; width: 32px;"></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://urldefense.c=
+om/v3/__https://www.instagram.com/RepAOC/__;!!Fr0YZsIsFWxTZsBm-qTAg68!hnAgZ=
+rlnbAgwk4IRr_2KWQP-Pr5LtiVlUAOgeolbmV68YfaDn0NxMICQqJQmo2XejffA7EesogQh3fnh=
+Y0wWchBQRYiGQqQ$" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-ad=
+just: 100%;"><img alt=3D"instagram icon" width=3D"32" src=3D"https://ocasio=
+cortezforms.house.gov/images/email/instagram.png" style=3D"-ms-interpolatio=
+n-mode: bicubic;border-width: 0px; border-style: solid; width: 32px;"></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://urldefense.c=
+om/v3/__https://www.youtube.com/channel/UC6XBnYptBnproA__ydn-b0A__;!!Fr0YZs=
+IsFWxTZsBm-qTAg68!hnAgZrlnbAgwk4IRr_2KWQP-Pr5LtiVlUAOgeolbmV68YfaDn0NxMICQq=
+JQmo2XejffA7EesogQh3fnhY0wWchBQIDf9z-w$" style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;"><img alt=3D"youtube icon" width=3D"32" =
+src=3D"https://ocasiocortezforms.house.gov/images/email/youtube.png" style=
+=3D"-ms-interpolation-mode: bicubic;border-width: 0px; border-style: solid;=
+ width: 32px;"></a>
+                      &nbsp;<a target=3D"_blank" href=3D"https://urldefense=
+.com/v3/__https://www.tiktok.com/@aocinthehouse?lang=3Den__;!!Fr0YZsIsFWxTZ=
+sBm-qTAg68!hnAgZrlnbAgwk4IRr_2KWQP-Pr5LtiVlUAOgeolbmV68YfaDn0NxMICQqJQmo2Xe=
+jffA7EesogQh3fnhY0wWchBQ8kS9XY0$" style=3D"-webkit-text-size-adjust: 100%; =
+-ms-text-size-adjust: 100%;"><img alt=3D"youtube icon" width=3D"32" src=3D"=
+https://ocasiocortezforms.house.gov/images/email/tiktok.png" style=3D"-ms-i=
+nterpolation-mode: bicubic;border-width: 0px; border-style: solid; width: 3=
+2px;"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:10px; background=
+-color: #ffffff;">
+                    &nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Arial, Helvetica, sans-serif;" border=3D"0" cells=
+pacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmar=
+gin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #18335b; font-si=
+ze: 12px;">
+                    <a href=3D"https://ocasiocortezforms.house.gov/forms/em=
+ailsignup/?Delete=3Dtrue" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;color: #18335b;">Unsubscribe</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>=
+
+----boundary_284_237cb53e-9c50-4d07-9975-dfe9c6239ebb--

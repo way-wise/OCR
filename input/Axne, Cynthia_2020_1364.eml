@@ -1,0 +1,671 @@
+Received: from CH2PR09MB4106.namprd09.prod.outlook.com (2603:10b6:3:23::31) by
+ DM6PR09MB5494.namprd09.prod.outlook.com with HTTPS via
+ DM5PR13CA0021.NAMPRD13.PROD.OUTLOOK.COM; Tue, 7 Apr 2020 13:37:18 +0000
+Received: from MWHPR09CA0045.namprd09.prod.outlook.com (2603:10b6:300:6d::31)
+ by CH2PR09MB4106.namprd09.prod.outlook.com (2603:10b6:610:67::18) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2878.19; Tue, 7 Apr
+ 2020 13:37:18 +0000
+Received: from BL0GCC02FT016.eop-gcc02.prod.protection.outlook.com
+ (2a01:111:f400:7d05::201) by MWHPR09CA0045.outlook.office365.com
+ (2603:10b6:300:6d::31) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2878.15 via Frontend
+ Transport; Tue, 7 Apr 2020 13:37:17 +0000
+Authentication-Results: spf=fail (sender IP is 143.231.249.134)
+ smtp.mailfrom=mail.house.gov; ushouse.mail.onmicrosoft.com; dkim=pass
+ (signature was verified) header.d=house.gov;ushouse.mail.onmicrosoft.com;
+ dmarc=pass action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.231.249.134 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.231.249.134;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.231.249.134) by
+ BL0GCC02FT016.mail.protection.outlook.com (10.97.10.110) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.2878.15 via Frontend Transport; Tue, 7 Apr 2020 13:37:17 +0000
+Received: from HRM222.US.House.gov (143.228.51.101) by EXGW203.US.House.gov
+ (143.228.51.91) with Microsoft SMTP Server (TLS) id 15.0.1497.2; Tue, 7 Apr
+ 2020 09:37:00 -0400
+Received: from EXGW202.US.House.gov (143.228.51.90) by HRM222.US.House.gov
+ (143.228.51.101) with Microsoft SMTP Server (TLS) id 15.0.1497.2; Tue, 7 Apr
+ 2020 09:36:59 -0400
+Received: from serg-bulk2-a.house.gov (143.228.42.46) by EXGW202.US.House.gov
+ (143.228.51.90) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
+ Transport; Tue, 7 Apr 2020 09:37:00 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=mime-version : from :
+ to : date : subject : content-type : content-transfer-encoding :
+ message-id; s=august2019-msgb-hg;
+ bh=4XeQ4MGjvLhRFPepNXsOiuO8HnQN0iYEv0sFfyU14lI=;
+ b=s2hK5ymR8gBFB3PNvLcIDJzJ7RjKHh0xc5jJmzoovb/T3obaMBAiPxFSuXI+5LHmB5/p
+ D4niavNOylq80AzvOtW1E/wQ0k6xNSXddB0zu/1oCEOcWHo8gMC4f48p2T2vh4vL3Oor
+ RKEMEax8boYNwyAUcdCb1+JqMzFIY9bkB01Lp6qJOo8U4G4a6vMqJD4dRqESWXsksgQo
+ HOGHARdYnH9LoU0VAhOi+fzEy4LeevDQl7fkjRjeW0oITYJtilsGxQrAOdii1xMQn2HO
+ 66hSJ4bWQswl2OGADg8Muj50xdskTqwnlSIHoLVRZ8bKX2tf8OKhZlr51EyAK4PZxJ6o NA== 
+Received: from IQ020.US.House.gov (iq020.us.house.gov [143.228.113.60])
+	by serg-bulk2-a.house.gov (8.16.0.27/8.16.0.27) with ESMTP id 037DaxL2012516
+	for <Ian.Mariani@mail.house.gov>; Tue, 7 Apr 2020 09:36:59 -0400
+Received: from IQ020 ([127.0.0.1]) by IQ020.US.House.gov with Microsoft SMTPSVC(10.0.14393.2608);
+	 Tue, 7 Apr 2020 09:36:59 -0400
+X-IQCropID: 14359.8679257.5133237.7621982
+X-House-Vendor-Seg: LMDSI-1
+MIME-Version: 1.0
+From: "Representative Cindy Axne" <IA03CA.Outreach@mail.house.gov>
+To: Ian.Mariani@mail.house.gov
+Date: 7 Apr 2020 09:36:59 -0400
+Subject: Need Help Understanding Coronavirus Programs?
+Message-ID: <IQ020yfyz5b6KZmcK8r00089b12@IQ020.US.House.gov>
+X-OriginalArrivalTime: 07 Apr 2020 13:36:59.0755 (UTC) FILETIME=[9D23C3B0:01D60CE1]
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:6.0.138,18.0.676
+ definitions=2020-04-07_06:2020-04-07,2020-04-07 signatures=0
+Return-Path: IA03CAIMA@mail.house.gov
+X-OrganizationHeadersPreserved: EXGW203.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 07 Apr 2020 13:37:17.3510
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 74f0e594-a105-4cc5-b4c9-08d7daf8ca17
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXGW202.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted:
+ BL0GCC02FT016.eop-gcc02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ BL0GCC02FT016.eop-gcc02.prod.protection.outlook.com
+X-Forefront-Antispam-Report:
+ CIP:143.231.249.134;CTRY:US;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SKI;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFTY:;SFS:;DIR:INB;SFP:;
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 74f0e594-a105-4cc5-b4c9-08d7daf8ca17
+X-MS-TrafficTypeDiagnostic: CH2PR09MB4106:
+X-MS-Exchange-Organization-SCL: -1
+X-MS-Oob-TLC-OOBClassifiers: OLM:10000;
+X-Microsoft-Antispam: BCL:0;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 07 Apr 2020 13:37:17.2590
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 74f0e594-a105-4cc5-b4c9-08d7daf8ca17
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.231.249.134];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CH2PR09MB4106
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.3648212
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2878.014
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(750127)(520011016)(706158)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	BIn8JZcV9vBLJnPfu3g4WaQSzfLMCBMOsZNFC5BZORa59T0rINhuN6qDeSHAm9s/ehvWl6J2ZmrRkI502uyED8yONThLmgOgLQfAiTjbtNWRTN88x//CnUBG1OW8Sch5VZPJxggw5bO+fwSwIjcdHL4lAjHCycFAp2kWvjxodG1RvI4fJt5AnJUqsbTMQ7l8P2BzswNAmGXUavHgPjdUKWmZNqsNur37R8onoCzUpvEABqk17jpXriU1wEDNsKuow7f8Aw+LkDxa5uubcQfset2DgxSX8En8oWZQpkF4kbt9p6zvL4NENshkfmzdBZ2sw3Mpbp2VoD7Bp/Y6PfO0b1rGFGM84hIdBIR1BxKlykFPC9FWUVXuA696ExCAbsaTqTQnIVVkXTMT0J87OeFiOIePT/cfvtywRcFy3ZZ6/LZ/ZpZ0c1QO+5V+9ziz+Se114Q12Yt4o9KR727Rd9reujQrwpMR//OgjwVYfAp244LvsdHNjiBoLbt4Z65nR33cyhIcRsAwPoO+ub5hspzcJiKosTlpEgwtcUAkF/l4iYQ=
+Content-type: multipart/alternative;
+	boundary="B_3669097105_1493337605"
+
+> This message is in MIME format. Since your mail reader does not understand
+this format, some or all of this message may not be legible.
+
+--B_3669097105_1493337605
+Content-type: text/plain;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+About Contact Issues Media Services=20
+For regular updates on my work in Washington and information on when I=E2=80=99ll=
+ be in your neighborhood, sign up here for my e-newsletter. =20
+
+Friends,=20
+
+Health care experts are predicting the days and weeks ahead will be some of=
+ the toughest we've faced in this coronavirus outbreak. And as we've mourned=
+ the loss of 25 Iowans over the  course of this crisis =E2=80=93 we've all strived=
+ to do everything possible to protect our state from further outbreak.
+
+Over the past days, I've been working with our state and local leaders to e=
+nsure every community in Iowa's Third Congressional District is getting the =
+resources and assistance it needs  to battle this outbreak.=20
+
+Read on to find some of those resources and to get an update on some of my =
+work:=20
+
+A New Resource Guide for Iowa Families & Businesses=20
+
+Congress has passed three robust packages of legislation to help families, =
+businesses, and communities deal with the effects of coronavirus.=20
+
+There is a lot of information, so I've put together a resource guide for fo=
+lks who are looking for a quick understanding of what's available to them =E2=80=
+=93 including information on direct payments, business assistance programs, an=
+d emergency paid sick leave.=20
+
+Download the guide here.=20
+
+Iowa Needs a Stay-At-Home Order=20
+
+Last week, the Iowa Department of Public Health predicted a first 'peak' of=
+ COVID-19 cases in Iowa could come in just a matter of weeks.=20
+
+While Governor Reynolds and our state leaders have done a lot to slow the s=
+pread of coronavirus in Iowa, I believe we need to use every tool at our dis=
+posal to provide clear guidance to all citizens, keep our vulnerable populat=
+ions  safe, and protect our health systems from being overwhelmed.=20
+
+That's why last week I wrote to Governor Reynolds, urging her to implement =
+a statewide 'stay-at-home' order.=20
+
+Read my letter to Governor Reynolds here.=20
+
+Launching a 16-County Virtual Tour of Southwest Iowa=20
+
+I started my Virtual District Tour with a listening session with the Southw=
+est Iowa Planning Council (SWIPCO) based in Atlantic.=20
+
+This week, I launched my Virtual District Tour of Iowa=E2=80=99s Third Congressio=
+nal District to survey and further assist response to the ongoing outbreak o=
+f COVID-19 in Iowa.=20
+
+During my first year in office, I visited each of the Third District=E2=80=99s 16=
+ counties at least once a month to ensure I was hearing from all of the Iowa=
+ns I represent in Washington. While  we are honoring the guidance of our hea=
+lth care professionals by staying home and limiting in-person meetings =E2=80=93 I=
+ want to ensure the concerns and questions of my neighbors in southwest Iowa=
+ are still being heard.
+
+Over the coming weeks, I will hold virtual meetings with county emergency m=
+anagers, first responders, health care providers, business owners, farmers, =
+and community organizations to  survey the ongoing effects of COVID-19 on Io=
+wa=E2=80=99s families and economy and bring those stories back to Washington.
+
+Learn more about my Virtual District Tour here.=20
+
+Additional Resources=20
+
+Unemployment Insurance & Assistance=20
+
+If you lose your job during the coronavirus outbreak, you can apply for une=
+mployment assistance here or by calling (866) 239-0843.=20
+
+Both business owners and employees are eligible to apply for unemployment b=
+enefits. You can find a step-by-step guide on doing so here.=20
+
+Small Business Assistance=20
+
+The programs and initiatives in the Coronavirus Aid, Relief, and Economic S=
+ecurity (CARES) Act that was just passed by Congress are intended to assist =
+business owners with whatever needs  they have right now.=20
+
+If you need:=20
+Capital to cover the cost of retaining under 500 employees, then the Payche=
+ck Protection Program might be right for you.
+A quick infusion of a smaller amount of cash to cover you right now, you ma=
+y want to look into an Emergency Economic Injury Grant.
+To ease your fears about keeping up with payments on your current or potent=
+ial SBA loan, the Small Business Debt Relief Program could help.
+Just some quality, free counseling to help you navigate this uncertain econ=
+omic time, the resource partners might be your best bet.
+Iowa businesses can also now qualify for an Economic Injury Disaster Loans =
+(EIDL) through the SBA.=20
+Visit the SBA=E2=80=99s website for an overview of the SBA=E2=80=99s response to the co=
+ronavirus, along with a list of resources.=20
+
+Other Quick Links=20
+
+State  of Iowa Coronavirus Resources=20
+
+CDC  Coronavirus Resources=20
+
+FAQs  for Families & Small Businesses During the Coronavirus Outbreak=20
+
+If we work together, I am confident that Iowans will get through this COVID=
+-19 outbreak and, when the public health threat has passed, we will come bac=
+k stronger than ever.=20
+
+I am grateful to all of our health care professionals, grocery and pharmacy=
+ clerks, volunteers, National Guard members, first responders, and many othe=
+r Iowans who are helping to keep us safe, healthy, and protected during thes=
+e  challenging times.
+
+Thank you,=20
+
+Cindy=20
+
+ =20
+
+To  unsubscribe from updates from my office, click here.=20
+
+
+--B_3669097105_1493337605
+Content-type: text/html;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+</head>
+<body>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www=
+.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+><style id=3D"IQEmailStyle">
+    /* Client-specific Styles */
+    body { width: 100% !important; margin: 0px;}
+    .ReadMsgBody { width: 100%; }
+    .ExternalClass { width: 100%; display:block !important; } /* Force Hotm=
+ail to display emails at full width */
+
+    /* Reset Styles */
+    body { margin:0; padding: 0; }
+    img { outline: none; text-decoration: none; max-width :100%;}
+    br, strong br, b br, em br, i br { line-height: 100%; }
+    h1, h2, h3, h4, h5, h6 { line-height: 100% !important; -webkit-font-smo=
+othing: antialiased; }
+	/*ly, tr#221562, add same margin as margin-block-start/end*/
+	h1{margin-top:0.67em;margin-bottom:0.67em;}
+	h2{margin-top:0.83em;margin-bottom:0.83em;}
+	h3{margin-top:1em;margin-bottom:1em;}
+	h4{margin-top:1.33em;margin-bottom:1.33em;}
+	h5{margin-top:1.67em;margin-bottom:1.67em;}
+	h6{margin-top:2.33em;margin-bottom:2.33em;}
+    table td, table tr { border-collapse: collapse; }
+    p { margin-bottom: 1em; }
+  	table.menu-change a {
+  	text-decoration:none;
+		}
+
+		/* pre-header */
+		.preheader {
+    display:none !important;
+    visibility:hidden;
+    mso-hide:all !important;
+    font-size:0px;
+    color:#ffffff;
+    line-height:0px;
+    max-height:0px;
+    max-width:0px;
+    opacity:0;
+    overflow:hidden;
+    } 	
+  </style><style id=3D"IQMobileStyle" type=3D"text/css"></style>
+<meta name=3D"viewport" content=3D"width=3Ddevice-width,initial-scale=3D1.0,user-sc=
+alable=3D0,minimum-scale=3D1.0,maximum-scale=3D1.0">
+<div id=3D"newsletterContent" class=3D"">
+<table style=3D"table-layout: fixed;" width=3D"100%" cellspacing=3D"0" cellpaddin=
+g=3D"0" border=3D"0" align=3D"center">
+<tbody>
+<tr>
+<td align=3D"center">
+<table class=3D"body-zone bg-change width-change" style=3D"padding: 0px; width:=
+ 640px; border-spacing: 0px;" border=3D"0" bgcolor=3D"#7594ba">
+<tbody class=3D"">
+<tr>
+<td class=3D"content-change general-change textedit" style=3D"padding: 0px; fon=
+t-family: Arial, sans-serif; font-size: 10pt; background-color: rgb(255, 255=
+, 255);">
+<img width=3D"640" style=3D"display: inline-block; max-width: 100%;; margin: 0p=
+x;" title=3D"New_Newsletter_Header-2.png" src=3D"https://iqconnect.lmhostediq.co=
+m/iqextranet/Customers/IA03CA/New_Newsletter_Header-2.png" alt=3D"Image"></td>
+</tr>
+<tr>
+<td class=3D"content-change general-change textedit" style=3D"padding: 0px; fon=
+t-family: Arial, sans-serif; font-size: 11pt; background-color: rgb(63, 171,=
+ 209);">
+<table class=3D"menu-change" style=3D"width: 100%; height: 32px; color: #f3f3f3=
+; font-family: Arial, sans-serif; font-size: 11pt; background-color: #054f7e=
+;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody class=3D"ui-sortable">
+<tr style=3D"height: 32px;">
+<td style=3D"width: 20%; height: 32px;" align=3D"center"><span style=3D"font-fami=
+ly: 'arial black', 'avant garde'; color: #ffffff;"><a style=3D"color: #ffffff;=
+" href=3D"https://iqconnect.lmhostediq.com/iqextranet/iqClickTrk.aspx?&amp;cid=
+=3DIA03CA&amp;crop=3D14359QQQ8679257QQQ5133237QQQ7621982&amp;report_id=3D&amp;redi=
+rect=3Dhttps%3a%2f%2faxne.house.gov%2fabout&amp;redir_log=3D079129988168199" tar=
+get=3D"_blank" rel=3D"noopener">About</a></span></td>
+<td style=3D"width: 20%; height: 32px;" align=3D"center"><span style=3D"font-fami=
+ly: 'arial black', 'avant garde'; color: #ffffff;"><a style=3D"color: #ffffff;=
+" href=3D"https://iqconnect.lmhostediq.com/iqextranet/iqClickTrk.aspx?&amp;cid=
+=3DIA03CA&amp;crop=3D14359QQQ8679257QQQ5133237QQQ7621982&amp;report_id=3D&amp;redi=
+rect=3Dhttps%3a%2f%2faxne.house.gov%2fcontact&amp;redir_log=3D942749344934213" t=
+arget=3D"_blank" rel=3D"noopener">Contact</a></span></td>
+<td style=3D"width: 20%; height: 32px;" align=3D"center"><span style=3D"font-fami=
+ly: 'arial black', 'avant garde'; color: #ffffff;"><a style=3D"color: #ffffff;=
+" href=3D"https://iqconnect.lmhostediq.com/iqextranet/iqClickTrk.aspx?&amp;cid=
+=3DIA03CA&amp;crop=3D14359QQQ8679257QQQ5133237QQQ7621982&amp;report_id=3D&amp;redi=
+rect=3Dhttps%3a%2f%2faxne.house.gov%2fissues&amp;redir_log=3D010817019479208" ta=
+rget=3D"_blank" rel=3D"noopener">Issues</a></span></td>
+<td style=3D"width: 20%; height: 32px;" align=3D"center"><span style=3D"font-fami=
+ly: 'arial black', 'avant garde'; color: #ffffff;"><a style=3D"color: #ffffff;=
+" href=3D"https://iqconnect.lmhostediq.com/iqextranet/iqClickTrk.aspx?&amp;cid=
+=3DIA03CA&amp;crop=3D14359QQQ8679257QQQ5133237QQQ7621982&amp;report_id=3D&amp;redi=
+rect=3Dhttps%3a%2f%2faxne.house.gov%2fmedia&amp;redir_log=3D112911796216197" tar=
+get=3D"_blank" rel=3D"noopener">Media</a></span></td>
+<td style=3D"width: 20%; height: 32px;" align=3D"center"><span style=3D"font-fami=
+ly: 'arial black', 'avant garde'; color: #ffffff;"><a style=3D"color: #ffffff;=
+" href=3D"https://iqconnect.lmhostediq.com/iqextranet/iqClickTrk.aspx?&amp;cid=
+=3DIA03CA&amp;crop=3D14359QQQ8679257QQQ5133237QQQ7621982&amp;report_id=3D&amp;redi=
+rect=3Dhttps%3a%2f%2faxne.house.gov%2fservices&amp;redir_log=3D266731647968222" =
+target=3D"_blank" rel=3D"noopener">Services</a></span></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td class=3D"content-change general-change textedit padding-change" style=3D"pa=
+dding: 0px 30px; font-family: Arial, sans-serif; font-size: 12pt; background=
+-color: rgb(255, 255, 255);">
+<p style=3D"text-align: center; color: #18416a;"><span style=3D"font-size: 12pt=
+;"><em><strong><span style=3D"color: #000000;">For regular updates on my work =
+in Washington and information on when I=E2=80=99ll be in your neighborhood, sign u=
+p
+<a style=3D"color: #054f7e;" href=3D"https://iqconnect.lmhostediq.com/iqextrane=
+t/iqClickTrk.aspx?&amp;cid=3DIA03CA&amp;crop=3D14359QQQ8679257QQQ5133237QQQ76219=
+82&amp;report_id=3D&amp;redirect=3Dhttps%3a%2f%2faxne.house.gov%2fcontact%2fnews=
+letter&amp;redir_log=3D674652276062295" target=3D"_blank" rel=3D"noopener">
+here</a> for my e-newsletter.&nbsp;</span></strong></em></span> </p>
+<p style=3D"text-align: left; color: #18416a;"><span style=3D"color: #000000;">=
+Friends,&nbsp;</span>
+</p>
+<p style=3D"text-align: left; color: #18416a;"><span style=3D"color: #000000;">=
+Health care experts are predicting the days and weeks ahead will be some of =
+the toughest we've faced in this coronavirus outbreak. And as we've mourned =
+the loss of 25 Iowans over the
+ course of this crisis =E2=80=93 we've all strived to do everything possible to p=
+rotect our state from further outbreak.</span></p>
+<p style=3D"text-align: left; color: #18416a;"><span style=3D"color: #000000;">=
+Over the past days, I've been working with our state and local leaders to en=
+sure every community in Iowa's Third Congressional District is getting the r=
+esources and assistance it needs
+ to battle this outbreak.</span> </p>
+<p style=3D"text-align: left; color: #18416a;"><span style=3D"color: #000000;">=
+Read on to find some of those resources and to get an update on some of my w=
+ork:</span>
+</p>
+<p style=3D"color: #18416a; text-align: center;"><span style=3D"font-size: 16pt=
+; color: #000000;"><strong>A New Resource Guide for Iowa Families &amp; Busi=
+nesses</strong></span>
+</p>
+<p style=3D"color: #18416a; text-align: center;"><img width=3D"300" style=3D"disp=
+lay: inline-block; max-width: 100%;; margin: 0px;" title=3D"Rep_Axne_COVID-19_=
+Guide.png" src=3D"https://iqconnect.lmhostediq.com/iqextranet/Customers/IA03CA=
+/Rep_Axne_COVID-19_Guide.png" alt=3D"Image">
+</p>
+<p style=3D"color: #18416a; text-align: left;"><span style=3D"color: #000000;">=
+Congress has passed three robust packages of legislation to help families, b=
+usinesses, and communities deal with the effects of coronavirus.</span>
+</p>
+<p style=3D"color: #18416a; text-align: left;"><span style=3D"color: #000000;">=
+There is a lot of information, so I've put together a
+<a href=3D"https://iqconnect.lmhostediq.com/iqextranet/iqClickTrk.aspx?&amp;c=
+id=3DIA03CA&amp;crop=3D14359QQQ8679257QQQ5133237QQQ7621982&amp;report_id=3D&amp;re=
+direct=3Dhttps%3a%2f%2faxne.house.gov%2fmedia%2fcoronavirus-resource-guide&amp=
+;redir_log=3D785564906846392" target=3D"_blank" rel=3D"noopener">
+resource guide</a> for folks who are looking for a quick understanding of w=
+hat's available to them =E2=80=93 including information on direct payments, busine=
+ss assistance programs, and emergency paid sick leave.</span>
+</p>
+<p style=3D"color: #18416a; text-align: left;"><strong><span style=3D"color: #0=
+00000;">Download the guide
+<a href=3D"https://iqconnect.lmhostediq.com/iqextranet/iqClickTrk.aspx?&amp;c=
+id=3DIA03CA&amp;crop=3D14359QQQ8679257QQQ5133237QQQ7621982&amp;report_id=3D&amp;re=
+direct=3Dhttps%3a%2f%2faxne.house.gov%2fsites%2faxne.house.gov%2ffiles%2fRep%2=
+520Axne%2520Coronavirus%2520Resource%2520Guide.pdf&amp;redir_log=3D06995038734=
+8654" target=3D"_blank" rel=3D"noopener">
+here</a>.</span></strong> </p>
+<p style=3D"color: #18416a; text-align: center;"><span style=3D"font-size: 16pt=
+;"><strong><span style=3D"color: #000000;">Iowa Needs a Stay-At-Home Order</sp=
+an></strong></span>
+</p>
+<p style=3D"text-align: center;"><img width=3D"480" style=3D"display: inline-bloc=
+k; max-width: 100%;; margin: 0px;" title=3D"Stay_at_Home.png" src=3D"https://iqc=
+onnect.lmhostediq.com/iqextranet/Customers/IA03CA/Stay_at_Home.png" alt=3D"Ima=
+ge"></p>
+<p style=3D"text-align: left;">Last week,&nbsp;the Iowa Department of Public =
+Health predicted a first 'peak' of COVID-19 cases in Iowa could come in just=
+ a matter of weeks.
+</p>
+<p style=3D"text-align: left;">While Governor Reynolds and our state leaders =
+have done a lot to slow the spread of coronavirus in Iowa, I believe we need=
+ to use every tool at our disposal to provide clear guidance to all citizens=
+, keep our vulnerable populations
+ safe, and protect our health systems from being overwhelmed. </p>
+<p style=3D"text-align: left;">That's why last week I <a href=3D"https://iqconn=
+ect.lmhostediq.com/iqextranet/iqClickTrk.aspx?&amp;cid=3DIA03CA&amp;crop=3D14359=
+QQQ8679257QQQ5133237QQQ7621982&amp;report_id=3D&amp;redirect=3Dhttps%3a%2f%2faxn=
+e.house.gov%2fmedia%2fpress-releases%2freps-axne-urges-governor-reynolds-iss=
+ue-stay-home-order-minimize-predicted&amp;redir_log=3D448743199379836" target=3D=
+"_blank" rel=3D"noopener">
+wrote to</a> Governor Reynolds, urging her to implement a statewide 'stay-a=
+t-home' order.
+</p>
+<p style=3D"text-align: left;">Read my letter to Governor Reynolds <a href=3D"h=
+ttps://iqconnect.lmhostediq.com/iqextranet/iqClickTrk.aspx?&amp;cid=3DIA03CA&a=
+mp;crop=3D14359QQQ8679257QQQ5133237QQQ7621982&amp;report_id=3D&amp;redirect=3Dhttp=
+s%3a%2f%2faxne.house.gov%2fsites%2faxne.house.gov%2ffiles%2fRep.%2520Axne%25=
+20to%2520Gov.%2520Renyolds%2520SAH.pdf&amp;redir_log=3D242562531266609" target=
+=3D"_blank" rel=3D"noopener">
+here</a>. </p>
+<p style=3D"color: #18416a; text-align: center;"><span style=3D"font-size: 16pt=
+;"><strong><span style=3D"color: #000000;">Launching a 16-County Virtual Tour =
+of Southwest Iowa</span></strong></span>
+</p>
+<p style=3D"color: #18416a; text-align: center;"><img width=3D"380" style=3D"disp=
+lay: inline-block; max-width: 100%;; margin: 0px;" title=3D"IMG_1796.jpg" src=3D=
+"https://iqconnect.lmhostediq.com/iqextranet/Customers/IA03CA/IMG_1796.jpg" =
+alt=3D"Image"></p>
+<p style=3D"color: #18416a; text-align: center;"><span style=3D"font-size: 11pt=
+; color: #000000;"><em>I started my Virtual District Tour with a listening s=
+ession with the Southwest Iowa Planning Council (SWIPCO) based in Atlantic.<=
+/em></span>
+</p>
+<p style=3D"color: #18416a; text-align: left;"><span style=3D"color: #000000;">=
+This week, I launched my Virtual District Tour of Iowa=E2=80=99s Third Congression=
+al District to survey and further assist response to the ongoing outbreak of=
+ COVID-19 in Iowa.</span>
+</p>
+<p style=3D"color: #18416a; text-align: left;"><span style=3D"color: #000000;">=
+During my first year in office, I visited each of the Third District=E2=80=99s 16 =
+counties at least once a month to ensure I was hearing from all of the Iowan=
+s I represent in Washington. While
+ we are honoring the guidance of our health care professionals by staying h=
+ome and limiting in-person meetings =E2=80=93 I want to ensure the concerns and qu=
+estions of my neighbors in southwest Iowa are still being heard.</span></p>
+<p style=3D"color: #18416a; text-align: left;"><span style=3D"color: #000000;">=
+Over the coming weeks, I will hold virtual meetings with county emergency ma=
+nagers, first responders, health care providers, business owners, farmers, a=
+nd community organizations to
+ survey the ongoing effects of COVID-19 on Iowa=E2=80=99s families and economy an=
+d bring those stories back to Washington.</span></p>
+<p style=3D"color: #18416a; text-align: left;"><span style=3D"color: #000000;">=
+Learn more about my Virtual District Tour
+<a href=3D"https://iqconnect.lmhostediq.com/iqextranet/iqClickTrk.aspx?&amp;c=
+id=3DIA03CA&amp;crop=3D14359QQQ8679257QQQ5133237QQQ7621982&amp;report_id=3D&amp;re=
+direct=3Dhttps%3a%2f%2faxne.house.gov%2fmedia%2fpress-releases%2frep-axne-laun=
+ches-virtual-district-tour-iowa-s-third-congressional-district&amp;redir_log=
+=3D909166715467844" target=3D"_blank" rel=3D"noopener">
+here</a>.</span> </p>
+<p style=3D"text-align: center;"><span style=3D"font-size: 21.3333px;"><strong>=
+Additional Resources</strong></span>
+</p>
+<p style=3D"color: #18416a; text-align: left;"><span style=3D"text-decoration: =
+underline;"><strong><span style=3D"color: #000000; text-decoration: underline;=
+">Unemployment Insurance &amp; Assistance&nbsp;</span></strong></span>
+</p>
+<p style=3D"color: #18416a; text-align: left;"><span style=3D"color: #000000;">=
+If you lose your job during the coronavirus outbreak, you can apply for unem=
+ployment assistance
+<a href=3D"https://iqconnect.lmhostediq.com/iqextranet/iqClickTrk.aspx?&amp;c=
+id=3DIA03CA&amp;crop=3D14359QQQ8679257QQQ5133237QQQ7621982&amp;report_id=3D&amp;re=
+direct=3Dhttps%3a%2f%2fwww.iowaworkforcedevelopment.gov%2ffile-claim-unemploym=
+ent-insurance-benefits&amp;redir_log=3D945795850048594" target=3D"_blank" rel=3D"n=
+oopener">
+here</a> or by calling (866) 239-0843.</span> </p>
+<p style=3D"color: #18416a; text-align: left;"><span style=3D"color: #000000;">=
+Both business owners and employees are eligible to apply for unemployment be=
+nefits. You can find a step-by-step guide on doing so
+<a href=3D"https://iqconnect.lmhostediq.com/iqextranet/iqClickTrk.aspx?&amp;c=
+id=3DIA03CA&amp;crop=3D14359QQQ8679257QQQ5133237QQQ7621982&amp;report_id=3D&amp;re=
+direct=3Dhttps%3a%2f%2fwww.youtube.com%2fwatch%3fv%3d8L4XRt2YxGk&amp;redir_log=
+=3D822720154775291" target=3D"_blank" rel=3D"noopener">
+here</a>.</span> </p>
+<p style=3D"color: #18416a; text-align: left;"><span style=3D"text-decoration: =
+underline;"><strong><span style=3D"color: #000000; text-decoration: underline;=
+">Small Business Assistance&nbsp;</span></strong></span>
+</p>
+<p style=3D"color: #18416a; text-align: left;"><span style=3D"color: #000000;">=
+The programs and initiatives in the Coronavirus Aid, Relief, and Economic Se=
+curity (CARES) Act that was just passed by Congress are intended to assist b=
+usiness owners with whatever needs
+ they have right now.&nbsp;</span></p>
+<p style=3D"color: #18416a; text-align: left;"><span style=3D"color: #000000;">=
+If you need:</span>
+</p>
+<ul>
+<li style=3D"color: #18416a; text-align: left;"><span style=3D"color: #000000;"=
+>Capital to cover the cost of retaining under 500 employees, then the
+<a href=3D"https://iqconnect.lmhostediq.com/iqextranet/iqClickTrk.aspx?&amp;c=
+id=3DIA03CA&amp;crop=3D14359QQQ8679257QQQ5133237QQQ7621982&amp;report_id=3D&amp;re=
+direct=3Dhttps%3a%2f%2fhome.treasury.gov%2fpolicy-issues%2ftop-priorities%2fca=
+res-act%2fassistance-for-small-businesses&amp;redir_log=3D845883051023682" tar=
+get=3D"_blank" rel=3D"noopener">
+<strong>Paycheck Protection Program</strong></a> might be right for you.</s=
+pan></li><li style=3D"color: #18416a; text-align: left;"><span style=3D"color: #=
+000000;">A quick infusion of a smaller amount of cash to cover you right now=
+, you may want to look into an
+<a href=3D"https://iqconnect.lmhostediq.com/iqextranet/iqClickTrk.aspx?&amp;c=
+id=3DIA03CA&amp;crop=3D14359QQQ8679257QQQ5133237QQQ7621982&amp;report_id=3D&amp;re=
+direct=3Dhttps%3a%2f%2fcovid19relief.sba.gov%2f%23%2f&amp;redir_log=3D5242302839=
+23211" target=3D"_blank" rel=3D"noopener">
+<strong>Emergency Economic Injury Grant</strong></a>.</span></li><li style=3D=
+"color: #18416a; text-align: left;"><span style=3D"color: #000000;">To ease yo=
+ur fears about keeping up with payments on your current or potential SBA loa=
+n, the
+<a href=3D"https://iqconnect.lmhostediq.com/iqextranet/iqClickTrk.aspx?&amp;c=
+id=3DIA03CA&amp;crop=3D14359QQQ8679257QQQ5133237QQQ7621982&amp;report_id=3D&amp;re=
+direct=3Dhttps%3a%2f%2fwww.sba.gov%2ffunding-programs%2floans%2fcoronavirus-re=
+lief-options%2fsba-debt-relief&amp;redir_log=3D014558891591601" target=3D"_blank=
+" rel=3D"noopener">
+<strong>Small Business Debt Relief Program</strong></a> could help.</span><=
+/li><li style=3D"color: #18416a; text-align: left;"><span style=3D"color: #00000=
+0;">Just some quality, free counseling to help you navigate this uncertain e=
+conomic time, the
+<a href=3D"https://iqconnect.lmhostediq.com/iqextranet/iqClickTrk.aspx?&amp;c=
+id=3DIA03CA&amp;crop=3D14359QQQ8679257QQQ5133237QQQ7621982&amp;report_id=3D&amp;re=
+direct=3Dhttps%3a%2f%2fwww.sba.gov%2flocal-assistance%2ffind%2f&amp;redir_log=3D=
+05886780397293" target=3D"_blank" rel=3D"noopener">
+<strong>resource partners</strong></a> might be your best bet.</span></li><=
+li style=3D"color: #18416a; text-align: left;"><span style=3D"color: #000000;">I=
+owa businesses can also now qualify for an
+<a href=3D"https://iqconnect.lmhostediq.com/iqextranet/iqClickTrk.aspx?&amp;c=
+id=3DIA03CA&amp;crop=3D14359QQQ8679257QQQ5133237QQQ7621982&amp;report_id=3D&amp;re=
+direct=3Dhttps%3a%2f%2fdisasterloan.sba.gov%2fela%2f&amp;redir_log=3D20495173768=
+6228" target=3D"_blank" rel=3D"noopener">
+<strong>Economic Injury Disaster Loans</strong></a> (EIDL) through the SBA.=
+&nbsp;</span></li></ul>
+<p style=3D"color: #18416a; text-align: left;"><span style=3D"color: #000000;">=
+Visit the SBA=E2=80=99s
+<a href=3D"https://iqconnect.lmhostediq.com/iqextranet/iqClickTrk.aspx?&amp;c=
+id=3DIA03CA&amp;crop=3D14359QQQ8679257QQQ5133237QQQ7621982&amp;report_id=3D&amp;re=
+direct=3Dhttps%3a%2f%2fwww.sba.gov%2fpage%2fcoronavirus-covid-19-small-busines=
+s-guidance-loan-resources&amp;redir_log=3D92693805878591" target=3D"_blank" rel=3D=
+"noopener">
+website</a> for an overview of the SBA=E2=80=99s response to the coronavirus, alo=
+ng with a list of resources.&nbsp;</span><span style=3D"color: #000000;">
+<br>
+</span></p>
+<p style=3D"color: #18416a; text-align: left;"><span style=3D"text-decoration: =
+underline;"><span style=3D"color: #000000; text-decoration: underline;"><stron=
+g>Other Quick Links</strong></span></span>
+</p>
+<p style=3D"color: #18416a; text-align: left;"><span style=3D"color: #0000ff;">=
+<em><a style=3D"color: #0000ff;" href=3D"https://iqconnect.lmhostediq.com/iqextr=
+anet/iqClickTrk.aspx?&amp;cid=3DIA03CA&amp;crop=3D14359QQQ8679257QQQ5133237QQQ76=
+21982&amp;report_id=3D&amp;redirect=3Dhttps%3a%2f%2fcoronavirus.iowa.gov%2f&amp;=
+redir_log=3D788915708393204" target=3D"_blank" rel=3D"noopener">State
+ of Iowa Coronavirus Resources</a> <br>
+</em></span></p>
+<p style=3D"color: #18416a; text-align: left;"><span style=3D"color: #0000ff;">=
+<em><a style=3D"color: #0000ff;" href=3D"https://iqconnect.lmhostediq.com/iqextr=
+anet/iqClickTrk.aspx?&amp;cid=3DIA03CA&amp;crop=3D14359QQQ8679257QQQ5133237QQQ76=
+21982&amp;report_id=3D&amp;redirect=3Dhttps%3a%2f%2fwww.coronavirus.gov%2f&amp;r=
+edir_log=3D61838591889199" target=3D"_blank" rel=3D"noopener">CDC
+ Coronavirus Resources</a></em></span> </p>
+<p style=3D"color: #18416a; text-align: left;"><span style=3D"color: #0000ff;">=
+<em><a style=3D"color: #0000ff;" href=3D"https://iqconnect.lmhostediq.com/iqextr=
+anet/iqClickTrk.aspx?&amp;cid=3DIA03CA&amp;crop=3D14359QQQ8679257QQQ5133237QQQ76=
+21982&amp;report_id=3D&amp;redirect=3Dhttps%3a%2f%2faxne.house.gov%2fservices%2f=
+updates-novel-coronavirus-covid-19%2fresources-families-during-coronavirus-o=
+utbreak&amp;redir_log=3D116118627815803" target=3D"_blank" rel=3D"noopener">FAQs
+ for Families &amp; Small Businesses During the Coronavirus Outbreak</a></e=
+m></span> </p>
+<p style=3D"text-align: left; color: #18416a;"><span style=3D"color: #000000;">=
+If we work together, I am confident that Iowans will get through this COVID-=
+19 outbreak and, when the public health threat has passed, we will come back=
+ stronger than ever.&nbsp;</span>
+<br>
+<br>
+<span style=3D"color: #000000;">I am grateful to all of our health care profe=
+ssionals, grocery and pharmacy clerks, volunteers, National Guard members, f=
+irst responders, and many other Iowans who are helping to keep us safe, heal=
+thy, and protected during these
+ challenging times.</span></p>
+<p style=3D"text-align: left; color: #18416a;"><span style=3D"color: #000000;">=
+Thank you,&nbsp;</span>
+</p>
+<p style=3D"color: #18416a; text-align: left;"><span style=3D"color: #000000;">=
+Cindy</span>
+</p>
+<p style=3D"color: #18416a; text-align: left;">&nbsp; </p>
+</td>
+</tr>
+<tr>
+<td class=3D"content-change general-change textedit" style=3D"padding: 0px; fon=
+t-family: Arial, sans-serif; font-size: 10pt; background-color: rgb(63, 171,=
+ 209); color: rgb(255, 255, 255);">
+<div style=3D"padding: 0.6em;">
+<div style=3D"border-top: 1px solid #afa4a4; text-align: center;"><img height=
+=3D"226" width=3D"640" style=3D"display: inline-block; margin: 0; max-width: 100%;=
+;;" title=3D"Newsletter_Footer_v2.png" src=3D"https://iqconnect.lmhostediq.com/i=
+qextranet/Customers/IA03CA/Newsletter_Footer_v2.png" alt=3D"Image"></div>
+</div>
+</td>
+</tr>
+<tr>
+<td class=3D"content-change general-change textedit" style=3D"padding: 0px; fon=
+t-family: Arial, sans-serif; font-size: 10pt; background-color: rgb(63, 171,=
+ 209);">
+<table class=3D"button-change" style=3D"width: 100%; font-family: Arial, sans-s=
+erif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody class=3D"ui-sortable">
+<tr>
+<td style=3D"width: 100%;" align=3D"center"><span style=3D"color: #ffffff;"><a cl=
+ass=3D"ui-iqbutton ui-link" style=3D"display: inline-block; text-decoration: non=
+e; font-size: 10pt; margin: 10px; background-color: #18416a; color: #ffffff;=
+ border-radius: 8px; text-align: center; padding: 10px;" href=3D"https://iqcon=
+nect.lmhostediq.com/iqextranet/iqClickTrk.aspx?&amp;cid=3DIA03CA&amp;crop=3D1435=
+9QQQ8679257QQQ5133237QQQ7621982&amp;report_id=3D&amp;redirect=3Dhttps%3a%2f%2fax=
+ne.house.gov%2fcontact%2fnewsletter%2fnewsletter-unsubscribe&amp;redir_log=3D6=
+84017445401462">To
+ unsubscribe from updates from my office, click here.</a></span></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<img src=3D"https://iqconnect.lmhostediq.com/iqextranet/Customers/IA03CA/iqtr=
+k.gif?crop=3D14359QQQ8679257QQQ5133237QQQ7621982" height=3D"0" width=3D"0"><span n=
+ame=3D"14359QQQ8679257QQQ5133237QQQ7621982" data-crop=3D"14359QQQ8679257QQQ51332=
+37QQQ7621982"></span><img src=3D"https://iqconnect.lmhostediq.com/iqextranet/C=
+ustomers/IA03CA/iqtrk.gif?crop=3D14359QQQ8679257QQQ5133237QQQ7621982" height=3D"=
+0" width=3D"0"><span name=3D"14359QQQ8679257QQQ5133237QQQ7621982" data-crop=3D"143=
+59QQQ8679257QQQ5133237QQQ7621982"></span>
+</body>
+</html>
+
+
+--B_3669097105_1493337605--
+

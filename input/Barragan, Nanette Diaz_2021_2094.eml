@@ -1,0 +1,1753 @@
+Received: from SA1PR09MB7741.namprd09.prod.outlook.com (2603:10b6:806:170::13)
+ by BLAPR09MB7154.namprd09.prod.outlook.com with HTTPS; Sat, 30 Jan 2021
+ 03:20:53 +0000
+Received: from CY4PR09CA0075.namprd09.prod.outlook.com (2603:10b6:903:c7::13)
+ by SA1PR09MB7741.namprd09.prod.outlook.com (2603:10b6:806:170::13) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.3763.11; Sat, 30 Jan
+ 2021 03:20:51 +0000
+Received: from DM3GCC02FT011.eop-gcc02.prod.protection.outlook.com
+ (2a01:111:f400:7d04::209) by CY4PR09CA0075.outlook.office365.com
+ (2603:10b6:903:c7::13) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.3805.16 via Frontend
+ Transport; Sat, 30 Jan 2021 03:20:51 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.129.7)
+ smtp.mailfrom=mail.house.gov; ushouse.mail.onmicrosoft.com; dkim=fail (body
+ hash did not verify) header.d=house.gov;ushouse.mail.onmicrosoft.com;
+ dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.129.7 as permitted sender) receiver=protection.outlook.com;
+ client-ip=143.228.129.7; helo=owa.house.gov;
+Received: from owa.house.gov (143.228.129.7) by
+ DM3GCC02FT011.mail.protection.outlook.com (10.97.8.210) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.3784.11 via Frontend Transport; Sat, 30 Jan 2021 03:20:50 +0000
+Received: from HRM125.US.House.gov (143.228.151.125) by EXGW103.US.House.gov
+ (143.228.151.86) with Microsoft SMTP Server (TLS) id 15.0.1497.2; Fri, 29 Jan
+ 2021 22:20:37 -0500
+Received: from EXGW102.US.House.gov (143.228.151.85) by HRM125.US.House.gov
+ (143.228.151.125) with Microsoft SMTP Server (TLS) id 15.0.1497.2; Fri, 29
+ Jan 2021 22:20:36 -0500
+Received: from serg-bulk1-h.house.gov (143.228.145.31) by EXGW102.US.House.gov
+ (143.228.151.85) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
+ Transport; Fri, 29 Jan 2021 22:20:37 -0500
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=message-id :
+ list-unsubscribe : mime-version : from : to : date : subject :
+ content-type; s=august2019-msgb-hg;
+ bh=iRzf0qSpcS5kz74zKQ02irIbC/wsv0ErHWi4tzUgG+I=;
+ b=A6cMBmogYD6aJnZOoEDn+OxoKDN2Y1Nm5sR3TcvotlsBApYW/bv06NWagkwNohw8o+5P
+ hFl3xeDNnCLk9Hcu343gcDKZxXZDGvCgjjCmJlMCwIJiW4nTr5xy2vfoWMERJh4RP1Qj
+ oHusHXRUFbq99NXW2eCcZlWqd1e0iHITXf+cwEg2cXtJ7BbVZxFV17/it6GwCsQ5tZ1e
+ gXEofuJOvWPM2KkO2Tqeco++a+1q5fbdXi/o5YaQfwFj4305AtAu8RiJKI2YdNI2NIhz
+ evDEKVXS6Cm16Nj7CazupPaw2mNNL3vW3mDRCTLbuS0j9r1MpuQyq9CdnLKsbFVQ8XQf wg== 
+Received: from FIRESIDESERV06 (firesideserv06.us.house.gov [143.228.58.67])
+	by serg-bulk1-h.house.gov (8.16.0.27/8.16.0.27) with ESMTP id 10U3KapO011736
+	for <CA44AllStaff@mail.house.gov>; Fri, 29 Jan 2021 22:20:36 -0500
+envelope-from: RSVP.Barragan@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+Message-ID: <EyorgnJHBzGNJE/kMmu5pSKc4Ap9O9oHopV8mzXKxiKJ6TAG9BlO9tRBekTg2L/30+hlqlbg0NjFUiGMkFE4btTHrdqK3f2tg2DuT2TdV9n9cKJ4EAPK0DEw8zWVHqfJThl9UNH/uXNfumnUijRiWbPOmt6mJeQt6aD5qzVtFhl69ZwB0iljELYQWZxi2xM2@fireside21.com>
+X-House-Vendor-Seg: unmanaged
+List-Unsubscribe: <https://barraganforms.house.gov/forms/emailsignup/?Delete=true&MessageID=422&Email=CA44AllStaff@mail.house.gov&Submit=true>
+Precedence: bulk
+MIME-Version: 1.0
+From: =?utf-8?Q?Congresswoman_Nanette_Barrag=C3=A1n?=
+ <RSVP.Barragan@mail.house.gov>
+To: CA44AllStaff@mail.house.gov
+Date: 29 Jan 2021 22:20:36 -0500
+Subject: Vaccine Updates and More
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:6.0.369,18.0.737
+ definitions=2021-01-30_01:2021-01-29,2021-01-30 signatures=0
+Return-Path: RSVP.Barragan@mail.house.gov
+X-Auto-Response-Suppress: DR, OOF, AutoReply
+X-OrganizationHeadersPreserved: EXGW103.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 30 Jan 2021 03:20:50.7696
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ eead2dc7-e66f-4a59-c3d5-08d8c4ce0b78
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXGW102.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted:
+ DM3GCC02FT011.eop-gcc02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ DM3GCC02FT011.eop-gcc02.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: eead2dc7-e66f-4a59-c3d5-08d8c4ce0b78
+X-MS-TrafficTypeDiagnostic: SA1PR09MB7741:
+X-LD-Processed: 92138299-22d0-4d49-8d30-7170d5896d98,ExtAddr,ExtFwd
+X-MS-Exchange-Organization-SCL: -1
+X-MS-Oob-TLC-OOBClassifiers: OLM:10000;
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:143.228.129.7;CTRY:US;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SKI;H:owa.house.gov;PTR:housegate34.house.gov;CAT:NONE;SFS:;DIR:INB;
+X-MS-Exchange-Transport-Forked: True
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 30 Jan 2021 03:20:50.6256
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: eead2dc7-e66f-4a59-c3d5-08d8c4ce0b78
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.129.7];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXGW102.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SA1PR09MB7741
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.9265288
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.3805.017
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(750128)(520011016)(706158)(944506458)(944626604);
+X-Microsoft-Antispam-Message-Info:
+	nECW5niG4dVj6wgnRos6ltlz5PgcAb73ojsFwT08djZ1TFI9FL6w+u6Afx3NrnWP1ch5kJ9/aJwKMT0owmXGxOPSWBn6zQsqTTZkPg/RpxqAJJFNza4onAZDMj8ASCJLRM3CLE3wqeDiKE/sa337qSal1YYMW+GAjTzFzWsf/a4Lw/YSO1ROjyR2O71wf16JP5wuewlD7Tv1VEEcGTtPGpydpVG0O4sAm3O4MU6QpjxMTSjM4RCf9nRixC4AOQqnas1RIZnI9M9PalzA2RZea2AEWtVRukXYuvWrDlkjPc6qmYCDLBGb/obh1EJtmdWhdkpZbSQvT5uqJ+WALtwllNLPRBJJ/hfIaD0wOE48quGW5QLFe7ohT25/6BiGGfmDAqzdoPqRouXv1dPKgJ7phEPdW29RJGgnTX/n3AqAe3odCU8cXK7ue/gu6vfa2iJxM9mJ8+++oJeaTd9bgx7OnKT1KtNVzemdZd+FZBhjMicEna/S+q41uXm4BTn75UOWwGBuZ1xRa0IfsSMrQT/5v3skP89H/iE23nyQjm5p9fPXq454A7MTm25yKFWZYQrV4wnrHuuyO6TBuauPuFbdch7ECH6uKFghV3gx6RY39nw=
+Content-type: multipart/alternative;
+	boundary="B_3694803803_2165265665"
+
+> This message is in MIME format. Since your mail reader does not understand
+this format, some or all of this message may not be legible.
+
+--B_3694803803_2165265665
+Content-type: text/plain;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+Vaccine Updates and More January 29, 2021 Dear Neighbor,I remain committed =
+to doing all that I can to help our community get vaccinated. Unfortunately,=
+ there has been a troubling trend of racial inequity in the rollout of the v=
+accine. I am pushing for more doses and more testing sites in our communitie=
+s, free and safe transportation to vaccine sites, and more capacity on the p=
+hone lines where people can schedule vaccine appointments. I have been commu=
+nicating with federal, state and local agencies to push for more immediate a=
+ction on these issues. Sigo comprometida a hacer todo lo posible para ayudar=
+ a nuestra comunidad a vacunarse. Desafortunadamente, ha habido una tendenci=
+a preocupante de injusticia racial con la distribuci=C3=B3n de la vacuna. Estoy =
+insistiendo para m=C3=A1s dosis y m=C3=A1s sitios de pruebas en nuestra =C3=A1rea, trans=
+porte seguro y gratuito y a los sitios de vacunas, y m=C3=A1s capacidad en las l=
+=C3=ADneas telef=C3=B3nicas donde la gente har=C3=A1n sus citas de vacunas. In this news=
+letter you will find COVID vaccine information, resources in our community a=
+nd updates from DC including environmental Policy Updates.If you no longer l=
+ive in the district, or want to unsubscribe from this newsletter, please cli=
+ck here.=20
+=20
+=20
+Vaccine Updates and More
+=20
+January 29, 2021
+ =20
+Dear Neighbor,
+I remain committed to doing all that I can to help our community get vaccin=
+ated. Unfortunately, there has been a troubling trend of racial inequity in =
+the rollout of the vaccine. I am pushing for more doses and more testing sit=
+es in our communities, free and safe transportation to vaccine sites, and mo=
+re capacity on the phone lines where people can schedule vaccine appointment=
+s. I have been communicating with federal, state and local agencies to push =
+for more immediate action on these issues.=20
+Sigo comprometida a hacer todo lo posible para ayudar a nuestra comunidad a=
+ vacunarse. Desafortunadamente, ha habido una tendencia preocupante de injus=
+ticia racial con la distribuci=C3=B3n de la vacuna. Estoy insistiendo para m=C3=A1s =
+dosis y m=C3=A1s sitios de pruebas en nuestra =C3=A1rea, transporte seguro y gratuit=
+o y a los sitios de vacunas, y m=C3=A1s capacidad en las l=C3=ADneas telef=C3=B3nicas do=
+nde la gente har=C3=A1n sus citas de vacunas.=20
+In this newsletter you will find COVID vaccine information, resources in ou=
+r community and updates from DC including environmental Policy Updates.
+If you no longer live in the district, or want to unsubscribe from this new=
+sletter, please click here.=20
+ =20
+=20
+COVID-19 Vaccine Updates and Information =20
+=20
+ =20
+The vaccine supply is extremely limited in L.A. County. While we wait for m=
+ore doses of the existing vaccines to be made available and a potential sing=
+le shot option in the months ahead, we must continue to take all precautions=
+. I encourage you and your family to get the COVID-19 vaccine when it become=
+s available and you are eligible. Los Angeles County=E2=80=99s Vaccine Distributio=
+n page describes the phases and tiers of vaccination, with more information =
+about how these phases will roll out.      As a reminder, L.A. County reside=
+nts 65 and older are now eligible to receive the vaccine. Healthcare Workers=
+, Staff & Residents at Skilled Nursing Facilities, and Staff and Residents a=
+t long-term care facilities are also eligible to receive the vaccine.=20
+You can find out when it is your turn to receive a vaccine by signing up on=
+ the statewide =E2=80=98My Turn=E2=80=99 website.  =20
+ =20
+As the vaccine is still a limited resource, appointments at each vaccinatio=
+n site are limited. To make an appointment for yourself or a loved one, visi=
+t www.Vaccinatelacounty.com. If you aren=E2=80=99t able to make an appointment onl=
+ine, call 1(833) 540-0473. You should also check with your local clinic or h=
+ealthcare provider and ask if they will have access to the vaccine.
+Again, vaccines are still very limited and in high demand. Expect delays on=
+ phone lines and high traffic on websites. Please try the sites at different=
+ times of the day, since appointments are being added on a rolling basis. I =
+recommend checking the website every morning because new appointments are be=
+ing added every day. Know that officials are aware of the technical difficul=
+ties and are working to fix them.=20
+=C2=BFSe pregunta cu=C3=A1ndo ser=C3=A1 elegible para recibir la vacuna COVID-19?   Es =
+importante que todos reciban la vacuna COVID-19 cuando sean elegibles.=20
+La p=C3=A1gina de Distribuci=C3=B3n de Vacunas del condado de Los Angeles describe =
+la fases y niveles de vacunaci=C3=B3n, y con m=C3=A1s informaci=C3=B3 sobre c=C3=B3mo se imp=
+lementar=C3=A1n estas fases.     Debido al impacto severo que la pandemia contin=
+=C3=BAa teniendo en nuestros vecinos y familiaress mayores de 65 a=C3=B1os, el conda=
+do de Los Angeles ha priorizado el grupo de edad, haci=C3=A9ndolos elegibles par=
+a recibir la vacuna. Las personas que trabajan para el Programa de Servicios=
+ de Asistencia en el Hogar (IHSS) que atienden a pacientes tambi=C3=A9n son eleg=
+ibles para recibir la vacuna. Haga una cita como trabajador de la salud con =
+anticipaci=C3=B3n y someta la documentaci=C3=B3n necesaria, como prueba de empleo de=
+ IHHS y una forma de identificaci=C3=B3n.   Como la vacuna sigue siendo un recur=
+so limitado, las citas en cada centro de vacunaci=C3=B3n son limitadas. Para hac=
+er una cita para usted o un ser querido, visite www.Vaccinatelacounty.com. S=
+i no puede hacer una cita en l=C3=ADnea, intente llamar al 1-833-540-0473. Tambi=
+=C3=A9n debe consultar con su cl=C3=ADnica o proveedor de atenci=C3=B3n m=C3=A9dica y pregun=
+tar si tendr=C3=A1 acceso a la vacuna.
+ =20
+ =20
+Visite VaccinateLACounty.com para obtener informaci=C3=B3n actualizada sobre la=
+s vacunas COVID-19 y para averiguar cuando ser=C3=A1 elegible para recibir una.=20
+Puede averiguar cuando es su turno de recibir una vacuna registr=C3=A1ndose en =
+el sitio web estatal =E2=80=98My Turn=E2=80=99.
+Espere retrasos en las l=C3=ADneas telef=C3=B3nicas y mucho tr=C3=A1fico en los sitios =
+web. Recomiendo consultar el sitio web todas las ma=C3=B1anas porque cada d=C3=ADa s=
+e agregan nuevas citas. Pruebe los sitios en diferentes horarios del d=C3=ADa, y=
+a que las citas se agregan de forma continua y sepa que los trabajadores ofi=
+ciales est=C3=A1n al tanto de las dificultades t=C3=A9cnicas y est=C3=A1n trabajando par=
+a solucionarlas. =20
+ =20
+Vaccine Scams
+Be aware of vaccine scams, here are the facts about the vaccine in L.A. Cou=
+nty.=20
+Estafas de Vacunas
+Tenga en cuenta las estafas de vacunas, aqu=C3=AD est=C3=A1 informaci=C3=B3n correcta s=
+obre la vacuna en el condado de Los Angeles:
+ =20
+COVID Vaccine Telephone Town Hall Report Back
+On Tuesday, we held a Vaccine Telephone Town Hall with Supervisor Janice Ha=
+hn and L.A. County Public Health=E2=80=99s Dr. Seira Kurian. If you missed the eve=
+nt, you can listen here. Supervisor Hahn answered many of the FAQs on her Tw=
+itter account the following day.
+Informaci=C3=B3n de el Foro Telef=C3=B3nico de Vacunas
+El martes, tuvimos una reuni=C3=B3n telef=C3=B3nica sobre la vacuna contra el COVID=
+ con La Supervisora Janice Hahn y la Dra. Seira Kurian de Salud P=C3=BAblica del=
+ Condado de Los Angeles. Si se perdi=C3=B3 el evento, puede escucharlo aqu=C3=AD.=20
+Transportation and the Vaccine
+Lack of transportation should not be a barrier to getting your vaccine. All=
+ of the pharmacy and clinic locations are walk-up, and drive-thru sites, lik=
+e the big County-run sites, will accommodate walk-ups.
+Several ride sharing apps are also offering free or discounted rides to vac=
+cination sites. Check your apps for more information.=20
+Fiesta Taxi is offering South Gate seniors free transportation to the Downe=
+y Vaccination site.=20
+=20
+=20
+Transporte y la Vacuna contra el COVID =20
+El transporte no debe ser un obst=C3=A1culo para recibir su vacuna. Hay varios =
+lugares donde no necesita un autom=C3=B3vil para vacunarse.=20
+Varias aplicaciones para viajar en auto tambi=C3=A9n est=C3=A1n ofreciendo viajes g=
+ratuitos o con descuento a los sitios de vacunaci=C3=B3n. Revise sus aplicacione=
+s para obtener m=C3=A1s informaci=C3=B3n.=20
+Fiesta Taxi ofrece transporte gratuito a las personas mayores de edad de So=
+uth Gate al sitio de vacunaci=C3=B3n en Downey.
+Affordable Rideshares
+Last December, Metro Micro launched a ride share program allowing passenger=
+s to travel anywhere within a specific service zone for only $1 per ride. Th=
+e first service zones were designated for the LAX area and the communities o=
+f Watts and Willowbrook. This week, Metro Micro expanded to three new servic=
+e zones, including one which will cover Compton and California State Univers=
+ity, Dominguez Hills. More information here.=20
+En diciembre del a=C3=B1o pasada, Metro Micro lanz=C3=B3 un programa de viajes en a=
+uto que permite a los pasajeros viajar a cualquier lugar dentro de una zona =
+de servicio espec=C3=ADfica por solo $ 1 por viaje. Esta semana, Metro Micro exp=
+andi=C3=B3. Ahora servir=C3=A1 en las comunidades de Watts, Willowbrook, Compton y l=
+a Universidad de California, Dominguez Hills. M=C3=A1s informaci=C3=B3n aqu=C3=AD.
+ =20
+=20
+COVID-19 & Resources in Our Community
+=20
+Stay at home order status
+Governor Newsom has lifted the stay-at-home order and announced that all co=
+unties in California will be moving back to a system of colored tiers.
+L.A. County will be in the highest-risk tier, purple. This means that, alth=
+ough outdoor dining is now open, the risk of spread is still very high and r=
+estrictions are still in place. =20
+Orden de estad=C3=ADa en casa
+El gobernador Newsom ha levantado el orden de estad=C3=ADa en casa. Aunque los =
+restaurantes de comer al aire libre est=C3=A1n abiertos, el riesgo de infecci=C3=B3n=
+ es todav=C3=ADa muy alto y las restricciones todav=C3=ADa est=C3=A1n en su lugar.=20
+Types of Masks=20
+Please keep wearing your masks! Experts always recommend the N95 mask if yo=
+u have access to one. If you don=E2=80=99t, it=E2=80=99s always best to double-mask, or =
+use a mask with three or more layers. If you=E2=80=99re using cloth masks, remembe=
+r to wash your masks frequently and cycle between different ones.=20
+Los Tipos Recomendados de Mascarillas =20
+=20
+Expertos siempre recomiendan la mascarilla N95 si tiene acceso a una. Si no=
+, siempre es mejor usar doble mascarilla o usar una mascarilla con tres o m=C3=
+=A1s capas. Si usas mascarillas de tela, recuerde lavarla con frecuencia y alt=
+ernar.=20
+Outbreak at our Ports=20
+I=E2=80=99ve been very concerned about the recent outbreak of COVID-19 at the Por=
+ts of Los Angeles and Long Beach. This outbreak impacts my constituents and =
+their family members who work there, the  surrounding communities, and could=
+ have catastrophic consequences on the local and national economy that depen=
+d on the ports.=20
+ =20
+Congressman Alan Lowenthal and I joined together in writing a letter to the=
+ State and County to highlight the importance of prioritizing port workers i=
+n vaccine distribution. It=E2=80=99s critical that we protect the essential worker=
+s who keep our port infrastructure operating and our goods flowing.
+ =20
+Brote en nuestros puertos=20
+Me ha preocupado mucho el reciente brote de COVID-19 en los puertos de Los =
+Angeles y Long Beach. El congresista Alan Lowenthal y yo escribimos una cart=
+a al estado y al condado para insistir la importancia de dar prioridad a los=
+ trabajadores del puerto en la distribuci=C3=B3n de vacunas.=20
+Rent Relief in South Gate
+Applications open February 1, 2021. More information here!
+ =20
+CA Eviction Moratorium Bill Extended through June 30th, 2021
+California Gov. Gavin Newsom signed a law on Friday that extends eviction p=
+rotections through the end of June. Tenants who qualify for the protections =
+will still owe their rent, they just can=E2=80=99t be evicted for not paying all o=
+f it. The law would use federal stimulus dollars to pay off 80% of some tena=
+nts=E2=80=99 unpaid rent, but only if landlords agree to forgive the remaining 20%=
+. If landlords refuse the deal, the law would pay off 25% of tenants=E2=80=99 unpa=
+id rent to make sure they qualify for eviction protections.
+People who earn more than 80% of the area median income are not eligible fo=
+r the money.
+ =20
+=20
+Updates from Washington, D.C.
+=20
+ =20
+The Federal Response to COVID-19
+President Biden has announced a comprehensive COVID-19 plan, which includes=
+ buying millions of new doses of the vaccine that will hopefully be availabl=
+e in the summertime. Negotiations over the next coronavirus relief plan cont=
+inue. I will continue to push for regular, direct payments, expanded unemplo=
+yment benefits, small business support, and rent/utility relief.=20
+El Gobierno Federal en respuesta a COVID-19   El presidente Biden ha anunci=
+ado un plan extenso de COVID-19, que incluye la compra de millones de nuevas=
+ dosis de vacunas, que se espera que sean disponibles este verano. Las negoc=
+iaciones sobre el pr=C3=B3ximo plan de alivio de coronavirus continua. Yo sigo i=
+nsistiendo por pagos regulares, directos, beneficios de desempleo expandidos=
+, ayuda para negocios peque=C3=B1os y alivio de alquiler.=20
+Environmental Policy Updates=20
+This week was a busy one for environmental justice and climate action. Pres=
+ident Biden announced several Executive Orders on climate and environmental =
+justice, which I am proud to see and happy to support.
+ =20
+I reintroduced the Energy Resilient Communities Act with Rep. Yvette Clarke=
+. The bill invests in 100% clean energy microgrids to help communities fight=
+ climate change and keep the lights on after extreme weather events such as =
+wildfires and hurricanes.=20
+I reintroduced the Climate Smart Ports Act to invest in pollution reduction=
+ at ports across the country, including the Port of Los Angeles.
+ =20
+I also led a letter with 26 of my colleagues asking President Biden to reve=
+rse a last minute decision by the Trump administration to eliminate funding =
+for urban parks in underserved communities.=20
+Actualizaciones de Pol=C3=ADtica Ambiental=20
+=20
+Esta semana, el Presidente Biden anunci=C3=B3 varias =C3=B3rdenes ejecutivas sobre =
+el clima y la justicia ambiental, que estoy orgullosa y contenta de apoyar.=20
+=20
+Reintroduje la Ley de Comunidades Resistentes a la Energ=C3=ADa para luchar con=
+tra la crisis clim=C3=A1tica con la Congresista Yvette Clarke.=20
+=20
+Tambi=C3=A9n reintroduje la Ley de Puertos Clim=C3=A1ticamente Inteligentes para in=
+vertir en la reducci=C3=B3n de la contaminaci=C3=B3n en puertos de todo el pa=C3=ADs, in=
+cluido el Puerto de los Angeles.=20
+=20
+Finalmente, dirig=C3=AD una carta pidi=C3=A9ndole al presidente Biden que cambiara =
+la decisi=C3=B3n de la Administraci=C3=B3n Trump que hizo a =C3=BAltima hora de eliminar=
+ fondos para los parques urbanos en comunidades de pocos recursos.=20
+
+In Community, En Comunidad,
+ =20
+ Nanette Diaz Barrag=C3=A1nMember of Congress, Congresista
+ =20
+Stay Connected
+ =20
+    =20
+ =20
+=20
+Click Here to view this email in your browser=20
+Click Here to be removed from this list 
+
+--B_3694803803_2165265665
+Content-type: text/html;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><title>V=
+accine Updates and More</title><meta name=3D"viewport" content=3D"width=3Ddevice-w=
+idth, initial-scale=3D1"><!--[if !mso]><!--><meta http-equiv=3D"X-UA-Compatible"=
+ content=3D"IE=3Dedge"><!--<![endif]--><style>body, table, td, a{-webkit-text-si=
+ze-adjust: 100%; -ms-text-size-adjust: 100%;} /* Prevent WebKit and Windows =
+mobile changing default text sizes */ img{-ms-interpolation-mode: bicubic;} =
+/* Allow smoother rendering of resized image in Internet Explorer *//* RESET=
+ STYLES */img { border: 0; height: auto; line-height: 100%; outline: none; t=
+ext-decoration: none; }table { border-collapse: collapse !important; }body {=
+ height: 100% !important; margin: 0 !important; padding: 0 !important; width=
+: 100% !important; }strong { font-weight: bold; } /* Editor reset *//* FIRES=
+IDE STYLES */.component img {max-width:600px;}.component table {mso-table-rs=
+pace:10pt; border-collapse:collapse;}.component { padding: 0px !important; }=
+.press {padding-bottom: 0px;}</style><style>@media all and (max-width:650px)=
+ {            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td, .i=
+mage-2, .img-2 img, .image-2 tr, .image-2 td {max-width: 100% !important; wi=
+dth: 100% !important;}            .responsive-table {width:100% !important;}=
+            .responsive-table img {max-width:100% !important; height: auto !=
+important;}            .press .component, .press td {text-align:center;}    =
+        .component { margin-left: 20px; margin-right: 20px;}            .com=
+ponent .responsive-table { margin-left: 0px !important; margin-right: 0px !i=
+mportant;}            .wide .video-thumb { width: 100% !important;height: au=
+to !important; }             .wide.video-container { width: 100% !important;=
+ }            }</style><style type=3D"text/css">
+            /* CLIENT-SPECIFIC STYLES */
+            body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text =
+sizes */
+            table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Rem=
+ove spacing between tables in Outlook 2007 and up */
+            img{-ms-interpolation-mode: bicubic;} /* Allow smoother renderi=
+ng of resized image in Internet Explorer */
+            /* RESET STYLES */
+            img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: =
+0 !important; width: 100% !important; }
+            strong { font-weight: bold; } /* Editor reset */
+            /* FIRESIDE STYLES */
+            .component img {max-width:600px;}
+            .component table {mso-table-rspace:10pt; border-collapse:collap=
+se; font-family: Arial, Helvetica, sans-serif;}
+            .component td {font-family: Arial, Helvetica, sans-serif;}
+            .component { padding: 0px !important; }
+            .press {padding-bottom: 0px;}
+            .caption-1 td {font-family: Arial, Helvetica, sans-serif;}
+            /* Margin/NoMargin STYLES */
+            .component.full-width{ overflow: hidden; margin: 0px; }
+            /* HEADER STYLES */
+            .header-bar {width: 100%;}
+            .header-bar-margin {background-color:#ffffff;}
+            .header-bar h2 {margin: 0 !important; padding: 0 !important; co=
+lor: #002b5c !important;text-align: center;font-size: 22px !important;font-w=
+eight: bold !important; }
+            .survey-content > table > tbody tr td { border-color: #002b5c !=
+important; }
+            .survey-content input.survey-submit { font-family: Arial, Helve=
+tica, sans-serif !important; }
+        </style><style id=3D"media-queries"> 
+            @media all and (max-width:650px) {
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max=
+-width: 100% !important; width: 100% !important;}
+            .responsive-table {width:100% !important;}
+            .responsive-table img {max-width:100% !important; height: auto =
+!important;}
+            .press .component, .press td {text-align:center;}
+            .component { margin-left: 20px; margin-right: 20px;}
+            .component .responsive-table { margin-left: 0px !important; mar=
+gin-right: 0px !important;}
+            .wide .video-thumb { width: 100% !important;height: auto !impor=
+tant; } 
+            .wide.video-container { width: 100% !important; }
+            }
+        </style><!--[if (gte mso 9)|(IE)]>
+                                            <style>=20
+                                        </style>
+                                        <![endif]--></head><body style=3D"-we=
+bkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;margin: 0px !importa=
+nt; padding: 0px !important;"><div id=3D"preview-text" style=3D"display: none; f=
+ont-size: 1px; color: #fefefe; line-height: 1px; font-family: Arial, Helveti=
+ca, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidde=
+n;">Vaccine Updates and More January 29, 2021 Dear Neighbor,I remain committ=
+ed to doing all that I can to help our community get vaccinated. Unfortunate=
+ly, there has been a troubling trend of racial inequity in the rollout of th=
+e vaccine. I am pushing for more doses&nbsp;and&nbsp;more testing sites in o=
+ur communities,&nbsp;free and safe transportation to vaccine sites, and more=
+ capacity on the phone lines where people can schedule vaccine appointments.=
+&nbsp;I have been communicating with federal, state&nbsp;and local agencies =
+to push for more immediate action on these issues. Sigo comprometida a hacer=
+ todo lo posible para ayudar a nuestra comunidad a vacunarse. Desafortunadam=
+ente, ha habido una tendencia preocupante de injusticia racial con la distri=
+buci=C3=B3n de la vacuna. Estoy insistiendo para m=C3=A1s dosis y m=C3=A1s sitios de pru=
+ebas en nuestra =C3=A1rea, transporte seguro y gratuito y a los sitios de vacuna=
+s, y m=C3=A1s capacidad en las l=C3=ADneas telef=C3=B3nicas donde la gente har=C3=A1n sus ci=
+tas de vacunas. In this newsletter you will find COVID vaccine information, =
+resources in our community and updates from DC including environmental Polic=
+y Updates.If you no longer live in the district, or want&nbsp;to unsubscribe=
+ from this newsletter,&nbsp;please click here. </div><table role=3D"presentati=
+on" width=3D"650" align=3D"center" class=3D"responsive-table" style=3D"-webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica,=
+ sans-serif; background-color: #ffffff;" border=3D"0" cellspacing=3D"0" cellpadd=
+ing=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><tbody=
+><tr><td align=3D"center" valign=3D"top" style=3D"-webkit-text-size-adjust: 100%; =
+-ms-text-size-adjust: 100%;font-family: Arial, Helvetica, sans-serif; font-s=
+ize: 16px; border-top: 1px solid #cccccc; border-left: 1px solid #cccccc; bo=
+rder-right: 1px solid #cccccc;"><a target=3D"_blank" href=3D"https://barraganfor=
+ms.house.gov/components/redirect/r.aspx?ID=3D1547-1040746" style=3D"-webkit-text=
+-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"Representative Na=
+nette Diaz Barrag=C3=A1n" width=3D"650" style=3D"-ms-interpolation-mode: bicubic;dis=
+play: block; width: 650px;" src=3D"https://barraganforms.house.gov/images/emai=
+l/barragan.jpg"> </a></td></tr></tbody></table><table role=3D"presentation" wi=
+dth=3D"650" align=3D"center" class=3D"responsive-table" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;background-color: #ffffff; font-fami=
+ly: Arial, Helvetica, sans-serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><tbody><tr><=
+td class=3D"responsive-table" valign=3D"top" style=3D"-webkit-text-size-adjust: 10=
+0%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, sans-serif; fo=
+nt-size: 16px; color: #000000; border-left: 1px solid #cccccc; border-right:=
+ 1px solid #cccccc;"><table role=3D"presentation" style=3D"-webkit-text-size-adj=
+ust: 100%; -ms-text-size-adjust: 100%;"><tbody><tr height=3D"20"><td style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><span></span></td=
+></tr></tbody></table><div class=3D"region" id=3D"region-1"><div class=3D"componen=
+t full-width" style=3D"padding: 0px !important;"><div class=3D"header-bar" style=
+=3D"overflow: hidden;"><table role=3D"presentation" align=3D"center" class=3D"respon=
+sive-table table-w-bg-color" style=3D"mso-table-lspace:0pt; mso-table-rspace:0=
+pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, sans-serif;=
+ margin-right: 0px; margin-left: 0px;" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0" width=3D"6=
+48"><tbody><tr height=3D"0" class=3D"spacerRow"><td style=3D"-webkit-text-size-adj=
+ust: 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 0px">&nbsp=
+;</td></tr><tr><td class=3D"responsive-table" style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;font-size:22px;color:#002b5c;" valign=3D"top=
+"><table width=3D"100%" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-=
+table-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; =
+-ms-text-size-adjust: 100%;min-width: 100%;" border=3D"0" cellspacing=3D"0" cell=
+padding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><t=
+body><tr><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%;padding: 0 15pt; font-family: Arial, Helvetica, sans-serif;"><div class=3D"=
+cke_editable cke_editable_inline cke_contents_ltr cke_focus cke_show_borders=
+" style=3D"overflow: hidden;"><h2 style=3D"text-align: center;">Vaccine Updates =
+and More</h2></div></td></tr></tbody></table></td></tr><tr height=3D"0" class=3D=
+"spacerRow"><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust:=
+ 100%;font-size: 0%; line-height: 0px">&nbsp;</td></tr></tbody></table></div=
+></div><div class=3D"component " style=3D"padding: 0px !important;"><div class=3D"=
+editable" style=3D"overflow: hidden;width:100%"><table class=3D"responsive-table=
+" role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-=
+table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collaps=
+e:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-=
+layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"608"><tbody><t=
+r><td class=3D"table-w-bg-color" valign=3D"top" style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;"><div class=3D"cke_editable cke_editable_in=
+line cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;">=
+<p style=3D"margin: 0;margin: 0; text-align: center;"><span style=3D"font-family=
+:Arial,Helvetica,sans-serif;">January 29, 2021</span></p></div></td></tr></t=
+body></table></div></div><div class=3D"component " style=3D"padding: 0px !import=
+ant;"><div class=3D"spacing" style=3D"overflow: hidden;width:100%"><table role=3D"=
+presentation" class=3D"responsive-table" style=3D"mso-table-lspace:0pt; mso-tabl=
+e-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-si=
+ze-adjust: 100%; -ms-text-size-adjust: 100%;border-spacing: 0px; margin-righ=
+t: 20px; margin-left: 20px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" widt=
+h=3D"608"><tbody><tr><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;min-width: 100%;"><table role=3D"presentation" style=3D"mso-table-l=
+space:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:colla=
+pse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-spacin=
+g: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"><tbody><tr =
+class=3D"spacerRow" height=3D"16"><td style=3D"-webkit-text-size-adjust: 100%; -ms=
+-text-size-adjust: 100%;font-size:0%;line-height: 16px;">&nbsp; </td></tr></=
+tbody></table></td></tr></tbody></table></div></div><div class=3D"component " =
+style=3D"padding: 0px !important;"><div class=3D"editable" style=3D"overflow: hidd=
+en;width:100%"><table class=3D"responsive-table" role=3D"presentation" border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rsp=
+ace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-size-ad=
+just: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; margin-right: 20=
+px; margin-left: 20px;" width=3D"608"><tbody><tr><td class=3D"table-w-bg-color" =
+valign=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%;"><div class=3D"cke_editable cke_editable_inline cke_contents_ltr cke_show_=
+borders cke_focus" style=3D"overflow: hidden;"><p xml:lang=3D"EN-US" lang=3D"EN-US=
+" paraid=3D"2009531745" paraeid=3D"{45a30b3a-6933-4446-9110-94fa080a6860}{15}" s=
+tyle=3D"margin: 0;"><span style=3D"font-family:Arial,Helvetica,sans-serif;">Dear=
+ Neighbor,</span></p><p xml:lang=3D"EN-US" lang=3D"EN-US" paraid=3D"1342389409" pa=
+raeid=3D"{45a30b3a-6933-4446-9110-94fa080a6860}{82}" style=3D"margin: 0;"><br></=
+p><p paraid=3D"922367059" paraeid=3D"{e05109b3-ec5f-4810-860e-eb3774e0ddb8}{202}=
+" style=3D"margin: 0;"><span style=3D"font-family:Arial,Helvetica,sans-serif;">I=
+ remain committed to doing all that I can to help our community get vaccinat=
+ed. Unfortunately, there has been a troubling <a data-cke-saved-href=3D"https:=
+//barraganforms.house.gov/components/redirect/r.aspx?ID=3D1548-1040746" href=3D"=
+https://www.latimes.com/california/story/2021-01-27/racial-inequities-la-cov=
+id-19-vaccine-rollout-raise-concern" target=3D"_blank" rel=3D"noreferrer noopene=
+r" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">trend=
+ of racial inequity in the rollout of the vaccine</a>. I am pushing for more=
+ doses&nbsp;and&nbsp;more testing sites in our communities,&nbsp;free and sa=
+fe transportation to vaccine sites, and more capacity on the phone lines whe=
+re people can schedule vaccine appointments.&nbsp;I have been communicating =
+with federal, state&nbsp;and local agencies to push for more immediate actio=
+n on these issues. </span></p><p paraid=3D"436791830" paraeid=3D"{e05109b3-ec5f-=
+4810-860e-eb3774e0ddb8}{208}" style=3D"margin: 0;"><br></p><p xml:lang=3D"EN-US"=
+ lang=3D"EN-US" paraid=3D"789230935" paraeid=3D"{9e07a9cf-cb37-4924-ab78-d4fc61ab0=
+d03}{40}" style=3D"margin: 0;"><span style=3D"font-family:Arial,Helvetica,sans-s=
+erif;"><em>Sigo comprometida a hacer todo lo posible para ayudar a nuestra c=
+omunidad a vacunarse. Desafortunadamente, ha habido una <a data-cke-saved-hr=
+ef=3D"https://barraganforms.house.gov/components/redirect/r.aspx?ID=3D1549-10407=
+46" href=3D"https://www.latimes.com/espanol/california/articulo/2021-01-28/los=
+-funcionarios-del-condado-de-los-angeles-dijeron" target=3D"_blank" rel=3D"noref=
+errer noopener" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust:=
+ 100%;">tendencia preocupante de injusticia racial con la distribuci=C3=B3n de l=
+a vacuna</a>. Estoy insistiendo para m=C3=A1s dosis y m=C3=A1s sitios de pruebas en =
+nuestra =C3=A1rea, transporte seguro y gratuito y a los sitios de vacunas, y m=C3=A1=
+s capacidad en las l=C3=ADneas telef=C3=B3nicas donde la gente har=C3=A1n sus citas de v=
+acunas. </em></span></p><p xml:lang=3D"EN-US" lang=3D"EN-US" paraid=3D"789230935" =
+paraeid=3D"{9e07a9cf-cb37-4924-ab78-d4fc61ab0d03}{40}" style=3D"margin: 0;"><br>=
+</p><p xml:lang=3D"EN-US" paraid=3D"789230935" paraeid=3D"{9e07a9cf-cb37-4924-ab78=
+-d4fc61ab0d03}{40}" style=3D"margin: 0;"><span style=3D"font-family:Arial,Helvet=
+ica,sans-serif;">In this newsletter you will find COVID vaccine information,=
+ resources in our community and updates from DC including environmental Poli=
+cy Updates.</span></p><h3 xml:lang=3D"EN-US" lang=3D"EN-US" paraid=3D"82734849" pa=
+raeid=3D"{9e07a9cf-cb37-4924-ab78-d4fc61ab0d03}{122}" style=3D"text-align: cente=
+r;"><strong style=3D"font-weight: bold;"><span style=3D"font-family:Arial,Helvet=
+ica,sans-serif;"><span style=3D"color:#3498db;">If you no longer live in the d=
+istrict, or want&nbsp;to unsubscribe from this newsletter,&nbsp;</span></spa=
+n></strong><strong style=3D"font-weight: bold;"><span style=3D"font-family:Arial=
+,Helvetica,sans-serif;"><span style=3D"background-color:#3498db;"><a data-cke-=
+saved-href=3D"https://barraganforms.house.gov/components/redirect/r.aspx?ID=3D15=
+50-1040746" href=3D"http://barragan.house.gov/e-newsletters/" style=3D"-webkit-t=
+ext-size-adjust: 100%; -ms-text-size-adjust: 100%;"><span style=3D"color:#ffff=
+ff;">please click here</span></a><span style=3D"color:#ffffff;">. </span></spa=
+n><span style=3D"color:#ffffff;"></span></span></strong></h3></div></td></tr><=
+/tbody></table></div></div><div class=3D"component " style=3D"padding: 0px !impo=
+rtant;"><div class=3D"spacing" style=3D"overflow: hidden;width:100%"><table role=
+=3D"presentation" class=3D"responsive-table" style=3D"mso-table-lspace:0pt; mso-ta=
+ble-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%;border-spacing: 0px; margin-ri=
+ght: 20px; margin-left: 20px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"608"><tbody><tr><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;min-width: 100%;"><table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:col=
+lapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-spac=
+ing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"><tbody><t=
+r class=3D"spacerRow" height=3D"16"><td style=3D"-webkit-text-size-adjust: 100%; -=
+ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">&nbsp; </td></tr>=
+</tbody></table></td></tr></tbody></table></div></div><div class=3D"component =
+full-width" style=3D"padding: 0px !important;"><div class=3D"header-bar" style=3D"=
+overflow: hidden;"><table role=3D"presentation" align=3D"center" class=3D"responsi=
+ve-table table-w-bg-color" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt=
+;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 1=
+00%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, sans-serif; m=
+argin-right: 0px; margin-left: 0px;" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0" width=3D"648=
+"><tbody><tr height=3D"5" class=3D"spacerRow"><td style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 5px;">&nbsp;=
+</td></tr><tr><td class=3D"responsive-table" style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:22px;color:#002b5c;" valign=3D"top"=
+><table width=3D"100%" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-t=
+able-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -=
+ms-text-size-adjust: 100%;min-width: 100%;" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><tb=
+ody><tr><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;padding: 0 15pt;font-family:Arial, Helvetica, sans-serif;"><div class=3D"cke=
+_editable cke_editable_inline cke_contents_ltr cke_focus cke_show_borders" s=
+tyle=3D"overflow: hidden;"><h2>COVID-19 Vaccine Updates and Information&nbsp;&=
+nbsp;</h2></div></td></tr></tbody></table></td></tr><tr height=3D"5" class=3D"sp=
+acerRow"><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%;font-size: 0%; line-height: 5px;">&nbsp;</td></tr></tbody></table></div><=
+/div><div class=3D"component " style=3D"padding: 0px !important;"><div class=3D"sp=
+acing" style=3D"overflow: hidden;width:100%"><table role=3D"presentation" class=3D=
+"responsive-table" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-tab=
+le-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms=
+-text-size-adjust: 100%;border-spacing: 0px; margin-right: 20px; margin-left=
+: 20px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"608"><tbody><tr><=
+td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;min-wid=
+th: 100%;"><table role=3D"presentation" style=3D"mso-table-lspace:0pt; mso-table=
+-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-siz=
+e-adjust: 100%; -ms-text-size-adjust: 100%;border-spacing: 0px;" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"><tbody><tr class=3D"spacerRow" he=
+ight=3D"16"><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;font-size:0%;line-height: 16px;">&nbsp; </td></tr></tbody></table></td><=
+/tr></tbody></table></div></div><div class=3D"component " style=3D"padding: 0px =
+!important;"><div class=3D"editable" style=3D"overflow: hidden;width:100%"><tabl=
+e class=3D"responsive-table" role=3D"presentation" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rs=
+pace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;table-layout: fixed; margin-right: 20px; margin-left: 20p=
+x;" width=3D"608"><tbody><tr><td class=3D"table-w-bg-color" valign=3D"top" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><div class=3D"cke=
+_editable cke_editable_inline cke_contents_ltr cke_focus cke_show_borders" s=
+tyle=3D"overflow: hidden;"><p paraid=3D"219699158" paraeid=3D"{bdfea097-33d0-4a05-=
+845b-8794eb81bf37}{137}" style=3D"margin: 0;"><span style=3D"font-family:Arial,H=
+elvetica,sans-serif;">The vaccine supply is extremely limited in L.A. County=
+. While we wait for more doses of the existing vaccines to be made available=
+ and a potential single shot option&nbsp;in the months ahead, we must contin=
+ue to take all precautions. I encourage you and your family to get the COVID=
+-19 vaccine when it becomes available and you are eligible. Los Angeles Coun=
+ty=E2=80=99s&nbsp;<a data-cke-saved-href=3D"https://barraganforms.house.gov/componen=
+ts/redirect/r.aspx?ID=3D1551-1040746" href=3D"https://urldefense.proofpoint.com/=
+v2/url?u=3Dhttp-3A__publichealth.lacounty.gov_acd_ncorona2019_covidvaccinedist=
+ribution_&amp;d=3DDwMF3g&amp;c=3DL93KkjKsAC98uTvC4KvQDdTDRzAeWDDRmG6S3YXllH0&amp=
+;r=3DTDhkdg54KQehsYUaT7AN5k50DsOD8QbjefHvlZz4yJIy-1aOQ1KrRciRphfKJGs1&amp;m=3Di1=
+1Yn0wwvSbxQdN3UuxWknEVf39R3VTy6izA5BDs7_c&amp;s=3DXs_pldineuJr8oSwABBpeTxz-pBG=
+njLedPBq6CV_6hg&amp;e=3D" target=3D"_blank" rel=3D"noreferrer noopener" style=3D"-we=
+bkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">Vaccine Distributi=
+on</a>&nbsp;page describes the phases and tiers of vaccination, with more in=
+formation about how these phases will roll out.&nbsp;&nbsp;&nbsp;&nbsp;</spa=
+n></p><p paraid=3D"1070216308" paraeid=3D"{bdfea097-33d0-4a05-845b-8794eb81bf37}=
+{139}" style=3D"margin: 0;"><span style=3D"font-family:Arial,Helvetica,sans-seri=
+f;">&nbsp;&nbsp;</span></p><p paraid=3D"57268283" paraeid=3D"{bdfea097-33d0-4a05=
+-845b-8794eb81bf37}{141}" style=3D"margin: 0;"><span style=3D"font-family:Arial,=
+Helvetica,sans-serif;">As a reminder, L.A. County residents 65 and older are=
+ now eligible to receive the vaccine.&nbsp;Healthcare Workers, Staff &amp; R=
+esidents at Skilled Nursing Facilities, and Staff and Residents at long-term=
+ care facilities are also eligible to receive the vaccine.&nbsp;</span></p><=
+p paraid=3D"57268283" paraeid=3D"{bdfea097-33d0-4a05-845b-8794eb81bf37}{141}" st=
+yle=3D"margin: 0;"><br></p><p paraid=3D"57268283" paraeid=3D"{bdfea097-33d0-4a05-8=
+45b-8794eb81bf37}{141}" style=3D"margin: 0;"><span style=3D"font-family:Arial,He=
+lvetica,sans-serif;">You can find out when it is your turn to receive a vacc=
+ine by signing up on the statewide&nbsp;<a data-cke-saved-href=3D"https://barr=
+aganforms.house.gov/components/redirect/r.aspx?ID=3D1552-1040746" href=3D"https:=
+//myturn.ca.gov/" target=3D"_blank" rel=3D"noreferrer noopener" style=3D"-webkit-t=
+ext-size-adjust: 100%; -ms-text-size-adjust: 100%;">=E2=80=98My Turn=E2=80=99 website</a=
+>.&nbsp; &nbsp;</span></p></div></td></tr></tbody></table></div></div><div c=
+lass=3D"component " style=3D"padding: 0px !important;"><div class=3D"image" style=3D=
+"overflow: hidden;width:100%"><table class=3D"responsive-table" role=3D"presenta=
+tion" align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-t=
+able-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse=
+:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: =
+left; table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"60=
+8"><tbody><tr><td valign=3D"top" class=3D"image-td" style=3D"-webkit-text-size-adj=
+ust: 100%; -ms-text-size-adjust: 100%;"><div class=3D"img-1 image-container" s=
+tyle=3D"overflow: hidden;text-align:center"><img style=3D"max-width:600px;-ms-in=
+terpolation-mode: bicubic;vertical-align: bottom; max-width: 550px;" alt=3D"my=
+ turn" src=3D"https://barraganforms.house.gov/UploadedPhotos/MediumResolution/=
+d6a06d0a-9e9a-4bec-85d0-350aeb8f8fd7.png"></div></td></tr></tbody></table></=
+div></div><div class=3D"component " style=3D"padding: 0px !important;"><div clas=
+s=3D"spacing" style=3D"overflow: hidden;width:100%"><table role=3D"presentation" c=
+lass=3D"responsive-table" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;ms=
+o-table-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%=
+; -ms-text-size-adjust: 100%;border-spacing: 0px; margin-right: 20px; margin=
+-left: 20px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"608"><tbody>=
+<tr><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;mi=
+n-width: 100%;"><table role=3D"presentation" style=3D"mso-table-lspace:0pt; mso-=
+table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-tex=
+t-size-adjust: 100%; -ms-text-size-adjust: 100%;border-spacing: 0px;" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"><tbody><tr class=3D"spacerRo=
+w" height=3D"16"><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adju=
+st: 100%;font-size:0%;line-height: 16px;">&nbsp; </td></tr></tbody></table><=
+/td></tr></tbody></table></div></div><div class=3D"component " style=3D"padding:=
+ 0px !important;"><div class=3D"editable" style=3D"overflow: hidden;width:100%">=
+<table class=3D"responsive-table" role=3D"presentation" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-tab=
+le-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms=
+-text-size-adjust: 100%;table-layout: fixed; margin-right: 20px; margin-left=
+: 20px;" width=3D"608"><tbody><tr><td class=3D"table-w-bg-color" valign=3D"top" st=
+yle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><div class=
+=3D"cke_editable cke_editable_inline cke_contents_ltr cke_focus cke_show_borde=
+rs" style=3D"overflow: hidden;"><p paraid=3D"1537948756" paraeid=3D"{bdfea097-33d0=
+-4a05-845b-8794eb81bf37}{35}" style=3D"margin: 0;"><span style=3D"font-family:Ar=
+ial,Helvetica,sans-serif;">As the vaccine is still a limited resource, appoi=
+ntments at each vaccination site are limited. To make an appointment for you=
+rself or a loved one, visit <a data-cke-saved-href=3D"https://barraganforms.ho=
+use.gov/components/redirect/r.aspx?ID=3D1553-1040746" href=3D"https://urldefense=
+.proofpoint.com/v2/url?u=3Dhttp-3A__www.vaccinatelacounty.com_&amp;d=3DDwMFaQ&am=
+p;c=3DL93KkjKsAC98uTvC4KvQDdTDRzAeWDDRmG6S3YXllH0&amp;r=3DzuakraZ8li9dqq4lV6Zpmw=
+4vG1o2-PoyS9VdFBU-Kyk&amp;m=3D5S4vyFuPdVOzJgorsAevjnHMffy6gN_wEvqGYuAsZiM&amp;=
+s=3DiOFD830Fx_bsQCcyI2QNoWi7tN4cFXxwi1p5B4PjN84&amp;e=3D" target=3D"_blank" rel=3D"n=
+oreferrer noopener" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adj=
+ust: 100%;">www.Vaccinatelacounty.com</a>. If you aren=E2=80=99t able to make an a=
+ppointment online, call&nbsp;1(833) 540-0473. You should also check with you=
+r local clinic or healthcare provider and ask if they will have access to th=
+e vaccine.</span></p><p xml:lang=3D"EN-US" paraid=3D"1472973858" paraeid=3D"{bdfea=
+097-33d0-4a05-845b-8794eb81bf37}{37}" style=3D"margin: 0;"><br></p><p paraid=3D"=
+168674190" paraeid=3D"{bdfea097-33d0-4a05-845b-8794eb81bf37}{39}" style=3D"margi=
+n: 0;"><span style=3D"font-family:Arial,Helvetica,sans-serif;">Again, vaccines=
+ are still very limited and in high demand. Expect delays on phone lines and=
+ high traffic on websites. Please try the sites at different times of the da=
+y, since appointments are being added on a rolling basis. I recommend checki=
+ng the website every morning because new appointments are being added every =
+day.&nbsp;Know&nbsp;that officials are aware of the technical difficulties a=
+nd are working to fix them.&nbsp;</span></p><p xml:lang=3D"EN-US" paraid=3D"3483=
+81874" paraeid=3D"{bdfea097-33d0-4a05-845b-8794eb81bf37}{41}" style=3D"margin: 0=
+;"><br></p><p paraid=3D"1813501613" paraeid=3D"{bdfea097-33d0-4a05-845b-8794eb81=
+bf37}{43}" style=3D"margin: 0;"><span style=3D"font-family:Arial,Helvetica,sans-=
+serif;"><em><strong style=3D"font-weight: bold;">=C2=BFSe&nbsp;pregunta&nbsp;cu=C3=A1n=
+do&nbsp;ser=C3=A1&nbsp;elegible&nbsp;para&nbsp;recibir&nbsp;la&nbsp;vacuna&nbsp;=
+COVID-19?&nbsp;</strong></em></span></p><p paraid=3D"402405955" paraeid=3D"{bdfe=
+a097-33d0-4a05-845b-8794eb81bf37}{47}" style=3D"margin: 0;"><span style=3D"font-=
+family:Arial,Helvetica,sans-serif;"><em>&nbsp;&nbsp;</em></span></p><p xml:l=
+ang=3D"EN-US" paraid=3D"1786104941" paraeid=3D"{bdfea097-33d0-4a05-845b-8794eb81bf=
+37}{49}" style=3D"margin: 0;"><span style=3D"font-family:Arial,Helvetica,sans-se=
+rif;"><em>Es&nbsp;importante&nbsp;que&nbsp;todos&nbsp;reciban&nbsp;la&nbsp;v=
+acuna&nbsp;COVID-19&nbsp;cuando&nbsp;sean&nbsp;elegibles.&nbsp;</em></span><=
+/p><p xml:lang=3D"EN-US" paraid=3D"1292400538" paraeid=3D"{bdfea097-33d0-4a05-845b=
+-8794eb81bf37}{51}" style=3D"margin: 0;"><br></p><p xml:lang=3D"EN-US" paraid=3D"1=
+342834022" paraeid=3D"{bdfea097-33d0-4a05-845b-8794eb81bf37}{53}" style=3D"margi=
+n: 0;"><span style=3D"font-family:Arial,Helvetica,sans-serif;"><em>La&nbsp;<a =
+data-cke-saved-href=3D"https://barraganforms.house.gov/components/redirect/r.a=
+spx?ID=3D1554-1040746" href=3D"https://urldefense.proofpoint.com/v2/url?u=3Dhttp-3=
+A__publichealth.lacounty.gov_acd_ncorona2019_covidvaccinedistribution_&amp;d=
+=3DDwMF3g&amp;c=3DL93KkjKsAC98uTvC4KvQDdTDRzAeWDDRmG6S3YXllH0&amp;r=3DTDhkdg54KQeh=
+sYUaT7AN5k50DsOD8QbjefHvlZz4yJIy-1aOQ1KrRciRphfKJGs1&amp;m=3Di11Yn0wwvSbxQdN3U=
+uxWknEVf39R3VTy6izA5BDs7_c&amp;s=3DXs_pldineuJr8oSwABBpeTxz-pBGnjLedPBq6CV_6hg=
+&amp;e=3D" target=3D"_blank" rel=3D"noreferrer noopener" style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;">p=C3=A1gina de Distribuci=C3=B3n de Vacun=
+as</a>&nbsp;del&nbsp;condado&nbsp;de Los&nbsp;Angeles&nbsp;describe la fases=
+ y niveles de vacunaci=C3=B3n, y con m=C3=A1s&nbsp;informaci=C3=B3&nbsp;sobre&nbsp;c=C3=B3mo=
+&nbsp;se&nbsp;implementar=C3=A1n&nbsp;estas&nbsp;fases.&nbsp;&nbsp;</em></span><=
+/p><p xml:lang=3D"EN-US" paraid=3D"700386066" paraeid=3D"{bdfea097-33d0-4a05-845b-=
+8794eb81bf37}{55}" style=3D"margin: 0;"><span style=3D"font-family:Arial,Helveti=
+ca,sans-serif;"><em>&nbsp;&nbsp;&nbsp;</em></span></p><p xml:lang=3D"EN-US" pa=
+raid=3D"1458341726" paraeid=3D"{bdfea097-33d0-4a05-845b-8794eb81bf37}{57}" style=
+=3D"margin: 0;"><span style=3D"font-family:Arial,Helvetica,sans-serif;"><em>Debi=
+do&nbsp;al&nbsp;impacto&nbsp;severo&nbsp;que la pandemia contin=C3=BAa teniendo =
+en nuestros vecinos y familiaress&nbsp;mayores&nbsp;de 65&nbsp;a=C3=B1os, el&nbs=
+p;condado de Los Angeles ha priorizado el grupo de edad, haci=C3=A9ndolos elegib=
+les para recibir la vacuna.&nbsp;Las personas que trabajan para el Programa =
+de Servicios de Asistencia en el Hogar (IHSS) que atienden a pacientes tambi=
+=C3=A9n son elegibles para recibir la vacuna. Haga una cita como trabajador de l=
+a salud con anticipaci=C3=B3n y someta la documentaci=C3=B3n necesaria, como prueba =
+de empleo de IHHS y una forma de identificaci=C3=B3n.</em></span></p><p xml:lang=
+=3D"EN-US" paraid=3D"1169472614" paraeid=3D"{bdfea097-33d0-4a05-845b-8794eb81bf37}=
+{59}" style=3D"margin: 0;"><span style=3D"font-family:Arial,Helvetica,sans-serif=
+;"><em>&nbsp;&nbsp;&nbsp;</em></span></p><p xml:lang=3D"EN-US" paraid=3D"1275429=
+287" paraeid=3D"{bdfea097-33d0-4a05-845b-8794eb81bf37}{61}" style=3D"margin: 0;"=
+><span style=3D"font-family:Arial,Helvetica,sans-serif;"><em>Como la&nbsp;vacu=
+na&nbsp;sigue&nbsp;siendo&nbsp;un&nbsp;recurso&nbsp;limitado, las citas en c=
+ada centro de vacunaci=C3=B3n&nbsp;son&nbsp;limitadas. Para&nbsp;hacer&nbsp;una&=
+nbsp;cita&nbsp;para&nbsp;usted&nbsp;o un ser&nbsp;querido,&nbsp;visite&nbsp;=
+<a data-cke-saved-href=3D"https://barraganforms.house.gov/components/redirect/=
+r.aspx?ID=3D1555-1040746" href=3D"https://urldefense.proofpoint.com/v2/url?u=3Dhtt=
+p-3A__www.vaccinatelacounty.com_&amp;d=3DDwMFaQ&amp;c=3DL93KkjKsAC98uTvC4KvQDdTD=
+RzAeWDDRmG6S3YXllH0&amp;r=3DzuakraZ8li9dqq4lV6Zpmw4vG1o2-PoyS9VdFBU-Kyk&amp;m=3D=
+5S4vyFuPdVOzJgorsAevjnHMffy6gN_wEvqGYuAsZiM&amp;s=3DiOFD830Fx_bsQCcyI2QNoWi7tN=
+4cFXxwi1p5B4PjN84&amp;e=3D" target=3D"_blank" rel=3D"noreferrer noopener" style=3D"-=
+webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">www.Vaccinatelac=
+ounty.com</a>. Si no puede hacer una cita&nbsp;en&nbsp;l=C3=ADnea,&nbsp;intente&=
+nbsp;llamar&nbsp;al 1-833-540-0473.&nbsp;Tambi=C3=A9n debe consultar con su cl=C3=AD=
+nica o proveedor de atenci=C3=B3n m=C3=A9dica y preguntar si tendr=C3=A1 acceso a la vac=
+una.</em></span></p></div></td></tr></tbody></table></div></div><div class=3D"=
+component " style=3D"padding: 0px !important;"><div class=3D"spacing" style=3D"ove=
+rflow: hidden;width:100%"><table role=3D"presentation" class=3D"responsive-table=
+" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; b=
+order-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust=
+: 100%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"608"><tbody><tr><td style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;min-width: 100%;"><table=
+ role=3D"presentation" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-t=
+able-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -=
+ms-text-size-adjust: 100%;border-spacing: 0px;" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" width=3D"100%"><tbody><tr class=3D"spacerRow" height=3D"16"><td sty=
+le=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-size:0%;=
+line-height: 16px;">&nbsp; </td></tr></tbody></table></td></tr></tbody></tab=
+le></div></div><div class=3D"component " style=3D"padding: 0px !important;"><div=
+ class=3D"image" style=3D"overflow: hidden;width:100%"><table class=3D"responsive-=
+table" role=3D"presentation" align=3D"center" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:=
+10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size=
+-adjust: 100%;float: left; table-layout: fixed; margin-right: 20px; margin-l=
+eft: 20px;" width=3D"608"><tbody><tr><td valign=3D"top" class=3D"image-td" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><div class=3D"img=
+-1 image-container" style=3D"overflow: hidden;text-align:center"><a href=3D"vacc=
+inatelacounty.com" target=3D"_blank" style=3D"-webkit-text-size-adjust: 100%; -m=
+s-text-size-adjust: 100%;"><img style=3D"max-width:600px;-ms-interpolation-mod=
+e: bicubic;vertical-align: bottom; max-width: 550px;" alt=3D"sp vaccination" s=
+rc=3D"https://barraganforms.house.gov/UploadedPhotos/MediumResolution/8c58b9c5=
+-1587-4e3c-be06-759b9dac6da9.png"></a></div></td></tr></tbody></table></div>=
+</div><div class=3D"component " style=3D"padding: 0px !important;"><div class=3D"s=
+pacing" style=3D"overflow: hidden;width:100%"><table role=3D"presentation" class=
+=3D"responsive-table" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-ta=
+ble-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -m=
+s-text-size-adjust: 100%;border-spacing: 0px; margin-right: 20px; margin-lef=
+t: 20px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"608"><tbody><tr>=
+<td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;min-wi=
+dth: 100%;"><table role=3D"presentation" style=3D"mso-table-lspace:0pt; mso-tabl=
+e-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-si=
+ze-adjust: 100%; -ms-text-size-adjust: 100%;border-spacing: 0px;" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"><tbody><tr class=3D"spacerRow" h=
+eight=3D"16"><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: =
+100%;font-size:0%;line-height: 16px;">&nbsp; </td></tr></tbody></table></td>=
+</tr></tbody></table></div></div><div class=3D"component " style=3D"padding: 0px=
+ !important;"><div class=3D"editable" style=3D"overflow: hidden;width:100%"><tab=
+le class=3D"responsive-table" role=3D"presentation" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-r=
+space:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-tex=
+t-size-adjust: 100%;table-layout: fixed; margin-right: 20px; margin-left: 20=
+px;" width=3D"608"><tbody><tr><td class=3D"table-w-bg-color" valign=3D"top" style=3D=
+"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><div class=3D"ck=
+e_editable cke_editable_inline cke_contents_ltr cke_focus cke_show_borders" =
+style=3D"overflow: hidden;"><p xml:lang=3D"EN-US" paraid=3D"129527912" paraeid=3D"{b=
+dfea097-33d0-4a05-845b-8794eb81bf37}{65}" style=3D"margin: 0;"><span style=3D"fo=
+nt-family:Arial,Helvetica,sans-serif;"><em>Visite&nbsp;<a data-cke-saved-hre=
+f=3D"https://barraganforms.house.gov/components/redirect/r.aspx?ID=3D1556-104074=
+6" href=3D"https://urldefense.proofpoint.com/v2/url?u=3Dhttp-3A__VaccinateLACoun=
+ty.com&amp;d=3DDwQFaQ&amp;c=3DL93KkjKsAC98uTvC4KvQDdTDRzAeWDDRmG6S3YXllH0&amp;r=3D=
+BZbFfLgFzfZwXeRnJCkgoonootIIi6zjnp-Olpo9MYE&amp;m=3Dd7zygxFRqrai77bGNDRy-Oq8ea=
+L6DZYfN01fmEl7D7Q&amp;s=3DlUrp0zqsvQgtVy9KNLMpijQrSveIwor4_AtxlP-J90I&amp;e=3D" =
+target=3D"_blank" rel=3D"noreferrer noopener" style=3D"-webkit-text-size-adjust: 1=
+00%; -ms-text-size-adjust: 100%;">VaccinateLACounty.com</a> para obtener inf=
+ormaci=C3=B3n actualizada sobre las vacunas COVID-19 y para averiguar cuando ser=
+=C3=A1 elegible para recibir una. </em></span></p><p xml:lang=3D"EN-US" paraid=3D"10=
+97166768" paraeid=3D"{bdfea097-33d0-4a05-845b-8794eb81bf37}{67}" style=3D"margin=
+: 0;"><br></p><p xml:lang=3D"EN-US" paraid=3D"1196863114" paraeid=3D"{bdfea097-33d=
+0-4a05-845b-8794eb81bf37}{69}" style=3D"margin: 0;"><span style=3D"font-family:A=
+rial,Helvetica,sans-serif;"><em>Puede averiguar cuando es su turno de recibi=
+r una vacuna registr=C3=A1ndose en el <a data-cke-saved-href=3D"https://barraganfo=
+rms.house.gov/components/redirect/r.aspx?ID=3D1557-1040746" href=3D"https://mytu=
+rn.ca.gov/" target=3D"_blank" rel=3D"noreferrer noopener" style=3D"-webkit-text-si=
+ze-adjust: 100%; -ms-text-size-adjust: 100%;">sitio web estatal =E2=80=98My Turn=E2=80=
+=99</a>.</em></span></p><p xml:lang=3D"EN-US" paraid=3D"1872320505" paraeid=3D"{bdfe=
+a097-33d0-4a05-845b-8794eb81bf37}{71}" style=3D"margin: 0;"><br></p><p xml:lan=
+g=3D"EN-US" paraid=3D"1616932036" paraeid=3D"{bdfea097-33d0-4a05-845b-8794eb81bf37=
+}{73}" style=3D"margin: 0;"><span style=3D"font-family:Arial,Helvetica,sans-seri=
+f;"><em>Espere retrasos en las l=C3=ADneas telef=C3=B3nicas y mucho tr=C3=A1fico en los =
+sitios web. </em></span><em>Recomiendo consultar el sitio web todas las ma=C3=B1=
+anas porque cada d=C3=ADa se agregan nuevas citas.&nbsp;</em><span style=3D"font-f=
+amily:Arial,Helvetica,sans-serif;"><em>Pruebe los sitios en diferentes horar=
+ios del d=C3=ADa, ya que las citas se agregan de forma continua y sepa que los t=
+rabajadores oficiales est=C3=A1n al tanto de las dificultades t=C3=A9cnicas y est=C3=A1n=
+ trabajando para solucionarlas.&nbsp;&nbsp;</em></span></p></div></td></tr><=
+/tbody></table></div></div><div class=3D"component " style=3D"padding: 0px !impo=
+rtant;"><div class=3D"spacing" style=3D"overflow: hidden;width:100%"><table role=
+=3D"presentation" class=3D"responsive-table" style=3D"mso-table-lspace:0pt; mso-ta=
+ble-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%;border-spacing: 0px; margin-ri=
+ght: 20px; margin-left: 20px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"608"><tbody><tr><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;min-width: 100%;"><table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:col=
+lapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-spac=
+ing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"><tbody><t=
+r class=3D"spacerRow" height=3D"16"><td style=3D"-webkit-text-size-adjust: 100%; -=
+ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">&nbsp; </td></tr>=
+</tbody></table></td></tr></tbody></table></div></div><div class=3D"component =
+" style=3D"padding: 0px !important;"><div class=3D"image-caption" style=3D"overflo=
+w: hidden;width:100%"><table role=3D"presentation" class=3D"Right1 responsive-ta=
+ble" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt=
+; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adj=
+ust: 100%;table-layout: fixed; margin-right: 20px; margin-left: 20px;" borde=
+r=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"608"><tbody><tr><td valign=3D"top=
+" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><table=
+ role=3D"presentation" class=3D"image-1 responsive-table" align=3D"left" border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rsp=
+ace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-size-ad=
+just: 100%; -ms-text-size-adjust: 100%;float: left; table-layout: fixed; max=
+-width: 49.2421%;" width=3D"49.242105263157896%"><tbody><tr><td valign=3D"top" c=
+lass=3D"image-td" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;"><div class=3D"img-1 image-container" style=3D"overflow: h=
+idden;text-align: left;"><a href=3D"covid19.lacounty.gov" target=3D"_blank" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img style=3D"=
+max-width:600px;-ms-interpolation-mode: bicubic;vertical-align: bottom; max-=
+width: 550px;" alt=3D"vaccine scam" src=3D"https://barraganforms.house.gov/Uploa=
+dedPhotos/MediumResolution/4b00bc71-64a2-4fac-a3da-f6b5c54be776.png" width=3D"=
+298.5"></a></div></td></tr></tbody></table><table role=3D"presentation" class=3D=
+"caption-1 responsive-table" align=3D"right" border=3D"0" cellpadding=3D"0" cellsp=
+acing=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace=
+:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;float: right; table-layout: fixed; max-width: 49.2421%;" widt=
+h=3D"49.242105263157896%"><tbody><tr><td valign=3D"top" style=3D"-webkit-text-size=
+-adjust: 100%; -ms-text-size-adjust: 100%;"><div class=3D"cke_editable cke_edi=
+table_inline cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: h=
+idden;"><p style=3D"margin: 0;"><span style=3D"font-family:Arial,Helvetica,sans-=
+serif;"><strong style=3D"font-weight: bold;">Vaccine Scams</strong></span></p>=
+<p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span style=3D"font-family=
+:Arial,Helvetica,sans-serif;">Be aware of vaccine scams, here are the facts =
+about the vaccine in L.A. County.&nbsp;</span></p><p style=3D"margin: 0;"><br>=
+</p><p style=3D"margin: 0;"><span style=3D"font-family:Arial,Helvetica,sans-seri=
+f;"><strong style=3D"font-weight: bold;"><em>Estafas de Vacunas</em></strong><=
+/span></p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span style=3D"f=
+ont-family:Arial,Helvetica,sans-serif;"><em>Tenga en cuenta las estafas de v=
+acunas, aqu=C3=AD est=C3=A1 informaci=C3=B3n correcta sobre la vacuna en el condado de L=
+os Angeles:</em></span></p></div></td></tr></tbody></table></td></tr></tbody=
+></table></div></div><div class=3D"component " style=3D"padding: 0px !important;=
+"><div class=3D"spacing" style=3D"overflow: hidden;width:100%"><table role=3D"pres=
+entation" class=3D"responsive-table" style=3D"mso-table-lspace:0pt; mso-table-rs=
+pace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;border-spacing: 0px; margin-right: 2=
+0px; margin-left: 20px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"6=
+08"><tbody><tr><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adju=
+st: 100%;min-width: 100%;"><table role=3D"presentation" style=3D"mso-table-lspac=
+e:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-spacing: 0=
+px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"><tbody><tr clas=
+s=3D"spacerRow" height=3D"16"><td style=3D"-webkit-text-size-adjust: 100%; -ms-tex=
+t-size-adjust: 100%;font-size:0%;line-height: 16px;">&nbsp; </td></tr></tbod=
+y></table></td></tr></tbody></table></div></div><div class=3D"component " styl=
+e=3D"padding: 0px !important;"><div class=3D"editable" style=3D"overflow: hidden;w=
+idth:100%"><table class=3D"responsive-table" role=3D"presentation" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:=
+0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; margin-right: 20px; =
+margin-left: 20px;" width=3D"608"><tbody><tr><td class=3D"table-w-bg-color" vali=
+gn=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"=
+><div class=3D"cke_editable cke_editable_inline cke_contents_ltr cke_focus cke=
+_show_borders" style=3D"overflow: hidden;"><p paraid=3D"1534684581" paraeid=3D"{8a=
+2b392f-5096-4e44-b648-f15fcf1c6085}{92}" style=3D"margin: 0;"><strong style=3D"f=
+ont-weight: bold;">COVID Vaccine Telephone Town Hall Report Back</strong></p=
+><p paraid=3D"1534684581" paraeid=3D"{8a2b392f-5096-4e44-b648-f15fcf1c6085}{92}"=
+ style=3D"margin: 0;"><br></p><p paraid=3D"1256400866" paraeid=3D"{8a2b392f-5096-4=
+e44-b648-f15fcf1c6085}{96}" style=3D"margin: 0;">On Tuesday, we held a&nbsp;Va=
+ccine Telephone Town Hall with Supervisor&nbsp;Janice Hahn&nbsp;and L.A.&nbs=
+p;County Public Health=E2=80=99s Dr.&nbsp;Seira&nbsp;Kurian. If you missed the<spa=
+n style=3D"background-color:#ffffff;"> event, </span><a data-cke-saved-href=3D"h=
+ttps://barraganforms.house.gov/components/redirect/r.aspx?ID=3D1558-1040746" h=
+ref=3D"https://www.dropbox.com/s/izv4c7paaqf1lm0/Congresswoman%20Nanette%20Dia=
+z%20Barragan%20-%20English%20TTHM%20Recording%2001-26-21.mp3?dl=3D0" style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><span style=3D"back=
+ground-color:#ffffff;">you can listen here</span></a><span style=3D"background=
+-color:#ffffff;">. Supervisor Hahn <a data-cke-saved-href=3D"https://barraganf=
+orms.house.gov/components/redirect/r.aspx?ID=3D1559-1040746" href=3D"https://twi=
+tter.com/SupJaniceHahn/status/1354579673531916292?s=3D20" style=3D"-webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%;">answered many of the FAQs</a=
+> on her Twitter account the following day.</span></p><p paraid=3D"1873862421"=
+ paraeid=3D"{8a2b392f-5096-4e44-b648-f15fcf1c6085}{112}" style=3D"margin: 0;"><b=
+r></p><p xml:lang=3D"EN-US" lang=3D"EN-US" paraid=3D"2133173723" paraeid=3D"{ba0caf6=
+b-a38c-48da-b2af-c85616930f0f}{179}" style=3D"margin: 0;"><em><strong style=3D"f=
+ont-weight: bold;">Informaci=C3=B3n de el Foro Telef=C3=B3nico de Vacunas</strong></=
+em></p><p xml:lang=3D"EN-US" lang=3D"EN-US" paraid=3D"2133173723" paraeid=3D"{ba0caf=
+6b-a38c-48da-b2af-c85616930f0f}{179}" style=3D"margin: 0;"><br></p><p xml:lang=
+=3D"EN-US" lang=3D"EN-US" paraid=3D"2026221942" paraeid=3D"{ba0caf6b-a38c-48da-b2af-=
+c85616930f0f}{185}" style=3D"margin: 0;"><em>El martes, tuvimos una reuni=C3=B3n t=
+elef=C3=B3nica sobre la vacuna contra el COVID con La Supervisora Janice Hahn y =
+la Dra. Seira&nbsp;Kurian&nbsp;de Salud P=C3=BAblica del Condado de Los&nbsp;Ang=
+eles. Si se perdi=C3=B3 el evento, <a data-cke-saved-href=3D"https://barraganforms=
+.house.gov/components/redirect/r.aspx?ID=3D1560-1040746" href=3D"https://www.dro=
+pbox.com/s/zoz62ym76v2j3fe/Congresswoman%20Nanette%20Diaz%20Barragan%20-%20S=
+panish%20TTHM%20Recording%2001-26-21.mp3?dl=3D0" style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;">puede&nbsp;escucharlo aqu=C3=AD</a>.&nbsp=
+;</em></p><p xml:lang=3D"EN-US" lang=3D"EN-US" paraid=3D"2026221942" paraeid=3D"{ba0=
+caf6b-a38c-48da-b2af-c85616930f0f}{185}" style=3D"margin: 0;"><br></p><p xml:l=
+ang=3D"EN-US" lang=3D"EN-US" paraid=3D"2026221942" paraeid=3D"{ba0caf6b-a38c-48da-b2=
+af-c85616930f0f}{185}" style=3D"margin: 0;"><strong style=3D"font-weight: bold;"=
+>Transportation and the&nbsp;Vaccine</strong></p><p xml:lang=3D"EN-US" lang=3D"E=
+N-US" paraid=3D"1437347239" paraeid=3D"{05bbf7eb-6deb-4e3d-8f61-1fcd97147aea}{30=
+}" style=3D"margin: 0;"><br></p><p xml:lang=3D"EN-US" lang=3D"EN-US" paraid=3D"24376=
+1629" paraeid=3D"{3e7e9aa7-b19a-43e1-9e62-76227fdf649f}{54}" style=3D"margin: 0;=
+">Lack of transportation should not be a barrier to getting your vaccine.&nb=
+sp;All of the pharmacy and clinic locations are walk-up, and drive-thru site=
+s, like the big County-run sites, will accommodate walk-ups.</p><ul><li xml:=
+lang=3D"EN-US" lang=3D"EN-US" paraid=3D"279251651" paraeid=3D"{9a67662d-e8a4-40cb-b5=
+6e-cd8ee895cd69}{119}">Several ride sharing apps are also offering&nbsp;<a d=
+ata-cke-saved-href=3D"https://barraganforms.house.gov/components/redirect/r.as=
+px?ID=3D1561-1040746" href=3D"https://www.nbcnews.com/business/business-news/lyf=
+t-uber-want-take-you-your-vaccination-appointment-n1254308" target=3D"_blank" =
+rel=3D"noreferrer noopener" style=3D"-webkit-text-size-adjust: 100%; -ms-text-si=
+ze-adjust: 100%;">free or discounted rides to vaccination sites</a>. Check y=
+our apps for more information.&nbsp;</li></ul><ul><li xml:lang=3D"EN-US" lang=3D=
+"EN-US" paraid=3D"279251651" paraeid=3D"{9a67662d-e8a4-40cb-b56e-cd8ee895cd69}{1=
+19}">Fiesta Taxi is offering&nbsp;South Gate&nbsp;seniors&nbsp;free transpor=
+tation&nbsp;to the Downey Vaccination site.&nbsp;</li></ul></div></td></tr><=
+/tbody></table></div></div><div class=3D"component " style=3D"padding: 0px !impo=
+rtant;"><div class=3D"spacing" style=3D"overflow: hidden;width:100%"><table role=
+=3D"presentation" class=3D"responsive-table" style=3D"mso-table-lspace:0pt; mso-ta=
+ble-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%;border-spacing: 0px; margin-ri=
+ght: 20px; margin-left: 20px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"608"><tbody><tr><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;min-width: 100%;"><table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:col=
+lapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-spac=
+ing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"><tbody><t=
+r class=3D"spacerRow" height=3D"16"><td style=3D"-webkit-text-size-adjust: 100%; -=
+ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">&nbsp; </td></tr>=
+</tbody></table></td></tr></tbody></table></div></div><div class=3D"component =
+" style=3D"padding: 0px !important;"><div class=3D"image" style=3D"overflow: hidde=
+n;width:100%"><table class=3D"responsive-table" role=3D"presentation" align=3D"cen=
+ter" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt;=
+ mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webki=
+t-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; table-layo=
+ut: fixed; margin-right: 20px; margin-left: 20px;" width=3D"608"><tbody><tr><t=
+d valign=3D"top" class=3D"image-td" style=3D"-webkit-text-size-adjust: 100%; -ms-t=
+ext-size-adjust: 100%;"><div class=3D"img-1 image-container" style=3D"overflow: =
+hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolation-mode=
+: bicubic;vertical-align: bottom; max-width: 550px;" alt=3D"fiesta taxi SG" sr=
+c=3D"https://barraganforms.house.gov/UploadedPhotos/MediumResolution/19b3a058-=
+2713-4530-9727-41a7ebb46b95.png"></div></td></tr></tbody></table></div></div=
+><div class=3D"component " style=3D"padding: 0px !important;"><div class=3D"spacin=
+g" style=3D"overflow: hidden;width:100%"><table role=3D"presentation" class=3D"res=
+ponsive-table" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-r=
+space:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-tex=
+t-size-adjust: 100%;border-spacing: 0px; margin-right: 20px; margin-left: 20=
+px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"608"><tbody><tr><td s=
+tyle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;min-width: =
+100%;"><table role=3D"presentation" style=3D"mso-table-lspace:0pt; mso-table-rsp=
+ace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-size-ad=
+just: 100%; -ms-text-size-adjust: 100%;border-spacing: 0px;" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" width=3D"100%"><tbody><tr class=3D"spacerRow" height=
+=3D"16"><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;=
+font-size:0%;line-height: 16px;">&nbsp; </td></tr></tbody></table></td></tr>=
+</tbody></table></div></div><div class=3D"component " style=3D"padding: 0px !imp=
+ortant;"><div class=3D"editable" style=3D"overflow: hidden;width:100%"><table cl=
+ass=3D"responsive-table" role=3D"presentation" border=3D"0" cellpadding=3D"0" cellsp=
+acing=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace=
+:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;table-layout: fixed; margin-right: 20px; margin-left: 20px;" =
+width=3D"608"><tbody><tr><td class=3D"table-w-bg-color" valign=3D"top" style=3D"-web=
+kit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><div class=3D"cke_edi=
+table cke_editable_inline cke_contents_ltr cke_focus cke_show_borders" style=
+=3D"overflow: hidden;"><p xml:lang=3D"EN-US" lang=3D"EN-US" paraid=3D"2030042116" pa=
+raeid=3D"{ba0caf6b-a38c-48da-b2af-c85616930f0f}{223}" style=3D"margin: 0;"><span=
+ style=3D"font-family:Arial,Helvetica,sans-serif;"><em><strong style=3D"font-wei=
+ght: bold;">Transporte y la Vacuna contra el COVID&nbsp;&nbsp;</strong></em>=
+</span></p><p xml:lang=3D"EN-US" lang=3D"EN-US" paraid=3D"2030042116" paraeid=3D"{ba=
+0caf6b-a38c-48da-b2af-c85616930f0f}{223}" style=3D"margin: 0;"><br></p><p xml:=
+lang=3D"EN-US" lang=3D"EN-US" paraid=3D"2064071982" paraeid=3D"{ba0caf6b-a38c-48da-b=
+2af-c85616930f0f}{231}" style=3D"margin: 0;"><span style=3D"font-family:Arial,He=
+lvetica,sans-serif;"><em>El transporte no debe ser un obst=C3=A1culo para recibi=
+r su vacuna. Hay v<a data-cke-saved-href=3D"https://barraganforms.house.gov/co=
+mponents/redirect/r.aspx?ID=3D1562-1040746" href=3D"https://twitter.com/SupJanic=
+eHahn/status/1354579674693652480?s=3D20" target=3D"_blank" rel=3D"noreferrer noope=
+ner" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">ari=
+os lugares donde no necesita un autom=C3=B3vil</a>&nbsp;para vacunarse.&nbsp;</e=
+m></span></p><p xml:lang=3D"EN-US" lang=3D"EN-US" paraid=3D"967329373" paraeid=3D"{b=
+a0caf6b-a38c-48da-b2af-c85616930f0f}{217}" style=3D"margin: 0;"><br></p><ul><l=
+i xml:lang=3D"EN-US" lang=3D"EN-US" paraid=3D"901465533" paraeid=3D"{3778dd6f-d5b7-4=
+0a5-b062-66248dcf8d4f}{10}"><span style=3D"font-family:Arial,Helvetica,sans-se=
+rif;"><em>Varias aplicaciones para viajar en auto tambi=C3=A9n est=C3=A1n ofreciendo=
+&nbsp;<a data-cke-saved-href=3D"https://barraganforms.house.gov/components/red=
+irect/r.aspx?ID=3D1563-1040746" href=3D"https://www.nbcnews.com/business/busines=
+s-news/lyft-uber-want-take-you-your-vaccination-appointment-n1254308" target=
+=3D"_blank" rel=3D"noreferrer noopener" style=3D"-webkit-text-size-adjust: 100%; -=
+ms-text-size-adjust: 100%;">viajes gratuitos o con descuento a los sitios de=
+ vacunaci=C3=B3n.</a>&nbsp;Revise sus aplicaciones para obtener m=C3=A1s informaci=C3=B3=
+n.&nbsp;</em></span></li></ul><ul><li xml:lang=3D"EN-US" lang=3D"EN-US" paraid=3D"=
+901465533" paraeid=3D"{3778dd6f-d5b7-40a5-b062-66248dcf8d4f}{10}"><span style=3D=
+"font-family:Arial,Helvetica,sans-serif;"><em>Fiesta Taxi ofrece transporte =
+gratuito a las personas mayores de edad de South Gate al sitio de vacunaci=C3=B3=
+n en Downey.</em></span></li></ul><p xml:lang=3D"EN-US" lang=3D"EN-US" paraid=3D"2=
+083607441" paraeid=3D"{26237fac-1dc9-45b5-a94a-7d24482b4bf9}{9}" style=3D"margin=
+: 0;"><span style=3D"font-family:Arial,Helvetica,sans-serif;"><strong style=3D"f=
+ont-weight: bold;">Affordable Rideshares</strong></span></p><p xml:lang=3D"EN-=
+US" lang=3D"EN-US" paraid=3D"2083607441" paraeid=3D"{26237fac-1dc9-45b5-a94a-7d244=
+82b4bf9}{9}" style=3D"margin: 0;"><br></p><p paraid=3D"1005278330" paraeid=3D"{377=
+8dd6f-d5b7-40a5-b062-66248dcf8d4f}{253}" style=3D"margin: 0;"><span style=3D"fon=
+t-family:Arial,Helvetica,sans-serif;">Last December, Metro Micro launched a =
+ride share program allowing passengers to travel anywhere within a specific =
+service zone for only $1 per ride. The first service zones were designated f=
+or the LAX area and the communities of Watts and&nbsp;Willowbrook. This week=
+, Metro Micro expanded to three new service zones, including one which will =
+cover Compton and California State University, Dominguez Hills. More informa=
+tion&nbsp;<a data-cke-saved-href=3D"https://barraganforms.house.gov/components=
+/redirect/r.aspx?ID=3D1564-1040746" href=3D"https://thesource.metro.net/2021/01/=
+21/metro-micro-expands-monday-to-three-new-service-zones-compton-artesia-el-=
+monte-and-north-hollywood-burbank/?utm_source=3Dhootsuite&amp;utm_medium=3D&amp;=
+utm_term=3D&amp;utm_content=3D&amp;utm_campaign=3D" target=3D"_blank" rel=3D"noreferre=
+r noopener" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;">here</a>.&nbsp;</span></p><p paraid=3D"243838406" paraeid=3D"{3778dd6f-d5b7-=
+40a5-b062-66248dcf8d4f}{255}" style=3D"margin: 0;"><br></p><p xml:lang=3D"EN-US"=
+ paraid=3D"970015596" paraeid=3D"{26237fac-1dc9-45b5-a94a-7d24482b4bf9}{2}" styl=
+e=3D"margin: 0;"><em><span style=3D"font-family:Arial,Helvetica,sans-serif;">En =
+diciembre del a=C3=B1o pasada, Metro Micro lanz=C3=B3 un programa de viajes en auto =
+que permite a los pasajeros viajar a cualquier lugar dentro de una zona de s=
+ervicio espec=C3=ADfica por solo $ 1 por viaje. Esta semana, Metro Micro expandi=
+=C3=B3. Ahora servir=C3=A1 en las comunidades de Watts,&nbsp;Willowbrook, Compton y =
+la Universidad de California,&nbsp;Dominguez&nbsp;Hills.&nbsp;M=C3=A1s&nbsp;info=
+rmaci=C3=B3n&nbsp;<a data-cke-saved-href=3D"https://barraganforms.house.gov/compon=
+ents/redirect/r.aspx?ID=3D1565-1040746" href=3D"https://thesource.metro.net/2021=
+/01/21/metro-micro-expands-monday-to-three-new-service-zones-compton-artesia=
+-el-monte-and-north-hollywood-burbank/?utm_source=3Dhootsuite&amp;utm_medium=3D&=
+amp;utm_term=3D&amp;utm_content=3D&amp;utm_campaign=3D" target=3D"_blank" rel=3D"noref=
+errer noopener" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust:=
+ 100%;">aqu=C3=AD</a>.</span></em></p></div></td></tr></tbody></table></div></di=
+v><div class=3D"component " style=3D"padding: 0px !important;"><div class=3D"spaci=
+ng" style=3D"overflow: hidden;width:100%"><table role=3D"presentation" class=3D"re=
+sponsive-table" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-=
+rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;border-spacing: 0px; margin-right: 20px; margin-left: 2=
+0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"608"><tbody><tr><td =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;min-width:=
+ 100%;"><table role=3D"presentation" style=3D"mso-table-lspace:0pt; mso-table-rs=
+pace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;border-spacing: 0px;" border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%"><tbody><tr class=3D"spacerRow" heigh=
+t=3D"16"><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%=
+;font-size:0%;line-height: 16px;">&nbsp; </td></tr></tbody></table></td></tr=
+></tbody></table></div></div><div class=3D"component full-width" style=3D"paddin=
+g: 0px !important;"><div class=3D"header-bar" style=3D"overflow: hidden;"><table=
+ role=3D"presentation" align=3D"center" class=3D"responsive-table table-w-bg-color=
+" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; b=
+order-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust=
+: 100%;font-family: Arial, Helvetica, sans-serif; margin-right: 0px; margin-=
+left: 0px;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marg=
+inwidth=3D"0" leftmargin=3D"0" topmargin=3D"0" width=3D"648"><tbody><tr height=3D"5" c=
+lass=3D"spacerRow"><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-ad=
+just: 100%;font-size: 0%; line-height: 5px;">&nbsp;</td></tr><tr><td class=3D"=
+responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjus=
+t: 100%;font-size:22px;color:#002b5c;" valign=3D"top"><table width=3D"100%" styl=
+e=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-=
+collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%=
+;min-width: 100%;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"=
+0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><tbody><tr><td style=3D"-webki=
+t-text-size-adjust: 100%; -ms-text-size-adjust: 100%;padding: 0 15pt;font-fa=
+mily:Arial, Helvetica, sans-serif;"><div class=3D"cke_editable cke_editable_in=
+line cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;">=
+<h2 style=3D"text-align: center;">COVID-19 &amp; Resources in Our Community</h=
+2></div></td></tr></tbody></table></td></tr><tr height=3D"5" class=3D"spacerRow"=
+><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-=
+size: 0%; line-height: 5px;">&nbsp;</td></tr></tbody></table></div></div><di=
+v class=3D"component " style=3D"padding: 0px !important;"><div class=3D"editable" =
+style=3D"overflow: hidden;width:100%"><table class=3D"responsive-table" role=3D"pr=
+esentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspa=
+ce:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse=
+;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fi=
+xed; margin-right: 20px; margin-left: 20px;" width=3D"608"><tbody><tr><td clas=
+s=3D"table-w-bg-color" valign=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms=
+-text-size-adjust: 100%;"><div class=3D"cke_editable cke_editable_inline cke_c=
+ontents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p paraid=3D=
+"1137971604" paraeid=3D"{8a2b392f-5096-4e44-b648-f15fcf1c6085}{114}" style=3D"ma=
+rgin: 0;"><span style=3D"font-family:Arial,Helvetica,sans-serif;"><strong styl=
+e=3D"font-weight: bold;">Stay at home order status</strong></span></p><p parai=
+d=3D"1137971604" paraeid=3D"{8a2b392f-5096-4e44-b648-f15fcf1c6085}{114}" style=3D"=
+margin: 0;"><br></p><p paraid=3D"1034769473" paraeid=3D"{8a2b392f-5096-4e44-b648=
+-f15fcf1c6085}{120}" style=3D"margin: 0;"><span style=3D"font-family:Arial,Helve=
+tica,sans-serif;">Governor Newsom has lifted the&nbsp;stay-at-home order and=
+ announced that all counties in California will be moving back to&nbsp;a sys=
+tem of colored tiers.</span></p><p paraid=3D"1034769473" paraeid=3D"{8a2b392f-50=
+96-4e44-b648-f15fcf1c6085}{120}" style=3D"margin: 0;"><br></p><p xml:lang=3D"EN-=
+US" lang=3D"EN-US" paraid=3D"765863762" paraeid=3D"{3cc109b1-919f-4d48-8617-7a5658=
+e9c89e}{234}" style=3D"margin: 0;"><span style=3D"font-family:Arial,Helvetica,sa=
+ns-serif;">L.A.&nbsp;County will be in the&nbsp;<a data-cke-saved-href=3D"http=
+s://barraganforms.house.gov/components/redirect/r.aspx?ID=3D1566-1040746" href=
+=3D"https://www.cdph.ca.gov/Programs/CID/DCDC/CDPH%20Document%20Library/COVID-=
+19/Dimmer-Framework-September_2020.pdf" target=3D"_blank" rel=3D"noreferrer noop=
+ener" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">hi=
+ghest-risk tier, purple</a>. This means that, although outdoor dining is now=
+ open, the risk of spread is still very&nbsp;high&nbsp;and restrictions are =
+still in place.&nbsp;&nbsp;</span></p><p xml:lang=3D"EN-US" lang=3D"EN-US" parai=
+d=3D"668176375" paraeid=3D"{3778dd6f-d5b7-40a5-b062-66248dcf8d4f}{35}" style=3D"ma=
+rgin: 0;"><br></p><p xml:lang=3D"EN-US" lang=3D"EN-US" paraid=3D"740824329" paraei=
+d=3D"{3778dd6f-d5b7-40a5-b062-66248dcf8d4f}{56}" style=3D"margin: 0;"><em><span =
+style=3D"font-family:Arial,Helvetica,sans-serif;"><strong style=3D"font-weight: =
+bold;">Orden de estad=C3=ADa en casa</strong></span></em></p><p xml:lang=3D"EN-US"=
+ lang=3D"EN-US" paraid=3D"740824329" paraeid=3D"{3778dd6f-d5b7-40a5-b062-66248dcf8=
+d4f}{56}" style=3D"margin: 0;"><br><em><span style=3D"font-family:Arial,Helvetic=
+a,sans-serif;">El gobernador&nbsp;Newsom&nbsp;ha levantado el orden de estad=
+=C3=ADa en casa. Aunque los restaurantes de comer al aire libre est=C3=A1n abiertos,=
+ el riesgo de infecci=C3=B3n es todav=C3=ADa muy alto y l<a data-cke-saved-href=3D"htt=
+ps://barraganforms.house.gov/components/redirect/r.aspx?ID=3D1567-1040746" hre=
+f=3D"https://www.cdph.ca.gov/Programs/CID/DCDC/CDPH%20Document%20Library/COVID=
+-19/Dimmer-Framework-September_2020.pdf" target=3D"_blank" rel=3D"noreferrer noo=
+pener" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">a=
+s restricciones todav=C3=ADa est=C3=A1n en su lugar</a>.&nbsp;</span></em></p><p xml=
+:lang=3D"EN-US" lang=3D"EN-US" paraid=3D"740824329" paraeid=3D"{3778dd6f-d5b7-40a5-b=
+062-66248dcf8d4f}{56}" style=3D"margin: 0;"><br></p><p xml:lang=3D"EN-US" lang=3D"=
+EN-US" paraid=3D"1200818972" paraeid=3D"{058ef0d2-802e-4869-83a5-180b5f2dcab8}{2=
+16}" style=3D"margin: 0;"><strong style=3D"font-weight: bold;"><span style=3D"font=
+-family:Arial,Helvetica,sans-serif;">Types of Masks&nbsp;</span></strong></p=
+><p xml:lang=3D"EN-US" lang=3D"EN-US" paraid=3D"372501907" paraeid=3D"{a0d77fca-15bf=
+-4ed3-9bf3-8e5c76ededf0}{176}" style=3D"margin: 0;"><br></p><p paraid=3D"1926985=
+901" paraeid=3D"{8a2b392f-5096-4e44-b648-f15fcf1c6085}{128}" style=3D"margin: 0;=
+"><span style=3D"font-family:Arial,Helvetica,sans-serif;">Please keep wearing =
+your masks!&nbsp;Experts&nbsp;always&nbsp;<a data-cke-saved-href=3D"https://ba=
+rraganforms.house.gov/components/redirect/r.aspx?ID=3D1568-1040746" href=3D"http=
+s://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/about-face-coveri=
+ngs.html" target=3D"_blank" rel=3D"noreferrer noopener" style=3D"-webkit-text-size=
+-adjust: 100%; -ms-text-size-adjust: 100%;">recommend</a>&nbsp;the N95 mask =
+if you have access to one. If you&nbsp;don=E2=80=99t, it=E2=80=99s always&nbsp;best&nbsp=
+;to double-mask, or use a mask with three or more layers. If you=E2=80=99re using =
+cloth masks,&nbsp;remember to wash your masks frequently and cycle between d=
+ifferent ones.&nbsp;</span></p><p xml:lang=3D"EN-US" lang=3D"EN-US" paraid=3D"9660=
+8748" paraeid=3D"{a0d77fca-15bf-4ed3-9bf3-8e5c76ededf0}{184}" style=3D"margin: 0=
+;"><br></p><p xml:lang=3D"EN-US" lang=3D"EN-US" paraid=3D"1430482383" paraeid=3D"{37=
+78dd6f-d5b7-40a5-b062-66248dcf8d4f}{96}" style=3D"margin: 0;"><em><span style=3D=
+"font-family:Arial,Helvetica,sans-serif;"><strong style=3D"font-weight: bold;"=
+>Los&nbsp;Tipos&nbsp;Recomendados de&nbsp;Mascarillas&nbsp;&nbsp;<br>&nbsp;<=
+/strong><br>Expertos siempre&nbsp;<a data-cke-saved-href=3D"https://barraganfo=
+rms.house.gov/components/redirect/r.aspx?ID=3D1569-1040746" href=3D"https://espa=
+nol.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/about-face-coverings.=
+html" target=3D"_blank" rel=3D"noreferrer noopener" style=3D"-webkit-text-size-adj=
+ust: 100%; -ms-text-size-adjust: 100%;">recomiendan</a>&nbsp;la mascarilla N=
+95 si tiene acceso a una. Si no, siempre es mejor usar doble mascarilla o us=
+ar una mascarilla con tres o m=C3=A1s capas. Si usas mascarillas de tela, recuer=
+de lavarla con frecuencia y alternar.&nbsp;</span></em></p><p xml:lang=3D"EN-U=
+S" lang=3D"EN-US" paraid=3D"1430482383" paraeid=3D"{3778dd6f-d5b7-40a5-b062-66248d=
+cf8d4f}{96}" style=3D"margin: 0;"><br></p><p paraid=3D"1937344204" paraeid=3D"{8a2=
+b392f-5096-4e44-b648-f15fcf1c6085}{130}" style=3D"margin: 0;"><strong style=3D"f=
+ont-weight: bold;"><span style=3D"font-family:Arial,Helvetica,sans-serif;">Out=
+break at&nbsp;our&nbsp;Ports&nbsp;</span></strong></p><p paraid=3D"1937344204"=
+ paraeid=3D"{8a2b392f-5096-4e44-b648-f15fcf1c6085}{130}" style=3D"margin: 0;"><b=
+r></p><p paraid=3D"377895803" paraeid=3D"{8a2b392f-5096-4e44-b648-f15fcf1c6085}{=
+151}" style=3D"margin: 0;"><span style=3D"font-family:Arial,Helvetica,sans-serif=
+;">I=E2=80=99ve been very concerned about the recent outbreak of COVID-19 at the P=
+orts&nbsp;of Los Angeles&nbsp;and Long Beach. This outbreak&nbsp;impacts my&=
+nbsp;constituents and their family members who work there,&nbsp;the&nbsp;&nb=
+sp;surrounding communities, and could&nbsp;have&nbsp;catastrophic&nbsp;conse=
+quences on&nbsp;the local and national economy that depend on the ports.&nbs=
+p;</span></p></div></td></tr></tbody></table></div></div><div class=3D"compone=
+nt " style=3D"padding: 0px !important;"><div class=3D"spacing" style=3D"overflow: =
+hidden;width:100%"><table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-c=
+ollapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;=
+border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" width=3D"608"><tbody><tr><td style=3D"-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%;min-width: 100%;"><table role=3D"=
+presentation" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rs=
+pace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;border-spacing: 0px;" border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" width=3D"100%"><tbody><tr class=3D"spacerRow" height=3D"16"><td style=3D"-we=
+bkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-size:0%;line-he=
+ight: 16px;">&nbsp; </td></tr></tbody></table></td></tr></tbody></table></di=
+v></div><div class=3D"component " style=3D"padding: 0px !important;"><div class=3D=
+"image-caption" style=3D"overflow: hidden;width:100%"><table role=3D"presentatio=
+n" class=3D"Left1 responsive-table" style=3D"mso-table-lspace:0pt; mso-table-rsp=
+ace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-size-ad=
+just: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; margin-right: 20=
+px; margin-left: 20px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"60=
+8"><tbody><tr><td valign=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;"><table role=3D"presentation" class=3D"caption-1 responsiv=
+e-table" align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-=
+table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collaps=
+e:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float:=
+ left; max-width: 65.9%;" width=3D"65.9%"><tbody><tr><td valign=3D"top" style=3D"-=
+webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><div class=3D"cke_=
+editable cke_editable_inline cke_contents_ltr cke_focus cke_show_borders" st=
+yle=3D"overflow: hidden;"><p style=3D"margin: 0;"><span style=3D"font-family:Arial=
+,Helvetica,sans-serif;">Congressman Alan Lowenthal and I joined together in&=
+nbsp;<a data-cke-saved-href=3D"https://barraganforms.house.gov/components/redi=
+rect/r.aspx?ID=3D1570-1040746" href=3D"https://www.reuters.com/article/health-co=
+ronavirus-usa-ports/swift-covid-19-vaccines-urged-for-largest-u-s-ports-amid=
+-cargo-backlogs-idUSL1N2JV31F" target=3D"_blank" rel=3D"noreferrer noopener" sty=
+le=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">writing a l=
+etter</a>&nbsp;to the State and County to highlight the importance of priori=
+tizing port workers in vaccine distribution.&nbsp;It=E2=80=99s critical that we pr=
+otect the essential workers who keep our port infrastructure operating and o=
+ur goods flowing.</span></p></div></td></tr></tbody></table><table role=3D"pre=
+sentation" class=3D"image-1 responsive-table" align=3D"right" border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;m=
+so-table-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100=
+%; -ms-text-size-adjust: 100%;float: right; table-layout: fixed; max-width: =
+33.9%;" width=3D"33.9%"><tbody><tr><td valign=3D"top" class=3D"image-td" align=3D"ce=
+nter" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><d=
+iv class=3D"img-1 image-container" style=3D"overflow: hidden;text-align: right;"=
+><img style=3D"max-width:600px;-ms-interpolation-mode: bicubic;vertical-align:=
+ bottom; max-width: 240px;" alt=3D"Aerial view, Port of L.A." src=3D"https://bar=
+raganforms.house.gov/UploadedPhotos/LowResolution/467c9463-cd68-4826-a7a5-a3=
+e8d7f5b107.png" width=3D"205.5"></div></td></tr></tbody></table></td></tr></tb=
+ody></table></div></div><div class=3D"component " style=3D"padding: 0px !importa=
+nt;"><div class=3D"spacing" style=3D"overflow: hidden;width:100%"><table role=3D"p=
+resentation" class=3D"responsive-table" style=3D"mso-table-lspace:0pt; mso-table=
+-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-siz=
+e-adjust: 100%; -ms-text-size-adjust: 100%;border-spacing: 0px; margin-right=
+: 20px; margin-left: 20px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"608"><tbody><tr><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-a=
+djust: 100%;min-width: 100%;"><table role=3D"presentation" style=3D"mso-table-ls=
+pace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-spacing=
+: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"><tbody><tr c=
+lass=3D"spacerRow" height=3D"16"><td style=3D"-webkit-text-size-adjust: 100%; -ms-=
+text-size-adjust: 100%;font-size:0%;line-height: 16px;">&nbsp; </td></tr></t=
+body></table></td></tr></tbody></table></div></div><div class=3D"component " s=
+tyle=3D"padding: 0px !important;"><div class=3D"editable" style=3D"overflow: hidde=
+n;width:100%"><table class=3D"responsive-table" role=3D"presentation" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspa=
+ce:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-size-adj=
+ust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; margin-right: 20p=
+x; margin-left: 20px;" width=3D"608"><tbody><tr><td class=3D"table-w-bg-color" v=
+align=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;"><div class=3D"cke_editable cke_editable_inline cke_contents_ltr cke_focus =
+cke_show_borders" style=3D"overflow: hidden;"><p style=3D"margin: 0;"><span styl=
+e=3D"font-family:Arial,Helvetica,sans-serif;"><em><strong style=3D"font-weight: =
+bold;">Brote en nuestros puertos</strong></em></span></p><p style=3D"margin: 0=
+;"><span style=3D"font-family:Arial,Helvetica,sans-serif;"><em>&nbsp;<br>Me ha=
+ preocupado mucho el reciente brote de COVID-19 en los puertos de Los&nbsp;A=
+ngeles&nbsp;y Long Beach. El congresista Alan&nbsp;Lowenthal&nbsp;y yo escri=
+bimos una carta al estado y al condado para insistir la importancia de dar p=
+rioridad a los trabajadores del puerto en la distribuci=C3=B3n de vacunas.&nbsp;=
+</em></span></p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span st=
+yle=3D"font-family:Arial,Helvetica,sans-serif;"><strong style=3D"font-weight: bo=
+ld;">Rent Relief in South Gate</strong></span></p><p style=3D"margin: 0;"><br>=
+</p><p style=3D"margin: 0;"><span style=3D"font-family:Arial,Helvetica,sans-seri=
+f;">Applications open February 1, 2021. More information <a data-cke-saved-h=
+ref=3D"https://barraganforms.house.gov/components/redirect/r.aspx?ID=3D1571-1040=
+746" href=3D"https://www.cityofsouthgate.org/DocumentCenter/View/6927/Rental-A=
+ssistance-SG-Flyer" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adj=
+ust: 100%;">here</a>!</span></p></div></td></tr></tbody></table></div></div>=
+<div class=3D"component " style=3D"padding: 0px !important;"><div class=3D"image-g=
+roup" style=3D"overflow: hidden;width:100%"><table role=3D"presentation" class=3D"=
+responsive-table" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-tabl=
+e-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-=
+text-size-adjust: 100%;table-layout: fixed; margin-right: 20px; margin-left:=
+ 20px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"608"><tbody><tr><t=
+d valign=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: =
+100%;"><table role=3D"presentation" class=3D"image-table image-1" width=3D"49.9%" =
+align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collaps=
+e;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; ta=
+ble-layout: fixed;mso-table-lspace:0pt; mso-table-rspace:0pt;"><tbody><tr><t=
+d valign=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: =
+100%;"><div class=3D"img-1 image-container" style=3D"overflow: hidden;text-align=
+:center"><a href=3D"www.cityofsouthgate.org/DocumentCenter/View/6927/Rental-As=
+sistance-SG-Flyer" target=3D"_blank" style=3D"-webkit-text-size-adjust: 100%; -m=
+s-text-size-adjust: 100%;"><img style=3D"max-width:600px;-ms-interpolation-mod=
+e: bicubic;vertical-align: bottom; max-width: 382px;" alt=3D"new rent SG engli=
+sh" src=3D"https://barraganforms.house.gov/UploadedPhotos/MediumResolution/50b=
+bccfd-5c31-4429-866f-2fcb01457e87.png" width=3D"302.5"></a></div></td></tr></t=
+body></table><table role=3D"presentation" class=3D"image-table image-2" width=3D"4=
+9.9%" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10p=
+t; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-ad=
+just: 100%;float: right; table-layout: fixed; mso-table-lspace:0pt; mso-tabl=
+e-rspace:0pt;" align=3D"right" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tbo=
+dy><tr><td valign=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size=
+-adjust: 100%;"><div class=3D"img-2 image-container" style=3D"overflow: hidden;t=
+ext-align:center"><img style=3D"max-width:600px;-ms-interpolation-mode: bicubi=
+c;vertical-align: bottom; max-width: 382px;" alt=3D"SG rent help" src=3D"https:/=
+/barraganforms.house.gov/UploadedPhotos/MediumResolution/91d37504-ed68-4e51-=
+bf19-22bf2e1067e4.png" width=3D"302.5"></div></td></tr></tbody></table></td></=
+tr></tbody></table></div></div><div class=3D"component " style=3D"padding: 0px !=
+important;"><div class=3D"spacing" style=3D"overflow: hidden;width:100%"><table =
+role=3D"presentation" class=3D"responsive-table" style=3D"mso-table-lspace:0pt; ms=
+o-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-t=
+ext-size-adjust: 100%; -ms-text-size-adjust: 100%;border-spacing: 0px; margi=
+n-right: 20px; margin-left: 20px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"608"><tbody><tr><td style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;min-width: 100%;"><table role=3D"presentation" style=3D"mso-t=
+able-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse=
+:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-=
+spacing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"><tbod=
+y><tr class=3D"spacerRow" height=3D"16"><td style=3D"-webkit-text-size-adjust: 100=
+%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">&nbsp; </td><=
+/tr></tbody></table></td></tr></tbody></table></div></div><div class=3D"compon=
+ent " style=3D"padding: 0px !important;"><div class=3D"editable" style=3D"overflow=
+: hidden;width:100%"><table class=3D"responsive-table" role=3D"presentation" bor=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; mso-tab=
+le-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; margin-rig=
+ht: 20px; margin-left: 20px;" width=3D"608"><tbody><tr><td class=3D"table-w-bg-c=
+olor" valign=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adju=
+st: 100%;"><div class=3D"cke_editable cke_editable_inline cke_contents_ltr cke=
+_focus cke_show_borders" style=3D"overflow: hidden;"><p style=3D"margin: 0;"><sp=
+an style=3D"font-family:Arial,Helvetica,sans-serif;"><strong style=3D"font-weigh=
+t: bold;">CA Eviction Moratorium Bill Extended through June 30th, 2021</stro=
+ng></span></p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span styl=
+e=3D"font-family:Arial,Helvetica,sans-serif;">California Gov. Gavin Newsom sig=
+ned a law on Friday that <a data-cke-saved-href=3D"https://barraganforms.house=
+.gov/components/redirect/r.aspx?ID=3D1572-1040746" href=3D"https://ktla.com/news=
+/california/gov-gavin-newsom-signs-bill-to-extend-covid-19-eviction-protecti=
+ons-through-june/." style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adj=
+ust: 100%;">extends eviction protections through the end of June</a>. Tenant=
+s who qualify for the protections will still owe their rent, they just can=E2=80=
+=99t be evicted for not paying all of it. The law would use federal stimulus d=
+ollars to pay off 80% of some tenants=E2=80=99 unpaid rent, but only if landlords =
+agree to forgive the remaining 20%. If landlords refuse the deal, the law wo=
+uld pay off 25% of tenants=E2=80=99 unpaid rent to make sure they qualify for evic=
+tion protections.</span></p><p style=3D"margin: 0;"><br></p><p style=3D"margin: =
+0;"><span style=3D"font-family:Arial,Helvetica,sans-serif;">People who earn mo=
+re than 80% of the area median income are not eligible for the money.</span>=
+</p></div></td></tr></tbody></table></div></div><div class=3D"component " styl=
+e=3D"padding: 0px !important;"><div class=3D"spacing" style=3D"overflow: hidden;wi=
+dth:100%"><table role=3D"presentation" class=3D"responsive-table" style=3D"mso-tab=
+le-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:c=
+ollapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"608"><tbody><tr><td style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%;min-width: 100%;"><table role=3D"presentat=
+ion" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt=
+; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adj=
+ust: 100%;border-spacing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" w=
+idth=3D"100%"><tbody><tr class=3D"spacerRow" height=3D"16"><td style=3D"-webkit-text=
+-size-adjust: 100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16p=
+x;">&nbsp; </td></tr></tbody></table></td></tr></tbody></table></div></div><=
+div class=3D"component full-width" style=3D"padding: 0px !important;"><div class=
+=3D"header-bar" style=3D"overflow: hidden;"><table role=3D"presentation" align=3D"ce=
+nter" class=3D"responsive-table table-w-bg-color" style=3D"mso-table-lspace:0pt;=
+ mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webki=
+t-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Hel=
+vetica, sans-serif; margin-right: 0px; margin-left: 0px;" border=3D"0" cellspa=
+cing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" top=
+margin=3D"0" width=3D"648"><tbody><tr height=3D"5" class=3D"spacerRow"><td style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-size: 0%; line=
+-height: 5px;">&nbsp;</td></tr><tr><td class=3D"responsive-table" style=3D"-webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-size:22px;color:#=
+002b5c;" valign=3D"top"><table width=3D"100%" style=3D"mso-table-lspace:0pt; mso-t=
+able-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text=
+-size-adjust: 100%; -ms-text-size-adjust: 100%;min-width: 100%;" border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D=
+"0" topmargin=3D"0"><tbody><tr><td style=3D"-webkit-text-size-adjust: 100%; -ms-=
+text-size-adjust: 100%;padding: 0 15pt;font-family:Arial, Helvetica, sans-se=
+rif;"><div class=3D"cke_editable cke_editable_inline cke_contents_ltr cke_focu=
+s cke_show_borders" style=3D"overflow: hidden;"><h2 style=3D"text-align: center;=
+">Updates from Washington, D.C.</h2></div></td></tr></tbody></table></td></t=
+r><tr height=3D"5" class=3D"spacerRow"><td style=3D"-webkit-text-size-adjust: 100%=
+; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 5px;">&nbsp;</td></=
+tr></tbody></table></div></div><div class=3D"component " style=3D"padding: 0px !=
+important;"><div class=3D"spacing" style=3D"overflow: hidden;width:100%"><table =
+role=3D"presentation" class=3D"responsive-table" style=3D"mso-table-lspace:0pt; ms=
+o-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-t=
+ext-size-adjust: 100%; -ms-text-size-adjust: 100%;border-spacing: 0px; margi=
+n-right: 20px; margin-left: 20px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"608"><tbody><tr><td style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;min-width: 100%;"><table role=3D"presentation" style=3D"mso-t=
+able-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse=
+:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-=
+spacing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"><tbod=
+y><tr class=3D"spacerRow" height=3D"16"><td style=3D"-webkit-text-size-adjust: 100=
+%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">&nbsp; </td><=
+/tr></tbody></table></td></tr></tbody></table></div></div><div class=3D"compon=
+ent " style=3D"padding: 0px !important;"><div class=3D"editable" style=3D"overflow=
+: hidden;width:100%"><table class=3D"responsive-table" role=3D"presentation" bor=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; mso-tab=
+le-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; margin-rig=
+ht: 20px; margin-left: 20px;" width=3D"608"><tbody><tr><td class=3D"table-w-bg-c=
+olor" valign=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adju=
+st: 100%;"><div class=3D"cke_editable cke_editable_inline cke_contents_ltr cke=
+_focus cke_show_borders" style=3D"overflow: hidden;"><p xml:lang=3D"EN-US" lang=3D=
+"EN-US" paraid=3D"1959643578" paraeid=3D"{45a30b3a-6933-4446-9110-94fa080a6860}{=
+129}" style=3D"margin: 0;"><span style=3D"font-family:Arial,Helvetica,sans-serif=
+;"><strong style=3D"font-weight: bold;">The Federal Response to COVID-19</stro=
+ng></span></p><p xml:lang=3D"EN-US" lang=3D"EN-US" paraid=3D"1959643578" paraeid=3D"=
+{45a30b3a-6933-4446-9110-94fa080a6860}{129}" style=3D"margin: 0;"><br></p><p p=
+araid=3D"631482765" paraeid=3D"{8a2b392f-5096-4e44-b648-f15fcf1c6085}{203}" styl=
+e=3D"margin: 0;"><span style=3D"font-family:Arial,Helvetica,sans-serif;">Preside=
+nt Biden has announced a&nbsp;<a data-cke-saved-href=3D"https://barraganforms.=
+house.gov/components/redirect/r.aspx?ID=3D1573-1040746" href=3D"https://www.whit=
+ehouse.gov/wp-content/uploads/2021/01/National-Strategy-for-the-COVID-19-Res=
+ponse-and-Pandemic-Preparedness.pdf" target=3D"_blank" rel=3D"noreferrer noopene=
+r" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">compr=
+ehensive COVID-19 plan</a>,&nbsp;which includes buying&nbsp;millions of&nbsp=
+;new doses&nbsp;of the vaccine that&nbsp;will&nbsp;hopefully&nbsp;be&nbsp;av=
+ailable in the summertime. Negotiations over&nbsp;the next coronavirus relie=
+f plan continue.&nbsp;I will continue to push for regular, direct payments, =
+expanded unemployment benefits, small business support, and rent/utility rel=
+ief.&nbsp;</span></p><p xml:lang=3D"EN-US" lang=3D"EN-US" paraid=3D"1532281317" pa=
+raeid=3D"{5497b908-95d3-48be-bbb9-e2f5f4f8f3b4}{70}" style=3D"margin: 0;"><br></=
+p><p xml:lang=3D"EN-US" lang=3D"EN-US" paraid=3D"236975178" paraeid=3D"{26237fac-1dc=
+9-45b5-a94a-7d24482b4bf9}{146}" style=3D"margin: 0;"><span style=3D"font-family:=
+Arial,Helvetica,sans-serif;"><em><strong style=3D"font-weight: bold;">El Gobie=
+rno Federal en respuesta a COVID-19&nbsp;</strong></em></span></p><p xml:lan=
+g=3D"EN-US" lang=3D"EN-US" paraid=3D"1387061389" paraeid=3D"{26237fac-1dc9-45b5-a94a=
+-7d24482b4bf9}{152}" style=3D"margin: 0;"><span style=3D"font-family:Arial,Helve=
+tica,sans-serif;"><em>&nbsp;&nbsp;</em></span></p><p xml:lang=3D"EN-US" lang=3D"=
+EN-US" paraid=3D"39676399" paraeid=3D"{26237fac-1dc9-45b5-a94a-7d24482b4bf9}{158=
+}" style=3D"margin: 0;"><span style=3D"font-family:Arial,Helvetica,sans-serif;">=
+<em>El presidente&nbsp;Biden&nbsp;ha anunciado&nbsp;<a data-cke-saved-href=3D"=
+https://barraganforms.house.gov/components/redirect/r.aspx?ID=3D1574-1040746" =
+href=3D"https://www.whitehouse.gov/wp-content/uploads/2021/01/National-Strateg=
+y-for-the-COVID-19-Response-and-Pandemic-Preparedness.pdf" target=3D"_blank" r=
+el=3D"noreferrer noopener" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;">un plan extenso de COVID-19</a>,&nbsp;que incluye la compra=
+ de millones de nuevas dosis de vacunas, que se espera que sean disponibles =
+este verano. Las negociaciones sobre el pr=C3=B3ximo plan de alivio de coronavir=
+us continua. Yo sigo insistiendo por pagos regulares, directos, beneficios d=
+e desempleo expandidos, ayuda para negocios peque=C3=B1os y alivio de alquiler.&=
+nbsp;</em></span></p><p xml:lang=3D"EN-US" lang=3D"EN-US" paraid=3D"39676399" para=
+eid=3D"{26237fac-1dc9-45b5-a94a-7d24482b4bf9}{158}" style=3D"margin: 0;"><br></p=
+><p paraid=3D"1437464353" paraeid=3D"{8a2b392f-5096-4e44-b648-f15fcf1c6085}{240}=
+" style=3D"margin: 0;"><strong style=3D"font-weight: bold;"><span style=3D"font-fa=
+mily:Arial,Helvetica,sans-serif;">Environmental Policy Updates&nbsp;</span><=
+/strong></p><p paraid=3D"1437464353" paraeid=3D"{8a2b392f-5096-4e44-b648-f15fcf1=
+c6085}{240}" style=3D"margin: 0;"><br></p><p xml:lang=3D"EN-US" lang=3D"EN-US" par=
+aid=3D"1979762137" paraeid=3D"{a3a2b778-e859-4d62-9a09-15a3dea12d59}{34}" style=3D=
+"margin: 0;"><span style=3D"font-family:Arial,Helvetica,sans-serif;">This week=
+ was a busy one for environmental justice and climate action.&nbsp;President=
+ Biden announced&nbsp;<a data-cke-saved-href=3D"https://barraganforms.house.go=
+v/components/redirect/r.aspx?ID=3D1575-1040746" href=3D"https://www.latimes.com/=
+environment/story/2021-01-27/biden-halts-new-oil-and-gas-leasing-on-federal-=
+land" target=3D"_blank" rel=3D"noreferrer noopener" style=3D"-webkit-text-size-adj=
+ust: 100%; -ms-text-size-adjust: 100%;">several Executive Orders</a>&nbsp;on=
+ climate and environmental justice,&nbsp;which I am proud to see and happy t=
+o support.</span></p></div></td></tr></tbody></table></div></div><div class=3D=
+"component " style=3D"padding: 0px !important;"><div class=3D"spacing" style=3D"ov=
+erflow: hidden;width:100%"><table role=3D"presentation" class=3D"responsive-tabl=
+e" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; =
+border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjus=
+t: 100%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"608"><tbody><tr><td style=3D"-webki=
+t-text-size-adjust: 100%; -ms-text-size-adjust: 100%;min-width: 100%;"><tabl=
+e role=3D"presentation" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-=
+table-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; =
+-ms-text-size-adjust: 100%;border-spacing: 0px;" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" width=3D"100%"><tbody><tr class=3D"spacerRow" height=3D"16"><td st=
+yle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-size:0%=
+;line-height: 16px;">&nbsp; </td></tr></tbody></table></td></tr></tbody></ta=
+ble></div></div><div class=3D"component " style=3D"padding: 0px !important;"><di=
+v class=3D"image-caption" style=3D"overflow: hidden;width:100%"><table role=3D"pre=
+sentation" class=3D"Right1 responsive-table" style=3D"mso-table-lspace:0pt; mso-=
+table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-tex=
+t-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; margin-=
+right: 20px; margin-left: 20px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+width=3D"608"><tbody><tr><td valign=3D"top" style=3D"-webkit-text-size-adjust: 100=
+%; -ms-text-size-adjust: 100%;"><table role=3D"presentation" class=3D"image-1 re=
+sponsive-table" align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" styl=
+e=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-=
+collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%=
+;float: left; table-layout: fixed; max-width: 49.3243%;" width=3D"49.324342105=
+263156%"><tbody><tr><td valign=3D"top" class=3D"image-td" align=3D"center" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><div class=3D"img=
+-1 image-container" style=3D"overflow: hidden;text-align: left;"><img style=3D"m=
+ax-width:600px;-ms-interpolation-mode: bicubic;vertical-align: bottom; max-w=
+idth: 550px;" alt=3D"microgrids" src=3D"https://barraganforms.house.gov/Uploaded=
+Photos/MediumResolution/73bdf48c-f2c7-444c-9647-e568e79c1b01.png" width=3D"298=
+.5"></div></td></tr></tbody></table><table role=3D"presentation" class=3D"captio=
+n-1 responsive-table" align=3D"right" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; =
+border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjus=
+t: 100%;float: right; table-layout: fixed; max-width: 49.3243%;" width=3D"49.3=
+24342105263156%"><tbody><tr><td valign=3D"top" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;"><div class=3D"cke_editable cke_editable_i=
+nline cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"=
+><p paraid=3D"1669137907" paraeid=3D"{8a2b392f-5096-4e44-b648-f15fcf1c6085}{246}=
+" style=3D"margin: 0;"><span style=3D"font-family:Arial,Helvetica,sans-serif;">I=
+&nbsp;<a data-cke-saved-href=3D"https://barraganforms.house.gov/components/red=
+irect/r.aspx?ID=3D1576-1040746" href=3D"https://barragan.house.gov/barragan-clar=
+ke-reintroduce-energy-resilient-communities-act-to-protect-critical-faciliti=
+es-during-power-outages-and-fight-the-climate-crisis/" target=3D"_blank" rel=3D"=
+noreferrer noopener" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-ad=
+just: 100%;">reintroduced</a>&nbsp;the&nbsp;Energy Resilient Communities Act=
+&nbsp;with Rep. Yvette Clarke. The bill invests in 100% clean energy microgr=
+ids&nbsp;to help communities fight climate change and keep the lights on aft=
+er extreme weather events such as wildfires and hurricanes.&nbsp;</span></p>=
+<p paraid=3D"1669137907" paraeid=3D"{8a2b392f-5096-4e44-b648-f15fcf1c6085}{246}"=
+ style=3D"margin: 0;"><br></p><p paraid=3D"2048135651" paraeid=3D"{6cb15cb8-fa39-4=
+284-b258-75d43175c679}{10}" style=3D"margin: 0;"><span style=3D"font-family:Aria=
+l,Helvetica,sans-serif;">I reintroduced&nbsp;the&nbsp;<a data-cke-saved-href=
+=3D"https://barraganforms.house.gov/components/redirect/r.aspx?ID=3D1577-1040746=
+" href=3D"https://barragan.house.gov/barragan-reintroduces-climate-smart-ports=
+-act/" target=3D"_blank" rel=3D"noreferrer noopener" style=3D"-webkit-text-size-ad=
+just: 100%; -ms-text-size-adjust: 100%;">Climate Smart Ports Act</a>&nbsp;to=
+ invest in pollution reduction at ports across the country, including the Po=
+rt of Los Angeles.</span></p></div></td></tr></tbody></table></td></tr></tbo=
+dy></table></div></div><div class=3D"component " style=3D"padding: 0px !importan=
+t;"><div class=3D"spacing" style=3D"overflow: hidden;width:100%"><table role=3D"pr=
+esentation" class=3D"responsive-table" style=3D"mso-table-lspace:0pt; mso-table-=
+rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-size=
+-adjust: 100%; -ms-text-size-adjust: 100%;border-spacing: 0px; margin-right:=
+ 20px; margin-left: 20px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"608"><tbody><tr><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-ad=
+just: 100%;min-width: 100%;"><table role=3D"presentation" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collaps=
+e;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-spacing:=
+ 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"><tbody><tr cl=
+ass=3D"spacerRow" height=3D"16"><td style=3D"-webkit-text-size-adjust: 100%; -ms-t=
+ext-size-adjust: 100%;font-size:0%;line-height: 16px;">&nbsp; </td></tr></tb=
+ody></table></td></tr></tbody></table></div></div><div class=3D"component " st=
+yle=3D"padding: 0px !important;"><div class=3D"editable" style=3D"overflow: hidden=
+;width:100%"><table class=3D"responsive-table" role=3D"presentation" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspac=
+e:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; margin-right: 20px=
+; margin-left: 20px;" width=3D"608"><tbody><tr><td class=3D"table-w-bg-color" va=
+lign=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%=
+;"><div class=3D"cke_editable cke_editable_inline cke_contents_ltr cke_focus c=
+ke_show_borders" style=3D"overflow: hidden;"><p paraid=3D"2039659427" paraeid=3D"{=
+6cb15cb8-fa39-4284-b258-75d43175c679}{16}" style=3D"margin: 0;"><span style=3D"f=
+ont-family:Arial,Helvetica,sans-serif;">I also&nbsp;<a data-cke-saved-href=3D"=
+https://barraganforms.house.gov/components/redirect/r.aspx?ID=3D1578-1040746" =
+href=3D"https://barragan.house.gov/barragan-encourages-biden-interior-departme=
+nt-to-preserve-urban-park-funding/" target=3D"_blank" rel=3D"noreferrer noopener=
+" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">led a =
+letter</a>&nbsp;with 26 of my colleagues asking President Biden to&nbsp;reve=
+rse&nbsp;a last minute decision by the Trump administration&nbsp;to eliminat=
+e funding for urban parks in underserved communities.&nbsp;</span></p><p par=
+aid=3D"2039659427" paraeid=3D"{6cb15cb8-fa39-4284-b258-75d43175c679}{16}" style=3D=
+"margin: 0;"><br></p><p paraid=3D"2039659427" paraeid=3D"{6cb15cb8-fa39-4284-b25=
+8-75d43175c679}{16}" style=3D"margin: 0;"><em><span style=3D"font-family:Arial,H=
+elvetica,sans-serif;"><strong style=3D"font-weight: bold;">Actualizaciones de =
+Pol=C3=ADtica Ambiental&nbsp;</strong><br>&nbsp;<br>Esta semana, el Presidente&n=
+bsp;Biden&nbsp;anunci=C3=B3&nbsp;<a data-cke-saved-href=3D"https://barraganforms.h=
+ouse.gov/components/redirect/r.aspx?ID=3D1579-1040746" href=3D"https://www.latim=
+es.com/environment/story/2021-01-27/biden-halts-new-oil-and-gas-leasing-on-f=
+ederal-land" target=3D"_blank" rel=3D"noreferrer noopener" style=3D"-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%;">varias =C3=B3rdenes ejecutivas</a=
+>&nbsp;sobre el clima y la justicia ambiental, que estoy orgullosa y content=
+a de apoyar.&nbsp;<br>&nbsp;<br>Reintroduje la&nbsp;<a data-cke-saved-href=3D"=
+https://barraganforms.house.gov/components/redirect/r.aspx?ID=3D1580-1040746" =
+href=3D"https://barragan.house.gov/barragan-clarke-reintroduce-energy-resilien=
+t-communities-act-to-protect-critical-facilities-during-power-outages-and-fi=
+ght-the-climate-crisis/" target=3D"_blank" rel=3D"noreferrer noopener" style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">Ley de Comunidade=
+s Resistentes a la Energ=C3=ADa</a>&nbsp;para luchar contra la crisis clim=C3=A1tica=
+ con la Congresista Yvette Clarke.&nbsp;<br>&nbsp;<br>Tambi=C3=A9n reintroduje&n=
+bsp;<a data-cke-saved-href=3D"https://barraganforms.house.gov/components/redir=
+ect/r.aspx?ID=3D1581-1040746" href=3D"https://barragan.house.gov/barragan-reintr=
+oduces-climate-smart-ports-act/" target=3D"_blank" rel=3D"noreferrer noopener" s=
+tyle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">la Ley de=
+ Puertos Clim=C3=A1ticamente Inteligentes</a>&nbsp;para invertir en la reducci=C3=B3=
+n de la contaminaci=C3=B3n en puertos de todo el pa=C3=ADs, incluido el Puerto de lo=
+s&nbsp;Angeles.&nbsp;<br>&nbsp;<br>Finalmente,&nbsp;<a data-cke-saved-href=3D"=
+https://barraganforms.house.gov/components/redirect/r.aspx?ID=3D1582-1040746" =
+href=3D"https://barragan.house.gov/barragan-encourages-biden-interior-departme=
+nt-to-preserve-urban-park-funding/" target=3D"_blank" rel=3D"noreferrer noopener=
+" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">dirig=C3=
+=AD una carta pidi=C3=A9ndole al presidente Biden</a>&nbsp;que cambiara la decisi=C3=
+=B3n de la Administraci=C3=B3n Trump que hizo a =C3=BAltima hora de eliminar fondos pa=
+ra los parques urbanos en comunidades de pocos recursos.&nbsp;</span></em></=
+p><p paraid=3D"2039659427" paraeid=3D"{6cb15cb8-fa39-4284-b258-75d43175c679}{16}=
+" style=3D"margin: 0;"><br></p><p paraid=3D"2039659427" paraeid=3D"{6cb15cb8-fa39-=
+4284-b258-75d43175c679}{16}" style=3D"margin: 0;"><br></p><p paraid=3D"203965942=
+7" paraeid=3D"{6cb15cb8-fa39-4284-b258-75d43175c679}{16}" style=3D"margin: 0;"><=
+span style=3D"font-family:Arial,Helvetica,sans-serif;">In Community, </span><e=
+m><span style=3D"font-family:Arial,Helvetica,sans-serif;">En Comunidad,</span>=
+</em></p></div></td></tr></tbody></table></div></div><div class=3D"component "=
+ style=3D"padding: 0px !important;"><div class=3D"spacing" style=3D"overflow: hidd=
+en;width:100%"><table role=3D"presentation" class=3D"responsive-table" style=3D"ms=
+o-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-colla=
+pse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;bord=
+er-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" width=3D"608"><tbody><tr><td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;min-width: 100%;"><table role=3D"pres=
+entation" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace=
+:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;border-spacing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" width=3D"100%"><tbody><tr class=3D"spacerRow" height=3D"16"><td style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-size:0%;line-height=
+: 16px;">&nbsp; </td></tr></tbody></table></td></tr></tbody></table></div></=
+div></div></td></tr></tbody></table><table role=3D"presentation" width=3D"650" c=
+lass=3D"responsive-table" align=3D"center" style=3D"-webkit-text-size-adjust: 100%=
+; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, sans-serif; back=
+ground-color: #ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginhei=
+ght=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><tbody><tr><td valign=3D"=
+middle" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;background-color: #ffffff; font-family: Arial, Helvetica, sans-=
+serif; font-size: 16px; color: #000000; text-align: left; border-left: 1px s=
+olid #cccccc; border-right: 1px solid #cccccc; padding: 0 15pt;"><table role=
+=3D"presentation" align=3D"left" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-col=
+or: #ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" ma=
+rginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><tbody><tr><td valign=3D"middle" al=
+ign=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%;background-color: #ffffff; font-family: Arial, Helvetica, sans-serif; fon=
+t-size: 16px; color: #000000; text-align: left;"><img alt=3D"Nanette Diaz Barr=
+ag=C3=A1n Signature." src=3D"https://barraganforms.house.gov/images/email/sig.png"=
+ style=3D"-ms-interpolation-mode: bicubic;width: 282px; display: block;" width=
+=3D"282"> <p style=3D"margin: 0;margin: 0; padding: 0;">Nanette Diaz Barrag=C3=A1n</=
+p><p style=3D"margin: 0;margin: 0; padding: 0;">Member of Congress, <em>Congre=
+sista</em></p></td></tr></tbody></table></td></tr><tr><td valign=3D"middle" al=
+ign=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%;height:30px; background-color: #ffffff; border-left: 1px solid #cccccc; b=
+order-right: 1px solid #cccccc;">&nbsp; </td></tr><tr><td valign=3D"middle" al=
+ign=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%;color: #333333; background-color: #ffffff; font-family: arial, helvetica,=
+ sans-serif; font-size: 24px; text-align: center; border-left: 1px solid #cc=
+cccc; border-right: 1px solid #cccccc;"><h2 style=3D"font-family: arial, helve=
+tica, sans-serif; font-size: 22px; margin: 0; font-weight: bold; color: #002=
+b5c;">Stay Connected</h2></td></tr><tr><td valign=3D"middle" align=3D"center" st=
+yle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px;=
+ background-color: #ffffff; border-left: 1px solid #cccccc; border-right: 1p=
+x solid #cccccc;">&nbsp; </td></tr><tr><td valign=3D"middle" align=3D"center" st=
+yle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #002b=
+5c; background-color: #ffffff; border-left: 1px solid #cccccc; border-right:=
+ 1px solid #cccccc;"><a target=3D"_blank" href=3D"https://barraganforms.house.go=
+v/components/redirect/r.aspx?ID=3D1583-1040746" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"facebook icon" width=3D"32" sr=
+c=3D"https://barraganforms.house.gov/images/email/facebook.png" style=3D"-ms-int=
+erpolation-mode: bicubic;border-width: 0px; border-style: solid; width: 32px=
+;"></a> &nbsp;<a target=3D"_blank" href=3D"https://barraganforms.house.gov/compo=
+nents/redirect/r.aspx?ID=3D1584-1040746" style=3D"-webkit-text-size-adjust: 100%=
+; -ms-text-size-adjust: 100%;"><img alt=3D"twitter icon" width=3D"32" src=3D"https=
+://barraganforms.house.gov/images/email/twitter.png" style=3D"-ms-interpolatio=
+n-mode: bicubic;border-width: 0px; border-style: solid; width: 32px;"></a> &=
+nbsp;<a target=3D"_blank" href=3D"https://barraganforms.house.gov/components/red=
+irect/r.aspx?ID=3D1585-1040746" style=3D"-webkit-text-size-adjust: 100%; -ms-tex=
+t-size-adjust: 100%;"><img alt=3D"instagram icon" width=3D"32" src=3D"https://barr=
+aganforms.house.gov/images/email/instagram.png" style=3D"-ms-interpolation-mod=
+e: bicubic;border-width: 0px; border-style: solid; width: 32px;"></a> </td><=
+/tr><tr><td valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;height:30px; background-color: #ffffff; bor=
+der-left: 1px solid #cccccc; border-right: 1px solid #cccccc; border-bottom:=
+ 1px solid #cccccc;">&nbsp; </td></tr></tbody></table><table role=3D"presentat=
+ion" width=3D"100%" align=3D"center" style=3D"font-family: Georgia, times, serif; =
+background-color: #ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" margi=
+nheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><tbody><tr><td vali=
+gn=3D"middle" align=3D"center" style=3D"color: #000000; font-size: 16px; text-alig=
+n: left;"><img src=3D"https://barraganforms.house.gov/images/spacerx422-104074=
+6.open" width=3D"20" height=3D"1" style=3D"height: 1px"> <br><a href=3D"https://barr=
+aganforms.house.gov/news/email/show.aspx?ID=3DIYFH4XQGBO6HO">Click Here</a> to=
+ view this email in your browser <br><a href=3D"https://barraganforms.house.go=
+v/Forms/EmailSignup/?Delete=3Dtrue&amp;MessageID=3D422&amp;Email=3DCA44AllStaff@ma=
+il.house.gov">Click Here</a> to be removed from this list </td></tr></tbody>=
+</table></body></html>
+
+--B_3694803803_2165265665--
+

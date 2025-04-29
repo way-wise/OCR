@@ -1,0 +1,843 @@
+Received: from SJ0PR09MB11030.namprd09.prod.outlook.com
+ (2603:10b6:a03:50c::21) by SA1PR09MB10004.namprd09.prod.outlook.com with
+ HTTPS; Tue, 20 Jun 2023 20:25:30 +0000
+Received: from BL0PR0901CA0003.namprd09.prod.outlook.com
+ (2603:10b6:208:1c0::13) by SJ0PR09MB11030.namprd09.prod.outlook.com
+ (2603:10b6:a03:50c::21) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6500.37; Tue, 20 Jun
+ 2023 20:25:28 +0000
+Received: from BL0GCC02FT013.eop-gcc02.prod.protection.outlook.com
+ (2a01:111:f400:7d05::200) by BL0PR0901CA0003.outlook.office365.com
+ (2603:10b6:208:1c0::13) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6500.37 via Frontend
+ Transport; Tue, 20 Jun 2023 20:25:27 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.51.115)
+ smtp.mailfrom=mail.house.gov; dkim=fail (body hash did not verify)
+ header.d=house.gov;dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.51.115 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.51.115;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.51.115) by
+ BL0GCC02FT013.mail.protection.outlook.com (10.97.10.80) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.6521.23 via Frontend Transport; Tue, 20 Jun 2023 20:25:27 +0000
+Received: from EXCH1922.US.House.gov (143.228.51.114) by EXCH1923.US.House.gov
+ (143.228.51.115) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1118.26; Tue, 20 Jun
+ 2023 16:25:26 -0400
+Received: from serg-bulk1-a.house.gov (143.228.42.4) by EXCH1922.US.House.gov
+ (143.228.51.114) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1118.26 via Frontend
+ Transport; Tue, 20 Jun 2023 16:25:26 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=from : to : date :
+ subject : content-type : message-id : mime-version; s=august2019-msgb-hg;
+ bh=AlKDkUwsnkWLn4uaT+70umLFXPQXCRP9F9Fs5ZzZdb0=;
+ b=tSBYJNDWEzSivZqcCmeBh7nqeI9++JKh4bz49h8GYDUVjlWK9d/5RGw7FLooA3Gt1mdU
+ 0Qewh258MkCQAHJvHfpPQxxtUx5P+6CsyvC55rI4sPi1Azoww52cpTWrStnx7p1gUqa+
+ xl7bHrZE4PrbQucKhKKvgZ3s0HY8NaGgv5JawNOilcnxRbnF48NrBXwvTOU4ST69vN+W
+ 5RTi67cG+wsSxWoiLcCd9WWm+hOwW28NEN3BxCDKwrWacnf+XbGN9dyvXMoGz9f53FJc
+ EkzuWfnMg3S2Zo03HLh8Z6NUawhfgo+jE9nXcM2ejQWl3e18Q4vzrR2bt8/vzr9S+dpI gQ== 
+Received: from firesideadmin02 (firesideadmin02.us.house.gov [143.228.113.54])
+	by serg-bulk1-a.house.gov (8.17.1.19/8.17.1.19) with ESMTP id 35KKPQev014530;
+	Tue, 20 Jun 2023 16:25:26 -0400
+Message-Id: <3r97yph4rp-1@serg-bulk1-a.house.gov>
+envelope-from: Rep.Nathaniel.Moran@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+X-House-Vendor-Seg: Fireside21-1
+From: "Congressman Nathaniel Moran" <Rep.Nathaniel.Moran@mail.house.gov>
+To: Emily.Hall@mail.house.gov
+Date: 20 Jun 2023 16:25:26 -0400
+Subject: TEST Emergency Resources Available for East Texans
+Content-Type: multipart/alternative;
+ boundary=--boundary_1642_b5ccd93a-a8d7-4d1d-87a8-e171944f0f31
+X-Proofpoint-Virus-Version: vendor=baseguard
+ engine=ICAP:2.0.254,Aquarius:18.0.957,Hydra:6.0.591,FMLib:17.11.176.26
+ definitions=2023-06-20_15,2023-06-16_01,2023-05-22_02
+Return-Path: Rep.Nathaniel.Moran@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1923.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 20 Jun 2023 20:25:27.5389
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 1e71ae59-337c-4346-92ed-08db71cc7c47
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1922.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted:
+ BL0GCC02FT013.eop-gcc02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ BL0GCC02FT013.eop-gcc02.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ BL0GCC02FT013:EE_|SJ0PR09MB11030:EE_|SA1PR09MB10004:EE_
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: 1e71ae59-337c-4346-92ed-08db71cc7c47
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:143.228.51.115;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:;DIR:INT;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 20 Jun 2023 20:25:27.5077
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 1e71ae59-337c-4346-92ed-08db71cc7c47
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.51.115];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1922.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SJ0PR09MB11030
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.5018098
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.6521.020
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(425001)(930097);
+X-Microsoft-Antispam-Message-Info:
+	ykotOcDvPC1RzDVVbvqeIzTj2ZBcKMBoE3Vho0Pey+CUpSc2+ONg7Q4us3pEGrg1cNu4v5wgCoEqZqWMSUJsNTPPDP9rJA1oxutBQ2BggOvxErcxzXfkCPkoRLKqg6coaOzDTPrdKIxqJweCFBtGddhU7XC44HDjAm1R36suXl9e1Eta0Pf6YCG75JrTV6EaACjQZK2tvkRwd5mG9nacKpvY19DxrynxjylPk1s/0m9v7ceQiLHPqR4TWvGcr0ECVCusq5uUFinjy+zA1cPhMJpZWGICCvqGca0vfr58aV5Q72qjYXZ6sH5FuaNQCDxNBJ1q/368DdjOlNpDGkaE2tnAv6enfe9wWmGLX6156CjvUQTJNF7wmB1wBqUOpG8xDLxHv7L8V+Aoup2dkdYaRB/eYwZh1pYsI6wBMNofI0uw+2YXaLOOlf5DJNDA30OXbRK7ql8VfWkJs//wf+sc8LS8gxld1zuEd/mqBnetAFgPsDmzYHSLIr/apw+xtE9NVs8maLHs7SBM8u5FA+ZI+uZuDmubcNtBOyZqYMxEa/kO64j80cDxkarzXkat3V+brcFSCXx9wzEt7FdI4s5ZbBsaGa93WM17RKOwoEW//wm8UumybWcEsY1dTe41lOG5PFAqEkudnXv6BWrMYS71fOSi3PFGILD0tQFLTaKvaWYMUXwLaicI4gi0NfIATAI/AbX3GQJTn0vNg7Cuf3app8wSQlayIL8BmH7h7rNpKzmo9SJ2raxUALTCE0t9vImQ7khVrjSL/1RhwGV6898zsg==
+MIME-Version: 1.0
+
+----boundary_1642_b5ccd93a-a8d7-4d1d-87a8-e171944f0f31
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Representative Nathaniel Moran  (https://moran.house.gov)
+
+Friends,
+East Texas was devastated by a series of storms this past week - leaving th=
+ousands of residents with damage to their homes and businesses, and many mo=
+re still without power.
+
+My team and I have been in close contact with local officials, state agenci=
+es, and electric delivery companies to ensure federal support of local effo=
+rts.
+
+Amid rising temperatures, several communities have opened cooling centers f=
+or East Texans in need of a place to escape the heat. An updated list of co=
+oling centers is available by clickingHERE(https://urldefense.com/v3/__http=
+s://tdem.maps.arcgis.com/apps/instant/interactivelegend/index.html?appid=3D=
+063f8332ed024ebe8cf0760576311d0f__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!GL_Gjv=
+4bNF9mxHbWTAGfvlTG6Nr3w6JEF8B42sZhS41S4850YdPWeyyduijcqlu4XRQbgojhNlEGGcusl=
+cdSShlRiMXBdLBTYSqW3wtT$ ) .
+
+If your home or business was damaged in the recent storms, you can report t=
+hat damage to the Texas Division of Emergency Management by clickingHERE(ht=
+tps://urldefense.com/v3/__https://damage.tdem.texas.gov/__;!!Ckt11KVezJIME5=
+1BYf4a6hrLATHilnk!GL_Gjv4bNF9mxHbWTAGfvlTG6Nr3w6JEF8B42sZhS41S4850YdPWeyydu=
+ijcqlu4XRQbgojhNlEGGcuslcdSShlRiMXBdLBTYRfidGz1$ ) .
+
+Thank you to our first responders who quickly jumped into action, and thank=
+ you to the city and county-level elected leaders and emergency management =
+coordinators, who provide the first level of response in these tough situat=
+ions and who are the first point of contact for citizens needing assistance=
+.=20
+
+Stay steady. Keep up the great work serving others. It is an honor to be yo=
+ur voice in Congress and to stand with you during these times.
+
+With gratitude,
+
+
+----boundary_1642_b5ccd93a-a8d7-4d1d-87a8-e171944f0f31
+Content-Location: https://moran.house.gov/
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>Representative Nathaniel Moran</title>
+       =20
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1">
+        <!--[if !mso]><!-->
+        <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![e=
+ndif]-->
+        <style>body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default t=
+ext sizes */ img{-ms-interpolation-mode: bicubic;} /* Allow smoother render=
+ing of resized image in Internet Explorer *//* RESET STYLES */img { border:=
+ 0; height: auto; line-height: 100%; outline: none; text-decoration: none; =
+}table { border-collapse: collapse !important; }body { height: 100% !import=
+ant; margin: 0 !important; padding: 0 !important; width: 100% !important; }=
+strong { font-weight: bold; } /* Editor reset *//* FIRESIDE STYLES */.compo=
+nent img {max-width:600px;}.component table {mso-table-rspace:10pt; border-=
+collapse:collapse;}.component { padding: 0px !important; }.press {padding-b=
+ottom: 0px;}</style><style>@media all and (max-width:650px) {            .i=
+mage-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td, .image-2, .img-2 =
+img, .image-2 tr, .image-2 td {max-width: 100% !important; width: 100% !imp=
+ortant;}            .responsive-table {width:100% !important;}            .=
+responsive-table img {max-width:100% !important; height: auto !important;} =
+           .press .component, .press td {text-align:center;}            .co=
+mponent { margin-left: 20px; margin-right: 20px;}            .component .re=
+sponsive-table { margin-left: 0px !important; margin-right: 0px !important;=
+}            .wide .video-thumb { width: 100% !important;height: auto !impo=
+rtant; }             .wide.video-container { width: 100% !important; }     =
+    .component.full-width {margin-left: 0px; margin-right: 0px; }   }</styl=
+e><style type=3D"text/css">
+            /* CLIENT-SPECIFIC STYLES */
+            body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text=
+ sizes */
+            table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Rem=
+ove spacing between tables in Outlook 2007 and up */
+            img{-ms-interpolation-mode: bicubic;} /* Allow smoother renderi=
+ng of resized image in Internet Explorer */
+            /* RESET STYLES */
+            img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: =
+0 !important; width: 100% !important; }
+            strong { font-weight: bold; } /* Editor reset */
+            /* FIRESIDE STYLES */
+            .component img {max-width:600px;}
+            .component table {mso-table-rspace:10pt; border-collapse:collap=
+se; font-family: Arial, Helvetica, sans-serif;}
+            .component td, td {font-family: Arial, Helvetica, sans-serif;}
+            .component { padding: 0px !important; }
+            .press {padding-bottom: 0px;}
+            .caption-1 td {font-family: Arial, Helvetica, sans-serif;}
+            /* Margin/NoMargin STYLES */
+            .component.full-width{ overflow: hidden; margin: 0px; }
+            /* HEADER STYLES */
+            .header-bar {width: 100%;}
+            .header-bar-margin {background-color:#ffffff;}
+            .header-bar h2 {margin: 0 !important; padding: 0 !important; co=
+lor: #000000 !important;text-align: center;font-size: 24px !important;font-=
+weight: bold !important; }
+            .survey-content > table > tbody tr td { border-color: #0D4884 !=
+important; }
+            .survey-content input.survey-submit { font-family: Arial, Helve=
+tica, sans-serif !important; }
+        </style>       =20
+        <style id=3D"media-queries">=20
+            @media all and (max-width:650px) {
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max=
+-width: 100% !important; width: 100% !important;}
+            .responsive-table {width:100% !important;}
+            .responsive-table img {max-width:100% !important; height: auto =
+!important;}
+            .press .component, .press td, .split .component, .split .compon=
+ent td, .split td {text-align:center;}
+            .component { margin-left: 20px; margin-right: 20px;}
+            .component .responsive-table { margin-left: 0px !important; mar=
+gin-right: 0px !important;}
+            .wide .video-thumb { width: 100% !important;height: auto !impor=
+tant; }=20
+            .wide.video-container { width: 100% !important; }
+            }
+        </style>
+       =20
+    <!--[if (gte mso 9)|(IE)]>
+                                            <style>=20
+                                        </style>
+                                        <![endif]--></head>
+    <body style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%;margin: 0px !important; padding: 0px !important;">
+        <div id=3D"preview-text" style=3D"display: none; font-size: 1px; co=
+lor: #fefefe; line-height: 1px; font-family: Arial, Helvetica, sans-serif; =
+max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">Friends, Ea=
+st Texas was devastated by a series of storms this past week - leaving thou=
+sands of residents with damage to their homes and businesses, and many more=
+ still without power.&nbsp;My team and I have been in close contact with lo=
+cal officials, state agencies, and electric delivery companies to ensure fe=
+deral support of local efforts.&nbsp;Amid rising temperatures, several comm=
+unities have opened cooling centers for East Texans in need of a place to e=
+scape the heat. An updated list of cooling centers is available by clicking=
+&nbsp;HERE.&nbsp;If your home or business was damaged in the recent storms,=
+ you can report that damage to the Texas Division of Emergency Management b=
+y clicking&nbsp;HERE.&nbsp;Thank you to our first responders who quickly ju=
+mped into action, and thank you to the city and county-level elected leader=
+s and emergency management coordinators, who provide the first level of res=
+ponse in these tough situations and who are the first point of contact for =
+citizens needing assistance. &nbsp; Stay steady. Keep up the great work ser=
+ving others. It is an honor to be your voice in Congress and to stand with =
+you during these times.&nbsp;With gratitude, </div>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color: #=
+ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0=
+" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td valign=3D"middle" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;background-color: #ffffff;">
+                    <table role=3D"presentation" cellpadding=3D"10" cellspa=
+cing=3D"0" align=3D"center" width=3D"100%" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #000=
+000; font-size: 12px; font-family: Arial, Helvetica, sans-serif; text-align=
+: center;">
+                                <a href=3D"https://moranforms.house.gov/for=
+ms/emailsignup" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adju=
+st: 100%;color: #000000; text-decoration: none; font-size: 12px;">Enews Sig=
+n Up</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href=3D"https://moran.house.gov" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #0000=
+00; text-decoration: none;font-size: 12px;">Visit My Website</a>&nbsp;&nbsp=
+;|&nbsp;&nbsp;<a href=3D"[link]" style=3D"-webkit-text-size-adjust: 100%; -=
+ms-text-size-adjust: 100%;color: #000000; text-decoration: none; font-size:=
+ 12px;">View Online</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color:=
+ #ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D=
+"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td align=3D"center" valign=3D"top" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvet=
+ica, sans-serif; font-size: 16px;">
+                        <div class=3D"region" id=3D"region-1"><div class=3D=
+"component full-width" style=3D"padding: 0px !important;"> <div class=3D"im=
+age" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 0px; margin-left: 0px;" width=3D"650">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;"><a href=3D"https://moran.house.gov" target=3D"_blank" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img style=3D"=
+max-width:600px;-ms-interpolation-mode: bicubic;vertical-align: bottom; max=
+-width: 650px;" alt=3D"Representative Nathaniel Moran" src=3D"https://moran=
+forms.house.gov/uploadedphotos/highresolution/878b542f-5133-4cdb-b8d3-17c42=
+b88daa8.jpg"></a></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;background-color: #ffffff; font-family: Arial, Helvetica, sa=
+ns-serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D=
+"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td class=3D"responsive-table" valign=3D"top" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Ari=
+al, Helvetica, sans-serif; font-size: 16px; color: #000000;">
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class=3D"region" id=3D"region-2"><div class=3D=
+"component " style=3D"padding: 0px !important;"> <div class=3D"editable" st=
+yle=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><d=
+iv class=3D"component-template" style=3D"overflow: hidden;"><span style=3D"=
+font-family:Times New Roman,Times,serif;"></span><p style=3D"margin: 0;text=
+-align:start"><span style=3D"font-family:Times New Roman,Times,serif;"><spa=
+n style=3D"font-size:medium"><span style=3D"color:#000000"><span style=3D"f=
+ont-style:normal"><span style=3D"font-weight:400"><span style=3D"white-spac=
+e:normal"><span style=3D"text-decoration:none"><span lang=3D"EN"><span styl=
+e=3D"color:black">Friends,</span></span></span></span></span></span></span>=
+</span></span></p><p style=3D"margin: 0;text-align:start"><span style=3D"fo=
+nt-family:Times New Roman,Times,serif;"><br><span style=3D"font-size:medium=
+"><span style=3D"color:#000000"><span style=3D"font-style:normal"><span sty=
+le=3D"font-weight:400"><span style=3D"white-space:normal"><span style=3D"te=
+xt-decoration:none"><span lang=3D"EN"><span style=3D"color:black">East Texa=
+s was devastated by a series of storms this past week - leaving thousands o=
+f residents with damage to their homes and businesses, and many more still =
+without power.</span></span></span></span></span></span></span></span></spa=
+n></p><p style=3D"margin: 0;text-align:start"><span style=3D"font-family:Ti=
+mes New Roman,Times,serif;"><span style=3D"font-size:medium"><span style=3D=
+"color:#000000"><span style=3D"font-style:normal"><span style=3D"font-weigh=
+t:400"><span style=3D"white-space:normal"><span style=3D"text-decoration:no=
+ne">&nbsp;</span></span></span></span></span></span></span></p><p style=3D"=
+margin: 0;text-align:start"><span style=3D"font-family:Times New Roman,Time=
+s,serif;"><span style=3D"font-size:medium"><span style=3D"color:#000000"><s=
+pan style=3D"font-style:normal"><span style=3D"font-weight:400"><span style=
+=3D"white-space:normal"><span style=3D"text-decoration:none"><span lang=3D"=
+EN"><span style=3D"color:black">My team and I have been in close contact wi=
+th local officials, state agencies, and electric delivery companies to ensu=
+re federal support of local efforts.</span></span></span></span></span></sp=
+an></span></span></span></p><p style=3D"margin: 0;text-align:start"><span s=
+tyle=3D"font-family:Times New Roman,Times,serif;"><span style=3D"font-size:=
+medium"><span style=3D"color:#000000"><span style=3D"font-style:normal"><sp=
+an style=3D"font-weight:400"><span style=3D"white-space:normal"><span style=
+=3D"text-decoration:none">&nbsp;</span></span></span></span></span></span><=
+/span></p><p style=3D"margin: 0;text-align:start"><span style=3D"font-famil=
+y:Times New Roman,Times,serif;"><span style=3D"font-size:medium"><span styl=
+e=3D"color:#000000"><span style=3D"font-style:normal"><span style=3D"font-w=
+eight:400"><span style=3D"white-space:normal"><span style=3D"text-decoratio=
+n:none"><span lang=3D"EN"><span style=3D"color:black">Amid rising temperatu=
+res, several communities have opened cooling centers for East Texans in nee=
+d of a place to escape the heat. An updated list of cooling centers is avai=
+lable by clicking</span></span></span></span></span></span></span><span sty=
+le=3D"font-style:normal"><span style=3D"font-weight:400"><span style=3D"whi=
+te-space:normal"><span style=3D"text-decoration:none"><span style=3D"color:=
+#0000ff;"><span lang=3D"EN">&nbsp;</span></span><b><span lang=3D"EN"><a dat=
+a-cke-saved-href=3D"https://tdem.maps.arcgis.com/apps/instant/interactivele=
+gend/index.html?appid=3D063f8332ed024ebe8cf0760576311d0f" href=3D"https://u=
+rldefense.com/v3/__https://tdem.maps.arcgis.com/apps/instant/interactiveleg=
+end/index.html?appid=3D063f8332ed024ebe8cf0760576311d0f__;!!Ckt11KVezJIME51=
+BYf4a6hrLATHilnk!GL_Gjv4bNF9mxHbWTAGfvlTG6Nr3w6JEF8B42sZhS41S4850YdPWeyydui=
+jcqlu4XRQbgojhNlEGGcuslcdSShlRiMXBdLBTYSqW3wtT$" title=3D"https://tdem.maps=
+.arcgis.com/apps/instant/interactivelegend/index.html?appid=3D063f8332ed024=
+ebe8cf0760576311d0f" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size=
+-adjust: 100%;"><span style=3D"color:#0000ff;">HERE</span></a></span></b></=
+span></span></span></span><span style=3D"color:#000000"><span style=3D"font=
+-style:normal"><span style=3D"font-weight:400"><span style=3D"white-space:n=
+ormal"><span style=3D"text-decoration:none"><span lang=3D"EN"><span style=
+=3D"color:black">.</span></span></span></span></span></span></span></span><=
+/span></p><p style=3D"margin: 0;text-align:start"><span style=3D"font-famil=
+y:Times New Roman,Times,serif;"><span style=3D"font-size:medium"><span styl=
+e=3D"color:#000000"><span style=3D"font-style:normal"><span style=3D"font-w=
+eight:400"><span style=3D"white-space:normal"><span style=3D"text-decoratio=
+n:none">&nbsp;</span></span></span></span></span></span></span></p><p style=
+=3D"margin: 0;text-align:start"><span style=3D"font-family:Times New Roman,=
+Times,serif;"><span style=3D"font-size:medium"><span style=3D"color:#000000=
+"><span style=3D"font-style:normal"><span style=3D"font-weight:400"><span s=
+tyle=3D"white-space:normal"><span style=3D"text-decoration:none"><span lang=
+=3D"EN"><span style=3D"color:black">If your home or business was damaged in=
+ the recent storms, you can report that damage to the Texas Division of Eme=
+rgency Management by clicking&nbsp;</span></span></span></span></span></spa=
+n></span><span style=3D"font-style:normal"><span style=3D"font-weight:400">=
+<span style=3D"white-space:normal"><span style=3D"text-decoration:none"><b>=
+<span lang=3D"EN"><a data-cke-saved-href=3D"https://damage.tdem.texas.gov/"=
+ href=3D"https://urldefense.com/v3/__https://damage.tdem.texas.gov/__;!!Ckt=
+11KVezJIME51BYf4a6hrLATHilnk!GL_Gjv4bNF9mxHbWTAGfvlTG6Nr3w6JEF8B42sZhS41S48=
+50YdPWeyyduijcqlu4XRQbgojhNlEGGcuslcdSShlRiMXBdLBTYRfidGz1$" title=3D"https=
+://damage.tdem.texas.gov/" style=3D"-webkit-text-size-adjust: 100%; -ms-tex=
+t-size-adjust: 100%;"><span style=3D"color:#0000ff;">HERE</span></a></span>=
+</b></span></span></span></span><span style=3D"color:#000000"><span style=
+=3D"font-style:normal"><span style=3D"font-weight:400"><span style=3D"white=
+-space:normal"><span style=3D"text-decoration:none"><span lang=3D"EN"><span=
+ style=3D"color:black">.</span></span></span></span></span></span></span></=
+span></span></p><p style=3D"margin: 0;text-align:start"><span style=3D"font=
+-family:Times New Roman,Times,serif;"><span style=3D"font-size:medium"><spa=
+n style=3D"color:#000000"><span style=3D"font-style:normal"><span style=3D"=
+font-weight:400"><span style=3D"white-space:normal"><span style=3D"text-dec=
+oration:none">&nbsp;</span></span></span></span></span></span></span></p><p=
+ style=3D"margin: 0;text-align:start"><span style=3D"font-family:Times New =
+Roman,Times,serif;"><span style=3D"font-size:medium"><span style=3D"color:#=
+000000"><span style=3D"font-style:normal"><span style=3D"font-weight:400"><=
+span style=3D"white-space:normal"><span style=3D"text-decoration:none"><spa=
+n lang=3D"EN"><span style=3D"color:black">Thank you to our first responders=
+ who quickly jumped into action, and thank you to the city and county-level=
+ elected leaders and emergency management coordinators, who provide the fir=
+st level of response in these tough situations and who are the first point =
+of contact for citizens needing assistance. &nbsp;</span></span></span></sp=
+an></span></span></span></span></span></p><p style=3D"margin: 0;text-align:=
+start"><span style=3D"font-family:Times New Roman,Times,serif;"><br></span>=
+</p><p style=3D"margin: 0;text-align:start"><span style=3D"font-family:Time=
+s New Roman,Times,serif;"><span style=3D"font-size:medium"><span style=3D"c=
+olor:#000000"><span style=3D"font-style:normal"><span style=3D"font-weight:=
+400"><span style=3D"white-space:normal"><span style=3D"text-decoration:none=
+"><span lang=3D"EN"><span style=3D"color:black">Stay steady. Keep up the gr=
+eat work serving others. It is an honor to be your voice in Congress and to=
+ stand with you during these times.</span></span></span></span></span></spa=
+n></span></span></span></p><p style=3D"margin: 0;text-align:start"><span st=
+yle=3D"font-family:Times New Roman,Times,serif;"><span style=3D"font-size:m=
+edium"><span style=3D"color:#000000"><span style=3D"font-style:normal"><spa=
+n style=3D"font-weight:400"><span style=3D"white-space:normal"><span style=
+=3D"text-decoration:none">&nbsp;</span></span></span></span></span></span><=
+/span></p><p style=3D"margin: 0;text-align:start"><span style=3D"font-famil=
+y:Times New Roman,Times,serif;"><span style=3D"font-size:medium"><span styl=
+e=3D"color:#000000"><span style=3D"font-style:normal"><span style=3D"font-w=
+eight:400"><span style=3D"white-space:normal"><span style=3D"text-decoratio=
+n:none"><span lang=3D"EN"><span style=3D"color:black">With gratitude,</span=
+></span></span></span></span></span></span></span></span><br></p><font face=
+=3D"Times New Roman, Times, serif"></font></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"signature" style=3D"overflow: hidden;width:100%">=20
+            <table role=3D"presentation" class=3D"responsive-table" align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-t=
+able-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collaps=
+e:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table=
+-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"">
+                <tbody>
+                    <tr>
+                        <td valign=3D"top" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%;">
+                            <table align=3D"left" class=3D"signature-table"=
+ role=3D"presentation" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;=
+mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 1=
+00%; -ms-text-size-adjust: 100%;table-layout: fixed;">
+                                <tbody>
+                                    <tr>
+                                        <td style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;">
+                                            <table role=3D"presentation" al=
+ign=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-=
+table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collap=
+se:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;bord=
+er-collapse: separate !important;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td valign=3D"top" =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                                            <div class=3D"n=
+g-binding" style=3D"overflow: hidden;"></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td valign=3D"top" =
+class=3D"image-td" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-a=
+djust: 100%;">
+                                                            <div class=3D"i=
+mg-1 image-container" style=3D"overflow: hidden;text-align:left"><img style=
+=3D"max-width:600px;-ms-interpolation-mode: bicubic;vertical-align: bottom;=
+ max-width: 200px; width: 200px !important;" src=3D"https://moranforms.hous=
+e.gov/images/email/sig.png" alt=3D"Nathaniel Moran Signature" width=3D"200"=
+></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class=3D"spacerRow"=
+ height=3D"0">
+                                                        <td style=3D"-webki=
+t-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-size:0%;line-heig=
+ht: 0px;">
+                                                            &nbsp;
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td valign=3D"top" =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                                            <div class=3D"n=
+g-binding" style=3D"overflow: hidden;">Nathaniel Moran<br>Member of Congres=
+s</div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div></div>
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color: #=
+0D4884;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0=
+" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #0D4884;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; backgro=
+und-color: #0D4884; font-family: arial, helvetica, sans-serif; font-size: 2=
+4px; text-align: center;">
+                    <h2 style=3D"font-family: arial, helvetica, sans-serif;=
+ font-size: 24px; margin: 0; font-weight: normal;">Office Locations</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #0D4884;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; backgro=
+und-color: #0D4884; padding: 0 20px;">
+                    <table role=3D"presentation" width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"10" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;text-align:center;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;text-align:=
+center;">
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"32=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: arial, helvetica, sans-serif; text-align:center; font-size: 14px=
+; color: #ffffff; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0=
+pt;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, san=
+s-serif;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: Arial, Helvetica, sans-serif; text-transform: uppercase;">=
+Washington, DC</strong><br>
+                                            1541 Longworth HOB<br>
+                                            Washington, DC  20515<br>
+                                            Phone: (202) 225-3035<br>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"32=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: arial, helvetica, sans-serif; text-align:center; font-size: 14px=
+; color: #ffffff; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0=
+pt;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, san=
+s-serif;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: Arial, Helvetica, sans-serif; text-transform: uppercase;">=
+Tyler, TX</strong><br>
+                                            1121 ESE Loop 323<br>
+                                            Suite 206<br>
+                                            Tyler, TX 75701<br>
+                                            (903) 561-6349
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"32=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: arial, helvetica, sans-serif; text-align:center; font-size: 14px=
+; color: #ffffff; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0=
+pt;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, san=
+s-serif;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: Arial, Helvetica, sans-serif; text-transform: uppercase;">=
+Texarkana, TX</strong><br>
+                                            2500 North Robison Rd.<br>
+                                            Suite 190<br>
+                                            Texarkana, TX
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+                 <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; backgro=
+und-color: #0D4884; padding: 0 20px;">
+                    <table role=3D"presentation" width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"10" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;text-align:center;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;text-align:=
+center;">
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"49=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: arial, helvetica, sans-serif; text-align:center; font-size: 14px=
+; color: #ffffff; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0=
+pt;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, san=
+s-serif;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: Arial, Helvetica, sans-serif; text-transform: uppercase;">=
+Longview, TX</strong><br>
+                                            101 E Methvin<br>
+                                            Suite 302<br>
+                                            Longview, TX 75601
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"49=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: arial, helvetica, sans-serif; text-align:center; font-size: 14px=
+; color: #ffffff; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0=
+pt;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, san=
+s-serif;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: Arial, Helvetica, sans-serif; text-transform: uppercase;">=
+Marshall, TX</strong><br>
+                                            100 N. Bolivar.<br>
+                                            Marshall, TX 75671
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #0D4884;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #0D4884; backgro=
+und-color: #0D4884;">
+                    <a target=3D"_blank" href=3D"https://urldefense.com/v3/=
+__https://www.facebook.com/RepNateMoran__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk=
+!GL_Gjv4bNF9mxHbWTAGfvlTG6Nr3w6JEF8B42sZhS41S4850YdPWeyyduijcqlu4XRQbgojhNl=
+EGGcuslcdSShlRiMXBdLBTYaWoapEl$" style=3D"-webkit-text-size-adjust: 100%; -=
+ms-text-size-adjust: 100%;"><img alt=3D"facebook icon" width=3D"32" src=3D"=
+https://moranforms.house.gov/images/email/facebook.png" style=3D"-ms-interp=
+olation-mode: bicubic;border-width: 0px; border-style: solid; width: 32px;"=
+></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://urldefense.c=
+om/v3/__https://twitter.com/RepNateMoran__;!!Ckt11KVezJIME51BYf4a6hrLATHiln=
+k!GL_Gjv4bNF9mxHbWTAGfvlTG6Nr3w6JEF8B42sZhS41S4850YdPWeyyduijcqlu4XRQbgojhN=
+lEGGcuslcdSShlRiMXBdLBTYchIJx5T$" style=3D"-webkit-text-size-adjust: 100%; =
+-ms-text-size-adjust: 100%;"><img alt=3D"twitter icon" width=3D"32" src=3D"=
+https://moranforms.house.gov/images/email/twitter.png" style=3D"-ms-interpo=
+lation-mode: bicubic;border-width: 0px; border-style: solid; width: 32px;">=
+</a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://urldefense.c=
+om/v3/__https://www.instagram.com/repnatemoran/__;!!Ckt11KVezJIME51BYf4a6hr=
+LATHilnk!GL_Gjv4bNF9mxHbWTAGfvlTG6Nr3w6JEF8B42sZhS41S4850YdPWeyyduijcqlu4XR=
+QbgojhNlEGGcuslcdSShlRiMXBdLBTYT_0s0z-$" style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;"><img alt=3D"instagram icon" width=3D"32=
+" src=3D"https://moranforms.house.gov/images/email/instagram.png" style=3D"=
+-ms-interpolation-mode: bicubic;border-width: 0px; border-style: solid; wid=
+th: 32px;"></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://urldefense.c=
+om/v3/__https://www.youtube.com/@RepNateMoran__;!!Ckt11KVezJIME51BYf4a6hrLA=
+THilnk!GL_Gjv4bNF9mxHbWTAGfvlTG6Nr3w6JEF8B42sZhS41S4850YdPWeyyduijcqlu4XRQb=
+gojhNlEGGcuslcdSShlRiMXBdLBTYRx9Wlvk$" style=3D"-webkit-text-size-adjust: 1=
+00%; -ms-text-size-adjust: 100%;"><img alt=3D"youtube icon" width=3D"32" sr=
+c=3D"https://moranforms.house.gov/images/email/youtube.png" style=3D"-ms-in=
+terpolation-mode: bicubic;border-width: 0px; border-style: solid; width: 32=
+px;"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #0D4884;">
+                    &nbsp;
+                    </td>
+                </tr>=20
+                <tr>
+                    <td valign=3D"middle" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;background-color: #0D4884;">
+                    <table role=3D"presentation" cellpadding=3D"0" cellspac=
+ing=3D"20" align=3D"center" width=3D"90%" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #0D4=
+884; font-size: 15px; font-family: Arial, Helvetica, sans-serif;">
+                                <a target=3D"_blank" href=3D"https://moranf=
+orms.house.gov/forms/emailsignup/?delete=3Dtrue" style=3D"-webkit-text-size=
+-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; text-decoration:n=
+one; font-family: Arial, Helvetica, sans-serif;">Unsubscribe</a>&nbsp;|&nbs=
+p;
+                                <a target=3D"_blank" href=3D"https://urldef=
+ense.com/v3/__https://www.facebook.com/sharer.php?u=3Dhttps:**Amoran.house.=
+gov*news*email*show.aspx*ID=3DZ3BQ2VKJG4FPK&amp;t=3D*subject*__;Ly8vLy8_W10=
+!!Ckt11KVezJIME51BYf4a6hrLATHilnk!GL_Gjv4bNF9mxHbWTAGfvlTG6Nr3w6JEF8B42sZhS=
+41S4850YdPWeyyduijcqlu4XRQbgojhNlEGGcuslcdSShlRiMXBdLBTYab-FFhn$" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; =
+text-decoration:none; font-family: Arial, Helvetica, sans-serif;">Share on =
+Facebook</a>&nbsp;|&nbsp;
+                                <a target=3D"_blank" href=3D"https://moranf=
+orms.house.gov/Components/Redirect/twitter.aspx?url=3Dhttps://moran.house.g=
+ov/news/email/show.aspx?ID=3DZ3BQ2VKJG4FPK&amp;name=3D[subject]" style=3D"-=
+webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; t=
+ext-decoration:none; font-family: Arial, Helvetica, sans-serif;">Share on T=
+witter</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #0D4884;">
+                    &nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>=
+
+----boundary_1642_b5ccd93a-a8d7-4d1d-87a8-e171944f0f31--

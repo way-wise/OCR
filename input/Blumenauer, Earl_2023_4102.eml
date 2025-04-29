@@ -1,0 +1,900 @@
+Received: from SJ0PR09MB9971.namprd09.prod.outlook.com (2603:10b6:a03:462::16)
+ by SA0PR09MB6635.namprd09.prod.outlook.com with HTTPS; Thu, 20 Apr 2023
+ 15:35:45 +0000
+Received: from CYXPR09CA0016.namprd09.prod.outlook.com (2603:10b6:930:d4::20)
+ by SJ0PR09MB9971.namprd09.prod.outlook.com (2603:10b6:a03:462::16) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6319.22; Thu, 20 Apr
+ 2023 15:35:44 +0000
+Received: from BL0GCC02FT024.eop-gcc02.prod.protection.outlook.com
+ (2a01:111:f400:7d05::208) by CYXPR09CA0016.outlook.office365.com
+ (2603:10b6:930:d4::20) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6319.25 via Frontend
+ Transport; Thu, 20 Apr 2023 15:35:44 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.151.104)
+ smtp.mailfrom=mail.house.gov; dkim=fail (body hash did not verify)
+ header.d=house.gov;dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.151.104 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.151.104;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.151.104) by
+ BL0GCC02FT024.mail.protection.outlook.com (10.97.10.104) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.6319.26 via Frontend Transport; Thu, 20 Apr 2023 15:35:44 +0000
+Received: from EXCH1914.US.House.gov (143.228.151.104) by
+ EXCH1914.US.House.gov (143.228.151.104) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.2.1118.26; Thu, 20 Apr 2023 11:35:41 -0400
+Received: from serg-bulk1-h.house.gov (143.228.145.31) by
+ EXCH1914.US.House.gov (143.228.151.104) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.2.1118.26 via Frontend Transport; Thu, 20 Apr 2023 11:35:41 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=message-id :
+ list-unsubscribe : from : to : date : subject : content-type :
+ mime-version; s=august2019-msgb-hg;
+ bh=CCU/YAe0QiGssDTjUfWWE93XzvjkJjo1Cls9Cgmf9tw=;
+ b=ofp0NmW9HuJ6iNShBY2dGH0EYE9Wi03FIJUVBw15A/dhpfD2C1BabQTAQ2KtRQkStoJX
+ WHu+j6xn6elnHzyRXDbouuErnU/p1+TVltGKyn7dJBe9PNxlXvxlgaN7cODLIDLIgtfR
+ V9mmRyq/4lefaaawD5BhY+b0AyvmzeU0ZUSd1RJViZ+x9XYnYIFb6LOQtfyZnxyoJxn7
+ IC3PkaYEflNJ2a8XZ+rerUTJ1XWeJKX2iV4JfU877v8h3wydJKg6V/Gsj2W4KlTfs6d9
+ tUrFOY/qrU4d5mA4MXXfDpiAVaopbbHRcAekPbvCc0q6oX7fraaEIm6G+r4X5LvuTTzZ ZA== 
+Received: from FIRESIDESERV03 (firesideserv03.us.house.gov [143.228.113.103])
+	by serg-bulk1-h.house.gov (8.17.1.19/8.17.1.19) with ESMTP id 33KFZf8E020818
+	for <Hunter.Spence@mail.house.gov>; Thu, 20 Apr 2023 11:35:41 -0400
+envelope-from: Congressman.EarlBlumenauer@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+Message-ID: <cAWz51f8eJ4Htde9dSRxPxE9E9iJrxDu+CBLn5hW0ivWjZAgjczEj5HEBSjp8drvaEALld/++w2rKRikv0Kgf5zj3kn3k4odNhFlq8OQ4a7Zg/hVs4dExv3mFeXEvlfehPeF7TXgQFKx6IJ1ifXlzKbgkFc4b4bNcSFdyfDOfIjSiA2v85vP015eeLQrjg9m@fireside21.com>
+X-House-Vendor-Seg: unmanaged
+List-Unsubscribe: <https://blumenauerforms.house.gov/forms/emailsignup/?Delete=true&MessageID=2290&Email=Hunter.Spence@mail.house.gov&Submit=true>
+Precedence: bulk
+From: "Blumenauer, Earl" <Congressman.EarlBlumenauer@mail.house.gov>
+To: Hunter.Spence@mail.house.gov
+Date: 20 Apr 2023 11:35:41 -0400
+Subject: Happy 4/20!
+Content-Type: multipart/alternative;
+ boundary=--boundary_1450634_83fbb330-d6c3-481f-8a47-69fd7d64d2d2
+X-Proofpoint-Virus-Version: vendor=baseguard
+ engine=ICAP:2.0.254,Aquarius:18.0.942,Hydra:6.0.573,FMLib:17.11.170.22
+ definitions=2023-04-20_11,2023-04-20_01,2023-02-09_01
+Return-Path: Congressman.EarlBlumenauer@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1914.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 20 Apr 2023 15:35:44.1805
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 6c3efd14-f073-4254-d699-08db41b4e7ca
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1914.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted:
+ BL0GCC02FT024.eop-gcc02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ BL0GCC02FT024.eop-gcc02.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ BL0GCC02FT024:EE_|SJ0PR09MB9971:EE_|SA0PR09MB6635:EE_
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: 6c3efd14-f073-4254-d699-08db41b4e7ca
+X-MS-Exchange-Organization-SCL: -1
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:143.228.151.104;CTRY:US;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SKI;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:;DIR:INT;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 20 Apr 2023 15:35:44.1649
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 6c3efd14-f073-4254-d699-08db41b4e7ca
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.151.104];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1914.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SJ0PR09MB9971
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.6643213
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.6319.022
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:1;jmr:0;auth:0;dest:C;OFR:CustomRules;ENG:(910001)(944506478)(944626604)(920097)(425001)(930097);
+X-Microsoft-Antispam-Message-Info:
+	aiWnXAdjUTLdcHidT717oiqtehF0SrXJWtrRybNBx6NohnLAiUWPYI76/8tGn9QeKoSqDN9I0jWHtKn2i74VhHdTVCmShV8pPR1jR+Dyo9jLHdw9KeHU1kGl3dxUJNN6/OfRmm9ismgvdovl43//uVrvh7Csvgv+DOfFDCFqZz2CN4JeW750bZU/otIE5xpuVzj4Qq2dX4+S+efE1kdlXHo1c4m+s4fWya/7xL4uzdBQ9dWLc8CHzTC625nmG2jeHSY8x7OyUvTFjdOVH19CsocHePJBMFCIKyGX+/4rVmxCOoY04zCLHnjXD8queqFF5pTxOWRbI/uD5IgeZ38bpVN0Jxk8Y3IVovxvH9YBF95CcrHI1dn7GhQLxozFm8a0b74HeU7jAORaEAKzRiKi1pj/48LDM1fpQwR/UqBfXb3uJbk7JMU/xCuLpPP2zz6Uj/sf3WwUMdiVWokx9vmjphJ2uRNVtkPpPXZYmdpfUr7G7+ngoacJBwZD+ENQuOiVVkYRSuXutwwMA3jlkuuErhtARJRcQ7o4LocfGyDjEUps8LI6bDiq3YqCvt3rswAAwqS9dC/7JwspyLnnLIHrAOR/OJ20Y+M8nqxSu2MPebiHzz1UqqOVry7SPnNLPp/+iuEL1DT9H6Mj7E38udiNPmPHD32rgl32VnHmfYrlpyBQJOLa0aQBO9HeC+682kspuLn1nTGGg0cu1HmPm+ME+adfK2DTpY7OTH5eP/PGZP0=
+MIME-Version: 1.0
+
+----boundary_1450634_83fbb330-d6c3-481f-8a47-69fd7d64d2d2
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+DQpVbnN1YnNjcmliZTogaHR0cHM6Ly9ibHVtZW5hdWVyZm9ybXMuaG91c2UuZ292L0Zv
+cm1zL0VtYWlsU2lnbnVwLz9EZWxldGU9dHJ1ZSZNZXNzYWdlSUQ9MjI5MCZFbWFpbD1I
+dW50ZXIuU3BlbmNlQG1haWwuaG91c2UuZ292
+----boundary_1450634_83fbb330-d6c3-481f-8a47-69fd7d64d2d2
+Content-Location: https://blumenauerforms.house.gov/
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>Happy 4/20!</title>
+       =20
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1">
+        <!--[if !mso]><!-->
+        <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![e=
+ndif]-->
+        <style>body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default t=
+ext sizes */ img{-ms-interpolation-mode: bicubic;} /* Allow smoother render=
+ing of resized image in Internet Explorer *//* RESET STYLES */img { border:=
+ 0; height: auto; line-height: 100%; outline: none; text-decoration: none; =
+}table { border-collapse: collapse !important; }body { height: 100% !import=
+ant; margin: 0 !important; padding: 0 !important; width: 100% !important; }=
+strong { font-weight: bold; } /* Editor reset *//* FIRESIDE STYLES */.compo=
+nent img {max-width:600px;}.component table {mso-table-rspace:10pt; border-=
+collapse:collapse;}.component { padding: 0px !important; }.press {padding-b=
+ottom: 0px;}</style><style>@media all and (max-width:650px) {            .i=
+mage-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td, .image-2, .img-2 =
+img, .image-2 tr, .image-2 td {max-width: 100% !important; width: 100% !imp=
+ortant;}            .responsive-table {width:100% !important;}            .=
+responsive-table img {max-width:100% !important; height: auto !important;} =
+           .press .component, .press td {text-align:center;}            .co=
+mponent { margin-left: 20px; margin-right: 20px;}            .component .re=
+sponsive-table { margin-left: 0px !important; margin-right: 0px !important;=
+}            .wide .video-thumb { width: 100% !important;height: auto !impo=
+rtant; }             .wide.video-container { width: 100% !important; }     =
+    .component.full-width {margin-left: 0px; margin-right: 0px; }   }</styl=
+e><style type=3D"text/css">
+            /* CLIENT-SPECIFIC STYLES */
+            body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text=
+ sizes */
+            table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Rem=
+ove spacing between tables in Outlook 2007 and up */
+            img{-ms-interpolation-mode: bicubic;} /* Allow smoother renderi=
+ng of resized image in Internet Explorer */
+            /* RESET STYLES */
+            img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: =
+0 !important; width: 100% !important; }
+            strong { font-weight: bold; } /* Editor reset */
+            /* FIRESIDE STYLES */
+            .component img {max-width:600px;}
+            .component table {mso-table-rspace:10pt; border-collapse:collap=
+se; font-family: Arial, Helvetica, sans-serif;}
+            .component td, td {font-family: Arial, Helvetica, sans-serif;}
+            .component { padding: 0px !important; }
+            .press {padding-bottom: 0px;}
+            .caption-1 td {font-family: Arial, Helvetica, sans-serif;}
+            /* Margin/NoMargin STYLES */
+            .component.full-width{ overflow: hidden; margin: 0px; }
+            /* HEADER STYLES */
+            .header-bar {width: 100%;}
+            .header-bar-margin {background-color:#ffffff;}
+            .header-bar h2 {margin: 0 !important; padding: 0 !important; co=
+lor: #000000;text-align: center;font-size: 24px;font-weight: bold; }
+            .survey-content > table > tbody tr td { border-color: #59753e !=
+important; }
+            .survey-content input.survey-submit { font-family: Arial, Helve=
+tica, sans-serif !important; }
+        </style>    =20
+        <style id=3D"media-queries">=20
+            @media all and (max-width:650px) {
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max=
+-width: 100% !important; width: 100% !important;}
+            .responsive-table {width:100% !important;}
+            .responsive-table img {max-width:100% !important; height: auto =
+!important;}
+            .press .component, .press td, .split .component, .split .compon=
+ent td, .split td {text-align:center;}
+            .component { margin-left: 20px; margin-right: 20px;}
+            .component .responsive-table { margin-left: 0px !important; mar=
+gin-right: 0px !important;}
+            .wide .video-thumb { width: 100% !important;height: auto !impor=
+tant; }=20
+            .wide.video-container { width: 100% !important; }
+            }
+        </style>
+       =20
+    <!--[if (gte mso 9)|(IE)]>
+                                            <style>=20
+                                        </style>
+                                        <![endif]--></head>
+    <body style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%;margin: 0px !important; padding: 0px !important;">
+        <div id=3D"preview-text" style=3D"display: none; font-size: 1px; co=
+lor: #fefefe; line-height: 1px; font-family: Arial, Helvetica, sans-serif; =
+max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">Dear Friend=
+s, &nbsp;In 1973, Oregon led the nation as the first state&nbsp;to decrimin=
+alize cannabis. We have continued to lead on this crucial issue for the sub=
+sequent 50 years, and it is past time for the federal government to catch u=
+p. &nbsp;We made important progress last year. The House of Representatives=
+ passed my MORE Act, the gold standard of cannabis reform. In July, my frie=
+nds Senators Schumer, Wyden, and Booker introduced the Senate=E2=80=99s fir=
+st comprehensive reform package. In December, my Medical Marijuana and Cann=
+abidiol Research Expansion Act became the first standalone federal cannabis=
+ reform signed into law since 1970. This legislation will help get the fede=
+ral government out of the way of researchers studying the impacts and thera=
+peutic benefits of cannabis. Critically, it will help us finally develop an=
+ accurate test for impairment.&nbsp;Then there are the historic actions by =
+the Biden-Harris Administration. In October, President Biden announced he w=
+ould pardon non-violent cannabis offenders, spurring several states, includ=
+ing Oregon to follow suit. No president has stepped forward to pardon low-l=
+evel marijuana offenders at this scale before.&nbsp;At the same time, Presi=
+dent Biden directed his administration to review the scheduling of cannabis=
+. Cannabis was classified in 1971 as a Schedule I substance out of stigma, =
+not science. I have repeatedly urged the Administration to deschedule marij=
+uana completely. I will continue working to ensure&nbsp;this&nbsp;decision =
+is based on the evidence available, not outdated views of&nbsp;cannabis and=
+ that the&nbsp;public can be fully informed of this&nbsp;process.&nbsp;&nbs=
+p;I am also leading bipartisan, commonsense reforms that can pass in a divi=
+ded Congress. I am working to pass the SAFE Banking Act, critically overdue=
+ legislation to finally allow state-legal cannabis operations access bankin=
+g services. The absence of this legislation creates dangerous conditions fo=
+r cannabis workers and small businesses.&nbsp;Last month, I introduced legi=
+slation to ensure our veterans have equal access to medical marijuana as th=
+eir civilian counterparts. And earlier this week, I introduced legislation =
+to allow state-legal cannabis businesses to take common tax deductions asso=
+ciated with running a business. &nbsp;One thing is clear: the American publ=
+ic is not waiting. States are not waiting. Today, 38 states and the Distric=
+t of Columbia and multiple U.S. territories have legalized medical marijuan=
+a, and 21 states have approved adult use. After 50 years of our nation livi=
+ng with the tragic, disastrous consequences of the failed war on drugs, it =
+is past time for the federal government to catch up.&nbsp;&nbsp;This 4/20, =
+I am celebrating the progress we have made together and am energized by the=
+ work ahead. </div>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;background-color: #ffffff; font-family: Arial, Helvetica, sa=
+ns-serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"20" marginheight=
+=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td class=3D"split" align=3D"center" valign=3D"top" sty=
+le=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                    <table align=3D"left" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" width=3D"49.9%" class=3D"responsive-table" role=3D"presenta=
+tion" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"=
+>
+                        <tbody>
+                            <tr>
+                                <td align=3D"center" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                <table border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" width=3D"100%" role=3D"presentation" style=3D"-webkit-text-siz=
+e-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                    <tbody>
+                                        <tr>
+                                            <td align=3D"left" style=3D"-we=
+bkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial,=
+ helvetica, sans-serif; font-size: 12px; color: #222222;">
+                                            <strong style=3D"font-weight: b=
+old;">Update | April 20, 2023</strong>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table align=3D"left" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" width=3D"49.9%" class=3D"responsive-table" role=3D"presenta=
+tion" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"=
+>
+                        <tbody>
+                            <tr>
+                                <td align=3D"center" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                <table border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" width=3D"100%" role=3D"presentation" style=3D"-webkit-text-siz=
+e-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                    <tbody>
+                                        <tr>
+                                            <td align=3D"right" style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial=
+, helvetica, sans-serif; font-size: 12px; color: #222222;">
+                                            <a target=3D"_blank" style=3D"-=
+webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-size: 12px; =
+color: #222222; text-decoration: none;" href=3D"https://blumenauerforms.hou=
+se.gov/news/email/show.aspx?ID=3DPDDKQ7FD6RK575QVMV3OJAWOR4"><span style=3D=
+"text-decoration: underline;">Click here</span> if you have trouble viewing=
+ this email</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color:=
+ #ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D=
+"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td align=3D"center" valign=3D"top" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvet=
+ica, sans-serif; font-size: 16px; border-left: 1px solid #cccccc; border-ri=
+ght: 1px solid #cccccc; border-top: 1px solid #cccccc;">
+                    <a target=3D"_blank" href=3D"https://blumenauerforms.ho=
+use.gov/components/redirect/r.aspx?ID=3D3467-1460104" style=3D"-webkit-text=
+-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                    <img alt=3D"Representative Earl Blumenauer" width=3D"64=
+8" style=3D"-ms-interpolation-mode: bicubic;display: block; width: 648px;" =
+src=3D"https://blumenauerforms.house.gov/images/email/header.jpg">
+                    </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color: #=
+59753e;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0=
+" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; font-si=
+ze: 20px; font-family: Arial, Helvetica, sans-serif; text-align: center; ba=
+ckground-color: #59753e; text-transform: uppercase; border-left: 1px solid =
+#cccccc; border-right: 1px solid #cccccc; height: 20px; line-height: 20px;"=
+>
+                        &nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;background-color: #ffffff; font-family: Arial, Helvetica, sa=
+ns-serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D=
+"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td class=3D"responsive-table" valign=3D"top" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Ari=
+al, Helvetica, sans-serif; font-size: 16px; color: #000000; border-left: 1p=
+x solid #cccccc; border-right: 1px solid #cccccc;">
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class=3D"region" id=3D"region-1"><div class=3D=
+"component " style=3D"padding: 0px !important;"> <div class=3D"editable" st=
+yle=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"607.647034">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><d=
+iv class=3D"component-template" style=3D"overflow: hidden;"><p style=3D"mar=
+gin: 0;text-align:start"><span style=3D"font-size:16px;"><span style=3D"fon=
+t-style:normal"><span style=3D"font-weight:400"><span style=3D"white-space:=
+normal"><span style=3D"text-decoration:none"><span style=3D"color:#212121">=
+<span style=3D"color:black">Dear Friends, </span></span></span></span></spa=
+n></span></span></p><p style=3D"margin: 0;text-align:start"><span style=3D"=
+font-size:16px;"><span style=3D"font-style:normal"><span style=3D"font-weig=
+ht:400"><span style=3D"white-space:normal"><span style=3D"text-decoration:n=
+one"><span style=3D"color:#212121">&nbsp;</span></span></span></span></span=
+></span></p><p style=3D"margin: 0;text-align:start"><span style=3D"font-siz=
+e:16px;"><span style=3D"font-style:normal"><span style=3D"font-weight:400">=
+<span style=3D"white-space:normal"><span style=3D"text-decoration:none"><sp=
+an style=3D"color:#212121"><span style=3D"color:black">In 1973, Oregon led =
+the nation as the first state&nbsp;to decriminalize cannabis. We have conti=
+nued to lead on this crucial issue for the subsequent 50 years, and it is p=
+ast time for the federal government to catch up. </span></span></span></spa=
+n></span></span></span></p><p style=3D"margin: 0;text-align:start"><span st=
+yle=3D"font-size:16px;"><span style=3D"font-style:normal"><span style=3D"fo=
+nt-weight:400"><span style=3D"white-space:normal"><span style=3D"text-decor=
+ation:none"><span style=3D"color:#212121">&nbsp;</span></span></span></span=
+></span></span></p><p style=3D"margin: 0;text-align:start"><span style=3D"f=
+ont-size:16px;"><span style=3D"font-style:normal"><span style=3D"font-weigh=
+t:400"><span style=3D"white-space:normal"><span style=3D"text-decoration:no=
+ne"><span style=3D"color:#212121"><span style=3D"color:black">We made impor=
+tant progress last year. The House of Representatives passed </span>my MORE=
+ Act, the gold standard of cannabis reform. In July, my friends Senators Sc=
+humer, Wyden, and Booker introduced the Senate=E2=80=99s first comprehensiv=
+e reform package. <span style=3D"color:black">In December, my Medical Marij=
+uana and Cannabidiol Research Expansion Act became <b>the first standalone =
+federal cannabis reform signed into law since 1970</b>. This legislation wi=
+ll help get the federal government out of the way of researchers studying t=
+he impacts and therapeutic benefits of cannabis. Critically, it will help u=
+s finally develop an accurate test for impairment.</span></span></span></sp=
+an></span></span></span></p><p style=3D"margin: 0;text-align:start"><span s=
+tyle=3D"font-size:16px;"><span style=3D"font-style:normal"><span style=3D"f=
+ont-weight:400"><span style=3D"white-space:normal"><span style=3D"text-deco=
+ration:none"><span style=3D"color:#212121">&nbsp;</span></span></span></spa=
+n></span></span></p><p style=3D"margin: 0;text-align:start"><span style=3D"=
+font-size:16px;"><span style=3D"font-style:normal"><span style=3D"font-weig=
+ht:400"><span style=3D"white-space:normal"><span style=3D"text-decoration:n=
+one"><span style=3D"color:#212121"><span style=3D"color:black">Then there a=
+re the historic actions by the Biden-Harris Administration. In October, Pre=
+sident Biden announced he would pardon non-violent cannabis offenders, spur=
+ring several states, including Oregon to follow suit. <b><span style=3D"bac=
+kground-color:white">No president has stepped forward to pardon low-level m=
+arijuana offenders at this scale before.</span></b></span></span></span></s=
+pan></span></span></span></p><p style=3D"margin: 0;text-align:start"><span =
+style=3D"font-size:16px;"><span style=3D"font-style:normal"><span style=3D"=
+font-weight:400"><span style=3D"white-space:normal"><span style=3D"text-dec=
+oration:none"><span style=3D"color:#212121"><b>&nbsp;</b></span></span></sp=
+an></span></span></span></p><p style=3D"margin: 0;text-align:start"><span s=
+tyle=3D"font-size:16px;"><span style=3D"font-style:normal"><span style=3D"f=
+ont-weight:400"><span style=3D"white-space:normal"><span style=3D"text-deco=
+ration:none"><span style=3D"color:#212121"><span style=3D"color:black"><spa=
+n style=3D"background-color:white">At the same time, President Biden direct=
+ed his administration to review the scheduling of cannabis.<b> Cannabis was=
+ classified in 1971 as a Schedule I substance out of stigma, not science</b=
+>. I have repeatedly urged the Administration to deschedule marijuana compl=
+etely. I will continue working to ensure&nbsp;this&nbsp;decision is based o=
+n the evidence available, not outdated views of&nbsp;cannabis and that the&=
+nbsp;public can be fully informed of this&nbsp;process.&nbsp;</span></span>=
+</span></span></span></span></span></span></p><p style=3D"margin: 0;text-al=
+ign:start"><span style=3D"font-size:16px;"><span style=3D"font-style:normal=
+"><span style=3D"font-weight:400"><span style=3D"white-space:normal"><span =
+style=3D"text-decoration:none"><span style=3D"color:#212121">&nbsp;</span><=
+/span></span></span></span></span></p><p style=3D"margin: 0;text-align:star=
+t"><span style=3D"font-size:16px;"><span style=3D"font-style:normal"><span =
+style=3D"font-weight:400"><span style=3D"white-space:normal"><span style=3D=
+"text-decoration:none"><span style=3D"color:#212121"><b><span style=3D"colo=
+r:black"><span style=3D"background-color:white">I am also leading bipartisa=
+n, commonsense reforms that can pass in a divided Congress.</span></span></=
+b><span style=3D"color:black"><span style=3D"background-color:white"> I am =
+working to pass the </span>SAFE Banking Act, critically overdue legislation=
+ to finally allow state-legal cannabis operations access banking services. =
+The absence of this legislation creates dangerous conditions for cannabis w=
+orkers and small businesses.&nbsp;<span style=3D"background-color:white">La=
+st month, I introduced legislation to ensure our veterans have equal access=
+ to medical marijuana as their civilian counterparts. And earlier this week=
+, I introduced legislation </span>to allow state-legal cannabis businesses =
+to take common tax deductions associated with running a business. </span></=
+span></span></span></span></span></span></p><p style=3D"margin: 0;text-alig=
+n:start"><span style=3D"font-size:16px;"><span style=3D"font-style:normal">=
+<span style=3D"font-weight:400"><span style=3D"white-space:normal"><span st=
+yle=3D"text-decoration:none"><span style=3D"color:#212121">&nbsp;</span></s=
+pan></span></span></span></span></p><p style=3D"margin: 0;text-align:start"=
+><span style=3D"font-size:16px;"><span style=3D"font-style:normal"><span st=
+yle=3D"font-weight:400"><span style=3D"white-space:normal"><span style=3D"t=
+ext-decoration:none"><span style=3D"color:#212121"><span style=3D"color:bla=
+ck"><span style=3D"background-color:white">One thing is clear: </span>the A=
+merican public is not waiting. States are not waiting. Today, 38 states and=
+ the District of Columbia and multiple U.S. territories have legalized medi=
+cal marijuana, and 21 states have approved adult use. </span><span style=3D=
+"color:#212121">After 50 years of our nation living with the tragic, disast=
+rous consequences of the failed war on drugs, it is past time for the feder=
+al government to catch up.&nbsp;</span></span></span></span></span></span><=
+/span></p><p style=3D"margin: 0;text-align:start"><span style=3D"font-size:=
+16px;"><span style=3D"font-style:normal"><span style=3D"font-weight:400"><s=
+pan style=3D"white-space:normal"><span style=3D"text-decoration:none"><span=
+ style=3D"color:#212121">&nbsp;</span></span></span></span></span></span></=
+p><p style=3D"margin: 0;text-align:start"><span style=3D"font-size:16px;"><=
+span style=3D"font-style:normal"><span style=3D"font-weight:400"><span styl=
+e=3D"white-space:normal"><span style=3D"text-decoration:none"><span style=
+=3D"color:#212121"><b><span style=3D"color:black"><span style=3D"background=
+-color:white">This 4/20, I am celebrating the progress we have made togethe=
+r and am energized by the work ahead.</span></span></b></span></span></span=
+></span></span></span></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"signature" style=3D"overflow: hidden;width:100%">=20
+            <table role=3D"presentation" class=3D"responsive-table" align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-t=
+able-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collaps=
+e:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table=
+-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"607.647034=
+">
+                <tbody>
+                    <tr>
+                        <td valign=3D"top" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%;">
+                            <table align=3D"left" class=3D"signature-table"=
+ role=3D"presentation" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;=
+mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 1=
+00%; -ms-text-size-adjust: 100%;table-layout: fixed;">
+                                <tbody>
+                                    <tr>
+                                        <td style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;">
+                                            <table role=3D"presentation" al=
+ign=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-=
+table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collap=
+se:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;bord=
+er-collapse: separate !important;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td valign=3D"top" =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                                            <div class=3D"n=
+g-binding" style=3D"overflow: hidden;">Courage,</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td valign=3D"top" =
+class=3D"image-td" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-a=
+djust: 100%;">
+                                                            <div class=3D"i=
+mg-1 image-container" style=3D"overflow: hidden;text-align:left"><img style=
+=3D"max-width:600px;-ms-interpolation-mode: bicubic;vertical-align: bottom;=
+ max-width: 319px; width: 220px !important;" src=3D"https://blumenauerforms=
+.house.gov/images/email/sig.png" alt=3D"Earl Blumenauer Signature" width=3D=
+"220"></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class=3D"spacerRow"=
+ height=3D"0">
+                                                        <td style=3D"-webki=
+t-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-size:0%;line-heig=
+ht: 0px;">
+                                                            &nbsp;
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td valign=3D"top" =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                                            <div class=3D"n=
+g-binding" style=3D"overflow: hidden;">Earl Blumenauer<br>Member of Congres=
+s</div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div></div>
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color: #=
+ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0=
+" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td align=3D"center" valign=3D"top" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvet=
+ica, sans-serif; font-size: 16px; border-left: 1px solid #cccccc; border-ri=
+ght: 1px solid #cccccc; text-align: center; background-color: #ffffff; padd=
+ing: 0 15pt;">
+                        <em>If you are interested in contacting me about th=
+is issue, please click <a style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;font-size: 16px;" href=3D"https://blumenauerforms.house.=
+gov/components/redirect/r.aspx?ID=3D3468-1460104">here</a>. Also, you can s=
+ign up for my email updates <a style=3D"-webkit-text-size-adjust: 100%; -ms=
+-text-size-adjust: 100%;font-size: 16px;" href=3D"https://blumenauerforms.h=
+ouse.gov/components/redirect/r.aspx?ID=3D3469-1460104">here</a>.</em>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #ffffff; border-left: 1px solid #cccccc; border-right: 1px solid #c=
+ccccc;">
+                    &nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;background-color: #666666; font-family: Arial, Helvetica, sa=
+ns-serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"20" marginheight=
+=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td class=3D"split" align=3D"center" valign=3D"top" sty=
+le=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-lef=
+t: 1px solid #cccccc; border-right: 1px solid #cccccc;">
+                    <table align=3D"left" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" width=3D"49.9%" class=3D"responsive-table" role=3D"presenta=
+tion" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"=
+>
+                        <tbody>
+                            <tr>
+                                <td align=3D"center" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                <table border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" width=3D"100%" role=3D"presentation" style=3D"-webkit-text-siz=
+e-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                    <tbody>
+                                        <tr>
+                                            <td align=3D"left" style=3D"-we=
+bkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial,=
+ helvetica, sans-serif; font-size: 12px; color: #ffffff;">
+                                            <h2 style=3D"font-family: arial=
+, helvetica, sans-serif; font-size: 24px; margin: 0; font-weight: normal;">=
+Office Locations</h2>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table align=3D"left" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" width=3D"49.9%" class=3D"responsive-table" role=3D"presenta=
+tion" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"=
+>
+                        <tbody>
+                            <tr>
+                                <td align=3D"center" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                <table border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" width=3D"100%" role=3D"presentation" style=3D"-webkit-text-siz=
+e-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                    <tbody>
+                                        <tr>
+                                            <td align=3D"right" style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial=
+, helvetica, sans-serif; font-size: 12px; color: #ffffff;">
+                                            <a href=3D"https://blumenauerfo=
+rms.house.gov/components/redirect/r.aspx?ID=3D3470-1460104" style=3D"-webki=
+t-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"Newslett=
+er Signup" src=3D"https://blumenauerforms.house.gov/images/email/newsletter=
+.png" style=3D"-ms-interpolation-mode: bicubic;width: 175px; border-width: =
+0px; border-style: solid;" width=3D"175"></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Arial, Helvetica, sans-serif; background-color: #=
+ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0=
+" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; backgro=
+und-color: #666666; padding: 0 20px; border-left: 1px solid #cccccc; border=
+-right: 1px solid #cccccc;">
+                    <table role=3D"presentation" width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"10" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;text-align:left;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;text-align:=
+left;">
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"32=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: arial, helvetica, sans-serif; text-align:left; font-size: 14px; =
+color: #ffffff; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0pt=
+;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, san=
+s-serif;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: Arial, Helvetica, sans-serif;">Washington, DC Office</stro=
+ng><br>
+                                            1111 Longworth House Office Bui=
+lding<br>
+                                            Washington, DC 20515<br>
+                                            Phone: (202) 225-4811<br>
+                                            Fax: (202) 225-8941
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"32=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: arial, helvetica, sans-serif; text-align:left; font-size: 14px; =
+color: #ffffff; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0pt=
+;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, san=
+s-serif;">
+                                            <strong style=3D"font-weight: b=
+old;font-family: Arial, Helvetica, sans-serif;">Portland Office</strong><br=
+>
+                                            911 N.E. 11th Ave<br>
+                                            Suite 200<br>
+                                            Portland, OR 97232<br>
+                                            Phone: (503) 231-2300<br>
+                                            Fax: (503) 230-5413
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"32=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: arial, helvetica, sans-serif; text-align:center; font-size: 14px=
+; color: #ffffff; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0=
+pt;">
+                                    <tbody>
+                                        <tr>
+                                            <td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, san=
+s-serif;">
+                                            &nbsp;
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:20px; background=
+-color: #666666; border-left: 1px solid #cccccc; border-right: 1px solid #c=
+ccccc;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:10px; background=
+-color: #ffffff; border-left: 1px solid #cccccc; border-right: 1px solid #c=
+ccccc;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;background-color: #ffffff; border-left: =
+1px solid #cccccc; border-right: 1px solid #cccccc;">
+                    <table role=3D"presentation" cellpadding=3D"0" cellspac=
+ing=3D"20" align=3D"center" width=3D"90%" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #5d5=
+d5d; font-size: 10px; font-family: Arial, Helvetica, sans-serif;">
+                                <a target=3D"_blank" href=3D"https://blumen=
+auerforms.house.gov/components/redirect/r.aspx?ID=3D3471-1460104" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #5d5d5d; =
+text-decoration:none; font-family: Arial, Helvetica, sans-serif; font-size:=
+ 10px; text-transform: uppercase;">Update Subscription Options</a>&nbsp;|&n=
+bsp;
+                                <a target=3D"_blank" href=3D"https://urldef=
+ense.com/v3/__https://www.facebook.com/sharer.php?u=3Dhttps:**Ablumenauerfo=
+rms.house.gov*news*email*show.aspx*ID=3DPDDKQ7FD6RK575QVMV3OJAWOR4&amp;t=3D=
+Happy*4*2f20!__;Ly8vLy8_KyU!!Fr0YZsIsFWxTZsBm-qTAg68!k6ciCtz4jpkOzBVPkwmm83=
+qdWOOzpF05OT-3ifbrTJiwYIMwi-SxG5lgvpEVh5bLNyQ0ya0LSSgXsA3v2ILPCOgzhUy9uc6X1=
+Tvt99OEQhc$" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust:=
+ 100%;color: #5d5d5d; text-decoration:none; font-family: Arial, Helvetica, =
+sans-serif; font-size: 10px; text-transform: uppercase;">Privacy Policy</a>=
+&nbsp;|&nbsp;
+                                <a target=3D"_blank" href=3D"https://blumen=
+auerforms.house.gov/Components/Redirect/twitter.aspx?url=3Dhttps://blumenau=
+erforms.house.gov/news/email/show.aspx?ID=3DPDDKQ7FD6RK575QVMV3OJAWOR4&amp;=
+name=3DHappy+4%2f20!" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;color: #5d5d5d; text-decoration:none; font-family: Arial, He=
+lvetica, sans-serif; font-size: 10px; text-transform: uppercase;">Contact U=
+s</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:10px; background=
+-color: #ffffff; border-left: 1px solid #cccccc; border-right: 1px solid #c=
+ccccc; border-bottom: 1px solid #cccccc;">
+                    &nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    <table role=3D"presentation" width=3D"100%" align=3D"center" style=3D"f=
+ont-family: Georgia, times, serif; background-color: #ffffff;" border=3D"0"=
+ cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" l=
+eftmargin=3D"0" topmargin=3D"0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td valign=3D"m=
+iddle" align=3D"center" style=3D"color: #000000; font-size: 16px; text-alig=
+n: left;">=20
+                                                                <img src=3D=
+"https://blumenauerforms.house.gov/images/spacerx2290-1460104.open" width=
+=3D"20" height=3D"1" style=3D"height: 1px">
+                                                                <br>
+<a href=3D"https://blumenauerforms.house.gov/news/email/show.aspx?ID=3DPDDK=
+Q7FD6RK575QVMV3OJAWOR4">Click Here</a> to view this email in your browser <=
+br>
+<a href=3D"https://blumenauerforms.house.gov/Forms/EmailSignup/?Delete=3Dtr=
+ue&amp;MessageID=3D2290&amp;Email=3DHunter.Spence@mail.house.gov">Click Her=
+e</a> to be removed from this list
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table></body>
+</html>=
+
+----boundary_1450634_83fbb330-d6c3-481f-8a47-69fd7d64d2d2--

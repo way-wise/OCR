@@ -1,0 +1,496 @@
+Received: from MN2PR09MB3359.namprd09.prod.outlook.com (2603:10b6:208:71::23)
+ by BL0PR0901MB3713.namprd09.prod.outlook.com with HTTPS via
+ BL0PR01CA0010.PROD.EXCHANGELABS.COM; Thu, 17 Oct 2019 15:07:13 +0000
+Received: from BN6PR09CA0078.namprd09.prod.outlook.com (2603:10b6:404:dc::16)
+ by MN2PR09MB3359.namprd09.prod.outlook.com (2603:10b6:208:ff::18) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2347.16; Thu, 17 Oct
+ 2019 15:07:13 +0000
+Received: from DM3GCC02FT014.eop-gcc02.prod.protection.outlook.com
+ (2a01:111:f400:7d04::206) by BN6PR09CA0078.outlook.office365.com
+ (2603:10b6:404:dc::16) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2347.16 via Frontend
+ Transport; Thu, 17 Oct 2019 15:07:13 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.129.7)
+ smtp.mailfrom=mail.house.gov; ushouse.mail.onmicrosoft.com; dkim=fail (body
+ hash did not verify) header.d=mail.house.gov;ushouse.mail.onmicrosoft.com;
+ dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.129.7 as permitted sender) receiver=protection.outlook.com;
+ client-ip=143.228.129.7; helo=owa.house.gov;
+Received: from owa.house.gov (143.228.129.7) by
+ DM3GCC02FT014.mail.protection.outlook.com (10.97.8.86) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.2367.14 via Frontend Transport; Thu, 17 Oct 2019 15:07:13 +0000
+Received: from HRM111.US.House.gov (143.228.151.94) by EXGW101.US.House.gov
+ (143.228.151.82) with Microsoft SMTP Server (TLS) id 15.0.1473.3; Thu, 17 Oct
+ 2019 11:07:07 -0400
+Received: from HRM121.US.House.gov (143.228.151.75) by HRM111.US.House.gov
+ (143.228.151.94) with Microsoft SMTP Server (TLS) id 15.0.1473.3; Thu, 17 Oct
+ 2019 11:07:07 -0400
+Received: from s-bulk1-p.house.gov (143.228.181.87) by HRM121.US.House.gov
+ (143.228.151.75) with Microsoft SMTP Server id 15.0.1473.3 via Frontend
+ Transport; Thu, 17 Oct 2019 11:07:07 -0400
+Received: from s-bulk1-f.house.gov (s-bulk1-f.house.gov [143.228.181.89])
+	by s-bulk1-p.house.gov  with ESMTP id x9HF778i007256
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits) verified FAIL)
+	for <David.todisco@mail.house.gov>; Thu, 17 Oct 2019 11:07:07 -0400
+X-DKIM: OpenDKIM Filter v2.4.3 s-bulk1-p.house.gov x9HF778i007256
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mail.house.gov;
+	s=November2012-msg-mhg; t=1571324827;
+	bh=zWiFspb9LU9+mmVKunGxce66GfvkyL8d0cIv3V/ssS4=;
+	h=MIME-Version:From:To:Date:Subject:Content-Type:Message-ID;
+	b=EribMxK3PgdYKDB5eOFutvWoYv0ybJKuHEGClbYLaDbTMMxs4LmzoAQuL7iSAdAob
+	 F5SMYf+D1l0APqv9D4Ftg1UCOEYpyPTWrDFvQ1/5AtjX/tUmxxDt4VzQOHI0v8Cdve
+	 8TU+Xvl4yNwDen/BMBef5Lgcya6OWoIgRVz+FLoU=
+Received: from firesideadmin02.US.House.gov (firesideadmin02.us.house.gov [143.228.113.54])
+	by s-bulk1-f.house.gov  with ESMTP id x9HF763e021035
+	for <David.todisco@mail.house.gov>; Thu, 17 Oct 2019 11:07:06 -0400
+X-DKIM: OpenDKIM Filter v2.4.3 s-bulk1-f.house.gov x9HF763e021035
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mail.house.gov;
+	s=November2012-msg-mhg; t=1571324827;
+	bh=zWiFspb9LU9+mmVKunGxce66GfvkyL8d0cIv3V/ssS4=;
+	h=MIME-Version:From:To:Date:Subject:Content-Type:Message-ID;
+	b=EribMxK3PgdYKDB5eOFutvWoYv0ybJKuHEGClbYLaDbTMMxs4LmzoAQuL7iSAdAob
+	 F5SMYf+D1l0APqv9D4Ftg1UCOEYpyPTWrDFvQ1/5AtjX/tUmxxDt4VzQOHI0v8Cdve
+	 8TU+Xvl4yNwDen/BMBef5Lgcya6OWoIgRVz+FLoU=
+Received: from firesideadmin02 ([127.0.0.1]) by firesideadmin02.US.House.gov with Microsoft SMTPSVC(8.5.9600.16384);
+	 Thu, 17 Oct 2019 11:07:06 -0400
+envelope-from: Rep.LoriTrahan@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+X-House-Vendor-Seg: unmanaged
+MIME-Version: 1.0
+From: "Congresswoman Lori Trahan" <Rep.LoriTrahan@mail.house.gov>
+To: David.todisco@mail.house.gov
+Date: 17 Oct 2019 11:07:06 -0400
+Subject: TEST Do You Support Impeachment? 
+Message-ID: <FIRESIDEADMIN022mc300003285@firesideadmin02.US.House.gov>
+X-OriginalArrivalTime: 17 Oct 2019 15:07:06.0442 (UTC) FILETIME=[8A4FFAA0:01D584FC]
+Return-Path: Rep.LoriTrahan@mail.house.gov
+X-OrganizationHeadersPreserved: EXGW101.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 17 Oct 2019 15:07:13.1743
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 12e3e76a-a49b-482b-41b0-08d75313b0ca
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: HRM121.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted:
+ DM3GCC02FT014.eop-gcc02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ DM3GCC02FT014.eop-gcc02.prod.protection.outlook.com
+X-Forefront-Antispam-Report:
+ CIP:143.228.129.7;IPV:NLI;CTRY:US;EFV:NLI;SFV:SKI;SFS:;DIR:INB;SFP:;SCL:-1;SRVR:MN2PR09MB3359;H:owa.house.gov;FPR:;SPF:None;LANG:en;
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 12e3e76a-a49b-482b-41b0-08d75313b0ca
+X-MS-TrafficTypeDiagnostic: MN2PR09MB3359:
+X-MS-Exchange-PUrlCount: 12
+X-MS-Exchange-Organization-SCL: -1
+X-MS-Oob-TLC-OOBClassifiers: OLM:1360;
+X-Microsoft-Antispam: BCL:0;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 17 Oct 2019 15:07:13.0642
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 12e3e76a-a49b-482b-41b0-08d75313b0ca
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.129.7];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: MN2PR09MB3359
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:00.7187407
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2347.014
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(750127)(520011016)(706158)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	I6aN1UMa1I6GS2/GUrIMn1D3tVUGA12E+H2njeDQ58l0U4pt7KW3bTApbHzndKBwgeKenT3QeZYmzOS/J4Sr6qd2BizVDZHoqStAPOGMDTIwQMpKR8VRo0C367CCJQsUr3PMItgDnOBfx8L5fVlPdwuaYVz42g71TZW0//fptEyCnZkH3hVB/VdMBnmF+gCupQdV7RLsk9Y9JJu9LMlFBuZ6yIPxigRLoADdIkM4bwW7a0uG92ZXuqkb6eA0dctzyGJMry2bYEQrPaP8TTxhIP1mYkEFgLs2n0GeXreEVynUBpxaMWleTdjIMgounRuSkWjAyweWXWA+VKSXo/rqeCGFML4Br8JkY0Zr6go88nMR9rkBAyqrexBrhvx+oRHlm5GLIumdGOycUNXZo61UkRdulxVaBhUd0M5FYlkuBtLtEDlE35s6cpNwPxtVcvd84nR2aCBI9BDKdfRw0BFfq13ersEQIWKyzQu4gahML3E=
+Content-type: multipart/alternative;
+	boundary="B_3654169079_1501276809"
+
+> This message is in MIME format. Since your mail reader does not understand
+this format, some or all of this message may not be legible.
+
+--B_3654169079_1501276809
+Content-type: text/plain;
+	charset="UTF-8"
+Content-transfer-encoding: 7bit
+
+
+ 
+Friend, 
+Listening to constituents like you is the most important part of my job. I hope you will take a few minutes to share your thoughts through this quick  survey. 
+Recent reports indicate that President Trump asked the President of Ukraine to interfere in the 2020 US election. I believe this undermines our national  security and democracy. This should be alarming to every American. As many of you may know, I fully support Congress moving forward with an official impeachment inquiry. No individual stands above the law, even the President. 
+
+
+ 
+DO YOU SUPPORT THE ONGOING IMPEACHMENT INQUIRY?
+
+YES  NO 
+ 
+
+
+
+
+It is my job to listen to the families of Massachusetts third district. Please fill out this survey to share your views and join my email list to stay  up to date. 
+
+
+
+Sincerely,
+
+
+
+
+Lori Trahan
+
+Member of Congress
+
+
+   
+   
+   
+    
+   
+WASHINGTON, DC OFFICE
+1616 Longworth HOB
+Washington, DC 20515
+Phone: (202) 225-3411
+LAWRENCE OFFICE
+15 Union Street
+4th Floor
+Lawrence, MA 01840
+Phone: (978) 258-1138 
+LOWELL OFFICE
+126 John Street
+Lowell, MA 01852
+Phone: (978) 459-0101
+  
+    
+  
+Unsubscribe | Share on Facebook |  Share on Twitter 
+
+
+
+Click Here to view this email in your browser 
+Click Here to be removed from this list 
+
+--B_3654169079_1501276809
+Content-type: text/html;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+<title>Do You Support Impeachment?</title>
+</head>
+<body>
+<style type=3D"text/css">
+            .contentholder img {max-width:600px;}
+            @media all and (max-width:650px) {
+            .content, .contentholder, .header, .headerholder {width:100% !i=
+mportant;}
+            img, .contentholder img {max-width:100% !important; height: aut=
+o !important;}
+            }
+        </style><br>
+<table width=3D"650" align=3D"center" class=3D"headerholder" style=3D"font-family: =
+arial, helvetica, sans-serif; background-color: #ffffff;" border=3D"0" cellspa=
+cing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" top=
+margin=3D"0">
+<tbody>
+<tr>
+<td align=3D"middle" valign=3D"top"><a href=3D"https://trahan.house.gov"><img alt=
+=3D"" width=3D"650" class=3D"seal" style=3D"border: 1px solid #fff;" src=3D"https://tr=
+ahan.house.gov/images/email/banner-lt.jpg"></a>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"650" align=3D"center" class=3D"contentholder" style=3D"font-family:=
+ arial, helvetica, sans-serif; width: 668px; height: 1007px; left: 293.33334=
+35058594px;" border=3D"0" cellspacing=3D"0" cellpadding=3D"20" marginheight=3D"0" ma=
+rginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+<tbody>
+<tr>
+<td class=3D"contentholder" valign=3D"top" style=3D"background-color: #ffffff;">&=
+nbsp;</td>
+<td class=3D"contentholder" valign=3D"top" style=3D"background-color: #ffffff;" r=
+owspan=3D"3">
+<p style=3D"margin: 0px; font-family: 'Helvetica Neue'; font-stretch: normal;=
+"><span style=3D"font-size: 18px;"><br>
+Friend,</span></p>
+<p style=3D"margin: 0px; font-family: 'Helvetica Neue'; font-stretch: normal;=
+"><span style=3D"font-size: 18px;"><br>
+</span></p>
+<p style=3D"margin: 0px; font-family: 'Helvetica Neue'; font-stretch: normal;=
+"><span style=3D"font-size: 18px;">Listening to constituents like you is the m=
+ost important part of my job. I hope you will take a few minutes to share yo=
+ur thoughts through this quick
+ survey.</span></p>
+<p style=3D"margin: 0px; font-family: 'Helvetica Neue'; font-stretch: normal;=
+"><span style=3D"font-size: 18px;"><br>
+</span></p>
+<p style=3D"margin: 0px; font-family: 'Helvetica Neue'; font-stretch: normal;=
+"><span style=3D"font-size: 18px;">Recent reports indicate that President Trum=
+p asked the&nbsp;President of Ukraine to&nbsp;interfere in the 2020 US elect=
+ion. I believe this undermines our national
+ security and democracy. This should be alarming to every American. As many=
+ of you may know, I fully support Congress moving forward with an official i=
+mpeachment inquiry. No individual stands above the law, even the President.&=
+nbsp;</span></p>
+<p style=3D"margin: 0px; font-family: 'Helvetica Neue'; font-stretch: normal;=
+"><span style=3D"font-size: 18px;"><br>
+<br>
+<br>
+</span></p>
+<table style=3D"width: 543px; height: 126px; border: 3px double #366092;" ali=
+gn=3D"center" class=3D"contentholder">
+<tbody>
+<tr>
+<td style=3D"text-align: center;"><span style=3D"color: #244061;"><strong>&nbsp=
+;<br>
+<span style=3D"font-size: 32px;">DO YOU SUPPORT THE ONGOING IMPEACHMENT INQUI=
+RY?</span></strong></span><br>
+<a href=3D"http://https://trahan.house.gov/privacy/thanks-for-taking-our-surv=
+ey.htm" id=3D"YES on Impeachment"><br>
+</a>
+<table style=3D"width: 454px; height: 104px;" align=3D"center">
+<tbody>
+<tr>
+<td style=3D"background-color: #366092; text-align: center;"><span style=3D"fon=
+t-size: 48px;"><a href=3D"https://trahan.house.gov/survey/yesonimpeachment.htm=
+"><span style=3D"color: yellow;">YES</span></a></span></td>
+<td style=3D"background-color: #366092; text-align: center;"><span style=3D"fon=
+t-size: 48px;"><a href=3D"https://trahan.house.gov/survey/noonimpeachment.htm"=
+><span style=3D"color: yellow;">&nbsp;NO&nbsp;</span></a></span></td>
+</tr>
+</tbody>
+</table>
+<br>
+</td>
+</tr>
+<tr>
+<td style=3D"text-align: center;">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p style=3D"margin: 0px; font-family: 'Helvetica Neue'; font-stretch: normal;=
+"><span style=3D"font-size: 18px;"><br>
+<br>
+</span></p>
+<p style=3D"margin: 0px; font-family: 'Helvetica Neue'; font-stretch: normal;=
+"><span style=3D"font-size: 18px;">It is my job to listen to the families of M=
+assachusetts third district. Please fill out this survey to share your views=
+ and join my email list to stay
+ up to date.&nbsp;</span></p>
+<p style=3D"margin: 0px; font-family: 'Helvetica Neue'; font-stretch: normal;=
+"><span style=3D"font-size: 18px;"><br>
+</span></p>
+<p style=3D"margin: 0px; font-family: 'Helvetica Neue'; font-stretch: normal;=
+"><span style=3D"font-size: 18px;">Sincerely,</span></p>
+<p style=3D"margin: 0px; font-family: 'Helvetica Neue'; font-stretch: normal;=
+"><span style=3D"font-size: 18px;"><br>
+</span></p>
+<div>
+<table cellpadding=3D"5">
+<tbody>
+<tr>
+<td><img alt=3D"" src=3D"https://trahan.house.gov/UploadedPhotos/LowResolution/=
+e1d7f160-8c3f-4e97-a152-168b4ebde49f.png"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style=3D"margin: 0px; font-family: 'Helvetica Neue'; font-stretch: normal;=
+"><span style=3D"font-size: 18px;"><br>
+</span></p>
+<p style=3D"margin: 0px; font-family: 'Helvetica Neue'; font-stretch: normal;=
+"><span style=3D"font-size: 18px;">Lori Trahan</span></p>
+<p style=3D"margin: 0px; font-family: 'Helvetica Neue'; font-stretch: normal;=
+"><span style=3D"font-size: 18px;">Member of Congress</span></p>
+<br>
+<br>
+&nbsp;</td>
+<td class=3D"contentholder" valign=3D"top" style=3D"background-color: #ffffff;">&=
+nbsp;</td>
+<td class=3D"contentholder" valign=3D"top" style=3D"background-color: #ffffff;">&=
+nbsp;</td>
+</tr>
+<tr>
+<td class=3D"contentholder" valign=3D"top" style=3D"background-color: #ffffff;">&=
+nbsp;</td>
+<td class=3D"contentholder" valign=3D"top" style=3D"background-color: #ffffff;">&=
+nbsp;</td>
+<td class=3D"contentholder" valign=3D"top" style=3D"background-color: #ffffff;">&=
+nbsp;</td>
+</tr>
+<tr>
+<td class=3D"contentholder" valign=3D"top" style=3D"background-color: #ffffff;">&=
+nbsp;</td>
+<td class=3D"contentholder" valign=3D"top" style=3D"background-color: #ffffff;">&=
+nbsp;</td>
+<td class=3D"contentholder" valign=3D"top" style=3D"background-color: #ffffff;">&=
+nbsp;</td>
+</tr>
+<tr>
+<td class=3D"contentholder" valign=3D"top" style=3D"background-color: #ffffff;">&=
+nbsp;</td>
+<td class=3D"contentholder" valign=3D"top" style=3D"background-color: #ffffff;">&=
+nbsp;</td>
+<td class=3D"contentholder" valign=3D"top" style=3D"background-color: #ffffff;">&=
+nbsp;</td>
+<td class=3D"contentholder" valign=3D"top" style=3D"background-color: #ffffff;">&=
+nbsp;</td>
+</tr>
+<tr>
+<td class=3D"contentholder" valign=3D"top" style=3D"background-color: #ffffff;">&=
+nbsp;</td>
+<td class=3D"contentholder" valign=3D"top" style=3D"background-color: #ffffff;" c=
+olspan=3D"2">
+&nbsp;</td>
+<td class=3D"contentholder" valign=3D"top" style=3D"background-color: #ffffff;">&=
+nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"650" class=3D"headerholder" align=3D"center" style=3D"font-family: =
+arial, helvetica, sans-serif; background-color: #f5f5f5;" border=3D"0" cellspa=
+cing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" top=
+margin=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"width: 650px;"><img alt=3D"" src=3D"https://trahan.hous=
+e.gov/images/email/footer19.jpg" width=3D"650">
+</td>
+</tr>
+<tr>
+<td valign=3D"middle" align=3D"center" style=3D"color: #08244a; background-color:=
+ #f5f5f5;">
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"10" style=3D"text-align:cent=
+er;">
+<tbody>
+<tr>
+<td valign=3D"middle" align=3D"center" style=3D"text-align:center;">
+<table cellpadding=3D"0" class=3D"content" align=3D"left" cellspacing=3D"0" width=3D"=
+32.9%" style=3D"font-family: times, 'times new roman', serif; text-align:cente=
+r; color:#08244a; font-size: 14px; margin: 10px 0;mso-table-lspace: 0pt; mso=
+-table-rspace: 0pt;">
+<tbody>
+<tr>
+<td><strong style=3D"font-family: arial, helvetica, sans-serif;">WASHINGTON, =
+DC OFFICE</strong><br>
+1616 Longworth HOB<br>
+Washington, DC 20515<br>
+Phone: (202) 225-3411<br>
+</td>
+</tr>
+</tbody>
+</table>
+<table cellpadding=3D"0" class=3D"content" align=3D"left" cellspacing=3D"0" width=3D"=
+32.9%" style=3D"font-family: times, 'times new roman', serif; text-align:cente=
+r; color:#08244a; font-size: 14px; margin: 10px 0;mso-table-lspace: 0pt; mso=
+-table-rspace: 0pt;">
+<tbody>
+<tr>
+<td><strong style=3D"font-family: arial, helvetica, sans-serif;">LAWRENCE OFF=
+ICE</strong><br>
+15 Union Street<br>
+4th Floor<br>
+Lawrence, MA 01840<br>
+Phone: (978) 258-1138 <br>
+</td>
+</tr>
+</tbody>
+</table>
+<table cellpadding=3D"0" class=3D"content" align=3D"left" cellspacing=3D"0" width=3D"=
+32.9%" style=3D"font-family: times, 'times new roman', serif; text-align:cente=
+r; color:#08244a; font-size: 14px; margin: 10px 0;mso-table-lspace: 0pt; mso=
+-table-rspace: 0pt;">
+<tbody>
+<tr>
+<td><strong style=3D"font-family: arial, helvetica, sans-serif;">LOWELL OFFIC=
+E</strong><br>
+126 John Street<br>
+Lowell, MA 01852<br>
+Phone: (978) 459-0101<br>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td valign=3D"middle" align=3D"center" style=3D"height:30px; background-color: #f=
+5f5f5;">
+&nbsp; </td>
+</tr>
+<tr>
+<td valign=3D"middle" align=3D"center" style=3D"color: #08244a; background-color:=
+ #f5f5f5;">
+<a href=3D"https://www.facebook.com/reploritrahan/"><img alt=3D"" width=3D"32" sr=
+c=3D"https://trahan.house.gov/images/email/facebook.png" style=3D"border-width: =
+0px; border-style: solid;"></a> &nbsp;<a href=3D"https://twitter.com/reploritr=
+ahan"><img alt=3D"" width=3D"32" src=3D"https://trahan.house.gov/images/email/twit=
+ter.png" style=3D"border-width: 0px; border-style: solid;"></a>
+ &nbsp;<a href=3D"https://www.instagram.com/reploritrahan/"><img alt=3D"" width=
+=3D"32" src=3D"https://trahan.house.gov/images/email/instagram.png" style=3D"borde=
+r-width: 0px; border-style: solid;"></a><!--&nbsp;<a href=3D"https://www.youtu=
+be.com/channel/XXXXXX"><img alt=3D"" width=3D"32" src=3D"https://trahan.house.gov/=
+images/email/youtube.png" style=3D"border-width: 0px; border-style: solid;" />=
+</a>-->
+</td>
+</tr>
+<tr>
+<td valign=3D"middle" align=3D"center" style=3D"height:30px; background-color: #f=
+5f5f5;">
+&nbsp; </td>
+</tr>
+<tr>
+<td valign=3D"middle" style=3D"background-color: #f5f5f5;">
+<table cellpadding=3D"0" cellspacing=3D"20" align=3D"center" width=3D"90%">
+<tbody>
+<tr>
+<td valign=3D"middle" align=3D"center" style=3D"color: #08244a; font-size: 15px;"=
+><a href=3D"https://trahan.house.gov/forms/emailsignup/?delete=3Dtrue" style=3D"co=
+lor: #08244a; text-decoration:none;"><span style=3D"font-family: arial;">Unsub=
+scribe</span></a>&nbsp;|&nbsp;
+<a href=3D"http://www.facebook.com/sharer.php?u=3Dhttps://trahan.house.gov/news=
+/email/show.aspx?ID=3D3YOSGXJRNDLZE&amp;t=3DDo&#43;You&#43;Support&#43;Impeachme=
+nt%3f&#43;" style=3D"color: #08244a; text-decoration:none;">
+<span style=3D"font-family: arial;">Share on Facebook</span></a>&nbsp;|&nbsp;=
+ <a href=3D"https://trahan.house.gov/Components/Redirect/twitter.aspx?url=3Dhttp=
+s://trahan.house.gov/news/email/show.aspx?ID=3D3YOSGXJRNDLZE&amp;name=3DDo&#43;Y=
+ou&#43;Support&#43;Impeachment%3f&#43;" style=3D"color: #08244a; text-decorati=
+on:none;">
+<span style=3D"font-family: arial;">Share on Twitter</span></a> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<br>
+<br>
+<a href=3D"https://trahan.house.gov/news/email/show.aspx?ID=3D3YOSGXJRNDLZE">Cl=
+ick Here</a> to view this email in your browser
+<br>
+<a href=3D"https://trahan.house.gov/Forms/EmailSignup/?Delete=3Dtrue&amp;Messag=
+eID=3D255&amp;Email=3DDavid.todisco@mail.house.gov">Click Here</a> to be removed=
+ from this list
+</body>
+</html>
+
+
+--B_3654169079_1501276809--
+

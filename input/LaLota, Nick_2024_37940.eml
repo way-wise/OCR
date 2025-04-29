@@ -1,0 +1,356 @@
+Received: from SA1PR09MB8733.namprd09.prod.outlook.com (2603:10b6:806:176::20)
+ by PH8PR09MB9935.namprd09.prod.outlook.com with HTTPS; Wed, 5 Jun 2024
+ 19:46:28 +0000
+Received: from BL0PR0901CA0016.namprd09.prod.outlook.com
+ (2603:10b6:208:1c0::26) by SA1PR09MB8733.namprd09.prod.outlook.com
+ (2603:10b6:806:176::20) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7633.25; Wed, 5 Jun
+ 2024 19:46:27 +0000
+Received: from BL02EPF0001B418.namprd09.prod.outlook.com
+ (2603:10b6:208:1c0:cafe::d4) by BL0PR0901CA0016.outlook.office365.com
+ (2603:10b6:208:1c0::26) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7656.18 via Frontend
+ Transport; Wed, 5 Jun 2024 19:46:26 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.151.112)
+ smtp.mailfrom=mail.house.gov; dkim=fail (signature did not verify)
+ header.d=mail.house.gov;dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.151.112 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.151.112;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.151.112) by
+ BL02EPF0001B418.mail.protection.outlook.com (10.167.242.199) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7633.15 via Frontend Transport; Wed, 5 Jun 2024 19:46:26 +0000
+Received: from EXCH1911.US.House.gov (143.228.151.110) by
+ EXCH1913.US.House.gov (143.228.151.112) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.2.1544.9; Wed, 5 Jun 2024 15:46:24 -0400
+Received: from serg-bulk3-a.house.gov (143.228.42.78) by EXCH1911.US.House.gov
+ (143.228.151.110) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1544.9 via Frontend
+ Transport; Wed, 5 Jun 2024 15:46:24 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mail.house.gov;
+ h=content-transfer-encoding : content-type : date : from : message-id :
+ mime-version : subject : to; s=january2024-msgb-mhg;
+ bh=556LBnRN8Pp59MHmyim3zRAM8MUDZK5USQDKvZIgB38=;
+ b=lWJV6AJg+QI5B1cV9xHLsz3J51OhLX2j5t1HMJU5C1IWxMRV3mpS4z36b/q7QF36UqMU
+ 0FpXcuWQLnS2O053PO1pEgXYTKdr23Yfw9wcVSJZMJJHhIpE9K5x0OZ9kFetnds0tAGi
+ Uaq5dDHK2YRK6MRZu/k42Q4JxKIJvhy1y470olproEOw4bIDNhgrBmTpgsCd1opzKD/P
+ oChuv2ucMBvIt3+WMBkUyhuxVZ0xlcGKpzLb8YsY3xJbITmFuxotQQUrBcddTIkAzjaA
+ AK1+kbkgYHXDFm+2kHWFxkFETm84BZ7GJfLO5p++9K1IMmRp6b27nmsrOIl5v9hnwgsr XA== 
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov;
+ h=content-transfer-encoding : content-type : date : from : message-id :
+ mime-version : subject : to; s=august2019-msgb-hg;
+ bh=556LBnRN8Pp59MHmyim3zRAM8MUDZK5USQDKvZIgB38=;
+ b=jKBF722KmId6PRNYa4748pZdp98KYbWmlDc4UAYUUIIW6vKxRCOJKCXmPwgsFhLiuz45
+ skG4U32sQgTszlFIAr/Ew2rhukzheS1n44ENSC1krmoc/1uLl9I8/YZcXJxlIoBI7Cq/
+ dEYHSTIqe02JgzpkW5TG5NqgCwyna5PPLOy156KWrc6AONHT8+TCUgmeG0yuJaA89ONp
+ 0wCU0ziUiOTcwZeU+QFwAL2sj3yYCYYHRx84RNRCImTzyM88bDZbMO+GxhbT0sCmxids
+ MDqLUCug9r5IpTtC+QxOjK19cOEzDepnocIYbE8uIByS4F1aZKa9QaTk4eBd1LeIaaab 8w== 
+Received: from IQ028.US.House.gov (iq028.us.house.gov [143.228.58.15])
+	by serg-bulk3-a.house.gov (8.17.1.19/8.17.1.19) with ESMTP id 455JkOsT007552
+	for <will.kiley@mail.house.gov>; Wed, 5 Jun 2024 15:46:24 -0400
+Received: from IQ028 ([127.0.0.1]) by IQ028.US.House.gov with Microsoft SMTPSVC(10.0.14393.4169);
+	 Wed, 5 Jun 2024 15:46:24 -0400
+X-IQCropID: 14440.6519075.5048956.7118717
+X-House-Vendor-Seg: LMDSI-1
+From: "Congressman Nick LaLota" <NY01NLIMA@mail.house.gov>
+To: will.kiley@mail.house.gov
+Date: 5 Jun 2024 15:46:24 -0400
+Subject: Keeping Our Skies Safe
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+Message-ID: <IQ028UnHAaaz7EjQxzm00000199@IQ028.US.House.gov>
+X-OriginalArrivalTime: 05 Jun 2024 19:46:24.0573 (UTC) FILETIME=[0C4A96D0:01DAB781]
+X-Proofpoint-Virus-Version: vendor=baseguard
+ engine=ICAP:2.0.293,Aquarius:18.0.1039,Hydra:6.0.680,FMLib:17.12.28.16
+ definitions=2024-06-05_02,2024-06-05_02,2024-05-17_01
+Return-Path: LaLotaN18LD3313@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1913.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 05 Jun 2024 19:46:26.9300
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 8eff0ba5-0256-460e-4098-08dc85983029
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1911.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted: BL02EPF0001B418.namprd09.prod.outlook.com
+X-CrossPremisesHeadersFiltered: BL02EPF0001B418.namprd09.prod.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ BL02EPF0001B418:EE_|SA1PR09MB8733:EE_|PH8PR09MB9935:EE_
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: 8eff0ba5-0256-460e-4098-08dc85983029
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam:
+ BCL:0;ARA:13230031|366007|82310400017|69100299006|41050700001;
+X-Forefront-Antispam-Report:
+ CIP:143.228.151.112;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:(13230031)(366007)(82310400017)(69100299006)(41050700001);DIR:INT;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 05 Jun 2024 19:46:26.9144
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 8eff0ba5-0256-460e-4098-08dc85983029
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.151.112];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1911.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SA1PR09MB8733
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.1460454
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.7633.033
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(425001)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	ow8ed2kntQKoZfD3y5dny1pG38yZzLqrh2oy7uwxDyDFFs4Cv0fDvuXFOVBVnExa1nFw368LEBdqriL78REdSkXb1X+jKu2wHrKJTf1pTCzDM7NEpclJHtWwWF0WGGsIEKVrKaTa1j2DMgeiPIoeZ2mlKVzJ8AUx0G8To1Tolq3iviW5OFOoE7vjRaMr4nT3Nkzd2KyxQfI0FrcZKrXf9JzsDEfXqQgv+S+2vV8Ee5SFCccilP1riqUwTXGnNFIbtFAxbCASTYxj/X1Kq1axBwXuuA+i+lHtN72Xn3Tsc3xpIzMha0uK3JTUC74IY2jRg40emyTv3ZBq6idcHLzaY0ITitLxK1z0rmb70r3pGXpj24Kdr7CXNkq+gSQvF0nXohCAszP6pbKZQUHIthLQ1TPtNV+yn5V2/4YV7fuHxkvP4AkC5IXCLkI6zdgIxXKsXbJLQDGYi9CI+HbOEV0KJAMtffv+dfAJ2E1+BlaI9MaZ36FmRKAFgDkBP1kQuVkTPstankGPmBhukXNzpgCmF7YPkb0SK0iyj34shbku/2tvPdzinJBM9nYRofo7pSpMnHZaNfBWZ4F2AH5qRnGucmbdj8CeXIAamr1nT9w9+kA0d846DW2Ynpx/LLVn8M5huMg9+s2egQFAi5Ize9zpKJVPfvM/58fdpx6cmGdi/OtDGeS8OYjACGP651AtAyPMWWP3AxFkFvMpfg8QYvWXLA9l15IVpyfHzdhWsmHCk/SEdX4CXD0Z6kJN0VOIW01NIcBHLHoSUJtYebC2wL/4cArOiPq4WjPkOHFu49x6Ae5ng+7+vqSZkJWAWAEQjglkfRUrTa8bNOcMmr3BAtAe5e0s3Ko/SGvSidslmN34sEG/oTsItEKCu6BPgQ4iOPrq
+MIME-Version: 1.0
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><b=
+ody><!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body style=3D"min-height: 497.4px; height: auto;">
+        <table class=3D"container" border=3D"0" width=3D"100%" cellspacing=
+=3D"0" cellpadding=3D"0">
+            <tbody>
+                <tr>
+                    <td style=3D"text-align: center;">
+                    &nbsp;
+                    <table class=3D"bg-change" style=3D"margin: 0px auto; b=
+order: 1px solid #FFFFFF; width: 640px;" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" align=3D"center">
+                        <tbody>
+                            <tr>
+                                <td align=3D"center">
+                                <table class=3D"body-zone bg-change width-c=
+hange" style=3D"width: 640px; padding: 0px; border-spacing: 0px; background=
+-color: #ffffff;" border=3D"0">
+                                    <tbody class=3D"ui-sortable">
+                                        <tr>
+                                            <td class=3D"content-change gen=
+eral-change textedit" style=3D"padding: 0px; font-size: 11pt; font-family: =
+Arial, sans-serif; background-color: #ffffff;">
+                                            <p style=3D"text-align: center;=
+"><img width=3D"472" style=3D"display: block; margin: 0 auto; max-width: 10=
+0%;;" title=3D"enews_banner.png" src=3D"https://iqconnect.house.gov/iqextra=
+net/Customers/NY01NL/enews_banner.png" alt=3D"Image">
+</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class=3D"content-change gen=
+eral-change textedit padding-change" style=3D"padding: 0px 10px; font-size:=
+ 11pt; font-family: Arial, sans-serif; background-color: #ffffff;">
+                                            <p><span style=3D"font-family: =
+'times new roman', times;"><form id=3D"100018" class=3D"surveybody modern" =
+action=3D"https://iqconnect.house.gov/iqextranet/ESurveyPost.aspx" method=
+=3D"GET"><div id=3D"qsc_1" class=3D"sbreak arr_" style=3D"background-color:=
+ #ffffff"><div><div style=3D"color:#000000;margin:0;padding:10px 10px 5px;"=
+><p style=3D"margin: 0">Friend,</p><p style=3D"margin: 0">&nbsp;</p><p styl=
+e=3D"margin: 0">Of all the ways our federal government misuses our money, f=
+ew are more brazen than the so-called 9/11 Passenger Security Fee, which is=
+ advertised to fund aviation security measures meant to make our air travel=
+ safer and movement through the airport screening lines faster.&nbsp; Howev=
+er, <a class=3D"ui-link" href=3D"https://urldefense.com/v3/__https://www.ts=
+a.gov/for-industry/security-fees__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!CLBA6q=
+Avd4vPfXP4TjgcDsHCF1s2AhgdNCzk9csbnYM1CCempKX_D-SLRtNQjrZwPRTa-3Nff518mcWtW=
+XRudEK_M2g6qdqd$">one-third of the revenue collected from the Passenger Sec=
+urity Fee, just over $19 billion in total</a>, has been diverted to the U.S=
+. Treasury for expenses having nothing to do with aviation security whatsoe=
+ver.<br><br>To address this fraud, I introduced the bipartisan Stop the Sca=
+m Act, which aims to end the diversion of the Passenger Security Fee and en=
+sure it is allocated directly towards funding aviation security checkpoints=
+ to prevent the next September 11th. Now, I want to hear from you!</p></div=
+></div></div><div style=3D"background-color:#ffffff;" class=3D"separator"><=
+/div><div id=3D"qsc_2" class=3D"checkbox arr_over" style=3D"background-colo=
+r: #ffffff"><div><div style=3D"color:#000000;margin:0;padding:10px 10px 5px=
+;">Do you believe the government should use ALL the money from the passenge=
+r security fee for passenger security?</div></div><div><table id=3D"qsi_2" =
+class=3D"cbTable">
+	<tr>
+		<td style=3D"padding:0 0 0 20px;"><input name=3D"qsi_2_0" type=3D"checkbo=
+x" id=3D"qsi_2_0" style=3D"margin-right:3px;" value=3D"EMAIL.OPTIN--Yes"><l=
+abel for=3D"qsi_2_0" style=3D"color:#000000;">Yes</label></td>
+	</tr>
+	<tr>
+		<td style=3D"padding:0 0 0 20px;"><input name=3D"qsi_2_1" type=3D"checkbo=
+x" id=3D"qsi_2_1" style=3D"margin-right:3px;" value=3D"EMAIL.OPTIN--No"><la=
+bel for=3D"qsi_2_1" style=3D"color:#000000;">No</label></td>
+	</tr>
+	<tr>
+		<td style=3D"padding:0 0 0 20px;"><input name=3D"qsi_2_2" type=3D"checkbo=
+x" id=3D"qsi_2_2" style=3D"margin-right:3px;" value=3D"EMAIL.OPTIN--Not Sur=
+e"><label for=3D"qsi_2_2" style=3D"color:#000000;">Not Sure</label></td>
+	</tr>
+</table>
+</div></div><div style=3D"background-color:#ffffff;" class=3D"separator"></=
+div><div id=3D"qsc_3" class=3D"sbreak arr_" style=3D"background-color: #fff=
+fff"><div><div style=3D"color:#000000;margin:0;padding:10px 10px 5px;">On S=
+eptember 11, 2001, shortly after graduating from the Naval Academy, I was a=
+ssigned to my first ship. There, I watched the harrowing attacks unfold on =
+television alongside my shipmates. Like many New Yorkers, I too lost friend=
+s and loved ones that day. In response, we made a solemn vow never to allow=
+ a terrorist attack of that magnitude to occur again on American soil.<br><=
+br>Just two months after the September 11th terrorist attacks, the Transpor=
+tation Security Administration (TSA) was founded. Subsequently, Congress in=
+troduced the Passenger Security Fee, also known as the 9/11 Security Fee. T=
+his fee was established to provide the TSA with a consistent source of reve=
+nue for acquiring the latest security checkpoint technology.&nbsp; My bill =
+would ensure the fee is used for its originally stated purpose.<br><br>Plea=
+se take a moment to share your thoughts on my efforts to support Suffolk Co=
+unty by completing the survey above. For further legislative updates, <a cl=
+ass=3D"ui-link" href=3D"https://lalota.house.gov/contact/newsletter-subscri=
+be">consider signing up for emails from my office</a>. To unsubscribe from =
+future emails, click <a class=3D"ui-link" href=3D"https://lalota.house.gov/=
+contact/newsletter-unsubscribe">HERE</a>.</div></div></div><div style=3D"ba=
+ckground-color:#ffffff;" class=3D"separator"></div><div style=3D"background=
+-color:#ffffff;text-align:center;"><button id=3D"btn_submit" type=3D"submit=
+" style=3D"background-color:#FFFFFF;color:black;">Submit</button></div><div=
+ style=3D"text-align:center;"><a href=3D"https://iqconnect.house.gov/iqextr=
+anet/EsurveyForm.aspx?__cid=3DNY01NL&amp;__sid=3D100018&amp;__crop=3D14440Q=
+QQ6519075QQQ5048956QQQ7118717" style=3D"text-align:center;display:block;col=
+or:#0049f6;" target=3D"_blank"><br>Click here to take Survey</a></div>
+<input type=3D"hidden" name=3D"__cid" value=3D"NY01NL">
+<input type=3D"hidden" name=3D"__crop" value=3D"14440QQQ6519075QQQ5048956QQ=
+Q7118717">
+<input type=3D"hidden" name=3D"__sid" value=3D"100018">
+</form></span>
+</p>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class=3D"content-change gen=
+eral-change textedit" style=3D"padding: 0px; font-size: 11pt; font-family: =
+Arial, sans-serif; background-color: #ffffff;">
+                                            &nbsp;                         =
+                   </td>
+                                        </tr>
+                                        <tr>
+                                            <td class=3D"content-change gen=
+eral-change textedit" style=3D"padding: 0px; font-size: 11pt; font-family: =
+Arial, sans-serif; background-color: #ffffff;"><hr>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class=3D"content-change gen=
+eral-change textedit" style=3D"padding: 0px; font-size: 11pt; font-family: =
+Arial, sans-serif; background-color: #ffffff;">
+<br>
+                                            <table style=3D"border-collapse=
+: collapse; width: 100%; height: 149px;" border=3D"0">
+                                                <tbody class=3D"ui-sortable=
+">
+                                                    <tr style=3D"height: 14=
+9px;">
+                                                        <td style=3D"width:=
+ 50%; border-style: none; text-align: center; height: 149px;">
+                                                        <p><span style=3D"f=
+ont-family: 'times new roman', times;"><strong>Washington, D.C. Office</str=
+ong></span>
+</p>
+                                                        <p><span style=3D"f=
+ont-family: 'times new roman', times;">1530 Longworth House Office Building=
+</span>
+</p>
+                                                        <p><span style=3D"f=
+ont-family: 'times new roman', times;">Washington, D.C 20515</span>
+</p>
+                                                        <p><span style=3D"f=
+ont-family: 'times new roman', times;">Phone: (202) 225-3826</span>
+</p>
+                                                        </td>
+
+                                                        <td style=3D"width:=
+ 50%; border-style: none; text-align: center; height: 149px;">
+                                                        <p><strong><span st=
+yle=3D"font-family: 'times new roman', times;">Hauppauge District Office</s=
+pan></strong>
+</p>
+                                                        <p><span style=3D"f=
+ont-family: 'times new roman', times;">515 Hauppauge Rd., Suite 3B</span>
+</p>
+                                                        <p><span style=3D"f=
+ont-family: 'times new roman', times;">Hauppauge, NY 11788</span>
+</p>
+                                                        <p><span style=3D"f=
+ont-family: 'times new roman', times;">Phone: (631) 289-1097</span>
+</p>
+                                                        </td>
+
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class=3D"content-change gen=
+eral-change textedit" style=3D"padding: 0px; font-size: 11pt; font-family: =
+Arial, sans-serif; background-color: #ffffff;">
+                                            <p style=3D"text-align: center;=
+">&nbsp;&nbsp; &nbsp; &nbsp;<a href=3D"https://iqconnect.house.gov/iqextran=
+et/iqClickTrk.aspx?&amp;cid=3DNY01NL&amp;crop=3D14440QQQ6519075QQQ5048956QQ=
+Q7118717&amp;report_id=3D&amp;redirect=3Dhttps%3a%2f%2fwww.facebook.com%2fr=
+eplalota&amp;redir_log=3D824010340576242" target=3D"_blank"><img width=3D"5=
+0" style=3D"margin-top: 0px; margin-bottom: 0px; max-width: 100%;;" title=
+=3D"facebook_icon.png" src=3D"https://iqconnect.house.gov/iqextranet/Custom=
+ers/NY01NL/facebook_icon.png" alt=3D"Image" height=3D"50"></a><a href=3D"ht=
+tps://iqconnect.house.gov/iqextranet/iqClickTrk.aspx?&amp;cid=3DNY01NL&amp;=
+crop=3D14440QQQ6519075QQQ5048956QQQ7118717&amp;report_id=3D&amp;redirect=3D=
+https%3a%2f%2fwww.instagram.com%2freplalota%2f&amp;redir_log=3D396344309561=
+254" target=3D"_blank"><img width=3D"50" style=3D"margin-top: 0px; margin-b=
+ottom: 0px; max-width: 100%;;" title=3D"Instagram_icon.png" src=3D"https://=
+iqconnect.house.gov/iqextranet/Customers/NY01NL/Instagram_icon.png" alt=3D"=
+Image" height=3D"50"></a><a href=3D"https://iqconnect.house.gov/iqextranet/=
+iqClickTrk.aspx?&amp;cid=3DNY01NL&amp;crop=3D14440QQQ6519075QQQ5048956QQQ71=
+18717&amp;report_id=3D&amp;redirect=3Dhttps%3a%2f%2ftwitter.com%2freplalota=
+%2f&amp;redir_log=3D335818921885212" target=3D"_blank"><img width=3D"50" st=
+yle=3D"margin-top: 0px; margin-bottom: 0px; max-width: 100%;;" title=3D"Twi=
+tter_icon.png" src=3D"https://iqconnect.house.gov/iqextranet/Customers/NY01=
+NL/Twitter_icon.png" alt=3D"Image" height=3D"50"></a>
+</p>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class=3D"content-change gen=
+eral-change textedit" style=3D"padding: 0px; font-size: 11pt; font-family: =
+Arial, sans-serif; background-color: #e1e1e1;">
+                                            &nbsp;                         =
+                   </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td align=3D"center">&nbsp;</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    <div style=3D"display:none"><a href=3D"https://iqconnect.house.gov/iqex=
+tranet/view_newsletter_setup.aspx?link=3DNY01NL%2501100412%2501Keeping%2bOu=
+r%2bSkies%2bSafe%250114440QQQ6519075QQQ5048956QQQ7118717%2501will.kiley%254=
+0mail.house.gov%2501Friend%2501Will%2bKiley%2501%2501Will%2501" target=3D"_=
+blank">Open in browser</a></div><img alt=3D"image" src=3D"https://iqconnect=
+.house.gov/iqextranet/Customers/NY01NL/iqtrk.gif?crop=3D14440QQQ6519075QQQ5=
+048956QQQ7118717"><span name=3D"14440QQQ6519075QQQ5048956QQQ7118717" data-c=
+rop=3D"14440QQQ6519075QQQ5048956QQQ7118717"></span></body>
+</html><img alt=3D"image" src=3D"https://iqconnect.house.gov/iqextranet/Cus=
+tomers/NY01NL/iqtrk.gif?crop=3D14440QQQ6519075QQQ5048956QQQ7118717"><span n=
+ame=3D"14440QQQ6519075QQQ5048956QQQ7118717" data-crop=3D"14440QQQ6519075QQQ=
+5048956QQQ7118717"></span></body>=

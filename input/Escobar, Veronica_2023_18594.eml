@@ -1,0 +1,658 @@
+Received: from PH0PR09MB11757.namprd09.prod.outlook.com (2603:10b6:510:2c7::6)
+ by SJ0PR09MB6989.namprd09.prod.outlook.com with HTTPS; Wed, 15 Nov 2023
+ 16:34:45 +0000
+Received: from DM6PR09CA0017.namprd09.prod.outlook.com (2603:10b6:5:160::30)
+ by PH0PR09MB11757.namprd09.prod.outlook.com (2603:10b6:510:2c7::6) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7002.17; Wed, 15 Nov
+ 2023 16:34:45 +0000
+Received: from DS4PEPF00000172.namprd09.prod.outlook.com
+ (2a01:111:f403:f904::1) by DM6PR09CA0017.outlook.office365.com
+ (2603:10b6:5:160::30) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6977.31 via Frontend
+ Transport; Wed, 15 Nov 2023 16:34:44 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.51.113)
+ smtp.mailfrom=mail.house.gov; dkim=fail (body hash did not verify)
+ header.d=house.gov;dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.51.113 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.51.113;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.51.113) by
+ DS4PEPF00000172.mail.protection.outlook.com (10.167.18.199) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7002.19 via Frontend Transport; Wed, 15 Nov 2023 16:34:44 +0000
+Received: from EXCH1922.US.House.gov (143.228.51.114) by EXCH1921.US.House.gov
+ (143.228.51.113) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1258.27; Wed, 15 Nov
+ 2023 11:34:43 -0500
+Received: from serg-bulk1-h.house.gov (143.228.145.4) by EXCH1922.US.House.gov
+ (143.228.51.114) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1258.27 via Frontend
+ Transport; Wed, 15 Nov 2023 11:34:43 -0500
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=from : to : date :
+ subject : content-type : message-id : mime-version; s=august2019-msgb-hg;
+ bh=8Q2URyujVqxZj6gcUCFo8PSgge4qWpQOC069GYGkK2E=;
+ b=DYQq7b0Sfvg7m+WRP5X8+pQpv7hWoeG8vr0PTfNUeVIK3rbN2oFPZYy1LKgqi/D9xfsz
+ Obj1iATCMEFtcvVB9Ake66+gzbDvHbEJGxwMjBJLe6g+OM1rFmLxXGZYb2SZEWbu0jgx
+ gp/wufSg6syuoDmjrGXn8pVXypGJ7Gc7EzV7sm8h4Prf2JPRVFVVaERs2IKKGQdq7X6p
+ RECbVUsWDXSJeUnLkY5qNIi7sxzg0L156amRYfJMRuFu6d3iak460SLZgheUR9q8z/ky
+ vOhHfLxaFSG2WQhAUIkHRfz37xbqXVIPa09rAUdeKdiIqQu/7Pi6qBDNfSR78qr2gK48 9A== 
+Received: from FIRESIDEADMIN04 (firesideadmin04.us.house.gov [143.228.58.69])
+	by serg-bulk1-h.house.gov (8.17.1.19/8.17.1.19) with ESMTP id 3AFGYgVE018051;
+	Wed, 15 Nov 2023 11:34:42 -0500
+Message-Id: <3ua5muurvt-1@serg-bulk1-h.house.gov>
+envelope-from: Veronica.Escobar@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+X-House-Vendor-Seg: Fireside21-1
+From: "Rep. Veronica Escobar" <Veronica.Escobar@mail.house.gov>
+To: Juan.Caballero@mail.house.gov
+Date: 15 Nov 2023 11:34:42 -0500
+Subject: TEST The "Laddered" Continuing Resolution
+Content-Type: multipart/alternative;
+ boundary=--boundary_98_21933a1b-fbfe-4e59-bd9b-3619ad98c9a9
+X-Proofpoint-Virus-Version: vendor=baseguard
+ engine=ICAP:2.0.272,Aquarius:18.0.987,Hydra:6.0.619,FMLib:17.11.176.26
+ definitions=2023-11-15_15,2023-11-15_01,2023-05-22_02
+Return-Path: Veronica.Escobar@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1921.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 15 Nov 2023 16:34:44.7860
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ c0504692-7c03-499b-1a1e-08dbe5f8c67e
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1922.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted: DS4PEPF00000172.namprd09.prod.outlook.com
+X-CrossPremisesHeadersFiltered: DS4PEPF00000172.namprd09.prod.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ DS4PEPF00000172:EE_|PH0PR09MB11757:EE_|SJ0PR09MB6989:EE_
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: c0504692-7c03-499b-1a1e-08dbe5f8c67e
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:143.228.51.113;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:;DIR:INT;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 15 Nov 2023 16:34:44.6766
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: c0504692-7c03-499b-1a1e-08dbe5f8c67e
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.51.113];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1922.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PH0PR09MB11757
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.3046905
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.7002.015
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(425001)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	KoGrdNC2+Cn+GSZp+SHFU/YqVoaaqjsw1pOeG+HU0lLXucdHRePsDeKbGE8/irW2ycm0V6IJsjRoI+itPWLR4Ru0RcMluRk2trCe+1xw6zznnBK+KqyuUgeFsLmxfCWkuWIHQYe7o0A9Ry6IL0XokjK1loXO263bOZyPvSzLgIkS9PStZKDx+iC7meax4czNHiwh7Q6gkbhHd8oySNzuNDybI4xcJVTgqvwm/ManKnTbjS4KFL1KHwALpyrCVx/JaEZjIH8M5v2F9FPUUO1NQgcwVZAc9Z+lZNsbA9zL/gT5gWkqbpqmr9m82mZMfIGPvQJgrpLrBQKUx83t0HBwdRBIHy6CTj6/rwT0vsR+hKOpJpNX+tnLv1uVsFsD3BI5TlSBw7y92d+EJZJeuSlHjlngoVP4IUI1LuggBPaZCareYi6Ej3UDna0v3sYtHw3yr51OKKEiK80hwbQ+hnGnui5AaS1865ze+6X42zenrV3jlTCrtgEd+5aIjs53I22/yS+ZYh66PCGYm1GkcCmahWG6ufrxSzTUOr4t7QH7qaQUppsjEQFWpn0QfWA9t5J4+Rxa6HTP/hG3gW1sU/6+jHz4J0cU0wiC6ktLb8wKQdVtdJEsNE7HlGf8k3h4BdzVXTmaRnS9Qjju4BR3UGdW+2drKwxPd3HuwS/dozzrpRSIjXQZtSsYj/fv/HZxlEU0y+89pK2jSsT3GbSOV6vEJs+TAKJMTi33BWQl6nmNME8os1OqTOaAjtfIrtqvTWdGsShqcLmiMkAa4urGIagYag==
+MIME-Version: 1.0
+
+----boundary_98_21933a1b-fbfe-4e59-bd9b-3619ad98c9a9
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+RmluYWwgMjAyMyBCYW5uZXIgIChodHRwczovL2VzY29iYXIuaG91c2UuZ292KQoKRGVh
+ciBNci4gSm9obiBEb2UsCgpZZXN0ZXJkYXksIEhvdXNlIERlbW9jcmF0c29uY2UgYWdh
+aW4gc3RlcHBlZCBpbiB0byBhdmVydCBhIGdvdmVybm1lbnQgc2h1dGRvd24uCgpKdXN0
+IGxpa2Ugd2UgZGlkIDYgd2Vla3MgYWdvLERlbW9jcmF0cyByZXNjdWVkIHRoZSBjb3Vu
+dHJ5IGFuZCBicm91Z2h0IHRoZSBuZWVkZWQgdm90ZXMgYWNyb3NzIHRoZSBmaW5pc2gg
+bGluZSB0byBhdm9pZCBkaXNhc3Ryb3VzIGNvbnNlcXVlbmNlcyBvbiBjb21tdW5pdGll
+cyBsaWtlIG91cnMuCgpXZSB2b3RlZCBmb3IgYSAyIHBhcnQgY29udGludWluZyByZXNv
+bHV0aW9uIC0gYSBiaWxsIHRvIGV4dGVuZCBnb3Zlcm5tZW50IGZ1bmRpbmcgYW5kIG9w
+ZXJhdGlvbnMgYXQgY3VycmVudCBsZXZlbHMgdW50aWwgSmFudWFyeSAxOXRoIGFuZCBG
+ZWJydWFyeSAybmQuIFRoZXJlIGFyZSB0d28gZGF0ZXMgYXMgc29tZSBkZXBhcnRtZW50
+cyBsaWtlIHRoZSBWQSwgQWdyaWN1bHR1cmUsIGFuZCBIVUQgd2lsbCBiZSBmdW5kZWQg
+dGhyb3VnaCB0aGUgZmlyc3QgZGF0ZSwgd2hpbGUgb3RoZXIgcGFydHMgb2Ygb3VyIGdv
+dmVybm1lbnQgbGlrZSB0aGUgRGVwYXJ0bWVudCBvZiBEZWZlbnNlIHdpbGwgYmUgZnVu
+ZGVkIHRocm91Z2ggdGhlIHNlY29uZCBkYXRlLgoKSSB3b3VsZG4ndCBiZSBzdXJwcmlz
+ZWQgaWYgd2UgZmluZCBvdXJzZWx2ZXMgYWdhaW4gYXQgdGhlIG1lcmN5IG9mIENvbnNl
+cnZhdGl2ZS1pbmZpZ2h0aW5nIGZvciB0aGUgbmV4dCByb3VuZCBvZiBuZWdvdGlhdGlv
+bnMgYSBjb3VwbGUgb2YgbW9udGhzIGZyb20gbm93LCBidXQgeW91IHdpbGwgYmUgYWJs
+ZSB0byBjb3VudCBvbiBtZSB0byBjb250aW51ZSBhZHZvY2F0aW5nIGZvciBvdXIgaG9t
+ZSBlYWNoIGFuZCBldmVyeSB0aW1lLgoKClN1cnZleSBRdWVzdGlvbjogRG8geW91IHN1
+cHBvcnQgRGVtb2NyYXRzIGJhaWxpbmcgb3V0IENvbnNlcnZhdGl2ZXMgb24gZ292ZXJu
+bWVudCBmdW5kaW5nPwpTdXJ2ZXkgUmVzcG9uc2VzOgoxLiBZZXMoaHR0cHM6Ly9lc2Nv
+YmFyLmhvdXNlLmdvdi9Gb3Jtcy9Gb3JtL1F1aWNrU3VydmV5LmFzcHg/ZW1haWw9amRA
+ZmlyZXNpZGUyMS5jb20mc2lkPTkwJmZpZD0xNzkzMiZhaWQ9MTM2OCZtaWQ9MzAzOSkg
+CjIuIE5vKGh0dHBzOi8vZXNjb2Jhci5ob3VzZS5nb3YvRm9ybXMvRm9ybS9RdWlja1N1
+cnZleS5hc3B4P2VtYWlsPWpkQGZpcmVzaWRlMjEuY29tJnNpZD05MCZmaWQ9MTc5MzIm
+YWlkPTEzNjkmbWlkPTMwMzkpIAoKIyMjCgo=
+----boundary_98_21933a1b-fbfe-4e59-bd9b-3619ad98c9a9
+Content-Location: https://escobar.house.gov/
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>Representative Veronica Escobar</title>
+       =20
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1">
+        <!--[if !mso]><!-->
+        <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![e=
+ndif]-->
+        <meta name=3D"twitter:card" content=3D"summary">
+        <meta property=3D"og:title" content=3D"Congresswoman Veronica Escob=
+ar">
+        <meta name=3D"twitter:title" content=3D"Congresswoman Veronica Esco=
+bar">
+        <meta property=3D"og:description" content=3D"Congresswoman Veronica=
+ Escobar, a third-generation El Pasoan, proudly represents Texas' 16th Cong=
+ressional District.">
+        <meta name=3D"twitter:description" content=3D"Congresswoman Veronic=
+a Escobar, a third-generation El Pasoan, proudly represents Texas' 16th Con=
+gressional District.">
+        <meta property=3D"og:image" content=3D"https://escobar.house.gov/im=
+ages/facebook-meta.jpg">
+        <meta name=3D"twitter:image" content=3D"https://escobar.house.gov/i=
+mages/twitter-meta.jpg">
+        <meta name=3D"twitter:card" content=3D"summary_large_image">
+        <meta name=3D"twitter:site" content=3D"@RepEscobar">
+        <meta name=3D"twitter:site:id" content=3D"1075517806551154689">
+        <meta property=3D"og:image:width" content=3D"1200">
+        <meta property=3D"og:image:height" content=3D"630">
+        <style>body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default t=
+ext sizes */ img{-ms-interpolation-mode: bicubic;} /* Allow smoother render=
+ing of resized image in Internet Explorer *//* RESET STYLES */img { border:=
+ 0; height: auto; line-height: 100%; outline: none; text-decoration: none; =
+}table { border-collapse: collapse !important; }body { height: 100% !import=
+ant; margin: 0 !important; padding: 0 !important; width: 100% !important; }=
+strong { font-weight: bold; } /* Editor reset *//* FIRESIDE STYLES */.compo=
+nent img {max-width:600px;}.component table {mso-table-rspace:10pt; border-=
+collapse:collapse;}.component { padding: 0px !important; }.press {padding-b=
+ottom: 0px;}</style><style>@media all and (max-width:650px) {            .i=
+mage-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td, .image-2, .img-2 =
+img, .image-2 tr, .image-2 td {max-width: 100% !important; width: 100% !imp=
+ortant;}            .responsive-table {width:100% !important;}            .=
+responsive-table img {max-width:100% !important; height: auto !important;} =
+           .press .component, .press td {text-align:center;}            .co=
+mponent { margin-left: 20px; margin-right: 20px;}            .component .re=
+sponsive-table { margin-left: 0px !important; margin-right: 0px !important;=
+}            .wide .video-thumb { width: 100% !important;height: auto !impo=
+rtant; }             .wide.video-container { width: 100% !important; }     =
+    .component.full-width {margin-left: 0px; margin-right: 0px; }   }</styl=
+e><style type=3D"text/css">
+            /* CLIENT-SPECIFIC STYLES */
+            body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text=
+ sizes */
+            table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Rem=
+ove spacing between tables in Outlook 2007 and up */
+            img{-ms-interpolation-mode: bicubic;} /* Allow smoother renderi=
+ng of resized image in Internet Explorer */
+            /* RESET STYLES */
+            img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: =
+0 !important; width: 100% !important; }
+            strong { font-weight: bold; } /* Editor reset */
+            /* FIRESIDE STYLES */
+            .component img {max-width:600px;}
+            .component table {mso-table-rspace:10pt; border-collapse:collap=
+se; font-family: Tahoma, Arial, sans-serif;}
+            .component td {font-family: Tahoma, Arial, sans-serif;}
+            .component { padding: 0px !important; }
+            .press {padding-bottom: 0px;}
+            .caption-1 td {font-family: Tahoma, Arial, sans-serif;}
+            /* Non-Outlook Styles */
+            body {background-color: #f1f1f1;}
+            /* Margin/NoMargin STYLES */
+            .component.full-width{ overflow: hidden; margin: 0px; }
+            /* HEADER STYLES */
+            .header-bar {width: 100%;}
+            .header-bar-margin {background-color:#ffffff;}
+            .header-bar h2 {margin: 0 !important; padding: 0 !important; co=
+lor: #000000 !important;text-align: center;font-size: 20px !important;font-=
+weight: bold !important; }
+            .survey-content > table > tbody tr td { border-color: #08244a !=
+important; }
+            .survey-content input.survey-submit { font-family: Tahoma, Aria=
+l, sans-serif !important; }
+        </style>  =20
+        <!--[if (gte mso 9)|(IE)]>
+            <style>
+                body {background-color: #ffffff !important;}
+            </style>
+        <![endif]-->   =20
+        <style id=3D"media-queries">=20
+            @media all and (max-width:650px) {
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max=
+-width: 100% !important; width: 100% !important;}
+            .responsive-table {width:100% !important;}
+            .responsive-table img {max-width:100% !important; height: auto =
+!important;}
+            .press .component, .press td, .split .component, .split .compon=
+ent td, .split td {text-align:center;}
+            .component { margin-left: 20px; margin-right: 20px;}
+            .component .responsive-table { margin-left: 0px !important; mar=
+gin-right: 0px !important;}
+            .wide .video-thumb { width: 100% !important;height: auto !impor=
+tant; }=20
+            .wide.video-container { width: 100% !important; }
+            }
+        </style>
+       =20
+    <!--[if (gte mso 9)|(IE)]>
+                                        <style>=20
+                                    </style>
+                                    <![endif]--></head>
+    <body style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%;margin: 0px !important; padding: 0px !important;">
+        <div id=3D"preview-text" style=3D"display: none; font-size: 1px; co=
+lor: #fefefe; line-height: 1px; font-family: Tahoma, Arial, sans-serif; max=
+-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">Dear Mr. John =
+Doe,Yesterday, House Democrats&nbsp;once again stepped in to avert a govern=
+ment shutdown.Just like we did 6 weeks ago,&nbsp;Democrats rescued the coun=
+try and brought the needed votes across the finish line to avoid disastrous=
+ consequences on communities like ours.&nbsp;We voted for a 2 part continui=
+ng resolution - a bill to extend government funding and operations at curre=
+nt levels until January 19th and February 2nd. There are two dates as some =
+departments like the VA, Agriculture, and HUD will be funded through the fi=
+rst date, while other parts of our government like the Department of Defens=
+e will be funded through the second date.I wouldn't be surprised if we find=
+ ourselves again at the mercy of Conservative-infighting for the next round=
+ of negotiations a couple of months from now, but you will be able to count=
+ on me to continue advocating for our home each and every time. </div>
+        <!--[if (gte mso 9)|(IE)]>
+        <table style=3D"background-color:#f1f1f1;" width=3D"100%" align=3D"=
+center" role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><=
+tr><td>
+        <![endif]-->
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;font-family: Tahoma, Arial, sans-serif; background-color: #f=
+fffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0"=
+ marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td align=3D"center" valign=3D"top" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Tahoma, Arial=
+, sans-serif; font-size: 16px; border-left: 1px solid #cccccc; border-right=
+: 1px solid #cccccc; border-top: 1px solid #cccccc;">
+                        <div class=3D"region" id=3D"region-1"><div class=3D=
+"component full-width" style=3D"padding: 0px !important;"> <div class=3D"im=
+age" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 0px; margin-left: 0px;" width=3D"648">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align: center;"><a href=3D"https://escobar.house.gov" target=
+=3D"_blank" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: =
+100%;"><img style=3D"max-width:600px;-ms-interpolation-mode: bicubic;vertic=
+al-align: bottom; max-width: 1468px;" alt=3D"Final 2023 Banner" src=3D"http=
+s://escobar.house.gov/UploadedPhotos/HighResolution/cc87bd97-aaa9-4d8e-abd4=
+-fa1192ef76a2.png" width=3D"647.5"></a></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;background-color: #ffffff; font-family: Tahoma, Arial, sans-=
+serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0"=
+ marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td class=3D"responsive-table" valign=3D"top" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Tah=
+oma, Arial, sans-serif; font-size: 18px; color: #000000; border-left: 1px s=
+olid #cccccc; border-right: 1px solid #cccccc;">
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class=3D"region" id=3D"region-2"><div class=3D=
+"component " style=3D"padding: 0px !important;"> <div class=3D"editable" st=
+yle=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"608">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><d=
+iv class=3D"component-template" style=3D"overflow: hidden;"><p style=3D"mar=
+gin: 0;margin: 0;">Dear <span class=3D"fs-merge-field" contenteditable=3D"f=
+alse"><span contenteditable=3D"false"><span class=3D"merge-field" contented=
+itable=3D"false" unselectable=3D"true">Mr. John Doe</span></span></span>,</=
+p><p style=3D"margin: 0;margin: 0;"><br></p><p style=3D"margin: 0;">Yesterd=
+ay, House Democrats&nbsp;once again stepped in to avert a government shutdo=
+wn.</p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;">Just like we=
+ did 6 weeks ago,&nbsp;Democrats rescued the country and brought the needed=
+ votes across the finish line to avoid disastrous consequences on communiti=
+es like ours.&nbsp;</p><p style=3D"margin: 0;"><br></p><p style=3D"margin: =
+0;">We voted for a 2 part continuing resolution - a bill to extend governme=
+nt funding and operations at current levels until January 19th and February=
+ 2nd. There are two dates as some departments like the VA, Agriculture, and=
+ HUD will be funded through the first date, while other parts of our govern=
+ment like the Department of Defense will be funded through the second date.=
+</p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;">I wouldn't be s=
+urprised if we find ourselves again at the mercy of Conservative-infighting=
+ for the next round of negotiations a couple of months from now, but you wi=
+ll be able to count on me to continue advocating for our home each and ever=
+y time.<br></p><p style=3D"margin: 0;margin: 0;"><br></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"survey" style=3D"overflow: hidden;width:100%;">=20
+            <table align=3D"center" class=3D"responsive-table" role=3D"pres=
+entation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-tab=
+le-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:=
+collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-l=
+ayout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"608">
+                <tbody>
+                    <tr>
+                        <td valign=3D"top" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"survey-content" style=3D"overflow=
+: hidden;"><table role=3D"presentation" align=3D"center" class=3D"responsiv=
+e-table" cellspacing=3D"0" cellpadding=3D"0" style=3D"mso-table-lspace:0pt;=
+ mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%;margin: 0 auto; borde=
+r-collapse: separate !important;">
+          <tbody>
+              <tr>
+                  <td colspan=3D"3" valign=3D"middle" align=3D"center" heig=
+ht=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;height:5px;line-height: 5px; letter-spacing: 5px; font-size: 5px; border-=
+top: 5px solid #08244a; border-left: 5px solid #08244a; border-right: 5px s=
+olid #08244a;">
+                  &nbsp;
+                  </td>
+              </tr><tr>
+                <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;width: 10px; border-left: 5px solid #08244a;" width=3D"10">&nb=
+sp;</td>
+                <td valign=3D"top" style=3D"-webkit-text-size-adjust: 100%;=
+ -ms-text-size-adjust: 100%;">
+                    <p class=3D"survey-text" style=3D"margin: 0;text-align:=
+ center;font:20px Tahoma, Arial, sans-serif">Do you support Democrats baili=
+ng out Conservatives on government funding?</p>
+                </td>
+                <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;width: 10px; border-right: 5px solid #08244a;" width=3D"10">&n=
+bsp;</td>
+            </tr>
+            <tr>
+                <td colspan=3D"3" valign=3D"middle" align=3D"center" height=
+=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;=
+height:5px;line-height: 5px; letter-spacing: 5px; font-size: 5px; border-le=
+ft: 5px solid #08244a; border-right: 5px solid #08244a;">
+                &nbsp;
+                </td>
+            </tr><tr>
+                  <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;width: 10px; border-left: 5px solid #08244a;" width=3D"10">&=
+nbsp;</td>
+                  <td valign=3D"top" style=3D"-webkit-text-size-adjust: 100=
+%; -ms-text-size-adjust: 100%;">
+                      <table role=3D"presentation" align=3D"center" width=
+=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"mso-tab=
+le-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:=
+collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-=
+collapse: separate !important;">
+                          <tbody>
+                              <tr>
+                                  <td style=3D"-webkit-text-size-adjust: 10=
+0%; -ms-text-size-adjust: 100%;">
+                                    <table role=3D"presentation" class=3D"r=
+esponsive-table" align=3D"center" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspac=
+e:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%;width: 100%; border-collapse: separate !important;">
+                                      <tbody><tr>
+                                        <td align=3D"center" class=3D"respo=
+nsive-survey response response-1368" id=3D"1368" style=3D"-webkit-text-size=
+-adjust: 100%; -ms-text-size-adjust: 100%;background-color: #08244a; width:=
+ 100%; line-height: 24px;" bgcolor=3D"#08244a">
+                                          <a href=3D"https://escobar.house.=
+gov/Forms/Form/QuickSurvey.aspx?email=3Djd@fireside21.com&amp;sid=3D90&amp;=
+fid=3D17932&amp;aid=3D1368&amp;mid=3D3039" target=3D"_blank" style=3D"-webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%;line-height: 24px; co=
+lor: rgb(255, 255, 255); text-decoration: none; padding: 12px 18px; border:=
+ 1px solid rgb(8, 36, 74); display: block;">Yes</a>
+                                        </td>
+                                      </tr>
+                                    </tbody></table>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </td>
+                  <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;width: 10px; border-right: 5px solid #08244a;" width=3D"10">=
+&nbsp;</td>
+              </tr>
+              <tr>
+                  <td colspan=3D"3" valign=3D"middle" align=3D"center" heig=
+ht=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;height:5px; line-height: 5px; letter-spacing: 5px; font-size: 5px; border=
+-left: 5px solid #08244a; border-right: 5px solid #08244a;">
+                  &nbsp;
+                  </td>
+              </tr><tr>
+                  <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;width: 10px; border-left: 5px solid #08244a;" width=3D"10">&=
+nbsp;</td>
+                  <td valign=3D"top" style=3D"-webkit-text-size-adjust: 100=
+%; -ms-text-size-adjust: 100%;">
+                      <table role=3D"presentation" align=3D"center" width=
+=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"mso-tab=
+le-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:=
+collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-=
+collapse: separate !important;">
+                          <tbody>
+                              <tr>
+                                  <td style=3D"-webkit-text-size-adjust: 10=
+0%; -ms-text-size-adjust: 100%;">
+                                    <table role=3D"presentation" class=3D"r=
+esponsive-table" align=3D"center" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspac=
+e:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%;width: 100%; border-collapse: separate !important;">
+                                      <tbody><tr>
+                                        <td align=3D"center" class=3D"respo=
+nsive-survey response response-1369" id=3D"1369" style=3D"-webkit-text-size=
+-adjust: 100%; -ms-text-size-adjust: 100%;background-color: #08244a; width:=
+ 100%; line-height: 24px;" bgcolor=3D"#08244a">
+                                          <a href=3D"https://escobar.house.=
+gov/Forms/Form/QuickSurvey.aspx?email=3Djd@fireside21.com&amp;sid=3D90&amp;=
+fid=3D17932&amp;aid=3D1369&amp;mid=3D3039" target=3D"_blank" style=3D"-webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%;line-height: 24px; co=
+lor: #fff; text-decoration: none; padding: 12px 18px; border: 1px solid #08=
+244a; display: block;">No</a>
+                                        </td>
+                                      </tr>
+                                    </tbody></table>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </td>
+                  <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;width: 10px; border-right: 5px solid #08244a;" width=3D"10">=
+&nbsp;</td>
+              </tr>
+              <tr>
+                  <td colspan=3D"3" valign=3D"middle" align=3D"center" heig=
+ht=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;height:5px; line-height: 5px; letter-spacing: 5px; font-size: 5px; border=
+-left: 5px solid #08244a; border-right: 5px solid #08244a;">
+                  &nbsp;
+                  </td>
+              </tr>
+          <tr>
+                  <td colspan=3D"3" valign=3D"middle" align=3D"center" heig=
+ht=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;height:5px;line-height: 5px; letter-spacing: 5px; font-size: 5px; border-=
+bottom: 5px solid #08244a; border-left: 5px solid #08244a; border-right: 5p=
+x solid #08244a;">
+                  &nbsp;
+                  </td>
+              </tr>
+              <tr><td colspan=3D"3" align=3D"center" style=3D"-webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%;">
+              <i class=3D"newsletter-optin">Submit survey to sign up for up=
+dates on my work in Congress.*</i>
+          </td></tr>
+            </tbody>
+          </table></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"608">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders" style=3D"overflow: hidden;"><div class=
+=3D"component-template" style=3D"overflow: hidden;"><p style=3D"margin: 0;m=
+argin: 0; text-align: center;">###</p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div></div>
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Tahoma, Arial, sans-serif; background-color: #fff=
+fff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" m=
+arginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #ffffff; border-left: 1px solid #cccccc; border-right: 1px solid #c=
+ccccc;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #08244a; backgro=
+und-color: #ffffff; border-left: 1px solid #cccccc; border-right: 1px solid=
+ #cccccc;">
+                    <a target=3D"_blank" href=3D"https://urldefense.com/v3/=
+__https://www.facebook.com/RepEscobar/__;!!Fr0YZsIsFWxTZsBm-qTAg68!jx7xPRxm=
+9X7-LMTCPIQQzdxQbgSH4rRbYiHlpsV5weEXp_5Fkes4K0d0loN07xmbbbrWppDMnHKonProRmO=
+HsaflbewIbk5iX9jg0WxRRmKw$" style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;"><img alt=3D"facebook icon" width=3D"22" src=3D"https=
+://escobarforms.house.gov/images/email/facebook.png" style=3D"-ms-interpola=
+tion-mode: bicubic;border-width: 0px; border-style: solid; width: 22px;"></=
+a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://urldefense.c=
+om/v3/__https://twitter.com/RepEscobar__;!!Fr0YZsIsFWxTZsBm-qTAg68!jx7xPRxm=
+9X7-LMTCPIQQzdxQbgSH4rRbYiHlpsV5weEXp_5Fkes4K0d0loN07xmbbbrWppDMnHKonProRmO=
+HsaflbewIbk5iX9jg0dCXensM$" style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;"><img alt=3D"twitter icon" width=3D"22" src=3D"https:=
+//escobarforms.house.gov/images/email/twitter.png" style=3D"-ms-interpolati=
+on-mode: bicubic;border-width: 0px; border-style: solid; width: 22px;"></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://urldefense.c=
+om/v3/__https://www.instagram.com/repescobar/__;!!Fr0YZsIsFWxTZsBm-qTAg68!j=
+x7xPRxm9X7-LMTCPIQQzdxQbgSH4rRbYiHlpsV5weEXp_5Fkes4K0d0loN07xmbbbrWppDMnHKo=
+nProRmOHsaflbewIbk5iX9jg0f_4jVBJ$" style=3D"-webkit-text-size-adjust: 100%;=
+ -ms-text-size-adjust: 100%;"><img alt=3D"instagram icon" width=3D"22" src=
+=3D"https://escobarforms.house.gov/images/email/instagram.png" style=3D"-ms=
+-interpolation-mode: bicubic;border-width: 0px; border-style: solid; width:=
+ 22px;"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:10px; background=
+-color: #ffffff; border-left: 1px solid #cccccc; border-right: 1px solid #c=
+ccccc;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:10px; background=
+-color: #ffffff; border-left: 1px solid #cccccc; border-right: 1px solid #c=
+ccccc;">
+                        <p style=3D"margin: 0;margin:0;"><a href=3D"https:/=
+/escobar.house.gov/forms/emailsignup/?Delete=3Dtrue" style=3D"-webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%;text-decoration:underline; co=
+lor:#000000; font-size: 16px;">Unsubscribe</a>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #ffffff; border-left: 1px solid #cccccc; border-right: 1px solid #c=
+ccccc; border-bottom: 1px solid #cccccc;">
+                    &nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    <!--[if (gte mso 9)|(IE)]>
+    </td></tr></table>
+    <![endif]-->
+    </body>
+</html>=
+
+----boundary_98_21933a1b-fbfe-4e59-bd9b-3619ad98c9a9--

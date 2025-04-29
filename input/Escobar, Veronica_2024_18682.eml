@@ -1,0 +1,1455 @@
+Received: from BLAPR09MB6593.namprd09.prod.outlook.com (2603:10b6:208:28b::7)
+ by SA0PR09MB6985.namprd09.prod.outlook.com with HTTPS; Wed, 1 May 2024
+ 18:26:39 +0000
+Received: from DM6PR09CA0005.namprd09.prod.outlook.com (2603:10b6:5:160::18)
+ by BLAPR09MB6593.namprd09.prod.outlook.com (2603:10b6:208:28b::7) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7519.36; Wed, 1 May
+ 2024 18:26:38 +0000
+Received: from BL02EPF0001B419.namprd09.prod.outlook.com
+ (2603:10b6:5:160:cafe::6c) by DM6PR09CA0005.outlook.office365.com
+ (2603:10b6:5:160::18) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7519.36 via Frontend
+ Transport; Wed, 1 May 2024 18:26:37 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.151.111)
+ smtp.mailfrom=mail.house.gov; dkim=fail (body hash did not verify)
+ header.d=mail.house.gov;dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.151.111 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.151.111;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.151.111) by
+ BL02EPF0001B419.mail.protection.outlook.com (10.167.242.198) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7544.18 via Frontend Transport; Wed, 1 May 2024 18:26:37 +0000
+Received: from EXCH1915.US.House.gov (143.228.151.74) by EXCH1912.US.House.gov
+ (143.228.151.111) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1544.9; Wed, 1 May 2024
+ 14:26:31 -0400
+Received: from serg-bulk1-a.house.gov (143.228.42.4) by EXCH1915.US.House.gov
+ (143.228.151.74) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1544.9 via Frontend
+ Transport; Wed, 1 May 2024 14:26:31 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mail.house.gov; h=from : to : date
+ : subject : content-type : message-id : mime-version;
+ s=january2024-msgb-mhg; bh=i4umCUp9UXNEvL23cGUbD1AKkKMk6ho3O7Q3ZyCrrro=;
+ b=S9lBgbJHq4nnCUkoBxJgzM1OyUWrEga2RKlYhTuw9/o99EoS2BYjePVSsxnrCyfjo4xA
+ NXM669WWdS6xK+ebYfZszi+LXaaTTC5VQU8bsVV0rk4uKMp27UCpIb1ORpxDI7CEwx99
+ w/NnxQ3T6ZkfJ1p5c7JK9A8Nd2qZYc1BpTTmEn59VK+KZJsarPtx6NhXEvrTEndclqr9
+ Y6ZNOnf6tVnHJeb1aIEbxaN0hJk7G7KAOXBA52ywSxVEVLrjk6UCOH20MjYJyUs1JYMm
+ VqFHPVROSoSdnmBYqMJk+FVudGtIvNxzpZuNcMKMrFMv2+uFdXFoBM4JIm5uOue4aBLD tQ== 
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=from : to : date :
+ subject : content-type : message-id : mime-version; s=august2019-msgb-hg;
+ bh=i4umCUp9UXNEvL23cGUbD1AKkKMk6ho3O7Q3ZyCrrro=;
+ b=c+mcAEF8A7ykBBpFHOXN6HLMPwpjkRzU1CX0b0LAYmQiUonV4dAT/5R/oF/CBe9eoeK1
+ TNZleSxNGZX2/Q3wYOjCEHbzraddg+mTZg+m/WBHs9/lWGpxKCeTkz9aQlTIiyGNBCYz
+ QK/Zi3++pvgNw/xV0IKXm4FR6oKDsNnMfptk2OqQ0LimbF5d6tuN3QVAziTVfgSbWCUx
+ nFZzV4EXOFjhzL2sDZV07kUTJC5Q0oL2fdu/b3xjkK+wfPtUIj3499tEBUlUD+O6mlvk
+ vekmy+KEgmzbWKI/RT9ViEZSZL8niKvt2e+88BqAvVbNjNllfp+b+JvJNThcj94+R5n4 lg== 
+Received: from FIRESIDEADMIN04 (firesideadmin04.us.house.gov [143.228.58.69])
+	by serg-bulk1-a.house.gov (8.17.1.19/8.17.1.19) with ESMTP id 441IQUHb019314;
+	Wed, 1 May 2024 14:26:30 -0400
+Message-Id: <3xrvgrv8ur-1@serg-bulk1-a.house.gov>
+envelope-from: Veronica.Escobar@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+X-House-Vendor-Seg: Fireside21-1
+From: "Rep. Veronica Escobar" <Veronica.Escobar@mail.house.gov>
+To: Juan.Caballero@mail.house.gov
+Date: 1 May 2024 14:26:30 -0400
+Subject: TEST A Month in Review: April 2024 Congressional Update
+Content-Type: multipart/alternative;
+ boundary=--boundary_149_2e453a9f-1716-481b-8f5d-4e90b538c65b
+X-Proofpoint-Virus-Version: vendor=baseguard
+ engine=ICAP:2.0.293,Aquarius:18.0.1011,Hydra:6.0.650,FMLib:17.11.176.26
+ definitions=2024-05-01_16,2024-04-30_01,2023-05-22_02
+Return-Path: Veronica.Escobar@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1912.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 01 May 2024 18:26:37.8605
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 20ce6730-a79b-4ea6-fd09-08dc6a0c3d31
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1915.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted: BL02EPF0001B419.namprd09.prod.outlook.com
+X-CrossPremisesHeadersFiltered: BL02EPF0001B419.namprd09.prod.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ BL02EPF0001B419:EE_|BLAPR09MB6593:EE_|SA0PR09MB6985:EE_
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: 20ce6730-a79b-4ea6-fd09-08dc6a0c3d31
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam:
+ BCL:0;ARA:13230031|366007|82310400014|4143199003|41050700001;
+X-Forefront-Antispam-Report:
+ CIP:143.228.151.111;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:(13230031)(366007)(82310400014)(4143199003)(41050700001);DIR:INT;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 01 May 2024 18:26:37.8449
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 20ce6730-a79b-4ea6-fd09-08dc6a0c3d31
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.151.111];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1915.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BLAPR09MB6593
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.1189826
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.7519.031
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(425001)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	jDTrvGBGBpZ3+TPW17WAPUFVyLWNJ+eUtp3pJaX8QKKoqHpaYAZUdgBZiR3gerr4NC4Y/o/HG+MIondxMGRzVJSDDuu1DbHs5PoTKE9wATWiVfkBVtRwk5qBHOAJwTOkSrYFI+wxjucDqNZ4SAvCdvQDqi9S+BrLndRY77omxHa92RVT6MtH1s6QkyjJmZHsRXND4WKPD6ftTTcEsdHL+nS1eCgI4RvVXnvbmEmfIDoR7AqpeVOfaKQ0XQdSnPIK4SPnxmM+3xgvVWfJXEGoG4NVrjX8ysp6QlLvy091AWLfRxhTrUmjv1igCp0nZ4kRHxspCnqD/Fb7rDY6VUBsaqcoAgdSBsGYkio+YBp0OK+0vO/+55jSuSnfvsRVQOq6GUtT6QWkly1quV0zF9P3KdRtcW6NxHWJb+zP6KiXCe/aMpYsxL3oTnMgfoWCRmk18ztmufzT1TuHMWCGnU6yAwHC87G6ahU4B/b5tOl/2AlSPv7bgXSxnimHT1p1G17cPvCtMjARX1crB77CcsMo1S6JL24GmoOUeU9BorrYtilND/XB+dc6oaZnR7ih9hdHon0Xwtd8bKXz1aRHu5jDdE2ugBROHHUAsnbCF5mXjO+TlVoAFRNjVSjEZU3FWui9Md8v2Sbu987v9RPamEpP4DUe1DgUjo64wdIUPgO3QWalYdOxfcwSzl1UdcdhN7gRoO/186o2YCmY/hFD1laj9PcaMjl7Jqj6XYEZzWZdflUHVwMHW2IxXcI7dfLtNcC0OKvDx+Z2wkddLn/Xq8I4ivvIAqyTF+lTiufSUhrOEhymxKn01OeCoNLvMEruuCLTM9Ltt4lQ1y9el0Mvvfdzl865nc2SlxJDqLV9S7qxE/90HRhQ78KnXXfp49ypk6ktkJYT5/nUr+uKhTxKRwHJNQ==
+MIME-Version: 1.0
+
+----boundary_149_2e453a9f-1716-481b-8f5d-4e90b538c65b
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Final 2023 Banner  (https://escobar.house.gov)
+
+Dear Mr. John Doe,
+
+It was an incredibly busy month on Capitol Hill and in El Paso. I hope you =
+saw(https://escobar.house.gov/news/documentsingle.aspx?DocumentID=3D1571)  =
+that I secured over $19 million in federal funds for projects across our co=
+mmunity in March, and this month I had the opportunity to visit with severa=
+l of the awardees to celebrate these investments.
+
+I also was thrilled to see the official website launch and the applications=
+ openfor the American Climate Corps (ACC). Thanks to the leadership of Pres=
+ident Biden, the ACC is an incredible way to both join the fight against cl=
+imate change and serve our country. To learn more about the almost 2,000 av=
+ailable jobs, click here(https://urldefense.com/v3/__https://www.acc.gov__;=
+!!Ckt11KVezJIME51BYf4a6hrLATHilnk!AmFVdDtenMf87m1BHiLRd3VU5k33Qf1AAQ_TjN1BA=
+hCZoyBH6JKHtvgE37l6jqg1vKizUIPIUn2vKNAmB_RwYTf9jbjHGZTV16ILcYmUm5Em$ ) .
+
+Finally, I know how many of you have raised concerns with me about the Affo=
+rdable Connectivity Program running out of funding. This month, I hosted a =
+roundtable and press conference(https://urldefense.com/v3/__https://www.elp=
+asotimes.com/story/news/politics/2024/04/29/us-rep-veronica-escobar-calls-f=
+or-action-on-federal-internet-subsidy/73453547007/__;!!Ckt11KVezJIME51BYf4a=
+6hrLATHilnk!AmFVdDtenMf87m1BHiLRd3VU5k33Qf1AAQ_TjN1BAhCZoyBH6JKHtvgE37l6jqg=
+1vKizUIPIUn2vKNAmB_RwYTf9jbjHGZTV16ILcabqtxhV$ )  with community stakeholde=
+rs to learn more about the program=E2=80=99s transformational impact on El =
+Paso and raise awareness about its importance. I=E2=80=99ve also cosponsore=
+d a bill to allocate more funding for the program and continue to call on S=
+peaker Johnson to bring the bill to the House floor for a vote.
+
+As always, pleasesubscribe to mynewsletter(https://escobar.house.gov/forms/=
+emailsignup/) and follow me onFacebook(https://urldefense.com/v3/__https://=
+www.facebook.com/RepEscobar__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!AmFVdDtenMf=
+87m1BHiLRd3VU5k33Qf1AAQ_TjN1BAhCZoyBH6JKHtvgE37l6jqg1vKizUIPIUn2vKNAmB_RwYT=
+f9jbjHGZTV16ILcZ2Q--PP$ ) ,Twitter(https://urldefense.com/v3/__https://twit=
+ter.com/RepEscobar__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!AmFVdDtenMf87m1BHiLR=
+d3VU5k33Qf1AAQ_TjN1BAhCZoyBH6JKHtvgE37l6jqg1vKizUIPIUn2vKNAmB_RwYTf9jbjHGZT=
+V16ILcdTTDYKE$ ) , andInstagram(https://urldefense.com/v3/__https://www.ins=
+tagram.com/repescobar/__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!AmFVdDtenMf87m1B=
+HiLRd3VU5k33Qf1AAQ_TjN1BAhCZoyBH6JKHtvgE37l6jqg1vKizUIPIUn2vKNAmB_RwYTf9jbj=
+HGZTV16ILcSwU9M-B$ ) to ensure you never miss any of my updates and stay in=
+ the loop on what I=E2=80=99ve been doing for El Paso.
+
+
+Survey Question: Should Speaker Johnson bring the Affordable Connectivity P=
+rogram Extension Act of 2024 to the floor for a vote?
+Survey Responses:
+1. Yes(https://escobar.house.gov/Forms/Form/QuickSurvey.aspx?email=3Djd@fir=
+eside21.com&sid=3D101&fid=3D17989&aid=3D1409&mid=3D3092)=20
+2. No(https://escobar.house.gov/Forms/Form/QuickSurvey.aspx?email=3Djd@fire=
+side21.com&sid=3D101&fid=3D17989&aid=3D1410&mid=3D3092)=20
+
+
+
+April 2024 First Photos=20
+I was thrilled to join the Lower Valley Water District this week to present=
+ them with $1.35M I secured through Community Project Funding.
+
+These funds will be used connect and upgrade service lines, as well as inst=
+all fire hydrants. They=E2=80=99ll also be used for the construction of a s=
+teel ground storage tank to store a million gallons of water.
+The Affordable Connectivity Program has been transformational, providing ov=
+er 81k households(https://urldefense.com/v3/__https://www.whitehouse.gov/wp=
+-content/uploads/2024/01/Texas-ACP-Fact-Sheet.pdf__;!!Ckt11KVezJIME51BYf4a6=
+hrLATHilnk!AmFVdDtenMf87m1BHiLRd3VU5k33Qf1AAQ_TjN1BAhCZoyBH6JKHtvgE37l6jqg1=
+vKizUIPIUn2vKNAmB_RwYTf9jbjHGZTV16ILcUcaO1ho$ )  in El Paso with affordable=
+ internet access.
+
+With the ACP running out of funding soon, I hosted a roundtable and press c=
+onference with community stakeholders to talk about the impact of this prog=
+ram for El Paso.
+It was so lovely to meet with 8th graders from St. Mark's Middle School whi=
+le they were here during their annual trip to our nation's capital!
+
+We spent some time discussing my work as a Representative, what the House o=
+f Representatives does, and I took some questions.Ihope you all enjoyed the=
+ rest of your time in DC!
+
+
+April 2024 Second Photos  (.)
+Our community has an incredible need for access to nutritious and stable fo=
+od assistance.
+
+To help meet that need, I secured $800k in federal funds to construct a new=
+ permanent operations center forEl Pasoans Fighting Hunger Food Bankin west=
+ El Paso County.
+Thanks to the Build Back Better Regional Challenge and the investment of AR=
+PA funds by theCity of El Paso,for the Innovation Factory, our region=E2=80=
+=99s aerospace & defense industries are growing.
+
+I toured their facility and heard from some of the businesses that have cho=
+sen to relocate or expand in our community.
+I'm beyond thrilled to have celebrated with University Medical Center of El=
+ Pasothat I secured $1.3 million in federal funds to replace their emergenc=
+y generator.
+
+Hospitals must be equipped with the latest power storage capabilities in th=
+e event of emergency situations.
+
+
+
+April 2024 Third Photos=20
+Investing in our community's public safety infrastructure will save lives a=
+nd improve emergency service personnel response times.
+
+I secured $975k in federal funds for El Paso Water to develop a flood warni=
+ng system for our county.
+There are few things more special than seeing El Pasoans in our nation's ca=
+pital!
+
+It was wonderful to chat with students andfrom Loretto Academy answer their=
+ questions about DC and the House of Representatives as they visit Washingt=
+onas part of the Close Up program.
+It was a pleasure to sit down with EPPD Chief Pacillas this month for a pro=
+ductive meeting.
+
+We spoke about his priorities for our community and his vision for the depa=
+rtment moving forward.
+
+
+April 2024 Fourth Photos=20
+Recognizing a local, family-owned business + celebrating their kitty=E2=80=
+=99s birthday =3D the best day ever!
+
+It was my pleasure to presentZin Valle Vineyardswith a Congressional Commen=
+dation for their 20 years of dedicated service to our community. Truffles t=
+he Cat got one too for her birthday!
+Thank you to City Councilmember Canales and District 8 for having me at you=
+r community meeting to give updates about my work in Congress!
+
+My office is always here to help! If you need assistance with a federal age=
+ncy, please call my El Paso office at 915-541-1400.
+Congratulations to the El Paso HS's Mock Trial Team for placing third at th=
+e Texas High School Mock Trial State competition!
+
+You are all brilliant! Thank you for making El Paso proud! I was thrilled t=
+o celebrate with you all and presenteach of you a certificate of congressio=
+nal recognition.
+
+
+Casework  (https://escobar.house.gov/services/casework/)
+Casework Numbers April 2024  (https://escobar.house.gov/services/casework/)
+Grants Updates Header=20
+Grants Number April 2024  (https://escobar.house.gov/services/grant-applica=
+nts.htm)
+
+###
+
+
+----boundary_149_2e453a9f-1716-481b-8f5d-4e90b538c65b
+Content-Location: https://escobar.house.gov/
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>Representative Veronica Escobar</title>
+       =20
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1">
+        <!--[if !mso]><!-->
+        <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![e=
+ndif]-->
+        <meta name=3D"twitter:card" content=3D"summary">
+        <meta property=3D"og:title" content=3D"Congresswoman Veronica Escob=
+ar">
+        <meta name=3D"twitter:title" content=3D"Congresswoman Veronica Esco=
+bar">
+        <meta property=3D"og:description" content=3D"Congresswoman Veronica=
+ Escobar, a third-generation El Pasoan, proudly represents Texas' 16th Cong=
+ressional District.">
+        <meta name=3D"twitter:description" content=3D"Congresswoman Veronic=
+a Escobar, a third-generation El Pasoan, proudly represents Texas' 16th Con=
+gressional District.">
+        <meta property=3D"og:image" content=3D"https://escobar.house.gov/im=
+ages/facebook-meta.jpg">
+        <meta name=3D"twitter:image" content=3D"https://escobar.house.gov/i=
+mages/twitter-meta.jpg">
+        <meta name=3D"twitter:card" content=3D"summary_large_image">
+        <meta name=3D"twitter:site" content=3D"@RepEscobar">
+        <meta name=3D"twitter:site:id" content=3D"1075517806551154689">
+        <meta property=3D"og:image:width" content=3D"1200">
+        <meta property=3D"og:image:height" content=3D"630">
+        <style>body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default t=
+ext sizes */ img{-ms-interpolation-mode: bicubic;} /* Allow smoother render=
+ing of resized image in Internet Explorer *//* RESET STYLES */img { border:=
+ 0; height: auto; line-height: 100%; outline: none; text-decoration: none; =
+}table { border-collapse: collapse !important; }body { height: 100% !import=
+ant; margin: 0 !important; padding: 0 !important; width: 100% !important; }=
+strong { font-weight: bold; } /* Editor reset *//* FIRESIDE STYLES */.compo=
+nent img {max-width:600px;}.component table {mso-table-rspace:10pt; border-=
+collapse:collapse;}.component { padding: 0px !important; }.press {padding-b=
+ottom: 0px;}</style><style>@media all and (max-width:650px) {            .i=
+mage-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td, .image-2, .img-2 =
+img, .image-2 tr, .image-2 td {max-width: 100% !important; width: 100% !imp=
+ortant;}            .responsive-table {width:100% !important;}            .=
+responsive-table img {max-width:100% !important; height: auto !important;} =
+           .press .component, .press td {text-align:center;}            .co=
+mponent { margin-left: 20px; margin-right: 20px;}            .component .re=
+sponsive-table { margin-left: 0px !important; margin-right: 0px !important;=
+}            .wide .video-thumb { width: 100% !important;height: auto !impo=
+rtant; }             .wide.video-container { width: 100% !important; }     =
+    .component.full-width {margin-left: 0px; margin-right: 0px; }   }</styl=
+e><style type=3D"text/css">
+            /* CLIENT-SPECIFIC STYLES */
+            body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text=
+ sizes */
+            table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Rem=
+ove spacing between tables in Outlook 2007 and up */
+            img{-ms-interpolation-mode: bicubic;} /* Allow smoother renderi=
+ng of resized image in Internet Explorer */
+            /* RESET STYLES */
+            img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: =
+0 !important; width: 100% !important; }
+            strong { font-weight: bold; } /* Editor reset */
+            /* FIRESIDE STYLES */
+            .component img {max-width:600px;}
+            .component table {mso-table-rspace:10pt; border-collapse:collap=
+se; font-family: Tahoma, Arial, sans-serif;}
+            .component td {font-family: Tahoma, Arial, sans-serif;}
+            .component { padding: 0px !important; }
+            .press {padding-bottom: 0px;}
+            .caption-1 td {font-family: Tahoma, Arial, sans-serif;}
+            /* Non-Outlook Styles */
+            body {background-color: #f1f1f1;}
+            /* Margin/NoMargin STYLES */
+            .component.full-width{ overflow: hidden; margin: 0px; }
+            /* HEADER STYLES */
+            .header-bar {width: 100%;}
+            .header-bar-margin {background-color:#ffffff;}
+            .header-bar h2 {margin: 0 !important; padding: 0 !important; co=
+lor: #000000 !important;text-align: center;font-size: 20px !important;font-=
+weight: bold !important; }
+            .survey-content > table > tbody tr td { border-color: #08244a !=
+important; }
+            .survey-content input.survey-submit { font-family: Tahoma, Aria=
+l, sans-serif !important; }
+        </style>  =20
+        <!--[if (gte mso 9)|(IE)]>
+            <style>
+                body {background-color: #ffffff !important;}
+            </style>
+        <![endif]-->   =20
+        <style id=3D"media-queries">=20
+            @media all and (max-width:650px) {
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max=
+-width: 100% !important; width: 100% !important;}
+            .responsive-table {width:100% !important;}
+            .responsive-table img {max-width:100% !important; height: auto =
+!important;}
+            .press .component, .press td, .split .component, .split .compon=
+ent td, .split td {text-align:center;}
+            .component { margin-left: 20px; margin-right: 20px;}
+            .component .responsive-table { margin-left: 0px !important; mar=
+gin-right: 0px !important;}
+            .wide .video-thumb { width: 100% !important;height: auto !impor=
+tant; }=20
+            .wide.video-container { width: 100% !important; }
+            }
+        </style>
+       =20
+    <!--[if (gte mso 9)|(IE)]>
+                                        <style>=20
+                                    </style>
+                                    <![endif]--></head>
+    <body style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%;margin: 0px !important; padding: 0px !important;">
+        <div id=3D"preview-text" style=3D"display: none; font-size: 1px; co=
+lor: #fefefe; line-height: 1px; font-family: Tahoma, Arial, sans-serif; max=
+-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">Dear Mr. John =
+Doe,It was an incredibly busy month on Capitol Hill and in El Paso. I hope =
+you saw that I secured over $19 million in federal funds for projects acros=
+s our community in March, and this month I had the opportunity to visit wit=
+h several of the awardees to celebrate these investments.I also was thrille=
+d to see the official website launch and the applications open&nbsp;for the=
+ American Climate Corps (ACC). Thanks to the leadership of President Biden,=
+ the ACC is an incredible way to both join the fight against climate change=
+ and serve our country. To learn more about the almost 2,000 available jobs=
+, click here.Finally, I know how many of you have raised concerns with me a=
+bout the Affordable Connectivity Program running out of funding. This month=
+, I hosted a roundtable and press conference with community stakeholders to=
+ learn more about the program=E2=80=99s transformational impact on El Paso =
+and raise awareness about its importance. I=E2=80=99ve also cosponsored a b=
+ill to allocate more funding for the program and continue to call on Speake=
+r Johnson to bring the bill to the House floor for a <a href=3D"https://url=
+defense.com/v3/__http://vote.As__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!AmFVdDt=
+enMf87m1BHiLRd3VU5k33Qf1AAQ_TjN1BAhCZoyBH6JKHtvgE37l6jqg1vKizUIPIUn2vKNAmB_=
+RwYTf9jbjHGZTV16ILcVrAtcju$">vote.As</a> always, please&nbsp;subscribe to m=
+y&nbsp;newsletter&nbsp;and follow me on&nbsp;Facebook,&nbsp;Twitter, and&nb=
+sp;Instagram&nbsp;to ensure you never miss any of my updates and stay in th=
+e loop on what I=E2=80=99ve been doing for El Paso. </div>
+        <!--[if (gte mso 9)|(IE)]>
+        <table style=3D"background-color:#f1f1f1;" width=3D"100%" align=3D"=
+center" role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><=
+tr><td>
+        <![endif]-->
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;font-family: Tahoma, Arial, sans-serif; background-color: #f=
+fffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0"=
+ marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td align=3D"center" valign=3D"top" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Tahoma, Arial=
+, sans-serif; font-size: 16px; border-left: 1px solid #cccccc; border-right=
+: 1px solid #cccccc; border-top: 1px solid #cccccc;">
+                        <div class=3D"region" id=3D"region-1"><div class=3D=
+"component full-width" style=3D"padding: 0px !important;"> <div class=3D"im=
+age" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 0px; margin-left: 0px;" width=3D"647.647=
+034">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align: center;"><a href=3D"https://escobar.house.gov" target=
+=3D"_blank" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: =
+100%;"><img style=3D"max-width:600px;-ms-interpolation-mode: bicubic;vertic=
+al-align: bottom; max-width: 1468px;" alt=3D"Final 2023 Banner" src=3D"http=
+s://escobar.house.gov/UploadedPhotos/HighResolution/cc87bd97-aaa9-4d8e-abd4=
+-fa1192ef76a2.png" width=3D"647.5"></a></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;background-color: #ffffff; font-family: Tahoma, Arial, sans-=
+serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0"=
+ marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td class=3D"responsive-table" valign=3D"top" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Tah=
+oma, Arial, sans-serif; font-size: 18px; color: #000000; border-left: 1px s=
+olid #cccccc; border-right: 1px solid #cccccc;">
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class=3D"region" id=3D"region-2"><div class=3D=
+"component " style=3D"padding: 0px !important;"> <div class=3D"editable" st=
+yle=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"608">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;margin: 0;">Dear <span class=3D"fs-merge-field" content=
+editable=3D"false"><span contenteditable=3D"false"><span class=3D"merge-fie=
+ld" contenteditable=3D"false" unselectable=3D"true">Mr. John Doe</span></sp=
+an></span>,</p><p style=3D"margin: 0;margin: 0;"><br></p><p style=3D"margin=
+: 0;">It was an incredibly busy month on Capitol Hill and in El Paso. <a da=
+ta-cke-saved-href=3D"https://escobar.house.gov/news/documentsingle.aspx?Doc=
+umentID=3D1571" href=3D"https://escobar.house.gov/news/documentsingle.aspx?=
+DocumentID=3D1571" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-a=
+djust: 100%;">I hope you saw</a> that I secured over $19 million in federal=
+ funds for projects across our community in March, and this month I had the=
+ opportunity to visit with several of the awardees to celebrate these inves=
+tments.</p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;">I also w=
+as thrilled to see the official website launch and the applications open&nb=
+sp;for the American Climate Corps (ACC). Thanks to the leadership of Presid=
+ent Biden, the ACC is an incredible way to both join the fight against clim=
+ate change and serve our country. To learn more about the almost 2,000 avai=
+lable jobs, click <a data-cke-saved-href=3D"https://www.acc.gov" href=3D"ht=
+tps://urldefense.com/v3/__https://www.acc.gov__;!!Ckt11KVezJIME51BYf4a6hrLA=
+THilnk!AmFVdDtenMf87m1BHiLRd3VU5k33Qf1AAQ_TjN1BAhCZoyBH6JKHtvgE37l6jqg1vKiz=
+UIPIUn2vKNAmB_RwYTf9jbjHGZTV16ILcYmUm5Em$" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%;">here</a>.</p><p style=3D"margin: 0;">=
+<br></p><p style=3D"margin: 0;">Finally, I know how many of you have raised=
+ concerns with me about the Affordable Connectivity Program running out of =
+funding. This month, <a data-cke-saved-href=3D"https://www.elpasotimes.com/=
+story/news/politics/2024/04/29/us-rep-veronica-escobar-calls-for-action-on-=
+federal-internet-subsidy/73453547007/" href=3D"https://urldefense.com/v3/__=
+https://www.elpasotimes.com/story/news/politics/2024/04/29/us-rep-veronica-=
+escobar-calls-for-action-on-federal-internet-subsidy/73453547007/__;!!Ckt11=
+KVezJIME51BYf4a6hrLATHilnk!AmFVdDtenMf87m1BHiLRd3VU5k33Qf1AAQ_TjN1BAhCZoyBH=
+6JKHtvgE37l6jqg1vKizUIPIUn2vKNAmB_RwYTf9jbjHGZTV16ILcabqtxhV$" style=3D"-we=
+bkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">I hosted a roundt=
+able and press conference</a> with community stakeholders to learn more abo=
+ut the program=E2=80=99s transformational impact on El Paso and raise aware=
+ness about its importance. I=E2=80=99ve also cosponsored a bill to allocate=
+ more funding for the program and continue to call on Speaker Johnson to br=
+ing the bill to the House floor for a vote.</p><p style=3D"margin: 0;"><br>=
+</p><p style=3D"margin: 0;">As always, please&nbsp;subscribe to my&nbsp;<a =
+draggable=3D"false" data-cke-saved-href=3D"https://escobar.house.gov/forms/=
+emailsignup/" href=3D"https://escobar.house.gov/forms/emailsignup/" rel=3D"=
+noopener" target=3D"_blank" style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;">newsletter</a>&nbsp;and follow me on&nbsp;<a draggab=
+le=3D"false" data-cke-saved-href=3D"https://www.facebook.com/RepEscobar" hr=
+ef=3D"https://urldefense.com/v3/__https://www.facebook.com/RepEscobar__;!!C=
+kt11KVezJIME51BYf4a6hrLATHilnk!AmFVdDtenMf87m1BHiLRd3VU5k33Qf1AAQ_TjN1BAhCZ=
+oyBH6JKHtvgE37l6jqg1vKizUIPIUn2vKNAmB_RwYTf9jbjHGZTV16ILcZ2Q--PP$" rel=3D"n=
+oopener" target=3D"_blank" style=3D"-webkit-text-size-adjust: 100%; -ms-tex=
+t-size-adjust: 100%;">Facebook</a>,&nbsp;<a draggable=3D"false" data-cke-sa=
+ved-href=3D"https://twitter.com/RepEscobar" href=3D"https://urldefense.com/=
+v3/__https://twitter.com/RepEscobar__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!AmF=
+VdDtenMf87m1BHiLRd3VU5k33Qf1AAQ_TjN1BAhCZoyBH6JKHtvgE37l6jqg1vKizUIPIUn2vKN=
+AmB_RwYTf9jbjHGZTV16ILcdTTDYKE$" rel=3D"noopener" target=3D"_blank" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">Twitter</a=
+>, and&nbsp;<a draggable=3D"false" data-cke-saved-href=3D"https://www.insta=
+gram.com/repescobar/" href=3D"https://urldefense.com/v3/__https://www.insta=
+gram.com/repescobar/__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!AmFVdDtenMf87m1BHi=
+LRd3VU5k33Qf1AAQ_TjN1BAhCZoyBH6JKHtvgE37l6jqg1vKizUIPIUn2vKNAmB_RwYTf9jbjHG=
+ZTV16ILcSwU9M-B$" rel=3D"noopener" target=3D"_blank" style=3D"-webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%;">Instagram</a>&nbsp;to ensur=
+e you never miss any of my updates and stay in the loop on what I=E2=80=99v=
+e been doing for El Paso.</p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"608">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"40=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 40px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"survey" style=3D"overflow: hidden;width:100%;">=20
+            <table align=3D"center" class=3D"responsive-table" role=3D"pres=
+entation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-tab=
+le-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:=
+collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-l=
+ayout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"608">
+                <tbody>
+                    <tr>
+                        <td valign=3D"top" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"survey-content" style=3D"overflow=
+: hidden;"><table role=3D"presentation" align=3D"center" class=3D"responsiv=
+e-table" cellspacing=3D"0" cellpadding=3D"0" style=3D"mso-table-lspace:0pt;=
+ mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%;margin: 0 auto; borde=
+r-collapse: separate !important;">
+          <tbody>
+              <tr>
+                  <td colspan=3D"3" valign=3D"middle" align=3D"center" heig=
+ht=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;height:5px;line-height: 5px; letter-spacing: 5px; font-size: 5px; border-=
+top: 5px solid #08244a; border-left: 5px solid #08244a; border-right: 5px s=
+olid #08244a;">
+                  &nbsp;
+                  </td>
+              </tr><tr>
+                <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;width: 10px; border-left: 5px solid #08244a;" width=3D"10">&nb=
+sp;</td>
+                <td valign=3D"top" style=3D"-webkit-text-size-adjust: 100%;=
+ -ms-text-size-adjust: 100%;">
+                    <p class=3D"survey-text" style=3D"margin: 0;text-align:=
+ center;font:20px Tahoma, Arial, sans-serif">Should Speaker Johnson bring t=
+he Affordable Connectivity Program Extension Act of 2024 to the floor for a=
+ vote?</p>
+                </td>
+                <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;width: 10px; border-right: 5px solid #08244a;" width=3D"10">&n=
+bsp;</td>
+            </tr>
+            <tr>
+                <td colspan=3D"3" valign=3D"middle" align=3D"center" height=
+=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;=
+height:5px;line-height: 5px; letter-spacing: 5px; font-size: 5px; border-le=
+ft: 5px solid #08244a; border-right: 5px solid #08244a;">
+                &nbsp;
+                </td>
+            </tr><tr>
+                  <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;width: 10px; border-left: 5px solid #08244a;" width=3D"10">&=
+nbsp;</td>
+                  <td valign=3D"top" style=3D"-webkit-text-size-adjust: 100=
+%; -ms-text-size-adjust: 100%;">
+                      <table role=3D"presentation" align=3D"center" width=
+=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"mso-tab=
+le-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:=
+collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-=
+collapse: separate !important;">
+                          <tbody>
+                              <tr>
+                                  <td style=3D"-webkit-text-size-adjust: 10=
+0%; -ms-text-size-adjust: 100%;">
+                                    <table role=3D"presentation" class=3D"r=
+esponsive-table" align=3D"center" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspac=
+e:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%;width: 100%; border-collapse: separate !important;">
+                                      <tbody><tr>
+                                        <td align=3D"center" class=3D"respo=
+nsive-survey response response-1409" id=3D"1409" style=3D"-webkit-text-size=
+-adjust: 100%; -ms-text-size-adjust: 100%;background-color: #08244a; width:=
+ 100%; line-height: 24px;" bgcolor=3D"#08244a">
+                                          <a href=3D"https://escobar.house.=
+gov/Forms/Form/QuickSurvey.aspx?email=3Djd@fireside21.com&amp;sid=3D101&amp=
+;fid=3D17989&amp;aid=3D1409&amp;mid=3D3092" target=3D"_blank" style=3D"-web=
+kit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;line-height: 24px; c=
+olor: rgb(255, 255, 255); text-decoration: none; padding: 12px 18px; border=
+: 1px solid rgb(8, 36, 74); display: block;">Yes</a>
+                                        </td>
+                                      </tr>
+                                    </tbody></table>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </td>
+                  <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;width: 10px; border-right: 5px solid #08244a;" width=3D"10">=
+&nbsp;</td>
+              </tr>
+              <tr>
+                  <td colspan=3D"3" valign=3D"middle" align=3D"center" heig=
+ht=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;height:5px; line-height: 5px; letter-spacing: 5px; font-size: 5px; border=
+-left: 5px solid #08244a; border-right: 5px solid #08244a;">
+                  &nbsp;
+                  </td>
+              </tr><tr>
+                  <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;width: 10px; border-left: 5px solid #08244a;" width=3D"10">&=
+nbsp;</td>
+                  <td valign=3D"top" style=3D"-webkit-text-size-adjust: 100=
+%; -ms-text-size-adjust: 100%;">
+                      <table role=3D"presentation" align=3D"center" width=
+=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"mso-tab=
+le-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:=
+collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-=
+collapse: separate !important;">
+                          <tbody>
+                              <tr>
+                                  <td style=3D"-webkit-text-size-adjust: 10=
+0%; -ms-text-size-adjust: 100%;">
+                                    <table role=3D"presentation" class=3D"r=
+esponsive-table" align=3D"center" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspac=
+e:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%;width: 100%; border-collapse: separate !important;">
+                                      <tbody><tr>
+                                        <td align=3D"center" class=3D"respo=
+nsive-survey response response-1410" id=3D"1410" style=3D"-webkit-text-size=
+-adjust: 100%; -ms-text-size-adjust: 100%;background-color: #08244a; width:=
+ 100%; line-height: 24px;" bgcolor=3D"#08244a">
+                                          <a href=3D"https://escobar.house.=
+gov/Forms/Form/QuickSurvey.aspx?email=3Djd@fireside21.com&amp;sid=3D101&amp=
+;fid=3D17989&amp;aid=3D1410&amp;mid=3D3092" target=3D"_blank" style=3D"-web=
+kit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;line-height: 24px; c=
+olor: #fff; text-decoration: none; padding: 12px 18px; border: 1px solid #0=
+8244a; display: block;">No</a>
+                                        </td>
+                                      </tr>
+                                    </tbody></table>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </td>
+                  <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;width: 10px; border-right: 5px solid #08244a;" width=3D"10">=
+&nbsp;</td>
+              </tr>
+              <tr>
+                  <td colspan=3D"3" valign=3D"middle" align=3D"center" heig=
+ht=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;height:5px; line-height: 5px; letter-spacing: 5px; font-size: 5px; border=
+-left: 5px solid #08244a; border-right: 5px solid #08244a;">
+                  &nbsp;
+                  </td>
+              </tr>
+          <tr>
+                  <td colspan=3D"3" valign=3D"middle" align=3D"center" heig=
+ht=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;height:5px;line-height: 5px; letter-spacing: 5px; font-size: 5px; border-=
+bottom: 5px solid #08244a; border-left: 5px solid #08244a; border-right: 5p=
+x solid #08244a;">
+                  &nbsp;
+                  </td>
+              </tr>
+              <tr><td colspan=3D"3" align=3D"center" style=3D"-webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%;">
+              <i class=3D"newsletter-optin">Submit survey to sign up for up=
+dates on my work in Congress.*</i>
+          </td></tr>
+            </tbody>
+          </table></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"608">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"22=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 22px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"608">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"22=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 22px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component full-width" style=3D"padding: 0px !important;"> <di=
+v class=3D"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 0px; margin-left: 0px;" width=3D"648">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 1502px;" alt=3D"April 20=
+24 First Photos" src=3D"https://escobar.house.gov/UploadedPhotos/HighResolu=
+tion/1782ad6c-eca8-4f2c-acfc-04541389f5e9.png" width=3D"647.5"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component full-width" style=3D"padding: 0px !important;"> <di=
+v class=3D"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 0px; margin-left: 0px;" width=3D"648">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><t=
+able class=3D"MsoTableGrid cke_show_border" style=3D"mso-table-lspace:0pt; =
+mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webki=
+t-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-collapse:collap=
+se; border:none"><tbody><tr><td valign=3D"top" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;width:208px; padding:0in 7px 0in 7p=
+x"><p style=3D"margin: 0;">I was thrilled to join the Lower Valley Water Di=
+strict this week to present them with $1.35M I secured through Community Pr=
+oject Funding.</p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;">T=
+hese funds will be used connect and upgrade service lines, as well as insta=
+ll fire hydrants. They=E2=80=99ll also be used for the construction of a st=
+eel ground storage tank to store a million gallons of water.</p></td><td va=
+lign=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust:=
+ 100%;width:208px; padding:0in 7px 0in 7px"><p style=3D"margin: 0;">The Aff=
+ordable Connectivity Program has been transformational, providing over <a d=
+ata-cke-saved-href=3D"https://www.whitehouse.gov/wp-content/uploads/2024/01=
+/Texas-ACP-Fact-Sheet.pdf" href=3D"https://urldefense.com/v3/__https://www.=
+whitehouse.gov/wp-content/uploads/2024/01/Texas-ACP-Fact-Sheet.pdf__;!!Ckt1=
+1KVezJIME51BYf4a6hrLATHilnk!AmFVdDtenMf87m1BHiLRd3VU5k33Qf1AAQ_TjN1BAhCZoyB=
+H6JKHtvgE37l6jqg1vKizUIPIUn2vKNAmB_RwYTf9jbjHGZTV16ILcUcaO1ho$" style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">81k households</=
+a> in El Paso with affordable internet access.</p><p style=3D"margin: 0;"><=
+br></p><p style=3D"margin: 0;">With the ACP running out of funding soon, I =
+hosted a roundtable and press conference with community stakeholders to tal=
+k about the impact of this program for El Paso.</p></td><td valign=3D"top" =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;width:2=
+08px; padding:0in 7px 0in 7px"><p style=3D"margin: 0;">It was so lovely to =
+meet with 8th graders from St. Mark's Middle School while they were here du=
+ring their annual trip to our nation's capital!</p><p style=3D"margin: 0;">=
+<br></p><p style=3D"margin: 0;">We spent some time discussing my work as a =
+Representative, what the House of Representatives does, and I took some que=
+stions.<br><br>I&nbsp;hope you all enjoyed the rest of your time in DC!</p>=
+</td></tr></tbody></table></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"608">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"30=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 30px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component full-width" style=3D"padding: 0px !important;"> <di=
+v class=3D"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 0px; margin-left: 0px;" width=3D"648">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><a href=3D"." target=3D"_blank" style=3D"-webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img style=3D"max-w=
+idth:600px;-ms-interpolation-mode: bicubic;vertical-align: bottom; max-widt=
+h: 1498px;" alt=3D"April 2024 Second Photos" src=3D"https://escobar.house.g=
+ov/UploadedPhotos/HighResolution/9b6832de-d292-4097-a227-d1e281076689.png" =
+width=3D"647.5"></a></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component full-width" style=3D"padding: 0px !important;"> <di=
+v class=3D"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 0px; margin-left: 0px;" width=3D"648">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><t=
+able class=3D"MsoTableGrid cke_show_border" style=3D"mso-table-lspace:0pt; =
+mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webki=
+t-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-collapse:collap=
+se; border:none"><tbody><tr><td valign=3D"top" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;width:208px; padding:0in 7px 0in 7p=
+x"><p style=3D"margin: 0;">Our community has an incredible need for access =
+to nutritious and stable food assistance.</p><p style=3D"margin: 0;"><br></=
+p><p style=3D"margin: 0;">To help meet that need, I secured $800k in federa=
+l funds to construct a new permanent operations center for&nbsp;El Pasoans =
+Fighting Hunger Food Bank&nbsp;in west El Paso County.</p></td><td valign=
+=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;width:208px; padding:0in 7px 0in 7px"><p style=3D"margin: 0;">Thanks to t=
+he Build Back Better Regional Challenge and the investment of ARPA funds by=
+ the&nbsp;City of El Paso,&nbsp;for the Innovation Factory, our region=E2=
+=80=99s aerospace &amp; defense industries are growing.</p><p style=3D"marg=
+in: 0;"><br></p><p style=3D"margin: 0;">I toured their facility and heard f=
+rom some of the businesses that have chosen to relocate or expand in our co=
+mmunity.</p></td><td valign=3D"top" style=3D"-webkit-text-size-adjust: 100%=
+; -ms-text-size-adjust: 100%;width:208px; padding:0in 7px 0in 7px"><p style=
+=3D"margin: 0;">I'm beyond thrilled to have celebrated with University Medi=
+cal Center of El Paso&nbsp;that I secured $1.3 million in federal funds to =
+replace their emergency generator.</p><p style=3D"margin: 0;"><br></p><p st=
+yle=3D"margin: 0;">Hospitals must be equipped with the latest power storage=
+ capabilities in the event of emergency situations.</p></td></tr></tbody></=
+table></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"608">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"0"=
+>
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 0px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"608">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"30=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 30px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component full-width" style=3D"padding: 0px !important;"> <di=
+v class=3D"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 0px; margin-left: 0px;" width=3D"648">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 1502px;" alt=3D"April 20=
+24 Third Photos" src=3D"https://escobar.house.gov/UploadedPhotos/HighResolu=
+tion/a637e0c9-4610-4a39-8684-3ebe23bdc59b.png" width=3D"647.5"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component full-width" style=3D"padding: 0px !important;"> <di=
+v class=3D"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 0px; margin-left: 0px;" width=3D"648">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><t=
+able class=3D"MsoTableGrid cke_show_border" style=3D"mso-table-lspace:0pt; =
+mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webki=
+t-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-collapse:collap=
+se;border:none;"><tbody><tr><td valign=3D"top" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;width:208px; padding:0in 7px 0in 7p=
+x"><p style=3D"margin: 0;">Investing in our community's public safety infra=
+structure will save lives and improve emergency service personnel response =
+times.</p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;">I secured=
+ $975k in federal funds for El Paso Water to develop a flood warning system=
+ for our county.</p></td><td valign=3D"top" style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;width:208px; padding:0in 7px 0in 7px">=
+<p style=3D"margin: 0;">There are few things more special than seeing El Pa=
+soans in our nation's capital!</p><p style=3D"margin: 0;"><br></p><p style=
+=3D"margin: 0;">It was wonderful to chat with students and&nbsp;from Lorett=
+o Academy answer their questions about DC and the House of Representatives =
+as they visit Washington&nbsp;as part of the Close Up program.</p></td><td =
+valign=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjus=
+t: 100%;width:208px; padding:0in 7px 0in 7px"><p style=3D"margin: 0;">It wa=
+s a pleasure to sit down with EPPD Chief Pacillas this month for a producti=
+ve meeting.</p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;">We s=
+poke about his priorities for our community and his vision for the departme=
+nt moving forward.</p></td></tr></tbody></table></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"608">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"30=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 30px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component full-width" style=3D"padding: 0px !important;"> <di=
+v class=3D"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 0px; margin-left: 0px;" width=3D"648">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 1496px;" alt=3D"April 20=
+24 Fourth Photos" src=3D"https://escobar.house.gov/UploadedPhotos/HighResol=
+ution/de6ed38c-9bab-4634-9e2f-806d509e2e5a.png" width=3D"647.5"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component full-width" style=3D"padding: 0px !important;"> <di=
+v class=3D"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 0px; margin-left: 0px;" width=3D"648">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><t=
+able class=3D"MsoTableGrid cke_show_border" style=3D"mso-table-lspace:0pt; =
+mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webki=
+t-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-collapse:collap=
+se; border:none"><tbody><tr><td valign=3D"top" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;width:208px; padding:0in 7px 0in 7p=
+x"><p style=3D"margin: 0;">Recognizing a local, family-owned business + cel=
+ebrating their kitty=E2=80=99s birthday =3D the best day ever!</p><p style=
+=3D"margin: 0;"><br></p><p style=3D"margin: 0;">It was my pleasure to prese=
+nt&nbsp;Zin Valle Vineyards&nbsp;with a Congressional Commendation for thei=
+r 20 years of dedicated service to our community. Truffles the Cat got one =
+too for her birthday!</p></td><td valign=3D"top" style=3D"-webkit-text-size=
+-adjust: 100%; -ms-text-size-adjust: 100%;width:208px; padding:0in 7px 0in =
+7px"><p style=3D"margin: 0;">Thank you to City Councilmember Canales and Di=
+strict 8 for having me at your community meeting to give updates about my w=
+ork in Congress!</p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"=
+>My office is always here to help! If you need assistance with a federal ag=
+ency, please call my El Paso office at 915-541-1400.</p></td><td valign=3D"=
+top" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;wi=
+dth:208px; padding:0in 7px 0in 7px"><p style=3D"margin: 0;">Congratulations=
+ to the El Paso HS's Mock Trial Team for placing third at the Texas High Sc=
+hool Mock Trial State competition!</p><p style=3D"margin: 0;"><br></p><p st=
+yle=3D"margin: 0;">You are all brilliant! Thank you for making El Paso prou=
+d! I was thrilled to celebrate with you all and present&nbsp;each of you a =
+certificate of congressional recognition.</p></td></tr></tbody></table></di=
+v>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"608">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"30=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 30px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"608">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><a href=3D"https://escobar.house.gov/services/=
+casework/" target=3D"_blank" style=3D"-webkit-text-size-adjust: 100%; -ms-t=
+ext-size-adjust: 100%;"><img style=3D"max-width:600px;-ms-interpolation-mod=
+e: bicubic;vertical-align: bottom; max-width: 1538px;" alt=3D"Casework" src=
+=3D"https://escobar.house.gov/UploadedPhotos/HighResolution/3bf81220-dd0a-4=
+733-9030-df3de5a5102b.png" width=3D"607.5"></a></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component full-width" style=3D"padding: 0px !important;"> <di=
+v class=3D"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 0px; margin-left: 0px;" width=3D"648">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><a href=3D"https://escobar.house.gov/services/=
+casework/" target=3D"_blank" style=3D"-webkit-text-size-adjust: 100%; -ms-t=
+ext-size-adjust: 100%;"><img style=3D"max-width:600px;-ms-interpolation-mod=
+e: bicubic;vertical-align: bottom; max-width: 1422px;" alt=3D"Casework Numb=
+ers April 2024" src=3D"https://escobar.house.gov/UploadedPhotos/HighResolut=
+ion/dd2d5931-656b-4f44-bb80-2a13200cb078.png" width=3D"647.5"></a></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"608">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 1522px;" alt=3D"Grants U=
+pdates Header" src=3D"https://escobar.house.gov/UploadedPhotos/HighResoluti=
+on/19686f48-a90a-41f8-a4e3-9eec633b21e5.png" width=3D"607.5"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component full-width" style=3D"padding: 0px !important;"> <di=
+v class=3D"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 0px; margin-left: 0px;" width=3D"648">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><a href=3D"https://escobar.house.gov/services/=
+grant-applicants.htm" target=3D"_blank" style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;"><img style=3D"max-width:600px;-ms-interp=
+olation-mode: bicubic;vertical-align: bottom; max-width: 1396px;" alt=3D"Gr=
+ants Number April 2024" src=3D"https://escobar.house.gov/UploadedPhotos/Hig=
+hResolution/8a775ade-129b-4e9c-80f5-fa2ee4d9faeb.png" width=3D"647.5"></a><=
+/div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"608">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"30=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 30px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"608">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;text-align: center;">###</p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div></div>
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: Tahoma, Arial, sans-serif; background-color: #fff=
+fff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" m=
+arginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #ffffff; border-left: 1px solid #cccccc; border-right: 1px solid #c=
+ccccc;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #08244a; backgro=
+und-color: #ffffff; border-left: 1px solid #cccccc; border-right: 1px solid=
+ #cccccc;">
+                    <a target=3D"_blank" href=3D"https://urldefense.com/v3/=
+__https://www.facebook.com/RepEscobar/__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!=
+AmFVdDtenMf87m1BHiLRd3VU5k33Qf1AAQ_TjN1BAhCZoyBH6JKHtvgE37l6jqg1vKizUIPIUn2=
+vKNAmB_RwYTf9jbjHGZTV16ILccLlHwqS$" style=3D"-webkit-text-size-adjust: 100%=
+; -ms-text-size-adjust: 100%;"><img alt=3D"facebook icon" width=3D"22" src=
+=3D"https://escobarforms.house.gov/images/email/facebook.png" style=3D"-ms-=
+interpolation-mode: bicubic;border-width: 0px; border-style: solid; width: =
+22px;"></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://urldefense.c=
+om/v3/__https://twitter.com/RepEscobar__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!=
+AmFVdDtenMf87m1BHiLRd3VU5k33Qf1AAQ_TjN1BAhCZoyBH6JKHtvgE37l6jqg1vKizUIPIUn2=
+vKNAmB_RwYTf9jbjHGZTV16ILcdTTDYKE$" style=3D"-webkit-text-size-adjust: 100%=
+; -ms-text-size-adjust: 100%;"><img alt=3D"twitter icon" width=3D"22" src=
+=3D"https://escobarforms.house.gov/images/email/twitter.png" style=3D"-ms-i=
+nterpolation-mode: bicubic;border-width: 0px; border-style: solid; width: 2=
+2px;"></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://urldefense.c=
+om/v3/__https://www.instagram.com/repescobar/__;!!Ckt11KVezJIME51BYf4a6hrLA=
+THilnk!AmFVdDtenMf87m1BHiLRd3VU5k33Qf1AAQ_TjN1BAhCZoyBH6JKHtvgE37l6jqg1vKiz=
+UIPIUn2vKNAmB_RwYTf9jbjHGZTV16ILcSwU9M-B$" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"instagram icon" width=3D"=
+22" src=3D"https://escobarforms.house.gov/images/email/instagram.png" style=
+=3D"-ms-interpolation-mode: bicubic;border-width: 0px; border-style: solid;=
+ width: 22px;"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:10px; background=
+-color: #ffffff; border-left: 1px solid #cccccc; border-right: 1px solid #c=
+ccccc;">
+                    &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:10px; background=
+-color: #ffffff; border-left: 1px solid #cccccc; border-right: 1px solid #c=
+ccccc;">
+                        <p style=3D"margin: 0;margin:0;"><a href=3D"https:/=
+/escobar.house.gov/forms/emailsignup/?Delete=3Dtrue" style=3D"-webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%;text-decoration:underline; co=
+lor:#000000; font-size: 16px;">Unsubscribe</a>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; background=
+-color: #ffffff; border-left: 1px solid #cccccc; border-right: 1px solid #c=
+ccccc; border-bottom: 1px solid #cccccc;">
+                    &nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    <!--[if (gte mso 9)|(IE)]>
+    </td></tr></table>
+    <![endif]-->
+    </body>
+</html>=
+
+----boundary_149_2e453a9f-1716-481b-8f5d-4e90b538c65b--

@@ -1,0 +1,635 @@
+Received: from SA0PR09MB6635.namprd09.prod.outlook.com (2603:10b6:806:ab::13)
+ by BLAPR09MB6626.namprd09.prod.outlook.com with HTTPS; Fri, 25 Feb 2022
+ 16:28:08 +0000
+Received: from CY4PR09CA0082.namprd09.prod.outlook.com (2603:10b6:903:c7::20)
+ by SA0PR09MB6635.namprd09.prod.outlook.com (2603:10b6:806:ab::13) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.5017.22; Fri, 25 Feb
+ 2022 16:28:07 +0000
+Received: from DM3GCC02FT038.eop-gcc02.prod.protection.outlook.com
+ (2a01:111:f400:7d04::207) by CY4PR09CA0082.outlook.office365.com
+ (2603:10b6:903:c7::20) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.5017.21 via Frontend
+ Transport; Fri, 25 Feb 2022 16:28:07 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.151.74)
+ smtp.mailfrom=mail.house.gov; dkim=fail (body hash did not verify)
+ header.d=house.gov;dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.151.74 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.151.74;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.151.74) by
+ DM3GCC02FT038.mail.protection.outlook.com (10.97.8.139) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.5017.22 via Frontend Transport; Fri, 25 Feb 2022 16:28:07 +0000
+Received: from EXCH1913.US.House.gov (143.228.151.112) by
+ EXCH1915.US.House.gov (143.228.151.74) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.2.986.15; Fri, 25 Feb 2022 11:27:59 -0500
+Received: from serg-bulk4-a.house.gov (143.228.42.126) by
+ EXCH1913.US.House.gov (143.228.151.112) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.986.15
+ via Frontend Transport; Fri, 25 Feb 2022 11:27:59 -0500
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=from : to : date :
+ subject : content-type : message-id : mime-version; s=august2019-msgb-hg;
+ bh=ZVsZa3ByuenSQhWq40cwIqTYfOSTasvQbPS5PR+I5iE=;
+ b=QaEzVNIAP67EiP/FvI93pa5CCeP1A/gA5w7R3T0KoODyR9zG3jxSoJpJ4SKdYYgY2ZrD
+ 0T/23/NsUwEqNI+PdzBy/5uj2EUWI6FNAiT+j+PD+8VkWeiIwWsY9XGTJhRV9b2ICPhD
+ xP8yGjCezpmuc5eWZiEbPlzXEiuOVnVa7dYdVU7X+WJdj3ni89tFujRMd7ARaPlGAIZf
+ zLDLYqltZWs5DWK/04K8i4xHFlckO1EGxTkqZZGa0T9b3S1XCw4ODRCWFeyEMCNFaPgy
+ 0e8zev1QKt75zGeisASsvO00Xnim/viRDjeCMWyobyYZCRPS7K5qL8/RYBLWX6CL8txv PA== 
+Received: from firesideadmin02 ([143.228.58.54])
+	by serg-bulk4-a.house.gov (8.16.1.2/8.16.1.2) with ESMTP id 21PGRxr4027804;
+	Fri, 25 Feb 2022 11:27:59 -0500
+Message-Id: <3eavjyfqry-1@serg-bulk4-a.house.gov>
+envelope-from: GA01News@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+MIME-Version: 1.0
+From: "Rep. Earl L. "Buddy" Carter" <GA01News@mail.house.gov>
+To: Jack.Ganter@mail.house.gov
+Date: 25 Feb 2022 11:27:59 -0500
+Subject: TEST President Biden nominates Ketanji Brown Jackson to the Supreme
+ Court
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:6.0.425,18.0.816
+ definitions=2022-02-25_07:2022-02-25,2022-02-25 signatures=0
+Return-Path: GA01News@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1915.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 25 Feb 2022 16:28:07.2635
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 518ef856-64c6-476b-fd71-08d9f87bce21
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1913.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted:
+ DM3GCC02FT038.eop-gcc02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ DM3GCC02FT038.eop-gcc02.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: 518ef856-64c6-476b-fd71-08d9f87bce21
+X-MS-TrafficTypeDiagnostic: SA0PR09MB6635:EE_
+X-MS-Exchange-Organization-SCL: -1
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:143.228.151.74;CTRY:US;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SKI;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:;DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 25 Feb 2022 16:28:07.1698
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 518ef856-64c6-476b-fd71-08d9f87bce21
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.151.74];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1913.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SA0PR09MB6635
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.0162315
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.5017.026
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506458)(944626604)(920097)(425001)(930097);
+X-Microsoft-Antispam-Message-Info:
+	j+cTqj8LZB8Zhn+qANHKxfbrW5bWjC5XLR9rwKfbCNtytandv+PvTrlFmRz/FLYvxaFVD7FtPCPVNkojgi66AdDWPc/z33GtbJgQm2gCQ7evqMkvR4Z2REsFLKmoOdCTZ+X6GwPLT/HRzchxb69TIb8WRuQFJFfHZO+PAf+D6CmBTpjEN/F5kklVah5Sl/eT9uibVBay/BCOQAQviXe3MP6ks7m3LXGTDaic5CK7f3zTKdlT2tqeU89rO3CzkU+5p9eq1SCBDEHLq+1ZzhK36b9jQSsSf8RnNk8sjcL4TaEV36hwz4GtzRkf8ciOKaxROu2bPwGN66vTLo7zDew+iOeQyVrkv2WTGV8CqEOIEUA6INuF2EIppH98rrtnU4SYxU5RKCoxc5utpkS/5/I5XrqmGo/vMkFlzzss2XdwsTRjvFiLBT1ZwoO2+vcQGRBmZv+Y+YlO6OF8gGTjl+ZjXKgpY1hj5W0Tbx/muCX0+ks13XFw+CYAmY39+CGhY69H9gVzYgZPKAaY47KvYdguO4RqGU5KsV8s0zDZieB2MDBnF2oH91gy32/V6nq3TAsIrfpvKsgaAPjC+gfMaTeNtu6Ykhaa0ExlAkt5wnOLrMfOYCE0DklQKtZOajDHE7Mn546QSX61XhhYZLrKV3geeOA5Tf9kc3zeZ0y3X8ajHIg=
+Content-type: multipart/alternative;
+	boundary="B_3728633295_748591893"
+
+> This message is in MIME format. Since your mail reader does not understand
+this format, some or all of this message may not be legible.
+
+--B_3728633295_748591893
+Content-type: text/plain;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+Do you support President Biden=E2=80=99s nomination of =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C=
+ =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C=E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C=E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C=
+ =E2=80=8C =E2=80=8C =E2=80=8C=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C=
+ =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C=
+ =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C=E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C=E2=
+=80=8C
+Home  |   Meet Buddy  |   Services  |   Newsroom  |   Issues  |   Legislati=
+on  |   Recent Votes  |   Connect=20
+ =20
+ Do you support President Biden=E2=80=99s nomination of Ketanji Brown Jackson to =
+the Supreme Court of the United States?=20
+ =20
+=20
+Yes =20
+ =20
+=20
+No =20
+ =20
+=20
+Unsure =20
+ =20
+ =20
+Submit survey to sign up for updates on my work in Congress.*=20
+ =20
+ =20
+Buddy Carter
+Member of Congress
+ =20
+Washington, DC Office
+2432 Rayburn HOB
+Washington, DC 20515
+Phone: (202) 225-5831
+Fax: (202) 226-2269=20
+Brunswick Office
+777 Gloucester Street
+Suite 410
+Brunswick, GA 31520
+Phone: (912) 265-9010
+Fax: (912) 265-9013=20
+Savannah Office
+6602 Abercorn Street
+Suite 105B
+Savannah, GA 31405
+Phone: (912) 352-0101
+Fax: (912) 352-0105=20
+ =20
+      =20
+ =20
+ =20
+Website |  Unsubscribe |  Contact=20
+  
+
+--B_3728633295_748591893
+Content-type: text/html;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><title>R=
+epresentative Buddy Carter</title><meta name=3D"viewport" content=3D"width=3Ddevic=
+e-width, initial-scale=3D1"><!--[if !mso]><!--><meta http-equiv=3D"X-UA-Compatib=
+le" content=3D"IE=3Dedge"><!--<![endif]--><style>body, table, td, a{-webkit-text=
+-size-adjust: 100%; -ms-text-size-adjust: 100%;} /* Prevent WebKit and Windo=
+ws mobile changing default text sizes */ img{-ms-interpolation-mode: bicubic=
+;} /* Allow smoother rendering of resized image in Internet Explorer *//* RE=
+SET STYLES */img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }table { border-collapse: collapse !important; }bod=
+y { height: 100% !important; margin: 0 !important; padding: 0 !important; wi=
+dth: 100% !important; }strong { font-weight: bold; } /* Editor reset *//* FI=
+RESIDE STYLES */.component img {max-width:600px;}.component table {mso-table=
+-rspace:10pt; border-collapse:collapse;}.component { padding: 0px !important=
+; }.press {padding-bottom: 0px;}</style><style>@media all and (max-width:650=
+px) {            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td,=
+ .image-2, .img-2 img, .image-2 tr, .image-2 td {max-width: 100% !important;=
+ width: 100% !important;}            .responsive-table {width:100% !importan=
+t;}            .responsive-table img {max-width:100% !important; height: aut=
+o !important;}            .press .component, .press td {text-align:center;} =
+           .component { margin-left: 20px; margin-right: 20px;}            .=
+component .responsive-table { margin-left: 0px !important; margin-right: 0px=
+ !important;}            .wide .video-thumb { width: 100% !important;height:=
+ auto !important; }             .wide.video-container { width: 100% !importa=
+nt; }         .component.full-width {margin-left: 0px; margin-right: 0px; } =
+  }</style><style type=3D"text/css">
+            /* CLIENT-SPECIFIC STYLES */
+            body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text =
+sizes */
+            table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Rem=
+ove spacing between tables in Outlook 2007 and up */
+            img{-ms-interpolation-mode: bicubic;} /* Allow smoother renderi=
+ng of resized image in Internet Explorer */
+            /* RESET STYLES */
+            img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: =
+0 !important; width: 100% !important; }
+            strong { font-weight: bold; } /* Editor reset */
+            /* FIRESIDE STYLES */
+            .component img {max-width:600px;}
+            .component table {mso-table-rspace:10pt; border-collapse:collap=
+se; font-family: Arial, Helvetica, sans-serif;}
+            .component td {font-family: Arial, Helvetica, sans-serif;}
+            .component { padding: 0px !important; }
+            .caption-1 td {font-family: Arial, Helvetica, sans-serif;}
+            /* Non-Outlook Styles */
+            body {background-color: #fafafa;}
+            /* Margin/NoMargin STYLES */
+            .component.full-width{ overflow: hidden; margin: 0px; }
+            /* HEADER STYLES */
+            .header-bar {width: 100%;}
+            .header-bar-margin {background-color:#ffffff;}
+            .header-bar h2 {margin: 0 !important; padding: 0 !important; co=
+lor: #0865c1 !important;text-align: left;font-size: 25px !important;font-wei=
+ght: bold !important; }
+            .survey-content > table > tbody tr td { border-color: #0865c1 !=
+important; }
+            .survey-content input.survey-submit { font-family: Arial, Helve=
+tica, sans-serif !important; }
+        </style><!--[if (gte mso 9)|(IE)]>
+            <style>
+                body {background-color: #ffffff !important;}
+            </style>
+        <![endif]--><style id=3D"media-queries">=20
+            @media all and (max-width:650px) {
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max=
+-width: 100% !important; width: 100% !important;}
+            .responsive-table {width:100% !important;}
+            .responsive-table img {max-width:100% !important; height: auto =
+!important;}
+            .split .component, .split td {text-align:center;}
+            .component { margin-left: 20px; margin-right: 20px;}
+            .component .responsive-table { margin-left: 0px !important; mar=
+gin-right: 0px !important;}
+            .wide .video-thumb { width: 100% !important;height: auto !impor=
+tant; }=20
+            .wide.video-container { width: 100% !important; }
+            }
+        </style><!--[if (gte mso 9)|(IE)]>
+                                            <style>=20
+                                        </style>
+                                        <![endif]--></head><body style=3D"-we=
+bkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;margin: 0px !importa=
+nt; padding: 0px !important;"><div id=3D"preview-text" style=3D"display: none; f=
+ont-size: 1px; color: #fefefe; line-height: 1px; font-family: Arial, Helveti=
+ca, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidde=
+n;">Do you support President Biden=E2=80=99s nomination of<span>&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbs=
+p;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbs=
+p;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbs=
+p;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<w=
+br>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&n=
+bsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&n=
+bsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&n=
+bsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&n=
+bsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&n=
+bsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp=
+;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp=
+;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C<wbr>=E2=80=8C</span></d=
+iv><!--[if (gte mso 9)|(IE)]>
+    <table style=3D"background-color:#fafafa;" width=3D"100%" align=3D"center" ro=
+le=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0=
+" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><tr><td>
+    <![endif]--><table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adj=
+ust: 100%;font-family: Arial, Helvetica, sans-serif; background-color: #ffff=
+ff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=
+=3D"0" leftmargin=3D"0" topmargin=3D"0"><tbody><tr><td align=3D"center" valign=3D"top"=
+ style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-fami=
+ly: Arial, Helvetica, sans-serif; font-size: 16px;"><div class=3D"region" id=3D"=
+region-1"><div class=3D"component full-width" style=3D"padding: 0px !important;"=
+><div class=3D"image" style=3D"overflow: hidden;width:100%"><table class=3D"respon=
+sive-table" role=3D"presentation" align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rs=
+pace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;float: left; table-layout: fixed; margin-right: 0px; marg=
+in-left: 0px;" width=3D"650"><tbody><tr><td valign=3D"top" class=3D"image-td" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><div class=3D"=
+img-1 image-container" style=3D"overflow: hidden;"><a href=3D"https://buddycarte=
+r.house.gov" target=3D"_blank" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;"><img style=3D"max-width:600px;-ms-interpolation-mode: bic=
+ubic;vertical-align: bottom; max-width: 700px;" alt=3D"Representative Buddy Ca=
+rter" src=3D"https://buddycarter.house.gov/images/bc_header.jpg" width=3D"649.5"=
+></a></div></td></tr></tbody></table></div></div></div></td></tr></tbody></t=
+able><table role=3D"presentation" width=3D"650" class=3D"responsive-table" align=3D"=
+center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: Arial, Helvetica, sans-serif; background-color: #08244a;" border=3D=
+"0" cellspacing=3D"0" cellpadding=3D"15" marginheight=3D"0" marginwidth=3D"0" leftma=
+rgin=3D"0" topmargin=3D"0"><tbody><tr><td valign=3D"middle" align=3D"center" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; f=
+ont-size: 11px; font-family: Arial, Helvetica, sans-serif; font-weight: bold=
+; text-align: center; background-color: #075bae; text-transform: uppercase;"=
+><a href=3D"https://buddycarter.house.gov/" style=3D"-webkit-text-size-adjust: 1=
+00%; -ms-text-size-adjust: 100%;color: #ffffff; text-decoration: none; font-=
+size: 11px; text-transform: uppercase; font-family: Arial, Helvetica, sans-s=
+erif;">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp; <a href=3D"https://buddycarter.house.=
+gov/about/" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;color: #ffffff; text-decoration: none; font-size: 11px; text-transform: up=
+percase; font-family: Arial, Helvetica, sans-serif;">Meet Buddy</a>&nbsp;&nb=
+sp;|&nbsp;&nbsp; <a href=3D"https://buddycarter.house.gov/constituent-services=
+/" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: =
+#ffffff; text-decoration: none; font-size: 11px; text-transform: uppercase; =
+font-family: Arial, Helvetica, sans-serif;">Services</a>&nbsp;&nbsp;|&nbsp;&=
+nbsp; <a href=3D"https://buddycarter.house.gov/news/" style=3D"-webkit-text-size=
+-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; text-decoration: n=
+one; font-size: 11px; text-transform: uppercase; font-family: Arial, Helveti=
+ca, sans-serif;">Newsroom</a>&nbsp;&nbsp;|&nbsp;&nbsp; <a href=3D"https://budd=
+ycarter.house.gov/issues/" style=3D"-webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%;color: #ffffff; text-decoration: none; font-size: 11px; tex=
+t-transform: uppercase; font-family: Arial, Helvetica, sans-serif;">Issues</=
+a>&nbsp;&nbsp;|&nbsp;&nbsp; <a href=3D"https://buddycarter.house.gov/legislati=
+on/" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color=
+: #ffffff; text-decoration: none; font-size: 11px; text-transform: uppercase=
+; font-family: Arial, Helvetica, sans-serif;">Legislation</a>&nbsp;&nbsp;|&n=
+bsp;&nbsp; <a href=3D"https://buddycarter.house.gov/voterecord/" style=3D"-webki=
+t-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; text-de=
+coration: none; font-size: 11px; text-transform: uppercase; font-family: Ari=
+al, Helvetica, sans-serif;">Recent Votes</a>&nbsp;&nbsp;|&nbsp;&nbsp; <a hre=
+f=3D"https://buddycarter.house.gov/contact/" style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;color: #ffffff; text-decoration: none; font=
+-size: 11px; text-transform: uppercase; font-family: Arial, Helvetica, sans-=
+serif;">Connect</a> </td></tr></tbody></table><table role=3D"presentation" wid=
+th=3D"650" align=3D"center" class=3D"responsive-table" style=3D"-webkit-text-size-ad=
+just: 100%; -ms-text-size-adjust: 100%;background-color: #ffffff; font-famil=
+y: Arial, Helvetica, sans-serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"=
+ marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><tbody><tr><t=
+d class=3D"responsive-table" valign=3D"top" style=3D"-webkit-text-size-adjust: 100=
+%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, sans-serif; fon=
+t-size: 16px; color: #000000;"><table role=3D"presentation" class=3D"responsive-=
+table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><=
+tbody><tr height=3D"20"><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-si=
+ze-adjust: 100%;"><span></span></td></tr></tbody></table><div class=3D"region"=
+ id=3D"region-2"><div class=3D"component " style=3D"padding: 0px !important;"><div=
+ class=3D"survey" style=3D"overflow: hidden;width:100%;"><table align=3D"center" c=
+lass=3D"responsive-table" role=3D"presentation" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspac=
+e:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-si=
+ze-adjust: 100%;table-layout: fixed; margin-right: 20px; margin-left: 20px;"=
+ width=3D"610"><tbody><tr><td valign=3D"top" style=3D"-webkit-text-size-adjust: 10=
+0%; -ms-text-size-adjust: 100%;"><div class=3D"survey-content" style=3D"overflow=
+: hidden;"><table role=3D"presentation" align=3D"center" class=3D"responsive-table=
+" cellspacing=3D"0" cellpadding=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rsp=
+ace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-size-ad=
+just: 100%; -ms-text-size-adjust: 100%;margin: 0 auto; border-collapse: sepa=
+rate !important;"><tbody><tr><td colspan=3D"3" valign=3D"middle" align=3D"center" =
+height=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%=
+;height:5px;line-height: 5px; letter-spacing: 5px; font-size: 5px; border-to=
+p: 5px solid #0865c1; border-left: 5px solid #0865c1; border-right: 5px soli=
+d #0865c1;">&nbsp; </td></tr><tr><td style=3D"-webkit-text-size-adjust: 100%; =
+-ms-text-size-adjust: 100%;width: 10px; border-left: 5px solid #0865c1;" wid=
+th=3D"10">&nbsp;</td><td valign=3D"top" style=3D"-webkit-text-size-adjust: 100%; -=
+ms-text-size-adjust: 100%;"><p class=3D"survey-text" style=3D"margin: 0;text-ali=
+gn: center;font:25px Arial, Helvetica, sans-serif">Do you support President =
+Biden=E2=80=99s nomination of Ketanji Brown Jackson to the Supreme Court of the Un=
+ited States?</p></td><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;width: 10px; border-right: 5px solid #0865c1;" width=3D"10">&nb=
+sp;</td></tr><tr><td colspan=3D"3" valign=3D"middle" align=3D"center" height=3D"5" s=
+tyle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:5px;=
+line-height: 5px; letter-spacing: 5px; font-size: 5px; border-left: 5px soli=
+d #0865c1; border-right: 5px solid #0865c1;">&nbsp; </td></tr><tr><td style=3D=
+"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;width: 10px; bor=
+der-left: 5px solid #0865c1;" width=3D"10">&nbsp;</td><td valign=3D"top" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><table role=3D"pr=
+esentation" align=3D"center" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10=
+pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-a=
+djust: 100%;border-collapse: separate !important;"><tbody><tr><td style=3D"-we=
+bkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><table role=3D"prese=
+ntation" class=3D"responsive-table" align=3D"center" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-=
+rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;width: 100%; border-collapse: separate !important;"><tb=
+ody><tr><td align=3D"center" class=3D"responsive-survey response response-463" i=
+d=3D"463" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;ba=
+ckground-color: #0865c1; width: 100%; line-height: 24px;" bgcolor=3D"#0865c1">=
+<a href=3D"https://buddycarter.house.gov/Forms/Form/QuickSurvey.aspx?email=3Djd@=
+fireside21.com&amp;sid=3D108&amp;fid=3D16993&amp;aid=3D463&amp;mid=3D5093" target=3D"_=
+blank" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;lin=
+e-height: 24px; color: rgb(255, 255, 255); text-decoration: none; padding: 1=
+2px 18px; border: 1px solid rgb(8, 101, 193); display: block;">Yes</a> </td>=
+</tr></tbody></table></td></tr></tbody></table></td><td style=3D"-webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%;width: 10px; border-right: 5px=
+ solid #0865c1;" width=3D"10">&nbsp;</td></tr><tr><td colspan=3D"3" valign=3D"midd=
+le" align=3D"center" height=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-tex=
+t-size-adjust: 100%;height:5px; line-height: 5px; letter-spacing: 5px; font-=
+size: 5px; border-left: 5px solid #0865c1; border-right: 5px solid #0865c1;"=
+>&nbsp; </td></tr><tr><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-si=
+ze-adjust: 100%;width: 10px; border-left: 5px solid #0865c1;" width=3D"10">&nb=
+sp;</td><td valign=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;"><table role=3D"presentation" align=3D"center" width=3D"100%" bord=
+er=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"mso-table-lspace:0pt; mso-tabl=
+e-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-si=
+ze-adjust: 100%; -ms-text-size-adjust: 100%;border-collapse: separate !impor=
+tant;"><tbody><tr><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-a=
+djust: 100%;"><table role=3D"presentation" class=3D"responsive-table" align=3D"cen=
+ter" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"mso-table-lspace:0pt;=
+ mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webki=
+t-text-size-adjust: 100%; -ms-text-size-adjust: 100%;width: 100%; border-col=
+lapse: separate !important;"><tbody><tr><td align=3D"center" class=3D"responsive=
+-survey response response-464" id=3D"464" style=3D"-webkit-text-size-adjust: 100=
+%; -ms-text-size-adjust: 100%;background-color: #0865c1; width: 100%; line-h=
+eight: 24px;" bgcolor=3D"#0865c1"><a href=3D"https://buddycarter.house.gov/Forms=
+/Form/QuickSurvey.aspx?email=3Djd@fireside21.com&amp;sid=3D108&amp;fid=3D16993&amp=
+;aid=3D464&amp;mid=3D5093" target=3D"_blank" style=3D"-webkit-text-size-adjust: 100%=
+; -ms-text-size-adjust: 100%;line-height: 24px; color: #fff; text-decoration=
+: none; padding: 12px 18px; border: 1px solid #0865c1; display: block;">No</=
+a> </td></tr></tbody></table></td></tr></tbody></table></td><td style=3D"-webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%;width: 10px; border-ri=
+ght: 5px solid #0865c1;" width=3D"10">&nbsp;</td></tr><tr><td colspan=3D"3" vali=
+gn=3D"middle" align=3D"center" height=3D"5" style=3D"-webkit-text-size-adjust: 100%;=
+ -ms-text-size-adjust: 100%;height:5px; line-height: 5px; letter-spacing: 5p=
+x; font-size: 5px; border-left: 5px solid #0865c1; border-right: 5px solid #=
+0865c1;">&nbsp; </td></tr><tr><td style=3D"-webkit-text-size-adjust: 100%; -ms=
+-text-size-adjust: 100%;width: 10px; border-left: 5px solid #0865c1;" width=3D=
+"10">&nbsp;</td><td valign=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms-=
+text-size-adjust: 100%;"><table role=3D"presentation" align=3D"center" width=3D"10=
+0%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"mso-table-lspace:0pt; =
+mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-collapse: separat=
+e !important;"><tbody><tr><td style=3D"-webkit-text-size-adjust: 100%; -ms-tex=
+t-size-adjust: 100%;"><table role=3D"presentation" class=3D"responsive-table" al=
+ign=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collaps=
+e;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;width: 100%; bo=
+rder-collapse: separate !important;"><tbody><tr><td align=3D"center" class=3D"re=
+sponsive-survey response response-465" id=3D"465" style=3D"-webkit-text-size-adj=
+ust: 100%; -ms-text-size-adjust: 100%;background-color: #0865c1; width: 100%=
+; line-height: 24px;" bgcolor=3D"#0865c1"><a href=3D"https://buddycarter.house.g=
+ov/Forms/Form/QuickSurvey.aspx?email=3Djd@fireside21.com&amp;sid=3D108&amp;fid=3D1=
+6993&amp;aid=3D465&amp;mid=3D5093" target=3D"_blank" style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;line-height: 24px; color: #fff; text-de=
+coration: none; padding: 12px 18px; border: 1px solid #0865c1; display: bloc=
+k;">Unsure</a> </td></tr></tbody></table></td></tr></tbody></table></td><td =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;width: 10p=
+x; border-right: 5px solid #0865c1;" width=3D"10">&nbsp;</td></tr><tr><td cols=
+pan=3D"3" valign=3D"middle" align=3D"center" height=3D"5" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;height:5px; line-height: 5px; letter=
+-spacing: 5px; font-size: 5px; border-left: 5px solid #0865c1; border-right:=
+ 5px solid #0865c1;">&nbsp; </td></tr><tr><td colspan=3D"3" valign=3D"middle" al=
+ign=3D"center" height=3D"5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size=
+-adjust: 100%;height:5px;line-height: 5px; letter-spacing: 5px; font-size: 5=
+px; border-bottom: 5px solid #0865c1; border-left: 5px solid #0865c1; border=
+-right: 5px solid #0865c1;">&nbsp; </td></tr><tr><td colspan=3D"3" align=3D"cent=
+er" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><i c=
+lass=3D"newsletter-optin">Submit survey to sign up for updates on my work in C=
+ongress.*</i> </td></tr></tbody></table></div></td></tr></tbody></table></di=
+v></div><div class=3D"component " style=3D"padding: 0px !important;"><div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%"><table role=3D"presentation" cla=
+ss=3D"responsive-table" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-=
+table-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; =
+-ms-text-size-adjust: 100%;border-spacing: 0px; margin-right: 20px; margin-l=
+eft: 20px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D""><tbody><tr><=
+td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;min-wid=
+th: 100%;"><table role=3D"presentation" style=3D"mso-table-lspace:0pt; mso-table=
+-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-siz=
+e-adjust: 100%; -ms-text-size-adjust: 100%;border-spacing: 0px;" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"><tbody><tr class=3D"spacerRow" he=
+ight=3D"16"><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;font-size:0%;line-height: 16px;">&nbsp; </td></tr></tbody></table></td><=
+/tr></tbody></table></div></div><div class=3D"component " style=3D"padding: 0px =
+!important;"><div class=3D"signature" style=3D"overflow: hidden;width:100%"><tab=
+le role=3D"presentation" class=3D"responsive-table" align=3D"center" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; mso-table-rspace:=
+0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; margin-right: 20px; =
+margin-left: 20px;" width=3D""><tbody><tr><td valign=3D"top" style=3D"-webkit-text=
+-size-adjust: 100%; -ms-text-size-adjust: 100%;"><table align=3D"left" class=3D"=
+signature-table" role=3D"presentation" style=3D"mso-table-lspace:0pt; mso-table-=
+rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit-text-size=
+-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed;"><tbody><tr><=
+td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><tabl=
+e role=3D"presentation" align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; b=
+order-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust=
+: 100%;border-collapse: separate !important;"><tbody><tr><td valign=3D"top" st=
+yle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><div class=
+=3D"ng-binding" style=3D"overflow: hidden;"></div></td></tr><tr><td valign=3D"top"=
+ class=3D"image-td" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjus=
+t: 100%;"><div class=3D"img-1 image-container" style=3D"overflow: hidden;text-al=
+ign:left"><img style=3D"max-width:600px;-ms-interpolation-mode: bicubic;vertic=
+al-align: bottom; max-width: 147px; width: 90px !important;" src=3D"https://bu=
+ddycarter.house.gov/images/email/buddy-sig.png" alt=3D"Buddy Carter Signature"=
+ width=3D"90"></div></td></tr><tr class=3D"spacerRow" height=3D"0"><td style=3D"-web=
+kit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-size:0%;line-hei=
+ght: 0px;">&nbsp; </td></tr><tr><td valign=3D"top" style=3D"-webkit-text-size-ad=
+just: 100%; -ms-text-size-adjust: 100%;"><div class=3D"ng-binding" style=3D"over=
+flow: hidden;">Buddy Carter<br>Member of Congress</div></td></tr></tbody></t=
+able></td></tr></tbody></table></td></tr></tbody></table></div></div></div><=
+table role=3D"presentation" class=3D"responsive-table" style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;"><tbody><tr height=3D"20"><td style=3D=
+"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><span></span><=
+/td></tr></tbody></table></td></tr></tbody></table><table role=3D"presentation=
+" width=3D"650" class=3D"responsive-table" align=3D"center" style=3D"-webkit-text-si=
+ze-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, s=
+ans-serif; background-color: #075bae;" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><tbody><=
+tr><td valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-adjust: 100%;=
+ -ms-text-size-adjust: 100%;height:30px; background-color: #075bae;">&nbsp; =
+</td></tr><tr><td valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-ad=
+just: 100%; -ms-text-size-adjust: 100%;color: #ffffff; background-color: #07=
+5bae; padding: 0 20px;"><table role=3D"presentation" width=3D"100%" cellpadding=3D=
+"0" cellspacing=3D"10" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-ad=
+just: 100%;text-align:center;"><tbody><tr><td valign=3D"middle" align=3D"center"=
+ style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;text-alig=
+n:center;"><table role=3D"presentation" cellpadding=3D"0" class=3D"responsive-tabl=
+e" align=3D"left" cellspacing=3D"0" width=3D"32.9%" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%;font-family: arial, helvetica, sans-seri=
+f; text-align:center; font-size: 13px; color:  #ffffff; margin: 10px 0;mso-t=
+able-lspace: 0pt; mso-table-rspace: 0pt;"><tbody><tr><td style=3D"-webkit-text=
+-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica=
+, sans-serif;"><strong style=3D"font-weight: bold;font-family: Arial, Helvetic=
+a, sans-serif; text-transform: uppercase;">Washington, DC Office</strong><br=
+>2432 Rayburn HOB<br>Washington, DC 20515<br>Phone: (202) 225-5831<br>Fax: (=
+202) 226-2269 </td></tr></tbody></table><table role=3D"presentation" cellpaddi=
+ng=3D"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"32.9%" s=
+tyle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family=
+: arial, helvetica, sans-serif; text-align:center; font-size: 13px; color:  =
+#ffffff; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tbod=
+y><tr><td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;=
+font-family: Arial, Helvetica, sans-serif;"><strong style=3D"font-weight: bold=
+;font-family: Arial, Helvetica, sans-serif; text-transform: uppercase;">Brun=
+swick Office</strong><br>777 Gloucester Street<br>Suite 410<br>Brunswick, GA=
+ 31520<br>Phone: (912) 265-9010<br>Fax: (912) 265-9013 </td></tr></tbody></t=
+able><table role=3D"presentation" cellpadding=3D"0" class=3D"responsive-table" ali=
+gn=3D"left" cellspacing=3D"0" width=3D"32.9%" style=3D"-webkit-text-size-adjust: 100=
+%; -ms-text-size-adjust: 100%;font-family: arial, helvetica, sans-serif; tex=
+t-align:center; font-size: 13px; color:  #ffffff; margin: 10px 0;mso-table-l=
+space: 0pt; mso-table-rspace: 0pt;"><tbody><tr><td style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, sans=
+-serif;"><strong style=3D"font-weight: bold;font-family: Arial, Helvetica, san=
+s-serif; text-transform: uppercase;">Savannah Office</strong><br>6602 Aberco=
+rn Street<br>Suite 105B<br>Savannah, GA 31405<br>Phone: (912) 352-0101<br>Fa=
+x: (912) 352-0105 </td></tr></tbody></table></td></tr></tbody></table></td><=
+/tr><tr><td valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;height:30px; background-color: #075bae;">&n=
+bsp; </td></tr><tr><td valign=3D"middle" align=3D"center" style=3D"-webkit-text-si=
+ze-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; background-color=
+: #075bae;"><a target=3D"_blank" href=3D"https://urldefense.com/v3/__https://www=
+.facebook.com/CongressmanBuddyCarter/__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!Rk=
+q91-GlTnhS_Bjxak45XWmQdLM4spefhP9G_WRHnW4S_AgCQ2OonabFWSG_NZzMlQij5uQT$" sty=
+le=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"f=
+acebook icon" width=3D"35" src=3D"https://buddycarter.house.gov/images/email/fac=
+ebook.png" style=3D"-ms-interpolation-mode: bicubic;border-width: 0px; border-=
+style: solid; width: 35px;"></a> &nbsp;<a target=3D"_blank" href=3D"https://urld=
+efense.com/v3/__https://twitter.com/repBuddyCarter__;!!Ckt11KVezJIME51BYf4a6=
+hrLATHilnk!Rkq91-GlTnhS_Bjxak45XWmQdLM4spefhP9G_WRHnW4S_AgCQ2OonabFWSG_NZzMl=
+QPG1NKJ$" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;=
+"><img alt=3D"twitter icon" width=3D"35" src=3D"https://buddycarter.house.gov/imag=
+es/email/twitter.png" style=3D"-ms-interpolation-mode: bicubic;border-width: 0=
+px; border-style: solid; width: 35px;"></a> &nbsp;<a target=3D"_blank" href=3D"h=
+ttps://urldefense.com/v3/__https://www.instagram.com/repbuddycarter/__;!!Ckt=
+11KVezJIME51BYf4a6hrLATHilnk!Rkq91-GlTnhS_Bjxak45XWmQdLM4spefhP9G_WRHnW4S_Ag=
+CQ2OonabFWSG_NZzMlWL3NXMM$" style=3D"-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;"><img alt=3D"instagram icon" width=3D"35" src=3D"https://buddyc=
+arter.house.gov/images/email/insta.png" style=3D"-ms-interpolation-mode: bicub=
+ic;border-width: 0px; border-style: solid; width: 35px;"></a> &nbsp;<a targe=
+t=3D"_blank" href=3D"https://urldefense.com/v3/__https://www.youtube.com/channel=
+/UCHQm49T6ikD_ioMAt50AwKQ__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!Rkq91-GlTnhS_B=
+jxak45XWmQdLM4spefhP9G_WRHnW4S_AgCQ2OonabFWSG_NZzMlaQFD86P$" style=3D"-webkit-=
+text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"youtube icon"=
+ width=3D"35" src=3D"https://buddycarter.house.gov/images/email/youtube.png" sty=
+le=3D"-ms-interpolation-mode: bicubic;border-width: 0px; border-style: solid; =
+width: 35px;"></a> </td></tr><tr><td valign=3D"middle" align=3D"center" style=3D"-=
+webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:30px; backg=
+round-color: #075bae;">&nbsp; </td></tr><tr><td valign=3D"middle" align=3D"cente=
+r" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:=
+15px; background-color: #ffffff;">&nbsp; </td></tr><tr><td valign=3D"middle" s=
+tyle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;background-=
+color: #ffffff;"><table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"20"=
+ align=3D"center" width=3D"90%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;"><tbody><tr><td valign=3D"middle" align=3D"center" style=3D"-we=
+bkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #08244a; font=
+-size: 13px; font-family: Arial, Helvetica, sans-serif;"><a href=3D"https://bu=
+ddycarter.house.gov/" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-a=
+djust: 100%;color: #333333; text-decoration:none; font-family: Arial, Helvet=
+ica, sans-serif; font-size: 13px;">Website</a>&nbsp;|&nbsp; <a href=3D"https:/=
+/buddycarter.house.gov/forms/emailsignup/?Delete=3Dtrue" style=3D"-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%;color: #333333; text-decoration=
+:none; font-family: Arial, Helvetica, sans-serif; font-size: 13px;">Unsubscr=
+ibe</a>&nbsp;|&nbsp; <a href=3D"https://buddycarter.house.gov/contact/" style=3D=
+"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #333333; =
+text-decoration:none; font-family: Arial, Helvetica, sans-serif; font-size: =
+13px;">Contact</a> </td></tr></tbody></table></td></tr><tr><td valign=3D"middl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjus=
+t: 100%;height:15px; background-color: #ffffff;">&nbsp; </td></tr></tbody></=
+table><!--[if (gte mso 9)|(IE)]>
+    </td></tr></table>
+    <![endif]--></body></html>
+
+--B_3728633295_748591893--
+

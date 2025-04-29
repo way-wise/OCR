@@ -1,0 +1,578 @@
+Received: from SJ0PR09MB10340.namprd09.prod.outlook.com
+ (2603:10b6:a03:468::20) by SA1PR09MB9517.namprd09.prod.outlook.com with
+ HTTPS; Wed, 12 Apr 2023 22:10:21 +0000
+Received: from CYXPR09CA0023.namprd09.prod.outlook.com (2603:10b6:930:d4::29)
+ by SJ0PR09MB10340.namprd09.prod.outlook.com (2603:10b6:a03:468::20) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6298.30; Wed, 12 Apr
+ 2023 22:10:20 +0000
+Received: from DM3GCC02FT017.eop-gcc02.prod.protection.outlook.com
+ (2a01:111:f400:7d04::206) by CYXPR09CA0023.outlook.office365.com
+ (2603:10b6:930:d4::29) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6298.30 via Frontend
+ Transport; Wed, 12 Apr 2023 22:10:20 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.151.112)
+ smtp.mailfrom=mail.house.gov; dkim=fail (body hash did not verify)
+ header.d=house.gov;dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.151.112 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.151.112;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.151.112) by
+ DM3GCC02FT017.mail.protection.outlook.com (10.97.8.113) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.6254.37 via Frontend Transport; Wed, 12 Apr 2023 22:10:20 +0000
+Received: from EXCH1913.US.House.gov (143.228.151.112) by
+ EXCH1913.US.House.gov (143.228.151.112) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.2.1118.26; Wed, 12 Apr 2023 18:10:19 -0400
+Received: from serg-bulk2-h.house.gov (143.228.145.63) by
+ EXCH1913.US.House.gov (143.228.151.112) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.2.1118.26 via Frontend Transport; Wed, 12 Apr 2023 18:10:19 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=list-unsubscribe :
+ from : to : date : subject : content-type : message-id : mime-version;
+ s=august2019-msgb-hg; bh=XAWixPgjDI+g4lWzT7kOz7CPbai21F4PKdKZe5kaPWA=;
+ b=wgANDWKP6g8Nj+PWf0GASlk8A6kGMDNygP4GMbmSdJMxVvd/hLteSB4Oaa++mMblIw7J
+ 2cYIKD3GtO4y1t1yrLgmdzDDv/6eFfPoCxFNX4xpRZpnCWXMTKvtEXCWCoIaLsCJRE4A
+ MD2uaiphW8ZPEdhUyGJFdp0P0KY2kz4CwEgGbWo7HZDVMb6GR8T0/cT4dJYBWbi1m66n
+ GxG3e+0rP1OfAQ4N5IN3x5Ys+2ly0mapXQss/9Rr+VrMUlulpVDCw5npbsSgchXDxiQM
+ ZVeHFbgZOa0uvTxANDO9d0RJn3BTUFnetQkBMhy5bviXBST0zgYOLC2RiwMnXeIaFjaM bA== 
+Received: from FIRESIDESERV03 (firesideserv03.us.house.gov [143.228.113.103])
+	by serg-bulk2-h.house.gov (8.17.1.19/8.17.1.19) with ESMTP id 33CMAJKg015204
+	for <Peter.Finocchio@mail.house.gov>; Wed, 12 Apr 2023 18:10:19 -0400
+Message-Id: <3pu3dspcbh-1@serg-bulk2-h.house.gov>
+envelope-from: RepMikeLawler@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+X-House-Vendor-Seg: unmanaged
+List-Unsubscribe: <https://lawler.house.gov/forms/emailsignup/?Delete=true&MessageID=84&Email=Peter.Finocchio@mail.house.gov&Submit=true>
+Precedence: bulk
+From: "Rep. Michael Lawler" <RepMikeLawler@mail.house.gov>
+To: Peter.Finocchio@mail.house.gov
+Date: 12 Apr 2023 18:10:19 -0400
+Subject: Our first 100 days!
+Content-Type: multipart/alternative;
+ boundary=--boundary_4081400_f22f5962-244c-404f-aa0b-8a41409e474a
+X-Proofpoint-Virus-Version: vendor=baseguard
+ engine=ICAP:2.0.254,Aquarius:18.0.942,Hydra:6.0.573,FMLib:17.11.170.22
+ definitions=2023-04-12_12,2023-04-12_01,2023-02-09_01
+Return-Path: RepMikeLawler@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1913.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 12 Apr 2023 22:10:20.0791
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ d56bb7d3-8ed3-4408-4332-08db3ba2b46c
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1913.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted:
+ DM3GCC02FT017.eop-gcc02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ DM3GCC02FT017.eop-gcc02.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ DM3GCC02FT017:EE_|SJ0PR09MB10340:EE_|SA1PR09MB9517:EE_
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: d56bb7d3-8ed3-4408-4332-08db3ba2b46c
+X-MS-Exchange-Organization-SCL: -1
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:143.228.151.112;CTRY:US;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SKI;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:;DIR:INT;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 12 Apr 2023 22:10:20.0166
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: d56bb7d3-8ed3-4408-4332-08db3ba2b46c
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.151.112];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1913.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SJ0PR09MB10340
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.3830105
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.6277.035
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(425001)(930097);
+X-Microsoft-Antispam-Message-Info:
+	OgpWCGNz22+0hn16aZQeNiGJFKShbuRukJN0bbI4GKefpz9L0hGNQs+z6rSld7nJIVyg2UrCjJRd5/X+UNm7sOtkX2t6+pNKjnJ/F5HBk4sq4uoFlsWgz5ohMZbnK9A4cF90sVhpx4KWBzcFYfY4sgkLytd9KCtN7TjAozu59sZ+OV8o/r6A6TO/ob9NL2M/8A+OROxJinses2gk/7HTUFnbn/aCrtahwkc3jr2MTDz8jE3a611oHw+645WQlCuMgwpL3LbIym/1BqTdebuthR0pCuuhuE1UXJXMwfgTs/dlDVR+P3Wa7AmXEnZY1uT6gpNJcmWJD8YBHcFSEB4ZHuPSqOs0NB9sqIw/4v0FUgfatMhgd97NXyjRfxND2bCx0hwT522FJEkfC2vjfGBcRe5clBMEglm8dacO9WVjRE919muwekRaSp1Zvbsk2QznntHBxq5oux0l6AJVHvQxIecVoh1fp+Ds21JXi3DryMPL9SRr0qYIA2+rN4sr998i1uf0LwbrxcYAY9nbHzXB0jrKsU13jyPpz5qI9TGJcNotTKTknd0NSqMh5KDtL2lS5k9tjTH76l3Ft8BhporkjyUal/fj0PWWjHH8LftXiVuFxjAB3A72Jv4cm7hG8PTxAt+kgBR+SxN245m7neMhbuEah/0XIRckCNjLjwhA24w=
+MIME-Version: 1.0
+
+----boundary_4081400_f22f5962-244c-404f-aa0b-8a41409e474a
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+DQpVbnN1YnNjcmliZTogaHR0cHM6Ly9sYXdsZXIuaG91c2UuZ292L0Zvcm1zL0VtYWls
+U2lnbnVwLz9EZWxldGU9dHJ1ZSZNZXNzYWdlSUQ9ODQmRW1haWw9UGV0ZXIuRmlub2Nj
+aGlvQG1haWwuaG91c2UuZ292
+----boundary_4081400_f22f5962-244c-404f-aa0b-8a41409e474a
+Content-Location: https://lawler.house.gov/
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>Our first 100 days!</title>
+       =20
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1">
+        <!--[if !mso]><!-->
+        <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![e=
+ndif]-->
+        <style>body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default t=
+ext sizes */ img{-ms-interpolation-mode: bicubic;} /* Allow smoother render=
+ing of resized image in Internet Explorer *//* RESET STYLES */img { border:=
+ 0; height: auto; line-height: 100%; outline: none; text-decoration: none; =
+}table { border-collapse: collapse !important; }body { height: 100% !import=
+ant; margin: 0 !important; padding: 0 !important; width: 100% !important; }=
+strong { font-weight: bold; } /* Editor reset *//* FIRESIDE STYLES */.compo=
+nent img {max-width:600px;}.component table {mso-table-rspace:10pt; border-=
+collapse:collapse;}.component { padding: 0px !important; }.press {padding-b=
+ottom: 0px;}</style><style>@media all and (max-width:650px) {            .i=
+mage-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td, .image-2, .img-2 =
+img, .image-2 tr, .image-2 td {max-width: 100% !important; width: 100% !imp=
+ortant;}            .responsive-table {width:100% !important;}            .=
+responsive-table img {max-width:100% !important; height: auto !important;} =
+           .press .component, .press td {text-align:center;}            .co=
+mponent { margin-left: 20px; margin-right: 20px;}            .component .re=
+sponsive-table { margin-left: 0px !important; margin-right: 0px !important;=
+}            .wide .video-thumb { width: 100% !important;height: auto !impo=
+rtant; }             .wide.video-container { width: 100% !important; }     =
+    .component.full-width {margin-left: 0px; margin-right: 0px; }   }</styl=
+e><style type=3D"text/css">
+            /* CLIENT-SPECIFIC STYLES */
+            body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text=
+ sizes */
+            table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Rem=
+ove spacing between tables in Outlook 2007 and up */
+            img{-ms-interpolation-mode: bicubic;} /* Allow smoother renderi=
+ng of resized image in Internet Explorer */
+            /* RESET STYLES */
+            img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: =
+0 !important; width: 100% !important; }
+            strong { font-weight: bold; } /* Editor reset */
+            /* FIRESIDE STYLES */
+            .component img {max-width:600px;}
+            .component table {mso-table-rspace:10pt; border-collapse:collap=
+se; font-family: Arial, Helvetica, sans-serif;}
+            .component td, td {font-family: Arial, Helvetica, sans-serif;}
+            .component { padding: 0px !important; }
+            .press {padding-bottom: 0px;}
+            .caption-1 td {font-family: Arial, Helvetica, sans-serif;}
+            /* Margin/NoMargin STYLES */
+            .component.full-width{ overflow: hidden; margin: 0px; }
+            /* HEADER STYLES */
+            .header-bar {width: 100%;}
+            .header-bar-margin {background-color:#ffffff;}
+            .header-bar h2 {margin: 0 !important; padding: 0 !important; co=
+lor: #000000;text-align: center;font-size: 24px;font-weight: bold; }
+            .survey-content > table > tbody tr td { border-color: #08244a !=
+important; }
+            .survey-content input.survey-submit { font-family: Arial, Helve=
+tica, sans-serif !important; }
+        </style>     =20
+        <style id=3D"media-queries">=20
+            @media all and (max-width:650px) {
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max=
+-width: 100% !important; width: 100% !important;}
+            .responsive-table {width:100% !important;}
+            .responsive-table img {max-width:100% !important; height: auto =
+!important;}
+            .press .component, .press td, .split .component, .split .compon=
+ent td, .split td {text-align:center;}
+            .component { margin-left: 20px; margin-right: 20px;}
+            .component .responsive-table { margin-left: 0px !important; mar=
+gin-right: 0px !important;}
+            .wide .video-thumb { width: 100% !important;height: auto !impor=
+tant; }=20
+            .wide.video-container { width: 100% !important; }
+            }
+        </style>
+       =20
+    <!--[if (gte mso 9)|(IE)]>
+                                            <style>=20
+                                        </style>
+                                        <![endif]--></head>
+    <body style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%;margin: 0px !important; padding: 0px !important;">
+        <div id=3D"preview-text" style=3D"display: none; font-size: 1px; co=
+lor: #fefefe; line-height: 1px; font-family: Arial, Helvetica, sans-serif; =
+max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">Wednesday, =
+April 12, 2023 Peter, We are now&nbsp;100 days into&nbsp;the 118th Congress=
+&nbsp;and I'm proud of the work we have already accomplished in such a shor=
+t period of time. My district team has already resolved 500 cases brought t=
+o us by constituents. This includes resolving passport issues, helping taxp=
+ayers receive long-overdue&nbsp;refunds, getting visa applications processe=
+d, and so many other issues that often involve long back-and-forth exchange=
+s with federal agencies. We have hundreds of additional cases our team is a=
+ctively working on and receive new ones each day. Some of these issues are =
+of greater scope than others, but in each case we endeavor to achieve the s=
+ame level of success.&nbsp;If there is any issue our caseworkers can help y=
+ou with, please don't hesitate to contact my office at 845-201-2060.&nbsp; =
+</div>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;background-color: #ffffff; font-family: Arial, Helvetica, sa=
+ns-serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D=
+"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td class=3D"responsive-table" valign=3D"top" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Ari=
+al, Helvetica, sans-serif; font-size: 16px; color: #000000;">
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class=3D"region" id=3D"region-1"><div class=3D=
+"component " style=3D"padding: 0px !important;"> <div class=3D"image" style=
+=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 5833px;" alt=3D"Header w=
+ith Headshot" src=3D"https://lawler.house.gov/UploadedPhotos/HighResolution=
+/94638877-579a-477e-a4de-4f831867b14f.png" width=3D"609.5"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;text-align: right;"><br></p><p style=3D"margin: 0;text-=
+align: right;"><span style=3D"color:#000066;"><strong style=3D"font-weight:=
+ bold;">Wednesday, April 12, 2023</strong></span></p><p style=3D"margin: 0;=
+text-align: right;"><br></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;"><span style=3D"line-height:2;"><span style=3D"font-fa=
+mily:Arial,Helvetica,sans-serif;"><span style=3D"font-size:16px;"><span cla=
+ss=3D"fs-merge-field" contenteditable=3D"false"><span contenteditable=3D"fa=
+lse"><span class=3D"merge-field" contenteditable=3D"false" unselectable=3D"=
+true">Peter</span></span></span>,</span></span></span></p><p style=3D"margi=
+n: 0;"><br></p><p style=3D"margin: 0;line-height:1.38"><span style=3D"line-=
+height:2;"><span style=3D"font-family:Arial,Helvetica,sans-serif;"><span st=
+yle=3D"font-size:16px;">We are now&nbsp;100 days into&nbsp;the 118th Congre=
+ss&nbsp;and I'm proud of the work we have already accomplished in such a sh=
+ort period of time. My district team has already resolved 500 cases brought=
+ to us by constituents. This includes resolving passport issues, helping ta=
+xpayers receive long-overdue&nbsp;refunds, getting visa applications proces=
+sed, and so many other issues that often involve long back-and-forth exchan=
+ges with federal agencies. We have hundreds of additional cases our team is=
+ actively working on and receive new ones each day. Some of these issues ar=
+e of greater scope than others, but in each case we endeavor to achieve the=
+ same level of success.&nbsp;If there is any issue our caseworkers can help=
+ you with, please don't hesitate to contact my office at 845-201-2060.&nbsp=
+;</span></span></span></p><p style=3D"margin: 0;line-height:1.38"><br></p><=
+/div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 550px;" alt=3D"100 Days"=
+ src=3D"https://lawler.house.gov/UploadedPhotos/MediumResolution/b7de8ba4-2=
+a3f-4189-a9da-53c0f0575f97.png"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span style=3D"line-h=
+eight:2;"><span style=3D"font-family:Arial,Helvetica,sans-serif;"><span sty=
+le=3D"font-size:16px;">As of tomorrow, we will have held mobile office hour=
+s in all four counties in the 17th District. I'm proud to represent an incr=
+edibly diverse community and both my staff and I believe it is incumbent on=
+ us to get out in the community as much as we can and meet constituents whe=
+re they are. We will continue holding office mobile office hours in at leas=
+t one new locality each month and look forward to continuing to meet consti=
+tuents and help them with their casework needs. As we have gotten out in th=
+e community, we have also been proud to honor community leaders and organiz=
+ations that go above and beyond in their efforts to make the Hudson Valley =
+a great place to live for everyone. We've been proud to award over 500 cert=
+ificates and proclamations commemorating these efforts and will continue to=
+ celebrate the unsung heroes in our community for their efforts.</span></sp=
+an></span></p><p style=3D"margin: 0;line-height:1.38"><br></p><p style=3D"m=
+argin: 0;line-height:1.38"><span style=3D"line-height:2;"><span style=3D"fo=
+nt-family:Arial,Helvetica,sans-serif;"><span style=3D"font-size:16px;">We h=
+ave hit the ground running in Washington as well. I'm proud to be a member =
+of 50 congressional caucuses, working with my colleagues on both sides of t=
+he aisle to draw attention to important policy needs and causes. As Co-Chai=
+r of the Congestion Tax Caucus, I'm working with fellow Co-Chairs Congressm=
+an Josh Gottheimer (D-NJ) and Congresswoman Nicole Malliotakis (R-NY) to ea=
+se the squeeze on commuters into New York City from the Hudson Valley who a=
+re facing thousands of dollars in new tolls just to get to work. As Co-Chai=
+r of the Appalachian Trail Caucus, I'm thrilled to be helping draw attentio=
+n to the nearly 50 miles of Appalachian Trail right here in the 17th Distri=
+ct. As Co-Chair of the Moldova Caucus, I'm working with my colleagues to su=
+pport this key democratic partner and stand up to Putin's aggression across=
+ Eastern Europe. I'm also proud to be a member of the bipartisan SALT Caucu=
+s, where I'm working with Congressman Gottheimer, Congresswoman Mikie Sherr=
+ill (D-NJ), Congressman Anthony D'Esposito (R-NY) and others to get Hudson =
+Valley families the relief we need on our state and local taxes (SALT).</sp=
+an></span></span></p><p style=3D"margin: 0;line-height:1.38"><br></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 550px;" src=3D"https://l=
+awler.house.gov/UploadedPhotos/MediumResolution/c0a91065-1caf-4c12-8c05-d31=
+c1f28390b.jpg"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;"><br></p><p style=3D"margin: 0;line-height:1.38"><br><=
+/p><p style=3D"margin: 0;line-height:1.38"><span style=3D"line-height:2;"><=
+span style=3D"font-family:Arial,Helvetica,sans-serif;"><span style=3D"font-=
+size:16px;">I've been proud to introduce or co-sponsor almost 100 pieces of=
+ legislation in my first 100 days in Congress. My very first bill I introdu=
+ced was H.R. 339 -&nbsp;<span style=3D"font-variant-ligatures: normal; font=
+-variant-numeric: normal; font-variant-alternates: normal; font-variant-eas=
+t-asian: normal; font-variant-position: normal; white-space: pre-wrap;"><sp=
+an style=3D"font-weight:400"><span style=3D"font-style:normal"><span style=
+=3D"text-decoration:none">the =E2=80=9CSALT Marriage Penalty Elimination Ac=
+t,=E2=80=9D which would let married couples filing individual returns deduc=
+t the full $10,000 SALT deduction while those filing joint returns would be=
+ able to deduct $20,000. Under the current law, individuals can file for a =
+federal deduction on state and local taxes up to $10,000 while a married in=
+dividual filing a separate return can only file $5,000 - which is nothing m=
+ore than a marriage penalty that adds insult to injury.&nbsp;I also worked =
+alongside my colleague Congresswoman Mikie Sherrill (D-NJ) to introduce H.R=
+. 680, =E2=80=9Cthe Tax Relief for Middle Class Families Act=E2=80=9D which=
+ would lift the SALT deduction cap tenfold from a $10,000 limit to a $100,0=
+00 limit for individual filers and a $200,000 cap for married couples filin=
+g joint returns. Congressman Josh Gottheimer and I also introduced H.R. 422=
+ - the Anti-Congestion Tax Act - a bipartisan bill that will use the power =
+of the purse to pressure the MTA to abandon its congestion pricing scheme t=
+hat is going to cost New York commuters up to $5,000 in new tolls just to g=
+et to work. I recently joined my New York colleague Ritchie Torres (D-NY) i=
+n introducing H.R. 1268 - the =E2=80=9CSpecial Envoy for the Abraham Accord=
+s Act.=E2=80=9D This legislation will do exactly as the name suggests and e=
+stablish an ambassador-rank special </span></span></span></span><span style=
+=3D"font-variant-ligatures: normal; font-variant-numeric: normal; font-vari=
+ant-alternates: normal; font-variant-east-asian: normal; font-variant-posit=
+ion: normal;"><span style=3D"white-space: pre-wrap;">envoy for the Abraham =
+Accords who would be tasked with leading and coordinating the State Departm=
+ent=E2=80=99s efforts to strengthen and expand the Arab-Israeli normalizati=
+on agreements. Most recently, I was proud to introduce</span> </span>legisl=
+ation to make September 11 a federal holiday.&nbsp;This is not about creati=
+ng another day off, but&nbsp;about reflecting on and remember the most trag=
+ic day in our nation=E2=80=99s history and ensuring that we never forget th=
+e victims or the heroes who rushed into those burning buildings to save oth=
+ers. Each of these bills has </span></span></span><span style=3D"line-heigh=
+t:2;"><span style=3D"font-family:Arial,Helvetica,sans-serif;"><span style=
+=3D"font-size:16px;">broad bipartisan support and I look forward to continu=
+ing to work with my colleagues to grow that coalition and help them become =
+law.</span></span></span></p><p style=3D"margin: 0;line-height:1.38"><br></=
+p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;"><span style=3D"line-height:2;"><span style=3D"font-fa=
+mily:Arial,Helvetica,sans-serif;"><span style=3D"font-size:16px;">I=E2=80=
+=99m honored to serve as your Representative in Congress and look forward t=
+o the next 100 days of serving you and your family in Washington and here i=
+n the 17th District. If there is anything we can do for you, please don=E2=
+=80=99t hesitate to contact my office at 845-201-2060&nbsp;or reach out thr=
+ough my website at <a data-cke-saved-href=3D"https://lawler.house.gov/compo=
+nents/redirect/r.aspx?ID=3D74-84" href=3D"http://lawler.house.gov/" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">lawler.hou=
+se.gov</a>.&nbsp;</span></span>Also, you can keep up with the latest news o=
+n my efforts by following us on <a data-cke-saved-href=3D"https://lawler.ho=
+use.gov/components/redirect/r.aspx?ID=3D75-84" href=3D"https://urldefense.c=
+om/v3/__https://www.facebook.com/RepMikeLawler__;!!Fr0YZsIsFWxTZsBm-qTAg68!=
+mgoq26TaiVvSkfcN89N61zqt0x6YLtSDidX5bVckcRNaA0-XUSVcRF_WJixLEwWNJpibYT_FbBt=
+cvVTDzE98N1RfbdnrWccYaNzJiVtnhA$" style=3D"-webkit-text-size-adjust: 100%; =
+-ms-text-size-adjust: 100%;">Facebook</a>, <a data-cke-saved-href=3D"https:=
+//lawler.house.gov/components/redirect/r.aspx?ID=3D76-84" href=3D"https://u=
+rldefense.com/v3/__https://twitter.com/RepMikeLawler__;!!Fr0YZsIsFWxTZsBm-q=
+TAg68!mgoq26TaiVvSkfcN89N61zqt0x6YLtSDidX5bVckcRNaA0-XUSVcRF_WJixLEwWNJpibY=
+T_FbBtcvVTDzE98N1RfbdnrWccYaNxtbm0Z0Q$" style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">Twitter</a>, and <a data-cke-saved-href=
+=3D"https://lawler.house.gov/components/redirect/r.aspx?ID=3D77-84" href=3D=
+"https://urldefense.com/v3/__https://www.instagram.com/repmikelawler/__;!!F=
+r0YZsIsFWxTZsBm-qTAg68!mgoq26TaiVvSkfcN89N61zqt0x6YLtSDidX5bVckcRNaA0-XUSVc=
+RF_WJixLEwWNJpibYT_FbBtcvVTDzE98N1RfbdnrWccYaNxisxVPQw$" style=3D"-webkit-t=
+ext-size-adjust: 100%; -ms-text-size-adjust: 100%;">Instagram</a> - and by =
+opting in to periodic updates from my office by <a data-cke-saved-href=3D"h=
+ttps://lawler.house.gov/components/redirect/r.aspx?ID=3D78-84" href=3D"http=
+s://lawler.house.gov/forms/form/?ID=3D8" style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;">CLICKING HERE</a>.</span></p><p style=
+=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span style=3D"line-height:=
+2;"><span style=3D"font-size:16px;">Sincerely,</span></span></p><p style=3D=
+"margin: 0;"><br></p><p style=3D"margin: 0;"><span style=3D"font-size:16px;=
+"><span contenteditable=3D"false" class=3D"cke_widget_wrapper cke_widget_in=
+line cke_widget_image cke_image_nocaption"><img alt=3D"" src=3D"https://law=
+ler.house.gov/UploadedPhotos/LowResolution/45f3089e-3e5f-44ba-99bf-fc223a20=
+9cb4.png" class=3D"cke_widget_element" width=3D"251" height=3D"87" style=3D=
+"max-width:600px;-ms-interpolation-mode: bicubic;"></span></span></p><p sty=
+le=3D"margin: 0;"><span style=3D"font-size:16px;">Michael V. Lawler</span><=
+/p><p style=3D"margin: 0;"><span style=3D"font-size:16px;">Member of Congre=
+ss</span></p><p style=3D"margin: 0;"><span style=3D"font-size:16px;">17th D=
+istrict, New York</span></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div></div>
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    <table role=3D"presentation" width=3D"100%" align=3D"center" style=3D"f=
+ont-family: Georgia, times, serif; background-color: #ffffff;" border=3D"0"=
+ cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" l=
+eftmargin=3D"0" topmargin=3D"0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td valign=3D"m=
+iddle" align=3D"center" style=3D"color: #000000; font-size: 16px; text-alig=
+n: left;">=20
+                                                                <img src=3D=
+"https://lawler.house.gov/images/spacerx84-84.open" width=3D"20" height=3D"=
+1" style=3D"height: 1px">
+                                                                <br>
+<a href=3D"https://lawler.house.gov/news/email/show.aspx?ID=3D2BY3ZRW42XZUI=
+">Click Here</a> to view this email in your browser <br>
+<a href=3D"https://lawler.house.gov/Forms/EmailSignup/?Delete=3Dtrue&amp;Me=
+ssageID=3D84&amp;Email=3DPeter.Finocchio@mail.house.gov">Click Here</a> to =
+be removed from this list
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table></body>
+</html>=
+
+----boundary_4081400_f22f5962-244c-404f-aa0b-8a41409e474a--

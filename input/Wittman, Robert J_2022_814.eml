@@ -1,0 +1,912 @@
+Received: from SA1PR09MB8014.namprd09.prod.outlook.com (2603:10b6:806:170::10)
+ by BY5PR09MB5027.namprd09.prod.outlook.com with HTTPS; Thu, 17 Mar 2022
+ 21:26:14 +0000
+Received: from BN6PR09CA0054.namprd09.prod.outlook.com (2603:10b6:404:7a::16)
+ by SA1PR09MB8014.namprd09.prod.outlook.com (2603:10b6:806:170::10) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.5081.14; Thu, 17 Mar
+ 2022 21:26:13 +0000
+Received: from DM3GCC02FT025.eop-gcc02.prod.protection.outlook.com
+ (2a01:111:f400:7d04::206) by BN6PR09CA0054.outlook.office365.com
+ (2603:10b6:404:7a::16) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.5081.14 via Frontend
+ Transport; Thu, 17 Mar 2022 21:26:13 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.51.113)
+ smtp.mailfrom=mail.house.gov; dkim=fail (body hash did not verify)
+ header.d=house.gov;dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.51.113 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.51.113;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.51.113) by
+ DM3GCC02FT025.mail.protection.outlook.com (10.97.8.77) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.5081.14 via Frontend Transport; Thu, 17 Mar 2022 21:26:13 +0000
+Received: from EXCH1923.US.House.gov (143.228.51.115) by EXCH1921.US.House.gov
+ (143.228.51.113) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.986.15; Thu, 17 Mar
+ 2022 17:26:06 -0400
+Received: from serg-bulk1-h.house.gov (143.228.145.31) by
+ EXCH1923.US.House.gov (143.228.51.115) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.986.15
+ via Frontend Transport; Thu, 17 Mar 2022 17:26:06 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=message-id :
+ list-unsubscribe : from : to : date : subject : content-type :
+ mime-version; s=august2019-msgb-hg;
+ bh=yt9bcYz3PHlMYi06N6V+CGOl2nWsuYQHeiqgRnFFqm0=;
+ b=QSS80jXUnSLfH2+raVt1YpSewpHyRYnP51Sne6arcApSJH7VkD6HOHgYutYBYeiS5CzA
+ etZhHPzujYLw7/agentFAuj6D2HJUpZg5M6A1SxDNRzIrdf2JMXIH2SJ0qpFYUZfZ/XX
+ /s8co/NkEMLLqnloO+QMyduNZrvGMgrxXdyXVVTf7Rcf+tYiBlrYN2mlFHqHFGpOGZbN
+ S86wdD6Vx3XVwW8X7WmqOsUp4X/QA3sUmNXfsqBZ4VgInnSWp3BKa3hXBBK4Dw9HVm6l
+ fm4t3JuqJlSEnTxQ+Nri0sTEt5WD5BxpfTM0UiTymOBKc1HC5ovY+q8jV3WNzDG5INWp fQ== 
+Received: from FIRESIDESERV03 (firesideserv03.us.house.gov [143.228.113.103])
+	by serg-bulk1-h.house.gov (8.16.1.2/8.16.1.2) with ESMTP id 22HLQ53O014141
+	for <Ashley.Haines@mail.house.gov>; Thu, 17 Mar 2022 17:26:05 -0400
+envelope-from: Congressman.Wittman@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+Message-ID: <pGJrDDkfxkp30kw4tZwbdfQYRcH+FEk7U1A9TeU9jPPvR7/kFLHFmi/y5XRjTckzzcPsDZanj837tN8lHqAxNs70R6Aez2CBjU+O2AfN2QymX0mIMdop/kAfV+k4pzmgkGmsAHV3gm2MMSXAZDN0YQJYVIsKPfJHcQQTJG6pjwFjAIYEiGM4wZ+nM/Ph/1Yq@fireside21.com>
+X-House-Vendor-Seg: unmanaged
+List-Unsubscribe: <https://wittman.house.gov/forms/emailsignup/?Delete=true&MessageID=4206&Email=Ashley.Haines@mail.house.gov&Submit=true>
+Precedence: bulk
+From: "Rob Wittman" <Congressman.Wittman@mail.house.gov>
+To: Ashley.Haines@mail.house.gov
+Date: 17 Mar 2022 17:26:05 -0400
+Subject: POLL: What are the Top Issues Facing Our Nation?
+Content-Type: multipart/alternative;
+ boundary=--boundary_2590122_0ae84f75-cfb1-495a-b3ba-f3c5054fe996
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:6.0.425,18.0.850
+ definitions=2022-03-17_07:2022-03-15,2022-03-17 signatures=0
+Return-Path: Congressman.Wittman@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1921.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 17 Mar 2022 21:26:13.2694
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ bc5fbb71-191f-4e92-e68f-08da085cc348
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1923.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted:
+ DM3GCC02FT025.eop-gcc02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ DM3GCC02FT025.eop-gcc02.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: bc5fbb71-191f-4e92-e68f-08da085cc348
+X-MS-TrafficTypeDiagnostic: SA1PR09MB8014:EE_
+X-MS-Exchange-Organization-SCL: -1
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:143.228.51.113;CTRY:US;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SKI;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:;DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 17 Mar 2022 21:26:13.1444
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: bc5fbb71-191f-4e92-e68f-08da085cc348
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.51.113];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1923.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SA1PR09MB8014
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.4904074
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.5081.017
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506458)(944626604)(920097)(425001)(930097);
+X-Microsoft-Antispam-Message-Info:
+	rqzHezDhbP9zbtQXdSy0qS0AUmyf1P3WJEQE/giyCxOxkErfDHw+uXTtLkro2l3bnZWuD8s5P/9tI6rG22a/NB0eHh6+yB5JbcH9oSmcwNMy0yecPMORTwZN6BIlIajzakPWo+yivp3MQZoKGA0WVFqJBw++tDbsX5AO63Z3zM243gtC/6qybJnSLzxC/RIldQZvNQqQsf78haOm2OoXdBBwz2AWe+Kwvmoo/KAtPx24GA6ezTRTOr/VqSEA3X7juowQwBUTBiTShBfT/MuJBMNgbEpVseJYgbXYm0qb3p8gJAcUDEYDTmiPMeYDSDPFwAxAHYm9rFsLMq5ZWasHT3yFsMasz0V+rDI0CoKOXCsrrP9IKWV7t9ijlusTvdDyGpmdrcT3m3tn8aGUG9TiEUOuqFaikT4/ciB7VmuyTFiQnHI9fo6Z7O4UWloZyN/YyeBT5/y60qDy4MlCO8AzBFFt2ZKQIFw4OMBjim7tdD/XMbedmMTcxznP64X0U3gEA1uRY8Xeoz+FPU+NbpajNbJALbBUNApAERX2bT9D4hSPz3G24lGZJpkHehJXGeDIZtxffv4KafbIM21fXhfVsY1BIsJFA/hgB8zmZrdo6LUwLt4OsnQN0PKMYk/7B/6pVa2nqBdN5Tfkq7hTQS54reF7+uIeOso+zENSA/bt9M4=
+MIME-Version: 1.0
+
+----boundary_2590122_0ae84f75-cfb1-495a-b3ba-f3c5054fe996
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+DQpVbnN1YnNjcmliZTogaHR0cHM6Ly93aXR0bWFuLmhvdXNlLmdvdi9Gb3Jtcy9FbWFp
+bFNpZ251cC8/RGVsZXRlPXRydWUmTWVzc2FnZUlEPTQyMDYmRW1haWw9QXNobGV5Lkhh
+aW5lc0BtYWlsLmhvdXNlLmdvdg==
+----boundary_2590122_0ae84f75-cfb1-495a-b3ba-f3c5054fe996
+Content-Type: text/html; charset=utf-8
+Content-Location: https://wittman.house.gov/
+Content-Transfer-Encoding: Quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>POLL: What are the Top Issues Facing Our Nation?</title>
+       =20
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1">
+        <!--[if !mso]><!-->
+        <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![e=
+ndif]-->
+        <style>body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default t=
+ext sizes */ img{-ms-interpolation-mode: bicubic;} /* Allow smoother render=
+ing of resized image in Internet Explorer *//* RESET STYLES */img { border:=
+ 0; height: auto; line-height: 100%; outline: none; text-decoration: none; =
+}table { border-collapse: collapse !important; }body { height: 100% !import=
+ant; margin: 0 !important; padding: 0 !important; width: 100% !important; }=
+strong { font-weight: bold; } /* Editor reset *//* FIRESIDE STYLES */.compo=
+nent img {max-width:600px;}.component table {mso-table-rspace:10pt; border-=
+collapse:collapse;}.component { padding: 0px !important; }.press {padding-b=
+ottom: 0px;}</style><style>@media all and (max-width:650px) {            .i=
+mage-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td, .image-2, .img-2 =
+img, .image-2 tr, .image-2 td {max-width: 100% !important; width: 100% !imp=
+ortant;}            .responsive-table {width:100% !important;}            .=
+responsive-table img {max-width:100% !important; height: auto !important;} =
+           .press .component, .press td {text-align:center;}            .co=
+mponent { margin-left: 20px; margin-right: 20px;}            .component .re=
+sponsive-table { margin-left: 0px !important; margin-right: 0px !important;=
+}            .wide .video-thumb { width: 100% !important;height: auto !impo=
+rtant; }             .wide.video-container { width: 100% !important; }     =
+    .component.full-width {margin-left: 0px; margin-right: 0px; }   }</styl=
+e><style type=3D"text/css">
+            /* CLIENT-SPECIFIC STYLES */
+            body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text=
+ sizes */
+            table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Rem=
+ove spacing between tables in Outlook 2007 and up */
+            img{-ms-interpolation-mode: bicubic;} /* Allow smoother renderi=
+ng of resized image in Internet Explorer */
+            /* RESET STYLES */
+            img { border: 0; height: auto; line-height: 100%; outline: none=
+; text-decoration: none; }
+            table { border-collapse: collapse !important; }
+            body { height: 100% !important; margin: 0 !important; padding: =
+0 !important; width: 100% !important; }
+            strong { font-weight: bold; } /* Editor reset */
+            /* FIRESIDE STYLES */
+            .component img {max-width:600px;}
+            .component table {mso-table-rspace:10pt; border-collapse:collap=
+se; font-family: 'Calibri', Helvetica, Arial, sans-serif;}
+            .component td, td {font-family: 'Calibri', Helvetica, Arial, sa=
+ns-serif;}
+            .component { padding: 0px !important; }
+            .press {padding-bottom: 0px;}
+            .caption-1 td {font-family: 'Calibri', Helvetica, Arial, sans-s=
+erif;}
+            /* Margin/NoMargin STYLES */
+            .component.full-width{ overflow: hidden; margin: 0px; }
+            /* HEADER STYLES */
+            .header-bar {width: 100%;}
+            .header-bar-margin {background-color:#ffffff;}
+            .header-bar h2 {margin: 0 !important; padding: 0 !important; co=
+lor: #10233C !important;text-align: center;font-size: 24px !important;font-=
+weight: bold !important; }
+            .survey-content > table > tbody tr td { border-color: #10233C !=
+important; }
+            .survey-content input.survey-submit { font-family: 'Calibri', H=
+elvetica, Arial, sans-serif !important; }
+        </style>      =20
+        <style id=3D"media-queries">=20
+            @media all and (max-width:650px) {
+            .image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max=
+-width: 100% !important; width: 100% !important;}
+            .responsive-table, .responsive-table2 {width:100% !important;}
+            .responsive-table img {max-width:100% !important; height: auto =
+!important;}
+            .press .component, .press td, .split .component, .split .compon=
+ent td, .split td {text-align:center;}
+            .component { margin-left: 20px; margin-right: 20px;}
+            .component .responsive-table { margin-left: 0px !important; mar=
+gin-right: 0px !important;}
+            .wide .video-thumb { width: 100% !important;height: auto !impor=
+tant; }=20
+            .wide.video-container { width: 100% !important; }
+            }
+        </style>
+       =20
+    <!--[if (gte mso 9)|(IE)]>
+                                            <style>=20
+                                        </style>
+                                        <![endif]--></head>
+    <body style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%;margin: 0px !important; padding: 0px !important;">
+        <div id=3D"preview-text" style=3D"display: none; font-size: 1px; co=
+lor: #fefefe; line-height: 1px; font-family: 'Calibri', Helvetica, Arial, s=
+ans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">=
+Friend,It is my number one priority to represent the folks of the First Con=
+gressional District and I always want to make sure I am using the thoughts,=
+ ideas, and concerns of those I represent when making decisions in Washingt=
+on. With the many issues we are experiencing throughout the U.S. and abroad=
+ such as spiking inflation and energy prices, a worsening crisis at our sou=
+thern border, and the growing threat of our foreign adversaries like Russia=
+ and China, I want to know what you think are the top issues facing our nat=
+ion.I want to hear what matters most to you. Click here or below to fill ou=
+t this survey.  </div>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;font-family: 'Calibri', Helvetica, Arial, sans-serif; backgr=
+ound-color: #ffffff;border-bottom: 2px solid #eeca63;" border=3D"0" cellspa=
+cing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargi=
+n=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td align=3D"center" valign=3D"top" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: 'Calibri', He=
+lvetica, Arial, sans-serif; font-size: 16px; ">
+                        <div class=3D"region" id=3D"region-1"><div class=3D=
+"component full-width" style=3D"padding: 0px !important;"> <div class=3D"im=
+age" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 0px; margin-left: 0px;" width=3D"650">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;"><a href=3D"https://wittman.house.gov/components/redirect/r.aspx=
+?ID=3D39505-73010720" target=3D"_blank" style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;"><img style=3D"max-width:600px;-ms-interp=
+olation-mode: bicubic;vertical-align: bottom; max-width: 650px;" alt=3D"Rep=
+resentative Rob Wittman" src=3D"https://wittman.house.gov/uploadedphotos/hi=
+ghresolution/22f8b6a1-6fbb-4cbb-8303-39a831b0f6dc.png"></a></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div></div>
+                    </td>
+                </tr>         =20
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" align=3D"center" class=
+=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;background-color: #ffffff; font-family: 'Calibri', Helvetica=
+, Arial, sans-serif;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marg=
+inheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td class=3D"responsive-table" valign=3D"top" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: 'Ca=
+libri', Helvetica, Arial, sans-serif; font-size: 16px; color: #000000;">
+
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class=3D"region" id=3D"region-2"><div class=3D=
+"component " style=3D"padding: 0px !important;"> <div class=3D"editable" st=
+yle=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;margin: 0;"><span style=3D"font-size:11pt; font-variant=
+:normal; white-space:pre-wrap"><span style=3D"font-family:Calibri,sans-seri=
+f"><span style=3D"color:#202020"><span style=3D"font-weight:400"><span styl=
+e=3D"font-style:normal"><span style=3D"text-decoration:none">Friend,</span>=
+</span></span></span></span></span></p><p style=3D"margin: 0;line-height:1.=
+38; background-color:#ffffff"><br></p><p style=3D"margin: 0;line-height:1.3=
+8; background-color:#ffffff"><span style=3D"font-size:11pt; font-variant:no=
+rmal; white-space:pre-wrap"><span style=3D"font-family:Calibri,sans-serif">=
+<span style=3D"color:#202020"><span style=3D"font-weight:400"><span style=
+=3D"font-style:normal"><span style=3D"text-decoration:none">It is my number=
+ one priority to represent the folks of the First Congressional District an=
+d I always want to make sure I am using the thoughts, ideas, and concerns o=
+f those I represent when making decisions in Washington. With the many issu=
+es we are experiencing throughout the U.S. and abroad such as spiking infla=
+tion and energy prices, a worsening crisis at our southern border, and the =
+growing threat of our foreign adversaries like Russia and China, I want to =
+know what you think are the top issues facing our nation.</span></span></sp=
+an></span></span></span></p><p style=3D"margin: 0;line-height:1.38; backgro=
+und-color:#ffffff"><br><span style=3D"font-size:11pt; font-variant:normal; =
+white-space:pre-wrap"><span style=3D"font-family:Calibri,sans-serif"><span =
+style=3D"color:#202020"><span style=3D"font-weight:700"><span style=3D"font=
+-style:normal"><span style=3D"text-decoration:none">I want to hear what mat=
+ters most to you. Click <a data-cke-saved-href=3D"https://wittman.house.gov=
+/components/redirect/r.aspx?ID=3D39506-73010720" href=3D"https://wittman.ho=
+use.gov/forms/form/?ID=3D269" style=3D"-webkit-text-size-adjust: 100%; -ms-=
+text-size-adjust: 100%;">here</a> or below to fill out this survey. </span>=
+</span></span></span></span></span></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><a href=3D"https://wittman.house.gov/component=
+s/redirect/r.aspx?ID=3D39507-73010720" target=3D"_blank" style=3D"-webkit-t=
+ext-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img style=3D"max-width=
+:600px;-ms-interpolation-mode: bicubic;vertical-align: bottom; max-width: 2=
+40px;" alt=3D"survey button" src=3D"https://wittman.house.gov/UploadedPhoto=
+s/LowResolution/f98b1c12-7ef5-48be-b772-d9d166249a7f.png"></a></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;"><a data-cke-saved-href=3D"https://wittman.house.gov/c=
+omponents/redirect/r.aspx?ID=3D39508-73010720" href=3D"https://wittman.hous=
+e.gov/forms/form/?ID=3D269" style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;"><span style=3D"font-size:11pt; font-variant:normal; =
+white-space:pre-wrap"><span style=3D"font-family:Calibri,sans-serif"><span =
+style=3D"color:#202020"><span style=3D"font-weight:700"><span style=3D"font=
+-style:normal"><span style=3D"text-decoration:none">What are the top issues=
+ facing our nation right now?</span></span></span></span></span></span></a>=
+</p><p style=3D"margin: 0;line-height:1.38; background-color:#ffffff"><a da=
+ta-cke-saved-href=3D"https://wittman.house.gov/components/redirect/r.aspx?I=
+D=3D39509-73010720" href=3D"https://wittman.house.gov/forms/form/?ID=3D269"=
+ style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><spa=
+n style=3D"font-size:11pt; font-variant:normal; white-space:pre-wrap"><span=
+ style=3D"font-family:Calibri,sans-serif"><span style=3D"color:#202020"><sp=
+an style=3D"font-weight:400"><span style=3D"font-style:normal"><span style=
+=3D"text-decoration:none">[ ] Spiking Inflation</span></span></span></span>=
+</span></span></a></p><p style=3D"margin: 0;line-height:1.38; background-co=
+lor:#ffffff"><a data-cke-saved-href=3D"https://wittman.house.gov/components=
+/redirect/r.aspx?ID=3D39510-73010720" href=3D"https://wittman.house.gov/for=
+ms/form/?ID=3D269" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-a=
+djust: 100%;"><span style=3D"font-size:11pt; font-variant:normal; white-spa=
+ce:pre-wrap"><span style=3D"font-family:Calibri,sans-serif"><span style=3D"=
+color:#202020"><span style=3D"font-weight:400"><span style=3D"font-style:no=
+rmal"><span style=3D"text-decoration:none">[ ] The Border Crisis</span></sp=
+an></span></span></span></span></a></p><p style=3D"margin: 0;line-height:1.=
+38; background-color:#ffffff"><a data-cke-saved-href=3D"https://wittman.hou=
+se.gov/components/redirect/r.aspx?ID=3D39511-73010720" href=3D"https://witt=
+man.house.gov/forms/form/?ID=3D269" style=3D"-webkit-text-size-adjust: 100%=
+; -ms-text-size-adjust: 100%;"><span style=3D"font-size:11pt; font-variant:=
+normal; white-space:pre-wrap"><span style=3D"font-family:Calibri,sans-serif=
+"><span style=3D"color:#202020"><span style=3D"font-weight:400"><span style=
+=3D"font-style:normal"><span style=3D"text-decoration:none">[ ] The Threat =
+of Foreign Adversaries (like Iran, China, Russia, and North Korea)&nbsp;</s=
+pan></span></span></span></span></span></a></p><p style=3D"margin: 0;line-h=
+eight:1.38; background-color:#ffffff"><a data-cke-saved-href=3D"https://wit=
+tman.house.gov/components/redirect/r.aspx?ID=3D39512-73010720" href=3D"http=
+s://wittman.house.gov/forms/form/?ID=3D269" style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;"><span style=3D"font-size:11pt; font-=
+variant:normal; white-space:pre-wrap"><span style=3D"font-family:Calibri,sa=
+ns-serif"><span style=3D"color:#202020"><span style=3D"font-weight:400"><sp=
+an style=3D"font-style:normal"><span style=3D"text-decoration:none">[ ] Was=
+teful Government Spending and the Lack of Accountability in Washington</spa=
+n></span></span></span></span></span></a></p><p style=3D"margin: 0;line-hei=
+ght:1.38; background-color:#ffffff"><a data-cke-saved-href=3D"https://wittm=
+an.house.gov/components/redirect/r.aspx?ID=3D39513-73010720" href=3D"https:=
+//wittman.house.gov/forms/form/?ID=3D269" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;"><span style=3D"font-size:11pt; font-va=
+riant:normal; white-space:pre-wrap"><span style=3D"font-family:Calibri,sans=
+-serif"><span style=3D"color:#202020"><span style=3D"font-weight:400"><span=
+ style=3D"font-style:normal"><span style=3D"text-decoration:none">[ ] Risin=
+g Crime</span></span></span></span></span></span></a></p><p style=3D"margin=
+: 0;line-height:1.38; background-color:#ffffff"><a data-cke-saved-href=3D"h=
+ttps://wittman.house.gov/components/redirect/r.aspx?ID=3D39514-73010720" hr=
+ef=3D"https://wittman.house.gov/forms/form/?ID=3D269" style=3D"-webkit-text=
+-size-adjust: 100%; -ms-text-size-adjust: 100%;"><span style=3D"font-size:1=
+1pt; font-variant:normal; white-space:pre-wrap"><span style=3D"font-family:=
+Calibri,sans-serif"><span style=3D"color:#202020"><span style=3D"font-weigh=
+t:400"><span style=3D"font-style:normal"><span style=3D"text-decoration:non=
+e">[ ] Skyrocketing Energy Prices</span></span></span></span></span></span>=
+</a></p><p style=3D"margin: 0;line-height:1.38; background-color:#ffffff"><=
+a data-cke-saved-href=3D"https://wittman.house.gov/components/redirect/r.as=
+px?ID=3D39515-73010720" href=3D"https://wittman.house.gov/forms/form/?ID=3D=
+269" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">=
+<span style=3D"font-size:11pt; font-variant:normal; white-space:pre-wrap"><=
+span style=3D"font-family:Calibri,sans-serif"><span style=3D"color:#202020"=
+><span style=3D"font-weight:400"><span style=3D"font-style:normal"><span st=
+yle=3D"text-decoration:none">[ ] The Russia-Ukraine Conflict</span></span><=
+/span></span></span></span></a></p><p style=3D"margin: 0;line-height:1.38; =
+background-color:#ffffff"><a data-cke-saved-href=3D"https://wittman.house.g=
+ov/components/redirect/r.aspx?ID=3D39516-73010720" href=3D"https://wittman.=
+house.gov/forms/form/?ID=3D269" style=3D"-webkit-text-size-adjust: 100%; -m=
+s-text-size-adjust: 100%;"><span style=3D"font-size:11pt; font-variant:norm=
+al; white-space:pre-wrap"><span style=3D"font-family:Calibri,sans-serif"><s=
+pan style=3D"color:#202020"><span style=3D"font-weight:400"><span style=3D"=
+font-style:normal"><span style=3D"text-decoration:none">[ ] Other: ________=
+________</span></span></span></span></span></span></a></p><p style=3D"margi=
+n: 0;line-height:1.38; background-color:#ffffff"><br></p><p style=3D"margin=
+: 0;line-height:1.38; background-color:#ffffff"><span style=3D"font-size:11=
+pt; font-variant:normal; white-space:pre-wrap"><span style=3D"font-family:C=
+alibri,sans-serif"><span style=3D"color:#202020"><span style=3D"font-weight=
+:400"><span style=3D"font-style:normal"><span style=3D"text-decoration:none=
+">Sincerely,</span></span></span></span></span></span></p><p style=3D"margi=
+n: 0;line-height:1.38; background-color:#ffffff"><span style=3D"font-size:1=
+1pt; font-variant:normal; white-space:pre-wrap"><span style=3D"font-family:=
+Calibri,sans-serif"><span style=3D"color:#202020"><span style=3D"font-weigh=
+t:400"><span style=3D"font-style:normal"><span style=3D"text-decoration:non=
+e">Rob</span></span></span></span></span></span></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div></div>
+                        <table role=3D"presentation" class=3D"responsive-ta=
+ble" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <tbody>
+                                <tr height=3D"20">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" class=3D"responsive-tabl=
+e" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-family: 'Calibri', Helvetica, Arial, sans-serif; backgrou=
+nd-color: #ffffff;" border=3D"0" cellspacing=3D"0" cellpadding=3D"10" margi=
+nheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #333333; backgro=
+und-color: #f5f5f5; padding: 0 20px;">
+                    <table role=3D"presentation" width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"10" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;text-align:center;">
+                        <tbody>
+                            <tr>
+                                <td valign=3D"middle" align=3D"center" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;text-align:=
+center;">
+
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"32=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: arial, helvetica, sans-serif; text-align:center; font-size: 14px=
+; color: #333333; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0=
+pt; height: 100px;">
+                                    <tbody>
+                                        <tr>
+                                            <td align=3D"center" valign=3D"=
+middle" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%=
+;font-family: 'Calibri', Helvetica, Arial, sans-serif; font-size: 16px;">
+                                                <img alt=3D"Rob Wittman Hea=
+dshot" width=3D"120" style=3D"-ms-interpolation-mode: bicubic;display: bloc=
+k; width: 120px;" src=3D"https://wittman.house.gov/images/email/wittman-hea=
+d-2021.png">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"left" cellspacing=3D"0" width=3D"32=
+.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fo=
+nt-family: arial, helvetica, sans-serif; text-align:center; font-size: 14px=
+; color: #333333; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0=
+pt; height: 100px;">
+                                    <tbody>
+                                        <tr>
+                                            <td align=3D"center" valign=3D"=
+middle" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%=
+;font-family: 'Calibri', Helvetica, Arial, sans-serif; font-size: 16px; col=
+or: #000000; ">
+                                                <a href=3D"https://wittman.=
+house.gov/components/redirect/r.aspx?ID=3D39517-73010720" style=3D"-webkit-=
+text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"Subscribe =
+to E-Newsletter" width=3D"208" style=3D"-ms-interpolation-mode: bicubic;wid=
+th: 208px;" src=3D"https://wittman.house.gov/images/email/enews21.png"></a>
+                                            </td>=20
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <table role=3D"presentation" cellpadding=3D=
+"0" class=3D"responsive-table" align=3D"right" cellspacing=3D"0" width=3D"3=
+2.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;f=
+ont-family: arial, helvetica, sans-serif; text-align:center; font-size: 14p=
+x; color: #333333; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: =
+0pt; height: 100px;">
+                                    <tbody>
+                                        <tr>
+                                            <td align=3D"center" valign=3D"=
+middle" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%=
+;font-family: Arial, Helvetica, sans-serif;">
+                                            <a target=3D"_blank" href=3D"ht=
+tps://wittman.house.gov/components/redirect/r.aspx?ID=3D39518-73010720" sty=
+le=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=
+=3D"facebook icon" width=3D"35" src=3D"https://wittman.house.gov/images/ema=
+il/fb21.png" style=3D"-ms-interpolation-mode: bicubic;border-width: 0px; bo=
+rder-style: solid; width: 32px;"></a>
+                        &nbsp;<a target=3D"_blank" href=3D"https://wittman.=
+house.gov/components/redirect/r.aspx?ID=3D39519-73010720" style=3D"-webkit-=
+text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"twitter ic=
+on" width=3D"35" src=3D"https://wittman.house.gov/images/email/tw21.png" st=
+yle=3D"-ms-interpolation-mode: bicubic;border-width: 0px; border-style: sol=
+id; width: 32px;"></a>
+                        &nbsp;<a target=3D"_blank" href=3D"https://wittman.=
+house.gov/components/redirect/r.aspx?ID=3D39520-73010720" style=3D"-webkit-=
+text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"instagram =
+icon" width=3D"35" src=3D"https://wittman.house.gov/images/email/insta21.pn=
+g" style=3D"-ms-interpolation-mode: bicubic;border-width: 0px; border-style=
+: solid; width: 32px;"></a>
+                        &nbsp;<a target=3D"_blank" href=3D"https://wittman.=
+house.gov/components/redirect/r.aspx?ID=3D39521-73010720" style=3D"-webkit-=
+text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt=3D"Email Me" =
+width=3D"35" src=3D"https://wittman.house.gov/images/email/email21.png" sty=
+le=3D"-ms-interpolation-mode: bicubic;border-width: 0px; border-style: soli=
+d; width: 32px;"></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table role=3D"presentation" width=3D"650" align=3D"center" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;background-c=
+olor: #10233C; border-bottom: 8px solid #eeca63;" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D=
+"0" topmargin=3D"0">
+            <tbody>
+                <tr>
+                    <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%;">
+                        <table role=3D"presentation" width=3D"650" class=3D=
+"responsive-table" align=3D"center" style=3D"-webkit-text-size-adjust: 100%=
+; -ms-text-size-adjust: 100%;font-family: 'Calibri', Helvetica, Arial, sans=
+-serif; background-color: #10233C;" border=3D"0" cellspacing=3D"0" cellpadd=
+ing=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=
+=3D"0">
+
+                            <tbody>
+
+                                <tr>
+                                    <td valign=3D"middle" align=3D"center" =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:=
+30px; background-color: #10233C;">
+                                    &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign=3D"middle" align=3D"center" =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;backgro=
+und-color: #10233C; color: #eeca63; font-size: 14px; font-weight: bold;">
+                                    <a href=3D"https://wittman.house.gov/co=
+mponents/redirect/r.aspx?ID=3D39522-73010720" style=3D"-webkit-text-size-ad=
+just: 100%; -ms-text-size-adjust: 100%;color: #ffffff; text-decoration: non=
+e; font-size: 14px; text-transform: uppercase;">Home</a>&nbsp;&nbsp;|&nbsp;=
+&nbsp;
+                        <a href=3D"https://wittman.house.gov/components/red=
+irect/r.aspx?ID=3D39523-73010720" style=3D"-webkit-text-size-adjust: 100%; =
+-ms-text-size-adjust: 100%;color: #ffffff; text-decoration: none; font-size=
+: 14px; text-transform: uppercase;">About Rob</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href=3D"https://wittman.house.gov/components/red=
+irect/r.aspx?ID=3D39524-73010720" style=3D"-webkit-text-size-adjust: 100%; =
+-ms-text-size-adjust: 100%;color: #ffffff; text-decoration: none; font-size=
+: 14px; text-transform: uppercase;">Newsroom</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href=3D"https://wittman.house.gov/components/red=
+irect/r.aspx?ID=3D39525-73010720" style=3D"-webkit-text-size-adjust: 100%; =
+-ms-text-size-adjust: 100%;color: #ffffff; text-decoration: none; font-size=
+: 14px; text-transform: uppercase;">Services</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href=3D"https://wittman.house.gov/components/red=
+irect/r.aspx?ID=3D39526-73010720" style=3D"-webkit-text-size-adjust: 100%; =
+-ms-text-size-adjust: 100%;color: #ffffff; text-decoration: none; font-size=
+: 14px; text-transform: uppercase;">Priorities</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign=3D"middle" align=3D"center" =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:=
+30px; background-color: #10233C;">
+                                    &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign=3D"middle" align=3D"center" =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: =
+#ffffff; background-color: #10233C; padding: 0 20px;">
+                                    <table role=3D"presentation" width=3D"1=
+00%" cellpadding=3D"0" cellspacing=3D"10" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%;text-align:center;">
+                                        <tbody>
+                                            <tr>
+                                                <td valign=3D"middle" align=
+=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: =
+100%;text-align:center;">
+                                                <table role=3D"presentation=
+" cellpadding=3D"0" class=3D"responsive-table" align=3D"left" cellspacing=
+=3D"0" width=3D"24.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-si=
+ze-adjust: 100%;font-family: 'Calibri', Helvetica, Arial, sans-serif; text-=
+align:center; font-size: 13px; color: #ffffff; margin: 10px 0;mso-table-lsp=
+ace: 0pt; mso-table-rspace: 0pt;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: 'Cali=
+bri', Helvetica, Arial, sans-serif;">
+                                                            <strong style=
+=3D"font-weight: bold;font-family: 'Calibri', Helvetica, Arial, sans-serif;=
+ color: #eeca63;">HANOVER OFFICE</strong><br>
+                                                            6501 Mechanicsv=
+ille Tpke.<br>
+                                                        Suite 102<br>
+                                                        Mechanicsville, VA =
+23111<br>
+                                                        Phone: (804) 730-65=
+95 <br>
+                                                        Fax: (804) 730-6597
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <table role=3D"presentation=
+" cellpadding=3D"0" class=3D"responsive-table" align=3D"left" cellspacing=
+=3D"0" width=3D"24.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-si=
+ze-adjust: 100%;font-family: 'Calibri', Helvetica, Arial, sans-serif; text-=
+align:center; font-size: 13px; color: #ffffff; margin: 10px 0;mso-table-lsp=
+ace: 0pt; mso-table-rspace: 0pt;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: 'Cali=
+bri', Helvetica, Arial, sans-serif;">
+                                                            <strong style=
+=3D"font-weight: bold;font-family: 'Calibri', Helvetica, Arial, sans-serif;=
+ color: #eeca63;">STAFFORD OFFICE</strong><br>
+                                                            95 Dunn Drive<b=
+r>
+                                                        Suite 201<br>
+                                                        Stafford, Virginia =
+22556<br>
+                                                        Phone: (540) 659-27=
+34 <br>
+                                                        Fax: (540) 659-2737
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <table role=3D"presentation=
+" cellpadding=3D"0" class=3D"responsive-table" align=3D"left" cellspacing=
+=3D"0" width=3D"24.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-si=
+ze-adjust: 100%;font-family: 'Calibri', Helvetica, Arial, sans-serif; text-=
+align:center; font-size: 13px; color: #ffffff; margin: 10px 0;mso-table-lsp=
+ace: 0pt; mso-table-rspace: 0pt;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: 'Cali=
+bri', Helvetica, Arial, sans-serif;">
+                                                            <strong style=
+=3D"font-weight: bold;font-family: 'Calibri', Helvetica, Arial, sans-serif;=
+ color: #eeca63;">TAPPAHANNOCK OFFICE</strong><br>
+                                                            508 Church Lane=
+<br>
+                                                        P.O. Box 3106<br>
+                                                        Tappahannock, VA 22=
+560<br>
+                                                        Phone: (804) 443-06=
+68 <br>
+                                                        Fax: (804) 443-0671
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <table role=3D"presentation=
+" cellpadding=3D"0" class=3D"responsive-table" align=3D"left" cellspacing=
+=3D"0" width=3D"24.9%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-si=
+ze-adjust: 100%;font-family: 'Calibri', Helvetica, Arial, sans-serif; text-=
+align:center; font-size: 13px; color: #ffffff; margin: 10px 0;mso-table-lsp=
+ace: 0pt; mso-table-rspace: 0pt;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: 'Cali=
+bri', Helvetica, Arial, sans-serif;">
+                                                            <strong style=
+=3D"font-weight: bold;font-family: 'Calibri', Helvetica, Arial, sans-serif;=
+ color: #eeca63;">WASHINGTON, DC OFFICE</strong><br>
+                                                            2055 Rayburn HO=
+B<br>
+                                                        Washington, DC 2051=
+5<br>
+                                                        Phone: (202) 225-42=
+61 <br>
+                                                        Fax: (202) 225-4382
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign=3D"middle" align=3D"center" =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:=
+30px; background-color: #10233C;">
+                                    &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign=3D"middle" style=3D"-webkit-=
+text-size-adjust: 100%; -ms-text-size-adjust: 100%;background-color: #10233=
+C;">
+                                    <table role=3D"presentation" cellpaddin=
+g=3D"0" cellspacing=3D"20" align=3D"center" width=3D"90%" style=3D"-webkit-=
+text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                                        <tbody>
+                                            <tr>
+                                                <td valign=3D"middle" align=
+=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: =
+100%;color: #eeca63; font-size: 13px; font-family: 'Calibri', Helvetica, Ar=
+ial, sans-serif;">
+                                                <a target=3D"_blank" href=
+=3D"https://wittman.house.gov/components/redirect/r.aspx?ID=3D39527-7301072=
+0" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;colo=
+r: #ffffff; text-decoration:none; font-family: 'Calibri', Helvetica, Arial,=
+ sans-serif;">Unsubscribe</a>&nbsp;|&nbsp;
+                                                <a target=3D"_blank" href=
+=3D"https://urldefense.com/v3/__https://www.facebook.com/sharer.php?u=3Dhtt=
+ps:**Awittman.house.gov*news*email*show.aspx*ID=3DXRUQ7XJSV3GURYP2TPHZ74VZH=
+M&amp;t=3DPOLL*3a*What*are*the*Top*Issues*Facing*Our*Nation*3f__;Ly8vLy8_JS=
+srKysrKysrJQ!!Fr0YZsIsFWxTZsBm-qTAg68!yCy1XKjgqgVEo5jD4GEQwWLtcgehbN3QE8zwn=
+gf1-WtlMY4rtG6HYg0QKssyETd3fLxg0Rpd$" style=3D"-webkit-text-size-adjust: 10=
+0%; -ms-text-size-adjust: 100%;color: #ffffff; text-decoration:none; font-f=
+amily: 'Calibri', Helvetica, Arial, sans-serif;">Share on Facebook</a>&nbsp=
+;|&nbsp;
+                                                <a target=3D"_blank" href=
+=3D"https://wittman.house.gov/Components/Redirect/twitter.aspx?url=3Dhttps:=
+//wittman.house.gov/news/email/show.aspx?ID=3DXRUQ7XJSV3GURYP2TPHZ74VZHM&am=
+p;name=3DPOLL%3a+What+are+the+Top+Issues+Facing+Our+Nation%3f" style=3D"-we=
+bkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; tex=
+t-decoration:none; font-family: 'Calibri', Helvetica, Arial, sans-serif;">S=
+hare on Twitter</a>
+                                                <br>
+                                            <br>
+                                            <p style=3D"margin: 0;margin: 0=
+; padding: 0; font-family: Georgia, times, serif; color: #ffffff;">*Please =
+do not reply to this email, as that mailbox is unattended. To better serve =
+the constituents of the First District I have established a contact form on=
+ my website. Please click <a style=3D"-webkit-text-size-adjust: 100%; -ms-t=
+ext-size-adjust: 100%;color: #EECA63; font-size: 13px;" href=3D"https://wit=
+tman.house.gov/components/redirect/r.aspx?ID=3D39528-73010720"><strong styl=
+e=3D"font-weight: bold;">here</strong></a> if you would like to send additi=
+onal correspondence.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign=3D"middle" align=3D"center" =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;height:=
+30px; background-color: #10233C;">
+                                    &nbsp;
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    <table role=3D"presentation" width=3D"100%" align=3D"center" style=3D"f=
+ont-family: Georgia, times, serif; background-color: #ffffff;" border=3D"0"=
+ cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" l=
+eftmargin=3D"0" topmargin=3D"0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td valign=3D"m=
+iddle" align=3D"center" style=3D"color: #000000; font-size: 16px; text-alig=
+n: left;">=20
+                                                                <img src=3D=
+"https://wittman.house.gov/images/spacerx4206-73010720.open" width=3D"20" h=
+eight=3D"1" style=3D"height: 1px">
+                                                                <br>
+<a href=3D"https://wittman.house.gov/news/email/show.aspx?ID=3DXRUQ7XJSV3GU=
+RYP2TPHZ74VZHM">Click Here</a> to view this email in your browser <br>
+<a href=3D"https://wittman.house.gov/Forms/EmailSignup/?Delete=3Dtrue&amp;M=
+essageID=3D4206&amp;Email=3DAshley.Haines@mail.house.gov">Click Here</a> to=
+ be removed from this list
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table></body>
+</html>=
+
+----boundary_2590122_0ae84f75-cfb1-495a-b3ba-f3c5054fe996--

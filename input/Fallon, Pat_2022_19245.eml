@@ -1,0 +1,846 @@
+Received: from SJ0PR09MB6656.namprd09.prod.outlook.com (2603:10b6:a03:25a::13)
+ by MN2PR09MB4843.namprd09.prod.outlook.com with HTTPS; Wed, 15 Jun 2022
+ 12:12:00 +0000
+Received: from DM5PR09CA0015.namprd09.prod.outlook.com (2603:10b6:4::25) by
+ SJ0PR09MB6656.namprd09.prod.outlook.com (2603:10b6:a03:25a::13) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.5332.13; Wed, 15 Jun
+ 2022 12:11:59 +0000
+Received: from DM3GCC02FT016.eop-gcc02.prod.protection.outlook.com
+ (2a01:111:f400:7d04::201) by DM5PR09CA0015.outlook.office365.com
+ (2603:10b6:4::25) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.5353.14 via Frontend
+ Transport; Wed, 15 Jun 2022 12:11:59 +0000
+Authentication-Results: spf=softfail (sender IP is 143.228.151.111)
+ smtp.mailfrom=in.constantcontact.com; dkim=fail (body hash did not verify)
+ header.d=mail8.housecommunications.gov;dmarc=fail action=none
+ header.from=mail8.housecommunications.gov;
+Received-SPF: SoftFail (protection.outlook.com: domain of transitioning
+ in.constantcontact.com discourages use of 143.228.151.111 as permitted
+ sender)
+Received: from owa.house.gov (143.228.151.111) by
+ DM3GCC02FT016.mail.protection.outlook.com (10.97.8.165) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.5353.14 via Frontend Transport; Wed, 15 Jun 2022 12:11:59 +0000
+Received: from EXCH1911.US.House.gov (143.228.151.110) by
+ EXCH1912.US.House.gov (143.228.151.111) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.2.1118.9; Wed, 15 Jun 2022 08:11:58 -0400
+Received: from serg-hub3-a.house.gov (143.228.50.180) by EXCH1911.US.House.gov
+ (143.228.151.110) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1118.9 via Frontend
+ Transport; Wed, 15 Jun 2022 08:11:58 -0400
+Authentication-Results-Original: house.gov;	spf=pass
+ smtp.mailfrom=AFNtRN7DsQumNZ8ghNMS5Uw==_1135149914389_IOXhGGsaEeKCQojkYIhwmw==@in.constantcontact.com;
+	dkim=temperror header.d=mail8.housecommunications.gov header.s=2020243529;
+	dkim=pass header.d=auth.ccsend.com header.s=1000073432;	dmarc=temperror
+ reason="DNS DMARC lookup domain=mail8.housecommunications.gov"
+Received: from coi003.confirmedcc.com (coi003.confirmedcc.com [208.75.123.3])
+	by serg-hub3-a.house.gov (8.16.1.2/8.16.1.2) with ESMTPS id 25FCBvfb005393
+	(version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO)
+	for <hannah.spurr@mail.house.gov>; Wed, 15 Jun 2022 08:11:58 -0400
+Received: from [10.252.0.1] ([10.252.0.1:35942] helo=p2-jbemailsyndicator21.ctct.net)
+	by 10.249.232.26 (envelope-from <AFNtRN7DsQumNZ8ghNMS5Uw==_1135149914389_IOXhGGsaEeKCQojkYIhwmw==@in.constantcontact.com>)
+	(ecelerity 4.3.1.999 r(:)) with ESMTP
+	id 26/F9-60239-D8CC9A26; Wed, 15 Jun 2022 08:11:57 -0400
+DKIM-Signature: v=1; q=dns/txt; a=rsa-sha256; c=relaxed/relaxed; s=2020243529; d=mail8.housecommunications.gov; h=date:mime-version:subject:X-Feedback-ID:X-250ok-CID:message-id:from:reply-to:list-unsubscribe:list-unsubscribe-post:to; bh=cxSXl6tjjtigi52O0UpWombiGJBazJilDoVDRjXptLE=; b=PhOTxFpuoUFbCokPG7SLNWqB46p7ohaWplHZ5K7uu66NUji85eHWfCQZPLpgQ/ioRPlg0GTyTb9StECHOXSDiCRwC63ryPvbbM6NcitC537/Ny6KqUiOkNQKo2GVqggqybuQtYVRQw06gDCKDiRrnDnDZqg2FT3GhpQn5Lws5Ko=
+DKIM-Signature: v=1; q=dns/txt; a=rsa-sha256; c=relaxed/relaxed; s=1000073432; d=auth.ccsend.com; h=date:mime-version:subject:X-Feedback-ID:X-250ok-CID:message-id:from:reply-to:list-unsubscribe:list-unsubscribe-post:to; bh=cxSXl6tjjtigi52O0UpWombiGJBazJilDoVDRjXptLE=; b=jzduWhP6TLE9ZvK27xzgH6nwOr48Cgd7gRWkRwBSEmWTjLSeXUAW88KweSDPz7p2eZUNKZNM79IiMZ2Tzz52/T8qGKOG2n9VWXQSJlsnsOQY/cGqlx+gtgtgf1268IFEPurH+oJTMZ5/IpjSomMiPYrijov/6699SWexDlALsRA=
+Message-ID: <1138992231818.1135149914389.-1.0.200811JL.1001@scheduler.constantcontact.com>
+Date: Wed, 15 Jun 2022 08:11:57 -0400 (EDT)
+From: "Rep. Fallon" <repfallon@mail8.housecommunications.gov>
+Reply-To: repfallon@mail8.housecommunications.gov
+To: hannah.spurr@mail.house.gov
+Subject: Your Invitation
+Content-Type: multipart/alternative;
+	boundary="----=_Part_631258227_605440306.1655295117508"
+List-Unsubscribe: <https://visitor.constantcontact.com/do?p=un&m=00141ExnhSySs_ZKgpk4nK6Wg%3D%3D&se=001TAeZDpsMR68%3D&t=001EkZLEx15CcE%3D&llr=vigkdgbbb>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-Campaign-Activity-ID: 14db5137-b0ec-42e9-8d67-c82134c4b953
+X-250ok-CID: 14db5137-b0ec-42e9-8d67-c82134c4b953
+X-Channel-ID: 20e5e118-6b1a-11e2-8242-88e46088709b
+X-Mailer: Roving Constant Contact 2012 (http://www.constantcontact.com)
+X-Return-Path-Hint: AFNtRN7DsQumNZ8ghNMS5Uw==_1135149914389_IOXhGGsaEeKCQojkYIhwmw==@in.constantcontact.com
+X-Roving-Campaignid: 1138992231818
+X-Roving-Id: 1135149914389.-1
+X-Feedback-ID: 20e5e118-6b1a-11e2-8242-88e46088709b:14db5137-b0ec-42e9-8d67-c82134c4b953:1135149914389:CTCT
+X-CTCT-ID: 20e5e118-6b1a-11e2-8242-88e46088709b
+X-Proofpoint-GUID: dzYO36PshsMzQvjMVM6zIp819nkqZtv4
+X-Proofpoint-ORIG-GUID: dzYO36PshsMzQvjMVM6zIp819nkqZtv4
+X-Proofpoint-HIR-SPF: spf_passed
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:6.0.517,18.0.874
+ definitions=2022-06-15_04:2022-06-13,2022-06-15 signatures=0
+X-Proofpoint-HIR-DMARC: temperror
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 suspectscore=0 bulkscore=100
+ mlxlogscore=815 phishscore=0 malwarescore=0 spamscore=0 mlxscore=0
+ adultscore=0 classifier=spam adjust=0 reason=mlx scancount=1
+ engine=8.12.0-2204290000 definitions=main-2206150048
+Return-Path:
+ AFNtRN7DsQumNZ8ghNMS5Uw==_1135149914389_IOXhGGsaEeKCQojkYIhwmw==@in.constantcontact.com
+X-OrganizationHeadersPreserved: EXCH1912.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 15 Jun 2022 12:11:59.3575
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 2dbfc439-069b-40bf-1fd0-08da4ec83f96
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1911.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted:
+ DM3GCC02FT016.eop-gcc02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ DM3GCC02FT016.eop-gcc02.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: 2dbfc439-069b-40bf-1fd0-08da4ec83f96
+X-MS-TrafficTypeDiagnostic: SJ0PR09MB6656:EE_
+X-MS-Exchange-Organization-SCL: -1
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:143.228.151.111;CTRY:US;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SKI;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:;DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 15 Jun 2022 12:11:59.2794
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 2dbfc439-069b-40bf-1fd0-08da4ec83f96
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.151.111];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1911.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SJ0PR09MB6656
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.5446777
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.5332.022
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506458)(944626604)(920097)(425001)(930097);
+X-Microsoft-Antispam-Message-Info:
+	a/Ci24g6X4C5oE+XtJpe9xNMzFSYNEuuLRkkVqSn2U9V4KRdi4z9XnIoryxYZZk13XaycLEdYPJcNfXr1thnYV7dNycdYK5Nm1r7ITxsjiwrbhHjWl233Qmp1c3KwdhVGc4QxWBy+uDDR3Qpei/xEhRTBGPP/yCeUi5cbs5aZ7vszkljzrNVBEbE/M3V0uNksz3+Xq1S8UwzrAcNLNjSGlR9fVeHlG8T2iz+z+qnNSOcGK5eHP2hQ5xkrQYZUYGS7kw/zLrZqGgFUnWfeXXz8QLpHioMLzP1jE/EHkMGGz0Qb6ecwJx/y5ju9RRv7N+lZuVRqDc8B0igzYwKUw9sFlneMpun4Ntcj/u7P5XxlsfGYIYT1QXBc84TaTPW06gZVHnLlwB3ACWgftOTQWYmX0PuUvn86E+Q8k/dMSx7HfATlcyDhJCl6mK5FI9wMxWtglJu2vY5ffon6H12HLYjhF/QRh3TeoRYqIvm78zAvwJuMgDLo/FYuulDDdPlb4GfqqrkslTwyFU5NupD20q4RrsrGlQtq+ftbfMUYxTAhdnuAI49jZ3Q54UabUup9RBCJDZUND5yF8FM2myISajJ6jluLVOnrDD2qEvQl9AEfDKUlAw498Z3ewEGP2GjsGfB+LXYxI+JBjweHSPDSh4BdLiqRtaXSzEza/uEGQ9reec=
+MIME-Version: 1.0
+
+------=_Part_631258227_605440306.1655295117508
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+You don't want to miss this. Dear Alexander, You're invited!! We would love to have you join us for our TeleTown Hall TONIGHT at 6:30pm CT! You can find the information below if you wish to dial in. If you have any questions, do not hesitate to contact any of our offices. We hope you join us! For Texas and Liberty, Pat Fallon Member of Congress Fourth District of Texas Office of Congressman Pat Fallon | 1118 Longworth HOB, Washington, DC 20515 Unsubscribe {recipient's email} Update Profile | Constant Contact Data Notice Sent by repfallon@mail8.housecommunications.gov
+------=_Part_631258227_605440306.1655295117508
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: Quoted-printable
+
+<!DOCTYPE html><html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+<meta content=3D"width=3Ddevice-width, initial-scale=3D1.0" name=3D"viewpor=
+t">
+
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1,=
+ maximum-scale=3D1">
+<!--[if gte mso 9]>
+<style id=3D"ol-styles">
+/* OUTLOOK-SPECIFIC STYLES */
+li {
+text-indent: -1em;
+padding: 0;
+margin: 0;
+line-height: 1.2;
+}
+ul, ol {
+padding: 0;
+margin: 0 0 0 40px;
+}
+p {
+margin: 0;
+padding: 0;
+margin-bottom: 0;
+}
+sup {
+font-size: 85% !important;
+}
+sub {
+font-size: 85% !important;
+}
+</style>
+<![endif]-->
+<style id=3D"template-styles-head" data-premailer=3D"ignore">
+.footer-main-width {
+width: 612px!important;
+max-width: 612px;
+}
+table {
+border-collapse: collapse;
+table-layout: fixed;
+}
+.bgimage {
+table-layout: auto;
+}
+.preheader-container {
+color: transparent;
+display: none;
+font-size: 1px;
+line-height: 1px;
+max-height: 0px;
+max-width: 0px;
+opacity: 0;
+overflow: hidden;
+}
+/* LIST AND p STYLE OVERRIDES */
+.editor-text p {
+margin: 0;
+padding: 0;
+margin-bottom: 0;
+}
+.editor-text ul,
+.editor-text ol {
+padding: 0;
+margin: 0 0 0 40px;
+}
+.editor-text li {
+padding: 0;
+margin: 0;
+line-height: 1.2;
+}
+/* =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D
+CLIENT/BROWSER SPECIFIC OVERRIDES
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+ */
+/* IE: correctly scale images with w/h attbs */
+img {
+-ms-interpolation-mode: bicubic;
+}
+/* Text Link Style Reset */
+a {
+text-decoration: underline;
+}
+/* iOS: Autolink styles inherited */
+a[x-apple-data-detectors] {
+text-decoration: underline !important;
+font-size: inherit !important;
+font-family: inherit !important;
+font-weight: inherit !important;
+line-height: inherit !important;
+color: inherit !important;
+}
+/* FF/Chrome: Smooth font rendering */
+.editor-text, .MainTextFullWidth {
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+/* Gmail/Web viewport fix */
+u + .body .template-body {
+width: 612px;
+}
+@media only screen and (max-width:480px) {
+u + .body .template-body {
+width: 100% !important;
+}
+}
+/* Office365/Outlook.com image reset */
+[office365] button, [office365] .divider-base div, [office365] .spacer-base=
+ div, [office365] .editor-image div { display: block !important; }
+</style>
+<style>@media only screen and (max-width:480px) {
+table {
+border-collapse: collapse;
+}
+.main-width {
+width: 100% !important;
+}
+.mobile-hidden {
+display: none !important;
+}
+td.OneColumnMobile {
+display: block !important;
+}
+.OneColumnMobile {
+width: 100% !important;
+}
+td.editor-col .editor-text {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .editor-image.editor-image-hspace-on td {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .editor-button-container {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .editor-social td {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .block-margin {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col td.block-margin .editor-text {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.editor-col td.block-margin .editor-image.editor-image-hspace-on td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.editor-col td.block-margin .editor-button-container {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.editor-col td.block-margin .editor-social td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+.editor-button td > table tr > td {
+padding: 0px 0px 0px 0px !important;
+}
+.editor-button td > table tr > td td {
+padding: 9px 15px 10px 15px !important;
+}
+.layout {
+padding: 15px 9px 15px 9px !important;
+}
+.layout-container-border {
+padding: 1px 1px 1px 1px !important;
+}
+.layout-container {
+padding: 0px 0px 0px 0px !important;
+}
+.editor-image img {
+width: auto !important; margin-left: auto !important; margin-right: auto !i=
+mportant;
+}
+.editor-image .image-cell {
+padding-bottom: 15px !important;
+}
+.editor-text {
+font-size: 16px !important;
+}
+.editor-divider {
+padding: 10px 0px 10px 0px !important;
+}
+.social-container {
+text-align: center !important;
+}
+.social-text {
+font-size: 14px !important;
+}
+.editor-spacer td.spacer-height {
+padding-bottom: 9px !important;
+}
+.section-headline-text {
+font-size: 24px !important;
+}
+.headline-text {
+font-size: 24px !important;
+}
+.subheadline-text {
+font-size: 20px !important;
+}
+.feature {
+padding-top: 0px !important; padding-bottom: 0px !important;
+}
+.layout-outer {
+padding: 0px 20px !important;
+}
+.feature-heading-text {
+font-size: 20px !important;
+}
+.feature-text {
+font-size: 16px !important;
+}
+.split.editor-col {
+margin-top: 0px !important;
+}
+.split.editor-col ~ .split.editor-col {
+margin-top: 10px !important;
+}
+.split-layout-margin {
+padding: 0px 20px !important;
+}
+.article {
+padding-top: 0px !important; padding-bottom: 0px !important;
+}
+.article-heading-text {
+font-size: 20px !important;
+}
+.article-text {
+font-size: 16px !important;
+}
+.social-container {
+text-align: center !important;
+}
+.social-text {
+font-size: 14px !important;
+}
+.cpn-heading-text {
+font-size: 28px !important;
+}
+.editor-cpn-heading-text {
+font-size: 28px !important;
+}
+td.col-divided .editor-col {
+border-right: 0px solid #869198 !important; border-bottom: 1px solid #86919=
+8 !important;
+}
+td.col-divided td.editor-col:last-of-type {
+border-bottom: 0 !important;
+}
+.col-divided {
+padding: 0 20px !important;
+}
+td.col-divided .editor-col .editor-text {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .editor-image.editor-image-hspace-on td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .editor-button-container {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .editor-social td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .block-margin {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+.action-block .poll-answer {
+width: 100% !important; display: block !important;
+}
+.action-block .poll-button {
+width: 100% !important;
+}
+div.MobileFooter {
+font-size: 11px !important;
+}
+td.FooterMobile {
+padding: 0px 10px 0px 10px !important;
+}
+td.MainCenter {
+width: 100% !important;
+}
+table.MainSide {
+display: none !important;
+}
+img.MainSide {
+display: none !important;
+}
+td.MainSide {
+display: none !important;
+}
+.rsvp-button-inner {
+padding: 0px 0px 10px 0px !important;
+}
+.rsvp-button-outer {
+width: 100% !important; max-width: 100% !important;
+}
+.footer-main-width {
+width: 100% !important;
+}
+.footer-mobile-hidden {
+display: none !important;
+}
+.footer-column {
+display: block !important;
+}
+.footer-mobile-stack {
+display: block !important;
+}
+.footer-mobile-stack-padding {
+padding-top: 3px;
+}
+}
+@media only screen and (max-width:320px) {
+.layout {
+padding: 0px 0px 0px 0px !important;
+}
+}
+@media screen {
+@font-face {
+font-family: 'Open Sans'; font-style: normal; font-weight: 400; src: local(=
+'Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.=
+com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2) format('woff2'); u=
+nicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2=
+000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+}
+</style>
+</head>
+<body class=3D"body" align=3D"center" style=3D"width: 100%; min-width: 100%=
+; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; background-co=
+lor: #e6e6e6; margin: 0px; padding: 0px;" bgcolor=3D"#e6e6e6">
+<table class=3D"template-body" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"text-align: center; min-width: 100%;" width=3D"100%">
+<tr>
+<td class=3D"preheader-container">
+<div>
+<div id=3D"preheader" style=3D"display: none; font-size: 1px; color: transp=
+arent; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overf=
+low: hidden;">
+<span data-entity-ref=3D"preheader">You don't want to miss this.</span>
+</div>
+
+</div>
+</td>
+</tr>
+<tr>
+<td class=3D"template-shell-container" align=3D"center">
+<div class=3D"bgcolor" style=3D"background-color: #e6e6e6;">
+<table class=3D"bgimage" width=3D"100%" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" style=3D"background-color: #e6e6e6;" bgcolor=3D"#e6e6e6">
+<tbody>
+<tr>
+<td align=3D"center">
+<table class=3D"main-width" width=3D"612" align=3D"center" border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" style=3D"width: 612px;">
+<tbody>
+<tr>
+<td class=3D"layout" align=3D"center" valign=3D"top" style=3D"padding: 15px=
+ 5px;">
+<table width=3D"100%" align=3D"center" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0">
+<tbody>
+<tr>
+<td class=3D"layout-container-border" align=3D"center" valign=3D"top" style=
+=3D"background-color: #869198; padding: 1px;" bgcolor=3D"#869198">
+<table width=3D"100%" align=3D"center" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"background-color: #869198;" bgcolor=3D"#869198">
+<tbody>
+<tr>
+<td class=3D"layout-container" align=3D"center" valign=3D"top" style=3D"bac=
+kground-color: #ffffff; padding: 0px;" bgcolor=3D"#ffffff">
+<div class=3D"">
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+<td class=3D"editor-logo editor-col OneColumnMobile" width=3D"100%" align=
+=3D"left" valign=3D"top">
+<div class=3D"gl-contains-image">
+<table class=3D"editor-image logo-container" style=3D"min-width: 100%;" wid=
+th=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"padding-top: 0px; padding-bott=
+om: 0px;">
+<div class=3D"publish-container">  <img alt=3D"" class=3D"" style=3D"displa=
+y: block; height: auto; max-width: 100%;" width=3D"600" border=3D"0" hspace=
+=3D"0" vspace=3D"0" src=3D"https://files.constantcontact.com/519153c4801/25=
+c96069-5b84-47d0-8e47-52f262090daf.png">
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+<td class=3D" editor-col OneColumnMobile" width=3D"100%" align=3D"" valign=
+=3D"top">
+<div class=3D"gl-contains-text">
+<table width=3D"100%" style=3D"min-width: 100%;" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td class=3D"editor-text editor-text " align=3D"left" valign=3D"top" style=
+=3D"font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 12px; co=
+lor: #403F42; text-align: left; display: block; word-wrap: break-word; line=
+-height: 1.2; padding: 10px 20px;">
+<div></div>
+<div class=3D"text-container galileo-ap-content-editor"><div>
+<div><span style=3D"font-size: 14px; font-family: Arial, Verdana, Helvetica=
+, sans-serif;"><span class=3D"greeting-tag">Dear Alexander,</span></span></=
+div>
+<div><br></div>
+<div><span style=3D"font-size: 14px;">You're invited!!</span></div>
+<div><span style=3D"font-size: 14px;">We would love to have you join us for=
+ our TeleTown Hall TONIGHT at 6:30pm CT! You can find the information below=
+ if you wish to dial in.</span></div>
+<div><br></div>
+<div><span style=3D"font-size: 14px;">If you have any questions, do not hes=
+itate to contact any of our offices. We hope you join us!</span></div>
+</div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+<td class=3D" editor-col OneColumnMobile" width=3D"100%" align=3D"" valign=
+=3D"top">
+<div class=3D"gl-contains-text">
+<table width=3D"100%" style=3D"min-width: 100%;" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td class=3D"editor-text editor-text " align=3D"left" valign=3D"top" style=
+=3D"font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 12px; co=
+lor: #403F42; text-align: left; display: block; word-wrap: break-word; line=
+-height: 1.2; padding: 10px 20px;">
+<div></div>
+<div class=3D"text-container galileo-ap-content-editor"><div>
+<div><span style=3D"font-size: 14px;">For Texas and Liberty,</span></div>
+<div><span style=3D"font-size: 14px;">Pat Fallon</span></div>
+<div><span style=3D"font-size: 14px;">Member of Congress</span></div>
+<div><span style=3D"font-size: 14px;">Fourth District of Texas</span></div>
+</div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+<td class=3D" editor-col OneColumnMobile" width=3D"100%" align=3D"" valign=
+=3D"top">
+<div class=3D"gl-contains-divider">
+<table class=3D"editor-divider" width=3D"100%" cellpadding=3D"0" cellspacin=
+g=3D"0" border=3D"0" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+<td class=3D"" align=3D"center" valign=3D"top">
+<table width=3D"100%" class=3D"galileo-ap-content-editor" style=3D"cursor: =
+default; min-width: 100%;">
+<tbody>
+<tr>
+<td class=3D"divider-base divider-solid" width=3D"100%" align=3D"center" va=
+lign=3D"top" style=3D"padding: 9px 0px;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" st=
+yle=3D"width: 93%; min-width: 93%; height: 1px;">
+<tbody>
+<tr>
+<td height=3D"1" align=3D"center" style=3D"padding-bottom: 0px; border-bott=
+om-style: none; height: 1px; line-height: 1px; background-color: #869198;" =
+bgcolor=3D"#869198">
+<div><img alt=3D"" width=3D"5" height=3D"1" border=3D"0" hspace=3D"0" vspac=
+e=3D"0" src=3D"https://imgssl.constantcontact.com/letters/images/1101116784=
+221/S.gif" style=3D"display: block; height: 1px; width: 5px;"></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+<td class=3D" editor-col OneColumnMobile" width=3D"100%" align=3D"" valign=
+=3D"top">
+<div class=3D"gl-contains-image">
+<table class=3D"editor-image editor-image" style=3D"min-width: 100%;" width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"padding-top: 0px; padding-bott=
+om: 0px;">
+<div class=3D"publish-container">  <img alt=3D"" class=3D"" style=3D"displa=
+y: block; height: auto !important; max-width: 100% !important;" width=3D"60=
+0" border=3D"0" hspace=3D"0" vspace=3D"0" src=3D"https://files.constantcont=
+act.com/519153c4801/7f5bd4df-9b59-47dd-a9ad-53cf68a2666c.jpg">
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<table class=3D"footer-container" width=3D"100%" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0" style=3D"background: #ffffff; margin-left: auto; mar=
+gin-right: auto; table-layout: auto !important" bgcolor=3D"#ffffff">
+  <tr>
+    <td width=3D"100%" align=3D"center" valign=3D"top" style=3D"width: 100%=
+;">
+      <div class=3D"footer-max-main-width" align=3D"center" style=3D"margin=
+-left: auto; margin-right: auto; max-width: 100%;">
+        <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D=
+"0">
+          <tr>
+            <td class=3D"footer-layout" align=3D"center" valign=3D"top" sty=
+le=3D"padding: 16px 0px;">
+              <table class=3D"footer-main-width" style=3D"width: 580px;" bo=
+rder=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                <tr>
+                  <td class=3D"footer-text" align=3D"center" valign=3D"top"=
+ style=3D"color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size=
+: 12px; padding: 4px 0px;">
+                   =20
+                    <span class=3D"footer-column">Office of Congressman Pat=
+ Fallon<span class=3D"footer-mobile-hidden"> | </span></span><span class=3D=
+"footer-column">1118 Longworth HOB<span class=3D"footer-mobile-hidden">, </=
+span></span><span class=3D"footer-column"></span><span class=3D"footer-colu=
+mn"></span><span class=3D"footer-column">Washington, DC 20515</span><span c=
+lass=3D"footer-column"></span>
+                   =20
+                  </td>
+                </tr>
+                <tr>
+                  <td class=3D"footer-row" align=3D"center" valign=3D"top" =
+style=3D"padding: 10px 0px;">
+                    <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0"=
+>
+                      <tr>
+                        <td class=3D"footer-text" align=3D"center" valign=
+=3D"top" style=3D"color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; f=
+ont-size: 12px; padding: 4px 0px;">
+                          <a href=3D"#" style=3D"color: #5d5d5d">Unsubscrib=
+e {recipient's email}</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class=3D"footer-text" align=3D"center" valign=
+=3D"top" style=3D"color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; f=
+ont-size: 12px; padding: 4px 0px;">
+                          <a href=3D"#" style=3D"color: #5d5d5d">Update Pro=
+file</a> |
+                         =20
+                          <a class=3D"footer-about-provider" href=3D"https:=
+//urldefense.com/v3/__https://www.constantcontact.com/legal/customer-contac=
+t-data-notice__;!!Bg5easoyC-OII2vlEqY8mTBrtW-N4OJKAQ!c5Qa_hA7oB5FQqp7BpJ9W1=
+Lpxqv5B6AwNQ61yhnNRn36AnI5il_Yj9nFF4DrNZI9ZadXQY76$" style=3D"color: #5d5d5=
+d">Constant Contact Data Notice</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class=3D"footer-text" align=3D"center" valign=
+=3D"top" style=3D"color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; f=
+ont-size: 12px; padding: 4px 0px;">
+                          Sent by
+                         =20
+                          <a href=3D"mailto:repfallon@mail8.housecommunicat=
+ions.gov" style=3D"color: #5d5d5d; text-decoration: none">repfallon@mail8.h=
+ousecommunications.gov</a>
+                         =20
+
+                         =20
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td class=3D"footer-text" align=3D"center" valign=3D"top"=
+ style=3D"color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size=
+: 12px; padding: 4px 0px;">
+                   =20
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+  </tr>
+</table><div align=3D"center" style=3D"background-color: #F3F3F3;"><table w=
+idth=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"bac=
+kground-color: #f3f3f3"><tr><td align=3D"center" valign=3D"top" style=3D"pa=
+dding: 0px 0px 0px 0px;"><div align=3D"center" style=3D"max-width: 600px; m=
+argin-left: auto; margin-right: auto;"><table cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" style=3D"width: 600px; width: auto !important; margin-l=
+eft: auto; margin-right: auto;"><tr><td align=3D"left" valign=3D"top" style=
+=3D"color: #5b5b5b; font-size: 11px; line-height: 1.3; font-family: Arial, =
+Helvetica, sans-serif; padding: 20px 20px 20px 20px;"><div style=3D"color: =
+#FF0000; font-size: 11px; line-height: 1.3; font-family: Arial, Helvetica, =
+sans-serif;"><span style=3D"font-size: 13px; font-weight: bold;">THIS IS A =
+TEST EMAIL ONLY.</span><br>This email was sent by the author for the sole p=
+urpose of testing a draft message. If you believe you have received the mes=
+sage in error, please contact the author by replying to this message. Const=
+ant Contact takes reports of abuse very seriously. If you wish to report ab=
+use, please forward this message to <a href=3D"mailto:abuse@constantcontact=
+.com">abuse@constantcontact.com</a>.<br></div></td></tr></table></div></td>=
+</tr></table></div></body>
+</html>
+
+------=_Part_631258227_605440306.1655295117508--

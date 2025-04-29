@@ -1,0 +1,2053 @@
+Received: from CO6PR09MB8277.namprd09.prod.outlook.com (2603:10b6:303:d0::18)
+ by MN2PR09MB4843.namprd09.prod.outlook.com with HTTPS; Fri, 18 Mar 2022
+ 19:27:48 +0000
+Received: from MWHPR09CA0048.namprd09.prod.outlook.com (2603:10b6:300:6d::34)
+ by CO6PR09MB8277.namprd09.prod.outlook.com (2603:10b6:303:d0::18) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.5081.15; Fri, 18 Mar
+ 2022 19:27:46 +0000
+Received: from BL0GCC02FT033.eop-gcc02.prod.protection.outlook.com
+ (2a01:111:f400:7d05::206) by MWHPR09CA0048.outlook.office365.com
+ (2603:10b6:300:6d::34) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.5081.13 via Frontend
+ Transport; Fri, 18 Mar 2022 19:27:46 +0000
+Authentication-Results: spf=softfail (sender IP is 143.228.151.110)
+ smtp.mailfrom=in.constantcontact.com; dkim=fail (body hash did not verify)
+ header.d=mail8.housecommunications.gov;dmarc=fail action=none
+ header.from=mail8.housecommunications.gov;
+Received-SPF: SoftFail (protection.outlook.com: domain of transitioning
+ in.constantcontact.com discourages use of 143.228.151.110 as permitted
+ sender)
+Received: from owa.house.gov (143.228.151.110) by
+ BL0GCC02FT033.mail.protection.outlook.com (10.97.10.165) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.5081.14 via Frontend Transport; Fri, 18 Mar 2022 19:27:46 +0000
+Received: from EXCH1913.US.House.gov (143.228.151.112) by
+ EXCH1911.US.House.gov (143.228.151.110) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.2.986.22; Fri, 18 Mar 2022 15:27:39 -0400
+Received: from serg-hub2-h.house.gov (143.228.181.76) by EXCH1913.US.House.gov
+ (143.228.151.112) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.986.22 via Frontend
+ Transport; Fri, 18 Mar 2022 15:27:39 -0400
+Authentication-Results-Original: house.gov;	spf=pass
+ smtp.mailfrom=AK57StjKCSU699ULu9aAmlQ==_1135149914389_IOXhGGsaEeKCQojkYIhwmw==@in.constantcontact.com;
+	dkim=pass header.d=mail8.housecommunications.gov header.s=2020243529;
+	dkim=pass header.d=auth.ccsend.com header.s=1000073432;	dmarc=pass
+ header.from=mail8.housecommunications.gov
+Received: from ccm37.constantcontact.com (ccm37.constantcontact.com [208.75.123.250])
+	by serg-hub2-h.house.gov (8.16.1.2/8.16.1.2) with ESMTPS id 22IJRcwZ000349
+	(version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO)
+	for <hannah.spurr@mail.house.gov>; Fri, 18 Mar 2022 15:27:38 -0400
+Received: from [10.252.0.1] ([10.252.0.1:32788] helo=p2-jbemailsyndicator30.ctct.net)
+	by 10.249.237.19 (envelope-from <AK57StjKCSU699ULu9aAmlQ==_1135149914389_IOXhGGsaEeKCQojkYIhwmw==@in.constantcontact.com>)
+	(ecelerity 4.3.1.999 r(:)) with ESMTP
+	id D2/03-01833-A2DD4326; Fri, 18 Mar 2022 15:27:38 -0400
+DKIM-Signature: v=1; q=dns/txt; a=rsa-sha256; c=relaxed/relaxed; s=2020243529; d=mail8.housecommunications.gov; h=date:mime-version:subject:X-Feedback-ID:X-250ok-CID:message-id:from:reply-to:list-unsubscribe:list-unsubscribe-post:to; bh=mUraE4l8l6S5G46L/cT8vNerkNGg9+we25O7tbviZ8U=; b=pGYNxcuOuaglMUzGjUjQhZEn3EhXebNJZTNLBRz6Y+qEORjEkf2RIV4PUhET+iEh3FlcWEgQJ6xj7VC7ZZaMJs7vGWol7KzkJlxECAsHUyCsU6cGfKxO2lDoqHkyj6H3ZMbVNq6Svc5vcT6UaomEMdScpf1tiChN8UYT3PFSTM0=
+DKIM-Signature: v=1; q=dns/txt; a=rsa-sha256; c=relaxed/relaxed; s=1000073432; d=auth.ccsend.com; h=date:mime-version:subject:X-Feedback-ID:X-250ok-CID:message-id:from:reply-to:list-unsubscribe:list-unsubscribe-post:to; bh=mUraE4l8l6S5G46L/cT8vNerkNGg9+we25O7tbviZ8U=; b=U2goRWqP8r7vkY2lhqTIzhVTtMv552P0j6R9pLUO79p01rdY6OCtMgYWzfXhyWEFstInF+PhP7NUgO12WfGvlohl0XO3O8kXpt3+j4oyXqxbTELTyNl3M2tHENXKw7mFN11/GdEWvuVgTwIVI/QtIU1uTvJR/UvAK40IN6OcG/M=
+Message-ID: <1138655396312.1135149914389.-1.0.611527JL.1001@scheduler.constantcontact.com>
+Date: Fri, 18 Mar 2022 15:27:38 -0400 (EDT)
+From: "Rep. Fallon" <repfallon@mail8.housecommunications.gov>
+Reply-To: repfallon@mail8.housecommunications.gov
+To: hannah.spurr@mail.house.gov
+Subject: Texas 04 Updates
+Content-Type: multipart/alternative;
+	boundary="----=_Part_1390686300_1600595279.1647631658457"
+List-Unsubscribe: <https://visitor.constantcontact.com/do?p=un&m=00141ExnhSySs_ZKgpk4nK6Wg%3D%3D&se=001TAeZDpsMR68%3D&t=001EkZLEx15CcE%3D&llr=vigkdgbbb>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-Campaign-Activity-ID: 2b9ed2b6-3282-494e-bdf5-42eef5a02695
+X-250ok-CID: 2b9ed2b6-3282-494e-bdf5-42eef5a02695
+X-Channel-ID: 20e5e118-6b1a-11e2-8242-88e46088709b
+X-Mailer: Roving Constant Contact 2012 (http://www.constantcontact.com)
+X-Return-Path-Hint: AK57StjKCSU699ULu9aAmlQ==_1135149914389_IOXhGGsaEeKCQojkYIhwmw==@in.constantcontact.com
+X-Roving-Campaignid: 1138655396312
+X-Roving-Id: 1135149914389.-1
+X-Feedback-ID: 20e5e118-6b1a-11e2-8242-88e46088709b:2b9ed2b6-3282-494e-bdf5-42eef5a02695:1135149914389:CTCT
+X-CTCT-ID: 20e5e118-6b1a-11e2-8242-88e46088709b
+X-Proofpoint-GUID: FjpUF0igkthIZ0dmAdmGvXX1iXflUMq1
+X-Proofpoint-ORIG-GUID: FjpUF0igkthIZ0dmAdmGvXX1iXflUMq1
+X-Proofpoint-HIR-SPF: spf_passed
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:6.0.425,18.0.850
+ definitions=2022-03-18_11:2022-03-15,2022-03-18 signatures=0
+X-Proofpoint-HIR-DMARC: Pass
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 suspectscore=0 malwarescore=0
+ bulkscore=100 mlxscore=0 spamscore=0 phishscore=0 mlxlogscore=999
+ adultscore=0 classifier=spam adjust=0 reason=mlx scancount=1
+ engine=8.12.0-2202240000 definitions=main-2203180101
+Return-Path:
+ AK57StjKCSU699ULu9aAmlQ==_1135149914389_IOXhGGsaEeKCQojkYIhwmw==@in.constantcontact.com
+X-OrganizationHeadersPreserved: EXCH1911.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 18 Mar 2022 19:27:46.4845
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 22a894bf-2f2f-4623-5625-08da091561b9
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1913.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted:
+ BL0GCC02FT033.eop-gcc02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ BL0GCC02FT033.eop-gcc02.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: 22a894bf-2f2f-4623-5625-08da091561b9
+X-MS-TrafficTypeDiagnostic: CO6PR09MB8277:EE_
+X-MS-Exchange-Organization-SCL: -1
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:143.228.151.110;CTRY:US;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SKI;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:;DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 18 Mar 2022 19:27:46.4689
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 22a894bf-2f2f-4623-5625-08da091561b9
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.151.110];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1913.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CO6PR09MB8277
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.7130409
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.5081.017
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506458)(944626604)(920097)(425001)(930097);
+X-Microsoft-Antispam-Message-Info:
+	WGdq2T4Q0gSMR6+3w/Fu/rK4UaK1ibG3VwBTLR5Z6pdme38avbhe7dWisMgdj5DBb5EUsoH/Mbpn7x8wFM3IQJkUasMsUNczlaZFqLYIrUIb0YtY7+3Ic/zptRExp1sUOP8Wbf4hfJBFdyqP8/b0TP0wOFAhVUIlgUbfCEyU3AqL3uXWmFjZsiMwdXdauj9qKnLox0MWKiUvFYL4kXp0IeDXPW2QO9SiDJkQzfaxkOfA0Sk8RZCi745enEkS+lbsxY3lVOHiYnLcl965OoLOW3GSp/wwjsMo6/iCphComDED2ToDzDQ/vpc0t/u3Iy9AHGZkFMlGRcbGSufOqUtTNZNPji74hGnZSpy6QkSQrYyynucqdNEMfr553zhIyRPbf7fzYncxEM6LQqv2oQEJXWEGSmMEcG9DQGs9Wjy7gz+Py7zdDltCKS7TwUNTmNSsYTlBHexAijm3L7EI9NdV+QT8Q85O7cwcuhlx1mMk4A3yktWxXvkHTKJFMtg3CCqiNuXEQIgApSGJoq6WmNUziA2+8K14bFuVkscaeT3+8cvpO4j6nnxXwrFlCZNZG7l3/JDietd8CYFNp+BfXuv0JReB9Rv7rpPIF3zSBVSleqck4qaFibyKtaMPLKfnegC6buBhtEmvm2wArJN4X+THv/CNMRnuNjme1Y/s6Jzi1Kc=
+MIME-Version: 1.0
+
+------=_Part_1390686300_1600595279.1647631658457
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+You don't want to miss this. Dear Alexander, We've had another great few we=
+eks serving our constituent bosses in Washington D.C. We sent a letter to P=
+resident Biden about his energy policies, voted on the House floor, partici=
+pated in committee hearings, managed debate on the House floor, and so much=
+ more. If you have any questions, or need help with a federal agency, pleas=
+e don't hesitate to contact one of YOUR offices both in district or in Wash=
+ington. Is Joe Biden fully responsible for skyrocketing energy costs? Yes S=
+elect No Select America's Energy Crisis As members of Congress, our number =
+one responsibility is to take care of our constituents =E2=80=93 and right =
+now, this Administration's policies are doing just the opposite. Hardworkin=
+g Americans are being financially bled dry by the policy decisions being ma=
+de by Mr. Biden =E2=80=93 specifically on energy. In Texas, as you've proba=
+bly noticed, gas prices have sky rocketed, rising over $.80 in just one wee=
+k. The record for the highest state-wide average price for gas was broken f=
+or the first time since 2008 and Tuesday's record has been broken everyday =
+since then. Texas' average today is $4.01. Upon taking office, President Bi=
+den signed a slew of executive orders demanding the Secretary of the Interi=
+or, Deb Haaland, to halt any new oil and natural gas leases on public lands=
+ and waters. Actions such of this have caused energy prices to skyrocket. W=
+hile the leasing Executive Orders have been blocked by the courts, the Bide=
+n Administration continued their policy of halting new drilling leases. Alm=
+ost synonymously, this Administration revoked the Keystone XL Pipeline=E2=
+=80=99s cross-border permit. The same permit this President revoked, would =
+have transported over 800,000 barrels of crude oil daily =E2=80=93 signific=
+antly increasing our supply.  The President's policies are increasing the c=
+ost of oil by canceling established leases, stalling new ones, and proposin=
+g sky-high taxes. He should be pursuing energy independence by reducing our=
+ imports and finding efficient ways to produce natural gas and oil at home.=
+   The Biden administration's energy policies is crippling our economy and =
+our desire to be an energy independent country. It's time to stop forcing A=
+merican oil companies to comply with liberal green initiatives and instead =
+to put the consumer first, lower oil and natural gas prices, and unleash Am=
+erica=E2=80=99s true energy potential. For Texas and Liberty, Pat Fallon In=
+ Case You Missed It: American Energy Independence The Biden Administration =
+should release the full power of American energy independence. TWEET: Ameri=
+can Energy Independence Head over to our Youtube to watch more! Passport In=
+formation Planning to Travel? Apply early! Apply at least least 4-6 months =
+before planned travel. Due to limited availability for urgent travel appoin=
+tments, the US Department of State cannot guarantee you can receive in-pers=
+on service at a passport agency or center. Visit their website for more on =
+passports. USNA Summer Programs The United States Naval Academy has opened =
+applications for their Summer Seminar and Summer STEM programs. For more in=
+formation, visit their website. Fannin County Courthouse Rededication Cerem=
+ony Last week, our staff was able to participate in the celebration for the=
+ rededication of the Fannin County Courthouse! Walter Hunter EOR/Flag Our o=
+ffice had the privilege of presenting Mr. Walter E. Hunter with a United St=
+ates Flag and an Extension of Remarks for his 100th birthday. Mr. Hunter de=
+dicated his life to his country through his service in the battles of Guada=
+lcanal, Bougainville, Green Island, and Iwo Jima. HEAT Energy Letter to Pre=
+sident Biden This week, Congressman Pat Fallon signed onto the HEAT caucus'=
+ letter to President Biden concerning his outrageous energy policy decision=
+s. Click here to read the letter. Managing the House Floor This week, Congr=
+essman Pat Fallon had the privilege of managing the House Floor for H. Res.=
+ 881 "Condemning the Heinous Terrorist Attack on Congregation Beth Israel i=
+n Colleyville, Texas, on January 15, 2022." Rep Fallon Joins Rep Cammack fo=
+r Facebook Live Event Rep. Pat Fallon (TX-04) and Rep. Kat Cammack (FL-03) =
+came together to discuss sky high gas prices and American energy. Check out=
+ their Facebook Live. Office of Congressman Pat Fallon | 1118 Longworth HOB=
+, Washington, DC 20515 Unsubscribe {recipient's email} Update Profile | Con=
+stant Contact Data Notice Sent by repfallon@mail8.housecommunications.gov
+------=_Part_1390686300_1600595279.1647631658457
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: Quoted-printable
+
+<!DOCTYPE html><html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+<meta content=3D"width=3Ddevice-width, initial-scale=3D1.0" name=3D"viewpor=
+t">
+
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1,=
+ maximum-scale=3D1">
+<!--[if gte mso 9]>
+<style id=3D"ol-styles">
+/* OUTLOOK-SPECIFIC STYLES */
+li {
+text-indent: -1em;
+padding: 0;
+margin: 0;
+line-height: 1.2;
+}
+ul, ol {
+padding: 0;
+margin: 0 0 0 40px;
+}
+p {
+margin: 0;
+padding: 0;
+margin-bottom: 0;
+}
+sup {
+font-size: 85% !important;
+}
+sub {
+font-size: 85% !important;
+}
+</style>
+<![endif]-->
+<style id=3D"template-styles-head" data-premailer=3D"ignore">
+.footer-main-width {
+width: 612px!important;
+max-width: 612px;
+}
+table {
+border-collapse: collapse;
+table-layout: fixed;
+}
+.bgimage {
+table-layout: auto;
+}
+.preheader-container {
+color: transparent;
+display: none;
+font-size: 1px;
+line-height: 1px;
+max-height: 0px;
+max-width: 0px;
+opacity: 0;
+overflow: hidden;
+}
+/* LIST AND p STYLE OVERRIDES */
+.editor-text p {
+margin: 0;
+padding: 0;
+margin-bottom: 0;
+}
+.editor-text ul,
+.editor-text ol {
+padding: 0;
+margin: 0 0 0 40px;
+}
+.editor-text li {
+padding: 0;
+margin: 0;
+line-height: 1.2;
+}
+/* =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D
+CLIENT/BROWSER SPECIFIC OVERRIDES
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+ */
+/* IE: correctly scale images with w/h attbs */
+img {
+-ms-interpolation-mode: bicubic;
+}
+/* Text Link Style Reset */
+a {
+text-decoration: underline;
+}
+/* iOS: Autolink styles inherited */
+a[x-apple-data-detectors] {
+text-decoration: underline !important;
+font-size: inherit !important;
+font-family: inherit !important;
+font-weight: inherit !important;
+line-height: inherit !important;
+color: inherit !important;
+}
+/* FF/Chrome: Smooth font rendering */
+.editor-text, .MainTextFullWidth {
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+/* Gmail/Web viewport fix */
+u + .body .template-body {
+width: 612px;
+}
+@media only screen and (max-width:480px) {
+u + .body .template-body {
+width: 100% !important;
+}
+}
+/* Office365/Outlook.com image reset */
+[office365] button, [office365] .divider-base div, [office365] .spacer-base=
+ div, [office365] .editor-image div { display: block !important; }
+</style>
+<style>@media only screen and (max-width:480px) {
+table {
+border-collapse: collapse;
+}
+.main-width {
+width: 100% !important;
+}
+.mobile-hidden {
+display: none !important;
+}
+td.OneColumnMobile {
+display: block !important;
+}
+.OneColumnMobile {
+width: 100% !important;
+}
+td.editor-col .editor-text {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .editor-image.editor-image-hspace-on td {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .editor-button-container {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .editor-social td {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .block-margin {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col td.block-margin .editor-text {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.editor-col td.block-margin .editor-image.editor-image-hspace-on td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.editor-col td.block-margin .editor-button-container {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.editor-col td.block-margin .editor-social td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+.editor-button td > table tr > td {
+padding: 0px 0px 0px 0px !important;
+}
+.editor-button td > table tr > td td {
+padding: 9px 15px 10px 15px !important;
+}
+.layout {
+padding: 15px 9px 15px 9px !important;
+}
+.layout-container-border {
+padding: 1px 1px 1px 1px !important;
+}
+.layout-container {
+padding: 0px 0px 0px 0px !important;
+}
+.editor-image img {
+width: auto !important; margin-left: auto !important; margin-right: auto !i=
+mportant;
+}
+.editor-image .image-cell {
+padding-bottom: 15px !important;
+}
+.editor-text {
+font-size: 16px !important;
+}
+.editor-divider {
+padding: 10px 0px 10px 0px !important;
+}
+.social-container {
+text-align: center !important;
+}
+.social-text {
+font-size: 14px !important;
+}
+.editor-spacer td.spacer-height {
+padding-bottom: 9px !important;
+}
+.section-headline-text {
+font-size: 24px !important;
+}
+.headline-text {
+font-size: 24px !important;
+}
+.subheadline-text {
+font-size: 20px !important;
+}
+.feature {
+padding-top: 0px !important; padding-bottom: 0px !important;
+}
+.layout-outer {
+padding: 0px 20px !important;
+}
+.feature-heading-text {
+font-size: 20px !important;
+}
+.feature-text {
+font-size: 16px !important;
+}
+.split.editor-col {
+margin-top: 0px !important;
+}
+.split.editor-col ~ .split.editor-col {
+margin-top: 10px !important;
+}
+.split-layout-margin {
+padding: 0px 20px !important;
+}
+.article {
+padding-top: 0px !important; padding-bottom: 0px !important;
+}
+.article-heading-text {
+font-size: 20px !important;
+}
+.article-text {
+font-size: 16px !important;
+}
+.social-container {
+text-align: center !important;
+}
+.social-text {
+font-size: 14px !important;
+}
+.cpn-heading-text {
+font-size: 28px !important;
+}
+.editor-cpn-heading-text {
+font-size: 28px !important;
+}
+td.col-divided .editor-col {
+border-right: 0px solid #869198 !important; border-bottom: 1px solid #86919=
+8 !important;
+}
+td.col-divided td.editor-col:last-of-type {
+border-bottom: 0 !important;
+}
+.col-divided {
+padding: 0 20px !important;
+}
+td.col-divided .editor-col .editor-text {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .editor-image.editor-image-hspace-on td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .editor-button-container {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .editor-social td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .block-margin {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+.action-block .poll-answer {
+width: 100% !important; display: block !important;
+}
+.action-block .poll-button {
+width: 100% !important;
+}
+div.MobileFooter {
+font-size: 11px !important;
+}
+td.FooterMobile {
+padding: 0px 10px 0px 10px !important;
+}
+td.MainCenter {
+width: 100% !important;
+}
+table.MainSide {
+display: none !important;
+}
+img.MainSide {
+display: none !important;
+}
+td.MainSide {
+display: none !important;
+}
+.rsvp-button-inner {
+padding: 0px 0px 10px 0px !important;
+}
+.rsvp-button-outer {
+width: 100% !important; max-width: 100% !important;
+}
+.footer-main-width {
+width: 100% !important;
+}
+.footer-mobile-hidden {
+display: none !important;
+}
+.footer-mobile-hidden {
+display: none !important;
+}
+.footer-column {
+display: block !important;
+}
+.footer-mobile-stack {
+display: block !important;
+}
+.footer-mobile-stack-padding {
+padding-top: 3px;
+}
+}
+@media only screen and (max-width:320px) {
+.layout {
+padding: 0px 0px 0px 0px !important;
+}
+}
+@media screen {
+@font-face {
+font-family: 'Open Sans'; font-style: normal; font-weight: 400; src: local(=
+'Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.=
+com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2) format('woff2'); u=
+nicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2=
+000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+}
+</style>
+</head>
+<body class=3D"body" align=3D"center" style=3D"width: 100%; min-width: 100%=
+; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; background-co=
+lor: #e6e6e6; margin: 0px; padding: 0px;" bgcolor=3D"#e6e6e6">
+<table class=3D"template-body" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"text-align: center; min-width: 100%;" width=3D"100%">
+<tr>
+<td class=3D"preheader-container">
+<div>
+<div id=3D"preheader" style=3D"display: none; font-size: 1px; color: transp=
+arent; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overf=
+low: hidden;">
+<span data-entity-ref=3D"preheader">You don't want to miss this.</span>
+</div>
+
+</div>
+</td>
+</tr>
+<tr>
+<td class=3D"template-shell-container" align=3D"center">
+<div class=3D"bgcolor" style=3D"background-color: #e6e6e6;">
+<table class=3D"bgimage" width=3D"100%" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" style=3D"background-color: #e6e6e6;" bgcolor=3D"#e6e6e6">
+<tbody>
+<tr>
+<td align=3D"center">
+<table class=3D"main-width" width=3D"612" align=3D"center" border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" style=3D"width: 612px;">
+<tbody>
+<tr>
+<td class=3D"layout" align=3D"center" valign=3D"top" style=3D"padding: 15px=
+ 5px;">
+<table width=3D"100%" align=3D"center" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0">
+<tbody>
+<tr>
+<td class=3D"layout-container-border" align=3D"center" valign=3D"top" style=
+=3D"background-color: #869198; padding: 1px;" bgcolor=3D"#869198">
+<table width=3D"100%" align=3D"center" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"background-color: #869198;" bgcolor=3D"#869198">
+<tbody>
+<tr>
+<td class=3D"layout-container" align=3D"center" valign=3D"top" style=3D"bac=
+kground-color: #ffffff; padding: 0px;" bgcolor=3D"#ffffff">
+<div class=3D"">
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+<td class=3D"editor-logo editor-col OneColumnMobile" width=3D"100%" align=
+=3D"left" valign=3D"top">
+<div class=3D"gl-contains-image">
+<table class=3D"editor-image logo-container" style=3D"min-width: 100%;" wid=
+th=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"padding-top: 0px; padding-bott=
+om: 0px;">
+<div class=3D"publish-container">  <img alt=3D"" class=3D"" style=3D"displa=
+y: block; height: auto; max-width: 100%;" width=3D"600" border=3D"0" hspace=
+=3D"0" vspace=3D"0" src=3D"https://files.constantcontact.com/519153c4801/25=
+c96069-5b84-47d0-8e47-52f262090daf.png">
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+<td class=3D" editor-col OneColumnMobile" width=3D"100%" align=3D"" valign=
+=3D"top">
+<div class=3D"gl-contains-text">
+<table width=3D"100%" style=3D"min-width: 100%;" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td class=3D"editor-text editor-text " align=3D"left" valign=3D"top" style=
+=3D"font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 12px; co=
+lor: #403F42; text-align: left; display: block; word-wrap: break-word; line=
+-height: 1.2; padding: 10px 20px;">
+<div></div>
+<div class=3D"text-container galileo-ap-content-editor"><div>
+<div><span style=3D"font-size: 14px; font-family: Arial, Verdana, Helvetica=
+, sans-serif;"><span class=3D"greeting-tag">Dear Alexander,</span></span></=
+div>
+<div><br></div>
+<div>
+<span style=3D"font-size: 14px;">We've had another great few weeks serving =
+our constituent bosses in Washington D.C. We sent a </span><a href=3D"https=
+://urldefense.com/v3/__https://www.republicanwhip.gov/wp-content/uploads/20=
+22/03/Biden-American-Energy-Letter.pdf__;!!Bg5easoyC-OII2vlEqY8mTBrtW-N4OJK=
+AQ!f7WRpw1SIp0qJh2OTDCb6INYsxqHnjJol4g4Ja6E4z_o6OVsAdIbIYrQY54ZYoK6jrlCzCvA=
+$" rel=3D"noopener noreferrer" target=3D"_blank" style=3D"font-size: 14px; =
+color: #48a199; font-weight: normal; font-style: normal; text-decoration: u=
+nderline;">letter</a><span style=3D"font-size: 14px;"> to President Biden a=
+bout his energy policies, voted on the House floor, participated in committ=
+ee hearings, managed debate on the House floor, and so much more.</span>
+</div>
+<div><br></div>
+<div>
+<span style=3D"font-size: 14px;">If you have any questions, or need help wi=
+th a federal agency, please don't hesitate to contact one of </span><span s=
+tyle=3D"font-size: 14px; font-weight: bold;">YOUR </span><span style=3D"fon=
+t-size: 14px;">offices both in district or in Washington.</span>
+</div>
+</div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+<td class=3D" editor-col OneColumnMobile" width=3D"100%" align=3D"" valign=
+=3D"top">
+<div class=3D"gl-contains-divider">
+<table class=3D"editor-divider" width=3D"100%" cellpadding=3D"0" cellspacin=
+g=3D"0" border=3D"0" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+<td class=3D"" align=3D"center" valign=3D"top">
+<table width=3D"100%" class=3D"galileo-ap-content-editor" style=3D"cursor: =
+default; min-width: 100%;">
+<tbody>
+<tr>
+<td class=3D"divider-base divider-solid" width=3D"100%" align=3D"center" va=
+lign=3D"top" style=3D"padding: 9px 0px;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" st=
+yle=3D"width: 93%; min-width: 93%; height: 1px;">
+<tbody>
+<tr>
+<td height=3D"1" align=3D"center" style=3D"padding-bottom: 0px; border-bott=
+om-style: none; height: 1px; line-height: 1px; background-color: #869198;" =
+bgcolor=3D"#869198">
+<div><img alt=3D"" width=3D"5" height=3D"1" border=3D"0" hspace=3D"0" vspac=
+e=3D"0" src=3D"https://imgssl.constantcontact.com/letters/images/1101116784=
+221/S.gif" style=3D"display: block; height: 1px; width: 5px;"></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+<td class=3D" editor-col OneColumnMobile" width=3D"100%" align=3D"" valign=
+=3D"top">
+<div class=3D"gl-contains-action">
+<table class=3D"action-block" width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td class=3D"" align=3D"center" valign=3D"top">
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"galileo-ap-content-editor">
+<tbody>
+<tr>
+<td class=3D"block-margin" width=3D"100%" align=3D"left" valign=3D"top" sty=
+le=3D"padding-left: 20px; padding-right: 20px;">
+<table class=3D"poll-question" width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td class=3D"editor-text" align=3D"left" valign=3D"top" style=3D"font-famil=
+y: Arial, Verdana, Helvetica, sans-serif; font-size: 12px; color: #403F42; =
+text-align: left; display: block; word-wrap: break-word; line-height: 1.2; =
+padding: 10px 0px;">
+<div><span data-entity-ref=3D"POLL.ca-1622581072906.question_1_text">Is Joe=
+ Biden fully responsible for skyrocketing energy costs?</span></div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" valign=3D"top">
+<table class=3D"poll-answer" align=3D"left" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" style=3D"width: inherit; display: table-cell;">
+<tbody>
+<tr>
+<td class=3D"editor-text" align=3D"left" valign=3D"middle" style=3D"font-fa=
+mily: Arial, Verdana, Helvetica, sans-serif; font-size: 12px; color: #403F4=
+2; text-align: left; display: block; word-wrap: break-word; line-height: 1.=
+2; font-weight: bold; padding: 10px 0px;">
+<div><span data-entity-ref=3D"POLL.ca-1622581072906.question_1_choice_1_tex=
+t">Yes</span></div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class=3D"poll-button" align=3D"right" border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" style=3D"moz-border-radius: 5px; border-radius: 5px; bor=
+der-spacing: 0; background-color: #869198; width: 85px; border: none;" bgco=
+lor=3D"#869198">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"padding: 10px;">
+<div style=3D"font-family: Arial,Verdana,Helvetica,sans-serif; font-size: 1=
+4px; font-weight: bold; color: #FFFFFF; text-decoration: none;"><a href=3D"=
+https://urldefense.com/v3/__https://campaignlp.constantcontact.com/forms/re=
+sponse?id=3DPvaN7J6iEKS3LECOrjUXDQ2t9mHnmSeJVAqfq6GD_t3evzwAS0E4NlZ7qv1uvRO=
+tij_nWdIdN1mA-uHf74Khv0o4c_tJGX4B0TTZt3vWVp564XEpSz0wJywMrSodRuc6e2gcPsFB1n=
+4nLT7vGkjGy7oNaLhfWkPa1u-USsbHGHcA2zQAsBP6JEmlzH6wHJIjuzWk_BooTyXFYMefTsr-a=
+w&amp;encVer=3D1&amp;c=3D&amp;ch=3D&amp;mode=3Dpreview__;!!Bg5easoyC-OII2vl=
+EqY8mTBrtW-N4OJKAQ!f7WRpw1SIp0qJh2OTDCb6INYsxqHnjJol4g4Ja6E4z_o6OVsAdIbIYrQ=
+Y54ZYoK6jhgrSjPP$" style=3D"display: block; font-family: Arial,Verdana,Helv=
+etica,sans-serif; font-size: 14px; font-weight: bold; color: #FFFFFF; text-=
+decoration: none;">Select</a></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td class=3D"divider-base divider-dashed" width=3D"100%" align=3D"center" v=
+align=3D"top" style=3D"padding-top: 9px; padding-bottom: 9px;">
+<table style=3D"width: 100%; height: 1px; min-width: 93%; border-collapse: =
+separate;" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td height=3D"1" align=3D"center" style=3D"height: 1px; line-height: 1px; b=
+order-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: =
+#b0b6bb;">
+<div><img alt=3D"" width=3D"5" height=3D"1" border=3D"0" hspace=3D"0" vspac=
+e=3D"0" src=3D"https://imgssl.constantcontact.com/letters/images/1101116784=
+221/S.gif" style=3D"display: block; height: 1px; width: 5px;"></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" valign=3D"top">
+<table class=3D"poll-answer" align=3D"left" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" style=3D"width: inherit; display: table-cell;">
+<tbody>
+<tr>
+<td class=3D"editor-text" align=3D"left" valign=3D"middle" style=3D"font-fa=
+mily: Arial, Verdana, Helvetica, sans-serif; font-size: 12px; color: #403F4=
+2; text-align: left; display: block; word-wrap: break-word; line-height: 1.=
+2; font-weight: bold; padding: 10px 0px;">
+<div><span data-entity-ref=3D"POLL.ca-1622581072906.question_1_choice_2_tex=
+t">No</span></div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class=3D"poll-button" align=3D"right" border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" style=3D"moz-border-radius: 5px; border-radius: 5px; bor=
+der-spacing: 0; background-color: #869198; width: 85px; border: none;" bgco=
+lor=3D"#869198">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"padding: 10px;">
+<div style=3D"font-family: Arial,Verdana,Helvetica,sans-serif; font-size: 1=
+4px; font-weight: bold; color: #FFFFFF; text-decoration: none;"><a href=3D"=
+https://urldefense.com/v3/__https://campaignlp.constantcontact.com/forms/re=
+sponse?id=3DPvaN7J6iEKS3LECOrjUXDQ2t9mHnmSeJVAqfq6GD_t3evzwAS0E4NlZ7qv1uvRO=
+tij_nWdIdN1mA-uHf74Khv0o4c_tJGX4B0TTZt3vWVp564XEpSz0wJywMrSodRuc6e2gcPsFB1n=
+4nLT7vGkjGy7oNaLhfWkPa1u-USsbHGHcA2zQAsBP6JEmlzH6wHJIjuzWk_BooTyXXN6S9LkQxS=
+g&amp;encVer=3D1&amp;c=3D&amp;ch=3D&amp;mode=3Dpreview__;!!Bg5easoyC-OII2vl=
+EqY8mTBrtW-N4OJKAQ!f7WRpw1SIp0qJh2OTDCb6INYsxqHnjJol4g4Ja6E4z_o6OVsAdIbIYrQ=
+Y54ZYoK6jkk_dcC1$" style=3D"display: block; font-family: Arial,Verdana,Helv=
+etica,sans-serif; font-size: 14px; font-weight: bold; color: #FFFFFF; text-=
+decoration: none;">Select</a></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td class=3D"divider-base divider-dashed" width=3D"100%" align=3D"center" v=
+align=3D"top" style=3D"padding-top: 9px; padding-bottom: 9px;">
+<table style=3D"width: 100%; height: 1px; min-width: 93%; border-collapse: =
+separate;" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td height=3D"1" align=3D"center" style=3D"height: 1px; line-height: 1px; b=
+order-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: =
+#b0b6bb;">
+<div><img alt=3D"" width=3D"5" height=3D"1" border=3D"0" hspace=3D"0" vspac=
+e=3D"0" src=3D"https://imgssl.constantcontact.com/letters/images/1101116784=
+221/S.gif" style=3D"display: block; height: 1px; width: 5px;"></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+<td class=3D" editor-col OneColumnMobile" width=3D"100%" align=3D"" valign=
+=3D"top">
+<div class=3D"gl-contains-image">
+<table class=3D"editor-image editor-image" style=3D"min-width: 100%;" width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"padding-top: 0px; padding-bott=
+om: 0px;">
+<div class=3D"publish-container">  <img alt=3D"" class=3D"" style=3D"displa=
+y: block; height: auto !important; max-width: 100% !important;" width=3D"60=
+0" border=3D"0" hspace=3D"0" vspace=3D"0" src=3D"https://files.constantcont=
+act.com/519153c4801/06e6aab3-ace0-42a0-a850-652634bf6552.png">
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+<td class=3D"article editor-col OneColumnMobile" width=3D"100%" align=3D"le=
+ft" valign=3D"top">
+<div class=3D"gl-contains-text">
+<table width=3D"100%" style=3D"min-width: 100%;" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td class=3D"editor-text article-heading-text" align=3D"left" valign=3D"top=
+" style=3D"font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 1=
+6px; color: #717a80; text-align: left; display: block; word-wrap: break-wor=
+d; line-height: 1.2; font-weight: bold; padding: 10px 20px;">
+<div></div>
+<div class=3D"text-container galileo-ap-content-editor"><div><div>America's=
+ Energy Crisis</div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"gl-contains-text">
+<table width=3D"100%" style=3D"min-width: 100%;" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td class=3D"editor-text article-text" align=3D"left" valign=3D"top" style=
+=3D"font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 12px; co=
+lor: #403F42; text-align: left; display: block; word-wrap: break-word; line=
+-height: 1.2; padding: 10px 20px;">
+<div></div>
+<div class=3D"text-container galileo-ap-content-editor"><div>
+<div><span style=3D"font-size: 12px; color: rgb(64, 63, 66); font-family: A=
+rial, Verdana, Helvetica, sans-serif;">As members of Congress, our number o=
+ne responsibility is to take care of our constituents =E2=80=93 and right n=
+ow, this Administration's policies are doing just the opposite. Hardworking=
+ Americans are being financially bled dry by the policy decisions being mad=
+e by Mr. Biden =E2=80=93 specifically on energy. </span></div>
+<div><br></div>
+<div>
+<span style=3D"font-size: 12px; color: rgb(64, 63, 66); font-family: Arial,=
+ Verdana, Helvetica, sans-serif;">In Texas, as you've probably noticed, gas=
+ prices have sky rocketed, rising over $.80 in just one week. The record fo=
+r the highest state-wide average price for gas was broken for the first tim=
+e since 2008 and Tuesday's record has been broken everyday since then. </sp=
+an><a href=3D"https://urldefense.com/v3/__https://gasprices.aaa.com/?state=
+=3DTX__;!!Bg5easoyC-OII2vlEqY8mTBrtW-N4OJKAQ!f7WRpw1SIp0qJh2OTDCb6INYsxqHnj=
+Jol4g4Ja6E4z_o6OVsAdIbIYrQY54ZYoK6juXgOREt$" rel=3D"noopener noreferrer" ta=
+rget=3D"_blank" style=3D"font-size: 12px; color: rgb(72, 161, 153); font-fa=
+mily: Arial, Verdana, Helvetica, sans-serif; font-weight: normal; font-styl=
+e: normal; text-decoration: underline;">Texas' average today is $4.01</a><s=
+pan style=3D"font-size: 12px; color: rgb(64, 63, 66); font-family: Arial, V=
+erdana, Helvetica, sans-serif;">.</span>
+</div>
+<div><br></div>
+<div>
+<span style=3D"font-size: 12px; color: rgb(64, 63, 66); font-family: Arial,=
+ Verdana, Helvetica, sans-serif;">Upon taking office, President Biden signe=
+d a slew of executive orders demanding the Secretary of the Interior, Deb H=
+aaland, to halt any new oil and natural gas leases on public lands and wate=
+rs. Actions such of this have caused energy prices to skyrocket. While the =
+leasing Executive Orders have been blocked by the courts, the Biden Adminis=
+tration continued their policy of halting new drilling leases. Almost synon=
+ymously, this Administration revoked the Keystone XL Pipeline=E2=80=99s cro=
+ss-border permit. The same permit this President revoked, would have transp=
+orted over </span><a href=3D"https://urldefense.com/v3/__https://www.cbc.ca=
+/news/canada/keystone-xl-u-s-oil-supplies-pipeline-alberta-biden-1.5882313_=
+_;!!Bg5easoyC-OII2vlEqY8mTBrtW-N4OJKAQ!f7WRpw1SIp0qJh2OTDCb6INYsxqHnjJol4g4=
+Ja6E4z_o6OVsAdIbIYrQY54ZYoK6jvb9JFTa$" rel=3D"noopener noreferrer" target=
+=3D"_blank" style=3D"font-size: 12px; color: rgb(64, 63, 66); font-family: =
+Arial, Verdana, Helvetica, sans-serif; font-weight: normal; font-style: nor=
+mal; text-decoration: underline;">800,000</a><span style=3D"font-size: 12px=
+; color: rgb(64, 63, 66); font-family: Arial, Verdana, Helvetica, sans-seri=
+f;"> barrels of crude oil daily =E2=80=93 significantly increasing our supp=
+ly.&nbsp;</span>
+</div>
+<div><br></div>
+<div><span style=3D"font-size: 12px; color: rgb(64, 63, 66); font-family: A=
+rial, Verdana, Helvetica, sans-serif;">The President's policies are increas=
+ing the cost of oil by canceling established leases, stalling new ones, and=
+ proposing sky-high taxes. He should be pursuing energy independence by red=
+ucing our imports and finding efficient ways to produce natural gas and oil=
+ at home. </span></div>
+<div><span style=3D"font-size: 12px; color: rgb(64, 63, 66); font-family: A=
+rial, Verdana, Helvetica, sans-serif;">&nbsp;</span></div>
+<div><span style=3D"font-size: 12px; color: rgb(64, 63, 66); font-family: A=
+rial, Verdana, Helvetica, sans-serif;">The Biden administration's energy po=
+licies is crippling our economy and our desire to be an energy independent =
+country. It's time to stop forcing American oil companies to comply with li=
+beral green initiatives and instead to put the consumer first, lower oil an=
+d natural gas prices, and unleash America=E2=80=99s true energy potential.<=
+/span></div>
+<div><br></div>
+<div>For Texas and Liberty,</div>
+<div>Pat Fallon</div>
+</div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"gl-contains-image">
+<table class=3D"editor-image editor-image-hspace-on" style=3D"min-width: 10=
+0%;" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" valign=3D"top" style=3D"padding: 0px 20px;">
+<div class=3D"publish-container">  <img alt=3D"" class=3D"" style=3D"displa=
+y: block; height: auto !important; max-width: 100% !important;" width=3D"52=
+" border=3D"0" hspace=3D"0" vspace=3D"0" src=3D"https://files.constantconta=
+ct.com/519153c4801/76edce58-7fa3-4235-8384-3ca9f036bcb5.png">
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+<td class=3D" editor-col OneColumnMobile" width=3D"100%" align=3D"" valign=
+=3D"top">
+<div class=3D"gl-contains-spacer">
+<table class=3D"editor-spacer" width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td class=3D"" align=3D"center" valign=3D"top">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"spacer-base" width=3D"100%" align=3D"center" valign=3D"top" st=
+yle=3D"padding-bottom: 30px; height: 1px; line-height: 1px;">
+<div><img alt=3D"" width=3D"5" height=3D"1" border=3D"0" hspace=3D"0" vspac=
+e=3D"0" src=3D"https://imgssl.constantcontact.com/letters/images/1101116784=
+221/S.gif" style=3D"display: block; height: 1px; width: 5px;"></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+<td class=3D" editor-col OneColumnMobile" width=3D"100%" align=3D"" valign=
+=3D"top">
+<div class=3D"gl-contains-image">
+<table class=3D"editor-image editor-image" style=3D"min-width: 100%;" width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"padding-top: 0px; padding-bott=
+om: 0px;">
+<div class=3D"publish-container">  <img alt=3D"" class=3D"" style=3D"displa=
+y: block; height: auto !important; max-width: 100% !important;" width=3D"60=
+0" border=3D"0" hspace=3D"0" vspace=3D"0" src=3D"https://files.constantcont=
+act.com/519153c4801/24873500-97a5-4186-a917-5c5e1784050e.png">
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+<td class=3D"section-headline editor-col OneColumnMobile" width=3D"100%" al=
+ign=3D"left" valign=3D"top" style=3D"background-color: #717a80;" bgcolor=3D=
+"#717a80">
+<div class=3D"gl-contains-text">
+<table width=3D"100%" style=3D"min-width: 100%;" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td class=3D"editor-text section-headline-text" align=3D"left" valign=3D"to=
+p" style=3D"font-family: Arial, Verdana, Helvetica, sans-serif; font-size: =
+24px; color: #ffffff; text-align: center; display: block; word-wrap: break-=
+word; line-height: 1.2; font-weight: bold; padding: 10px 20px;">
+<div></div>
+<div class=3D"text-container galileo-ap-content-editor"><div><div>In Case Y=
+ou Missed It:</div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+<td class=3D"feature editor-col OneColumnMobile" width=3D"100%" align=3D"le=
+ft" valign=3D"top" style=3D"background-color: #d9d9d9;" bgcolor=3D"#d9d9d9"=
+>
+<div class=3D"gl-contains-text">
+<table width=3D"100%" style=3D"min-width: 100%;" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td class=3D"editor-text feature-heading-text" align=3D"left" valign=3D"top=
+" style=3D"font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 1=
+6px; color: #717a80; text-align: left; display: block; word-wrap: break-wor=
+d; line-height: 1.2; font-weight: bold; padding: 10px 20px;">
+<div></div>
+<div class=3D"text-container galileo-ap-content-editor"><div><div>American =
+Energy Independence</div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"gl-contains-text">
+<table width=3D"100%" style=3D"min-width: 100%;" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td class=3D"editor-text feature-text" align=3D"left" valign=3D"top" style=
+=3D"font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 12px; co=
+lor: #403F42; text-align: left; display: block; word-wrap: break-word; line=
+-height: 1.2; padding: 10px 20px;">
+<div></div>
+<div class=3D"text-container galileo-ap-content-editor"><div>
+<div>The Biden Administration should release the full power of American ene=
+rgy independence.</div>
+<div><br></div>
+<div>TWEET: <a href=3D"https://urldefense.com/v3/__https://twitter.com/RepP=
+atFallon/status/1501668744791220225?cxt=3DHHwWgoCz-Yzx_9YpAAAA__;!!Bg5easoy=
+C-OII2vlEqY8mTBrtW-N4OJKAQ!f7WRpw1SIp0qJh2OTDCb6INYsxqHnjJol4g4Ja6E4z_o6OVs=
+AdIbIYrQY54ZYoK6jv5eludd$" rel=3D"noopener noreferrer" target=3D"_blank" st=
+yle=3D"color: #48a199; font-weight: normal; font-style: normal; text-decora=
+tion: underline;">American Energy Independence </a>
+</div>
+</div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"gl-contains-image">
+<table class=3D"editor-image  editor-image-vspace-on" style=3D"min-width: 1=
+00%;" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"padding-top: 10px; padding-bot=
+tom: 10px;">
+<div class=3D"publish-container">
+<a href=3D"https://urldefense.com/v3/__https://twitter.com/RepPatFallon/sta=
+tus/1501668744791220225?cxt=3DHHwWgoCz-Yzx_9YpAAAA__;!!Bg5easoyC-OII2vlEqY8=
+mTBrtW-N4OJKAQ!f7WRpw1SIp0qJh2OTDCb6INYsxqHnjJol4g4Ja6E4z_o6OVsAdIbIYrQY54Z=
+YoK6jv5eludd$">
+<img alt=3D"" class=3D"" style=3D"display: block; height: auto !important; =
+max-width: 100% !important;" width=3D"423" border=3D"0" hspace=3D"0" vspace=
+=3D"0" src=3D"https://files.constantcontact.com/519153c4801/02709656-f4b3-4=
+f83-839e-1369491f2c96.png">
+</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+<td class=3D"feature editor-col OneColumnMobile" width=3D"100%" align=3D"le=
+ft" valign=3D"top" style=3D"background-color: #d9d9d9;" bgcolor=3D"#d9d9d9"=
+>
+<div class=3D"gl-contains-text">
+<table width=3D"100%" style=3D"min-width: 100%;" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td class=3D"editor-text feature-text" align=3D"left" valign=3D"top" style=
+=3D"font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 12px; co=
+lor: #403F42; text-align: left; display: block; word-wrap: break-word; line=
+-height: 1.2; padding: 10px 20px;">
+<div></div>
+<div class=3D"text-container galileo-ap-content-editor"><div><div style=3D"=
+text-align: center;" align=3D"center">Head over to our Youtube to watch mor=
+e!</div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+<td class=3D" editor-col OneColumnMobile" width=3D"100%" align=3D"" valign=
+=3D"top">
+<div class=3D"gl-contains-image">
+<table class=3D"editor-image editor-image" style=3D"min-width: 100%;" width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"padding-top: 0px; padding-bott=
+om: 0px;">
+<div class=3D"publish-container">
+<a href=3D"mailto:hannah.spurr@mail.house.gov">
+<img alt=3D"" class=3D"" style=3D"display: block; height: auto !important; =
+max-width: 100% !important;" width=3D"600" border=3D"0" hspace=3D"0" vspace=
+=3D"0" src=3D"https://files.constantcontact.com/519153c4801/39499f72-f8d7-4=
+7ce-97da-bc10e33f5008.jpg">
+</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+<td class=3D" editor-col OneColumnMobile" width=3D"100%" align=3D"" valign=
+=3D"top">
+<div class=3D"gl-contains-image">
+<table class=3D"editor-image editor-image" style=3D"min-width: 100%;" width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"padding-top: 0px; padding-bott=
+om: 0px;">
+<div class=3D"publish-container">  <img alt=3D"" class=3D"" style=3D"displa=
+y: block; height: auto !important; max-width: 100% !important;" width=3D"60=
+0" border=3D"0" hspace=3D"0" vspace=3D"0" src=3D"https://files.constantcont=
+act.com/519153c4801/c7eb6414-2004-4076-8cb4-1a333025c570.png">
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+<td class=3D"article editor-col OneColumnMobile" width=3D"50%" align=3D"lef=
+t" valign=3D"top">
+<div><div class=3D"column-resize-bar">
+<span class=3D"line"></span>
+<span class=3D"grabber"></span>
+</div></div>
+<div class=3D"gl-contains-text">
+<table width=3D"100%" style=3D"min-width: 100%;" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td class=3D"editor-text article-heading-text" align=3D"left" valign=3D"top=
+" style=3D"font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 1=
+6px; color: #717a80; text-align: left; display: block; word-wrap: break-wor=
+d; line-height: 1.2; font-weight: bold; padding: 10px 10px 10px 20px;">
+<div></div>
+<div class=3D"text-container galileo-ap-content-editor"><div><div>Passport =
+Information</div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"gl-contains-text">
+<table width=3D"100%" style=3D"min-width: 100%;" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td class=3D"editor-text article-text" align=3D"left" valign=3D"top" style=
+=3D"font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 12px; co=
+lor: #403F42; text-align: left; display: block; word-wrap: break-word; line=
+-height: 1.2; padding: 10px 10px 10px 20px;">
+<div></div>
+<div class=3D"text-container galileo-ap-content-editor"><div><div>Planning =
+to Travel? Apply early! Apply at least least 4-6 months before planned trav=
+el. Due to limited availability for urgent travel appointments, the US Depa=
+rtment of State cannot guarantee you can receive in-person service at a pas=
+sport agency or center. Visit their <a href=3D"https://urldefense.com/v3/__=
+https://travel.state.gov/content/travel/en/passports.html__;!!Bg5easoyC-OII=
+2vlEqY8mTBrtW-N4OJKAQ!f7WRpw1SIp0qJh2OTDCb6INYsxqHnjJol4g4Ja6E4z_o6OVsAdIbI=
+YrQY54ZYoK6jiiAECd-$" rel=3D"noopener noreferrer" target=3D"_blank" style=
+=3D"color: #48a199; font-weight: normal; font-style: normal; text-decoratio=
+n: underline;">website</a> for more on passports.</div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+<td class=3D"article editor-col OneColumnMobile" width=3D"50%" align=3D"lef=
+t" valign=3D"top">
+<div class=3D"gl-contains-image">
+<table class=3D"editor-image content-image editor-image-vspace-on editor-im=
+age-hspace-on" style=3D"min-width: 100%;" width=3D"100%" cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td align=3D"right" valign=3D"top" style=3D"padding: 10px 20px 10px 10px;">
+<div class=3D"publish-container">
+<a href=3D"https://urldefense.com/v3/__https://travel.state.gov/content/tra=
+vel/en/passports.html__;!!Bg5easoyC-OII2vlEqY8mTBrtW-N4OJKAQ!f7WRpw1SIp0qJh=
+2OTDCb6INYsxqHnjJol4g4Ja6E4z_o6OVsAdIbIYrQY54ZYoK6jiiAECd-$">
+<img alt=3D"" class=3D"" style=3D"display: block; height: auto; max-width: =
+100%;" width=3D"270" border=3D"0" hspace=3D"0" vspace=3D"0" src=3D"https://=
+files.constantcontact.com/519153c4801/5e2f45cb-184e-4e8c-b323-023223553492.=
+jpg">
+</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+<td class=3D"article editor-col OneColumnMobile" width=3D"50%" align=3D"lef=
+t" valign=3D"top">
+<div><div class=3D"column-resize-bar">
+<span class=3D"line"></span>
+<span class=3D"grabber"></span>
+</div></div>
+<div class=3D"gl-contains-image">
+<table class=3D"editor-image content-image editor-image-vspace-on editor-im=
+age-hspace-on" style=3D"min-width: 100%;" width=3D"100%" cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td align=3D"right" valign=3D"top" style=3D"padding: 10px 10px 10px 20px;">
+<div class=3D"publish-container">
+<a href=3D"https://urldefense.com/v3/__https://www.usna.edu/Admissions/Prog=
+rams/index.php__;!!Bg5easoyC-OII2vlEqY8mTBrtW-N4OJKAQ!f7WRpw1SIp0qJh2OTDCb6=
+INYsxqHnjJol4g4Ja6E4z_o6OVsAdIbIYrQY54ZYoK6jvp6PorO$">
+<img alt=3D"" class=3D"" style=3D"display: block; height: auto; max-width: =
+100%;" width=3D"270" border=3D"0" hspace=3D"0" vspace=3D"0" src=3D"https://=
+files.constantcontact.com/519153c4801/5c076020-499b-4f45-868a-c4358d2b9d4b.=
+jpg">
+</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+<td class=3D"article editor-col OneColumnMobile" width=3D"50%" align=3D"lef=
+t" valign=3D"top">
+<div class=3D"gl-contains-text">
+<table width=3D"100%" style=3D"min-width: 100%;" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td class=3D"editor-text article-heading-text" align=3D"left" valign=3D"top=
+" style=3D"font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 1=
+6px; color: #717a80; text-align: left; display: block; word-wrap: break-wor=
+d; line-height: 1.2; font-weight: bold; padding: 10px 20px 10px 10px;">
+<div></div>
+<div class=3D"text-container galileo-ap-content-editor"><div><div>USNA Summ=
+er Programs</div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"gl-contains-text">
+<table width=3D"100%" style=3D"min-width: 100%;" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td class=3D"editor-text article-text" align=3D"left" valign=3D"top" style=
+=3D"font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 12px; co=
+lor: #403F42; text-align: left; display: block; word-wrap: break-word; line=
+-height: 1.2; padding: 10px 20px 10px 10px;">
+<div></div>
+<div class=3D"text-container galileo-ap-content-editor"><div><div>The Unite=
+d States Naval Academy has opened applications for their Summer Seminar and=
+ Summer STEM programs. For more information, visit their <a href=3D"https:/=
+/urldefense.com/v3/__https://www.usna.edu/Admissions/Programs/index.php__;!=
+!Bg5easoyC-OII2vlEqY8mTBrtW-N4OJKAQ!f7WRpw1SIp0qJh2OTDCb6INYsxqHnjJol4g4Ja6=
+E4z_o6OVsAdIbIYrQY54ZYoK6jvp6PorO$" rel=3D"noopener noreferrer" target=3D"_=
+blank" style=3D"color: #48a199; font-weight: normal; font-style: normal; te=
+xt-decoration: underline;">website</a>.</div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+<td class=3D"article editor-col OneColumnMobile" width=3D"50%" align=3D"lef=
+t" valign=3D"top">
+<div><div class=3D"column-resize-bar">
+<span class=3D"line"></span>
+<span class=3D"grabber"></span>
+</div></div>
+<div class=3D"gl-contains-text">
+<table width=3D"100%" style=3D"min-width: 100%;" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td class=3D"editor-text article-heading-text" align=3D"left" valign=3D"top=
+" style=3D"font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 1=
+6px; color: #717a80; text-align: left; display: block; word-wrap: break-wor=
+d; line-height: 1.2; font-weight: bold; padding: 10px 10px 10px 20px;">
+<div></div>
+<div class=3D"text-container galileo-ap-content-editor"><div><div>Fannin Co=
+unty Courthouse Rededication Ceremony</div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"gl-contains-text">
+<table width=3D"100%" style=3D"min-width: 100%;" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td class=3D"editor-text article-text" align=3D"left" valign=3D"top" style=
+=3D"font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 12px; co=
+lor: #403F42; text-align: left; display: block; word-wrap: break-word; line=
+-height: 1.2; padding: 10px 10px 10px 20px;">
+<div></div>
+<div class=3D"text-container galileo-ap-content-editor"><div><div>Last week=
+, our staff was able to participate in the celebration for the rededication=
+ of the Fannin County Courthouse!</div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+<td class=3D"article editor-col OneColumnMobile" width=3D"50%" align=3D"lef=
+t" valign=3D"top">
+<div class=3D"gl-contains-image">
+<table class=3D"editor-image content-image editor-image-vspace-on editor-im=
+age-hspace-on" style=3D"min-width: 100%;" width=3D"100%" cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td align=3D"right" valign=3D"top" style=3D"padding: 10px 20px 10px 10px;">
+<div class=3D"publish-container">  <img alt=3D"" class=3D"" style=3D"displa=
+y: block; height: auto; max-width: 100%;" width=3D"270" border=3D"0" hspace=
+=3D"0" vspace=3D"0" src=3D"https://files.constantcontact.com/519153c4801/ac=
+b8cf77-fa24-4eff-821a-db2af6f27305.jpg">
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+<td class=3D"article editor-col OneColumnMobile" width=3D"50%" align=3D"lef=
+t" valign=3D"top">
+<div><div class=3D"column-resize-bar">
+<span class=3D"line"></span>
+<span class=3D"grabber"></span>
+</div></div>
+<div class=3D"gl-contains-image">
+<table class=3D"editor-image content-image editor-image-vspace-on editor-im=
+age-hspace-on" style=3D"min-width: 100%;" width=3D"100%" cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td align=3D"right" valign=3D"top" style=3D"padding: 10px 10px 10px 20px;">
+<div class=3D"publish-container">  <img alt=3D"" class=3D"" style=3D"displa=
+y: block; height: auto; max-width: 100%;" width=3D"270" border=3D"0" hspace=
+=3D"0" vspace=3D"0" src=3D"https://files.constantcontact.com/519153c4801/2d=
+452647-696c-4181-bbfd-04ef85d828b7.jpg">
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+<td class=3D"article editor-col OneColumnMobile" width=3D"50%" align=3D"lef=
+t" valign=3D"top">
+<div class=3D"gl-contains-text">
+<table width=3D"100%" style=3D"min-width: 100%;" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td class=3D"editor-text article-heading-text" align=3D"left" valign=3D"top=
+" style=3D"font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 1=
+6px; color: #717a80; text-align: left; display: block; word-wrap: break-wor=
+d; line-height: 1.2; font-weight: bold; padding: 10px 20px 10px 10px;">
+<div></div>
+<div class=3D"text-container galileo-ap-content-editor"><div><div>Walter Hu=
+nter EOR/Flag</div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"gl-contains-text">
+<table width=3D"100%" style=3D"min-width: 100%;" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td class=3D"editor-text article-text" align=3D"left" valign=3D"top" style=
+=3D"font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 12px; co=
+lor: #403F42; text-align: left; display: block; word-wrap: break-word; line=
+-height: 1.2; padding: 10px 20px 10px 10px;">
+<div></div>
+<div class=3D"text-container galileo-ap-content-editor"><div><div>Our offic=
+e had the privilege of presenting Mr. Walter E. Hunter with a United States=
+ Flag and an Extension of Remarks for his 100th birthday. Mr. Hunter dedica=
+ted his life to his country through his service in the battles of Guadalcan=
+al, Bougainville, Green Island, and Iwo Jima.</div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+<td class=3D" editor-col OneColumnMobile" width=3D"100%" align=3D"" valign=
+=3D"top">
+<div class=3D"gl-contains-image">
+<table class=3D"editor-image editor-image" style=3D"min-width: 100%;" width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"padding-top: 0px; padding-bott=
+om: 0px;">
+<div class=3D"publish-container">
+<a href=3D"https://fallon.house.gov/services/help-federal-agency">
+<img alt=3D"" class=3D"" style=3D"display: block; height: auto !important; =
+max-width: 100% !important;" width=3D"600" border=3D"0" hspace=3D"0" vspace=
+=3D"0" src=3D"https://files.constantcontact.com/519153c4801/63df1126-f3d5-4=
+92d-9d19-778dd7fd5bf2.png">
+</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+<td class=3D" editor-col OneColumnMobile" width=3D"100%" align=3D"" valign=
+=3D"top">
+<div class=3D"gl-contains-image">
+<table class=3D"editor-image editor-image" style=3D"min-width: 100%;" width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"padding-top: 0px; padding-bott=
+om: 0px;">
+<div class=3D"publish-container">  <img alt=3D"" class=3D"" style=3D"displa=
+y: block; height: auto !important; max-width: 100% !important;" width=3D"60=
+0" border=3D"0" hspace=3D"0" vspace=3D"0" src=3D"https://files.constantcont=
+act.com/519153c4801/a330e795-149a-4bc2-9e41-14593aa932ba.jpg">
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+<td class=3D" editor-col OneColumnMobile" width=3D"100%" align=3D"" valign=
+=3D"top">
+<div class=3D"gl-contains-image">
+<table class=3D"editor-image editor-image" style=3D"min-width: 100%;" width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"padding-top: 0px; padding-bott=
+om: 0px;">
+<div class=3D"publish-container">  <img alt=3D"" class=3D"" style=3D"displa=
+y: block; height: auto !important; max-width: 100% !important;" width=3D"60=
+0" border=3D"0" hspace=3D"0" vspace=3D"0" src=3D"https://files.constantcont=
+act.com/519153c4801/1c3754db-861f-42ac-82dd-55d6d9f79166.png">
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+<td class=3D"feature editor-col OneColumnMobile" width=3D"100%" align=3D"le=
+ft" valign=3D"top" style=3D"background-color: #d9d9d9;" bgcolor=3D"#d9d9d9"=
+>
+<div class=3D"gl-contains-text">
+<table width=3D"100%" style=3D"min-width: 100%;" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td class=3D"editor-text feature-heading-text" align=3D"left" valign=3D"top=
+" style=3D"font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 1=
+6px; color: #717a80; text-align: left; display: block; word-wrap: break-wor=
+d; line-height: 1.2; font-weight: bold; padding: 10px 20px;">
+<div></div>
+<div class=3D"text-container galileo-ap-content-editor"><div><div>HEAT Ener=
+gy Letter to President Biden</div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"gl-contains-text">
+<table width=3D"100%" style=3D"min-width: 100%;" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td class=3D"editor-text feature-text" align=3D"left" valign=3D"top" style=
+=3D"font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 12px; co=
+lor: #403F42; text-align: left; display: block; word-wrap: break-word; line=
+-height: 1.2; padding: 10px 20px;">
+<div></div>
+<div class=3D"text-container galileo-ap-content-editor"><div><div>This week=
+, Congressman Pat Fallon signed onto the HEAT caucus' letter to President B=
+iden concerning his outrageous energy policy decisions. Click <a href=3D"ht=
+tps://urldefense.com/v3/__https://www.republicanwhip.gov/wp-content/uploads=
+/2022/03/Biden-American-Energy-Letter.pdf__;!!Bg5easoyC-OII2vlEqY8mTBrtW-N4=
+OJKAQ!f7WRpw1SIp0qJh2OTDCb6INYsxqHnjJol4g4Ja6E4z_o6OVsAdIbIYrQY54ZYoK6jrlCz=
+CvA$" rel=3D"noopener noreferrer" target=3D"_blank" style=3D"color: #48a199=
+; font-weight: normal; font-style: normal; text-decoration: underline;">her=
+e</a> to read the letter.</div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+<td class=3D"feature editor-col OneColumnMobile" width=3D"50%" align=3D"lef=
+t" valign=3D"top" style=3D"background-color: #d9d9d9;" bgcolor=3D"#d9d9d9">
+<div><div class=3D"column-resize-bar">
+<span class=3D"line"></span>
+<span class=3D"grabber"></span>
+</div></div>
+<div class=3D"gl-contains-text">
+<table width=3D"100%" style=3D"min-width: 100%;" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td class=3D"editor-text feature-heading-text" align=3D"left" valign=3D"top=
+" style=3D"font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 1=
+6px; color: #717a80; text-align: left; display: block; word-wrap: break-wor=
+d; line-height: 1.2; font-weight: bold; padding: 10px 10px 10px 20px;">
+<div></div>
+<div class=3D"text-container galileo-ap-content-editor"><div><div>Managing =
+the House Floor</div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"gl-contains-text">
+<table width=3D"100%" style=3D"min-width: 100%;" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td class=3D"editor-text feature-text" align=3D"left" valign=3D"top" style=
+=3D"font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 12px; co=
+lor: #403F42; text-align: left; display: block; word-wrap: break-word; line=
+-height: 1.2; padding: 10px 10px 10px 20px;">
+<div></div>
+<div class=3D"text-container galileo-ap-content-editor"><div><div>This week=
+, Congressman Pat Fallon had the privilege of managing the House Floor for =
+H. Res. 881 &quot;Condemning the Heinous Terrorist Attack on Congregation B=
+eth Israel in Colleyville, Texas, on January 15, 2022.&quot;</div></div></d=
+iv>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+<td class=3D"feature editor-col OneColumnMobile" width=3D"50%" align=3D"lef=
+t" valign=3D"top" style=3D"background-color: #d9d9d9;" bgcolor=3D"#d9d9d9">
+<div class=3D"gl-contains-image">
+<table class=3D"editor-image content-image editor-image-vspace-on editor-im=
+age-hspace-on" style=3D"min-width: 100%;" width=3D"100%" cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" valign=3D"top" style=3D"padding: 10px 20px 10px 10px;">
+<div class=3D"publish-container">  <img alt=3D"" class=3D"" style=3D"displa=
+y: block; height: auto; max-width: 100%;" width=3D"270" border=3D"0" hspace=
+=3D"0" vspace=3D"0" src=3D"https://files.constantcontact.com/519153c4801/f8=
+de4bc6-3aad-4f59-b4d4-433046bf066e.jpg">
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+<td class=3D"feature editor-col OneColumnMobile" width=3D"50%" align=3D"lef=
+t" valign=3D"top" style=3D"background-color: #d9d9d9;" bgcolor=3D"#d9d9d9">
+<div><div class=3D"column-resize-bar">
+<span class=3D"line"></span>
+<span class=3D"grabber"></span>
+</div></div>
+<div class=3D"gl-contains-image">
+<table class=3D"editor-image content-image editor-image-vspace-on editor-im=
+age-hspace-on" style=3D"min-width: 100%;" width=3D"100%" cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" valign=3D"top" style=3D"padding: 10px 10px 10px 20px;">
+<div class=3D"publish-container">
+<a href=3D"https://urldefense.com/v3/__https://fb.watch/bMr77nKVAM/__;!!Bg5=
+easoyC-OII2vlEqY8mTBrtW-N4OJKAQ!f7WRpw1SIp0qJh2OTDCb6INYsxqHnjJol4g4Ja6E4z_=
+o6OVsAdIbIYrQY54ZYoK6jqgbB2eT$">
+<img alt=3D"" class=3D"" style=3D"display: block; height: auto; max-width: =
+100%;" width=3D"270" border=3D"0" hspace=3D"0" vspace=3D"0" src=3D"https://=
+files.constantcontact.com/519153c4801/4b39f371-c448-4c45-8ec1-981bdeade5fa.=
+jpg">
+</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+<td class=3D"feature editor-col OneColumnMobile" width=3D"50%" align=3D"lef=
+t" valign=3D"top" style=3D"background-color: #d9d9d9;" bgcolor=3D"#d9d9d9">
+<div class=3D"gl-contains-text">
+<table width=3D"100%" style=3D"min-width: 100%;" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td class=3D"editor-text feature-heading-text" align=3D"left" valign=3D"top=
+" style=3D"font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 1=
+6px; color: #717a80; text-align: left; display: block; word-wrap: break-wor=
+d; line-height: 1.2; font-weight: bold; padding: 10px 20px 10px 10px;">
+<div></div>
+<div class=3D"text-container galileo-ap-content-editor"><div><div>Rep Fallo=
+n Joins Rep Cammack for Facebook Live Event</div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"gl-contains-text">
+<table width=3D"100%" style=3D"min-width: 100%;" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td class=3D"editor-text feature-text" align=3D"left" valign=3D"top" style=
+=3D"font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 12px; co=
+lor: #403F42; text-align: left; display: block; word-wrap: break-word; line=
+-height: 1.2; padding: 10px 20px 10px 10px;">
+<div></div>
+<div class=3D"text-container galileo-ap-content-editor"><div><div>Rep. Pat =
+Fallon (TX-04) and Rep. Kat Cammack (FL-03) came together to discuss sky hi=
+gh gas prices and American energy. Check out their <a href=3D"https://urlde=
+fense.com/v3/__https://fb.watch/bMr77nKVAM/__;!!Bg5easoyC-OII2vlEqY8mTBrtW-=
+N4OJKAQ!f7WRpw1SIp0qJh2OTDCb6INYsxqHnjJol4g4Ja6E4z_o6OVsAdIbIYrQY54ZYoK6jqg=
+bB2eT$" rel=3D"noopener noreferrer" target=3D"_blank" style=3D"color: #48a1=
+99; font-weight: normal; font-style: normal; text-decoration: underline;">F=
+acebook Live</a>.</div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"galileo-ap-layout-editor" style=3D"min-width: 100%;">
+<tbody>
+<tr>
+<td class=3D" editor-col OneColumnMobile" width=3D"100%" align=3D"" valign=
+=3D"top">
+<div class=3D"gl-contains-image">
+<table class=3D"editor-image editor-image" style=3D"min-width: 100%;" width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"padding-top: 0px; padding-bott=
+om: 0px;">
+<div class=3D"publish-container">
+<a href=3D"https://urldefense.com/v3/__https://twitter.com/RepPatFallon__;!=
+!Bg5easoyC-OII2vlEqY8mTBrtW-N4OJKAQ!f7WRpw1SIp0qJh2OTDCb6INYsxqHnjJol4g4Ja6=
+E4z_o6OVsAdIbIYrQY54ZYoK6joH5iOAg$">
+<img alt=3D"" class=3D"" style=3D"display: block; height: auto !important; =
+max-width: 100% !important;" width=3D"600" border=3D"0" hspace=3D"0" vspace=
+=3D"0" src=3D"https://files.constantcontact.com/519153c4801/518e7599-63a7-4=
+264-ac27-84284601468e.png">
+</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<table class=3D"footer-container" width=3D"100%" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0" style=3D"background: #ffffff; margin-left: auto; mar=
+gin-right: auto; table-layout: auto !important" bgcolor=3D"#ffffff">
+  <tr>
+    <td width=3D"100%" align=3D"center" valign=3D"top" style=3D"width: 100%=
+;">
+      <div class=3D"footer-max-main-width" align=3D"center" style=3D"margin=
+-left: auto; margin-right: auto; max-width: 100%;">
+        <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D=
+"0">
+          <tr>
+            <td class=3D"footer-layout" align=3D"center" valign=3D"top" sty=
+le=3D"padding: 16px 0px;">
+              <table class=3D"footer-main-width" style=3D"width: 580px;" bo=
+rder=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                <tr>
+                  <td class=3D"footer-text" align=3D"center" valign=3D"top"=
+ style=3D"color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size=
+: 12px; padding: 4px 0px;">
+                   =20
+                    <span class=3D"footer-column">Office of Congressman Pat=
+ Fallon<span class=3D"footer-mobile-hidden"> | </span></span><span class=3D=
+"footer-column">1118 Longworth HOB<span class=3D"footer-mobile-hidden">, </=
+span></span><span class=3D"footer-column"></span><span class=3D"footer-colu=
+mn"></span><span class=3D"footer-column">Washington, DC 20515</span><span c=
+lass=3D"footer-column"></span>
+                   =20
+                  </td>
+                </tr>
+                <tr>
+                  <td class=3D"footer-row" align=3D"center" valign=3D"top" =
+style=3D"padding: 10px 0px;">
+                    <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0"=
+>
+                      <tr>
+                        <td class=3D"footer-text" align=3D"center" valign=
+=3D"top" style=3D"color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; f=
+ont-size: 12px; padding: 4px 0px;">
+                          <a href=3D"#" style=3D"color: #5d5d5d">Unsubscrib=
+e {recipient's email}</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class=3D"footer-text" align=3D"center" valign=
+=3D"top" style=3D"color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; f=
+ont-size: 12px; padding: 4px 0px;">
+                          <a href=3D"#" style=3D"color: #5d5d5d">Update Pro=
+file</a> |
+                         =20
+                          <a class=3D"footer-about-provider" href=3D"https:=
+//urldefense.com/v3/__https://www.constantcontact.com/legal/customer-contac=
+t-data-notice__;!!Bg5easoyC-OII2vlEqY8mTBrtW-N4OJKAQ!f7WRpw1SIp0qJh2OTDCb6I=
+NYsxqHnjJol4g4Ja6E4z_o6OVsAdIbIYrQY54ZYoK6jhua5WNa$" style=3D"color: #5d5d5=
+d">Constant Contact Data Notice</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class=3D"footer-text" align=3D"center" valign=
+=3D"top" style=3D"color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; f=
+ont-size: 12px; padding: 4px 0px;">
+                          Sent by
+                         =20
+                          <a href=3D"mailto:repfallon@mail8.housecommunicat=
+ions.gov" style=3D"color: #5d5d5d; text-decoration: none">repfallon@mail8.h=
+ousecommunications.gov</a>
+                         =20
+
+                         =20
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td class=3D"footer-text" align=3D"center" valign=3D"top"=
+ style=3D"color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size=
+: 12px; padding: 4px 0px;">
+                   =20
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+  </tr>
+</table><div align=3D"center" style=3D"background-color: #F3F3F3;"><table w=
+idth=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"bac=
+kground-color: #f3f3f3"><tr><td align=3D"center" valign=3D"top" style=3D"pa=
+dding: 0px 0px 0px 0px;"><div align=3D"center" style=3D"max-width: 600px; m=
+argin-left: auto; margin-right: auto;"><table cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" style=3D"width: 600px; width: auto !important; margin-l=
+eft: auto; margin-right: auto;"><tr><td align=3D"left" valign=3D"top" style=
+=3D"color: #5b5b5b; font-size: 11px; line-height: 1.3; font-family: Arial, =
+Helvetica, sans-serif; padding: 20px 20px 20px 20px;"><div style=3D"color: =
+#FF0000; font-size: 11px; line-height: 1.3; font-family: Arial, Helvetica, =
+sans-serif;"><span style=3D"font-size: 13px; font-weight: bold;">THIS IS A =
+TEST EMAIL ONLY.</span><br>This email was sent by the author for the sole p=
+urpose of testing a draft message. If you believe you have received the mes=
+sage in error, please contact the author by replying to this message. Const=
+ant Contact takes reports of abuse very seriously. If you wish to report ab=
+use, please forward this message to <a href=3D"mailto:abuse@constantcontact=
+.com">abuse@constantcontact.com</a>.<br></div></td></tr></table></div></td>=
+</tr></table></div></body>
+</html>
+
+------=_Part_1390686300_1600595279.1647631658457--

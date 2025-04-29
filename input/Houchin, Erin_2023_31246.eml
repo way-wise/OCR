@@ -1,0 +1,3614 @@
+Received: from MW4PR09MB10042.namprd09.prod.outlook.com
+ (2603:10b6:303:1fa::22) by SA1PR09MB8874.namprd09.prod.outlook.com with
+ HTTPS; Thu, 3 Aug 2023 14:29:22 +0000
+Received: from DM6PR09CA0006.namprd09.prod.outlook.com (2603:10b6:5:160::19)
+ by MW4PR09MB10042.namprd09.prod.outlook.com (2603:10b6:303:1fa::22) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6631.47; Thu, 3 Aug
+ 2023 14:29:21 +0000
+Received: from BL0GCC02FT032.eop-gcc02.prod.protection.outlook.com
+ (2a01:111:f400:7d05::207) by DM6PR09CA0006.outlook.office365.com
+ (2603:10b6:5:160::19) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6652.20 via Frontend
+ Transport; Thu, 3 Aug 2023 14:29:21 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.51.113)
+ smtp.mailfrom=mail.house.gov; dkim=fail (body hash did not verify)
+ header.d=house.gov;dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.51.113 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.51.113;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.51.113) by
+ BL0GCC02FT032.mail.protection.outlook.com (10.97.10.94) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.6631.47 via Frontend Transport; Thu, 3 Aug 2023 14:29:21 +0000
+Received: from EXCH1924.US.House.gov (143.228.51.120) by EXCH1921.US.House.gov
+ (143.228.51.113) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1258.16; Thu, 3 Aug
+ 2023 10:29:20 -0400
+Received: from serg-bulk3-a.house.gov (143.228.42.68) by EXCH1924.US.House.gov
+ (143.228.51.120) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1258.16 via Frontend
+ Transport; Thu, 3 Aug 2023 10:29:20 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=from : to : date :
+ subject : content-type : message-id : mime-version; s=august2019-msgb-hg;
+ bh=gDLhuk5MDG1EdfchQrvqn2MGynPIKAHlYE3v1Sou+x4=;
+ b=mdtZeg5PC2Ah/LzKJmyb/ohz4S2SET78XnB7PpLVFA4AKxdwiwTU7EJTjMzo+iWEjIKo
+ zZrzNuCW8CxB95Pu23+v60pg1IAMrYFv0VuiTuhLfelK5/w7WSmvSQcpXt8GpAXNW0yb
+ OG+5VD5DzL0K4pS+MwD0aSBdJeGVJwPqS5+XsOAmqoVIasrFWu0ch9mPmY6IivwP/3kc
+ CH1RYDoMx3i/GxWZmDmFGUbChwJqHymFHfwpx5WR1J/OT5v6oCGLvsTXb62n0ilfUtf8
+ 9Pcw+VedKNystZbJHWXT8h99Pbw7AVNu8JM60idWUkWtcc5aqnYrk3lNZmTxuZjTqxqT 0w== 
+Received: from firesideadmin02 (firesideadmin02.us.house.gov [143.228.113.54])
+	by serg-bulk3-a.house.gov (8.17.1.19/8.17.1.19) with ESMTP id 373ETJxQ028009;
+	Thu, 3 Aug 2023 10:29:19 -0400
+Message-Id: <3s4wwqfshj-1@serg-bulk3-a.house.gov>
+envelope-from: Rep.ErinHouchinIN09@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+X-House-Vendor-Seg: Fireside21-1
+From: "Rep. Erin Houchin" <Rep.ErinHouchinIN09@mail.house.gov>
+To: Heidi.Reutebuch@mail.house.gov
+Date: 3 Aug 2023 10:29:19 -0400
+Subject: TEST The Contender
+Content-Type: multipart/alternative;
+ boundary=--boundary_272_63bae19c-0d96-434e-9999-1feb3e9c7ca6
+X-Proofpoint-Virus-Version: vendor=baseguard
+ engine=ICAP:2.0.254,Aquarius:18.0.957,Hydra:6.0.591,FMLib:17.11.176.26
+ definitions=2023-08-03_13,2023-08-03_01,2023-05-22_02
+Return-Path: Rep.ErinHouchinIN09@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1921.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 03 Aug 2023 14:29:21.3131
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 7beecd99-75d2-41c3-4037-08db942e0731
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1924.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted:
+ BL0GCC02FT032.eop-gcc02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ BL0GCC02FT032.eop-gcc02.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ BL0GCC02FT032:EE_|MW4PR09MB10042:EE_|SA1PR09MB8874:EE_
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: 7beecd99-75d2-41c3-4037-08db942e0731
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:143.228.51.113;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:;DIR:INT;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 03 Aug 2023 14:29:21.2663
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 7beecd99-75d2-41c3-4037-08db942e0731
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.51.113];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1924.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: MW4PR09MB10042
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.7028420
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.6631.046
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(425001)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	Adp3guE3BUVYbbg9ba/dkJdNCU8SrvDUcth0dyxq/lAcWgGfGtl1ADPt2aYOGniEAogz3fF0/fTJIlFHjdLI/FQlOyzQ204QRXwQOCyzK2Nj3Q+/RgBo4dB0CYAZ8dFMAA0r/jqjh2mE4XR2EnX5hnOOL0waMpH7ts3lKA78KXwPkhR4Cw+FpvOtKDnm2oIxCw6qP6f9zyH7Ci0supQ3WOGJ/ANaIxaxtCXpRtmBQ3ttRrT0SjEcBFJFwhFPDpPFQJrHVZCr8yNwmh71Kl+1sRzg4rlq81jWaa1hSTIvzxJq0bIXpqepKlTbQyNmNKELr0UzVSzlJvirCTM/CkAEJIOEyqeYaE6xRuu51BC7mORt1huRJDaxG3gwkjdISFAN/BkkfePWARAGz0lmxNgzWEEFtiKyOoptYTBNw0EJZ41uZ+uocvfEe1Nz6vJls8Wq8qjkZyDCy7dDMfIYL7kqp7FwXebzUtp6uE/ZT/8Y4L+Xcqv21VW0L8TQ2DPDvvzqzTocnhZYHoZ624vtbOIBXtDbNVEQjVAlkapqeF3++j5p2eAwQ4KCFwIHHEXkZvDAZCGMM5o8yovmwFF82J/8v5FGC+MkVNfaf/Pev58tmaU88BFijaWMDIpqswm8R4wToUYmA8z94mshwnkrmqvgm+z0xP44gnKQ8lNBTiv0xKuiN2VYFCW512CZY7lfbIbJEkYFf3+7YfIeyP6/I2LlRIXoWfLKFil6OP9THpAKcmB1ulUb7Se9AhpCPiTiW6YlnQ6YvsYComRj90JrTypGlw==
+MIME-Version: 1.0
+
+----boundary_272_63bae19c-0d96-434e-9999-1feb3e9c7ca6
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+
+TheContender Newsletter
+
+
+
+Month of July Wrap-up
+
+
+000=20
+
+When I legislate in Washington or Washington County, it=E2=80=99s important=
+ to get the job done for Hoosiers. I accomplish that by one guiding princip=
+le: Contend.=20
+
+It isn=E2=80=99t just a word on a post-it note framed in my home, it=E2=80=
+=99s our family motto and a daily reminder to boldly fight for my constitue=
+nts in Congress.=20
+
+That=E2=80=99s what I plan to do in my =E2=80=9CContender=E2=80=9D newslett=
+er, and throughout my time in Congress. I will always contend for the peopl=
+e and communities I represent.=20
+
+
+
+
+WATCH: Recognizing Silver Creek High School Baseball Team on House Floor =
+=E2=80=93 Go Dragons!=20
+
+
+fs  (https://urldefense.com/v3/__https://www.youtube.com/watch?v=3Dfo4IVBkv=
+jco__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!BFSHcSCiixnyYaUdWSJrO1ADFiQtxPHMGkz=
+6XWfEu7iWaw_IQSvunAumX3THzvn9ABR-Z5eNnEn_xa05v-boPQL0Q6bcFshHJ14ToqHvh-0F$ )
+
+Recently, the Silver Creek High School baseball team made history by winnin=
+g the program=E2=80=99s first ever Class 3A state title.
+
+It is truly an honor and a privilege to recognize this Sellersburg baseball=
+ team on the House floor. This is not only an impressive victory, but a tes=
+tament to the guidance and leadership of Coach Joe Decker and his coaching =
+staff who worked diligently to mold these young men not only into state cha=
+mpions, but future leaders.=20
+
+Their countless hours of practice, preparation, and teamwork havefinally pa=
+id off, and will, without a doubt, inspire future generations of players an=
+d coaches to strive for both excellence and good sportsmanship.=20
+
+To view the floor speech,click here(https://urldefense.com/v3/__https://www=
+.youtube.com/watch?v=3Dfo4IVBkvjco__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!BFSH=
+cSCiixnyYaUdWSJrO1ADFiQtxPHMGkz6XWfEu7iWaw_IQSvunAumX3THzvn9ABR-Z5eNnEn_xa0=
+5v-boPQL0Q6bcFshHJ14ToqHvh-0F$ ) .
+
+
+
+
+PASSED: The Schools Not Shelters Act Amid Border Crisis
+
+
+
+11=20
+
+As a member of the House Education andWorkforce Committee and cosponsor of =
+the legislation, I voted to pass the Schools Not Shelters Act(https://houch=
+in.house.gov/media/press-releases/congresswoman-houchin-supports-passage-sc=
+hools-not-shelters-act-amid-border) to prohibit the use of educational faci=
+lities to provide shelter or housing for illegal migrants. This would inclu=
+de public elementary schools, public secondary schools, and institutions of=
+ higher education.
+
+The House passage of this bill sends a clear message to the Biden Administr=
+ation and cities across the country that the safety and education of studen=
+ts comes first. Our schools won=E2=80=99t be used to clean up President Bid=
+en=E2=80=99s failed border policies.
+
+I was pleased to manage the rule for the consideration of the bill on the H=
+ouse Floor. To watch my full remarks,click here(https://urldefense.com/v3/_=
+_https://youtu.be/sqPYv9Xt52k?t=3D182__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!B=
+FSHcSCiixnyYaUdWSJrO1ADFiQtxPHMGkz6XWfEu7iWaw_IQSvunAumX3THzvn9ABR-Z5eNnEn_=
+xa05v-boPQL0Q6bcFshHJ14TouXC3C3p$ ) .
+
+
+111  (https://urldefense.com/v3/__https://www.youtube.com/watch?v=3DsqPYv9X=
+t52k&t=3D182s__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!BFSHcSCiixnyYaUdWSJrO1ADF=
+iQtxPHMGkz6XWfEu7iWaw_IQSvunAumX3THzvn9ABR-Z5eNnEn_xa05v-boPQL0Q6bcFshHJ14T=
+osLktN2z$ )
+
+=F0=9F=93=84: For the bill text,click here(https://urldefense.com/v3/__http=
+s://www.govinfo.gov/content/pkg/BILLS-118hr3941rh/pdf/BILLS-118hr3941rh.pdf=
+__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!BFSHcSCiixnyYaUdWSJrO1ADFiQtxPHMGkz6XW=
+fEu7iWaw_IQSvunAumX3THzvn9ABR-Z5eNnEn_xa05v-boPQL0Q6bcFshHJ14TosUSRktA$ ) .
+
+
+
+
+
+NEW BILL: Introduction of No ESG Act to Limit Far-Left Proposals
+
+
+00=20
+
+As a member of the Financial Services Committee and the ESG Working Group, =
+I introduced theNo Expensive, Stifling Governance(No ESG)Act.The bill would=
+ prevent far-left activists from forcing everyday investors to vote on dupl=
+icative or substantially similar Environmental, Social and Governance (ESG)=
+ shareholderproposals.
+
+Southern Indiana companies shouldn=E2=80=99t have to deal with duplicative =
+far-left shareholder proposals year after year. That=E2=80=99s why I=E2=80=
+=99ve introduced this first of its kind legislation to put an end to redund=
+ant ESG proposals.
+
+TheNo ESG Actwould stop a new proposed rule under the Securities and Exchan=
+ge Commission (SEC) that would greenlight left-wing ESG proposals even if s=
+hareholders have recently rejected similar proposals. In doing so, this bil=
+l provides companies with the means to exclude duplicative or substantially=
+ similar shareholder proposals to save time and money for everyday investor=
+s.=20
+
+Last week, I took to the House floor to share the need to pass this new bil=
+l. To watch my full remarks,click here(https://urldefense.com/v3/__http://w=
+ww.youtube.com/watch?v=3D9ToBBtcZMNU__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!BF=
+SHcSCiixnyYaUdWSJrO1ADFiQtxPHMGkz6XWfEu7iWaw_IQSvunAumX3THzvn9ABR-Z5eNnEn_x=
+a05v-boPQL0Q6bcFshHJ14Ton3b0XjU$ ) .
+
+=F0=9F=93=84: For the bill text,click here(https://houchin.house.gov/sites/=
+evo-subsites/houchin.house.gov/files/evo-media-document/no-esg-act-signed62=
+.pdf) .
+
+
+
+
+If you know a Veteran=20
+
+
+
+The PACT Act is a new law that expands healthcare and benefits for our vete=
+rans exposed to burn pits, Agent Orange, or other toxic substances.
+
+To check your eligibility for potential benefits, https://urldefense.com/v3=
+/__http://visitVA.gov/PACT(https:/*urldefense.com/v3/__https:/www.va.gov/re=
+sources/the-pact-act-and-your-va-benefits/__;!!Ckt11KVezJIME51BYf4a6hrLATHi=
+lnk!A73jdIjWWcSx8o7e9cJ0zrWSgemvbm0ON09Q9s6gfSaaxczU0g79Ogt7Y7BROx2iXcEdhDV=
+OXYhNur86GHUBz3ujCPyt0S6GsRTSJt3AQDmS$)__;Lw!!Ckt11KVezJIME51BYf4a6hrLATHil=
+nk!BFSHcSCiixnyYaUdWSJrO1ADFiQtxPHMGkz6XWfEu7iWaw_IQSvunAumX3THzvn9ABR-Z5eN=
+nEn_xa05v-boPQL0Q6bcFshHJ14TogeTwDNO$  or contact my team at (812) 288-3999=
+ for more information!
+
+
+
+
+Summer Interns in Washington=20
+
+
+11=20
+
+I=E2=80=99m proud to recognize our first ninth district summer interns in t=
+he Washington, D.C. office. Adam Longstreth and Jacob Crosley, both student=
+s at Indiana University, joined our office for a nine-week internship.
+
+Adam and Jacob assisted our legislative and communications staff with daily=
+ projects and constituent services. Their contributions have made a signifi=
+cant impact for folks back home, and I have no doubt that their futures wil=
+l be filled with countless possibilities.
+
+Adam Longstreth is a rising junior from Batesville attending Indiana Univer=
+sity in Bloomington.
+
+=E2=80=9CI wanted to intern in an office where I felt like the work I did w=
+ould benefit others, and I felt like working in Rep. Houchin=E2=80=99s offi=
+ce would be the perfect opportunity. I am grateful to have been in a positi=
+on in which I can serve my fellow Hoosiers. My hometown of Batesville is a =
+town of kind and hardworking people, and I am glad to have been able to ser=
+ve it and the many other towns within the district comprised of similarly k=
+ind-hearted Hoosiers,=E2=80=9D said Adam from Batesville.
+
+Jacob Crosley is a graduate student from Fishers attending Indiana Universi=
+ty in Bloomington.
+
+=E2=80=9CThis summer taught me that politics isn=E2=80=99t a one man show, =
+but a team effort,=E2=80=9D said Jacob from Fishers. =E2=80=9CAs a 7th gene=
+ration Hoosier, it was an honor to serve Indiana. It meant bringing Hoosier=
+ and Midwestern values to DC; that is, staying true to the voter base while=
+ being neighborly to people on both sides of the aisle.=E2=80=9D
+
+Our office is now accepting internship applications for the Fall, Spring, a=
+nd Summer sessions. Interested students can visit Houchin.House.Gov(https:/=
+/houchin.house.gov/services/internships)  or call (202) 225-5315.
+
+
+
+
+In IN-09
+
+
+
+Jacob McClanahan Road Naming Ceremony=20
+
+
+99=20
+
+
+Back in Harrison County, I participated in a road naming ceremony in honor =
+of fallen Volunteer Firefighter, Jacob McClanahan.
+
+Jacob=E2=80=99s life was taken last year when he stopped to help a stranded=
+ motorist. The driver of that vehicle then tragically and senselessly shot =
+him. Jacob=E2=80=99s last act of service was on May 16th, 2022.=20
+
+Jacob was a man of service. Someone who wanted to give back to his neighbor=
+s. That was clear by his service as a firefighter for Ramsey Volunteer Fire=
+ Department, Harrison Township Volunteer Fire Department, Leavenworth Volun=
+teer Fire Department, and New Middletown Volunteer Fire Department.
+
+I was honored to be part of the ceremony naming a portion of State Road 135=
+ in Jacob=E2=80=99s memory and to spend time with his parents and loved one=
+s. I hope that this stretch of State Road 135 will remind every Hoosier who=
+ drives on it of legacy and selfless sacrifice Jacob left behind. And honor=
+ the great risk our local emergency personnel take every day to keep us saf=
+e. I know each time I drive here I will remember.=20
+
+Thank you to the McClanahan family, loved ones, and the local leaders who m=
+ade this possible.
+
+
+77=20
+
+
+Congressional Award Medal Goes to Scottsburg Student
+
+
+11=20
+
+In Scott County, I presented the Congressional Award(https://houchin.house.=
+gov/media/press-releases/photos-congresswoman-houchin-presents-congressiona=
+l-award-medals-scottsburg)  to Sophia Voiles, a rising senior from Scottsbu=
+rg Senior High School.=20
+
+There is no higher honor than the Congressional Award for our young people,=
+ and the ninth district is proud to be home to a silver and bronze medal re=
+cipient. These awards are earned, not given. Sophia has displayed the abili=
+ty to set and achieve her own personal goals, while preparing for future se=
+rvice to others.
+
+The Congressional Award provides opportunities for young people to unleash =
+their potential by achieving personal goals focused on volunteerism, person=
+al development, physical fitness, and expedition and exploration.
+
+To learn more about the Congressional Award,click here(https://urldefense.c=
+om/v3/__http:/www.congressionalaward.org/__;!!Bg5easoyC-OII2vlEqY8mTBrtW-N4=
+OJKAQ!KEMNmFS6GSfIpkcJ0fhJr2J8eKv8cTVDvDSaN9rdizUCv0WLRRBcjfNbYCIpAz4-ubtRk=
+DSfo4JFPN3bPL66O2OAZEXFXlEQRw$) .
+
+
+
+
+In the News
+
+
+
+
+WIBC | Houchin: =E2=80=9CSchools Should Not Be Used To House Illegal Immigr=
+ants=E2=80=9D(https://urldefense.com/v3/__https://wibc.com/154973/houchin-s=
+chools-should-not-be-used-to-house-illegal-immigrants/__;!!Ckt11KVezJIME51B=
+Yf4a6hrLATHilnk!BFSHcSCiixnyYaUdWSJrO1ADFiQtxPHMGkz6XWfEu7iWaw_IQSvunAumX3T=
+Hzvn9ABR-Z5eNnEn_xa05v-boPQL0Q6bcFshHJ14TovsgtmYI$ )=20
+
+Leader=E2=80=99s Edge | Fresh Perspective: Q&A with Rep. Erin Houchin(https=
+://urldefense.com/v3/__https://www.leadersedge.com/industry/fresh-perspecti=
+ve__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!BFSHcSCiixnyYaUdWSJrO1ADFiQtxPHMGkz6=
+XWfEu7iWaw_IQSvunAumX3THzvn9ABR-Z5eNnEn_xa05v-boPQL0Q6bcFshHJ14TopxMHABz$ )=
+=20
+
+Federal Newswire | Houchin on Digital Assets: 'There is no reason why the U=
+.S. shouldn't lead in this space'(https://urldefense.com/v3/__https://thefe=
+deralnewswire.com/stories/644605242-houchin-on-digital-assets-there-is-no-r=
+eason-why-the-u-s-shouldn-t-lead-in-this-space__;!!Ckt11KVezJIME51BYf4a6hrL=
+ATHilnk!BFSHcSCiixnyYaUdWSJrO1ADFiQtxPHMGkz6XWfEu7iWaw_IQSvunAumX3THzvn9ABR=
+-Z5eNnEn_xa05v-boPQL0Q6bcFshHJ14TorxKJ--A$ )=20
+
+Madison Courier | Remembering a local hero(https://urldefense.com/v3/__http=
+s://www.madisoncourier.com/remembering-a-local-hero/article_c2ac7426-b13a-5=
+e05-9e27-6922fa7add3e.html__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!BFSHcSCiixny=
+YaUdWSJrO1ADFiQtxPHMGkz6XWfEu7iWaw_IQSvunAumX3THzvn9ABR-Z5eNnEn_xa05v-boPQL=
+0Q6bcFshHJ14TonyrNNY0$ )=20
+
+The News and Tribune | Congresswoman Houchin presents Congressional Award m=
+edals to Scottsburg student(https://urldefense.com/v3/__https://www.newsand=
+tribune.com/news/congresswoman-houchin-presents-congressional-award-medals-=
+to-scottsburg-student/article_8aad90b6-1ce2-11ee-bb61-93eac4dfdacd.html__;!=
+!Ckt11KVezJIME51BYf4a6hrLATHilnk!BFSHcSCiixnyYaUdWSJrO1ADFiQtxPHMGkz6XWfEu7=
+iWaw_IQSvunAumX3THzvn9ABR-Z5eNnEn_xa05v-boPQL0Q6bcFshHJ14TorlJq9x_$ )=20
+
+
+
+
+
+Social Media
+
+
+
+11  (https://urldefense.com/v3/__https://twitter.com/RepHouchin/status/1679=
+235673058861056?s=3D20__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!BFSHcSCiixnyYaUd=
+WSJrO1ADFiQtxPHMGkz6XWfEu7iWaw_IQSvunAumX3THzvn9ABR-Z5eNnEn_xa05v-boPQL0Q6b=
+cFshHJ14Tot8IAWpw$ )
+
+
+11  (https://urldefense.com/v3/__https://twitter.com/RepHouchin/status/1681=
+391907090333718?s=3D20__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!BFSHcSCiixnyYaUd=
+WSJrO1ADFiQtxPHMGkz6XWfEu7iWaw_IQSvunAumX3THzvn9ABR-Z5eNnEn_xa05v-boPQL0Q6b=
+cFshHJ14TotQO2Uzb$ )
+
+11  (https://urldefense.com/v3/__https://twitter.com/RepHouchin/status/1677=
+316610741108739?s=3D20__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!BFSHcSCiixnyYaUd=
+WSJrO1ADFiQtxPHMGkz6XWfEu7iWaw_IQSvunAumX3THzvn9ABR-Z5eNnEn_xa05v-boPQL0Q6b=
+cFshHJ14Tou_pIGZj$ )
+
+
+It=E2=80=99s an honor to serve you in the U.S. House of Representatives. To=
+ better serve you at home, please don=E2=80=99t hesitate to contact our off=
+ice by calling (812) 288-3999. I will continue to contend on behalf of Hoos=
+iers in the Ninth District of https://urldefense.com/v3/__http://Indiana.In=
+__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!BFSHcSCiixnyYaUdWSJrO1ADFiQtxPHMGkz6XW=
+fEu7iWaw_IQSvunAumX3THzvn9ABR-Z5eNnEn_xa05v-boPQL0Q6bcFshHJ14Tosc6kgTq$  se=
+rvice,
+
+
+EH=20
+
+Congresswoman Erin Houchin
+Member of Congress
+
+
+
+----boundary_272_63bae19c-0d96-434e-9999-1feb3e9c7ca6
+Content-Location: https://houchinforms.house.gov/
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" id=3D"template"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>Representative Erin Houchin</title>
+ =20
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1">
+  <!--[if !mso]><!-->
+  <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![endif]-=
+->
+  <style>body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-size-a=
+djust: 100%;} /* Prevent WebKit and Windows mobile changing default text si=
+zes */ img{-ms-interpolation-mode: bicubic;} /* Allow smoother rendering of=
+ resized image in Internet Explorer *//* RESET STYLES */img { border: 0; he=
+ight: auto; line-height: 100%; outline: none; text-decoration: none; }table=
+ { border-collapse: collapse !important; }body { height: 100% !important; m=
+argin: 0 !important; padding: 0 !important; width: 100% !important; }strong=
+ { font-weight: bold; } /* Editor reset *//* FIRESIDE STYLES */.component i=
+mg {max-width:600px;}.component table {mso-table-rspace:10pt; border-collap=
+se:collapse;}.component { padding: 0px !important; }.press {padding-bottom:=
+ 0px;}</style><style>@media all and (max-width:650px) {            .image-1=
+, .caption-1, .img-1 img, .image-1 tr, .image-1 td, .image-2, .img-2 img, .=
+image-2 tr, .image-2 td {max-width: 100% !important; width: 100% !important=
+;}            .responsive-table {width:100% !important;}            .respon=
+sive-table img {max-width:100% !important; height: auto !important;}       =
+     .press .component, .press td {text-align:center;}            .componen=
+t { margin-left: 20px; margin-right: 20px;}            .component .responsi=
+ve-table { margin-left: 0px !important; margin-right: 0px !important;}     =
+       .wide .video-thumb { width: 100% !important;height: auto !important;=
+ }             .wide.video-container { width: 100% !important; }         .c=
+omponent.full-width {margin-left: 0px; margin-right: 0px; }   }</style><sty=
+le type=3D"text/css">
+    /* CLIENT-SPECIFIC STYLES */
+    body,
+    table,
+    td,
+    a {
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+
+    /* Prevent WebKit and Windows mobile changing default text sizes */
+    table,
+    td {
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+
+    /* Remove spacing between tables in Outlook 2007 and up */
+    img {
+      -ms-interpolation-mode: bicubic;
+    }
+
+    /* Allow smoother rendering of resized image in Internet Explorer */
+    /* RESET STYLES */
+    img {
+      border: 0;
+      height: auto;
+      line-height: 100%;
+      outline: none;
+      text-decoration: none;
+    }
+
+    table {
+      border-collapse: collapse !important;
+    }
+
+    body {
+      height: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100% !important;
+    }
+
+    strong {
+      font-weight: bold;
+    }
+
+    /* Editor reset */
+    /* FIRESIDE STYLES */
+    .component img {
+      max-width: 600px;
+    }
+
+    .component table {
+      mso-table-rspace: 10pt;
+      border-collapse: collapse;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .component td,
+    td {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .component {
+      padding: 0px !important;
+    }
+
+    .press {
+      padding-bottom: 0px;
+    }
+
+    .caption-1 td {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Margin/NoMargin STYLES */
+    .component.full-width {
+      overflow: hidden;
+      margin: 0px;
+    }
+
+    /* HEADER STYLES */
+    .header-bar {
+      width: 100%;
+    }
+
+    .header-bar-margin {
+      background-color: #ffffff;
+    }
+
+    .header-bar h2 {
+      margin: 0 !important;
+      padding: 0 !important;
+      color: #000000 !important;
+      text-align: center;
+      font-size: 24px !important;
+      font-weight: bold !important;
+    }
+
+    .survey-content>table>tbody tr td {
+      border-color: #0B3077 !important;
+    }
+
+    .survey-content input.survey-submit {
+      font-family: Arial, Helvetica, sans-serif !important;
+    }
+  </style>
+  <style id=3D"media-queries">
+    @media all and (max-width:650px) {
+
+      .image-1,
+      .caption-1,
+      .img-1 img,
+      .image-1 tr,
+      .image-1 td {
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+
+      .responsive-table {
+        width: 100% !important;
+      }
+
+      .responsive-table img {
+        max-width: 100% !important;
+        height: auto !important;
+      }
+
+      .press .component,
+      .press td,
+      .split .component,
+      .split .component td,
+      .split td {
+        text-align: center;
+      }
+
+      .component {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+      .component .responsive-table {
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+      }
+
+      .wide .video-thumb {
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      .wide.video-container {
+        width: 100% !important;
+      }
+    }
+  </style>
+ =20
+<!--[if (gte mso 9)|(IE)]>
+                                            <style>=20
+                                        </style>
+                                        <![endif]--></head>
+
+<body style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;m=
+argin: 0px !important; padding: 0px !important;">
+  <div id=3D"preview-text" style=3D"display: none; font-size: 1px; color: #=
+fefefe; line-height: 1px; font-family: Arial, Helvetica, sans-serif; max-he=
+ight: 0px; max-width: 0px; opacity: 0; overflow: hidden;">The&nbsp;Contende=
+r Newsletter Month of July Wrap-up When I legislate in Washington or Washin=
+gton County, it=E2=80=99s important to get the job done for Hoosiers. I acc=
+omplish that by one guiding principle: Contend.&nbsp;&nbsp;&nbsp; &nbsp;It =
+isn=E2=80=99t just a word on a post-it note framed in my home, it=E2=80=99s=
+ our family motto and a daily reminder to boldly fight for my constituents =
+in Congress.&nbsp; &nbsp;That=E2=80=99s what I plan to do in my =E2=80=9CCo=
+ntender=E2=80=9D newsletter, and throughout my time in Congress. I will alw=
+ays contend for the people and communities I represent. </div>
+  <table role=3D"presentation" width=3D"650" class=3D"responsive-table" ali=
+gn=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust=
+: 100%;font-family: Arial, Helvetica, sans-serif; background-color: #ffffff=
+;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marg=
+inwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+    <tbody>
+      <tr>
+        <td valign=3D"middle" style=3D"-webkit-text-size-adjust: 100%; -ms-=
+text-size-adjust: 100%;background-color: #ffffff;">
+          <table role=3D"presentation" cellpadding=3D"10" cellspacing=3D"0"=
+ align=3D"center" width=3D"100%" style=3D"-webkit-text-size-adjust: 100%; -=
+ms-text-size-adjust: 100%;">
+            <tbody>
+              <tr>
+                <td valign=3D"middle" align=3D"center" style=3D"-webkit-tex=
+t-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #000000; font-size: =
+12px; font-family: Arial, Helvetica, sans-serif; text-align: center;">
+                  <a href=3D"https://houchinforms.house.gov/forms/emailsign=
+up" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;col=
+or: #000000; text-decoration: none; font-size: 12px;">Enews Sign
+                    Up</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href=3D"https://houch=
+in.house.gov" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust=
+: 100%;color: #000000; text-decoration: none;font-size: 12px;">Visit My
+                    Website</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href=3D"[link]" =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: =
+#000000; text-decoration: none; font-size: 12px;">View Online</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <table role=3D"presentation" width=3D"650" align=3D"center" class=3D"resp=
+onsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust=
+: 100%;font-family: Arial, Helvetica, sans-serif; background-color: #ffffff=
+;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marg=
+inwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+    <tbody>
+      <tr>
+        <td align=3D"center" valign=3D"top" style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetica, sans-se=
+rif; font-size: 16px;">
+          <a target=3D"_blank" href=3D"https://houchin.house.gov" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+            <img alt=3D"Representative Erin Houchin" width=3D"650" style=3D=
+"-ms-interpolation-mode: bicubic;display: block; width: 650px;" src=3D"http=
+s://houchinforms.house.gov/uploadedphotos/highresolution/c5fde65f-e8b9-4123=
+-80cc-800afa592938.png">
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <table role=3D"presentation" width=3D"650" align=3D"center" class=3D"resp=
+onsive-table" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust=
+: 100%;background-color: #ffffff; font-family: Arial, Helvetica, sans-serif=
+;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marg=
+inwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+    <tbody>
+      <tr>
+        <td class=3D"responsive-table" valign=3D"top" style=3D"-webkit-text=
+-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Arial, Helvetic=
+a, sans-serif; font-size: 16px; color: #000000;">
+          <table role=3D"presentation" class=3D"responsive-table" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+            <tbody>
+              <tr height=3D"20">
+                <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;">
+                  <span></span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class=3D"region" id=3D"region-1"><div class=3D"component ful=
+l-width" style=3D"padding: 0px !important;"> <div class=3D"header-bar" styl=
+e=3D"overflow: hidden;">
+                                    <table role=3D"presentation" align=3D"c=
+enter" class=3D"responsive-table table-w-bg-color" style=3D"mso-table-lspac=
+e:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse=
+;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Ar=
+ial, Helvetica, sans-serif; margin-right: 0px; margin-left: 0px;" border=3D=
+"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0=
+" leftmargin=3D"0" topmargin=3D"0" width=3D"650">
+                                        <tbody>
+                                            <tr height=3D"8" class=3D"space=
+rRow">
+                                                <td style=3D"-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 8p=
+x;">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td class=3D"responsive-tab=
+le" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;fon=
+t-size:24px;color:#000000;" valign=3D"top">
+                                                <table role=3D"presentation=
+" width=3D"100%" style=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-ta=
+ble-rspace:10pt; border-collapse:collapse;-webkit-text-size-adjust: 100%; -=
+ms-text-size-adjust: 100%;min-width: 100%;" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" top=
+margin=3D"0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;padding: 0 15pt; f=
+ont-family: Arial, Helvetica, sans-serif;">
+                                                                <div class=
+=3D"cke_editable cke_editable_inline cke_contents_ltr cke_focus cke_show_bo=
+rders" style=3D"overflow: hidden;"><h2 style=3D"text-align: center;"><span =
+style=3D"font-size:48px;"><span style=3D"font-family:Calibri, sans-serif"><=
+span style=3D"color:#000000"><span style=3D"font-style:normal"><span style=
+=3D"font-weight:400"><span style=3D"white-space:normal"><span style=3D"text=
+-decoration:none"><b><i><span style=3D"color:#203864">The&nbsp;Contender Ne=
+wsletter</span></i></b></span></span></span></span></span></span></span></h=
+2></div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                </td>
+                                            </tr>
+                                            <tr height=3D"8" class=3D"space=
+rRow">
+                                                <td style=3D"-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 8p=
+x;">&nbsp;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div> </div>
+<div class=3D"component full-width" style=3D"padding: 0px !important;"> <di=
+v class=3D"header-bar" style=3D"overflow: hidden;"> <table role=3D"presenta=
+tion" align=3D"center" class=3D"responsive-table table-w-bg-color" style=3D=
+"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-c=
+ollapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%=
+;font-family: Arial, Helvetica, sans-serif; margin-right: 0px; margin-left:=
+ 0px;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" =
+marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0" width=3D"650"> <tbody> <=
+tr height=3D"5" class=3D"spacerRow"> <td style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 5px;">&nbsp;<=
+/td> </tr> <tr> <td class=3D"responsive-table" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;font-size:24px;color:#000000;" vali=
+gn=3D"top"> <table role=3D"presentation" width=3D"100%" style=3D"mso-table-=
+lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:col=
+lapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;min-width:=
+ 100%;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0"=
+ marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"> <tbody> <tr> <td style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;padding: 0 1=
+5pt;font-family:Arial, Helvetica, sans-serif;"> <div class=3D"cke_editable =
+cke_editable_inline cke_contents_ltr cke_focus cke_show_borders" style=3D"o=
+verflow: hidden;"><p align=3D"center" style=3D"margin: 0;text-align:center"=
+><span style=3D"font-size:20px;"><span style=3D"font-family:Calibri,sans-se=
+rif"><i><span style=3D"color:black">Month of July Wrap-up</span></i></span>=
+</span></p></div> </td> </tr> </tbody> </table> </td> </tr> <tr height=3D"5=
+" class=3D"spacerRow"> <td style=3D"-webkit-text-size-adjust: 100%; -ms-tex=
+t-size-adjust: 100%;font-size: 0%; line-height: 5px;">&nbsp;</td> </tr> </t=
+body> </table> </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 461px;" alt=3D"000" src=
+=3D"https://houchinforms.house.gov/UploadedPhotos/MediumResolution/4df33b7e=
+-f03d-495e-86c6-d8e7b248c16f.png"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;"><span style=3D"font-size:12pt"><span style=3D"font-fa=
+mily:Calibri,sans-serif">When I legislate in Washington or Washington Count=
+y, it=E2=80=99s important to get the job done for Hoosiers. I accomplish th=
+at by one guiding principle: <b>Contend.</b>&nbsp;&nbsp;&nbsp; </span></spa=
+n></p><p style=3D"margin: 0;"><span style=3D"font-size:12pt"><span style=3D=
+"font-family:Calibri,sans-serif">&nbsp;</span></span></p><p style=3D"margin=
+: 0;"><span style=3D"font-size:12pt"><span style=3D"font-family:Calibri,san=
+s-serif">It isn=E2=80=99t just a word on a post-it note framed in my home, =
+it=E2=80=99s our family motto and a daily reminder to boldly fight for my c=
+onstituents in Congress.&nbsp; </span></span></p><p style=3D"margin: 0;"><s=
+pan style=3D"font-size:12pt"><span style=3D"font-family:Calibri,sans-serif"=
+>&nbsp;</span></span></p><p style=3D"margin: 0;"><span style=3D"font-size:1=
+2pt"><span style=3D"font-family:Calibri,sans-serif">That=E2=80=99s what I p=
+lan to do in my =E2=80=9CContender=E2=80=9D newsletter, and throughout my t=
+ime in Congress. I will always contend for the people and communities I rep=
+resent. </span></span></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><d=
+iv class=3D"component-template" style=3D"overflow: hidden;"><p style=3D"mar=
+gin: 0;text-align:start"><span style=3D"font-size:medium"><span style=3D"fo=
+nt-family:Calibri, sans-serif"><span style=3D"color:#000000"><span style=3D=
+"font-style:normal"><span style=3D"font-weight:400"><span style=3D"white-sp=
+ace:normal"><span style=3D"text-decoration:none"><b><span style=3D"font-siz=
+e:16pt"><span style=3D"color:#203864">WATCH: Recognizing Silver Creek High =
+School Baseball Team on House Floor =E2=80=93 Go Dragons! </span></span></b=
+></span></span></span></span></span></span></span></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><a href=3D"https://urldefense.com/v3/__https:/=
+/www.youtube.com/watch?v=3Dfo4IVBkvjco__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!=
+BFSHcSCiixnyYaUdWSJrO1ADFiQtxPHMGkz6XWfEu7iWaw_IQSvunAumX3THzvn9ABR-Z5eNnEn=
+_xa05v-boPQL0Q6bcFshHJ14ToqHvh-0F$" target=3D"_blank" style=3D"-webkit-text=
+-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img style=3D"max-width:60=
+0px;-ms-interpolation-mode: bicubic;vertical-align: bottom; max-width: 550p=
+x;" alt=3D"fs" src=3D"https://houchinforms.house.gov/UploadedPhotos/MediumR=
+esolution/25a19030-f8aa-4f55-ab94-18542961f663.png"></a></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;"><span style=3D"font-size:12pt"><span style=3D"font-fa=
+mily:Calibri,sans-serif">Recently, the Silver Creek High School baseball te=
+am made history by winning the program=E2=80=99s first ever Class 3A state =
+title.</span></span></p><p style=3D"margin: 0;"><br></p><p style=3D"margin:=
+ 0;"><span style=3D"font-size:12pt"><span style=3D"font-family:Calibri,sans=
+-serif">It is truly an honor and a privilege to recognize this Sellersburg =
+baseball team on the House floor. This is not only an impressive victory, b=
+ut a testament to the guidance and leadership of Coach Joe Decker and his c=
+oaching staff who worked diligently to mold these young men not only into s=
+tate champions, but future leaders. </span></span></p><p style=3D"margin: 0=
+;"><span style=3D"font-size:12pt"><span style=3D"font-family:Calibri,sans-s=
+erif">&nbsp;</span></span></p><p style=3D"margin: 0;"><span style=3D"font-s=
+ize:12pt"><span style=3D"font-family:Calibri,sans-serif">Their countless ho=
+urs of practice, preparation, and teamwork have&nbsp;finally paid off, and =
+will, without a doubt, inspire future generations of players and coaches to=
+ strive for both excellence and good sportsmanship. </span></span></p><p st=
+yle=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span style=3D"font-size=
+:12pt"><span style=3D"font-family:Calibri,sans-serif">&nbsp;To view the flo=
+or speech,&nbsp;<a data-cke-saved-href=3D"https://www.youtube.com/watch?v=
+=3Dfo4IVBkvjco" href=3D"https://urldefense.com/v3/__https://www.youtube.com=
+/watch?v=3Dfo4IVBkvjco__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!BFSHcSCiixnyYaUd=
+WSJrO1ADFiQtxPHMGkz6XWfEu7iWaw_IQSvunAumX3THzvn9ABR-Z5eNnEn_xa05v-boPQL0Q6b=
+cFshHJ14ToqHvh-0F$" target=3D"_blank" title=3D"https://www.youtube.com/watc=
+h?v=3Dfo4IVBkvjco" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-a=
+djust: 100%;color:#0563c1; text-decoration:underline"><b>click here</b></a>=
+.</span></span></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component full-width" style=3D"padding: 0px !important;"> <di=
+v class=3D"header-bar" style=3D"overflow: hidden;"> <table role=3D"presenta=
+tion" align=3D"center" class=3D"responsive-table table-w-bg-color" style=3D=
+"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-c=
+ollapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%=
+;font-family: Arial, Helvetica, sans-serif; margin-right: 0px; margin-left:=
+ 0px;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" =
+marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0" width=3D"650"> <tbody> <=
+tr height=3D"5" class=3D"spacerRow"> <td style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 5px;">&nbsp;<=
+/td> </tr> <tr> <td class=3D"responsive-table" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;font-size:24px;color:#000000;" vali=
+gn=3D"top"> <table role=3D"presentation" width=3D"100%" style=3D"mso-table-=
+lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:col=
+lapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;min-width:=
+ 100%;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0"=
+ marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"> <tbody> <tr> <td style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;padding: 0 1=
+5pt;font-family:Arial, Helvetica, sans-serif;"> <div class=3D"cke_editable =
+cke_editable_inline cke_contents_ltr cke_show_borders cke_focus" style=3D"o=
+verflow: hidden;"><h2 style=3D"text-align: left;"><span style=3D"font-size:=
+12pt"><span style=3D"font-family:Calibri,sans-serif"><b><span style=3D"font=
+-size:16.0pt"><span style=3D"color:#1f3864">PASSED: The <i>Schools Not Shel=
+ters Act</i> Amid Border Crisis</span></span></b></span></span></h2></div> =
+</td> </tr> </tbody> </table> </td> </tr> <tr height=3D"5" class=3D"spacerR=
+ow"> <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;font-size: 0%; line-height: 5px;">&nbsp;</td> </tr> </tbody> </table> </d=
+iv> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 512px;" alt=3D"11" src=
+=3D"https://houchinforms.house.gov/UploadedPhotos/MediumResolution/b035a31f=
+-3dde-4e54-80e6-330eb9f39561.png"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;"><span style=3D"font-size:12pt"><span style=3D"font-fa=
+mily:Calibri,sans-serif">As a member of the House Education and&nbsp;Workfo=
+rce Committee and cosponsor of the legislation, I voted to pass the <a data=
+-cke-saved-href=3D"https://houchin.house.gov/media/press-releases/congressw=
+oman-houchin-supports-passage-schools-not-shelters-act-amid-border" href=3D=
+"https://houchin.house.gov/media/press-releases/congresswoman-houchin-suppo=
+rts-passage-schools-not-shelters-act-amid-border" style=3D"-webkit-text-siz=
+e-adjust: 100%; -ms-text-size-adjust: 100%;color:#0563c1; text-decoration:u=
+nderline"><i>Schools Not Shelters Act&nbsp;</i></a>to prohibit the use of e=
+ducational facilities to provide shelter or housing for illegal migrants. T=
+his would include public elementary schools, public secondary schools, and =
+institutions of higher education.</span></span></p><p style=3D"margin: 0;">=
+<span style=3D"font-size:12pt"><span style=3D"font-family:Calibri,sans-seri=
+f">&nbsp;</span></span></p><p style=3D"margin: 0;"><span style=3D"font-size=
+:12pt"><span style=3D"font-family:Calibri,sans-serif">The House passage of =
+this bill sends a clear message to the Biden Administration and cities acro=
+ss the country that the safety and education of students comes first. Our s=
+chools won=E2=80=99t be used to clean up President Biden=E2=80=99s failed b=
+order policies.</span></span></p><p style=3D"margin: 0;"><br></p><p style=
+=3D"margin: 0;"><span style=3D"font-size:12pt"><span style=3D"font-family:C=
+alibri,sans-serif">I was pleased to manage the rule for the consideration o=
+f the bill on the House Floor. To watch my full remarks,&nbsp;<a data-cke-s=
+aved-href=3D"https://youtu.be/sqPYv9Xt52k?t=3D182" href=3D"https://urldefen=
+se.com/v3/__https://youtu.be/sqPYv9Xt52k?t=3D182__;!!Ckt11KVezJIME51BYf4a6h=
+rLATHilnk!BFSHcSCiixnyYaUdWSJrO1ADFiQtxPHMGkz6XWfEu7iWaw_IQSvunAumX3THzvn9A=
+BR-Z5eNnEn_xa05v-boPQL0Q6bcFshHJ14TouXC3C3p$" target=3D"_blank" title=3D"ht=
+tps://youtu.be/sqPYv9Xt52k?t=3D182" style=3D"-webkit-text-size-adjust: 100%=
+; -ms-text-size-adjust: 100%;color:#0563c1; text-decoration:underline">clic=
+k here</a>.</span></span></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><a href=3D"https://urldefense.com/v3/__https:/=
+/www.youtube.com/watch?v=3DsqPYv9Xt52k&amp;t=3D182s__;!!Ckt11KVezJIME51BYf4=
+a6hrLATHilnk!BFSHcSCiixnyYaUdWSJrO1ADFiQtxPHMGkz6XWfEu7iWaw_IQSvunAumX3THzv=
+n9ABR-Z5eNnEn_xa05v-boPQL0Q6bcFshHJ14TosLktN2z$" target=3D"_blank" style=3D=
+"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img style=3D=
+"max-width:600px;-ms-interpolation-mode: bicubic;vertical-align: bottom; ma=
+x-width: 550px;" alt=3D"111" src=3D"https://houchinforms.house.gov/Uploaded=
+Photos/MediumResolution/d67901f8-14e2-43eb-b279-8a61649db0de.png"></a></div=
+>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;"><span style=3D"font-family:Arial,Helvetica,sans-serif=
+;"><span style=3D"font-size:12pt">=F0=9F=93=84: </span></span><span style=
+=3D"font-size:12pt"><span style=3D"font-family:Calibri,sans-serif">For the =
+bill text,&nbsp;<a data-cke-saved-href=3D"https://www.govinfo.gov/content/p=
+kg/BILLS-118hr3941rh/pdf/BILLS-118hr3941rh.pdf" href=3D"https://urldefense.=
+com/v3/__https://www.govinfo.gov/content/pkg/BILLS-118hr3941rh/pdf/BILLS-11=
+8hr3941rh.pdf__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!BFSHcSCiixnyYaUdWSJrO1ADF=
+iQtxPHMGkz6XWfEu7iWaw_IQSvunAumX3THzvn9ABR-Z5eNnEn_xa05v-boPQL0Q6bcFshHJ14T=
+osUSRktA$" target=3D"_blank" title=3D"https://www.govinfo.gov/content/pkg/B=
+ILLS-118hr3941rh/pdf/BILLS-118hr3941rh.pdf" style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;color:#0563c1; text-decoration:underli=
+ne">click here</a>.</span></span></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component full-width" style=3D"padding: 0px !important;"> <di=
+v class=3D"header-bar" style=3D"overflow: hidden;"> <table role=3D"presenta=
+tion" align=3D"center" class=3D"responsive-table table-w-bg-color" style=3D=
+"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-c=
+ollapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%=
+;font-family: Arial, Helvetica, sans-serif; margin-right: 0px; margin-left:=
+ 0px;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" =
+marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0" width=3D"650"> <tbody> <=
+tr height=3D"5" class=3D"spacerRow"> <td style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 5px;">&nbsp;<=
+/td> </tr> <tr> <td class=3D"responsive-table" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;font-size:24px;color:#000000;" vali=
+gn=3D"top"> <table role=3D"presentation" width=3D"100%" style=3D"mso-table-=
+lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:col=
+lapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;min-width:=
+ 100%;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0"=
+ marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"> <tbody> <tr> <td style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;padding: 0 1=
+5pt;font-family:Arial, Helvetica, sans-serif;"> <div class=3D"cke_editable =
+cke_editable_inline cke_contents_ltr cke_show_borders cke_focus" style=3D"o=
+verflow: hidden;"><h2 style=3D"text-align: left;"><span style=3D"font-size:=
+12pt"><span style=3D"font-family:Calibri,sans-serif"><b><span style=3D"font=
+-size:16.0pt"><span style=3D"color:#1f3864">NEW BILL: Introduction of <i>No=
+ ESG Act</i> to Limit Far-Left Proposals</span></span></b></span></span></h=
+2></div> </td> </tr> </tbody> </table> </td> </tr> <tr height=3D"5" class=
+=3D"spacerRow"> <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-size: 0%; line-height: 5px;">&nbsp;</td> </tr> </tbody> <=
+/table> </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 550px;" alt=3D"00" src=
+=3D"https://houchinforms.house.gov/UploadedPhotos/MediumResolution/837ed88f=
+-1af5-43d0-a2dd-af291bbc480b.png"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;text-align:start"><span style=3D"font-size:medium"><spa=
+n style=3D"font-family:Calibri, sans-serif"><span style=3D"color:#000000"><=
+span style=3D"font-style:normal"><span style=3D"font-weight:400"><span styl=
+e=3D"white-space:normal"><span style=3D"text-decoration:none">As a member o=
+f the Financial Services Committee and the ESG Working Group, I introduced =
+the&nbsp;<i>No Expensive, Stifling Governance&nbsp;</i>(No ESG)&nbsp;<i>Act=
+.</i>&nbsp;The bill would prevent far-left activists from forcing everyday =
+investors to vote on duplicative or substantially similar Environmental, So=
+cial and Governance (ESG) shareholder&nbsp;proposals.</span></span></span><=
+/span></span></span></span></p><p style=3D"margin: 0;text-align:start"><spa=
+n style=3D"font-size:medium"><span style=3D"font-family:Calibri, sans-serif=
+"><span style=3D"color:#000000"><span style=3D"font-style:normal"><span sty=
+le=3D"font-weight:400"><span style=3D"white-space:normal"><span style=3D"te=
+xt-decoration:none">&nbsp;</span></span></span></span></span></span></span>=
+</p><p style=3D"margin: 0;text-align:start"><span style=3D"font-size:medium=
+"><span style=3D"font-family:Calibri, sans-serif"><span style=3D"color:#000=
+000"><span style=3D"font-style:normal"><span style=3D"font-weight:400"><spa=
+n style=3D"white-space:normal"><span style=3D"text-decoration:none">Souther=
+n Indiana companies shouldn=E2=80=99t have to deal with duplicative far-lef=
+t shareholder proposals year after year. That=E2=80=99s why I=E2=80=99ve in=
+troduced this first of its kind legislation to put an end to redundant ESG =
+proposals.</span></span></span></span></span></span></span></p><p style=3D"=
+margin: 0;text-align:start"><span style=3D"font-size:medium"><span style=3D=
+"font-family:Calibri, sans-serif"><span style=3D"color:#000000"><span style=
+=3D"font-style:normal"><span style=3D"font-weight:400"><span style=3D"white=
+-space:normal"><span style=3D"text-decoration:none">&nbsp;</span></span></s=
+pan></span></span></span></span></p><p style=3D"margin: 0;text-align:start"=
+><span style=3D"font-size:medium"><span style=3D"font-family:Calibri, sans-=
+serif"><span style=3D"color:#000000"><span style=3D"font-style:normal"><spa=
+n style=3D"font-weight:400"><span style=3D"white-space:normal"><span style=
+=3D"text-decoration:none">The&nbsp;<i>No ESG Act</i>&nbsp;would stop a new =
+proposed rule under the Securities and Exchange Commission (SEC) that would=
+ greenlight left-wing ESG proposals even if shareholders have recently reje=
+cted similar proposals. In doing so, this bill provides companies with the =
+means to exclude duplicative or substantially similar shareholder proposals=
+ to save time and money for everyday investors. </span></span></span></span=
+></span></span></span></p><p style=3D"margin: 0;text-align:start"><span sty=
+le=3D"font-size:medium"><span style=3D"font-family:Calibri, sans-serif"><sp=
+an style=3D"color:#000000"><span style=3D"font-style:normal"><span style=3D=
+"font-weight:400"><span style=3D"white-space:normal"><span style=3D"text-de=
+coration:none">&nbsp;</span></span></span></span></span></span></span></p><=
+p style=3D"margin: 0;text-align:start"><span style=3D"font-size:medium"><sp=
+an style=3D"font-family:Calibri, sans-serif"><span style=3D"color:#000000">=
+<span style=3D"font-style:normal"><span style=3D"font-weight:400"><span sty=
+le=3D"white-space:normal"><span style=3D"text-decoration:none">Last week, I=
+ took to the House floor to share the need to pass this new bill. To watch =
+my full remarks,&nbsp;<a data-cke-saved-href=3D"http://www.youtube.com/watc=
+h?v=3D9ToBBtcZMNU" href=3D"https://urldefense.com/v3/__http://www.youtube.c=
+om/watch?v=3D9ToBBtcZMNU__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!BFSHcSCiixnyYa=
+UdWSJrO1ADFiQtxPHMGkz6XWfEu7iWaw_IQSvunAumX3THzvn9ABR-Z5eNnEn_xa05v-boPQL0Q=
+6bcFshHJ14Ton3b0XjU$" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;color:#954f72; text-decoration:underline">click here</a>.</s=
+pan></span></span></span></span></span></span></p><p style=3D"margin: 0;tex=
+t-align:start"><span style=3D"font-size:medium"><span style=3D"font-family:=
+Calibri, sans-serif"><span style=3D"color:#000000"><span style=3D"font-styl=
+e:normal"><span style=3D"font-weight:400"><span style=3D"white-space:normal=
+"><span style=3D"text-decoration:none"><b>&nbsp;&nbsp;</b></span></span></s=
+pan></span></span></span></span></p><p style=3D"margin: 0;text-align:start"=
+><span style=3D"font-size:medium"><span style=3D"font-family:Calibri, sans-=
+serif"><span style=3D"color:#000000"><span style=3D"font-style:normal"><spa=
+n style=3D"font-weight:400"><span style=3D"white-space:normal"><span style=
+=3D"text-decoration:none"><span style=3D"font-family:&quot;Apple Color Emoj=
+i&quot;">=F0=9F=93=84</span><span style=3D"font-family:Cambria, serif">: </=
+span>For the bill text,&nbsp;<a data-cke-saved-href=3D"https://houchin.hous=
+e.gov/sites/evo-subsites/houchin.house.gov/files/evo-media-document/no-esg-=
+act-signed62.pdf" href=3D"https://houchin.house.gov/sites/evo-subsites/houc=
+hin.house.gov/files/evo-media-document/no-esg-act-signed62.pdf" style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color:#954f72; tex=
+t-decoration:underline">click here</a>.</span></span></span></span></span><=
+/span></span></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component full-width" style=3D"padding: 0px !important;"> <di=
+v class=3D"header-bar" style=3D"overflow: hidden;"> <table role=3D"presenta=
+tion" align=3D"center" class=3D"responsive-table table-w-bg-color" style=3D=
+"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-c=
+ollapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%=
+;font-family: Arial, Helvetica, sans-serif; margin-right: 0px; margin-left:=
+ 0px;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" =
+marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0" width=3D"650"> <tbody> <=
+tr height=3D"5" class=3D"spacerRow"> <td style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 5px;">&nbsp;<=
+/td> </tr> <tr> <td class=3D"responsive-table" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;font-size:24px;color:#000000;" vali=
+gn=3D"top"> <table role=3D"presentation" width=3D"100%" style=3D"mso-table-=
+lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:col=
+lapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;min-width:=
+ 100%;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0"=
+ marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"> <tbody> <tr> <td style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;padding: 0 1=
+5pt;font-family:Arial, Helvetica, sans-serif;"> <div class=3D"cke_editable =
+cke_editable_inline cke_contents_ltr cke_focus cke_show_borders" style=3D"o=
+verflow: hidden;"><h2 style=3D"text-align: left;"><span style=3D"font-size:=
+12pt"><span style=3D"font-family:Calibri,sans-serif"><b><span style=3D"font=
+-size:16.0pt"><span style=3D"color:#1f3864">If you know a Veteran </span></=
+span></b></span></span></h2></div> </td> </tr> </tbody> </table> </td> </tr=
+> <tr height=3D"5" class=3D"spacerRow"> <td style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 5px;">&nbs=
+p;</td> </tr> </tbody> </table> </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;"><span style=3D"font-size:12pt"><span style=3D"font-fa=
+mily:Calibri,sans-serif"><span style=3D"color:black">The PACT Act is a new =
+law that expands healthcare and benefits for our veterans exposed to burn p=
+its, Agent Orange, or other toxic substances.</span></span></span></p><p st=
+yle=3D"margin: 0;"><span style=3D"font-size:12pt"><span style=3D"font-famil=
+y:Calibri,sans-serif">&nbsp;</span></span></p><p style=3D"margin: 0;"><span=
+ style=3D"font-size:12pt"><span style=3D"font-family:Calibri,sans-serif"><s=
+pan style=3D"color:black">To check your eligibility for potential benefits,=
+ visit&nbsp;</span><span style=3D"color:#1f3864"><a data-cke-saved-href=3D"=
+https://urldefense.com/v3/__https:/www.va.gov/resources/the-pact-act-and-yo=
+ur-va-benefits/__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!A73jdIjWWcSx8o7e9cJ0zrW=
+Sgemvbm0ON09Q9s6gfSaaxczU0g79Ogt7Y7BROx2iXcEdhDVOXYhNur86GHUBz3ujCPyt0S6GsR=
+TSJt3AQDmS$" href=3D"https://urldefense.com/v3/__https:/www.va.gov/resource=
+s/the-pact-act-and-your-va-benefits/__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!A7=
+3jdIjWWcSx8o7e9cJ0zrWSgemvbm0ON09Q9s6gfSaaxczU0g79Ogt7Y7BROx2iXcEdhDVOXYhNu=
+r86GHUBz3ujCPyt0S6GsRTSJt3AQDmS$" title=3D"https://urldefense.com/v3/__http=
+s:/www.va.gov/resources/the-pact-act-and-your-va-benefits/__;!!Ckt11KVezJIM=
+E51BYf4a6hrLATHilnk!A73jdIjWWcSx8o7e9cJ0zrWSgemvbm0ON09Q9s6gfSaaxczU0g79Ogt=
+7Y7BROx2iXcEdhDVOXYhNur86GHUBz3ujCPyt0S6GsRTSJt3AQDmS$" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;color:#0563c1; text-decora=
+tion:underline">VA.gov/PACT</a></span><span style=3D"color:black">&nbsp;or =
+contact my team at (812) 288-3999 for more information!</span></span></span=
+></p><p style=3D"margin: 0;"><span style=3D"font-size:12pt"><span style=3D"=
+font-family:Calibri,sans-serif">&nbsp;</span></span></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;"><span style=3D"font-size:12pt"><span style=3D"font-fa=
+mily:Calibri,sans-serif"><b><span style=3D"font-size:16.0pt"><span style=3D=
+"color:#1f3864">Summer Interns in Washington </span></span></b></span></spa=
+n></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 550px;" alt=3D"11" src=
+=3D"https://houchinforms.house.gov/UploadedPhotos/MediumResolution/a3c962ff=
+-2213-48a6-9069-82de86ed75d7.png"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;overflow:hidden; background-color:#ffffff"><p =
+style=3D"margin: 0;"><span style=3D"font-size:11pt"><span style=3D"backgrou=
+nd:white"><span style=3D"font-family:Calibri,sans-serif"><span style=3D"fon=
+t-size:12.0pt"><span style=3D"color:black">I=E2=80=99m proud to recognize o=
+ur first ninth district summer interns in the Washington, D.C. office. Adam=
+ Longstreth and Jacob Crosley, both students at Indiana University, joined =
+our office for a nine-week internship.</span></span></span></span></span></=
+p><p style=3D"margin: 0;"><span style=3D"font-size:11pt"><span style=3D"bac=
+kground:white"><span style=3D"font-family:Calibri,sans-serif">&nbsp;</span>=
+</span></span></p><p style=3D"margin: 0;"><span style=3D"font-size:11pt"><s=
+pan style=3D"background:white"><span style=3D"font-family:Calibri,sans-seri=
+f"><span style=3D"font-size:12.0pt"><span style=3D"color:black">Adam and Ja=
+cob assisted our legislative and communications staff with daily projects a=
+nd constituent services. Their contributions have made a significant impact=
+ for folks back home, and I have no doubt that their futures will be filled=
+ with countless possibilities.</span></span></span></span></span></p><p sty=
+le=3D"margin: 0;"><span style=3D"font-size:11pt"><span style=3D"background:=
+white"><span style=3D"font-family:Calibri,sans-serif">&nbsp;</span></span><=
+/span></p><p style=3D"margin: 0;"><span style=3D"font-size:11pt"><span styl=
+e=3D"background:white"><span style=3D"font-family:Calibri,sans-serif"><span=
+ style=3D"font-size:12.0pt"><span style=3D"color:black">Adam Longstreth is =
+a rising junior from Batesville attending Indiana University in Bloomington=
+.</span></span></span></span></span></p><p style=3D"margin: 0;"><span style=
+=3D"font-size:11pt"><span style=3D"background:white"><span style=3D"font-fa=
+mily:Calibri,sans-serif">&nbsp;</span></span></span></p><p style=3D"margin:=
+ 0;"><span style=3D"font-size:11pt"><span style=3D"background:white"><span =
+style=3D"font-family:Calibri,sans-serif"><span style=3D"font-size:12.0pt"><=
+span style=3D"color:black">=E2=80=9CI wanted to intern in an office where I=
+ felt like the work I did would benefit others, and I felt like working in =
+Rep. Houchin=E2=80=99s office would be the perfect opportunity. I am gratef=
+ul to have been in a position in which I can serve my fellow Hoosiers. My h=
+ometown of Batesville is a town of kind and hardworking people, and I am gl=
+ad to have been able to serve it and the many other towns within the distri=
+ct comprised of similarly kind-hearted Hoosiers,=E2=80=9D <b>said Adam from=
+ Batesville.</b></span></span></span></span></span></p><p style=3D"margin: =
+0;"><span style=3D"font-size:11pt"><span style=3D"background:white"><span s=
+tyle=3D"font-family:Calibri,sans-serif">&nbsp;</span></span></span></p><p s=
+tyle=3D"margin: 0;"><span style=3D"font-size:11pt"><span style=3D"backgroun=
+d:white"><span style=3D"font-family:Calibri,sans-serif"><span style=3D"font=
+-size:12.0pt"><span style=3D"color:black">Jacob Crosley is a graduate stude=
+nt from Fishers attending Indiana University in Bloomington.</span></span><=
+/span></span></span></p><p style=3D"margin: 0;"><span style=3D"font-size:11=
+pt"><span style=3D"background:white"><span style=3D"font-family:Calibri,san=
+s-serif">&nbsp;</span></span></span></p><p style=3D"margin: 0;"><span style=
+=3D"font-size:11pt"><span style=3D"background:white"><span style=3D"font-fa=
+mily:Calibri,sans-serif"><span style=3D"font-size:12.0pt"><span style=3D"co=
+lor:black">=E2=80=9CThis summer taught me that politics isn=E2=80=99t a one=
+ man show, but a team effort,=E2=80=9D <b>said Jacob from Fishers. </b>=E2=
+=80=9CAs a 7th generation Hoosier, it was an honor to serve Indiana. It mea=
+nt bringing Hoosier and Midwestern values to DC; that is, staying true to t=
+he voter base while being neighborly to people on both sides of the aisle.=
+=E2=80=9D</span></span></span></span></span></p><p style=3D"margin: 0;"><sp=
+an style=3D"font-size:11pt"><span style=3D"background:white"><span style=3D=
+"font-family:Calibri,sans-serif">&nbsp;</span></span></span></p><p style=3D=
+"margin: 0;"><span style=3D"font-size:10pt"><span style=3D"font-family:Cali=
+bri,sans-serif"><span style=3D"font-size:12.0pt"><span style=3D"color:black=
+">Our office is now accepting internship applications for the Fall, Spring,=
+ and Summer sessions. Interested students can visit <a href=3D"https://houc=
+hin.house.gov/services/internships" data-cke-saved-href=3D"https://houchin.=
+house.gov/services/internships" style=3D"-webkit-text-size-adjust: 100%; -m=
+s-text-size-adjust: 100%;-webkit-text-size-adjust:100%; -ms-text-size-adjus=
+t:100%; color:#0563c1; text-decoration:underline"><span style=3D"color:#056=
+3c1">Houchin.House.Gov</span></a> or call (202) 225-5315.</span></span></sp=
+an></span></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component full-width" style=3D"padding: 0px !important;"> <di=
+v class=3D"header-bar" style=3D"overflow: hidden;"> <table role=3D"presenta=
+tion" align=3D"center" class=3D"responsive-table table-w-bg-color" style=3D=
+"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-c=
+ollapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%=
+;font-family: Arial, Helvetica, sans-serif; margin-right: 0px; margin-left:=
+ 0px;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" =
+marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0" width=3D"650"> <tbody> <=
+tr height=3D"5" class=3D"spacerRow"> <td style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 5px;">&nbsp;<=
+/td> </tr> <tr> <td class=3D"responsive-table" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;font-size:24px;color:#000000;" vali=
+gn=3D"top"> <table role=3D"presentation" width=3D"100%" style=3D"mso-table-=
+lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:col=
+lapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;min-width:=
+ 100%;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0"=
+ marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"> <tbody> <tr> <td style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;padding: 0 1=
+5pt;font-family:Arial, Helvetica, sans-serif;"> <div class=3D"cke_editable =
+cke_editable_inline cke_contents_ltr cke_show_borders cke_focus" style=3D"o=
+verflow: hidden;"><h2 style=3D"text-align: center;"><span style=3D"font-siz=
+e:medium"><span style=3D"font-family:Calibri, sans-serif"><span style=3D"co=
+lor:#000000"><span style=3D"font-style:normal"><span style=3D"font-weight:4=
+00"><span style=3D"white-space:normal"><span style=3D"text-decoration:none"=
+><b><i><span style=3D"font-size:16pt"><span style=3D"color:#203864">In IN-0=
+9</span></span></i></b></span></span></span></span></span></span></span></h=
+2></div> </td> </tr> </tbody> </table> </td> </tr> <tr height=3D"5" class=
+=3D"spacerRow"> <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;font-size: 0%; line-height: 5px;">&nbsp;</td> </tr> </tbody> <=
+/table> </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;overflow:hidden; background-color:#ffffff"><p =
+style=3D"margin: 0;"><span style=3D"font-size:medium"><span style=3D"font-f=
+amily:Calibri, sans-serif"><span style=3D"color:#000000"><span style=3D"fon=
+t-style:normal"><span style=3D"font-weight:400"><span style=3D"white-space:=
+normal"><span style=3D"text-decoration:none"><b><span style=3D"font-size:16=
+pt"><span style=3D"color:#203864">Jacob McClanahan Road Naming Ceremony </s=
+pan></span></b></span></span></span></span></span></span></span></p></div><=
+/div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 550px;" alt=3D"99" src=
+=3D"https://houchinforms.house.gov/UploadedPhotos/MediumResolution/06d6d5cb=
+-1fa5-4d33-804d-64aacf50f16b.png"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;text-align:start"><span style=3D"font-size:medium"><spa=
+n style=3D"font-family:Calibri, sans-serif"><span style=3D"color:#000000"><=
+span style=3D"font-style:normal"><span style=3D"font-weight:400"><span styl=
+e=3D"white-space:normal"><span style=3D"text-decoration:none">Back in Harri=
+son County, I participated in a road naming ceremony in honor of fallen Vol=
+unteer Firefighter, Jacob McClanahan.</span></span></span></span></span></s=
+pan></span></p><p style=3D"margin: 0;text-align:start"><span style=3D"font-=
+size:medium"><span style=3D"font-family:Calibri, sans-serif"><span style=3D=
+"color:#000000"><span style=3D"font-style:normal"><span style=3D"font-weigh=
+t:400"><span style=3D"white-space:normal"><span style=3D"text-decoration:no=
+ne">&nbsp;</span></span></span></span></span></span></span></p><p style=3D"=
+margin: 0;text-align:start"><span style=3D"font-size:medium"><span style=3D=
+"font-family:Calibri, sans-serif"><span style=3D"color:#000000"><span style=
+=3D"font-style:normal"><span style=3D"font-weight:400"><span style=3D"white=
+-space:normal"><span style=3D"text-decoration:none">Jacob=E2=80=99s life wa=
+s taken last year when he stopped to help a stranded motorist. The driver o=
+f that vehicle then tragically and senselessly shot him. Jacob=E2=80=99s la=
+st act of service was on May 16th, 2022. </span></span></span></span></span=
+></span></span></p><p style=3D"margin: 0;text-align:start"><br></p><p style=
+=3D"margin: 0;text-align:start"><span style=3D"font-size:medium"><span styl=
+e=3D"font-family:Calibri, sans-serif"><span style=3D"color:#000000"><span s=
+tyle=3D"font-style:normal"><span style=3D"font-weight:400"><span style=3D"w=
+hite-space:normal"><span style=3D"text-decoration:none">Jacob was a man of =
+service. Someone who wanted to give back to his neighbors. That was clear b=
+y his service as a firefighter for Ramsey Volunteer Fire Department, Harris=
+on Township Volunteer Fire Department, Leavenworth Volunteer Fire Departmen=
+t, and New Middletown Volunteer Fire Department.</span></span></span></span=
+></span></span></span></p><p style=3D"margin: 0;text-align:start"><br></p><=
+p style=3D"margin: 0;text-align:start"><span style=3D"font-size:medium"><sp=
+an style=3D"font-family:Calibri, sans-serif"><span style=3D"color:#000000">=
+<span style=3D"font-style:normal"><span style=3D"font-weight:400"><span sty=
+le=3D"white-space:normal"><span style=3D"text-decoration:none">I was honore=
+d to be part of the ceremony naming a portion of State Road 135 in Jacob=E2=
+=80=99s memory and to spend time with his parents and loved ones. I hope th=
+at this stretch of State Road 135 will remind every Hoosier who drives on i=
+t of legacy and selfless sacrifice Jacob left behind. And honor the great r=
+isk our local emergency personnel take every day to keep us safe. I know ea=
+ch time I drive here I will remember. </span></span></span></span></span></=
+span></span></p><p style=3D"margin: 0;text-align:start"><br></p><p style=3D=
+"margin: 0;text-align:start"><span style=3D"font-size:medium"><span style=
+=3D"font-family:Calibri, sans-serif"><span style=3D"color:#000000"><span st=
+yle=3D"font-style:normal"><span style=3D"font-weight:400"><span style=3D"wh=
+ite-space:normal"><span style=3D"text-decoration:none">Thank you to the McC=
+lanahan family, loved ones, and the local leaders who made this possible.</=
+span></span></span></span></span></span></span></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 550px;" alt=3D"77" src=
+=3D"https://houchinforms.house.gov/UploadedPhotos/MediumResolution/540c733e=
+-a575-4f2e-a8f0-8a395727bfc4.png"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;overflow:hidden; background-color:#ffffff"><p =
+style=3D"margin: 0;"><span style=3D"font-size:medium"><span style=3D"font-f=
+amily:Calibri, sans-serif"><span style=3D"color:#000000"><span style=3D"fon=
+t-style:normal"><span style=3D"font-weight:400"><span style=3D"white-space:=
+normal"><span style=3D"text-decoration:none"><b><span style=3D"font-size:16=
+pt"><span style=3D"color:#203864">Congressional Award Medal Goes to Scottsb=
+urg Student</span></span></b></span></span></span></span></span></span></sp=
+an></p></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 550px;" alt=3D"11" src=
+=3D"https://houchinforms.house.gov/UploadedPhotos/MediumResolution/04c52e3c=
+-b942-46c1-a9b2-c42a7c3169f3.png"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;text-align:start"><span style=3D"font-size:medium"><spa=
+n style=3D"font-family:Calibri, sans-serif"><span style=3D"color:#000000"><=
+span style=3D"font-style:normal"><span style=3D"font-weight:400"><span styl=
+e=3D"white-space:normal"><span style=3D"text-decoration:none">In Scott Coun=
+ty, I presented <a data-cke-saved-href=3D"https://houchin.house.gov/media/p=
+ress-releases/photos-congresswoman-houchin-presents-congressional-award-med=
+als-scottsburg" href=3D"https://houchin.house.gov/media/press-releases/phot=
+os-congresswoman-houchin-presents-congressional-award-medals-scottsburg" st=
+yle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color:#95=
+4f72; text-decoration:underline">the Congressional Award</a> to Sophia Voil=
+es, a rising senior from Scottsburg Senior High School. </span></span></spa=
+n></span></span></span></span></p><p style=3D"margin: 0;text-align:start"><=
+span style=3D"font-size:medium"><span style=3D"font-family:Calibri, sans-se=
+rif"><span style=3D"color:#000000"><span style=3D"font-style:normal"><span =
+style=3D"font-weight:400"><span style=3D"white-space:normal"><span style=3D=
+"text-decoration:none">&nbsp;</span></span></span></span></span></span></sp=
+an></p><p style=3D"margin: 0;text-align:start"><span style=3D"font-size:med=
+ium"><span style=3D"font-family:Calibri, sans-serif"><span style=3D"color:#=
+000000"><span style=3D"font-style:normal"><span style=3D"font-weight:400"><=
+span style=3D"white-space:normal"><span style=3D"text-decoration:none">Ther=
+e is no higher honor than the Congressional Award for our young people, and=
+ the ninth district is proud to be home to a silver and bronze medal recipi=
+ent. These awards are earned, not given. Sophia has displayed the ability t=
+o set and achieve her own personal goals, while preparing for future servic=
+e to others.</span></span></span></span></span></span></span></p><p style=
+=3D"margin: 0;text-align:start"><span style=3D"font-size:medium"><span styl=
+e=3D"font-family:Calibri, sans-serif"><span style=3D"color:#000000"><span s=
+tyle=3D"font-style:normal"><span style=3D"font-weight:400"><span style=3D"w=
+hite-space:normal"><span style=3D"text-decoration:none">&nbsp;</span></span=
+></span></span></span></span></span></p><p style=3D"margin: 0;text-align:st=
+art"><span style=3D"font-size:medium"><span style=3D"font-family:Calibri, s=
+ans-serif"><span style=3D"color:#000000"><span style=3D"font-style:normal">=
+<span style=3D"font-weight:400"><span style=3D"white-space:normal"><span st=
+yle=3D"text-decoration:none">The Congressional Award provides opportunities=
+ for young people to unleash their potential by achieving personal goals fo=
+cused on volunteerism, personal development, physical fitness, and expediti=
+on and exploration.</span></span></span></span></span></span></span></p><p =
+style=3D"margin: 0;text-align:start"><br></p><p style=3D"margin: 0;text-ali=
+gn:start"><span style=3D"font-size:medium"><span style=3D"font-family:Calib=
+ri, sans-serif"><span style=3D"color:#000000"><span style=3D"font-style:nor=
+mal"><span style=3D"font-weight:400"><span style=3D"white-space:normal"><sp=
+an style=3D"text-decoration:none">To learn more about the Congressional Awa=
+rd,&nbsp;<a data-cke-saved-href=3D"https://urldefense.com/v3/__http:/www.co=
+ngressionalaward.org/__;!!Bg5easoyC-OII2vlEqY8mTBrtW-N4OJKAQ!KEMNmFS6GSfIpk=
+cJ0fhJr2J8eKv8cTVDvDSaN9rdizUCv0WLRRBcjfNbYCIpAz4-ubtRkDSfo4JFPN3bPL66O2OAZ=
+EXFXlEQRw$" href=3D"https://urldefense.com/v3/__http:/www.congressionalawar=
+d.org/__;!!Bg5easoyC-OII2vlEqY8mTBrtW-N4OJKAQ!KEMNmFS6GSfIpkcJ0fhJr2J8eKv8c=
+TVDvDSaN9rdizUCv0WLRRBcjfNbYCIpAz4-ubtRkDSfo4JFPN3bPL66O2OAZEXFXlEQRw$" tar=
+get=3D"_blank" title=3D"https://urldefense.com/v3/__http:/www.congressional=
+award.org/__;!!Bg5easoyC-OII2vlEqY8mTBrtW-N4OJKAQ!KEMNmFS6GSfIpkcJ0fhJr2J8e=
+Kv8cTVDvDSaN9rdizUCv0WLRRBcjfNbYCIpAz4-ubtRkDSfo4JFPN3bPL66O2OAZEXFXlEQRw$"=
+ style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color:=
+#954f72; text-decoration:underline">click here</a>.</span></span></span></s=
+pan></span></span></span></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component full-width" style=3D"padding: 0px !important;"> <di=
+v class=3D"header-bar" style=3D"overflow: hidden;"> <table role=3D"presenta=
+tion" align=3D"center" class=3D"responsive-table table-w-bg-color" style=3D=
+"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-c=
+ollapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%=
+;font-family: Arial, Helvetica, sans-serif; margin-right: 0px; margin-left:=
+ 0px;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" =
+marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0" width=3D"650"> <tbody> <=
+tr height=3D"5" class=3D"spacerRow"> <td style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 5px;">&nbsp;<=
+/td> </tr> <tr> <td class=3D"responsive-table" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;font-size:24px;color:#000000;" vali=
+gn=3D"top"> <table role=3D"presentation" width=3D"100%" style=3D"mso-table-=
+lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:col=
+lapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;min-width:=
+ 100%;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0"=
+ marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"> <tbody> <tr> <td style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;padding: 0 1=
+5pt;font-family:Arial, Helvetica, sans-serif;"> <div class=3D"cke_editable =
+cke_editable_inline cke_contents_ltr cke_show_borders cke_focus" style=3D"o=
+verflow: hidden;"><h2 style=3D"text-align: center;"><span style=3D"font-siz=
+e:medium"><span style=3D"font-family:Calibri, sans-serif"><span style=3D"co=
+lor:#000000"><span style=3D"font-style:normal"><span style=3D"font-weight:4=
+00"><span style=3D"white-space:normal"><span style=3D"text-decoration:none"=
+><b><i><span style=3D"font-size:16pt"><span style=3D"color:#203864">In the =
+News</span></span></i></b></span></span></span></span></span></span></span>=
+</h2></div> </td> </tr> </tbody> </table> </td> </tr> <tr height=3D"5" clas=
+s=3D"spacerRow"> <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size=
+-adjust: 100%;font-size: 0%; line-height: 5px;">&nbsp;</td> </tr> </tbody> =
+</table> </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><d=
+iv style=3D"overflow: hidden;overflow:hidden; background-color:#ffffff"><p =
+style=3D"margin: 0;text-align: center;"><br></p><p style=3D"margin: 0;text-=
+align: center;"><span style=3D"font-size:medium"><span style=3D"font-family=
+:Calibri, sans-serif"><span style=3D"color:#000000"><span style=3D"font-sty=
+le:normal"><span style=3D"font-weight:400"><span style=3D"white-space:norma=
+l"><span style=3D"text-decoration:none"><span style=3D"color:black">WIBC | =
+</span><i><a data-cke-saved-href=3D"https://wibc.com/154973/houchin-schools=
+-should-not-be-used-to-house-illegal-immigrants/" href=3D"https://urldefens=
+e.com/v3/__https://wibc.com/154973/houchin-schools-should-not-be-used-to-ho=
+use-illegal-immigrants/__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!BFSHcSCiixnyYaU=
+dWSJrO1ADFiQtxPHMGkz6XWfEu7iWaw_IQSvunAumX3THzvn9ABR-Z5eNnEn_xa05v-boPQL0Q6=
+bcFshHJ14TovsgtmYI$" title=3D"https://wibc.com/154973/houchin-schools-shoul=
+d-not-be-used-to-house-illegal-immigrants/" style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;color:#954f72; text-decoration:underli=
+ne"><span style=3D"color:#0078d7">Houchin: =E2=80=9CSchools Should Not Be U=
+sed To House Illegal Immigrants=E2=80=9D</span></a></i>&nbsp;</span></span>=
+</span></span></span></span></span><br></p><p style=3D"margin: 0;text-align=
+: center;"><br></p><p style=3D"margin: 0;text-align: center;"><span style=
+=3D"font-size:medium"><span style=3D"font-family:Calibri, sans-serif"><span=
+ style=3D"color:#000000"><span style=3D"font-style:normal"><span style=3D"f=
+ont-weight:400"><span style=3D"white-space:normal"><span style=3D"text-deco=
+ration:none"><span style=3D"color:#212121">Leader=E2=80=99s Edge | </span><=
+i><a data-cke-saved-href=3D"https://www.leadersedge.com/industry/fresh-pers=
+pective" href=3D"https://urldefense.com/v3/__https://www.leadersedge.com/in=
+dustry/fresh-perspective__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!BFSHcSCiixnyYa=
+UdWSJrO1ADFiQtxPHMGkz6XWfEu7iWaw_IQSvunAumX3THzvn9ABR-Z5eNnEn_xa05v-boPQL0Q=
+6bcFshHJ14TopxMHABz$" title=3D"https://www.leadersedge.com/industry/fresh-p=
+erspective" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: =
+100%;color:#954f72; text-decoration:underline"><span style=3D"color:#0078d7=
+">Fresh Perspective: Q&amp;A with Rep. Erin Houchin</span></a></i>&nbsp;</s=
+pan></span></span></span></span></span></span></p><p style=3D"margin: 0;tex=
+t-align: center;"><br></p><p style=3D"margin: 0;text-align: center;"><span =
+style=3D"font-size:medium"><span style=3D"font-family:Calibri, sans-serif">=
+<span style=3D"color:#000000"><span style=3D"font-style:normal"><span style=
+=3D"font-weight:400"><span style=3D"white-space:normal"><span style=3D"text=
+-decoration:none"><span style=3D"color:#212121">Federal Newswire | </span><=
+i><a data-cke-saved-href=3D"https://thefederalnewswire.com/stories/64460524=
+2-houchin-on-digital-assets-there-is-no-reason-why-the-u-s-shouldn-t-lead-i=
+n-this-space" href=3D"https://urldefense.com/v3/__https://thefederalnewswir=
+e.com/stories/644605242-houchin-on-digital-assets-there-is-no-reason-why-th=
+e-u-s-shouldn-t-lead-in-this-space__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!BFSH=
+cSCiixnyYaUdWSJrO1ADFiQtxPHMGkz6XWfEu7iWaw_IQSvunAumX3THzvn9ABR-Z5eNnEn_xa0=
+5v-boPQL0Q6bcFshHJ14TorxKJ--A$" title=3D"https://thefederalnewswire.com/sto=
+ries/644605242-houchin-on-digital-assets-there-is-no-reason-why-the-u-s-sho=
+uldn-t-lead-in-this-space" style=3D"-webkit-text-size-adjust: 100%; -ms-tex=
+t-size-adjust: 100%;color:#954f72; text-decoration:underline"><span style=
+=3D"color:#0078d7">Houchin on Digital Assets: 'There is no reason why the U=
+.S. shouldn't lead in this space'</span></a></i>&nbsp;</span></span></span>=
+</span></span></span></span></p><p style=3D"margin: 0;text-align: center;">=
+<br></p><p style=3D"margin: 0;text-align: center;"><span style=3D"font-size=
+:medium"><span style=3D"font-family:Calibri, sans-serif"><span style=3D"col=
+or:#000000"><span style=3D"font-style:normal"><span style=3D"font-weight:40=
+0"><span style=3D"white-space:normal"><span style=3D"text-decoration:none">=
+<span style=3D"color:#212121">Madison Courier | </span><i><a data-cke-saved=
+-href=3D"https://www.madisoncourier.com/remembering-a-local-hero/article_c2=
+ac7426-b13a-5e05-9e27-6922fa7add3e.html" href=3D"https://urldefense.com/v3/=
+__https://www.madisoncourier.com/remembering-a-local-hero/article_c2ac7426-=
+b13a-5e05-9e27-6922fa7add3e.html__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!BFSHcS=
+CiixnyYaUdWSJrO1ADFiQtxPHMGkz6XWfEu7iWaw_IQSvunAumX3THzvn9ABR-Z5eNnEn_xa05v=
+-boPQL0Q6bcFshHJ14TonyrNNY0$" target=3D"_blank" title=3D"https://www.madiso=
+ncourier.com/remembering-a-local-hero/article_c2ac7426-b13a-5e05-9e27-6922f=
+a7add3e.html" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust=
+: 100%;color:#954f72; text-decoration:underline"><span style=3D"border:1pt =
+windowtext; color:#0078d7; padding:0in">Remembering a local hero</span></a>=
+&nbsp;</i></span></span></span></span></span></span></span></p><p style=3D"=
+margin: 0;text-align: center;"><br></p><p style=3D"margin: 0;text-align: ce=
+nter;"><span style=3D"font-size:medium"><span style=3D"font-family:Calibri,=
+ sans-serif"><span style=3D"color:#000000"><span style=3D"font-style:normal=
+"><span style=3D"font-weight:400"><span style=3D"white-space:normal"><span =
+style=3D"text-decoration:none">The News and Tribune | <i><a data-cke-saved-=
+href=3D"https://www.newsandtribune.com/news/congresswoman-houchin-presents-=
+congressional-award-medals-to-scottsburg-student/article_8aad90b6-1ce2-11ee=
+-bb61-93eac4dfdacd.html" href=3D"https://urldefense.com/v3/__https://www.ne=
+wsandtribune.com/news/congresswoman-houchin-presents-congressional-award-me=
+dals-to-scottsburg-student/article_8aad90b6-1ce2-11ee-bb61-93eac4dfdacd.htm=
+l__;!!Ckt11KVezJIME51BYf4a6hrLATHilnk!BFSHcSCiixnyYaUdWSJrO1ADFiQtxPHMGkz6X=
+WfEu7iWaw_IQSvunAumX3THzvn9ABR-Z5eNnEn_xa05v-boPQL0Q6bcFshHJ14TorlJq9x_$" s=
+tyle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color:#9=
+54f72; text-decoration:underline">Congresswoman Houchin presents Congressio=
+nal Award medals to Scottsburg student</a></i></span></span></span></span><=
+/span></span></span></p><p style=3D"margin: 0;text-align:start"><br></p></d=
+iv></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component full-width" style=3D"padding: 0px !important;"> <di=
+v class=3D"header-bar" style=3D"overflow: hidden;"> <table role=3D"presenta=
+tion" align=3D"center" class=3D"responsive-table table-w-bg-color" style=3D=
+"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-c=
+ollapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%=
+;font-family: Arial, Helvetica, sans-serif; margin-right: 0px; margin-left:=
+ 0px;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" =
+marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0" width=3D"650"> <tbody> <=
+tr height=3D"5" class=3D"spacerRow"> <td style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%;font-size: 0%; line-height: 5px;">&nbsp;<=
+/td> </tr> <tr> <td class=3D"responsive-table" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;font-size:24px;color:#000000;" vali=
+gn=3D"top"> <table role=3D"presentation" width=3D"100%" style=3D"mso-table-=
+lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:col=
+lapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;min-width:=
+ 100%;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0"=
+ marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"> <tbody> <tr> <td style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;padding: 0 1=
+5pt;font-family:Arial, Helvetica, sans-serif;"> <div class=3D"cke_editable =
+cke_editable_inline cke_contents_ltr cke_show_borders cke_focus" style=3D"o=
+verflow: hidden;"><h2 style=3D"text-align: center;"><span style=3D"font-siz=
+e:medium"><span style=3D"font-family:Calibri, sans-serif"><span style=3D"co=
+lor:#000000"><span style=3D"font-style:normal"><span style=3D"font-weight:4=
+00"><span style=3D"white-space:normal"><span style=3D"text-decoration:none"=
+><b><i><span style=3D"font-size:16pt"><span style=3D"color:#203864">Social =
+Media</span></span></i></b></span></span></span></span></span></span></span=
+></h2></div> </td> </tr> </tbody> </table> </td> </tr> <tr height=3D"5" cla=
+ss=3D"spacerRow"> <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%;font-size: 0%; line-height: 5px;">&nbsp;</td> </tr> </tbody>=
+ </table> </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><a href=3D"https://urldefense.com/v3/__https:/=
+/twitter.com/RepHouchin/status/1679235673058861056?s=3D20__;!!Ckt11KVezJIME=
+51BYf4a6hrLATHilnk!BFSHcSCiixnyYaUdWSJrO1ADFiQtxPHMGkz6XWfEu7iWaw_IQSvunAum=
+X3THzvn9ABR-Z5eNnEn_xa05v-boPQL0Q6bcFshHJ14Tot8IAWpw$" target=3D"_blank" st=
+yle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img st=
+yle=3D"max-width:600px;-ms-interpolation-mode: bicubic;vertical-align: bott=
+om; max-width: 550px;" alt=3D"11" src=3D"https://houchinforms.house.gov/Upl=
+oadedPhotos/MediumResolution/fb407100-cbc4-4c72-959f-baf1f925b95d.png"></a>=
+</div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><a href=3D"https://urldefense.com/v3/__https:/=
+/twitter.com/RepHouchin/status/1681391907090333718?s=3D20__;!!Ckt11KVezJIME=
+51BYf4a6hrLATHilnk!BFSHcSCiixnyYaUdWSJrO1ADFiQtxPHMGkz6XWfEu7iWaw_IQSvunAum=
+X3THzvn9ABR-Z5eNnEn_xa05v-boPQL0Q6bcFshHJ14TotQO2Uzb$" target=3D"_blank" st=
+yle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img st=
+yle=3D"max-width:600px;-ms-interpolation-mode: bicubic;vertical-align: bott=
+om; max-width: 550px;" alt=3D"11" src=3D"https://houchinforms.house.gov/Upl=
+oadedPhotos/MediumResolution/faf70b7d-e166-4a44-a17a-e8dd77cde239.png"></a>=
+</div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align:center"><a href=3D"https://urldefense.com/v3/__https:/=
+/twitter.com/RepHouchin/status/1677316610741108739?s=3D20__;!!Ckt11KVezJIME=
+51BYf4a6hrLATHilnk!BFSHcSCiixnyYaUdWSJrO1ADFiQtxPHMGkz6XWfEu7iWaw_IQSvunAum=
+X3THzvn9ABR-Z5eNnEn_xa05v-boPQL0Q6bcFshHJ14Tou_pIGZj$" target=3D"_blank" st=
+yle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img st=
+yle=3D"max-width:600px;-ms-interpolation-mode: bicubic;vertical-align: bott=
+om; max-width: 550px;" alt=3D"11" src=3D"https://houchinforms.house.gov/Upl=
+oadedPhotos/MediumResolution/492dfa17-ef73-4545-9a71-ef1cee1e97a9.png"></a>=
+</div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;text-align:start"><span style=3D"font-size:medium"><spa=
+n style=3D"font-family:Calibri, sans-serif"><span style=3D"color:#000000"><=
+span style=3D"font-style:normal"><span style=3D"font-weight:400"><span styl=
+e=3D"white-space:normal"><span style=3D"text-decoration:none">It=E2=80=99s =
+an honor to serve you in the U.S. House of Representatives. To better serve=
+ you at home, please don=E2=80=99t hesitate to contact our office by callin=
+g (812) 288-3999. I will continue to contend on behalf of Hoosiers in the N=
+inth District of Indiana.<br>&nbsp;<br>In service,</span></span></span></sp=
+an></span></span></span></p><p style=3D"margin: 0;text-align:start"><span s=
+tyle=3D"font-size:medium"><span style=3D"font-family:Calibri, sans-serif"><=
+span style=3D"color:#000000"><span style=3D"font-style:normal"><span style=
+=3D"font-weight:400"><span style=3D"white-space:normal"><span style=3D"text=
+-decoration:none">&nbsp;</span></span></span></span></span></span></span></=
+p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"image" style=3D"overflow: hidden;width:100%">=20
+      <table class=3D"responsive-table" role=3D"presentation" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collap=
+se;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;float: left; =
+table-layout: fixed; margin-right: 20px; margin-left: 20px;" width=3D"610">
+          <tbody>
+              <tr>
+                  <td valign=3D"top" class=3D"image-td" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                      <div class=3D"img-1 image-container" style=3D"overflo=
+w: hidden;text-align: left;"><img style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;vertical-align: bottom; max-width: 240px;" alt=3D"EH" src=
+=3D"https://houchinforms.house.gov/UploadedPhotos/LowResolution/bdeec1f1-e5=
+54-4e4c-b93f-150a025cfc7f.png"></div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_show_borders cke_focus" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;text-align:start"><span style=3D"font-size:medium"><spa=
+n style=3D"font-family:Calibri, sans-serif"><span style=3D"color:#000000"><=
+span style=3D"font-style:normal"><span style=3D"font-weight:400"><span styl=
+e=3D"white-space:normal"><span style=3D"text-decoration:none"><b>Congresswo=
+man Erin Houchin</b></span></span></span></span></span></span></span></p><p=
+ style=3D"margin: 0;text-align:start"><span style=3D"font-size:medium"><spa=
+n style=3D"font-family:Calibri, sans-serif"><span style=3D"color:#000000"><=
+span style=3D"font-style:normal"><span style=3D"font-weight:400"><span styl=
+e=3D"white-space:normal"><span style=3D"text-decoration:none">Member of Con=
+gress&nbsp;</span></span></span></span></span></span></span></p></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"spacing" style=3D"overflow: hidden;width:100%">
+            <table role=3D"presentation" class=3D"responsive-table" style=
+=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; borde=
+r-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;border-spacing: 0px; margin-right: 20px; margin-left: 20px;" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"">
+                <tbody>
+                    <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;min-width: 100%;">
+                            <table role=3D"presentation" style=3D"mso-table=
+-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:co=
+llapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;border-sp=
+acing: 0px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+                                <tbody><tr class=3D"spacerRow" height=3D"16=
+">
+                                    <td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%;font-size:0%;line-height: 16px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div></div>
+          <table role=3D"presentation" class=3D"responsive-table" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+            <tbody>
+              <tr height=3D"20">
+                <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;">
+                  <span></span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <table role=3D"presentation" width=3D"650" class=3D"responsive-table" ali=
+gn=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust=
+: 100%;font-family: Arial, Helvetica, sans-serif; background-color: #0B3077=
+;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marg=
+inwidth=3D"0" leftmargin=3D"0" topmargin=3D"0">
+    <tbody>
+      <tr>
+        <td valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;height:30px; background-color: #0B3=
+077;">
+          &nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; background-color: #=
+0B3077; font-family: arial, helvetica, sans-serif; font-size: 24px; text-al=
+ign: center;">
+          <h2 style=3D"font-family: arial, helvetica, sans-serif; font-size=
+: 24px; margin: 0; font-weight: normal;">Office
+            Locations</h2>
+        </td>
+      </tr>
+      <tr>
+        <td valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;height:30px; background-color: #0B3=
+077;">
+          &nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; background-color: #=
+0B3077; padding: 0 20px;">
+          <table role=3D"presentation" width=3D"100%" cellpadding=3D"0" cel=
+lspacing=3D"10" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adju=
+st: 100%;text-align:center;">
+            <tbody>
+              <tr>
+                <td valign=3D"middle" align=3D"center" style=3D"-webkit-tex=
+t-size-adjust: 100%; -ms-text-size-adjust: 100%;text-align:center;">
+                  <table role=3D"presentation" cellpadding=3D"0" class=3D"r=
+esponsive-table" align=3D"left" cellspacing=3D"0" width=3D"49.9%" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: ari=
+al, helvetica, sans-serif; text-align:center; font-size: 14px; color: #ffff=
+ff; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                    <tbody>
+                      <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;font-family: Arial, Helvetica, sans-serif;">
+                          <strong style=3D"font-weight: bold;font-family: A=
+rial, Helvetica, sans-serif; text-transform: uppercase;">Washington, DC
+                            Office</strong><br>
+                          1632 Longworth HOB<br>
+                          Washington, DC 20515<br>
+                          Phone: (202) 225-5315<br>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <table role=3D"presentation" cellpadding=3D"0" class=3D"r=
+esponsive-table" align=3D"left" cellspacing=3D"0" width=3D"49.9%" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: ari=
+al, helvetica, sans-serif; text-align:center; font-size: 14px; color: #ffff=
+ff; margin: 10px 0;mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                    <tbody>
+                      <tr>
+                        <td style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;font-family: Arial, Helvetica, sans-serif;">
+                          <strong style=3D"font-weight: bold;font-family: A=
+rial, Helvetica, sans-serif; text-transform: uppercase;">Jeffersonville
+                            District Office</strong><br>
+                          321 Quartermaster Court<br>
+                          Jeffersonville, IN 47130 <br>
+                          Phone: (812) 288-3999<br>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;height:30px; background-color: #0B3=
+077;">
+          &nbsp;
+        </td>
+      </tr>
+      <!-- <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"color: =
+#0B3077; background-color: #0B3077;">
+                    <a target=3D"_blank" href=3D"https://www.facebook.com/X=
+XXXXXX"><img alt=3D"facebook icon" width=3D"32" src=3D"https://houchinforms=
+.house.gov/images/email/facebook.png" style=3D"border-width: 0px; border-st=
+yle: solid; width: 32px;" /></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://twitter.com/=
+XXXXXXX"><img alt=3D"twitter icon" width=3D"32" src=3D"https://houchinforms=
+.house.gov/images/email/twitter.png" style=3D"border-width: 0px; border-sty=
+le: solid; width: 32px;" /></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://www.instagra=
+m.com/XXXXXX"><img alt=3D"instagram icon" width=3D"32" src=3D"https://houch=
+informs.house.gov/images/email/instagram.png" style=3D"border-width: 0px; b=
+order-style: solid; width: 32px;" /></a>
+                    &nbsp;<a target=3D"_blank" href=3D"https://www.youtube.=
+com/channel/XXXXXX"><img alt=3D"youtube icon" width=3D"32" src=3D"https://h=
+ouchinforms.house.gov/images/email/youtube.png" style=3D"border-width: 0px;=
+ border-style: solid; width: 32px;" /></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"height:=
+30px; background-color: #0B3077;">
+                    &nbsp;
+                    </td>
+                </tr> -->
+      <tr>
+        <td valign=3D"middle" style=3D"-webkit-text-size-adjust: 100%; -ms-=
+text-size-adjust: 100%;background-color: #0B3077;">
+          <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"20"=
+ align=3D"center" width=3D"90%" style=3D"-webkit-text-size-adjust: 100%; -m=
+s-text-size-adjust: 100%;">
+            <tbody>
+              <tr>
+                <td valign=3D"middle" align=3D"center" style=3D"-webkit-tex=
+t-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #0B3077; font-size: =
+15px; font-family: Arial, Helvetica, sans-serif;">
+                  <a target=3D"_blank" href=3D"https://houchinforms.house.g=
+ov/forms/emailsignup/?delete=3Dtrue" style=3D"-webkit-text-size-adjust: 100=
+%; -ms-text-size-adjust: 100%;color: #ffffff; text-decoration:none; font-fa=
+mily: Arial, Helvetica, sans-serif;">Unsubscribe</a>&nbsp;|&nbsp;
+                  <a target=3D"_blank" href=3D"https://urldefense.com/v3/__=
+https://www.facebook.com/sharer.php?u=3Dhttps:**Ahouchinforms.house.gov*new=
+s*email*show.aspx*ID=3DKXD5QN4I7LERQ&amp;t=3D*subject*__;Ly8vLy8_W10!!Ckt11=
+KVezJIME51BYf4a6hrLATHilnk!BFSHcSCiixnyYaUdWSJrO1ADFiQtxPHMGkz6XWfEu7iWaw_I=
+QSvunAumX3THzvn9ABR-Z5eNnEn_xa05v-boPQL0Q6bcFshHJ14TotUnkmEo$" style=3D"-we=
+bkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; tex=
+t-decoration:none; font-family: Arial, Helvetica, sans-serif;">Share on
+                    Facebook</a>&nbsp;|&nbsp;
+                  <a target=3D"_blank" href=3D"https://houchinforms.house.g=
+ov/Components/Redirect/twitter.aspx?url=3Dhttps://houchinforms.house.gov/ne=
+ws/email/show.aspx?ID=3DKXD5QN4I7LERQ&amp;name=3D[subject]" style=3D"-webki=
+t-text-size-adjust: 100%; -ms-text-size-adjust: 100%;color: #ffffff; text-d=
+ecoration:none; font-family: Arial, Helvetica, sans-serif;">Share on
+                    Twitter</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td valign=3D"middle" align=3D"center" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%;height:30px; background-color: #0B3=
+077;">
+          &nbsp;
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>
+
+----boundary_272_63bae19c-0d96-434e-9999-1feb3e9c7ca6--

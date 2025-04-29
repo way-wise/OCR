@@ -1,0 +1,960 @@
+Received: from MW4PR09MB9708.namprd09.prod.outlook.com (2603:10b6:303:1f5::16)
+ by PH8PR09MB9673.namprd09.prod.outlook.com with HTTPS; Thu, 11 Jul 2024
+ 17:50:15 +0000
+Received: from CYXPR09CA0020.namprd09.prod.outlook.com (2603:10b6:930:d4::27)
+ by MW4PR09MB9708.namprd09.prod.outlook.com (2603:10b6:303:1f5::16) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7762.21; Thu, 11 Jul
+ 2024 17:50:13 +0000
+Received: from BL02EPF0001B417.namprd09.prod.outlook.com
+ (2603:10b6:930:d4:cafe::eb) by CYXPR09CA0020.outlook.office365.com
+ (2603:10b6:930:d4::27) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7762.23 via Frontend
+ Transport; Thu, 11 Jul 2024 17:50:12 +0000
+Authentication-Results: spf=softfail (sender IP is 143.228.51.120)
+ smtp.mailfrom=bounce.mail8.housecommunications.gov; dkim=pass (signature was
+ verified) header.d=mail8.housecommunications.gov;dmarc=pass action=none
+ header.from=mail8.housecommunications.gov;
+Received-SPF: SoftFail (protection.outlook.com: domain of transitioning
+ bounce.mail8.housecommunications.gov discourages use of 143.228.51.120 as
+ permitted sender)
+Received: from owa.house.gov (143.228.51.120) by
+ BL02EPF0001B417.mail.protection.outlook.com (10.167.242.197) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7762.17 via Frontend Transport; Thu, 11 Jul 2024 17:50:12 +0000
+Received: from EXCH1925.US.House.gov (143.228.51.106) by EXCH1924.US.House.gov
+ (143.228.51.120) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1544.11; Thu, 11 Jul
+ 2024 13:50:10 -0400
+Received: from serg-hub1-h.house.gov (143.228.181.77) by EXCH1925.US.House.gov
+ (143.228.51.106) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1544.11 via Frontend
+ Transport; Thu, 11 Jul 2024 13:50:10 -0400
+Authentication-Results-Original: house.gov;	spf=pass
+ smtp.mailfrom=msprvs1=19922PAjsxeaS=bounces-308938-732@bounce.mail8.housecommunications.gov;
+	dkim=pass header.d=mail8.housecommunications.gov header.s=scph1121;
+	dmarc=pass header.from=mail8.housecommunications.gov
+Received: from mta-70-150-86.sparkpostmail.com (mta-70-150-86.sparkpostmail.com [156.70.150.86])
+	by serg-hub1-h.house.gov (8.17.1.19/8.17.1.19) with ESMTPS id 46BHo9kW018952
+	(version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128 verify=OK)
+	for <cally.barry@mail.house.gov>; Thu, 11 Jul 2024 13:50:10 -0400
+X-MSFBL: ySTv9En/xZqzS20/DFBBcvChrEdyePetiUeRmEHYvvY=|eyJjdXN0b21lcl9pZCI
+	6IjMwODkzOCIsInIiOiJjYWxseS5iYXJyeUBtYWlsLmhvdXNlLmdvdiIsIm1lc3N
+	hZ2VfaWQiOiI2NjhlNTAxYjkwNjY0YmI1NjFkZiIsInN1YmFjY291bnRfaWQiOiI
+	3MzIiLCJ0ZW5hbnRfaWQiOiJzcGMifQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=mail8.housecommunications.gov; s=scph1121; t=1720720209;
+	i=@mail8.housecommunications.gov;
+	bh=6e/n4U5xqGWSf8Wi9mUP8qtHh9QNXMjiML+goWMYkzY=;
+	h=Content-Type:To:Message-ID:Date:From:Subject:List-Unsubscribe:
+	 List-Unsubscribe-Post:From:To:Cc:Subject;
+	b=BDmMU5mx+HX1xlo3H7d6x0NuygSTVE6u/yte0raebwS3el+lko3H58BWm/VrPn+Np
+	 vrfkQQyyX7XlOLWQZGl9DonUZqz+ff24o+nAgxbNPAWd8aO3iuu2Uncs49P7R2lLel
+	 7OX4/pDBHReTWXQb/sJjmM8y+AIV4TMO0J8mEhNk=
+To: "Cally Barry" <cally.barry@mail.house.gov>
+Message-ID: <FD.1E.34125.05B10966@gr.mta1vrest.cc.prd.sparkpost>
+Date: Thu, 11 Jul 2024 17:50:08 +0000
+MIME-Version: 1.0
+Reply-To: <repmorganluttrell+newsletter@mail8.housecommunications.gov>
+From: "Office of Rep. Luttrell" <repmorganluttrell@mail8.housecommunications.gov>
+Subject: Hurricane Beryl: Veteran Disaster Resources
+Feedback-ID: bulk_85083:repmorganluttrell:Indigov
+List-Unsubscribe: <mailto:unsubscribe@unsub.spmta.com?subject=unsubscribe:K3Umk43yghj1UkqdCuIlew7xkH_5YBitkc4qsgYk1co~|eyAicmNwdF90byI6ICJjYWxseS5iYXJyeUBtYWlsLmhvdXNlLmdvdiIsICJ0ZW5hbnRfaWQiOiAic3BjIiwgImN1c3RvbWVyX2lkIjogIjMwODkzOCIsICJzdWJhY2NvdW50X2lkIjogIjczMiIsICJtZXNzYWdlX2lkIjogIjY2OGU1MDFiOTA2NjRiYjU2MWRmIiB9>,<https://unsubscribe.spmta.com/u/LpZdRlNTGnFy99yRicJNPg~~/AAS2ygA~/RgRocqBQPFcDc3BjQgpmjlAbkGZLtWHfUhpjYWxseS5iYXJyeUBtYWlsLmhvdXNlLmdvdlgEAAAC3A~~>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Id: <spc.308938.732.sparkpostmail.com>
+X-Proofpoint-ORIG-GUID: 0YIPwevWYUp7gT3HJdTiARSMMCInv9e0
+X-Proofpoint-GUID: 0YIPwevWYUp7gT3HJdTiARSMMCInv9e0
+X-Proofpoint-HIR-SPF: spf_passed
+X-Proofpoint-Virus-Version: vendor=baseguard
+ engine=ICAP:2.0.293,Aquarius:18.0.1039,Hydra:6.0.680,FMLib:17.12.28.16
+ definitions=2024-07-11_12,2024-07-11_01,2024-05-17_01
+X-Proofpoint-HIR-DMARC: Pass
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 bulkscore=0 malwarescore=0
+ suspectscore=0 spamscore=0 mlxscore=0 mlxlogscore=999 adultscore=0
+ phishscore=0 classifier=spam adjust=0 reason=mlx scancount=1
+ engine=8.12.0-2406180000 definitions=main-2407110123
+Return-Path:
+ msprvs1=19922PAjsxeaS=bounces-308938-732@bounce.mail8.housecommunications.gov
+X-OrganizationHeadersPreserved: EXCH1924.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 11 Jul 2024 17:50:12.2015
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ a8c23ad6-369a-4d1e-211e-08dca1d1e9c5
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1925.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted: BL02EPF0001B417.namprd09.prod.outlook.com
+X-CrossPremisesHeadersFiltered: BL02EPF0001B417.namprd09.prod.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ BL02EPF0001B417:EE_|MW4PR09MB9708:EE_|PH8PR09MB9673:EE_
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: a8c23ad6-369a-4d1e-211e-08dca1d1e9c5
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam:
+ BCL:0;ARA:13230040|29132699027|4022899009|366016|69100299015|82310400026|41050700001;
+X-Forefront-Antispam-Report:
+ CIP:143.228.51.120;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:(13230040)(29132699027)(4022899009)(366016)(69100299015)(82310400026)(41050700001);DIR:INT;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 11 Jul 2024 17:50:12.1702
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: a8c23ad6-369a-4d1e-211e-08dca1d1e9c5
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.51.120];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1925.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: MW4PR09MB9708
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.3965287
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.7762.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(425001)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	JUXVxdCiY0s4teg1V4CTt2jc15KV+EB1u8fX1nW03T5S9flTNxoz2r0K/EQ58BLZy76STps8BvK1hs0KkDeDSKpuHDLMzNyC/khA8nb+QRHuSKqmJQkIgzyYcFpQPch+sHYJgwQ1KEOfp7H/3k9cjpS2b4kUHmJG05Fn/TZHE6olhwh2Jcv5+8qwZp9uvN6/iVr9y98Jno8b5NSVoLnmXqRtz8VOzdFU/ZRsTIZiVyTZAYMoIxFwu8bXQeE442X4iEluhlJuR2PNsv1/GU9Z4xW4TJTXXHVobRdzyDz98Pb4nrtaswdAlFSIhUu0Q49Bp/ngO1qHubgO0T9y6eZSACQwcgMWVlcC7L4eRjHUnUKoiPchtBfiP6JjXm8lfwuM4HPb0+X8qRJSm9LlgFYQbtcTuMX7XZr7PN3tpQSQK5d/4kOXivdIPDhVkY2SrFNdWX+Lhbui2PvRdQzC18RuHZJUJ+VI4K88J683XcFO84MXY9Smw3697wjGJ5eF2X8Ee7sCdHOlSfxVpfyggoxlEIk7Z/TctEEG6L0UelYhFMOkGnYbijWQx6i3vkumYZxqRqD7i++sGR8nH9TJTbJ//eMXXZjeEeCJQSNi5lN2JF5yZP8eofHP2RTYRT5rX9L05jOtfZ14Sa840kyHDWzHlJF8elW0wqgH/ENLzuV4R+6MjUvjMvZWitRGywWRVnfAPwnpREJ6x71xWrvvL4xJQLWjddT8QYvVqIrctwDKRbPQJFHZqxfH4B6Q4WRD3uYNlHcyig7WYmySfOcn9qhuMkWMZllLvJOahpZp13aPhKpKTKvUnccaAqTBoGAgSAjKgeatmg7VqgwXbVYh+/eY10/MGA3aivoW5sGEpbjWY393G2ofHSOSoBGjGlCDjyOU
+Content-type: multipart/alternative;
+	boundary="B_3803550632_541901994"
+
+> This message is in MIME format. Since your mail reader does not understand
+this format, some or all of this message may not be legible.
+
+--B_3803550632_541901994
+Content-type: text/plain;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+=20
+Hello, Veterans and their families should be aware of assistance available =
+to them because of a natural disaster. Health CareMichael E. DeBakey Departm=
+ent Of Veterans Affairs Medical Center
+2002 Holcombe Boulevard
+Houston, TX 77030-4211
+Get directions on Google MapsMain phone: 713-791-1414
+Mortgage Loans
+Disaster Modification allows servicers to provide permanent payment relief =
+to disaster impacted borrowers experiencing a mortgage delinquency when the =
+borrower has not submitted a complete loss mitigation application. This opti=
+on allows for the loan maturity date to be extended by the number of months =
+the loan is delinquent, not to exceed 12 months without prior approval from =
+VA.
+School Attendance
+If your school is temporarily closed, VA will consider your attendance as c=
+ontinuous, and your benefits will not be affected.
+Students using Chapter 33 (Post-9/11 GI Bill) or Chapter 35 (Survivors and =
+Dependents Educational Assistance Program):  As long as the enrollment was s=
+ubmitted prior to the recent disaster, no further action is necessary to con=
+tinue to receive benefits.
+Students Using Chapter 30 or 1606 (Montgomery GI Bill) should continue to v=
+erify their attendance until further notice as if the school did not close. =
+Doing so will ensure that benefits are not affected. Students may verify the=
+ir attendance, using the WAVE website or by calling 1-877-VACERT.
+Students using Chapter 33 who are currently required to verify enrollment (=
+students attend Non-College Degrees (NCD) programs in receipt of Monthly Hou=
+sing Allowance (MHA) or kickers should likewise continue to verify their att=
+endance until further notice as if the school did not close to ensure that b=
+enefits are not affected.
+Please contact our Education Call Center at 1-888-442-4551 (Monday =E2=80=93 Frid=
+ay, 7 a.m. to 6 p.m. CST) for any questions about your GI Bill benefits. If =
+you=E2=80=99re unable to contact us by phone, you can send us a secure inquiry thr=
+ough Ask VA.
+If your school remains open, but you are unable to attend (i.e., if you had=
+ to relocate as a result of the natural disaster), VA is unable to continue =
+GI Bill benefit payments. When you are no longer pursuing classes, your scho=
+ol must report the termination to VA as soon as possible.
+Benefit Payments
+If a Veteran or beneficiary does not/cannot receive a benefits payment due =
+to the effects of the natural disaster and indicates financial hardship, the=
+ contact center agents must request a one-time special payment address where=
+ a replacement payment can be sent.=20
+This can be a Direct Deposit account (into which VA can issue an electronic=
+ funds transfer (EFT) / direct deposit payment) or a mailing address out of =
+the area impacted by the disaster (to ensure the check can be delivered). Af=
+fected ZIP codes where post offices are closed can be found at this link, th=
+e USPS updates this information routinely.
+If a bank account is provided, include the routing number, account number, =
+type of account (checking or savings), name of bank and name of individual o=
+n the account (the beneficiary or otherwise).
+VBA can issue a same-day EFT payment to affected Veterans. To do this, the =
+Veteran needs to enroll in Direct Deposit.
+If a Veteran does not have a bank account into which they can receive direc=
+t deposit, VA has established the Veterans Benefits Banking Program (VBBP) t=
+o give Veterans and beneficiaries access to military-friendly banks and cred=
+it unions they might not otherwise be able to access due to lack of awarenes=
+s, individual credit history, and / or legal history. Veterans can find more=
+ information about VBBP here.
+If Veterans call us, they can change their address or switch to direct depo=
+sit over the phone.
+Insurance
+VA provides assistance to help ease the hardships of those affected. VA off=
+ers Instant Loan Approval online and expedited same day processing for polic=
+y loans when Veterans contact the Call Center.
+In addition, we expedite same day processing and approval of the following =
+policy actions:=20
+Withdrawals from dividend credit and deposit accounts
+Extension of premium payment grace period
+Extension of reinstatement deadlines
+Processing of death claims
+The Office of Servicemembers' Group Life Insurance (OSGLI) is following dis=
+aster alerts that are issued by each state department of insurance in the ev=
+ent of natural disaster. These alerts generally provide a moratorium on laps=
+ing or extension of premium payments. OSGLI follows these procedures for all=
+-natural disasters.
+Veterans may call the Insurance Center at 1-800-669-8477 or OSGLI at 1-800-=
+419-1473.For more information on benefits, visit the VA's website here. Addi=
+tionally, you may also access this link for disaster-related information.Nat=
+ional Resources:
+Veterans | DisasterAssistance.gov
+VA Disaster Assistance for Veterans Brochure.=20
+Sincerely,
+=20
+Rep. Morgan LuttrellMember of Congress
+Sign up for my newsletter to get updates on this issue and others!
+Sign Up=20
+ =20
+Contact Me
+Washington DC Office
+1320 Longworth House Office Building
+Washington, DC 20515
+Phone: (202) 225-4901
+Magnolia District Office
+18230 FM 1488
+Magnolia, TX 77354
+=20
+=20
+=20
+
+
+Unsubscribe from future messages.=20
+
+ 
+
+--B_3803550632_541901994
+Content-type: text/html;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+<!DOCTYPE html><html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:sche=
+mas-microsoft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office"><he=
+ad><!--[if gte mso 9]>
+<xml>
+  <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+  </o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><meta na=
+me=3D"viewport" content=3D"width=3Ddevice-width,initial-scale=3D1"><meta name=3D"x-app=
+le-disable-message-reformatting"><!--[if !mso]><!--><meta http-equiv=3D"X-UA-C=
+ompatible" content=3D"IE=3Dedge"><!--<![endif]--><title></title><style type=3D"tex=
+t/css">@media only screen and (min-width:660px){.u-row{width:640px!important=
+}.u-row .u-col{vertical-align:top}.u-row .u-col-50{width:320px!important}.u-=
+row .u-col-100{width:640px!important}}@media (max-width:660px){.u-row-contai=
+ner{max-width:100%!important;padding-left:0!important;padding-right:0!import=
+ant}.u-row .u-col{min-width:320px!important;max-width:100%!important;display=
+:block!important}.u-row{width:100%!important}.u-col{width:100%!important}.u-=
+col>div{margin:0 auto}}body{margin:0;padding:0}table,td,tr{vertical-align:to=
+p;border-collapse:collapse}p{margin:0}.ie-container table,.mso-container tab=
+le{table-layout:fixed}*{line-height:inherit}a[x-apple-data-detectors=3Dtrue]{c=
+olor:inherit!important;text-decoration:none!important}table,td{color:#000}#u=
+_body a{color:#00e;text-decoration:underline}</style><!--[if !mso]><!--><lin=
+k href=3D"https://fonts.googleapis.com/css2?family=3DRoboto:ital,wght@0,400;0,70=
+0;1,400;1,700" rel=3D"stylesheet" type=3D"text/css"><!--<![endif]--></head><body=
+ class=3D"clean-body u_body" style=3D"margin:0;padding:0;-webkit-text-size-adjus=
+t:100%;background-color:#fff;color:#000"><div style=3D"color:transparent;visib=
+ility:hidden;opacity:0;font-size:0px;border:0;max-height:1px;width:1px;margi=
+n:0px;padding:0px;border-width:0px!important;display:none!important;line-hei=
+ght:0px!important;"><img border=3D"0" width=3D"1" height=3D"1" src=3D"http://engagem=
+ent.mail8.housecommunications.gov/q/gjDCHdWCksrwrURj_lnP6w~~/AAS2ygA~/RgRocq=
+BQPVcDc3BjQgpmjlAbkGZLtWHfUhpjYWxseS5iYXJyeUBtYWlsLmhvdXNlLmdvdlgEAAAC3A~~" =
+alt=3D""></div><!--[if IE]><div class=3D"ie-container"><![endif]--><!--[if mso]>=
+<div class=3D"mso-container"><![endif]--><table id=3D"u_body" style=3D"border-coll=
+apse:collapse;table-layout:fixed;border-spacing:0;mso-table-lspace:0;mso-tab=
+le-rspace:0;vertical-align:top;min-width:320px;Margin:0 auto;background-colo=
+r:#fff;width:100%" cellpadding=3D"0" cellspacing=3D"0"><tbody><tr style=3D"vertica=
+l-align:top"><td style=3D"word-break:break-word;border-collapse:collapse!impor=
+tant;vertical-align:top"><!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0"><tr><td align=3D"center" style=3D"background-col=
+or: #FFF;"><![endif]--><div class=3D"u-row-container" style=3D"padding:0;backgro=
+und-color:transparent"><div class=3D"u-row" style=3D"margin:0 auto;min-width:320=
+px;max-width:640px;overflow-wrap:break-word;word-wrap:break-word;word-break:=
+break-word;background-color:transparent"><div style=3D"border-collapse:collaps=
+e;display:table;width:100%;height:100%;background-color:transparent"><!--[if=
+ (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">=
+<tr><td style=3D"padding: 0px;background-color: transparent;" align=3D"center"><=
+table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:640px;"><tr st=
+yle=3D"background-color: transparent;"><![endif]--><!--[if (mso)|(IE)]><td ali=
+gn=3D"center" width=3D"640" style=3D"width: 640px;padding: 0px;border-top: 0px sol=
+id transparent;border-left: 0px solid transparent;border-right: 0px solid tr=
+ansparent;border-bottom: 0px solid transparent;" valign=3D"top"><![endif]--><d=
+iv class=3D"u-col u-col-100" style=3D"max-width:320px;min-width:640px;display:ta=
+ble-cell;vertical-align:top"><div style=3D"height:100%;width:100%!important"><=
+!--[if (!mso)&(!IE)]><!--><div style=3D"box-sizing:border-box;height:100%;padd=
+ing:0;border-top:0 solid transparent;border-left:0 solid transparent;border-=
+right:0 solid transparent;border-bottom:0 solid transparent"><!--<![endif]--=
+><table style=3D"font-family:Roboto" role=3D"presentation" cellpadding=3D"0" cells=
+pacing=3D"0" width=3D"100%" border=3D"0"><tbody><tr><td style=3D"overflow-wrap:break=
+-word;word-break:break-word;padding:10px;font-family:Roboto" align=3D"left"><t=
+able width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tbody><tr><td =
+style=3D"padding-right:0;padding-left:0" align=3D"center"><img align=3D"center" bo=
+rder=3D"0" src=3D"https://assets.unlayer.com/projects/85458/1672027092403-repmor=
+ganluttrell_default.jpg" alt=3D"Rep. Morgan Luttrell newsletter banner image" =
+title=3D"Rep. Morgan Luttrell newsletter banner image" style=3D"outline:0;text-d=
+ecoration:none;-ms-interpolation-mode:bicubic;clear:both;display:inline-bloc=
+k!important;border:none;height:auto;float:none;width:100%;max-width:620px" w=
+idth=3D"620"> </td></tr></tbody></table></td></tr></tbody></table><!--[if (!ms=
+o)&(!IE)]><!--></div><!--<![endif]--></div></div><!--[if (mso)|(IE)]></td><!=
+[endif]--><!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]--></d=
+iv></div></div><div class=3D"u-row-container" style=3D"padding:0;background-colo=
+r:transparent"><div class=3D"u-row" style=3D"margin:0 auto;min-width:320px;max-w=
+idth:640px;overflow-wrap:break-word;word-wrap:break-word;word-break:break-wo=
+rd;background-color:transparent"><div style=3D"border-collapse:collapse;displa=
+y:table;width:100%;height:100%;background-color:transparent"><!--[if (mso)|(=
+IE)]><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td =
+style=3D"padding: 0px;background-color: transparent;" align=3D"center"><table ce=
+llpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:640px;"><tr style=3D"bac=
+kground-color: transparent;"><![endif]--><!--[if (mso)|(IE)]><td align=3D"cent=
+er" width=3D"640" style=3D"width: 640px;padding: 0px;border-top: 0px solid trans=
+parent;border-left: 0px solid transparent;border-right: 0px solid transparen=
+t;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-rad=
+ius: 0px; -moz-border-radius: 0px;" valign=3D"top"><![endif]--><div class=3D"u-c=
+ol u-col-100" style=3D"max-width:320px;min-width:640px;display:table-cell;vert=
+ical-align:top"><div style=3D"height:100%;width:100%!important;border-radius:0=
+;-webkit-border-radius:0;-moz-border-radius:0"><!--[if (!mso)&(!IE)]><!--><d=
+iv style=3D"box-sizing:border-box;height:100%;padding:0;border-top:0 solid tra=
+nsparent;border-left:0 solid transparent;border-right:0 solid transparent;bo=
+rder-bottom:0 solid transparent;border-radius:0;-webkit-border-radius:0;-moz=
+-border-radius:0"><!--<![endif]--><table style=3D"font-family:Roboto" role=3D"pr=
+esentation" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" border=3D"0"><tbody><=
+tr><td style=3D"overflow-wrap:break-word;word-break:break-word;padding:10px;fo=
+nt-family:Roboto" align=3D"left"><div style=3D"font-size:14px;line-height:140%;t=
+ext-align:left;word-wrap:break-word"><p style=3D"font-size:14px;line-height:14=
+0%">Hello,</p><p style=3D"font-size:14px;line-height:140%">&nbsp;</p><p style=3D=
+"white-space:normal;text-decoration:none;caret-color:#000;color:#000;font-fa=
+mily:Aptos;margin-bottom:11.25pt;line-height:140%"><span style=3D"font-size:10=
+.5pt;font-family:Arial,sans-serif;color:#000;line-height:19.6px">Veterans an=
+d their families should be aware of assistance available to them because of =
+a natural disaster.&nbsp;</span></p><p style=3D"white-space:normal;text-decora=
+tion:none;caret-color:#000;color:#000;font-family:Aptos;margin-bottom:11.25p=
+t;line-height:140%"><strong><span style=3D"font-size:10.5pt;font-family:Arial,=
+sans-serif;color:#000;line-height:19.6px">Health Care</span></strong></p><di=
+v style=3D"white-space:normal;text-decoration:none;caret-color:#000;color:#000=
+;font-family:Aptos"><p class=3D"xxxvads-u-margin-bottom--1" style=3D"margin-righ=
+t:0;margin-left:0;font-size:11pt;font-family:Calibri,sans-serif;margin-botto=
+m:11.25pt;line-height:140%"><a href=3D"http://engagement.mail8.housecommunicat=
+ions.gov/f/a/vfv4ke-Wz33I2A-3W3Gdrw~~/AAS2ygA~/RgRocqBQP4QZAWh0dHBzOi8vdXJsZ=
+GVmZW5zZS5jb20vdjMvX19odHRwczovd3d3LnZhLmdvdi9ob3VzdG9uLWhlYWx0aC1jYXJlL2xvY=
+2F0aW9ucy9taWNoYWVsLWUtZGViYWtleS1kZXBhcnRtZW50LW9mLXZldGVyYW5zLWFmZmFpcnMtb=
+WVkaWNhbC1jZW50ZXIvX187ISFCZzVlYXNveUMtT0lJMnZsRXFZOG1UQnJ0Vy1ONE9KS0FRIUo4e=
+HRhLUYzMTZnLV9kSjJwVHV3NW5JdnFwdkhpRm5FQjlOd0NFdmVYY0ZZWXJ2WWZrNFBQaG5iWHpzb=
+VozT1NzMk5SdWtOSkdoWVF6aXkyYnJYdGlOSHVtVnpDRzRvZjdKQXokVwNzcGNCCmaOUBuQZku1Y=
+d9SGmNhbGx5LmJhcnJ5QG1haWwuaG91c2UuZ292WAQAAALc" title=3D"https://urldefense.c=
+om/v3/__https:/www.va.gov/houston-health-care/locations/michael-e-debakey-de=
+partment-of-veterans-affairs-medical-center/__;!!Bg5easoyC-OII2vlEqY8mTBrtW-=
+N4OJKAQ!J8xta-F316g-_dJ2pTuw5nIvqpvHiFnEB9NwCEveXcFYYrvYfk4PPhnbXzsmZ3OSs2NR=
+ukNJGhYQziy2brXtiNHumVzCG4of7JAz$" style=3D"color:#00f;text-decoration:underli=
+ne"><strong><span style=3D"font-size:10.5pt;font-family:Arial,sans-serif;color=
+:#0089cf;line-height:19.6px">Michael E. DeBakey Department Of Veterans Affai=
+rs Medical Center</span></strong></a><strong><span style=3D"font-size:10.5pt;f=
+ont-family:Arial,sans-serif;color:#000;line-height:19.6px"><br></span></stro=
+ng><span style=3D"font-size:10.5pt;font-family:Arial,sans-serif;color:#000;lin=
+e-height:19.6px">2002 Holcombe Boulevard<br>Houston, TX 77030-4211<br></span=
+><a href=3D"http://engagement.mail8.housecommunications.gov/f/a/1PUbvK2bqZKdnu=
+tRHd0-FA~~/AAS2ygA~/RgRocqBQP4QfAWh0dHBzOi8vdXJsZGVmZW5zZS5jb20vdjMvX19odHRw=
+czovbWFwcy5nb29nbGUuY29tLz9zYWRkcj1DdXJyZW50KkxvY2F0aW9uJmRhZGRyPTIwMDIqMjBI=
+b2xjb21iZSoyMEJvdWxldmFyZCwqMjBIb3VzdG9uLCoyMFRYKjIwNzcwMzAtNDIxMV9fO0t5VWxK=
+U1VsISFCZzVlYXNveUMtT0lJMnZsRXFZOG1UQnJ0Vy1ONE9KS0FRIUo4eHRhLUYzMTZnLV9kSjJw=
+VHV3NW5JdnFwdkhpRm5FQjlOd0NFdmVYY0ZZWXJ2WWZrNFBQaG5iWHpzbVozT1NzMk5SdWtOSkdo=
+WVF6aXkyYnJYdGlOSHVtVnpDR3hEdmZaNnYkVwNzcGNCCmaOUBuQZku1Yd9SGmNhbGx5LmJhcnJ5=
+QG1haWwuaG91c2UuZ292WAQAAALc" title=3D"https://urldefense.com/v3/__https:/maps=
+.google.com/?saddr=3DCurrent*Location&amp;daddr=3D2002*20Holcombe*20Boulevard,*2=
+0Houston,*20TX*2077030-4211__;KyUlJSUl!!Bg5easoyC-OII2vlEqY8mTBrtW-N4OJKAQ!J=
+8xta-F316g-_dJ2pTuw5nIvqpvHiFnEB9NwCEveXcFYYrvYfk4PPhnbXzsmZ3OSs2NRukNJGhYQz=
+iy2brXtiNHumVzCGxDvfZ6v$" style=3D"color:#00f;text-decoration:underline"><span=
+ style=3D"font-size:10.5pt;font-family:Arial,sans-serif;color:#0089cf;line-hei=
+ght:19.6px">Get directions on Google Maps</span></a></p><p class=3D"xxxmain-ph=
+one" style=3D"margin-right:0;margin-left:0;font-size:11pt;font-family:Calibri,=
+sans-serif;margin-bottom:11.25pt;line-height:140%"><strong><span style=3D"font=
+-size:10.5pt;font-family:Arial,sans-serif;color:#000;line-height:19.6px">Mai=
+n phone:&nbsp;</span></strong><a href=3D"tel:+17137911414" title=3D"tel:+1713791=
+1414" style=3D"color:#00f;text-decoration:underline"><span style=3D"font-size:10=
+.5pt;font-family:Arial,sans-serif;color:#0089cf;line-height:19.6px">713-791-=
+1414</span></a></p></div><p class=3D"xxxfacility-phone-group" style=3D"white-spa=
+ce:normal;text-decoration:none;margin-right:0;margin-left:0;font-size:11pt;f=
+ont-family:Calibri,sans-serif;caret-color:#000;color:#000;margin-bottom:11.2=
+5pt;line-height:140%"><strong><span style=3D"font-size:10.5pt;font-family:Aria=
+l,sans-serif;color:#000;line-height:19.6px">Mortgage Loans</span></strong></=
+p><div style=3D"white-space:normal;text-decoration:none;caret-color:#000;color=
+:#000;font-family:Aptos"><ul style=3D"margin-bottom:0;margin-top:0" type=3D"disc=
+"><li style=3D"margin:0 0 11.25pt;font-size:11pt;font-family:Calibri,sans-seri=
+f;color:#000;line-height:19.6px"><strong><span style=3D"font-size:10.5pt;font-=
+family:Arial,sans-serif;line-height:19.6px">Disaster Modification</span></st=
+rong><span style=3D"font-size:10.5pt;font-family:Arial,sans-serif;line-height:=
+19.6px"> allows servicers to provide permanent payment relief to disaster im=
+pacted borrowers experiencing a mortgage delinquency when the borrower has n=
+ot submitted a complete loss mitigation application. This option allows for =
+the loan maturity date to be extended by the number of months the loan is de=
+linquent, not to exceed 12 months without prior approval from VA.</span></li=
+></ul></div><p style=3D"white-space:normal;text-decoration:none;caret-color:#0=
+00;color:#000;font-family:Aptos;margin-bottom:11.25pt;line-height:140%"><str=
+ong><span style=3D"font-size:10.5pt;font-family:Arial,sans-serif;color:#000;li=
+ne-height:19.6px">School Attendance</span></strong></p><ul style=3D"white-spac=
+e:normal;text-decoration:none;margin-bottom:0;caret-color:#000;color:#000;fo=
+nt-family:Aptos;margin-top:0" type=3D"disc"><li style=3D"margin:0;font-size:11pt=
+;font-family:Calibri,sans-serif;color:#000;line-height:14px"><span style=3D"fo=
+nt-size:10.5pt;font-family:Arial,sans-serif;line-height:19.6px">If your scho=
+ol is temporarily closed, VA will consider your attendance as continuous, an=
+d your benefits will not be affected.</span></li><li style=3D"margin:0;font-si=
+ze:11pt;font-family:Calibri,sans-serif;color:#000;line-height:14px"><span st=
+yle=3D"font-size:10.5pt;font-family:Arial,sans-serif;line-height:19.6px">Stude=
+nts using Chapter 33 (Post-9/11 GI Bill) or Chapter 35 (Survivors and Depend=
+ents Educational Assistance Program):&nbsp; As long as the enrollment was su=
+bmitted prior to the recent disaster, no further action is necessary to cont=
+inue to receive benefits.</span></li><li style=3D"margin:0;font-size:11pt;font=
+-family:Calibri,sans-serif;color:#000;line-height:14px"><span style=3D"font-si=
+ze:10.5pt;font-family:Arial,sans-serif;line-height:19.6px">Students Using Ch=
+apter 30 or 1606 (Montgomery GI Bill) should continue to verify their attend=
+ance until further notice as if the school did not close. Doing so will ensu=
+re that benefits are not affected. Students may verify their attendance, usi=
+ng the </span><a href=3D"http://engagement.mail8.housecommunications.gov/f/a/p=
+rSbBJxJkPWgc8_RPnSHRw~~/AAS2ygA~/RgRocqBQP0TGaHR0cHM6Ly91cmxkZWZlbnNlLmNvbS9=
+2My9fX2h0dHBzOi93d3cuZ2liaWxsLnZhLmdvdi93YXZlX187ISFCZzVlYXNveUMtT0lJMnZsRXF=
+ZOG1UQnJ0Vy1ONE9KS0FRIUo4eHRhLUYzMTZnLV9kSjJwVHV3NW5JdnFwdkhpRm5FQjlOd0NFdmV=
+YY0ZZWXJ2WWZrNFBQaG5iWHpzbVozT1NzMk5SdWtOSkdoWVF6aXkyYnJYdGlOSHVtVnpDRzFaV2I=
+zajgkVwNzcGNCCmaOUBuQZku1Yd9SGmNhbGx5LmJhcnJ5QG1haWwuaG91c2UuZ292WAQAAALc" t=
+itle=3D"https://urldefense.com/v3/__https:/www.gibill.va.gov/wave__;!!Bg5easoy=
+C-OII2vlEqY8mTBrtW-N4OJKAQ!J8xta-F316g-_dJ2pTuw5nIvqpvHiFnEB9NwCEveXcFYYrvYf=
+k4PPhnbXzsmZ3OSs2NRukNJGhYQziy2brXtiNHumVzCG1ZWb3j8$" style=3D"color:#00f;text=
+-decoration:underline"><span style=3D"font-size:10.5pt;font-family:Arial,sans-=
+serif;color:#0089cf;line-height:19.6px">WAVE website</span></a><span style=3D"=
+font-size:10.5pt;font-family:Arial,sans-serif;line-height:19.6px"> or by cal=
+ling 1-877-VACERT.</span></li><li style=3D"margin:0;font-size:11pt;font-family=
+:Calibri,sans-serif;color:#000;line-height:14px"><span style=3D"font-size:10.5=
+pt;font-family:Arial,sans-serif;line-height:19.6px">Students using Chapter 3=
+3 who are currently required to verify enrollment (students attend Non-Colle=
+ge Degrees (NCD) programs in receipt of Monthly Housing Allowance (MHA) or k=
+ickers should likewise continue to verify their attendance until further not=
+ice as if the school did not close to ensure that benefits are not affected.=
+</span></li><li style=3D"margin:0;font-size:11pt;font-family:Calibri,sans-seri=
+f;color:#000;line-height:14px"><span style=3D"font-size:10.5pt;font-family:Ari=
+al,sans-serif;line-height:19.6px">Please contact our Education Call Center a=
+t 1-888-442-4551 (Monday =E2=80=93 Friday, 7 a.m. to 6 p.m. CST) for any questions=
+ about your GI Bill benefits. If you=E2=80=99re unable to contact us by phone, you=
+ can send us a secure inquiry through </span><a href=3D"http://engagement.mail=
+8.housecommunications.gov/f/a/h-rOzQv-1awfhwpUx9jHkA~~/AAS2ygA~/RgRocqBQP0S7=
+aHR0cHM6Ly91cmxkZWZlbnNlLmNvbS92My9fX2h0dHBzOi9hc2sudmEuZ292L19fOyEhQmc1ZWFz=
+b3lDLU9JSTJ2bEVxWThtVEJydFctTjRPSktBUSFKOHh0YS1GMzE2Zy1fZEoycFR1dzVuSXZxcHZI=
+aUZuRUI5TndDRXZlWGNGWVlydllmazRQUGhuYlh6c21aM09TczJOUnVrTkpHaFlReml5MmJyWHRp=
+Tkh1bVZ6Q0c3ZWR5WFlnJFcDc3BjQgpmjlAbkGZLtWHfUhpjYWxseS5iYXJyeUBtYWlsLmhvdXNl=
+LmdvdlgEAAAC3A~~" title=3D"https://urldefense.com/v3/__https:/ask.va.gov/__;!!=
+Bg5easoyC-OII2vlEqY8mTBrtW-N4OJKAQ!J8xta-F316g-_dJ2pTuw5nIvqpvHiFnEB9NwCEveX=
+cFYYrvYfk4PPhnbXzsmZ3OSs2NRukNJGhYQziy2brXtiNHumVzCG7edyXYg$" style=3D"color:#=
+00f;text-decoration:underline"><span style=3D"font-size:10.5pt;font-family:Ari=
+al,sans-serif;color:#0089cf;line-height:19.6px">Ask VA</span></a><span style=
+=3D"font-size:10.5pt;font-family:Arial,sans-serif;line-height:19.6px">.</span>=
+</li><li style=3D"margin:0 0 11.25pt;font-size:11pt;font-family:Calibri,sans-s=
+erif;color:#000;line-height:14px"><span style=3D"font-size:10.5pt;font-family:=
+Arial,sans-serif;line-height:19.6px">If your school remains open, but you ar=
+e unable to attend (i.e., if you had to relocate as a result of the natural =
+disaster), VA is unable to continue GI Bill benefit payments. When you are n=
+o longer pursuing classes, your school must report the termination to VA as =
+soon as possible.</span></li></ul><p style=3D"white-space:normal;text-decorati=
+on:none;caret-color:#000;color:#000;font-family:Aptos;margin-bottom:11.25pt;=
+line-height:140%"><strong><span style=3D"font-size:10.5pt;font-family:Arial,sa=
+ns-serif;color:#000;line-height:19.6px">Benefit Payments</span></strong></p>=
+<ul style=3D"white-space:normal;text-decoration:none;margin-bottom:0;caret-col=
+or:#000;color:#000;font-family:Aptos;margin-top:0" type=3D"disc"><li style=3D"ma=
+rgin:0;font-size:11pt;font-family:Calibri,sans-serif;color:#000;line-height:=
+14px"><span style=3D"font-size:10.5pt;font-family:Arial,sans-serif;line-height=
+:19.6px">If a Veteran or beneficiary does not/cannot receive a benefits paym=
+ent due to the effects of the natural disaster and indicates financial hards=
+hip, the contact center agents must request a one-time special payment addre=
+ss where a replacement payment can be sent. </span><ul style=3D"margin-bottom:=
+0;margin-top:0" type=3D"circle"><li style=3D"margin:0;font-size:11pt;font-family=
+:Calibri,sans-serif;color:#000;line-height:14px"><span style=3D"font-size:10.5=
+pt;font-family:Arial,sans-serif;line-height:19.6px">This can be a Direct Dep=
+osit account (into which VA can issue an electronic funds transfer (EFT) / d=
+irect deposit payment) or a mailing address out of the area impacted by the =
+disaster (to ensure the check can be delivered). Affected ZIP codes where po=
+st offices are closed can be found at this </span><a rel=3D"noopener" href=3D"ht=
+tp://engagement.mail8.housecommunications.gov/f/a/_HHymkXL2EW6-WylziG9tw~~/A=
+AS2ygA~/RgRocqBQP0TuaHR0cHM6Ly91cmxkZWZlbnNlLmNvbS92My9fX2h0dHBzOi9hYm91dC51=
+c3BzLmNvbS9uZXdzcm9vbS9zZXJ2aWNlLWFsZXJ0cy9yZXNpZGVudGlhbC93ZWxjb21lLmh0bV9f=
+OyEhQmc1ZWFzb3lDLU9JSTJ2bEVxWThtVEJydFctTjRPSktBUSFKOHh0YS1GMzE2Zy1fZEoycFR1=
+dzVuSXZxcHZIaUZuRUI5TndDRXZlWGNGWVlydllmazRQUGhuYlh6c21aM09TczJOUnVrTkpHaFlR=
+eml5MmJyWHRpTkh1bVZ6Q0cwYlBsSHl1JFcDc3BjQgpmjlAbkGZLtWHfUhpjYWxseS5iYXJyeUBt=
+YWlsLmhvdXNlLmdvdlgEAAAC3A~~" target=3D"_blank" title=3D"https://urldefense.com/=
+v3/__https:/about.usps.com/newsroom/service-alerts/residential/welcome.htm__=
+;!!Bg5easoyC-OII2vlEqY8mTBrtW-N4OJKAQ!J8xta-F316g-_dJ2pTuw5nIvqpvHiFnEB9NwCE=
+veXcFYYrvYfk4PPhnbXzsmZ3OSs2NRukNJGhYQziy2brXtiNHumVzCG0bPlHyu$" style=3D"colo=
+r:#00f;text-decoration:underline"><span style=3D"font-size:10.5pt;font-family:=
+Arial,sans-serif;color:#0089cf;line-height:19.6px">link</span></a><span styl=
+e=3D"font-size:10.5pt;font-family:Arial,sans-serif;line-height:19.6px">, the U=
+SPS updates this information routinely.</span></li><li style=3D"margin:0 0 11.=
+25pt;font-size:11pt;font-family:Calibri,sans-serif;color:#000;line-height:14=
+px"><span style=3D"font-size:10.5pt;font-family:Arial,sans-serif;line-height:1=
+9.6px">If a bank account is provided, include the routing number, account nu=
+mber, type of account (checking or savings), name of bank and name of indivi=
+dual on the account (the beneficiary or otherwise).</span></li></ul></li><li=
+ style=3D"margin:0;font-size:11pt;font-family:Calibri,sans-serif;color:#000;li=
+ne-height:14px"><span style=3D"font-size:10.5pt;font-family:Arial,sans-serif;l=
+ine-height:19.6px">VBA can issue a same-day EFT payment to affected Veterans=
+. To do this, the Veteran needs to enroll in Direct Deposit.</span></li><li =
+style=3D"margin:0;font-size:11pt;font-family:Calibri,sans-serif;color:#000;lin=
+e-height:14px"><span style=3D"font-size:10.5pt;font-family:Arial,sans-serif;li=
+ne-height:19.6px">If a Veteran does not have a bank account into which they =
+can receive direct deposit, VA has established the Veterans Benefits Banking=
+ Program (VBBP) to give Veterans and beneficiaries access to military-friend=
+ly banks and credit unions they might not otherwise be able to access due to=
+ lack of awareness, individual credit history, and / or legal history. Veter=
+ans can find more information about VBBP </span><a href=3D"http://engagement.m=
+ail8.housecommunications.gov/f/a/0BhfM9zG7x-p5IoiYK88hw~~/AAS2ygA~/RgRocqBQP=
+0TYaHR0cHM6Ly91cmxkZWZlbnNlLmNvbS92My9fX2h0dHBzOi93d3cuYmVuZWZpdHMudmEuZ292L=
+2JlbmVmaXRzL2JhbmtpbmcuYXNwX187ISFCZzVlYXNveUMtT0lJMnZsRXFZOG1UQnJ0Vy1ONE9KS=
+0FRIUo4eHRhLUYzMTZnLV9kSjJwVHV3NW5JdnFwdkhpRm5FQjlOd0NFdmVYY0ZZWXJ2WWZrNFBQa=
+G5iWHpzbVozT1NzMk5SdWtOSkdoWVF6aXkyYnJYdGlOSHVtVnpDR3lqenJsdk8kVwNzcGNCCmaOU=
+BuQZku1Yd9SGmNhbGx5LmJhcnJ5QG1haWwuaG91c2UuZ292WAQAAALc" title=3D"https://urld=
+efense.com/v3/__https:/www.benefits.va.gov/benefits/banking.asp__;!!Bg5easoy=
+C-OII2vlEqY8mTBrtW-N4OJKAQ!J8xta-F316g-_dJ2pTuw5nIvqpvHiFnEB9NwCEveXcFYYrvYf=
+k4PPhnbXzsmZ3OSs2NRukNJGhYQziy2brXtiNHumVzCGyjzrlvO$" style=3D"color:#00f;text=
+-decoration:underline"><span style=3D"font-size:10.5pt;font-family:Arial,sans-=
+serif;color:#0089cf;line-height:19.6px">here</span></a><span style=3D"font-siz=
+e:10.5pt;font-family:Arial,sans-serif;line-height:19.6px">.</span></li><li s=
+tyle=3D"margin:0 0 11.25pt;font-size:11pt;font-family:Calibri,sans-serif;color=
+:#000;line-height:14px"><span style=3D"font-size:10.5pt;font-family:Arial,sans=
+-serif;line-height:19.6px">If Veterans call us, they can change their addres=
+s or switch to direct deposit over the phone.</span></li></ul><p style=3D"whit=
+e-space:normal;text-decoration:none;caret-color:#000;color:#000;font-family:=
+Aptos;margin-bottom:11.25pt;line-height:140%"><strong><span style=3D"font-size=
+:10.5pt;font-family:Arial,sans-serif;color:#000;line-height:19.6px">Insuranc=
+e</span></strong></p><ul style=3D"white-space:normal;text-decoration:none;marg=
+in-bottom:0;caret-color:#000;color:#000;font-family:Aptos;margin-top:0" type=
+=3D"disc"><li style=3D"margin:0;font-size:11pt;font-family:Calibri,sans-serif;co=
+lor:#000;line-height:14px"><span style=3D"font-size:10.5pt;font-family:Arial,s=
+ans-serif;line-height:19.6px">VA provides assistance to help ease the hardsh=
+ips of those affected. VA offers Instant Loan Approval online and expedited =
+same day processing for policy loans when Veterans contact the Call Center.<=
+/span></li><li style=3D"margin:0;font-size:11pt;font-family:Calibri,sans-serif=
+;color:#000;line-height:14px"><span style=3D"font-size:10.5pt;font-family:Aria=
+l,sans-serif;line-height:19.6px">In addition, we expedite same day processin=
+g and approval of the following policy actions: </span><ul style=3D"margin-bot=
+tom:0;margin-top:0" type=3D"circle"><li style=3D"margin:0;font-size:11pt;font-fa=
+mily:Calibri,sans-serif;color:#000;line-height:14px"><span style=3D"font-size:=
+10.5pt;font-family:Arial,sans-serif;line-height:19.6px">Withdrawals from div=
+idend credit and deposit accounts</span></li><li style=3D"margin:0;font-size:1=
+1pt;font-family:Calibri,sans-serif;color:#000;line-height:14px"><span style=3D=
+"font-size:10.5pt;font-family:Arial,sans-serif;line-height:19.6px">Extension=
+ of premium payment grace period</span></li><li style=3D"margin:0;font-size:11=
+pt;font-family:Calibri,sans-serif;color:#000;line-height:14px"><span style=3D"=
+font-size:10.5pt;font-family:Arial,sans-serif;line-height:19.6px">Extension =
+of reinstatement deadlines</span></li><li style=3D"margin:0 0 11.25pt;font-siz=
+e:11pt;font-family:Calibri,sans-serif;color:#000;line-height:14px"><span sty=
+le=3D"font-size:10.5pt;font-family:Arial,sans-serif;line-height:19.6px">Proces=
+sing of death claims</span></li></ul></li><li style=3D"margin:0 0 11.25pt;font=
+-size:11pt;font-family:Calibri,sans-serif;color:#000;line-height:14px"><span=
+ style=3D"font-size:10.5pt;font-family:Arial,sans-serif;line-height:19.6px">Th=
+e Office of Servicemembers' Group Life Insurance (OSGLI) is following disast=
+er alerts that are issued by each state department of insurance in the event=
+ of natural disaster. These alerts generally provide a moratorium on lapsing=
+ or extension of premium payments. OSGLI follows these procedures for all-na=
+tural disasters.</span></li></ul><p style=3D"white-space:normal;text-decoratio=
+n:none;caret-color:#000;color:#000;font-family:Aptos;margin-bottom:11.25pt;l=
+ine-height:140%"><span style=3D"font-size:10.5pt;font-family:Arial,sans-serif;=
+color:#000;line-height:19.6px">Veterans may call the Insurance Center at 1-8=
+00-669-8477 or OSGLI at 1-800-419-1473.</span></p><p style=3D"white-space:norm=
+al;text-decoration:none;caret-color:#000;color:#000;font-family:Aptos;margin=
+-bottom:11.25pt;line-height:140%"><span style=3D"font-size:10.5pt;font-family:=
+Arial,sans-serif;color:#000;line-height:19.6px">For more information on bene=
+fits, visit the VA's website </span><span style=3D"font-size:10pt;font-family:=
+'Times New Roman',serif;line-height:18.2px"><a href=3D"http://engagement.mail8=
+.housecommunications.gov/f/a/rsyj8pvpKxAI5retQYlhWQ~~/AAS2ygA~/RgRocqBQP0TJa=
+HR0cHM6Ly91cmxkZWZlbnNlLmNvbS92My9fX2h0dHBzOi9iZW5lZml0cy52YS5nb3YvYmVuZWZpd=
+HMvX187ISFCZzVlYXNveUMtT0lJMnZsRXFZOG1UQnJ0Vy1ONE9KS0FRIUo4eHRhLUYzMTZnLV9kS=
+jJwVHV3NW5JdnFwdkhpRm5FQjlOd0NFdmVYY0ZZWXJ2WWZrNFBQaG5iWHpzbVozT1NzMk5SdWtOS=
+kdoWVF6aXkyYnJYdGlOSHVtVnpDRzgwYlNjaDUkVwNzcGNCCmaOUBuQZku1Yd9SGmNhbGx5LmJhc=
+nJ5QG1haWwuaG91c2UuZ292WAQAAALc" title=3D"https://urldefense.com/v3/__https:/b=
+enefits.va.gov/benefits/__;!!Bg5easoyC-OII2vlEqY8mTBrtW-N4OJKAQ!J8xta-F316g-=
+_dJ2pTuw5nIvqpvHiFnEB9NwCEveXcFYYrvYfk4PPhnbXzsmZ3OSs2NRukNJGhYQziy2brXtiNHu=
+mVzCG80bSch5$" style=3D"color:#00f;text-decoration:underline"><span style=3D"fon=
+t-size:10.5pt;font-family:Arial,sans-serif;color:#0089cf;line-height:19.6px"=
+>here</span></a></span><span style=3D"font-size:10.5pt;font-family:Arial,sans-=
+serif;color:#000;line-height:19.6px">. Additionally, you may also access thi=
+s </span><span style=3D"font-size:10pt;font-family:'Times New Roman',serif;lin=
+e-height:18.2px"><a href=3D"http://engagement.mail8.housecommunications.gov/f/=
+a/wQWfFc_DKd-KbgKeiTe96w~~/AAS2ygA~/RgRocqBQP0TLaHR0cHM6Ly91cmxkZWZlbnNlLmNv=
+bS92My9fX2h0dHBzOi93d3cuZGlzYXN0ZXJhc3Npc3RhbmNlLmdvdi9fXzshIUJnNWVhc295Qy1P=
+SUkydmxFcVk4bVRCcnRXLU40T0pLQVEhSjh4dGEtRjMxNmctX2RKMnBUdXc1bkl2cXB2SGlGbkVC=
+OU53Q0V2ZVhjRllZcnZZZms0UFBobmJYenNtWjNPU3MyTlJ1a05KR2hZUXppeTJiclh0aU5IdW1W=
+ekNHMzJMN0llSCRXA3NwY0IKZo5QG5BmS7Vh31IaY2FsbHkuYmFycnlAbWFpbC5ob3VzZS5nb3ZY=
+BAAAAtw~" title=3D"https://urldefense.com/v3/__https:/www.disasterassistance.g=
+ov/__;!!Bg5easoyC-OII2vlEqY8mTBrtW-N4OJKAQ!J8xta-F316g-_dJ2pTuw5nIvqpvHiFnEB=
+9NwCEveXcFYYrvYfk4PPhnbXzsmZ3OSs2NRukNJGhYQziy2brXtiNHumVzCG32L7IeH$" style=3D=
+"color:#00f;text-decoration:underline"><span style=3D"font-size:10.5pt;font-fa=
+mily:Arial,sans-serif;color:#0089cf;line-height:19.6px">link</span></a></spa=
+n><span style=3D"font-size:10.5pt;font-family:Arial,sans-serif;color:#000;line=
+-height:19.6px"> for disaster-related information.</span></p><p style=3D"white=
+-space:normal;text-decoration:none;caret-color:#000;color:#000;font-family:A=
+ptos;margin-bottom:11.25pt;line-height:140%"><strong><span style=3D"font-size:=
+10.5pt;font-family:Arial,sans-serif;color:#000;line-height:19.6px">National =
+Resources:</span></strong></p><ul style=3D"white-space:normal;text-decoration:=
+none;margin-bottom:0;caret-color:#000;color:#000;font-family:Aptos;margin-to=
+p:0" type=3D"disc"><li style=3D"margin:0;font-size:11pt;font-family:Calibri,sans=
+-serif;color:#000;line-height:19.6px"><a rel=3D"noopener" href=3D"http://engagem=
+ent.mail8.housecommunications.gov/f/a/nzG3wyAxBp2Yl_nJd0faBQ~~/AAS2ygA~/RgRo=
+cqBQP0TfaHR0cHM6Ly91cmxkZWZlbnNlLmNvbS92My9fX2h0dHBzOi93d3cuZGlzYXN0ZXJhc3Np=
+c3RhbmNlLmdvdi9pbmZvcm1hdGlvbi92ZXRlcmFuc19fOyEhQmc1ZWFzb3lDLU9JSTJ2bEVxWTht=
+VEJydFctTjRPSktBUSFKOHh0YS1GMzE2Zy1fZEoycFR1dzVuSXZxcHZIaUZuRUI5TndDRXZlWGNG=
+WVlydllmazRQUGhuYlh6c21aM09TczJOUnVrTkpHaFlReml5MmJyWHRpTkh1bVZ6Q0c4VVZBV3R2=
+JFcDc3BjQgpmjlAbkGZLtWHfUhpjYWxseS5iYXJyeUBtYWlsLmhvdXNlLmdvdlgEAAAC3A~~" ta=
+rget=3D"_blank" title=3D"https://urldefense.com/v3/__https:/www.disasterassistan=
+ce.gov/information/veterans__;!!Bg5easoyC-OII2vlEqY8mTBrtW-N4OJKAQ!J8xta-F31=
+6g-_dJ2pTuw5nIvqpvHiFnEB9NwCEveXcFYYrvYfk4PPhnbXzsmZ3OSs2NRukNJGhYQziy2brXti=
+NHumVzCG8UVAWtv$" style=3D"color:#00f;text-decoration:underline"><span style=3D"=
+font-size:10.5pt;font-family:Arial,sans-serif;color:#0089cf;line-height:19.6=
+px">Veterans | DisasterAssistance.gov</span></a></li><li style=3D"margin:0 0 1=
+1.25pt;font-size:11pt;font-family:Calibri,sans-serif;color:#000;line-height:=
+19.6px"><a rel=3D"noopener" href=3D"http://engagement.mail8.housecommunications.=
+gov/f/a/SwCAIC0TIoH8Cch-RLpOtw~~/AAS2ygA~/RgRocqBQP0TzaHR0cHM6Ly91cmxkZWZlbn=
+NlLmNvbS92My9fX2h0dHBzOi93d3cub3NwLnZhLmdvdi9WQV9EaXNhc3Rlcl9Bc3Npc3RhbmNlX3=
+RvX1ZldGVyYW5zX0Jyb2NodXJlXzIwMTgucGRmX187ISFCZzVlYXNveUMtT0lJMnZsRXFZOG1UQn=
+J0Vy1ONE9KS0FRIUo4eHRhLUYzMTZnLV9kSjJwVHV3NW5JdnFwdkhpRm5FQjlOd0NFdmVYY0ZZWX=
+J2WWZrNFBQaG5iWHpzbVozT1NzMk5SdWtOSkdoWVF6aXkyYnJYdGlOSHVtVnpDR3pGNy0zckkkVw=
+NzcGNCCmaOUBuQZku1Yd9SGmNhbGx5LmJhcnJ5QG1haWwuaG91c2UuZ292WAQAAALc" target=3D"=
+_blank" title=3D"https://urldefense.com/v3/__https:/www.osp.va.gov/VA_Disaster=
+_Assistance_to_Veterans_Brochure_2018.pdf__;!!Bg5easoyC-OII2vlEqY8mTBrtW-N4O=
+JKAQ!J8xta-F316g-_dJ2pTuw5nIvqpvHiFnEB9NwCEveXcFYYrvYfk4PPhnbXzsmZ3OSs2NRukN=
+JGhYQziy2brXtiNHumVzCGzF7-3rI$" style=3D"color:#00f;text-decoration:underline"=
+><span style=3D"font-size:10.5pt;font-family:Arial,sans-serif;color:#0089cf;li=
+ne-height:19.6px">VA Disaster Assistance for Veterans Brochure</span></a><sp=
+an style=3D"font-size:10.5pt;font-family:Arial,sans-serif;line-height:19.6px">=
+.&nbsp;</span></li></ul></div></td></tr></tbody></table><!--[if (!mso)&(!IE)=
+]><!--></div><!--<![endif]--></div></div><!--[if (mso)|(IE)]></td><![endif]-=
+-><!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]--></div></div=
+></div><div class=3D"u-row-container" style=3D"padding:0;background-color:transp=
+arent"><div class=3D"u-row" style=3D"margin:0 auto;min-width:320px;max-width:640=
+px;overflow-wrap:break-word;word-wrap:break-word;word-break:break-word;backg=
+round-color:transparent"><div style=3D"border-collapse:collapse;display:table;=
+width:100%;height:100%;background-color:transparent"><!--[if (mso)|(IE)]><ta=
+ble width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"p=
+adding: 0px;background-color: transparent;" align=3D"center"><table cellpaddin=
+g=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:640px;"><tr style=3D"background-=
+color: transparent;"><![endif]--><!--[if (mso)|(IE)]><td align=3D"center" widt=
+h=3D"640" style=3D"width: 640px;padding: 0px;border-top: 0px solid transparent;b=
+order-left: 0px solid transparent;border-right: 0px solid transparent;border=
+-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px=
+; -moz-border-radius: 0px;" valign=3D"top"><![endif]--><div class=3D"u-col u-col=
+-100" style=3D"max-width:320px;min-width:640px;display:table-cell;vertical-ali=
+gn:top"><div style=3D"height:100%;width:100%!important;border-radius:0;-webkit=
+-border-radius:0;-moz-border-radius:0"><!--[if (!mso)&(!IE)]><!--><div style=
+=3D"box-sizing:border-box;height:100%;padding:0;border-top:0 solid transparent=
+;border-left:0 solid transparent;border-right:0 solid transparent;border-bot=
+tom:0 solid transparent;border-radius:0;-webkit-border-radius:0;-moz-border-=
+radius:0"><!--<![endif]--><table style=3D"font-family:Roboto" role=3D"presentati=
+on" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" border=3D"0"><tbody><tr><td s=
+tyle=3D"overflow-wrap:break-word;word-break:break-word;padding:0 10px;font-fam=
+ily:Roboto" align=3D"left"><div style=3D"font-size:14px;line-height:140%;text-al=
+ign:left;word-wrap:break-word"><p style=3D"font-size:14px;line-height:140%">Si=
+ncerely,</p></div></td></tr></tbody></table><!--[if (!mso)&(!IE)]><!--></div=
+><!--<![endif]--></div></div><!--[if (mso)|(IE)]></td><![endif]--><!--[if (m=
+so)|(IE)]></tr></table></td></tr></table><![endif]--></div></div></div><div =
+class=3D"u-row-container" style=3D"padding:0;background-color:transparent"><div =
+class=3D"u-row" style=3D"margin:0 auto;min-width:320px;max-width:640px;overflow-=
+wrap:break-word;word-wrap:break-word;word-break:break-word;background-color:=
+transparent"><div style=3D"border-collapse:collapse;display:table;width:100%;h=
+eight:100%;background-color:transparent"><!--[if (mso)|(IE)]><table width=3D"1=
+00%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding: 0px;=
+background-color: transparent;" align=3D"center"><table cellpadding=3D"0" cellsp=
+acing=3D"0" border=3D"0" style=3D"width:640px;"><tr style=3D"background-color: trans=
+parent;"><![endif]--><!--[if (mso)|(IE)]><td align=3D"center" width=3D"640" styl=
+e=3D"width: 640px;padding: 0px;border-top: 0px solid transparent;border-left: =
+0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px=
+ solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-borde=
+r-radius: 0px;" valign=3D"top"><![endif]--><div class=3D"u-col u-col-100" style=3D=
+"max-width:320px;min-width:640px;display:table-cell;vertical-align:top"><div=
+ style=3D"height:100%;width:100%!important;border-radius:0;-webkit-border-radi=
+us:0;-moz-border-radius:0"><!--[if (!mso)&(!IE)]><!--><div style=3D"box-sizing=
+:border-box;height:100%;padding:0;border-top:0 solid transparent;border-left=
+:0 solid transparent;border-right:0 solid transparent;border-bottom:0 solid =
+transparent;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0"><!=
+--<![endif]--><table style=3D"font-family:Roboto" role=3D"presentation" cellpadd=
+ing=3D"0" cellspacing=3D"0" width=3D"100%" border=3D"0"><tbody><tr><td style=3D"overfl=
+ow-wrap:break-word;word-break:break-word;padding:10px;font-family:Roboto" al=
+ign=3D"left"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><t=
+body><tr><td style=3D"padding-right:0;padding-left:0" align=3D"left"><img align=3D=
+"left" border=3D"0" src=3D"https://assets.unlayer.com/projects/85458/16720271051=
+41-morgan%20luttrell%20sig.png" alt=3D"Rep. Morgan Luttrell signature image" t=
+itle=3D"Rep. Morgan Luttrell signature image" style=3D"outline:0;text-decoration=
+:none;-ms-interpolation-mode:bicubic;clear:both;display:inline-block!importa=
+nt;border:none;height:auto;float:none;width:32%;max-width:198.4px" width=3D"19=
+8.4"> </td></tr></tbody></table></td></tr></tbody></table><!--[if (!mso)&(!I=
+E)]><!--></div><!--<![endif]--></div></div><!--[if (mso)|(IE)]></td><![endif=
+]--><!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]--></div></d=
+iv></div><div class=3D"u-row-container" style=3D"padding:0;background-color:tran=
+sparent"><div class=3D"u-row" style=3D"margin:0 auto;min-width:320px;max-width:6=
+40px;overflow-wrap:break-word;word-wrap:break-word;word-break:break-word;bac=
+kground-color:transparent"><div style=3D"border-collapse:collapse;display:tabl=
+e;width:100%;height:100%;background-color:transparent"><!--[if (mso)|(IE)]><=
+table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D=
+"padding: 0px;background-color: transparent;" align=3D"center"><table cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:640px;"><tr style=3D"backgroun=
+d-color: transparent;"><![endif]--><!--[if (mso)|(IE)]><td align=3D"center" wi=
+dth=3D"640" style=3D"width: 640px;padding: 0px;border-top: 0px solid transparent=
+;border-left: 0px solid transparent;border-right: 0px solid transparent;bord=
+er-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0=
+px; -moz-border-radius: 0px;" valign=3D"top"><![endif]--><div class=3D"u-col u-c=
+ol-100" style=3D"max-width:320px;min-width:640px;display:table-cell;vertical-a=
+lign:top"><div style=3D"height:100%;width:100%!important;border-radius:0;-webk=
+it-border-radius:0;-moz-border-radius:0"><!--[if (!mso)&(!IE)]><!--><div sty=
+le=3D"box-sizing:border-box;height:100%;padding:0;border-top:0 solid transpare=
+nt;border-left:0 solid transparent;border-right:0 solid transparent;border-b=
+ottom:0 solid transparent;border-radius:0;-webkit-border-radius:0;-moz-borde=
+r-radius:0"><!--<![endif]--><table style=3D"font-family:Roboto" role=3D"presenta=
+tion" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" border=3D"0"><tbody><tr><td=
+ style=3D"overflow-wrap:break-word;word-break:break-word;padding:0 10px 10px;f=
+ont-family:Roboto" align=3D"left"><div style=3D"font-size:14px;line-height:140%;=
+text-align:left;word-wrap:break-word"><p style=3D"font-size:14px;line-height:1=
+40%"><strong>Rep. Morgan Luttrell</strong></p><p style=3D"font-size:14px;line-=
+height:140%"><strong>Member of Congress</strong></p></div></td></tr></tbody>=
+</table><!--[if (!mso)&(!IE)]><!--></div><!--<![endif]--></div></div><!--[if=
+ (mso)|(IE)]></td><![endif]--><!--[if (mso)|(IE)]></tr></table></td></tr></t=
+able><![endif]--></div></div></div><div class=3D"u-row-container" style=3D"paddi=
+ng:0;background-color:transparent"><div class=3D"u-row" style=3D"margin:0 auto;m=
+in-width:320px;max-width:640px;overflow-wrap:break-word;word-wrap:break-word=
+;word-break:break-word;background-color:#e7e7e7"><div style=3D"border-collapse=
+:collapse;display:table;width:100%;height:100%;background-color:transparent"=
+><!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0"><tr><td style=3D"padding: 0px;background-color: transparent;" align=3D"c=
+enter"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:640px;=
+"><tr style=3D"background-color: #e7e7e7;"><![endif]--><!--[if (mso)|(IE)]><td=
+ align=3D"center" width=3D"640" style=3D"width: 640px;padding: 0px;border-top: 0px=
+ solid transparent;border-left: 0px solid transparent;border-right: 0px soli=
+d transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webki=
+t-border-radius: 0px; -moz-border-radius: 0px;" valign=3D"top"><![endif]--><di=
+v class=3D"u-col u-col-100" style=3D"max-width:320px;min-width:640px;display:tab=
+le-cell;vertical-align:top"><div style=3D"height:100%;width:100%!important;bor=
+der-radius:0;-webkit-border-radius:0;-moz-border-radius:0"><!--[if (!mso)&(!=
+IE)]><!--><div style=3D"box-sizing:border-box;height:100%;padding:0;border-top=
+:0 solid transparent;border-left:0 solid transparent;border-right:0 solid tr=
+ansparent;border-bottom:0 solid transparent;border-radius:0;-webkit-border-r=
+adius:0;-moz-border-radius:0"><!--<![endif]--><table style=3D"font-family:Robo=
+to" role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" border=3D=
+"0"><tbody><tr><td style=3D"overflow-wrap:break-word;word-break:break-word;pad=
+ding:10px;font-family:Roboto" align=3D"left"><div style=3D"font-size:14px;line-h=
+eight:140%;text-align:left;word-wrap:break-word"><p style=3D"font-size:14px;li=
+ne-height:140%;text-align:center">Sign up for my newsletter to get updates o=
+n this issue and others!</p></div></td></tr></tbody></table><table style=3D"fo=
+nt-family:Roboto" role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" border=3D"0"><tbody><tr><td style=3D"overflow-wrap:break-word;word-break:=
+break-word;padding:10px;font-family:Roboto" align=3D"left"><!--[if mso]><style=
+>.v-button {background: transparent !important;}</style><![endif]--><div ali=
+gn=3D"center"><!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml=
+" xmlns:w=3D"urn:schemas-microsoft-com:office:word" href=3D"https://luttrell.hou=
+se.gov/contact/newsletter-subscribe" style=3D"height:37px; v-text-anchor:middl=
+e; width:130px;" arcsize=3D"11%"  stroke=3D"f" fillcolor=3D"#324559"><w:anchorlock=
+/><center style=3D"color:#FFFFFF;"><![endif]--><a href=3D"http://engagement.mail=
+8.housecommunications.gov/f/a/Iwot_kobuYWDXTMl7bmuRA~~/AAS2ygA~/RgRocqBQP0Q3=
+aHR0cHM6Ly9sdXR0cmVsbC5ob3VzZS5nb3YvY29udGFjdC9uZXdzbGV0dGVyLXN1YnNjcmliZVcD=
+c3BjQgpmjlAbkGZLtWHfUhpjYWxseS5iYXJyeUBtYWlsLmhvdXNlLmdvdlgEAAAC3A~~" target=
+=3D"_blank" class=3D"v-button" style=3D"box-sizing:border-box;display:inline-block=
+;text-decoration:none;-webkit-text-size-adjust:none;text-align:center;color:=
+#fff;background-color:#324559;border-radius:4px;-webkit-border-radius:4px;-m=
+oz-border-radius:4px;width:21%;max-width:100%;overflow-wrap:break-word;word-=
+break:break-word;word-wrap:break-word;mso-border-alt:none;font-size:14px"><s=
+pan style=3D"display:block;padding:10px 20px;line-height:120%"><span style=3D"fo=
+nt-size:14px;line-height:16.8px">Sign Up</span></span> </a><!--[if mso]></ce=
+nter></v:roundrect><![endif]--></div></td></tr></tbody></table><!--[if (!mso=
+)&(!IE)]><!--></div><!--<![endif]--></div></div><!--[if (mso)|(IE)]></td><![=
+endif]--><!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]--></di=
+v></div></div><div class=3D"u-row-container" style=3D"padding:0;background-color=
+:transparent"><div class=3D"u-row" style=3D"margin:0 auto;min-width:320px;max-wi=
+dth:640px;overflow-wrap:break-word;word-wrap:break-word;word-break:break-wor=
+d;background-color:transparent"><div style=3D"border-collapse:collapse;display=
+:table;width:100%;height:100%;background-color:transparent"><!--[if (mso)|(I=
+E)]><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td s=
+tyle=3D"padding: 0px;background-color: transparent;" align=3D"center"><table cel=
+lpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:640px;"><tr style=3D"back=
+ground-color: transparent;"><![endif]--><!--[if (mso)|(IE)]><td align=3D"cente=
+r" width=3D"640" style=3D"width: 640px;padding: 0px;border-top: 0px solid transp=
+arent;border-left: 0px solid transparent;border-right: 0px solid transparent=
+;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radi=
+us: 0px; -moz-border-radius: 0px;" valign=3D"top"><![endif]--><div class=3D"u-co=
+l u-col-100" style=3D"max-width:320px;min-width:640px;display:table-cell;verti=
+cal-align:top"><div style=3D"height:100%;width:100%!important;border-radius:0;=
+-webkit-border-radius:0;-moz-border-radius:0"><!--[if (!mso)&(!IE)]><!--><di=
+v style=3D"box-sizing:border-box;height:100%;padding:0;border-top:0 solid tran=
+sparent;border-left:0 solid transparent;border-right:0 solid transparent;bor=
+der-bottom:0 solid transparent;border-radius:0;-webkit-border-radius:0;-moz-=
+border-radius:0"><!--<![endif]--><table style=3D"font-family:Roboto" role=3D"pre=
+sentation" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" border=3D"0"><tbody><t=
+r><td style=3D"overflow-wrap:break-word;word-break:break-word;padding:10px;fon=
+t-family:Roboto" align=3D"left"><table height=3D"0px" align=3D"center" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"border-collapse:collapse=
+;table-layout:fixed;border-spacing:0;mso-table-lspace:0;mso-table-rspace:0;v=
+ertical-align:top;border-top:1px solid #bbb;-ms-text-size-adjust:100%;-webki=
+t-text-size-adjust:100%"><tbody><tr style=3D"vertical-align:top"><td style=3D"wo=
+rd-break:break-word;border-collapse:collapse!important;vertical-align:top;fo=
+nt-size:0;line-height:0;mso-line-height-rule:exactly;-ms-text-size-adjust:10=
+0%;-webkit-text-size-adjust:100%"><span>&nbsp;</span> </td></tr></tbody></ta=
+ble></td></tr></tbody></table><table style=3D"font-family:Roboto" role=3D"presen=
+tation" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" border=3D"0"><tbody><tr><=
+td style=3D"overflow-wrap:break-word;word-break:break-word;padding:10px 10px 0=
+;font-family:Roboto" align=3D"left"><div style=3D"font-size:14px;line-height:140=
+%;text-align:left;word-wrap:break-word"><p style=3D"font-size:14px;line-height=
+:140%;text-align:center"><a rel=3D"noopener" href=3D"http://engagement.mail8.hou=
+secommunications.gov/f/a/k8hHT3pVj6l82H6uwR1i-g~~/AAS2ygA~/RgRocqBQP0Q_aHR0c=
+HM6Ly9sdXR0cmVsbC5ob3VzZS5nb3YvYWRkcmVzc19hdXRoZW50aWNhdGlvbj9mb3JtPS9jb250Y=
+WN0VwNzcGNCCmaOUBuQZku1Yd9SGmNhbGx5LmJhcnJ5QG1haWwuaG91c2UuZ292WAQAAALc" tar=
+get=3D"_blank"><span style=3D"font-size:16px;line-height:22.4px"><strong>Contact=
+ Me</strong></span></a></p></div></td></tr></tbody></table><!--[if (!mso)&(!=
+IE)]><!--></div><!--<![endif]--></div></div><!--[if (mso)|(IE)]></td><![endi=
+f]--><!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]--></div></=
+div></div><div class=3D"u-row-container" style=3D"padding:0;background-color:tra=
+nsparent"><div class=3D"u-row" style=3D"margin:0 auto;min-width:320px;max-width:=
+640px;overflow-wrap:break-word;word-wrap:break-word;word-break:break-word;ba=
+ckground-color:transparent"><div style=3D"border-collapse:collapse;display:tab=
+le;width:100%;height:100%;background-color:transparent"><!--[if (mso)|(IE)]>=
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=
+=3D"padding: 0px;background-color: transparent;" align=3D"center"><table cellpad=
+ding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:640px;"><tr style=3D"backgrou=
+nd-color: transparent;"><![endif]--><!--[if (mso)|(IE)]><td align=3D"center" w=
+idth=3D"320" style=3D"width: 320px;padding: 0px;border-top: 0px solid transparen=
+t;border-left: 0px solid transparent;border-right: 0px solid transparent;bor=
+der-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: =
+0px; -moz-border-radius: 0px;" valign=3D"top"><![endif]--><div class=3D"u-col u-=
+col-50" style=3D"max-width:320px;min-width:320px;display:table-cell;vertical-a=
+lign:top"><div style=3D"height:100%;width:100%!important;border-radius:0;-webk=
+it-border-radius:0;-moz-border-radius:0"><!--[if (!mso)&(!IE)]><!--><div sty=
+le=3D"box-sizing:border-box;height:100%;padding:0;border-top:0 solid transpare=
+nt;border-left:0 solid transparent;border-right:0 solid transparent;border-b=
+ottom:0 solid transparent;border-radius:0;-webkit-border-radius:0;-moz-borde=
+r-radius:0"><!--<![endif]--><table style=3D"font-family:Roboto" role=3D"presenta=
+tion" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" border=3D"0"><tbody><tr><td=
+ style=3D"overflow-wrap:break-word;word-break:break-word;padding:10px;font-fam=
+ily:Roboto" align=3D"left"><div style=3D"font-size:14px;line-height:140%;text-al=
+ign:left;word-wrap:break-word"><p style=3D"font-size:14px;line-height:140%;tex=
+t-align:center"><strong>Washington DC Office</strong><br>1320 Longworth Hous=
+e Office Building<br>Washington, DC 20515<br>Phone: (202) 225-4901</p></div>=
+</td></tr></tbody></table><!--[if (!mso)&(!IE)]><!--></div><!--<![endif]--><=
+/div></div><!--[if (mso)|(IE)]></td><![endif]--><!--[if (mso)|(IE)]><td alig=
+n=3D"center" width=3D"320" style=3D"width: 320px;padding: 0px;border-top: 0px soli=
+d transparent;border-left: 0px solid transparent;border-right: 0px solid tra=
+nsparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-bor=
+der-radius: 0px; -moz-border-radius: 0px;" valign=3D"top"><![endif]--><div cla=
+ss=3D"u-col u-col-50" style=3D"max-width:320px;min-width:320px;display:table-cel=
+l;vertical-align:top"><div style=3D"height:100%;width:100%!important;border-ra=
+dius:0;-webkit-border-radius:0;-moz-border-radius:0"><!--[if (!mso)&(!IE)]><=
+!--><div style=3D"box-sizing:border-box;height:100%;padding:0;border-top:0 sol=
+id transparent;border-left:0 solid transparent;border-right:0 solid transpar=
+ent;border-bottom:0 solid transparent;border-radius:0;-webkit-border-radius:=
+0;-moz-border-radius:0"><!--<![endif]--><table style=3D"font-family:Roboto" ro=
+le=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" border=3D"0"><t=
+body><tr><td style=3D"overflow-wrap:break-word;word-break:break-word;padding:1=
+0px;font-family:Roboto" align=3D"left"><div style=3D"font-size:14px;line-height:=
+140%;text-align:left;word-wrap:break-word"><p style=3D"font-size:14px;line-hei=
+ght:140%;text-align:center"><strong>Magnolia District Office</strong><br>182=
+30 FM 1488<br>Magnolia, TX 77354</p></div></td></tr></tbody></table><!--[if =
+(!mso)&(!IE)]><!--></div><!--<![endif]--></div></div><!--[if (mso)|(IE)]></t=
+d><![endif]--><!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]--=
+></div></div></div><div class=3D"u-row-container" style=3D"padding:0;background-=
+color:transparent"><div class=3D"u-row" style=3D"margin:0 auto;min-width:320px;m=
+ax-width:640px;overflow-wrap:break-word;word-wrap:break-word;word-break:brea=
+k-word;background-color:transparent"><div style=3D"border-collapse:collapse;di=
+splay:table;width:100%;height:100%;background-color:transparent"><!--[if (ms=
+o)|(IE)]><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr>=
+<td style=3D"padding: 0px;background-color: transparent;" align=3D"center"><tabl=
+e cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:640px;"><tr style=3D=
+"background-color: transparent;"><![endif]--><!--[if (mso)|(IE)]><td align=3D"=
+center" width=3D"640" style=3D"width: 640px;padding: 0px;border-top: 0px solid t=
+ransparent;border-left: 0px solid transparent;border-right: 0px solid transp=
+arent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border=
+-radius: 0px; -moz-border-radius: 0px;" valign=3D"top"><![endif]--><div class=3D=
+"u-col u-col-100" style=3D"max-width:320px;min-width:640px;display:table-cell;=
+vertical-align:top"><div style=3D"height:100%;width:100%!important;border-radi=
+us:0;-webkit-border-radius:0;-moz-border-radius:0"><!--[if (!mso)&(!IE)]><!-=
+-><div style=3D"box-sizing:border-box;height:100%;padding:0;border-top:0 solid=
+ transparent;border-left:0 solid transparent;border-right:0 solid transparen=
+t;border-bottom:0 solid transparent;border-radius:0;-webkit-border-radius:0;=
+-moz-border-radius:0"><!--<![endif]--><table style=3D"font-family:Roboto" role=
+=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" border=3D"0"><tbo=
+dy><tr><td style=3D"overflow-wrap:break-word;word-break:break-word;padding:10p=
+x;font-family:Roboto" align=3D"left"><div align=3D"center"><div style=3D"display:t=
+able;max-width:110px"><!--[if (mso)|(IE)]><table width=3D"110" cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0"><tr><td style=3D"border-collapse:collapse;" align=3D=
+"center"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" styl=
+e=3D"border-collapse:collapse; mso-table-lspace: 0pt;mso-table-rspace: 0pt; wi=
+dth:110px;"><tr><![endif]--><!--[if (mso)|(IE)]><td width=3D"32" style=3D"width:=
+32px; padding-right: 5px;" valign=3D"top"><![endif]--><table align=3D"left" bord=
+er=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"32" height=3D"32" style=3D"width:3=
+2px!important;height:32px!important;display:inline-block;border-collapse:col=
+lapse;table-layout:fixed;border-spacing:0;mso-table-lspace:0;mso-table-rspac=
+e:0;vertical-align:top;margin-right:5px"><tbody><tr style=3D"vertical-align:to=
+p"><td align=3D"left" valign=3D"middle" style=3D"word-break:break-word;border-coll=
+apse:collapse!important;vertical-align:top"><a href=3D"http://engagement.mail8=
+.housecommunications.gov/f/a/kTLk5SZCfji1xdOcwP-nfQ~~/AAS2ygA~/RgRocqBQP0Q3a=
+HR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3Byb2ZpbGUucGhwP2lkPTEwMDA4OTMyODc5MDk0MlcDc=
+3BjQgpmjlAbkGZLtWHfUhpjYWxseS5iYXJyeUBtYWlsLmhvdXNlLmdvdlgEAAAC3A~~" title=3D"=
+Facebook" target=3D"_blank"><img src=3D"https://cdn.tools.unlayer.com/social/ico=
+ns/circle/facebook.png" alt=3D"Facebook" title=3D"Facebook" width=3D"32" style=3D"ou=
+tline:0;text-decoration:none;-ms-interpolation-mode:bicubic;clear:both;displ=
+ay:block!important;border:none;height:auto;float:none;max-width:32px!importa=
+nt"> </a></td></tr></tbody></table><!--[if (mso)|(IE)]></td><![endif]--><!--=
+[if (mso)|(IE)]><td width=3D"32" style=3D"width:32px; padding-right: 5px;" valig=
+n=3D"top"><![endif]--><table align=3D"left" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" width=3D"32" height=3D"32" style=3D"width:32px!important;height:32px!import=
+ant;display:inline-block;border-collapse:collapse;table-layout:fixed;border-=
+spacing:0;mso-table-lspace:0;mso-table-rspace:0;vertical-align:top;margin-ri=
+ght:5px"><tbody><tr style=3D"vertical-align:top"><td align=3D"left" valign=3D"midd=
+le" style=3D"word-break:break-word;border-collapse:collapse!important;vertical=
+-align:top"><a href=3D"http://engagement.mail8.housecommunications.gov/f/a/Rjv=
+EXg1OVTWZ6N_fcrgHsQ~~/AAS2ygA~/RgRocqBQP0QjaHR0cHM6Ly90d2l0dGVyLmNvbS9SZXBMd=
+XR0cmVsbF9UWDhXA3NwY0IKZo5QG5BmS7Vh31IaY2FsbHkuYmFycnlAbWFpbC5ob3VzZS5nb3ZYB=
+AAAAtw~" title=3D"Twitter" target=3D"_blank"><img src=3D"https://cdn.tools.unlayer=
+.com/social/icons/circle/twitter.png" alt=3D"Twitter" title=3D"Twitter" width=3D"3=
+2" style=3D"outline:0;text-decoration:none;-ms-interpolation-mode:bicubic;clea=
+r:both;display:block!important;border:none;height:auto;float:none;max-width:=
+32px!important"> </a></td></tr></tbody></table><!--[if (mso)|(IE)]></td><![e=
+ndif]--><!--[if (mso)|(IE)]><td width=3D"32" style=3D"width:32px; padding-right:=
+ 0px;" valign=3D"top"><![endif]--><table align=3D"left" border=3D"0" cellspacing=3D"=
+0" cellpadding=3D"0" width=3D"32" height=3D"32" style=3D"width:32px!important;height=
+:32px!important;display:inline-block;border-collapse:collapse;table-layout:f=
+ixed;border-spacing:0;mso-table-lspace:0;mso-table-rspace:0;vertical-align:t=
+op;margin-right:0"><tbody><tr style=3D"vertical-align:top"><td align=3D"left" va=
+lign=3D"middle" style=3D"word-break:break-word;border-collapse:collapse!importan=
+t;vertical-align:top"><a href=3D"http://engagement.mail8.housecommunications.g=
+ov/f/a/ZPOaVaSXjpxTlVXhKXGhAA~~/AAS2ygA~/RgRocqBQP0QoaHR0cHM6Ly93d3cuaW5zdGF=
+ncmFtLmNvbS9yZXBsdXR0cmVsbHR4L1cDc3BjQgpmjlAbkGZLtWHfUhpjYWxseS5iYXJyeUBtYWl=
+sLmhvdXNlLmdvdlgEAAAC3A~~" title=3D"Instagram" target=3D"_blank"><img src=3D"https=
+://cdn.tools.unlayer.com/social/icons/circle/instagram.png" alt=3D"Instagram" =
+title=3D"Instagram" width=3D"32" style=3D"outline:0;text-decoration:none;-ms-inter=
+polation-mode:bicubic;clear:both;display:block!important;border:none;height:=
+auto;float:none;max-width:32px!important"> </a></td></tr></tbody></table><!-=
+-[if (mso)|(IE)]></td><![endif]--><!--[if (mso)|(IE)]></tr></table></td></tr=
+></table><![endif]--></div></div></td></tr></tbody></table><!--[if (!mso)&(!=
+IE)]><!--></div><!--<![endif]--></div></div><!--[if (mso)|(IE)]></td><![endi=
+f]--><!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]--></div></=
+div></div><!--[if (mso)|(IE)]></td></tr></table><![endif]--></td></tr></tbod=
+y></table><!--[if mso]></div><![endif]--><!--[if IE]></div><![endif]--><div =
+style=3D"
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, Roboto,
+          Oxygen-Sans, Ubuntu, Cantarell, Arial, sans-serif;
+        background-color: #f8f8f8;
+        padding: 32px;
+      "><br><p style=3D"margin: 0; font-size: 12px; line-height: 16px; letter=
+-spacing: 0.02em; color: #626262 !important; text-align: center;"><a href=3D"h=
+ttp://engagement.mail8.housecommunications.gov/f/a/7qMaTNmLgDtxsATbvyGmVA~~/=
+AAS2ygA~/RgRocqBQP0T6aHR0cHM6Ly9tYWlsLmdvdm1haWx1bnN1YnNjcmliZS5jb20vbWFpbGV=
+ycy9zdWJzY3JpcHRpb25zP2p3dD1leUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjk=
+uZXlKNmFXUWlPaUl5TURjME1USTROVE0xTVRVM01pSXNJbWxrSWpvaU9EVXdPRE1pTENKemRXSWl=
+PaUp5WlhCdGIzSm5ZVzVzZFhSMGNtVnNiQ0lzSW1saGRDSTZNVGN5TURjeU1ESXdPSDAuTHl3cmN=
+ZblFNQnZKbnloZ2xFVFQxTHloM3UxWWdxY0xKS1YtQjZ2S0prZ1cDc3BjQgpmjlAbkGZLtWHfUhp=
+jYWxseS5iYXJyeUBtYWlsLmhvdXNlLmdvdlgEAAAC3A~~">Unsubscribe from future messa=
+ges.</a> </p><br></div><img border=3D"0" width=3D"1" height=3D"1" alt=3D"" src=3D"http=
+://engagement.mail8.housecommunications.gov/q/dUHdaQSKt6YCDjXC5DwQfQ~~/AAS2y=
+gA~/RgRocqBQPlcDc3BjQgpmjlAbkGZLtWHfUhpjYWxseS5iYXJyeUBtYWlsLmhvdXNlLmdvdlgE=
+AAAC3A~~"> </body></html>
+
+--B_3803550632_541901994--
+

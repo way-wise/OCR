@@ -1,0 +1,733 @@
+Received: from PH0PR09MB8153.namprd09.prod.outlook.com (2603:10b6:510:6c::22)
+ by BY5PR09MB5362.namprd09.prod.outlook.com with HTTPS; Tue, 12 Jul 2022
+ 21:28:54 +0000
+Received: from MWHPR09CA0001.namprd09.prod.outlook.com (2603:10b6:300:80::11)
+ by PH0PR09MB8153.namprd09.prod.outlook.com (2603:10b6:510:6c::22) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.5417.20; Tue, 12 Jul
+ 2022 21:28:53 +0000
+Received: from DM3GCC02FT040.eop-gcc02.prod.protection.outlook.com
+ (2a01:111:f400:7d04::204) by MWHPR09CA0001.outlook.office365.com
+ (2603:10b6:300:80::11) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.5417.17 via Frontend
+ Transport; Tue, 12 Jul 2022 21:28:53 +0000
+Authentication-Results: spf=fail (sender IP is 143.228.151.112)
+ smtp.mailfrom=mail.house.gov; dkim=fail (body hash did not verify)
+ header.d=house.gov;dmarc=fail action=none header.from=mail.house.gov;
+Received-SPF: Fail (protection.outlook.com: domain of mail.house.gov does not
+ designate 143.228.151.112 as permitted sender)
+ receiver=protection.outlook.com; client-ip=143.228.151.112;
+ helo=owa.house.gov;
+Received: from owa.house.gov (143.228.151.112) by
+ DM3GCC02FT040.mail.protection.outlook.com (10.97.8.118) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.5417.15 via Frontend Transport; Tue, 12 Jul 2022 21:28:53 +0000
+Received: from EXCH1912.US.House.gov (143.228.151.111) by
+ EXCH1913.US.House.gov (143.228.151.112) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.2.1118.9; Tue, 12 Jul 2022 17:28:51 -0400
+Received: from serg-bulk2-h.house.gov (143.228.145.63) by
+ EXCH1912.US.House.gov (143.228.151.111) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1118.9
+ via Frontend Transport; Tue, 12 Jul 2022 17:28:51 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=house.gov; h=message-id :
+ list-unsubscribe : from : to : date : subject : content-type :
+ mime-version; s=august2019-msgb-hg;
+ bh=KRYiH29Z7i37QHR4iJgnERC5Q8xtGe5HLdhslDxAo3U=;
+ b=JydSBpu5U3SgMj234/RppCNfMy3DRHrtFU+KS6BECltGuKSlFHkvOT13htdlL2Te3zAi
+ uAwXo1hWqoY/V80fnHgm9FYjfh97gk9dQEquGjNJXPZYbm1FgIo2KtL3a2QsL0G+QhsV
+ y0tmsukECNDD1Coa/7cqNyYOmZS7kaoFLkzHiMnivKsUrIQEwcR7EhiJh34b5ynwXErY
+ ZKU7GJQ/o6RPtdSSDrFDPRYfQJq0SgPrqganSk0jvov27q7dgspEQPwvT47M80zhDwGg
+ eyBnnxJGjsmxaKiNxt7pPV/4UcjFAurnc8MjQSdZ5NxCLouUIMt5Ije/xHKXSSqRd65n MA== 
+Received: from FIRESIDESERV03 (firesideserv03.us.house.gov [143.228.113.103])
+	by serg-bulk2-h.house.gov (8.16.1.2/8.16.1.2) with ESMTP id 26CLSp0n014882
+	for <Sarah.Slavin@mail.house.gov>; Tue, 12 Jul 2022 17:28:51 -0400
+envelope-from: RepTomMalinowski@mail.house.gov
+Errors-To: bounce@emanager.house.gov
+X-Errors-To: bounce@emanager.house.gov
+Message-ID: <NToGDacJxLxc9DDcqVnfZT+gRoHhYf0d6t0IkMz4mtakOPh+uJw4IvRi0offhctrCpw7FPRa9HV6N9Av1/EXbyu0zKXPHZzF6nBbtbkmODw5bT8GUmxORYlFwnae6A/5evRZHXu/1OL/gu5djBXV8/F08O2AFuFh1uKrG7O2tMSNHDJft/PII8PpDfqukmt/@fireside21.com>
+X-House-Vendor-Seg: unmanaged
+List-Unsubscribe: <https://malinowskiforms.house.gov/forms/emailsignup/?Delete=true&MessageID=937&Email=Sarah.Slavin@mail.house.gov&Submit=true>
+Precedence: bulk
+From: "Rep. Tom Malinowski" <RepTomMalinowski@mail.house.gov>
+To: Sarah.Slavin@mail.house.gov
+Date: 12 Jul 2022 17:28:51 -0400
+Subject: HAPPENING NEXT WEEK: Telephone Town Hall
+Content-Type: multipart/alternative;
+ boundary=--boundary_693565_00f3434c-f4bb-4432-8d24-cdbd43904386
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:6.0.517,18.0.883
+ definitions=2022-07-12_12:2022-07-12,2022-07-12 signatures=0
+Return-Path: RepTomMalinowski@mail.house.gov
+X-OrganizationHeadersPreserved: EXCH1913.US.House.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 12 Jul 2022 21:28:53.2242
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ ea1f6277-ee51-4843-d108-08da644d84f4
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: EXCH1912.US.House.gov
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-CrossPremisesHeadersPromoted:
+ DM3GCC02FT040.eop-gcc02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ DM3GCC02FT040.eop-gcc02.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-OriginatorOrg: ushouse.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: ea1f6277-ee51-4843-d108-08da644d84f4
+X-MS-TrafficTypeDiagnostic: PH0PR09MB8153:EE_
+X-MS-Exchange-Organization-SCL: -1
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:143.228.151.112;CTRY:US;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SKI;H:owa.house.gov;PTR:InfoDomainNonexistent;CAT:NONE;SFS:;DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 12 Jul 2022 21:28:53.1305
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: ea1f6277-ee51-4843-d108-08da644d84f4
+X-MS-Exchange-CrossTenant-Id: 92138299-22d0-4d49-8d30-7170d5896d98
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=92138299-22d0-4d49-8d30-7170d5896d98;Ip=[143.228.151.112];Helo=[owa.house.gov]
+X-MS-Exchange-CrossTenant-AuthSource: EXCH1912.US.House.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PH0PR09MB8153
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.1674300
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.5417.026
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506458)(944626604)(920097)(425001)(930097);
+X-Microsoft-Antispam-Message-Info:
+	EjrqMLKqM1anjAPcBAr/Y4TyNJysnrrKhfPYL/MKs6D35QXDw4gfF5x4mf6QwyyvjaHOpQo+cNaF4vVNr7WT5YOQ+v130F4lamc0QKCbVGXXl7B3M+nkDmduyDy+eNtJcDEMCAskR9QJqVOuTKRJestxx2L0/6SxR4LZpXP0n9r9GDBGAz+kWdjUKCk4s0/kYRK7stsMD+nz17duhte7oSUI7W8axWmMPxbsPTWPS1fRCc+al3BEeIF5iuCWLZZAnDFagUhmW8LUmdzqDvk/xk17HlyDslK6o74dIxbh6u9iAoMmdjYpVXfle2WaMizYKbPSxvf4oi1zVtf6cth3Lq8DLw6+LM3KYV7QDJDbPPp8Eszx0wpOOi9ulvV1TIQt77pPtb+ZeFnRCXd2G0Bw7dpb5SpB5A3PFeRfBbgTuWh1gHD8aWgjPCuH0cfwUUq0YqLZywjRY28R41YWRJKnzH7cA7Y1wti6g4khZB8sr1xf4iltJ5fDDSjXYsPcH59Zn65pVcKcwekMiYw2xDSVUPVVC5vdsbpGJq9xBA/zvUoMj8R1thwwqXBjH+pQPWsrbuLYqBDn/vxKA24X5L5+jIi7GmMzmhGTQfD62H1Krp3GhMIgUz+oB3fnpLBrcSnLmxDwfBucpo7f5meykT6L6X8zXMMlnoAd27DtAsejcjmyNseQ8YXAp3Q5+16iE6fqDyjf2FD0m0X6wHWgkRqVDWS5yctUdiz1ERLdN+N3dUU=
+MIME-Version: 1.0
+
+----boundary_693565_00f3434c-f4bb-4432-8d24-cdbd43904386
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+DQpVbnN1YnNjcmliZTogaHR0cHM6Ly9tYWxpbm93c2tpZm9ybXMuaG91c2UuZ292L0Zv
+cm1zL0VtYWlsU2lnbnVwLz9EZWxldGU9dHJ1ZSZNZXNzYWdlSUQ9OTM3JkVtYWlsPVNh
+cmFoLlNsYXZpbkBtYWlsLmhvdXNlLmdvdg==
+----boundary_693565_00f3434c-f4bb-4432-8d24-cdbd43904386
+Content-Type: text/html; charset=utf-8
+Content-Location: https://malinowskiforms.house.gov/
+Content-Transfer-Encoding: Quoted-printable
+
+<!DOCTYPE html><html id=3D"template" lang=3D"en"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>HAPPENING NEXT WEEK: Telephone Town Hall</title>
+=09
+	<meta content=3D"width=3Ddevice-width, initial-scale=3D1" name=3D"viewport=
+"><!--[if !mso]><!-->
+	<meta content=3D"IE=3Dedge" http-equiv=3D"X-UA-Compatible"><!--<![endif]--=
+>
+
+	<style>body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-size-ad=
+just: 100%;} /* Prevent WebKit and Windows mobile changing default text siz=
+es */ img{-ms-interpolation-mode: bicubic;} /* Allow smoother rendering of =
+resized image in Internet Explorer *//* RESET STYLES */img { border: 0; hei=
+ght: auto; line-height: 100%; outline: none; text-decoration: none; }table =
+{ border-collapse: collapse !important; }body { height: 100% !important; ma=
+rgin: 0 !important; padding: 0 !important; width: 100% !important; }strong =
+{ font-weight: bold; } /* Editor reset *//* FIRESIDE STYLES */.component im=
+g {max-width:600px;}.component table {mso-table-rspace:10pt; border-collaps=
+e:collapse;}.component { padding: 0px !important; }.press {padding-bottom: =
+0px;}</style><style>@media all and (max-width:650px) {            .image-1,=
+ .caption-1, .img-1 img, .image-1 tr, .image-1 td, .image-2, .img-2 img, .i=
+mage-2 tr, .image-2 td {max-width: 100% !important; width: 100% !important;=
+}            .responsive-table {width:100% !important;}            .respons=
+ive-table img {max-width:100% !important; height: auto !important;}        =
+    .press .component, .press td {text-align:center;}            .component=
+ { margin-left: 20px; margin-right: 20px;}            .component .responsiv=
+e-table { margin-left: 0px !important; margin-right: 0px !important;}      =
+      .wide .video-thumb { width: 100% !important;height: auto !important; =
+}             .wide.video-container { width: 100% !important; }         .co=
+mponent.full-width {margin-left: 0px; margin-right: 0px; }   }</style><styl=
+e type=3D"text/css">
+			/* CLIENT-SPECIFIC STYLES */
+			body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-size-adjust:=
+ 100%;} /* Prevent WebKit and Windows mobile changing default text sizes */
+			table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Remove spaci=
+ng between tables in Outlook 2007 and up */
+			img{-ms-interpolation-mode: bicubic;} /* Allow smoother rendering of res=
+ized image in Internet Explorer */
+			/* RESET STYLES */
+			img { border: 0; height: auto; line-height: 100%; outline: none; text-de=
+coration: none; }
+			table { border-collapse: collapse !important; }
+			body { height: 100% !important; margin: 0 !important; padding: 0 !import=
+ant; width: 100% !important; }
+			strong { font-weight: bold; } /* Editor reset */
+			/* FIRESIDE STYLES */
+			.component img {max-width:600px;}
+			.component table {mso-table-rspace:10pt; border-collapse:collapse; font-=
+family: arial, helvetica, sans-serif;}
+			.component td { font-family: arial, helvetica, sans-serif;}
+			.component { padding: 0px !important; }
+			.press {padding-bottom: 0px;}
+			.caption-1 td {font-family: arial, helvetica, sans-serif;}
+			/* Non-Outlook Styles */
+			 body {background-color: #ffffff;}=20
+			/* Margin/NoMargin STYLES */
+			.component.full-width{ overflow: hidden; margin: 0px; }
+			/* HEADER STYLES */
+			.header-bar{ width: 100%; }
+			.header-bar-margin{ background-color: #ffffff; }
+			.header-bar h2{ margin: 0 !important; padding: 0 !important; color: #000=
+000 !important;text-align: center;font-size: 24px !important;font-weight: b=
+old !important; /* This sets the specific styles for the header component. =
+Change them both here and inline */ }
+			.survey-content input.survey-submit { font-family: arial, helvetica, san=
+s-serif !important; }
+	</style>
+		<style id=3D"media-queries">
+
+	           @media all and (max-width:650px) {
+				.image-1, .caption-1, .img-1 img, .image-1 tr, .image-1 td {max-width: =
+100% !important; width: 100% !important;}
+				.responsive-table {width:100% !important;}
+				img, .responsive-table img {max-width:100% !important; height: auto !im=
+portant;}
+				.press .component, .press td {text-align:center;}
+				.component { margin-left: 20px; margin-right: 20px;}
+				.component .responsive-table { margin-left: 0px !important; margin-righ=
+t: 0px !important;}
+				.wide .video-thumb { width: 100% !important;height: auto !important; }=
+=20
+				.wide.video-container { width: 100% !important; }
+	           }
+	</style>
+=09
+   =20
+    <!--[if (gte mso 9)|(IE)]>
+            <style>
+                body {background-color: #ffffff !important;}
+            </style>
+    <![endif]-->
+   =20
+<!--[if (gte mso 9)|(IE)]>
+                                            <style>=20
+                                        </style>
+                                        <![endif]--></head>
+<body style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;m=
+argin: 0px !important; padding: 0px !important;">
+    <div id=3D"preview-text" style=3D"display: none; font-size: 1px; color:=
+ #fefefe; line-height: 1px; font-family: arial, helvetica, sans-serif; max-=
+height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">Join Tom for a&=
+nbsp;Telephone Town Hall! Tom is hosting&nbsp;a&nbsp;telephone town hall fo=
+r constituents of New Jersey=E2=80=99s 7th&nbsp;Congressional District&nbsp=
+;to discuss today=E2=80=99s most pressing issues&nbsp;and answer questions.=
+ Participants will have the&nbsp;opportunity to address Tom, share comments=
+, and ask questions. Click here to <a href=3D"https://urldefense.com/v3/__h=
+ttp://RSVP.Click__;!!Fr0YZsIsFWxTZsBm-qTAg68!1_ZqZKlrjp2diz02A7yYmem_cazrdz=
+ghQqZ-2XqfVh0Q6qeeAUW9w-zmDVPIyHCeytXxgozl$">RSVP.Click</a> here to RSVPEve=
+nt DetailsDate: Thursday, July&nbsp;21st, 2022Time: 6:00-7:00PMRSVP:&nbsp;b=
+it.ly/3PX4C8pUpcoming EventsJuly&nbsp;Mobile Office HoursClick here to lear=
+n more about mobile office hours.Were you&nbsp;forwarded this email? Subscr=
+ibe to our&nbsp;e-newsletter&nbsp;here!image widget </div>
+   =20
+	<!--[if (gte mso 9)|(IE)]>
+	<table style=3D"background-color:#ffffff;" width=3D"100%" align=3D"center"=
+ role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" mar=
+ginheight=3D"0" marginwidth=3D"0" leftmargin=3D"0" topmargin=3D"0"><tr><td>
+    <![endif]-->
+=09
+	<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" c=
+lass=3D"responsive-table" leftmargin=3D"0" marginheight=3D"0" marginwidth=
+=3D"0" role=3D"presentation" style=3D"-webkit-text-size-adjust: 100%; -ms-t=
+ext-size-adjust: 100%;font-family: arial, helvetica, sans-serif; background=
+-color: #ffffff;" topmargin=3D"0" width=3D"650">
+		<tbody>
+		=09
+			<tr>
+				<td align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%;font-family: arial, helvetica, sans-serif; font-size: 16p=
+x;" valign=3D"top">
+					<a href=3D"https://malinowskiforms.house.gov/components/redirect/r.asp=
+x?ID=3D3307-573222" target=3D"_blank" style=3D"-webkit-text-size-adjust: 10=
+0%; -ms-text-size-adjust: 100%;">
+						<img alt=3D"Tom Malinowski" src=3D"https://malinowskiforms.house.gov/=
+uploadedphotos/highresolution/8acb426d-5cd5-4c98-8467-148226015fd3.png" sty=
+le=3D"-ms-interpolation-mode: bicubic;display: block; width: 650px; " width=
+=3D"650 ">
+					</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+=09
+	=09
+		<table align=3D"center" border=3D"0" cellpadding=3D"20" cellspacing=3D"0"=
+ class=3D"responsive-table" leftmargin=3D"0" marginheight=3D"0" marginwidth=
+=3D"0" role=3D"presentation" style=3D"-webkit-text-size-adjust: 100%; -ms-t=
+ext-size-adjust: 100%;background-color: #ffffff; font-family: arial, helvet=
+ica, sans-serif;" topmargin=3D"0" width=3D"650">
+			<tbody>
+				<tr>
+					<td align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%;text-align: center; padding: 0;" valign=3D"top">
+					<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" class=3D"responsive-table" leftmargin=3D"0" marginheight=3D"0" marginwid=
+th=3D"0" role=3D"presentation" style=3D"-webkit-text-size-adjust: 100%; -ms=
+-text-size-adjust: 100%;font-family: 'Times New Roman', times, serif; backg=
+round-color: #ffffff;  padding: 8px 0; " topmargin=3D"0" width=3D"100%">
+							<tbody>
+								<tr>
+									<td align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-=
+text-size-adjust: 100%;background-color: ; font-family: Arial, Helvetica, s=
+ans-serif; font-size: 16px;  padding: 8px; " valign=3D"top">
+									=09
+										=09
+												<a style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjus=
+t: 100%;text-decoration: none; color: #37a1df; font-size: 18px; font-weight=
+: bold; font-family: Arial, Helvetica, sans-serif; " href=3D"https://malino=
+wskiforms.house.gov/components/redirect/r.aspx?ID=3D3308-573222">Website</a=
+>&nbsp;|&nbsp;
+									=09
+										=09
+												<a style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjus=
+t: 100%;text-decoration: none; color: #37a1df; font-size: 18px; font-weight=
+: bold; font-family: Arial, Helvetica, sans-serif; " href=3D"https://malino=
+wskiforms.house.gov/components/redirect/r.aspx?ID=3D3309-573222">Facebook</=
+a>&nbsp;|&nbsp;
+									=09
+										=09
+												<a style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjus=
+t: 100%;text-decoration: none; color: #37a1df; font-size: 18px; font-weight=
+: bold;font-family: Arial, Helvetica, sans-serif; " href=3D"https://malinow=
+skiforms.house.gov/components/redirect/r.aspx?ID=3D3310-573222">Twitter</a>=
+&nbsp;|&nbsp;
+									=09
+										=09
+												<a style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjus=
+t: 100%;text-decoration: none; color: #37a1df; font-size: 18px; font-weight=
+: bold; font-family: Arial, Helvetica, sans-serif; " href=3D"https://malino=
+wskiforms.house.gov/components/redirect/r.aspx?ID=3D3311-573222">Instagram<=
+/a>&nbsp;|&nbsp;
+									=09
+										=09
+												<a style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjus=
+t: 100%;text-decoration: none; color: #37a1df; font-size: 18px; font-weight=
+: bold; font-family: Arial, Helvetica, sans-serif; " href=3D"https://malino=
+wskiforms.house.gov/components/redirect/r.aspx?ID=3D3312-573222">Contact</a=
+>
+										=09
+								=09
+									=09
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	=09
+	=09
+	=09
+	=09
+=09
+	=09
+	=09
+	=09
+		<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+class=3D"responsive-table" leftmargin=3D"0" marginheight=3D"0" marginwidth=
+=3D"0" role=3D"presentation" style=3D"-webkit-text-size-adjust: 100%; -ms-t=
+ext-size-adjust: 100%;background-color: #ffffff; font-family: arial, helvet=
+ica, sans-serif;" topmargin=3D"0" width=3D"650">
+			<tbody>
+				<tr>
+					<td class=3D"responsive-table" style=3D"-webkit-text-size-adjust: 100%=
+; -ms-text-size-adjust: 100%;font-family: arial, helvetica, sans-serif; fon=
+t-size: 16px; color: #000000;" valign=3D"top">
+						<table role=3D"presentation" class=3D"responsive-table" style=3D"-web=
+kit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+							<tbody>
+								<tr height=3D"20">
+									<td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust:=
+ 100%;"><span></span></td>
+								</tr>
+							</tbody>
+						</table>
+						<div class=3D"region" id=3D"region-1"><div class=3D"component full-wi=
+dth" style=3D"padding: 0px !important;"> <div class=3D"header-bar" style=3D=
+"overflow: hidden;">
+									<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" class=3D"responsive-table table-w-bg-color" leftmargin=3D"0" marginh=
+eight=3D"0" marginwidth=3D"0" role=3D"presentation" style=3D"mso-table-lspa=
+ce:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collaps=
+e;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: a=
+rial, helvetica, sans-serif; background-color: rgb(255, 255, 255); margin-r=
+ight: 0px; margin-left: 0px;" topmargin=3D"0" width=3D"650">
+											<tbody>
+												<tr class=3D"spacerRow" height=3D"0">
+													<td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adj=
+ust: 100%;font-size: 0%; line-height: 0px">&nbsp;</td>
+												</tr>
+												<tr>
+													<td class=3D"responsive-table" style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;font-size:24px; color:#000000;" valign=
+=3D"top">
+														<table role=3D"presentation" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" leftmargin=3D"0" marginheight=3D"0" marginwidth=3D"0" styl=
+e=3D"mso-table-lspace:0pt; mso-table-rspace:0pt;mso-table-rspace:10pt; bord=
+er-collapse:collapse;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: =
+100%;min-width: 100%;" topmargin=3D"0" width=3D"100%">
+															<tbody>
+																<tr>
+																	<td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size=
+-adjust: 100%;padding: 0 15pt; font-family: arial, helvetica, sans-serif;">
+																		<div class=3D"cke_editable cke_editable_inline cke_conten=
+ts_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><h2><span st=
+yle=3D"color:#3498db;"><span style=3D"font-size:26px;"><span style=3D"font-=
+family:Arial,Helvetica,sans-serif;">Join Tom for a&nbsp;</span></span></spa=
+n></h2><h2><span style=3D"color:#3498db;"><span style=3D"font-size:26px;"><=
+span style=3D"font-family:Arial,Helvetica,sans-serif;">Telephone Town Hall!=
+</span></span></span></h2></div>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</td>
+												</tr>
+												<tr class=3D"spacerRow" height=3D"0">
+													<td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adj=
+ust: 100%;font-size: 0%; line-height: 0px">&nbsp;</td>
+												</tr>
+											</tbody>
+										</table>
+									</div> </div>
+<div class=3D"component " style=3D"padding: 0px !important;"> <div class=3D=
+"editable" style=3D"overflow: hidden;width:100%">
+            <table class=3D"responsive-table" role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt; m=
+so-table-rspace:0pt;mso-table-rspace:10pt; border-collapse:collapse;-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%;table-layout: fixed; ma=
+rgin-right: 20px; margin-left: 20px;" width=3D"610">
+                <tbody>
+                    <tr>
+                        <td class=3D"table-w-bg-color" valign=3D"top" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+                            <div class=3D"cke_editable cke_editable_inline =
+cke_contents_ltr cke_focus cke_show_borders" style=3D"overflow: hidden;"><p=
+ style=3D"margin: 0;"><br></p><p style=3D"margin: 0;"><span style=3D"font-s=
+ize:16px;"><span style=3D"font-family:Arial,Helvetica,sans-serif;">Tom is h=
+osting&nbsp;a&nbsp;telephone town hall for constituents of New Jersey=E2=80=
+=99s 7<sup>th&nbsp;</sup>Congressional District&nbsp;to discuss today=E2=80=
+=99s most pressing issues&nbsp;and answer questions. Participants will have=
+ the&nbsp;opportunity to address Tom, share comments, and ask questions. Cl=
+ick <a data-cke-saved-href=3D"https://malinowskiforms.house.gov/components/=
+redirect/r.aspx?ID=3D3313-573222" href=3D"https://urldefense.com/v3/__http:=
+//bit.ly/3PX4C8p__;!!Fr0YZsIsFWxTZsBm-qTAg68!1_ZqZKlrjp2diz02A7yYmem_cazrdz=
+ghQqZ-2XqfVh0Q6qeeAUW9w-zmDVPIyHCeyothSOZr$" style=3D"-webkit-text-size-adj=
+ust: 100%; -ms-text-size-adjust: 100%;"><span style=3D"color:#3498db;">here=
+</span></a> to RSVP.</span></span></p><p style=3D"margin: 0;"><br></p><div =
+contenteditable=3D"false" class=3D"cke_widget_wrapper cke_widget_block cke_=
+widget_image cke_image_nocaption" style=3D"overflow: hidden;"><p data-cke-w=
+idget-keep-attr=3D"0" data-widget=3D"image" class=3D"cke_widget_element" da=
+ta-cke-widget-data=3D"%7B%22hasCaption%22%3Afalse%2C%22src%22%3A%22https%3A=
+%2F%2Fmalinowskiforms.house.gov%2FUploadedPhotos%2FHighResolution%2F9775f21=
+b-b2f0-4a46-84d2-71b16b12a08a.png%22%2C%22alt%22%3A%22%22%2C%22width%22%3A5=
+26%2C%22height%22%3A296%2C%22style%22%3A%22%22%2C%22lock%22%3Atrue%2C%22ali=
+gn%22%3A%22center%22%2C%22link%22%3A%7B%22linkText%22%3A%22%22%2C%22type%22=
+%3A%22url%22%2C%22email%22%3A%7B%22address%22%3A%22%22%2C%22subject%22%3A%2=
+2%22%2C%22body%22%3A%22%22%7D%2C%22tel%22%3A%22%22%2C%22url%22%3A%7B%22prot=
+ocol%22%3A%22http%3A%2F%2F%22%2C%22url%22%3A%22bit.ly%2F3PX4C8p%22%7D%2C%22=
+anchor%22%3A%7B%22name%22%3A%22%22%2C%22id%22%3A%22%22%7D%2C%22target%22%3A=
+%7B%22type%22%3A%22notSet%22%2C%22name%22%3A%22notSet%22%2C%22resizable%22%=
+3A%22%22%2C%22status%22%3A%22%22%2C%22location%22%3A%22%22%2C%22toolbar%22%=
+3A%22%22%2C%22menubar%22%3A%22%22%2C%22fullscreen%22%3A%22%22%2C%22scrollba=
+rs%22%3A%22%22%2C%22dependent%22%3A%22%22%2C%22width%22%3A%22%22%2C%22left%=
+22%3A%22%22%2C%22height%22%3A%22%22%2C%22top%22%3A%22%22%7D%2C%22advanced%2=
+2%3A%7B%22advId%22%3A%22%22%2C%22advLangDir%22%3A%22%22%2C%22advAccessKey%2=
+2%3A%22%22%2C%22advName%22%3A%22%22%2C%22advLangCode%22%3A%22%22%2C%22advTa=
+bIndex%22%3A%22%22%2C%22advTitle%22%3A%22%22%2C%22advContentType%22%3A%22%2=
+2%2C%22advCSSClasses%22%3A%22%22%2C%22advCharset%22%3A%22%22%2C%22advRel%22=
+%3A%22%22%2C%22advStyles%22%3A%22%22%7D%7D%2C%22classes%22%3Anull%2C%22widt=
+hPerc%22%3A%22%22%7D" style=3D"margin: 0;text-align: center;"><span class=
+=3D"cke_image_resizer_wrapper"><a href=3D"https://malinowskiforms.house.gov=
+/components/redirect/r.aspx?ID=3D3314-573222" data-cke-saved-href=3D"http:/=
+/bit.ly/3PX4C8p" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adj=
+ust: 100%;"><img alt=3D"" src=3D"https://malinowskiforms.house.gov/Uploaded=
+Photos/HighResolution/9775f21b-b2f0-4a46-84d2-71b16b12a08a.png" width=3D"52=
+6" height=3D"296" style=3D"max-width:600px;-ms-interpolation-mode: bicubic;=
+"></a></span></p></div><p style=3D"margin: 0;text-align: center;"><a data-c=
+ke-saved-href=3D"https://malinowskiforms.house.gov/components/redirect/r.as=
+px?ID=3D3315-573222" href=3D"https://urldefense.com/v3/__http://bit.ly/3PX4=
+C8p__;!!Fr0YZsIsFWxTZsBm-qTAg68!1_ZqZKlrjp2diz02A7yYmem_cazrdzghQqZ-2XqfVh0=
+Q6qeeAUW9w-zmDVPIyHCeyothSOZr$" style=3D"-webkit-text-size-adjust: 100%; -m=
+s-text-size-adjust: 100%;"><span style=3D"color:#3498db;"><span style=3D"fo=
+nt-size:16px;"><span style=3D"font-family:Arial,Helvetica,sans-serif;">Clic=
+k here to RSVP</span></span></span></a></p><p style=3D"margin: 0;"><br></p>=
+<p style=3D"margin: 0;text-align: center;"><span style=3D"font-size:16px;">=
+<span style=3D"font-family:Arial,Helvetica,sans-serif;"><b>Event Details</b=
+></span></span></p><p style=3D"margin: 0;text-align: center;"><span style=
+=3D"font-size:16px;"><span style=3D"font-family:Arial,Helvetica,sans-serif;=
+"><b>Date: </b>Thursday, July&nbsp;21</span></span><span style=3D"font-size=
+:16px;"><span style=3D"font-family:Arial,Helvetica,sans-serif;"><sup>st</su=
+p>, 2022</span></span></p><p style=3D"margin: 0;text-align: center;"><span =
+style=3D"font-size:16px;"><span style=3D"font-family:Arial,Helvetica,sans-s=
+erif;"><b>Time: </b>6:00-7:00PM</span></span></p><p style=3D"margin: 0;text=
+-align: center;"><span style=3D"font-size:16px;"><span style=3D"font-family=
+:Arial,Helvetica,sans-serif;"><b>RSVP:&nbsp;</b><a data-cke-saved-href=3D"h=
+ttps://malinowskiforms.house.gov/components/redirect/r.aspx?ID=3D3316-57322=
+2" href=3D"https://urldefense.com/v3/__https://bit.ly/3PX4C8p__;!!Fr0YZsIsF=
+WxTZsBm-qTAg68!1_ZqZKlrjp2diz02A7yYmem_cazrdzghQqZ-2XqfVh0Q6qeeAUW9w-zmDVPI=
+yHCeylKiNGjd$" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjus=
+t: 100%;"><span style=3D"color:#3498db;">bit.ly/3PX4C8p</span></a></span></=
+span></p><p style=3D"margin: 0;"><br></p><p style=3D"margin: 0;text-align: =
+center;"><span style=3D"color:#3498db;"><span style=3D"font-size:22px;"><sp=
+an style=3D"font-family:Arial,Helvetica,sans-serif;"><b>Upcoming Events</b>=
+</span></span></span></p><p style=3D"margin: 0;text-align: center;"><br></p=
+><p style=3D"margin: 0;text-align: center;"><span style=3D"font-size:16px;"=
+><span style=3D"font-family:Arial,Helvetica,sans-serif;"><b>July&nbsp;Mobil=
+e Office Hours</b></span></span></p><div contenteditable=3D"false" class=3D=
+"cke_widget_wrapper cke_widget_block cke_widget_image cke_image_nocaption" =
+style=3D"overflow: hidden;"><p data-cke-widget-keep-attr=3D"0" data-widget=
+=3D"image" class=3D"cke_widget_element" data-cke-widget-data=3D"%7B%22hasCa=
+ption%22%3Afalse%2C%22src%22%3A%22https%3A%2F%2Fmalinowskiforms.house.gov%2=
+FUploadedPhotos%2FHighResolution%2Fcd2dbf30-7879-44fb-82e0-c8ffb264e7b9.png=
+%22%2C%22alt%22%3A%22%22%2C%22width%22%3A532%2C%22height%22%3A299%2C%22styl=
+e%22%3A%22%22%2C%22lock%22%3Atrue%2C%22align%22%3A%22center%22%2C%22classes=
+%22%3Anull%2C%22widthPerc%22%3A%221%22%7D" style=3D"margin: 0;text-align: c=
+enter;"><span class=3D"cke_image_resizer_wrapper"><img alt=3D"" src=3D"http=
+s://malinowskiforms.house.gov/UploadedPhotos/HighResolution/cd2dbf30-7879-4=
+4fb-82e0-c8ffb264e7b9.png" data-cke-saved-src=3D"https://malinowskiforms.ho=
+use.gov/UploadedPhotos/HighResolution/cd2dbf30-7879-44fb-82e0-c8ffb264e7b9.=
+png" width=3D"532" height=3D"299" style=3D"max-width:600px;-ms-interpolatio=
+n-mode: bicubic;"></span></p></div><p style=3D"margin: 0;text-align: center=
+;"><span style=3D"font-size:16px;"><span style=3D"font-family:Arial,Helveti=
+ca,sans-serif;"><a data-cke-saved-href=3D"https://malinowskiforms.house.gov=
+/components/redirect/r.aspx?ID=3D3317-573222" href=3D"https://malinowski.ho=
+use.gov/services/mobile-office-hours" style=3D"-webkit-text-size-adjust: 10=
+0%; -ms-text-size-adjust: 100%;"><span style=3D"color:#3498db;">Click here =
+to learn more about mobile office hours.</span></a></span></span></p><p sty=
+le=3D"margin: 0;text-align: center;"><br></p><p style=3D"margin: 0;text-ali=
+gn: center;"><span style=3D"font-size:16px;"><span style=3D"font-family:Ari=
+al,Helvetica,sans-serif;"><span style=3D"color:#3498db;"><b>Were you&nbsp;f=
+orwarded this email? Subscribe to our&nbsp;e-newsletter&nbsp;</b></span><a =
+data-cke-saved-href=3D"https://malinowskiforms.house.gov/components/redirec=
+t/r.aspx?ID=3D3318-573222" href=3D"http://malinowskiforms.house.gov/compone=
+nts/redirect/r.aspx?ID=3D2938-573222" style=3D"-webkit-text-size-adjust: 10=
+0%; -ms-text-size-adjust: 100%;"><span style=3D"color:#3498db;"><b>here</b>=
+</span></a><span style=3D"color:#3498db;"><b>!</b></span></span></span></p>=
+</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> </div></div>
+						<table role=3D"presentation" class=3D"responsive-table" style=3D"-web=
+kit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+							<tbody>
+								<tr height=3D"20">
+									<td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust:=
+ 100%;"><span></span></td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	=09
+	=09
+=09
+	=09
+	=09
+	=09
+	=09
+		<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+class=3D"responsive-table" leftmargin=3D"0" marginheight=3D"0" marginwidth=
+=3D"0" role=3D"presentation" style=3D"-webkit-text-size-adjust: 100%; -ms-t=
+ext-size-adjust: 100%;font-family: arial, helvetica, sans-serif; background=
+-color: #f5f5f5; color: #737373;" topmargin=3D"0" width=3D"650">
+			<tbody>
+			=09
+				=09
+						<tr>
+							<td align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%; background-color: #f5f5f5;color: #737373; font-family=
+: arial, helvetica, sans-serif; font-size: 24px; text-align: center;" valig=
+n=3D"middle">
+							=09
+										<img alt=3D"Office Locations" src=3D"https://malinowskiforms.hous=
+e.gov/images/email/footer-teal.jpg" width=3D"650" style=3D"-ms-interpolatio=
+n-mode: bicubic;">
+								=09
+							</td>
+						</tr>
+				=09
+			=09
+				=09
+						<tr>
+							<td align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;height:30px; background-color: #f5f5f5;color: #737373;=
+" valign=3D"middle">&nbsp;</td>
+						</tr>
+				=09
+			=09
+				=09
+						<tr>
+							<td align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%; color: #000000; background-color: #f5f5f5;color: #737=
+373; padding: 0 20px;" valign=3D"middle">
+								<table cellpadding=3D"0" cellspacing=3D"10" role=3D"presentation" s=
+tyle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;text-ali=
+gn:center;" width=3D"100%">
+									<tbody>
+										<tr>
+											<td align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -m=
+s-text-size-adjust: 100%;text-align:center;" valign=3D"middle">
+											=09
+												<table align=3D"left" cellpadding=3D"0" cellspacing=3D"0" class=
+=3D"responsive-table" role=3D"presentation" style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;font-family: arial, helvetica, sans-se=
+rif; text-align:center; font-size: 16px; color: #737373; margin: 10px 0;mso=
+-table-lspace: 0pt; mso-table-rspace: 0pt;" width=3D"49.9%">
+													<tbody>
+														<tr>
+															<td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-a=
+djust: 100%;font-family: arial, helvetica, sans-serif;">
+															=09
+																	<strong style=3D"font-weight: bold;font-family: arial, hel=
+vetica, sans-serif;">Washington, DC Office</strong>
+															=09
+															=09
+																	<br>1318 Longworth HOB
+															=09
+																	<br>Washington, DC 20515
+															=09
+																	<br>Phone: (202) 225-5361
+															=09
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											=09
+												<table align=3D"left" cellpadding=3D"0" cellspacing=3D"0" class=
+=3D"responsive-table" role=3D"presentation" style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;font-family: arial, helvetica, sans-se=
+rif; text-align:center; font-size: 16px; color: #737373; margin: 10px 0;mso=
+-table-lspace: 0pt; mso-table-rspace: 0pt;" width=3D"49.9%">
+													<tbody>
+														<tr>
+															<td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-a=
+djust: 100%;font-family: arial, helvetica, sans-serif;">
+															=09
+																	<strong style=3D"font-weight: bold;font-family: arial, hel=
+vetica, sans-serif;">SOMERVILLE OFFICE</strong>
+															=09
+															=09
+																	<br>75-77 N Bridge St.
+															=09
+																	<br>Somerville, NJ 08876
+															=09
+																	<br>Phone: (908) 547-3307
+															=09
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											=09
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+				=09
+			=09
+				=09
+						<tr>
+							<td align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;height:30px; background-color: #f5f5f5;color: #737373;=
+" valign=3D"middle">&nbsp;</td>
+						</tr>
+				=09
+			=09
+				=09
+						<tr>
+								=09
+								<td align=3D"center" valign=3D"top" style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;text-align: center; font-family: arial=
+, helvetica, sans-serif; font-size: 16px; text-align: center; background-co=
+lor: #f5f5f5; padding: 10px;">=09
+								=09
+									=09
+										=09
+												<a style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjus=
+t: 100%;text-decoration: none;  font-weight: bold;  color: #37a1df;" href=
+=3D"https://malinowskiforms.house.gov/components/redirect/r.aspx?ID=3D3319-=
+573222">Unsubscribe</a>
+										=09
+											&nbsp;|&nbsp;
+									=09
+										=09
+												<a style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjus=
+t: 100%;text-decoration: none;  font-weight: bold;  color: #37a1df;" href=
+=3D"https://urldefense.com/v3/__https://www.facebook.com/sharer.php?u=3Dhtt=
+ps:**Amalinowskiforms.house.gov*news*email*show.aspx*ID=3DABIMTRR2RX6RE&amp=
+;t=3DHAPPENING*NEXT*WEEK*3a*Telephone*Town*Hall__;Ly8vLy8_KyslKysr!!Fr0YZsI=
+sFWxTZsBm-qTAg68!1_ZqZKlrjp2diz02A7yYmem_cazrdzghQqZ-2XqfVh0Q6qeeAUW9w-zmDV=
+PIyHCeygpsTPkG$">Share on Facebook</a>
+										=09
+											&nbsp;|&nbsp;
+									=09
+										=09
+												<a style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjus=
+t: 100%;text-decoration: none;  font-weight: bold;  color: #37a1df;" href=
+=3D"https://malinowskiforms.house.gov/Components/Redirect/twitter.aspx?url=
+=3Dhttps://malinowskiforms.house.gov/news/email/show.aspx?ID=3DABIMTRR2RX6R=
+E&amp;name=3DHAPPENING+NEXT+WEEK%3a+Telephone+Town+Hall">Share on Twitter</=
+a>
+										=09
+										=09
+									=09
+								=09
+								</td>
+						=09
+						</tr>
+				=09
+			=09
+				=09
+						<tr>
+							<td align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;height:10px; background-color: #f5f5f5;color: #737373;=
+" valign=3D"middle">&nbsp;</td>
+						</tr>
+				=09
+			=09
+			</tbody>
+		</table>
+	=09
+=09
+=09
+	<!--[if (gte mso 9)|(IE)]>
+    </td></tr></table>
+    <![endif]-->
+=09
+<table role=3D"presentation" width=3D"100%" align=3D"center" style=3D"font-=
+family: Georgia, times, serif; background-color: #ffffff;" border=3D"0" cel=
+lspacing=3D"0" cellpadding=3D"0" marginheight=3D"0" marginwidth=3D"0" leftm=
+argin=3D"0" topmargin=3D"0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td valign=3D"m=
+iddle" align=3D"center" style=3D"color: #000000; font-size: 16px; text-alig=
+n: left;">=20
+                                                                <img src=3D=
+"https://malinowskiforms.house.gov/images/spacerx937-573222.open" width=3D"=
+20" height=3D"1" style=3D"height: 1px">
+                                                                <br>
+<a href=3D"https://malinowskiforms.house.gov/news/email/show.aspx?ID=3DABIM=
+TRR2RX6RE">Click Here</a> to view this email in your browser <br>
+<a href=3D"https://malinowskiforms.house.gov/Forms/EmailSignup/?Delete=3Dtr=
+ue&amp;MessageID=3D937&amp;Email=3DSarah.Slavin@mail.house.gov">Click Here<=
+/a> to be removed from this list
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table></body>
+</html>=
+
+----boundary_693565_00f3434c-f4bb-4432-8d24-cdbd43904386--
